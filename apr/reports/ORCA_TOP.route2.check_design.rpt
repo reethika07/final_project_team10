@@ -1,0 +1,46 @@
+****************************************
+ Report : check_design 
+ Options: { pre_route_stage }
+ Design : ORCA_TOP
+ Version: Q-2019.12-SP4
+ Date   : Sat May 20 08:41:34 2023
+****************************************
+
+Running mega-check 'pre_route_stage': 
+    Running atomic-check 'design_mismatch'
+    Running atomic-check 'scan_chain'
+    Running atomic-check 'mv_design'
+    Running atomic-check 'design_extraction'
+    Running atomic-check 'timing'
+    Running atomic-check 'routability'
+    Running atomic-check 'hier_pre_route'
+
+  *** EMS Message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Rule         Type   Count      Message
+  ----------------------------------------------------------------------------------------------------
+  MV-012       Warn   2          %drvType '%driver' (supply net '%drvSupplyNet' [%drvVoltage]) ca...
+  TCK-001      Warn   74681      The reported endpoint '%endpoint' is unconstrained. Reason: '%re...
+  TCK-002      Warn   5182       The register clock pin '%pin' has no fanin clocks. Mode:'%mode'.
+  TCK-012      Warn   38         The input port '%port' has no clock_relative delay specified. Mo...
+  TCK-013      Warn   12         The clocks '%clocks' at gated clock point '%conn' has no fanout ...
+  ----------------------------------------------------------------------------------------------------
+  Total 79915 EMS messages : 0 errors, 79915 warnings, 0 info.
+  ----------------------------------------------------------------------------------------------------
+
+  *** Non-EMS message summary ***
+  ----------------------------------------------------------------------------------------------------
+  Rule         Type   Count      Message
+  ----------------------------------------------------------------------------------------------------
+  ZRT-022             1          Cannot find a default contact code for layer %s.
+  ZRT-027             1          Ignore %d top cell ports with no pins.
+  ZRT-613             2          RC layer preference is turned %s for this design.
+  ----------------------------------------------------------------------------------------------------
+  Total 4 non-EMS messages : 0 errors, 2 warnings, 2 info.
+  ----------------------------------------------------------------------------------------------------
+
+Warning: EMS database "check_design.ems" already exists, over-writing it. (EMS-040)
+
+Information: EMS database is saved to file 'check_design.ems'.
+Information: Non-EMS messages are saved into file 'check_design2023May20084134.log'.
+1

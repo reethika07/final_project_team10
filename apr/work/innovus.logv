@@ -1,0 +1,963 @@
+[05/17 20:56:42      0s] 
+[05/17 20:56:42      0s] Cadence Innovus(TM) Implementation System.
+[05/17 20:56:42      0s] Copyright 2019 Cadence Design Systems, Inc. All rights reserved worldwide.
+[05/17 20:56:42      0s] 
+[05/17 20:56:42      0s] Version:	v19.16-s053_1, built Mon Aug 31 13:16:01 PDT 2020
+[05/17 20:56:42      0s] Options:	
+[05/17 20:56:42      0s] Date:		Wed May 17 20:56:42 2023
+[05/17 20:56:42      0s] Host:		auto.ece.pdx.edu (x86_64 w/Linux 3.10.0-1160.88.1.el7.x86_64) (1core*60cpus*Intel Xeon E312xx (Sandy Bridge, IBRS update) 16384KB)
+[05/17 20:56:42      0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[05/17 20:56:42      0s] 
+[05/17 20:56:42      0s] License:
+[05/17 20:56:42      0s] 		invs	Innovus Implementation System	19.1	checkout succeeded
+[05/17 20:56:42      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[05/17 20:56:57     13s] @(#)CDS: Innovus v19.16-s053_1 (64bit) 08/31/2020 13:16 (Linux 2.6.32-431.11.2.el6.x86_64)
+[05/17 20:56:57     13s] @(#)CDS: NanoRoute 19.16-s053_1 NR200827-1939/19_16-UB (database version 18.20, 510.7.1) {superthreading v1.53}
+[05/17 20:56:57     13s] @(#)CDS: AAE 19.16-s019 (64bit) 08/31/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+[05/17 20:56:57     13s] @(#)CDS: CTE 19.16-s019_1 () Aug 22 2020 00:37:42 ( )
+[05/17 20:56:57     13s] @(#)CDS: SYNTECH 19.16-s010_1 () Aug 17 2020 09:10:13 ( )
+[05/17 20:56:57     13s] @(#)CDS: CPE v19.16-s038
+[05/17 20:56:57     13s] @(#)CDS: IQuantus/TQuantus 19.1.3-s268 (64bit) Mon Aug 10 22:57:12 PDT 2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+[05/17 20:56:57     13s] @(#)CDS: OA 22.60-s011 Tue Jun 16 12:27:00 2020
+[05/17 20:56:57     13s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[05/17 20:56:57     13s] @(#)CDS: RCDB 11.14.18
+[05/17 20:56:57     13s] @(#)CDS: STYLUS 19.10-s018_1 (06/12/2020 04:43 PDT)
+[05/17 20:56:57     13s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_26464_auto.ece.pdx.edu_reethika_czkTNm.
+
+[05/17 20:56:57     13s] Change the soft stacksize limit to 0.2%RAM (170 mbytes). Set global soft_stack_size_limit to change the value.
+[05/17 20:56:58     14s] Sourcing startup file ./enc.tcl
+[05/17 20:56:58     14s] <CMD> alias fs set top_design fifo1_sram
+[05/17 20:56:58     14s] <CMD> alias f set top_design fifo1
+[05/17 20:56:58     14s] <CMD> alias o set top_design ORCA_TOP
+[05/17 20:56:58     14s] <CMD> alias e set top_design ExampleRocketSystem
+[05/17 20:56:58     14s] <CMD> set_table_style -name report_timing -max_widths { 8,6,23,70} -no_frame_fix_width
+[05/17 20:56:58     14s] **WARN: (TCLCMD-1083):	'-no_frame_fix_width are global controls that affect all of the various timing reports.  The -name option is used to specify a report-specific behavior, and therefore cannot be used with these global options. You should use a separate set_table_style command to specify the desired global options. You can then use additional set_table_style commands to refine the behaviors of specific timing reports.'
+[05/17 20:56:58     14s] <CMD> set_global report_timing_format  {delay arrival slew load fanout cell hpin}
+[05/17 20:56:58     14s] 
+[05/17 20:56:58     14s] **INFO:  MMMC transition support version v31-84 
+[05/17 20:56:58     14s] 
+[05/17 20:56:58     14s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[05/17 20:56:58     14s] <CMD> suppressMessage ENCEXT-2799
+[05/17 20:56:58     14s] <CMD> win
+[05/17 20:57:26     20s] <CMD> o
+[05/17 20:57:47     25s] ### Start verbose source output (echo mode) for '../../ORCA_TOP.design_config.tcl' ...
+[05/17 20:57:47     25s] # set lib_dir /pkgs/synopsys/2020/32_28nm/SAED32_EDK
+# set top_design ORCA_TOP
+# set FCL 1
+# set add_ios 0
+# set pad_design 0
+# set design_size {1000 800}
+# set design_io_border 10
+# set dc_floorplanning 1
+# set enable_dft 1
+# set innovus_enable_manual_macro_placement 1
+# set split_constraints 0
+# set rtl_list [list ../rtl/$top_design.sv ]
+# set slow_corner "ss0p75vn40c ss0p75vn40c_i0p95v ss0p75vn40c_i0p75v ss0p95vn40c ss0p95vn40c_i0p75v"
+# set fast_corner "ff0p95vn40c ff0p95vn40c_i1p16v ff0p95vn40c_i0p95v ff1p16vn40c ff1p16vn40c_i1p16v ff1p16vn40c_i0p95v"
+# set slow_metal 1p9m_Cmax_-40
+# set fast_metal 1p9m_Cmax_-40
+# set synth_corners $slow_corner
+# set synth_corners_slow $slow_corner
+# set synth_corners_fast $fast_corner
+# set lib_types "stdcell_hvt stdcell_rvt stdcell_lvt sram"
+# set sub_lib_type "saed32?vt_ saed32sram_ saed32?vt_ulvl_ saed32?vt_dlvl_ "
+# if { 0 } {
+    set corners ""
+    #Add Worst corners
+    set corners "$corners ss0p75vn40c ss0p75vn40c_i0p95v ss0p75vn40c_i0p75v ss0p95vn40c ss0p95vn40c_i0p75v"
+    #Add Best corners
+    set corners "$corners ff0p95vn40c ff0p95vn40c_i1p16v ff0p95vn40c_i0p95v ff1p16vn40c ff1p16vn40c_i1p16v ff1p16vn40c_i0p95v"
+    #Add Leakage corners
+    set corners "$corners ff0p95v125c f0p95v125c_i1p16v ff0p95v125c_i0p95v ff1p16v125c ff1p16v125c_i1p16v ff1p16v125c ff1p16v125c_i0p95v"
+    set lib_types "stdcell_hvt stdcell_rvt stdcell_lvt sram_lp"
+    # Get the main standard cells, and also the level shifters.  Plus srams.
+    set sub_lib_type "saed32?vt_ saed32?vt_ulvl_ saed32?vt_dlvl_ saed32sram_"
+}
+# set topdir [ lindex [ regexp -inline "(.*)\(syn\|pt\|apr\)" [pwd] ] 1 ]
+# set sub_block {SDRAM_TOP 
+				BLENDER_0 
+				PCI_TOP 
+				CONTEXT_MEM 
+				RISC_CORE 
+				CLOCKING 
+				BLENDER_1 
+				PARSER 
+				}
+# set sub_block_I {I_SDRAM_TOP I_BLENDER_1  I_BLENDER_0 I_RISC_CORE I_CONTEXT_MEM I_PCI_TOP I_PARSER I_CLOCKING}
+# set macro_block {I_SDRAM_TOP I_PCI_TOP I_RISC_CORE I_CONTEXT_MEM}
+### End verbose source output for '../../ORCA_TOP.design_config.tcl'.
+[05/17 20:57:47     25s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[05/17 20:57:47     25s] <CMD> set search_path {}
+[05/17 20:57:47     25s] <CMD> set init_lef_file {../../cadence_cap_tech/tech.lef saed32sram.lef saed32nm_rvt_1p9m.lef saed32nm_hvt_1p9m.lef saed32nm_lvt_1p9m.lef}
+[05/17 20:57:47     25s] <CMD> set init_mmmc_file mmmc.tcl
+[05/17 20:57:47     25s] <CMD> set init_design_netlisttype Verilog
+[05/17 20:57:47     25s] <CMD> set init_verilog ../../syn/outputs/ORCA_TOP.genus_phys.vg
+[05/17 20:57:47     25s] <CMD> set init_top_cell ORCA_TOP
+[05/17 20:57:47     25s] <CMD> set init_pwr_net VDD
+[05/17 20:57:47     25s] <CMD> set init_gnd_net VSS
+[05/17 20:57:47     25s] <CMD> init_design
+[05/17 20:57:47     25s] #% Begin Load MMMC data ... (date=05/17 20:57:47, mem=493.8M)
+[05/17 20:57:47     25s] #% End Load MMMC data ... (date=05/17 20:57:47, total cpu=0:00:00.0, real=0:00:00.0, peak res=494.0M, current mem=494.0M)
+[05/17 20:57:47     25s] 
+[05/17 20:57:47     25s] Loading LEF file ../../cadence_cap_tech/tech.lef ...
+[05/17 20:57:47     25s] 
+[05/17 20:57:47     25s] Loading LEF file saed32sram.lef ...
+[05/17 20:57:47     25s] Set DBUPerIGU to M2 pitch 152.
+[05/17 20:57:47     26s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[05/17 20:57:47     26s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[05/17 20:57:47     26s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file saed32sram.lef at line 197399.
+[05/17 20:57:47     26s] 
+[05/17 20:57:47     26s] Loading LEF file saed32nm_rvt_1p9m.lef ...
+[05/17 20:57:48     26s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[05/17 20:57:48     26s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[05/17 20:57:48     26s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file saed32nm_rvt_1p9m.lef at line 148040.
+[05/17 20:57:48     26s] 
+[05/17 20:57:48     26s] Loading LEF file saed32nm_hvt_1p9m.lef ...
+[05/17 20:57:48     26s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[05/17 20:57:48     26s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[05/17 20:57:48     26s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file saed32nm_hvt_1p9m.lef at line 191962.
+[05/17 20:57:48     26s] 
+[05/17 20:57:48     26s] Loading LEF file saed32nm_lvt_1p9m.lef ...
+[05/17 20:57:48     27s] WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+[05/17 20:57:48     27s] Without BUSBITCHARS defined, the LEF file is technically incorrect.
+[05/17 20:57:48     27s] Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file saed32nm_lvt_1p9m.lef at line 67466.
+[05/17 20:57:48     27s] 
+[05/17 20:57:48     27s] viaInitial starts at Wed May 17 20:57:48 2023
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA12BAR_C' and 'VIA12SQ_C'.
+[05/17 20:57:48     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:48     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA12LG_C' and 'VIA12SQ_C'.
+[05/17 20:57:48     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:48     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA12BAR' and 'VIA12SQ_C'.
+[05/17 20:57:48     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:48     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA12LG' and 'VIA12SQ_C'.
+[05/17 20:57:48     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:48     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA23BAR_C' and 'VIA23SQ_C'.
+[05/17 20:57:48     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:48     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA23LG_C' and 'VIA23SQ_C'.
+[05/17 20:57:48     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:48     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA23BAR' and 'VIA23SQ_C'.
+[05/17 20:57:48     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:48     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA23LG' and 'VIA23SQ_C'.
+[05/17 20:57:48     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:48     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA34BAR_C' and 'VIA34SQ_C'.
+[05/17 20:57:48     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:48     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA34LG_C' and 'VIA34SQ_C'.
+[05/17 20:57:48     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:49     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA34BAR' and 'VIA34SQ_C'.
+[05/17 20:57:49     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:49     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA34LG' and 'VIA34SQ_C'.
+[05/17 20:57:49     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:49     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA45BAR_C' and 'VIA45SQ_C'.
+[05/17 20:57:49     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:49     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA45LG_C' and 'VIA45SQ_C'.
+[05/17 20:57:49     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:49     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA45BAR' and 'VIA45SQ_C'.
+[05/17 20:57:49     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:49     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA45LG' and 'VIA45SQ_C'.
+[05/17 20:57:49     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:49     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA56BAR_C' and 'VIA56SQ_C'.
+[05/17 20:57:49     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:49     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA56LG_C' and 'VIA56SQ_C'.
+[05/17 20:57:49     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:49     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA56BAR' and 'VIA56SQ_C'.
+[05/17 20:57:49     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:49     27s] **WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA56LG' and 'VIA56SQ_C'.
+[05/17 20:57:49     27s] Type 'man IMPPP-543' for more detail.
+[05/17 20:57:49     27s] **WARN: (EMS-27):	Message (IMPPP-543) has exceeded the current message display limit of 20.
+[05/17 20:57:49     27s] To increase the message display limit, refer to the product command reference manual.
+[05/17 20:57:49     27s] viaInitial ends at Wed May 17 20:57:49 2023
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[05/17 20:57:49     27s] Loading view definition file from mmmc.tcl
+[05/17 20:57:49     27s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib' ...
+[05/17 20:57:49     27s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib, Line 84713)
+[05/17 20:57:49     27s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib, Line 84764)
+[05/17 20:57:49     27s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib, Line 84815)
+[05/17 20:57:49     27s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib, Line 120153)
+[05/17 20:57:49     27s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib, Line 120204)
+[05/17 20:57:49     27s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib, Line 120255)
+[05/17 20:57:49     27s] **WARN: (TECHLIB-1161):	The library level attribute default_operating_conditions on line 226791 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+[05/17 20:57:49     27s] **WARN: (TECHLIB-1161):	The library level attribute default_wire_load on line 226792 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+[05/17 20:57:49     27s] **WARN: (TECHLIB-1161):	The library level attribute default_wire_load_selection on line 226793 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+[05/17 20:57:49     27s] **WARN: (TECHLIB-302):	No function defined for cell 'PMT3_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+[05/17 20:57:49     27s] **WARN: (TECHLIB-302):	No function defined for cell 'PMT2_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+[05/17 20:57:49     27s] **WARN: (TECHLIB-302):	No function defined for cell 'PMT1_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+[05/17 20:57:49     27s] **WARN: (TECHLIB-302):	No function defined for cell 'NMT3_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+[05/17 20:57:49     27s] **WARN: (TECHLIB-302):	No function defined for cell 'NMT2_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+[05/17 20:57:49     27s] **WARN: (TECHLIB-302):	No function defined for cell 'NMT1_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+[05/17 20:57:49     27s] Read 294 cells in library 'saed32hvt_ss0p75vn40c' 
+[05/17 20:57:49     27s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p95v.lib' ...
+[05/17 20:57:49     28s] **WARN: (TECHLIB-1161):	The library level attribute default_operating_conditions on line 6569 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p95v.lib)
+[05/17 20:57:49     28s] **WARN: (TECHLIB-1161):	The library level attribute default_wire_load on line 6570 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p95v.lib)
+[05/17 20:57:49     28s] **WARN: (TECHLIB-1161):	The library level attribute default_wire_load_selection on line 6571 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p95v.lib)
+[05/17 20:57:49     28s] Read 24 cells in library 'saed32hvt_dlvl_ss0p75vn40c_i0p95v' 
+[05/17 20:57:49     28s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p75vn40c_i0p75v.lib' ...
+[05/17 20:57:49     28s] **WARN: (TECHLIB-1161):	The library level attribute default_operating_conditions on line 3945 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p75vn40c_i0p75v.lib)
+[05/17 20:57:49     28s] **WARN: (TECHLIB-1161):	The library level attribute default_wire_load on line 3946 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p75vn40c_i0p75v.lib)
+[05/17 20:57:49     28s] **WARN: (TECHLIB-1161):	The library level attribute default_wire_load_selection on line 3947 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p75vn40c_i0p75v.lib)
+[05/17 20:57:49     28s] Read 12 cells in library 'saed32hvt_ulvl_ss0p75vn40c_i0p75v' 
+[05/17 20:57:49     28s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p75v.lib' ...
+[05/17 20:57:49     28s] **WARN: (TECHLIB-1161):	The library level attribute default_operating_conditions on line 6569 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p75v.lib)
+[05/17 20:57:49     28s] **WARN: (TECHLIB-1161):	The library level attribute default_wire_load on line 6570 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p75v.lib)
+[05/17 20:57:49     28s] **WARN: (TECHLIB-1161):	The library level attribute default_wire_load_selection on line 6571 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p75v.lib)
+[05/17 20:57:49     28s] Read 24 cells in library 'saed32hvt_dlvl_ss0p75vn40c_i0p75v' 
+[05/17 20:57:49     28s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib' ...
+[05/17 20:57:50     28s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib, Line 84613)
+[05/17 20:57:50     28s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib, Line 84664)
+[05/17 20:57:50     28s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib, Line 84715)
+[05/17 20:57:50     28s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib, Line 120053)
+[05/17 20:57:50     28s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib, Line 120104)
+[05/17 20:57:50     28s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib, Line 120155)
+[05/17 20:57:50     28s] **WARN: (TECHLIB-1161):	The library level attribute default_operating_conditions on line 226348 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+[05/17 20:57:50     28s] **WARN: (TECHLIB-1161):	The library level attribute default_wire_load on line 226349 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+[05/17 20:57:50     28s] **WARN: (TECHLIB-1161):	The library level attribute default_wire_load_selection on line 226350 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+[05/17 20:57:50     28s] **WARN: (TECHLIB-302):	No function defined for cell 'PMT3_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+[05/17 20:57:50     28s] **WARN: (TECHLIB-302):	No function defined for cell 'PMT2_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+[05/17 20:57:50     28s] **WARN: (TECHLIB-302):	No function defined for cell 'PMT1_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+[05/17 20:57:50     28s] **WARN: (TECHLIB-302):	No function defined for cell 'NMT3_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+[05/17 20:57:50     28s] **WARN: (TECHLIB-302):	No function defined for cell 'NMT2_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+[05/17 20:57:50     28s] **WARN: (TECHLIB-302):	No function defined for cell 'NMT1_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+[05/17 20:57:50     28s] Read 294 cells in library 'saed32hvt_ss0p95vn40c' 
+[05/17 20:57:50     28s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p95vn40c_i0p75v.lib' ...
+[05/17 20:57:50     28s] **WARN: (TECHLIB-1161):	The library level attribute default_operating_conditions on line 3945 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p95vn40c_i0p75v.lib)
+[05/17 20:57:50     28s] **WARN: (TECHLIB-1161):	The library level attribute default_wire_load on line 3946 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p95vn40c_i0p75v.lib)
+[05/17 20:57:50     28s] **WARN: (TECHLIB-1161):	The library level attribute default_wire_load_selection on line 3947 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p95vn40c_i0p75v.lib)
+[05/17 20:57:50     28s] Read 12 cells in library 'saed32hvt_ulvl_ss0p95vn40c_i0p75v' 
+[05/17 20:57:50     28s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib' ...
+[05/17 20:57:50     29s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib, Line 84611)
+[05/17 20:57:50     29s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib, Line 84662)
+[05/17 20:57:50     29s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib, Line 84713)
+[05/17 20:57:51     29s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib, Line 120051)
+[05/17 20:57:51     29s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib, Line 120102)
+[05/17 20:57:51     29s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib, Line 120153)
+[05/17 20:57:51     29s] **WARN: (TECHLIB-1161):	The library level attribute default_operating_conditions on line 226658 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib)
+[05/17 20:57:51     29s] **WARN: (TECHLIB-1161):	The library level attribute default_wire_load on line 226659 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib)
+[05/17 20:57:51     29s] Message <TECHLIB-1161> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+[05/17 20:57:51     29s] **WARN: (TECHLIB-302):	No function defined for cell 'PMT3_RVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib)
+[05/17 20:57:51     29s] **WARN: (TECHLIB-302):	No function defined for cell 'PMT2_RVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib)
+[05/17 20:57:51     29s] **WARN: (TECHLIB-302):	No function defined for cell 'PMT1_RVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib)
+[05/17 20:57:51     29s] **WARN: (TECHLIB-302):	No function defined for cell 'NMT3_RVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib)
+[05/17 20:57:51     29s] **WARN: (TECHLIB-302):	No function defined for cell 'NMT2_RVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib)
+[05/17 20:57:51     29s] **WARN: (TECHLIB-302):	No function defined for cell 'NMT1_RVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib)
+[05/17 20:57:51     29s] Read 294 cells in library 'saed32rvt_ss0p75vn40c' 
+[05/17 20:57:51     29s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_dlvl_ss0p75vn40c_i0p95v.lib' ...
+[05/17 20:57:51     29s] Read 24 cells in library 'saed32rvt_dlvl_ss0p75vn40c_i0p95v' 
+[05/17 20:57:51     29s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ss0p75vn40c_i0p75v.lib' ...
+[05/17 20:57:51     29s] Read 12 cells in library 'saed32rvt_ulvl_ss0p75vn40c_i0p75v' 
+[05/17 20:57:51     29s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_dlvl_ss0p75vn40c_i0p75v.lib' ...
+[05/17 20:57:51     29s] Read 24 cells in library 'saed32rvt_dlvl_ss0p75vn40c_i0p75v' 
+[05/17 20:57:51     29s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95vn40c.lib' ...
+[05/17 20:57:51     30s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95vn40c.lib, Line 84607)
+[05/17 20:57:51     30s] **WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95vn40c.lib, Line 84658)
+[05/17 20:57:51     30s] Message <TECHLIB-1277> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+[05/17 20:57:52     30s] **WARN: (TECHLIB-302):	No function defined for cell 'PMT3_RVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95vn40c.lib)
+[05/17 20:57:52     30s] **WARN: (TECHLIB-302):	No function defined for cell 'PMT2_RVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95vn40c.lib)
+[05/17 20:57:52     30s] Message <TECHLIB-302> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+[05/17 20:57:52     30s] Read 294 cells in library 'saed32rvt_ss0p95vn40c' 
+[05/17 20:57:52     30s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ss0p95vn40c_i0p75v.lib' ...
+[05/17 20:57:52     30s] Read 12 cells in library 'saed32rvt_ulvl_ss0p95vn40c_i0p75v' 
+[05/17 20:57:52     30s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ss0p75vn40c.lib' ...
+[05/17 20:57:53     31s] Read 294 cells in library 'saed32lvt_ss0p75vn40c' 
+[05/17 20:57:53     31s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_dlvl_ss0p75vn40c_i0p95v.lib' ...
+[05/17 20:57:53     31s] Read 24 cells in library 'saed32lvt_dlvl_ss0p75vn40c_i0p95v' 
+[05/17 20:57:53     31s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ss0p75vn40c_i0p75v.lib' ...
+[05/17 20:57:53     31s] Read 12 cells in library 'saed32lvt_ulvl_ss0p75vn40c_i0p75v' 
+[05/17 20:57:53     31s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_dlvl_ss0p75vn40c_i0p75v.lib' ...
+[05/17 20:57:53     31s] Read 24 cells in library 'saed32lvt_dlvl_ss0p75vn40c_i0p75v' 
+[05/17 20:57:53     31s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ss0p95vn40c.lib' ...
+[05/17 20:57:53     32s] Read 294 cells in library 'saed32lvt_ss0p95vn40c' 
+[05/17 20:57:53     32s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ss0p95vn40c_i0p75v.lib' ...
+[05/17 20:57:53     32s] Read 12 cells in library 'saed32lvt_ulvl_ss0p95vn40c_i0p75v' 
+[05/17 20:57:53     32s] Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram/db_nldm/saed32sram_ss0p95vn40c.lib' ...
+[05/17 20:57:54     32s] Read 35 cells in library 'saed32sram_ss0p95vn40c' 
+[05/17 20:57:54     32s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ff0p95vn40c.lib' ...
+[05/17 20:57:54     33s] Read 294 cells in library 'saed32hvt_ff0p95vn40c' 
+[05/17 20:57:54     33s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ff0p95vn40c_i1p16v.lib' ...
+[05/17 20:57:54     33s] Read 24 cells in library 'saed32hvt_dlvl_ff0p95vn40c_i1p16v' 
+[05/17 20:57:54     33s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ff0p95vn40c_i0p95v.lib' ...
+[05/17 20:57:54     33s] Read 12 cells in library 'saed32hvt_ulvl_ff0p95vn40c_i0p95v' 
+[05/17 20:57:54     33s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ff0p95vn40c_i0p95v.lib' ...
+[05/17 20:57:54     33s] Read 24 cells in library 'saed32hvt_dlvl_ff0p95vn40c_i0p95v' 
+[05/17 20:57:54     33s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ff1p16vn40c.lib' ...
+[05/17 20:57:55     34s] Read 294 cells in library 'saed32hvt_ff1p16vn40c' 
+[05/17 20:57:55     34s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ff1p16vn40c_i1p16v.lib' ...
+[05/17 20:57:55     34s] Read 12 cells in library 'saed32hvt_ulvl_ff1p16vn40c_i1p16v' 
+[05/17 20:57:55     34s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ff1p16vn40c_i1p16v.lib' ...
+[05/17 20:57:55     34s] Read 24 cells in library 'saed32hvt_dlvl_ff1p16vn40c_i1p16v' 
+[05/17 20:57:55     34s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ff1p16vn40c_i0p95v.lib' ...
+[05/17 20:57:55     34s] Read 12 cells in library 'saed32hvt_ulvl_ff1p16vn40c_i0p95v' 
+[05/17 20:57:55     34s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ff0p95vn40c.lib' ...
+[05/17 20:57:56     35s] Read 294 cells in library 'saed32rvt_ff0p95vn40c' 
+[05/17 20:57:56     35s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_dlvl_ff0p95vn40c_i1p16v.lib' ...
+[05/17 20:57:56     35s] Read 24 cells in library 'saed32rvt_dlvl_ff0p95vn40c_i1p16v' 
+[05/17 20:57:56     35s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ff0p95vn40c_i0p95v.lib' ...
+[05/17 20:57:56     35s] Read 12 cells in library 'saed32rvt_ulvl_ff0p95vn40c_i0p95v' 
+[05/17 20:57:56     35s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_dlvl_ff0p95vn40c_i0p95v.lib' ...
+[05/17 20:57:56     35s] Read 24 cells in library 'saed32rvt_dlvl_ff0p95vn40c_i0p95v' 
+[05/17 20:57:56     35s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ff1p16vn40c.lib' ...
+[05/17 20:57:57     36s] Read 294 cells in library 'saed32rvt_ff1p16vn40c' 
+[05/17 20:57:57     36s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ff1p16vn40c_i1p16v.lib' ...
+[05/17 20:57:57     36s] Read 12 cells in library 'saed32rvt_ulvl_ff1p16vn40c_i1p16v' 
+[05/17 20:57:57     36s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_dlvl_ff1p16vn40c_i1p16v.lib' ...
+[05/17 20:57:57     36s] Read 24 cells in library 'saed32rvt_dlvl_ff1p16vn40c_i1p16v' 
+[05/17 20:57:57     36s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ff1p16vn40c_i0p95v.lib' ...
+[05/17 20:57:57     36s] Read 12 cells in library 'saed32rvt_ulvl_ff1p16vn40c_i0p95v' 
+[05/17 20:57:57     36s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ff0p95vn40c.lib' ...
+[05/17 20:57:58     37s] Read 294 cells in library 'saed32lvt_ff0p95vn40c' 
+[05/17 20:57:58     37s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_dlvl_ff0p95vn40c_i1p16v.lib' ...
+[05/17 20:57:58     37s] Read 24 cells in library 'saed32lvt_dlvl_ff0p95vn40c_i1p16v' 
+[05/17 20:57:58     37s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ff0p95vn40c_i0p95v.lib' ...
+[05/17 20:57:58     37s] Read 12 cells in library 'saed32lvt_ulvl_ff0p95vn40c_i0p95v' 
+[05/17 20:57:58     37s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_dlvl_ff0p95vn40c_i0p95v.lib' ...
+[05/17 20:57:58     37s] Read 24 cells in library 'saed32lvt_dlvl_ff0p95vn40c_i0p95v' 
+[05/17 20:57:58     37s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ff1p16vn40c.lib' ...
+[05/17 20:57:58     37s] Read 294 cells in library 'saed32lvt_ff1p16vn40c' 
+[05/17 20:57:58     37s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ff1p16vn40c_i1p16v.lib' ...
+[05/17 20:57:59     37s] Read 12 cells in library 'saed32lvt_ulvl_ff1p16vn40c_i1p16v' 
+[05/17 20:57:59     37s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_dlvl_ff1p16vn40c_i1p16v.lib' ...
+[05/17 20:57:59     37s] Read 24 cells in library 'saed32lvt_dlvl_ff1p16vn40c_i1p16v' 
+[05/17 20:57:59     37s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ff1p16vn40c_i0p95v.lib' ...
+[05/17 20:57:59     38s] Read 12 cells in library 'saed32lvt_ulvl_ff1p16vn40c_i0p95v' 
+[05/17 20:57:59     38s] Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram/db_nldm/saed32sram_ff1p16vn40c.lib' ...
+[05/17 20:57:59     38s] Read 35 cells in library 'saed32sram_ff1p16vn40c' 
+[05/17 20:57:59     38s] Ending "PreSetAnalysisView" (total cpu=0:00:11.3, real=0:00:10.0, peak res=721.3M, current mem=562.2M)
+[05/17 20:57:59     38s] *** End library_loading (cpu=0.19min, real=0.17min, mem=57.4M, fe_cpu=0.64min, fe_real=1.28min, fe_mem=857.5M) ***
+[05/17 20:57:59     38s] #% Begin Load netlist data ... (date=05/17 20:57:59, mem=562.2M)
+[05/17 20:57:59     38s] *** Begin netlist parsing (mem=857.5M) ***
+[05/17 20:57:59     38s] #% End Load netlist data ... (date=05/17 20:57:59, total cpu=0:00:00.0, real=0:00:00.0, peak res=562.2M, current mem=562.2M)
+[05/17 20:57:59     38s] **ERROR: (IMPVL-902):	Failed to read netlist ../../syn/outputs/ORCA_TOP.genus_phys.vg. See previous error messages for details.  Resolve the issues and reload the design.
+[05/17 20:57:59     38s] 
+[05/17 20:59:03     53s] ### Start verbose source output (echo mode) for '../../ORCA_TOP.design_config.tcl' ...
+[05/17 20:59:03     53s] # set lib_dir /pkgs/synopsys/2020/32_28nm/SAED32_EDK
+# set top_design ORCA_TOP
+# set FCL 1
+# set add_ios 0
+# set pad_design 0
+# set design_size {1000 800}
+# set design_io_border 10
+# set dc_floorplanning 1
+# set enable_dft 1
+# set innovus_enable_manual_macro_placement 1
+# set split_constraints 0
+# set rtl_list [list ../rtl/$top_design.sv ]
+# set slow_corner "ss0p75vn40c ss0p75vn40c_i0p95v ss0p75vn40c_i0p75v ss0p95vn40c ss0p95vn40c_i0p75v"
+# set fast_corner "ff0p95vn40c ff0p95vn40c_i1p16v ff0p95vn40c_i0p95v ff1p16vn40c ff1p16vn40c_i1p16v ff1p16vn40c_i0p95v"
+# set slow_metal 1p9m_Cmax_-40
+# set fast_metal 1p9m_Cmax_-40
+# set synth_corners $slow_corner
+# set synth_corners_slow $slow_corner
+# set synth_corners_fast $fast_corner
+# set lib_types "stdcell_hvt stdcell_rvt stdcell_lvt sram"
+# set sub_lib_type "saed32?vt_ saed32sram_ saed32?vt_ulvl_ saed32?vt_dlvl_ "
+# if { 0 } {
+    set corners ""
+    #Add Worst corners
+    set corners "$corners ss0p75vn40c ss0p75vn40c_i0p95v ss0p75vn40c_i0p75v ss0p95vn40c ss0p95vn40c_i0p75v"
+    #Add Best corners
+    set corners "$corners ff0p95vn40c ff0p95vn40c_i1p16v ff0p95vn40c_i0p95v ff1p16vn40c ff1p16vn40c_i1p16v ff1p16vn40c_i0p95v"
+    #Add Leakage corners
+    set corners "$corners ff0p95v125c f0p95v125c_i1p16v ff0p95v125c_i0p95v ff1p16v125c ff1p16v125c_i1p16v ff1p16v125c ff1p16v125c_i0p95v"
+    set lib_types "stdcell_hvt stdcell_rvt stdcell_lvt sram_lp"
+    # Get the main standard cells, and also the level shifters.  Plus srams.
+    set sub_lib_type "saed32?vt_ saed32?vt_ulvl_ saed32?vt_dlvl_ saed32sram_"
+}
+# set topdir [ lindex [ regexp -inline "(.*)\(syn\|pt\|apr\)" [pwd] ] 1 ]
+# set sub_block {SDRAM_TOP 
+				BLENDER_0 
+				PCI_TOP 
+				CONTEXT_MEM 
+				RISC_CORE 
+				CLOCKING 
+				BLENDER_1 
+				PARSER 
+				}
+# set sub_block_I {I_SDRAM_TOP I_BLENDER_1  I_BLENDER_0 I_RISC_CORE I_CONTEXT_MEM I_PCI_TOP I_PARSER I_CLOCKING}
+# set macro_block {I_SDRAM_TOP I_PCI_TOP I_RISC_CORE I_CONTEXT_MEM}
+### End verbose source output for '../../ORCA_TOP.design_config.tcl'.
+[05/17 20:59:03     53s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[05/17 20:59:03     53s] <CMD> set search_path {}
+[05/17 20:59:03     53s] <CMD> set init_lef_file {../../cadence_cap_tech/tech.lef saed32sram.lef saed32nm_rvt_1p9m.lef saed32nm_hvt_1p9m.lef saed32nm_lvt_1p9m.lef}
+[05/17 20:59:03     53s] <CMD> set init_mmmc_file mmmc.tcl
+[05/17 20:59:03     53s] <CMD> set init_design_netlisttype Verilog
+[05/17 20:59:03     53s] <CMD> set init_verilog ../../syn/outputs/ORCA_TOP.genus_phys.vg
+[05/17 20:59:03     53s] <CMD> set init_top_cell ORCA_TOP
+[05/17 20:59:03     53s] <CMD> set init_pwr_net VDD
+[05/17 20:59:03     53s] <CMD> set init_gnd_net VSS
+[05/17 20:59:03     53s] <CMD> init_design
+[05/17 20:59:03     53s] report_message: '-start_cmd/-end_cmd' can not be nested. Interior calls do nothing. Ignore.
+[05/17 20:59:03     53s] #% Begin Load MMMC data ... (date=05/17 20:59:03, mem=562.2M)
+[05/17 20:59:03     53s] Extraction setup Started 
+[05/17 20:59:03     53s] Innovus terminated by internal (SEGV) error/signal...
+[05/17 20:59:03     53s] *** Stack trace:
+*** Stack trace:
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus[0x12db3b76]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(syStackTrace+0xc8)[0x12db4009]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus[0x482da74]
+/lib64/libpthread.so.0(+0xf630)[0x7fae8c2cd630]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_ZN12peLayerPitch17computeLayerPitchEv+0x4f)[0xc9517df]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_ZN14peEngineClient16getLayerInfoByIdERSt6vectorI11eeLayerInfoSaIS1_EE+0x8da)[0xc94ba6a]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_ZN14peEngineClient12getLayerInfoERSt6vectorI11eeLayerInfoSaIS1_EE+0xc0c)[0xc94c9dc]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_ZN21eeExtEngineDesignData12setLayerInfoEv+0x4c)[0x4d90ebc]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus[0xc87a979]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_Z10dbMCRCInitv+0xa)[0xc8816ea]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_Z28peiInitializeExtractionSetUpb+0x23)[0xc881963]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus[0xf6daff3]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_ZN6TAMmmc14updateRcCornerEP14TAMmmcRcCornerPKcf9tabooleanR18TAMmmcTripleFactorS4_fS4_S6_S4_S6_S4_fS4_fS4_S6_S4_S6_S4_S3_S3_S3_fS4_S3_+0x3a8)[0x13016498]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_Z30TaCmd_createOrUpdate_rc_cornerPvP10Tcl_InterpiPPc9tabooleanP6tcmCmd+0x890)[0x141964c0]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_ZN10tcmBaseCmd7executeEP10Tcl_InterpiPPc+0x188)[0x150ce0e8]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_ZN6tcmMgr9cmdParserEPvP10Tcl_InterpiPPc+0x67b)[0x150bd0ab]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(TclInvokeStringCommand+0x80)[0x18a0c960]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(TclNRRunCallbacks+0x47)[0x18a112d7]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus[0x18a137a8]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(Tcl_EvalEx+0x16)[0x18a140d6]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(TclNREvalObjEx+0x6f)[0x18a1417f]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus[0x18ac997b]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus[0x18a273d1]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(TclNRRunCallbacks+0x47)[0x18a112d7]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus[0x18a137a8]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(Tcl_EvalEx+0x16)[0x18a140d6]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(TclNREvalObjEx+0x6f)[0x18a1417f]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus[0x18ac997b]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus[0x18a273d1]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(TclNRRunCallbacks+0x47)[0x18a112d7]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(Tcl_RecordAndEvalObj+0xf4)[0x18aaf9d4]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(Tcl_RecordAndEval+0x38)[0x18aafb38]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_Z17rdaEditCmdLineEndPc+0x33d)[0x48ebe0d]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_ZN9seConsole7sesMode9DoExecuteERKSsPv+0xc7)[0xf779b27]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_ZN7Redline9EmacsMode10AcceptLineEv+0x3c)[0x1087dc9c]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_ZN7Redline11ModeCommandINS_9EmacsModeEE15CommandFnNoKeysERKN5boost8functionIFvRS1_EEERNS_6EditorE+0x61)[0x10886221]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_ZN5boost6detail8function26void_function_obj_invoker2INS_3_bi6bind_tINS3_11unspecifiedENS_8functionIFvRN7Redline6EditorEEEENS3_5list1INS_3argILi1EEEEEEEvS9_RKNS7_14KeyCombinationEE6invokeERNS1_15function_bufferES9_SJ_+0x1b)[0x10895a7b]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_ZNK7Redline7Command3RunERNS_6EditorERKNS_14KeyCombinationE+0x1c)[0x1089579c]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_ZN7Redline6Editor9Internals3RunEb+0xe0)[0x1087a2c0]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus[0x18b140a7]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(Tcl_ServiceEvent+0x87)[0x18ad5af7]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(Tcl_DoOneEvent+0x129)[0x18ad5df9]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/lib/64bit/libtq.so(_ZN17TqEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x6a)[0x7fae90d2f23a]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5(_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE+0xea)[0x7fae8fed80ca]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5(_ZN16QCoreApplication4execEv+0x84)[0x7fae8fee0954]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/lib/64bit/libtq.so(_ZN13TqApplication4execEv+0x177)[0x7fae90d2e897]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(_Z12edi_app_initP10Tcl_Interp+0x281)[0x48cdf41]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(Tcl_MainEx+0x177)[0x18ad0637]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus(main+0x1d2)[0x3fbf4d2]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x7fae8b6e5555]
+/pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/innovus/bin/64bit/innovus[0x482a871]
+========================================
+               pstack
+========================================
+Thread 25 (Thread 0x7fae88c3b700 (LWP 26602)):
+#0  0x00007fae8b7b8b43 in select () from /lib64/libc.so.6
+#1  0x0000000018b13da7 in NotifierThreadProc ()
+#2  0x0000000004aebaba in create_head(void*) ()
+#3  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 24 (Thread 0x7fae80d7f700 (LWP 26603)):
+#0  0x00007fae8c2cc9dd in accept () from /lib64/libpthread.so.0
+#1  0x00000000173d4ede in ProcessInfo::handleConnection(void*) ()
+#2  0x0000000004aebaba in create_head(void*) ()
+#3  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 23 (Thread 0x7fae8057e700 (LWP 26607)):
+#0  0x00007fae8b7b8b43 in select () from /lib64/libc.so.6
+#1  0x00000000173cd0cb in ProcessInfo::sampleUsage(void*) ()
+#2  0x0000000004aebaba in create_head(void*) ()
+#3  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 22 (Thread 0x7fae7fd7d700 (LWP 26617)):
+#0  0x00007fae8b7889fd in nanosleep () from /lib64/libc.so.6
+#1  0x00007fae8b788894 in sleep () from /lib64/libc.so.6
+#2  0x0000000012dcdc1c in syiPeakMem(void*) ()
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 21 (Thread 0x7fae7f57c700 (LWP 26618)):
+#0  0x00007fae8c2cce9d in nanosleep () from /lib64/libpthread.so.0
+#1  0x0000000005f3626d in rdaiLicRecheck(void*) ()
+#2  0x0000000004aebaba in create_head(void*) ()
+#3  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 20 (Thread 0x7fae7dd46700 (LWP 26663)):
+#0  0x00007fae8b7b6ddd in poll () from /lib64/libc.so.6
+#1  0x00007fae8d1c1022 in _xcb_conn_wait () from /lib64/libxcb.so.1
+#2  0x00007fae8d1c2c6f in xcb_wait_for_event () from /lib64/libxcb.so.1
+#3  0x00007fae7dd9ba59 in ?? () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5XcbQpa.so.5
+#4  0x00007fae8fcfb17a in ?? () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#5  0x0000000004aebaba in create_head(void*) ()
+#6  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 19 (Thread 0x7fae7735b700 (LWP 26669)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 18 (Thread 0x7fae76b5a700 (LWP 26672)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 17 (Thread 0x7fae76359700 (LWP 26673)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 16 (Thread 0x7fae75b58700 (LWP 26674)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 15 (Thread 0x7fae75357700 (LWP 26675)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 14 (Thread 0x7fae74b56700 (LWP 26677)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 13 (Thread 0x7fae74355700 (LWP 26678)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 12 (Thread 0x7fae73b54700 (LWP 26679)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 11 (Thread 0x7fae73353700 (LWP 26680)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 10 (Thread 0x7fae72b52700 (LWP 26681)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 9 (Thread 0x7fae72351700 (LWP 26682)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 8 (Thread 0x7fae71b50700 (LWP 26683)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 7 (Thread 0x7fae7134f700 (LWP 26685)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 6 (Thread 0x7fae70b4e700 (LWP 26688)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 5 (Thread 0x7fae7034d700 (LWP 26689)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 4 (Thread 0x7fae6fb4c700 (LWP 26692)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 3 (Thread 0x7fae6e867700 (LWP 26736)):
+#0  0x00007fae8c2cd3c1 in sigwait () from /lib64/libpthread.so.0
+#1  0x000000000482b1cf in ctrlCHandle(void*) ()
+#2  0x0000000004aebaba in create_head(void*) ()
+#3  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 2 (Thread 0x7fae577d1700 (LWP 26780)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae8fcfbfbb in QWaitCondition::wait(QMutex*, unsigned long) () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#2  0x00007fae8f947e22 in ?? () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#3  0x00007fae8fcfb17a in ?? () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#4  0x0000000004aebaba in create_head(void*) ()
+#5  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+Thread 1 (Thread 0x7fae94bc1300 (LWP 26464)):
+#0  0x00007fae8b788659 in waitpid () from /lib64/libc.so.6
+#1  0x00007fae8b705f62 in do_system () from /lib64/libc.so.6
+#2  0x00007fae8b706311 in system () from /lib64/libc.so.6
+#3  0x0000000012db3ba0 in syStackTraceDump(_IO_FILE*, bool) ()
+#4  0x0000000012db4009 in syStackTrace ()
+#5  0x000000000482da74 in rdaiErrorHandler(int, siginfo*, void*) ()
+#6  <signal handler called>
+#7  0x000000000c9517df in peLayerPitch::computeLayerPitch() ()
+#8  0x000000000c94ba6a in peEngineClient::getLayerInfoById(std::vector<eeLayerInfo, std::allocator<eeLayerInfo> >&) ()
+#9  0x000000000c94c9dc in peEngineClient::getLayerInfo(std::vector<eeLayerInfo, std::allocator<eeLayerInfo> >&) ()
+#10 0x0000000004d90ebc in eeExtEngineDesignData::setLayerInfo() ()
+#11 0x000000000c87a979 in eeExtEngineDesignData::resetDesignData() [clone .constprop.419] ()
+#12 0x000000000c8816ea in dbMCRCInit() ()
+#13 0x000000000c881963 in peiInitializeExtractionSetUp(bool) ()
+#14 0x000000000f6daff3 in toiCteUpdateRcCornerPostCallback(TAMmmcRcCorner*, TAMmmcUpdateRcCornerCbkInfo*) ()
+#15 0x0000000013016498 in TAMmmc::updateRcCorner(TAMmmcRcCorner*, char const*, float, taboolean, TAMmmcTripleFactor&, taboolean, float, taboolean, TAMmmcTripleFactor&, taboolean, TAMmmcTripleFactor&, taboolean, float, taboolean, float, taboolean, TAMmmcTripleFactor&, taboolean, TAMmmcTripleFactor&, taboolean, char const*, char const*, char const*, float, taboolean, char const*) ()
+#16 0x00000000141964c0 in TaCmd_createOrUpdate_rc_corner(void*, Tcl_Interp*, int, char**, taboolean, tcmCmd*) ()
+#17 0x00000000150ce0e8 in tcmBaseCmd::execute(Tcl_Interp*, int, char**) ()
+#18 0x00000000150bd0ab in tcmMgr::cmdParser(void*, Tcl_Interp*, int, char**) ()
+#19 0x0000000018a0c960 in TclInvokeStringCommand ()
+#20 0x0000000018a112d7 in TclNRRunCallbacks ()
+#21 0x0000000018a137a8 in TclEvalEx ()
+#22 0x0000000018a140d6 in Tcl_EvalEx ()
+#23 0x0000000018a1417f in TclNREvalObjEx ()
+#24 0x0000000018ac997b in TclNREvalFile ()
+#25 0x0000000018a273d1 in TclNRSourceObjCmd ()
+#26 0x0000000018a112d7 in TclNRRunCallbacks ()
+#27 0x0000000018a137a8 in TclEvalEx ()
+#28 0x0000000018a140d6 in Tcl_EvalEx ()
+#29 0x0000000018a1417f in TclNREvalObjEx ()
+#30 0x0000000018ac997b in TclNREvalFile ()
+#31 0x0000000018a273d1 in TclNRSourceObjCmd ()
+#32 0x0000000018a112d7 in TclNRRunCallbacks ()
+#33 0x0000000018aaf9d4 in Tcl_RecordAndEvalObj ()
+#34 0x0000000018aafb38 in Tcl_RecordAndEval ()
+#35 0x00000000048ebe0d in rdaEditCmdLineEnd(char*) ()
+#36 0x000000000f779b27 in seConsole::sesMode::DoExecute(std::string const&, void*) ()
+#37 0x000000001087dc9c in Redline::EmacsMode::AcceptLine() ()
+#38 0x0000000010886221 in Redline::ModeCommand<Redline::EmacsMode>::CommandFnNoKeys(boost::function<void (Redline::EmacsMode&)> const&, Redline::Editor&) ()
+#39 0x0000000010895a7b in boost::detail::function::void_function_obj_invoker2<boost::_bi::bind_t<boost::_bi::unspecified, boost::function<void (Redline::Editor&)>, boost::_bi::list1<boost::arg<1> > >, void, Redline::Editor&, Redline::KeyCombination const&>::invoke(boost::detail::function::function_buffer&, Redline::Editor&, Redline::KeyCombination const&) ()
+#40 0x000000001089579c in Redline::Command::Run(Redline::Editor&, Redline::KeyCombination const&) const ()
+#41 0x000000001087a2c0 in Redline::Editor::Internals::Run(bool) ()
+#42 0x0000000018b140a7 in FileHandlerEventProc ()
+#43 0x0000000018ad5af7 in Tcl_ServiceEvent ()
+#44 0x0000000018ad5df9 in Tcl_DoOneEvent ()
+#45 0x00007fae90d2f23a in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/lib/64bit/libtq.so
+#46 0x00007fae8fed80ca in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#47 0x00007fae8fee0954 in QCoreApplication::exec() () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#48 0x00007fae90d2e897 in TqApplication::exec() () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/lib/64bit/libtq.so
+#49 0x00000000048cdf41 in edi_app_init(Tcl_Interp*) ()
+#50 0x0000000018ad0637 in Tcl_MainEx ()
+#51 0x0000000003fbf4d2 in main ()
+========================================
+                gdb
+========================================
+Using: gdb
+[New LWP 26780]
+[New LWP 26736]
+[New LWP 26692]
+[New LWP 26689]
+[New LWP 26688]
+[New LWP 26685]
+[New LWP 26683]
+[New LWP 26682]
+[New LWP 26681]
+[New LWP 26680]
+[New LWP 26679]
+[New LWP 26678]
+[New LWP 26677]
+[New LWP 26675]
+[New LWP 26674]
+[New LWP 26673]
+[New LWP 26672]
+[New LWP 26669]
+[New LWP 26663]
+[New LWP 26618]
+[New LWP 26617]
+[New LWP 26607]
+[New LWP 26603]
+[New LWP 26602]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+0x00007fae8b788659 in waitpid () from /lib64/libc.so.6
+
+Thread 25 (Thread 0x7fae88c3b700 (LWP 26602)):
+#0  0x00007fae8b7b8b43 in select () from /lib64/libc.so.6
+#1  0x0000000018b13da7 in NotifierThreadProc ()
+#2  0x0000000004aebaba in create_head(void*) ()
+#3  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 24 (Thread 0x7fae80d7f700 (LWP 26603)):
+#0  0x00007fae8c2cc9dd in accept () from /lib64/libpthread.so.0
+#1  0x00000000173d4ede in ProcessInfo::handleConnection(void*) ()
+#2  0x0000000004aebaba in create_head(void*) ()
+#3  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 23 (Thread 0x7fae8057e700 (LWP 26607)):
+#0  0x00007fae8b7b8b43 in select () from /lib64/libc.so.6
+#1  0x00000000173cd0cb in ProcessInfo::sampleUsage(void*) ()
+#2  0x0000000004aebaba in create_head(void*) ()
+#3  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 22 (Thread 0x7fae7fd7d700 (LWP 26617)):
+#0  0x00007fae8b7889fd in nanosleep () from /lib64/libc.so.6
+#1  0x00007fae8b788894 in sleep () from /lib64/libc.so.6
+#2  0x0000000012dcdc1c in syiPeakMem(void*) ()
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 21 (Thread 0x7fae7f57c700 (LWP 26618)):
+#0  0x00007fae8c2cce9d in nanosleep () from /lib64/libpthread.so.0
+#1  0x0000000005f3626d in rdaiLicRecheck(void*) ()
+#2  0x0000000004aebaba in create_head(void*) ()
+#3  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 20 (Thread 0x7fae7dd46700 (LWP 26663)):
+#0  0x00007fae8b7b6ddd in poll () from /lib64/libc.so.6
+#1  0x00007fae8d1c1022 in _xcb_conn_wait () from /lib64/libxcb.so.1
+#2  0x00007fae8d1c2c6f in xcb_wait_for_event () from /lib64/libxcb.so.1
+#3  0x00007fae7dd9ba59 in ?? () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5XcbQpa.so.5
+#4  0x00007fae8fcfb17a in ?? () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#5  0x0000000004aebaba in create_head(void*) ()
+#6  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#7  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 19 (Thread 0x7fae7735b700 (LWP 26669)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 18 (Thread 0x7fae76b5a700 (LWP 26672)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 17 (Thread 0x7fae76359700 (LWP 26673)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 16 (Thread 0x7fae75b58700 (LWP 26674)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 15 (Thread 0x7fae75357700 (LWP 26675)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 14 (Thread 0x7fae74b56700 (LWP 26677)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 13 (Thread 0x7fae74355700 (LWP 26678)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 12 (Thread 0x7fae73b54700 (LWP 26679)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 11 (Thread 0x7fae73353700 (LWP 26680)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 10 (Thread 0x7fae72b52700 (LWP 26681)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 9 (Thread 0x7fae72351700 (LWP 26682)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 8 (Thread 0x7fae71b50700 (LWP 26683)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 7 (Thread 0x7fae7134f700 (LWP 26685)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 6 (Thread 0x7fae70b4e700 (LWP 26688)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 5 (Thread 0x7fae7034d700 (LWP 26689)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 4 (Thread 0x7fae6fb4c700 (LWP 26692)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae7ad8b0b3 in thread_function () from /usr/lib64/dri/swrast_dri.so
+#2  0x00007fae7ad8ac27 in impl_thrd_routine () from /usr/lib64/dri/swrast_dri.so
+#3  0x0000000004aebaba in create_head(void*) ()
+#4  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#5  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 3 (Thread 0x7fae6e867700 (LWP 26736)):
+#0  0x00007fae8c2cd3c1 in sigwait () from /lib64/libpthread.so.0
+#1  0x000000000482b1cf in ctrlCHandle(void*) ()
+#2  0x0000000004aebaba in create_head(void*) ()
+#3  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 2 (Thread 0x7fae577d1700 (LWP 26780)):
+#0  0x00007fae8c2c9a35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007fae8fcfbfbb in QWaitCondition::wait(QMutex*, unsigned long) () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#2  0x00007fae8f947e22 in ?? () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#3  0x00007fae8fcfb17a in ?? () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#4  0x0000000004aebaba in create_head(void*) ()
+#5  0x00007fae8c2c5ea5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007fae8b7c1b0d in clone () from /lib64/libc.so.6
+
+Thread 1 (Thread 0x7fae94bc1300 (LWP 26464)):
+#0  0x00007fae8b788659 in waitpid () from /lib64/libc.so.6
+#1  0x00007fae8b705f62 in do_system () from /lib64/libc.so.6
+#2  0x00007fae8b706311 in system () from /lib64/libc.so.6
+#3  0x0000000012db3ba0 in syStackTraceDump(_IO_FILE*, bool) ()
+#4  0x0000000012db4009 in syStackTrace ()
+#5  0x000000000482da74 in rdaiErrorHandler(int, siginfo*, void*) ()
+#6  <signal handler called>
+#7  0x000000000c9517df in peLayerPitch::computeLayerPitch() ()
+#8  0x000000000c94ba6a in peEngineClient::getLayerInfoById(std::vector<eeLayerInfo, std::allocator<eeLayerInfo> >&) ()
+#9  0x000000000c94c9dc in peEngineClient::getLayerInfo(std::vector<eeLayerInfo, std::allocator<eeLayerInfo> >&) ()
+#10 0x0000000004d90ebc in eeExtEngineDesignData::setLayerInfo() ()
+#11 0x000000000c87a979 in eeExtEngineDesignData::resetDesignData() [clone .constprop.419] ()
+#12 0x000000000c8816ea in dbMCRCInit() ()
+#13 0x000000000c881963 in peiInitializeExtractionSetUp(bool) ()
+#14 0x000000000f6daff3 in toiCteUpdateRcCornerPostCallback(TAMmmcRcCorner*, TAMmmcUpdateRcCornerCbkInfo*) ()
+#15 0x0000000013016498 in TAMmmc::updateRcCorner(TAMmmcRcCorner*, char const*, float, taboolean, TAMmmcTripleFactor&, taboolean, float, taboolean, TAMmmcTripleFactor&, taboolean, TAMmmcTripleFactor&, taboolean, float, taboolean, float, taboolean, TAMmmcTripleFactor&, taboolean, TAMmmcTripleFactor&, taboolean, char const*, char const*, char const*, float, taboolean, char const*) ()
+#16 0x00000000141964c0 in TaCmd_createOrUpdate_rc_corner(void*, Tcl_Interp*, int, char**, taboolean, tcmCmd*) ()
+#17 0x00000000150ce0e8 in tcmBaseCmd::execute(Tcl_Interp*, int, char**) ()
+#18 0x00000000150bd0ab in tcmMgr::cmdParser(void*, Tcl_Interp*, int, char**) ()
+#19 0x0000000018a0c960 in TclInvokeStringCommand ()
+#20 0x0000000018a112d7 in TclNRRunCallbacks ()
+#21 0x0000000018a137a8 in TclEvalEx ()
+#22 0x0000000018a140d6 in Tcl_EvalEx ()
+#23 0x0000000018a1417f in TclNREvalObjEx ()
+#24 0x0000000018ac997b in TclNREvalFile ()
+#25 0x0000000018a273d1 in TclNRSourceObjCmd ()
+#26 0x0000000018a112d7 in TclNRRunCallbacks ()
+#27 0x0000000018a137a8 in TclEvalEx ()
+#28 0x0000000018a140d6 in Tcl_EvalEx ()
+#29 0x0000000018a1417f in TclNREvalObjEx ()
+#30 0x0000000018ac997b in TclNREvalFile ()
+#31 0x0000000018a273d1 in TclNRSourceObjCmd ()
+#32 0x0000000018a112d7 in TclNRRunCallbacks ()
+#33 0x0000000018aaf9d4 in Tcl_RecordAndEvalObj ()
+#34 0x0000000018aafb38 in Tcl_RecordAndEval ()
+#35 0x00000000048ebe0d in rdaEditCmdLineEnd(char*) ()
+#36 0x000000000f779b27 in seConsole::sesMode::DoExecute(std::string const&, void*) ()
+#37 0x000000001087dc9c in Redline::EmacsMode::AcceptLine() ()
+#38 0x0000000010886221 in Redline::ModeCommand<Redline::EmacsMode>::CommandFnNoKeys(boost::function<void (Redline::EmacsMode&)> const&, Redline::Editor&) ()
+#39 0x0000000010895a7b in boost::detail::function::void_function_obj_invoker2<boost::_bi::bind_t<boost::_bi::unspecified, boost::function<void (Redline::Editor&)>, boost::_bi::list1<boost::arg<1> > >, void, Redline::Editor&, Redline::KeyCombination const&>::invoke(boost::detail::function::function_buffer&, Redline::Editor&, Redline::KeyCombination const&) ()
+#40 0x000000001089579c in Redline::Command::Run(Redline::Editor&, Redline::KeyCombination const&) const ()
+#41 0x000000001087a2c0 in Redline::Editor::Internals::Run(bool) ()
+#42 0x0000000018b140a7 in FileHandlerEventProc ()
+#43 0x0000000018ad5af7 in Tcl_ServiceEvent ()
+#44 0x0000000018ad5df9 in Tcl_DoOneEvent ()
+#45 0x00007fae90d2f23a in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/lib/64bit/libtq.so
+#46 0x00007fae8fed80ca in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#47 0x00007fae8fee0954 in QCoreApplication::exec() () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#48 0x00007fae90d2e897 in TqApplication::exec() () from /pkgs/cadence/2020-11/INNOVUS191/tools.lnx86/lib/64bit/libtq.so
+#49 0x00000000048cdf41 in edi_app_init(Tcl_Interp*) ()
+#50 0x0000000018ad0637 in Tcl_MainEx ()
+#51 0x0000000003fbf4d2 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 26464] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+[Inferior 1 (process 26464) detached]
+[05/17 20:59:45     54s] 
+[05/17 20:59:45     54s] *** Memory Usage v#1 (Current mem = 857.492M, initial mem = 289.684M) ***
+[05/17 20:59:45     54s] 
+[05/17 20:59:45     54s] *** Summary of all messages that are not suppressed in this session:
+[05/17 20:59:45     54s] Severity  ID               Count  Summary                                  
+[05/17 20:59:45     54s] ERROR     IMPVL-902            1  Failed to read netlist %s. See previous ...
+[05/17 20:59:45     54s] WARNING   IMPPP-543           28  Inconsistent cut size definition in VIAR...
+[05/17 20:59:45     54s] WARNING   TCLCMD-1083          1  '%s'                                     
+[05/17 20:59:45     54s] WARNING   TECHLIB-302         72  No function defined for cell '%s'. The c...
+[05/17 20:59:45     54s] WARNING   TECHLIB-1161       132  The library level attribute %s on line %...
+[05/17 20:59:45     54s] WARNING   TECHLIB-1277        72  The %s '%s' has been defined for %s %s '...
+[05/17 20:59:45     54s] *** Message Summary: 305 warning(s), 1 error(s)
+[05/17 20:59:45     54s] 
+[05/17 20:59:45     54s] --- Ending "Innovus" (totcpu=0:00:54.1, real=0:03:03, mem=857.5M) ---

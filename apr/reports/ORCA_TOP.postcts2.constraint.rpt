@@ -1,0 +1,434 @@
+****************************************
+Report : constraint
+        -all_violators
+Design : ORCA_TOP
+Version: Q-2019.12-SP4
+Date   : Sat May 20 08:03:53 2023
+****************************************
+
+   late_timing
+   -----------
+
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+Endpoint                         Path Delay     Path Required       CRP    Slack Group    Scenario
+----------------------------------------------------------------------------------------------------------
+occ_int2/U_clk_control_i_1/pipeline_or_tree_l_reg/D (DFFARX1_LVT) 251.32 f 251.05   0.00  -0.26 SDRAM_CLK stuck_at_capture
+occ_int2/U_clk_control_i_1/fast_clk_enable_l_reg/D (DFFARX1_LVT) 661.19 f 661.05   0.00  -0.14 SDRAM_CLK stuck_at_capture
+occ_int2/U_clk_control_i_1/load_n_meta_0_l_reg/D (DFFARX1_LVT) 661.19 r 661.07   0.00  -0.12 SDRAM_CLK stuck_at_capture
+I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_0_l_reg/D (DFFARX1_LVT) 101.93 r 101.93   0.00  -0.00 SYS_CLK stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_21_/D (SDFFNX1_LVT) 571.21 f 570.61   0.00  -0.60 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_13_/D (SDFFX1_LVT) 161.27 f 160.67   0.00  -0.60 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_25_/D (SDFFNX1_LVT) 571.21 f 570.61   0.00  -0.60 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_17_/D (SDFFNX1_LVT) 571.20 f 570.61   0.00  -0.59 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_7_/D (SDFFNX1_LVT) 571.19 f 570.61   0.00  -0.58 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_3_/D (SDFFNX1_LVT) 571.19 f 570.61   0.00  -0.58 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_13_/D (SDFFNX1_LVT) 571.19 f 570.61   0.00  -0.58 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_2_/D (SDFFNX1_LVT) 571.18 f 570.61   0.00  -0.57 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_0_/D (SDFFNX1_LVT) 571.17 f 570.61   0.00  -0.56 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_10_/D (SDFFNX1_LVT) 571.17 f 570.61   0.00  -0.56 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_4_/D (SDFFNX1_LVT) 571.17 f 570.61   0.00  -0.56 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_24_/D (SDFFNX1_LVT) 571.16 f 570.60   0.00  -0.56 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_16_/D (SDFFNX1_LVT) 571.17 f 570.61   0.00  -0.56 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_30_/D (SDFFNX1_LVT) 571.16 f 570.60   0.00  -0.56 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_28_/D (SDFFNX1_LVT) 571.15 f 570.59   0.00  -0.56 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_20_/D (SDFFNX1_LVT) 571.15 f 570.60   0.00  -0.55 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_8_/D (SDFFNX1_LVT) 571.17 f 570.61   0.00  -0.55 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_6_/D (SDFFNX1_LVT) 571.15 f 570.60   0.00  -0.55 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_12_/D (SDFFNX1_LVT) 571.15 f 570.60   0.00  -0.55 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_23_/D (SDFFNX1_LVT) 571.14 f 570.60   0.00  -0.55 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_5_/D (SDFFNX1_LVT) 571.14 f 570.60   0.00  -0.54 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_18_/D (SDFFNX1_LVT) 571.14 f 570.60   0.00  -0.54 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_7_/D (SDFFX1_LVT) 161.20 f 160.66   0.00  -0.54 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_19_/D (SDFFNX1_LVT) 571.14 f 570.60   0.00  -0.54 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_11_/D (SDFFNX1_LVT) 571.14 f 570.60   0.00  -0.54 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_22_/D (SDFFNX1_LVT) 571.14 f 570.60   0.00  -0.54 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_14_/D (SDFFNX1_LVT) 571.14 f 570.60   0.00  -0.54 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_3_/D (SDFFX1_LVT) 161.20 f 160.66   0.00  -0.54 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_27_/D (SDFFNX1_LVT) 571.08 f 570.54   0.00  -0.54 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_9_/D (SDFFNX1_LVT) 571.13 f 570.60   0.00  -0.53 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_26_/D (SDFFNX1_LVT) 571.13 f 570.60   0.00  -0.53 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_15_/D (SDFFNX1_LVT) 571.13 f 570.60   0.00  -0.53 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_21_/D (SDFFX1_LVT) 161.20 f 160.67   0.00  -0.53 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_31_/D (SDFFNX1_LVT) 571.07 f 570.54   0.00  -0.53 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_25_/D (SDFFX1_LVT) 161.20 f 160.67   0.00  -0.53 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_17_/D (SDFFX1_LVT) 161.20 f 160.67   0.00  -0.53 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_1_/D (SDFFNX1_LVT) 571.13 f 570.60   0.00  -0.53 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_2_/D (SDFFX1_LVT) 161.19 f 160.66   0.00  -0.52 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_4_/D (SDFFX1_LVT) 161.18 f 160.66   0.00  -0.52 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_0_/D (SDFFX1_LVT) 161.18 f 160.66   0.00  -0.52 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_16_/D (SDFFX1_LVT) 161.18 f 160.66   0.00  -0.52 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_10_/D (SDFFX1_LVT) 161.18 f 160.66   0.00  -0.52 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_8_/D (SDFFX1_LVT) 161.18 f 160.66   0.00  -0.51 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_24_/D (SDFFX1_LVT) 161.16 f 160.66   0.00  -0.50 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_30_/D (SDFFX1_LVT) 161.16 f 160.66   0.00  -0.50 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_28_/D (SDFFX1_LVT) 161.15 f 160.65   0.00  -0.50 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_20_/D (SDFFX1_LVT) 161.15 f 160.65   0.00  -0.50 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_6_/D (SDFFX1_LVT) 161.15 f 160.65   0.00  -0.49 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_29_/D (SDFFNX1_LVT) 571.06 f 570.56   0.00  -0.49 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_12_/D (SDFFX1_LVT) 161.15 f 160.65   0.00  -0.49 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_23_/D (SDFFX1_LVT) 161.14 f 160.65   0.00  -0.49 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_5_/D (SDFFX1_LVT) 161.14 f 160.66   0.00  -0.49 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_18_/D (SDFFX1_LVT) 161.14 f 160.65   0.00  -0.49 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_19_/D (SDFFX1_LVT) 161.14 f 160.65   0.00  -0.48 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_11_/D (SDFFX1_LVT) 161.14 f 160.66   0.00  -0.48 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_22_/D (SDFFX1_LVT) 161.14 f 160.65   0.00  -0.48 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_14_/D (SDFFX1_LVT) 161.14 f 160.66   0.00  -0.48 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_27_/D (SDFFX1_LVT) 161.08 f 160.60   0.00  -0.48 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_9_/D (SDFFX1_LVT) 161.13 f 160.66   0.00  -0.48 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_26_/D (SDFFX1_LVT) 161.13 f 160.66   0.00  -0.48 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_15_/D (SDFFX1_LVT) 161.13 f 160.66   0.00  -0.48 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_31_/D (SDFFX1_LVT) 161.07 f 160.60   0.00  -0.47 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_1_/D (SDFFX1_LVT) 161.13 f 160.66   0.00  -0.47 INPUTS stuck_at_capture
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_29_/D (SDFFX1_LVT) 161.06 f 160.62   0.00  -0.44 INPUTS stuck_at_capture
+sd_DQ_out[3] (out)               662.78 r       659.40           0.00    -3.38   OUTPUTS  stuck_at_capture
+sd_DQ_out[25] (out)              252.77 r       249.40           0.00    -3.37   OUTPUTS  stuck_at_capture
+sd_DQ_out[19] (out)              662.77 r       659.40           0.00    -3.37   OUTPUTS  stuck_at_capture
+sd_DQ_out[15] (out)              662.77 r       659.40           0.00    -3.37   OUTPUTS  stuck_at_capture
+sd_DQ_out[23] (out)              252.75 f       249.40           0.00    -3.35   OUTPUTS  stuck_at_capture
+sd_DQ_out[30] (out)              252.75 f       249.40           0.00    -3.35   OUTPUTS  stuck_at_capture
+sd_DQ_out[4] (out)               252.75 f       249.40           0.00    -3.35   OUTPUTS  stuck_at_capture
+sd_DQ_out[18] (out)              252.74 f       249.40           0.00    -3.34   OUTPUTS  stuck_at_capture
+sd_DQ_out[12] (out)              252.73 r       249.40           0.00    -3.33   OUTPUTS  stuck_at_capture
+sd_DQ_out[16] (out)              252.73 r       249.40           0.00    -3.33   OUTPUTS  stuck_at_capture
+sd_DQ_out[8] (out)               252.73 r       249.40           0.00    -3.33   OUTPUTS  stuck_at_capture
+sd_DQ_out[20] (out)              252.71 r       249.40           0.00    -3.31   OUTPUTS  stuck_at_capture
+sd_DQ_out[10] (out)              252.70 r       249.40           0.00    -3.30   OUTPUTS  stuck_at_capture
+sd_DQ_out[28] (out)              252.70 r       249.40           0.00    -3.30   OUTPUTS  stuck_at_capture
+sd_DQ_out[22] (out)              252.69 r       249.40           0.00    -3.29   OUTPUTS  stuck_at_capture
+sd_DQ_out[26] (out)              252.69 r       249.40           0.00    -3.29   OUTPUTS  stuck_at_capture
+sd_DQ_out[14] (out)              252.68 r       249.40           0.00    -3.28   OUTPUTS  stuck_at_capture
+sd_DQ_out[9] (out)               662.01 r       659.40           0.00    -2.61   OUTPUTS  stuck_at_capture
+sd_DQ_out[6] (out)               662.01 r       659.40           0.00    -2.61   OUTPUTS  stuck_at_capture
+sd_DQ_out[27] (out)              661.98 r       659.40           0.00    -2.58   OUTPUTS  stuck_at_capture
+sd_DQ_out[24] (out)              661.98 r       659.40           0.00    -2.58   OUTPUTS  stuck_at_capture
+sd_A[6] (out)                    661.85 f       659.40           0.00    -2.45   OUTPUTS  stuck_at_capture
+sd_A[8] (out)                    661.85 f       659.40           0.00    -2.45   OUTPUTS  stuck_at_capture
+sd_RW (out)                      661.81 f       659.40           0.00    -2.41   OUTPUTS  stuck_at_capture
+sd_BWS[0] (out)                  661.79 f       659.40           0.00    -2.39   OUTPUTS  stuck_at_capture
+sd_A[7] (out)                    661.79 f       659.40           0.00    -2.39   OUTPUTS  stuck_at_capture
+sd_BWS[1] (out)                  661.78 f       659.40           0.00    -2.38   OUTPUTS  stuck_at_capture
+sd_LD (out)                      661.77 f       659.40           0.00    -2.37   OUTPUTS  stuck_at_capture
+sd_A[5] (out)                    661.77 f       659.40           0.00    -2.37   OUTPUTS  stuck_at_capture
+sd_A[9] (out)                    661.77 f       659.40           0.00    -2.37   OUTPUTS  stuck_at_capture
+sd_DQ_out[1] (out)               251.69 r       249.40           0.00    -2.29   OUTPUTS  stuck_at_capture
+sd_DQ_out[7] (out)               251.68 r       249.40           0.00    -2.28   OUTPUTS  stuck_at_capture
+sd_DQ_out[17] (out)              251.67 r       249.40           0.00    -2.27   OUTPUTS  stuck_at_capture
+sd_DQ_out[29] (out)              251.67 r       249.40           0.00    -2.27   OUTPUTS  stuck_at_capture
+sd_A[4] (out)                    661.67 r       659.40           0.00    -2.27   OUTPUTS  stuck_at_capture
+sd_DQ_out[13] (out)              251.67 r       249.40           0.00    -2.27   OUTPUTS  stuck_at_capture
+sd_A[2] (out)                    661.67 r       659.40           0.00    -2.27   OUTPUTS  stuck_at_capture
+sd_DQ_out[2] (out)               251.67 r       249.40           0.00    -2.27   OUTPUTS  stuck_at_capture
+sd_DQ_out[5] (out)               251.67 r       249.40           0.00    -2.27   OUTPUTS  stuck_at_capture
+sd_A[0] (out)                    661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_out[0] (out)               251.66 r       249.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[26] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[24] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[21] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[18] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[16] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[14] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[12] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[9] (out)                661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[7] (out)                661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[4] (out)                661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_out[11] (out)              251.66 r       249.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[2] (out)                661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[30] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[29] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[28] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_A[3] (out)                    661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[19] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[5] (out)                661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_A[1] (out)                    661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_out[21] (out)              251.66 r       249.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[11] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[22] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[31] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[0] (out)                661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[1] (out)                661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[3] (out)                661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[6] (out)                661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[8] (out)                661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[10] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[13] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[15] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[17] (out)               661.66 r       659.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_out[31] (out)              251.66 r       249.40           0.00    -2.26   OUTPUTS  stuck_at_capture
+sd_DQ_en[20] (out)               661.65 r       659.40           0.00    -2.25   OUTPUTS  stuck_at_capture
+sd_DQ_en[23] (out)               661.65 r       659.40           0.00    -2.25   OUTPUTS  stuck_at_capture
+sd_DQ_en[25] (out)               661.65 r       659.40           0.00    -2.25   OUTPUTS  stuck_at_capture
+sd_DQ_en[27] (out)               661.65 r       659.40           0.00    -2.25   OUTPUTS  stuck_at_capture
+sd_CKn (out)                     250.74 r       249.40           0.00    -1.34   OUTPUTS  stuck_at_capture
+sd_CK (out)                      250.64 f       249.40           0.00    -1.24   OUTPUTS  stuck_at_capture
+pad_out[17] (out)                 21.69 r        20.70           0.00    -0.99   OUTPUTS  stuck_at_capture
+pad_out[29] (out)                 21.69 r        20.70           0.00    -0.99   OUTPUTS  stuck_at_capture
+pad_out[6] (out)                  21.69 r        20.70           0.00    -0.99   OUTPUTS  stuck_at_capture
+pad_out[30] (out)                 21.68 r        20.70           0.00    -0.98   OUTPUTS  stuck_at_capture
+pad_out[24] (out)                 21.68 r        20.70           0.00    -0.98   OUTPUTS  stuck_at_capture
+pad_out[14] (out)                 21.68 r        20.70           0.00    -0.98   OUTPUTS  stuck_at_capture
+pad_out[2] (out)                  21.68 r        20.70           0.00    -0.98   OUTPUTS  stuck_at_capture
+pad_out[10] (out)                 21.68 r        20.70           0.00    -0.98   OUTPUTS  stuck_at_capture
+pad_out[21] (out)                 21.68 r        20.70           0.00    -0.98   OUTPUTS  stuck_at_capture
+pad_out[22] (out)                 21.68 r        20.70           0.00    -0.98   OUTPUTS  stuck_at_capture
+pad_out[18] (out)                 21.67 r        20.70           0.00    -0.97   OUTPUTS  stuck_at_capture
+pad_out[5] (out)                  21.67 r        20.70           0.00    -0.97   OUTPUTS  stuck_at_capture
+pad_out[1] (out)                  21.67 r        20.70           0.00    -0.97   OUTPUTS  stuck_at_capture
+pad_out[23] (out)                 21.67 r        20.70           0.00    -0.97   OUTPUTS  stuck_at_capture
+pad_out[28] (out)                 21.67 r        20.70           0.00    -0.97   OUTPUTS  stuck_at_capture
+pad_out[0] (out)                  21.67 r        20.70           0.00    -0.97   OUTPUTS  stuck_at_capture
+pad_out[12] (out)                 21.67 r        20.70           0.00    -0.97   OUTPUTS  stuck_at_capture
+pad_out[4] (out)                  21.66 r        20.70           0.00    -0.96   OUTPUTS  stuck_at_capture
+pad_out[26] (out)                 21.66 r        20.70           0.00    -0.96   OUTPUTS  stuck_at_capture
+pad_out[13] (out)                 21.66 r        20.70           0.00    -0.96   OUTPUTS  stuck_at_capture
+pad_out[8] (out)                  21.66 r        20.70           0.00    -0.96   OUTPUTS  stuck_at_capture
+pad_out[3] (out)                  21.66 r        20.70           0.00    -0.96   OUTPUTS  stuck_at_capture
+pad_out[19] (out)                 21.66 r        20.70           0.00    -0.96   OUTPUTS  stuck_at_capture
+pad_out[31] (out)                 21.65 r        20.70           0.00    -0.95   OUTPUTS  stuck_at_capture
+pad_out[25] (out)                 21.65 r        20.70           0.00    -0.95   OUTPUTS  stuck_at_capture
+pad_out[15] (out)                 21.65 r        20.70           0.00    -0.95   OUTPUTS  stuck_at_capture
+pad_out[7] (out)                  21.65 r        20.70           0.00    -0.95   OUTPUTS  stuck_at_capture
+pad_out[11] (out)                 21.65 r        20.70           0.00    -0.95   OUTPUTS  stuck_at_capture
+pad_out[27] (out)                 21.65 r        20.70           0.00    -0.95   OUTPUTS  stuck_at_capture
+pad_out[9] (out)                  21.65 r        20.70           0.00    -0.95   OUTPUTS  stuck_at_capture
+pad_out[20] (out)                 21.63 r        20.70           0.00    -0.93   OUTPUTS  stuck_at_capture
+pad_out[16] (out)                 21.63 r        20.70           0.00    -0.93   OUTPUTS  stuck_at_capture
+
+   early_timing
+   -----------
+
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+Endpoint                         Path Delay     Path Required       CRP    Slack Group    Scenario
+----------------------------------------------------------------------------------------------------------
+occ_int2/U_clk_control_i_1/load_n_meta_0_l_reg/D (DFFARX1_LVT)   1.10 f   1.21  -0.00  -0.11 SDRAM_CLK stuck_at_capture
+occ_int2/U_clk_control_i_1/fast_clk_enable_l_reg/D (DFFARX1_LVT)   1.11 f   1.20  -0.00  -0.10 SDRAM_CLK stuck_at_capture
+
+   Mode: scan Corner: Cmax
+   Scenario: stuck_at_capture
+   max_transition                                                              
+                             Required        Actual                            
+   Net                      Transition     Transition        Slack  Violation  
+  ---------------------------------------------------------------------------
+   I_BLENDER_1/n2769            0.14           0.16          -0.02  (VIOLATED) 
+     PIN : I_BLENDER_1/R_671/Q     0.14        0.16          -0.02  (VIOLATED) 
+
+   I_BLENDER_0/s3_op1_17        0.14           0.14          -0.00  (VIOLATED) 
+     PIN : I_BLENDER_0/s3_op1_reg_17_/Q     0.14     0.14    -0.00  (VIOLATED) 
+
+   I_BLENDER_1/s2_op2[5]        0.14           0.14          -0.00  (VIOLATED) 
+     PIN : I_BLENDER_1/R_50/Q     0.14         0.14          -0.00  (VIOLATED) 
+
+  ---------------------------------------------------------------------------
+   Number of max_transition violation(s): 3
+
+   Mode: scan Corner: Cmax
+   Scenario: stuck_at_capture
+   max_capacitance                                                             
+                             Required        Actual                            
+   Net                      Capacitance    Capacitance       Slack  Violation  
+  ---------------------------------------------------------------------------
+   sd_DQ_en[2]                 82.00         166.83         -84.83  (VIOLATED) 
+     PIN : HFSINV_319_561/Y    82.00         166.83         -84.83  (VIOLATED) 
+
+   sd_DQ_en[0]                 82.00         164.88         -82.88  (VIOLATED) 
+     PIN : HFSINV_134_562/Y    82.00         164.88         -82.88  (VIOLATED) 
+
+   pad_out[8]                  82.00         110.35         -28.35  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_399/Y    82.00   110.35      -28.35  (VIOLATED) 
+
+   pad_out[12]                 82.00         109.85         -27.85  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_393/Y    82.00   109.85      -27.85  (VIOLATED) 
+
+   pad_out[18]                 82.00         109.41         -27.41  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_407/Y    82.00   109.41      -27.41  (VIOLATED) 
+
+   pad_out[5]                  82.00         109.27         -27.27  (VIOLATED) 
+     PIN : HFSBUF_11_418/Y     82.00         109.27         -27.27  (VIOLATED) 
+
+   pad_out[24]                 82.00         109.22         -27.22  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_8_409/Y    82.00   109.22       -27.22  (VIOLATED) 
+
+   pad_out[4]                  82.00         108.98         -26.98  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_408/Y    82.00   108.98      -26.98  (VIOLATED) 
+
+   pad_out[14]                 82.00         107.25         -25.25  (VIOLATED) 
+     PIN : HFSBUF_11_403/Y     82.00         107.25         -25.25  (VIOLATED) 
+
+   pad_out[22]                 82.00         107.15         -25.15  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_416/Y    82.00   107.15      -25.15  (VIOLATED) 
+
+   pad_out[10]                 82.00         107.04         -25.04  (VIOLATED) 
+     PIN : HFSBUF_11_411/Y     82.00         107.04         -25.04  (VIOLATED) 
+
+   pad_out[23]                 82.00         106.76         -24.76  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_405/Y    82.00   106.76      -24.76  (VIOLATED) 
+
+   pad_out[1]                  82.00         106.76         -24.76  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_400/Y    82.00   106.76      -24.76  (VIOLATED) 
+
+   pad_out[2]                  82.00         106.71         -24.71  (VIOLATED) 
+     PIN : HFSBUF_11_397/Y     82.00         106.71         -24.71  (VIOLATED) 
+
+   pad_out[7]                  82.00         106.61         -24.61  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_412/Y    82.00   106.61      -24.61  (VIOLATED) 
+
+   pad_out[28]                 82.00         106.55         -24.55  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_406/Y    82.00   106.55      -24.55  (VIOLATED) 
+
+   pad_out[13]                 82.00         106.49         -24.49  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_415/Y    82.00   106.49      -24.49  (VIOLATED) 
+
+   pad_out[26]                 82.00         106.27         -24.27  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_404/Y    82.00   106.27      -24.27  (VIOLATED) 
+
+   pad_out[3]                  82.00         106.16         -24.16  (VIOLATED) 
+     PIN : HFSBUF_11_414/Y     82.00         106.16         -24.16  (VIOLATED) 
+
+   pad_out[16]                 82.00         106.14         -24.14  (VIOLATED) 
+     PIN : ZINV_6_inst_6636/Y    82.00       106.14         -24.14  (VIOLATED) 
+
+   pad_out[31]                 82.00         106.06         -24.06  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_392/Y    82.00   106.06      -24.06  (VIOLATED) 
+
+   pad_out[25]                 82.00         105.71         -23.71  (VIOLATED) 
+     PIN : HFSBUF_11_388/Y     82.00         105.71         -23.71  (VIOLATED) 
+
+   pad_out[9]                  82.00         105.67         -23.67  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_421/Y    82.00   105.67      -23.67  (VIOLATED) 
+
+   pad_out[6]                  82.00         105.66         -23.66  (VIOLATED) 
+     PIN : HFSBUF_11_386/Y     82.00         105.66         -23.66  (VIOLATED) 
+
+   pad_out[19]                 82.00         105.66         -23.66  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_419/Y    82.00   105.66      -23.66  (VIOLATED) 
+
+   pad_out[0]                  82.00         105.39         -23.39  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_391/Y    82.00   105.39      -23.39  (VIOLATED) 
+
+   pad_out[20]                 82.00         105.38         -23.38  (VIOLATED) 
+     PIN : ZINV_6_inst_6640/Y    82.00       105.38         -23.38  (VIOLATED) 
+
+   pad_out[15]                 82.00         104.77         -22.77  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_420/Y    82.00   104.77      -22.77  (VIOLATED) 
+
+   pad_out[30]                 82.00         104.46         -22.46  (VIOLATED) 
+     PIN : HFSBUF_11_395/Y     82.00         104.46         -22.46  (VIOLATED) 
+
+   pad_out[11]                 82.00         104.27         -22.27  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_401/Y    82.00   104.27      -22.27  (VIOLATED) 
+
+   pad_out[27]                 82.00         103.71         -21.71  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_34_389/Y    82.00   103.71      -21.71  (VIOLATED) 
+
+   I_CONTEXT_MEM/ZBUF_149_109    82.00        88.56          -6.56  (VIOLATED) 
+     PIN : I_CONTEXT_MEM/ZBUF_149_inst_79852/Y    82.00    88.56    -6.56 (VIOLATED)
+
+   I_CONTEXT_MEM/ZBUF_17_60    82.00          88.42          -6.42  (VIOLATED) 
+     PIN : I_CONTEXT_MEM/ZBUF_17_inst_79531/Y    82.00    88.42    -6.42 (VIOLATED)
+
+   I_CONTEXT_MEM/ZBUF_121_170    82.00        87.09          -5.09  (VIOLATED) 
+     PIN : I_CONTEXT_MEM/ZBUF_121_inst_27383/Y    82.00    87.09    -5.09 (VIOLATED)
+
+   sd_RW                       16.00          20.42          -4.42  (VIOLATED) 
+     PIN : I_SDRAM_TOP/I_SDRAM_IF/ctmTdsLR_1_82109/Y    16.00    20.42    -4.42 (VIOLATED)
+
+   I_BLENDER_0/n4022           16.00          19.35          -3.35  (VIOLATED) 
+     PIN : I_BLENDER_0/ctmTdsLR_1_37525/Y    16.00    19.35    -3.35 (VIOLATED)
+
+   I_BLENDER_1/n6545           16.00          19.28          -3.28  (VIOLATED) 
+     PIN : I_BLENDER_1/U6512/Y    16.00       19.28          -3.28  (VIOLATED) 
+
+   I_BLENDER_0/n6124           16.00          18.47          -2.47  (VIOLATED) 
+     PIN : I_BLENDER_0/ctmTdsLR_1_37548/Y    16.00    18.47    -2.47 (VIOLATED)
+
+   I_BLENDER_1/n4645            8.00          10.41          -2.41  (VIOLATED) 
+     PIN : I_BLENDER_1/U4670/S     8.00       10.41          -2.41  (VIOLATED) 
+
+   sd_BWS[0]                   16.00          17.79          -1.79  (VIOLATED) 
+     PIN : I_SDRAM_TOP/I_SDRAM_IF/ctmTdsLR_1_37441/Y    16.00    17.79    -1.79 (VIOLATED)
+
+   I_BLENDER_1/n6444           16.00          17.78          -1.78  (VIOLATED) 
+     PIN : I_BLENDER_1/U6443/Y    16.00       17.78          -1.78  (VIOLATED) 
+
+   I_BLENDER_0/ZBUF_21_859     16.00          17.66          -1.66  (VIOLATED) 
+     PIN : I_BLENDER_0/ctmTdsLR_1_38214/Y    16.00    17.66    -1.66 (VIOLATED)
+
+   I_BLENDER_0/N575             8.00           9.65          -1.65  (VIOLATED) 
+     PIN : I_BLENDER_0/U8575/Y     8.00        9.65          -1.65  (VIOLATED) 
+
+   I_BLENDER_1/n2769            8.00           9.56          -1.56  (VIOLATED) 
+     PIN : I_BLENDER_1/R_671/Q     8.00        9.56          -1.56  (VIOLATED) 
+
+   I_BLENDER_1/N616             8.00           9.34          -1.34  (VIOLATED) 
+     PIN : I_BLENDER_1/U8767/Y     8.00        9.34          -1.34  (VIOLATED) 
+
+   I_BLENDER_1/n3277           16.00          17.27          -1.27  (VIOLATED) 
+     PIN : I_BLENDER_1/U2713/Y    16.00       17.27          -1.27  (VIOLATED) 
+
+   I_BLENDER_1/n3124            8.00           9.19          -1.19  (VIOLATED) 
+     PIN : I_BLENDER_1/U3224/S     8.00        9.19          -1.19  (VIOLATED) 
+
+   p_abuf414                   82.00          82.78          -0.78  (VIOLATED) 
+     PIN : I_BLENDER_1/clk_gate_rem_green_reg/cts_buf_671457378/Y    82.00    82.78    -0.78 (VIOLATED)
+
+   I_BLENDER_1/n8063           16.00          16.69          -0.69  (VIOLATED) 
+     PIN : I_BLENDER_1/U916/Y    16.00        16.69          -0.69  (VIOLATED) 
+
+   I_BLENDER_0/n3824           16.00          16.61          -0.61  (VIOLATED) 
+     PIN : I_BLENDER_0/ctmTdsLR_1_82077/Y    16.00    16.61    -0.61 (VIOLATED)
+
+   I_BLENDER_0/n209             8.00           8.35          -0.35  (VIOLATED) 
+     PIN : I_BLENDER_0/U134/Y     8.00         8.35          -0.35  (VIOLATED) 
+
+   I_BLENDER_0/s3_op1_17        8.00           8.12          -0.12  (VIOLATED) 
+     PIN : I_BLENDER_0/s3_op1_reg_17_/Q     8.00     8.12    -0.12  (VIOLATED) 
+
+   I_SDRAM_TOP/I_SDRAM_IF/n11065    16.00     16.09          -0.09  (VIOLATED) 
+     PIN : I_SDRAM_TOP/I_SDRAM_IF/U11961/Y    16.00    16.09    -0.09 (VIOLATED)
+
+   I_BLENDER_1/s2_op2[5]        8.00           8.09          -0.09  (VIOLATED) 
+     PIN : I_BLENDER_1/R_50/Q     8.00         8.09          -0.09  (VIOLATED) 
+
+   I_RISC_CORE/UseData_Imm_Or_RegB     8.00     8.07         -0.07  (VIOLATED) 
+     PIN : I_RISC_CORE/I_CONTROL_UseData_Imm_Or_RegB_reg/Q     8.00     8.07    -0.07 (VIOLATED)
+
+   I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_12__10_     8.00     8.05    -0.05 (VIOLATED)
+     PIN : I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_reg_12__10_/Q     8.00     8.05    -0.05 (VIOLATED)
+
+   I_SDRAM_TOP/I_SDRAM_IF/mega_shift_1_860     8.00     8.04    -0.04 (VIOLATED)
+     PIN : I_SDRAM_TOP/I_SDRAM_IF/mega_shift_1_reg_9__25_/Q     8.00     8.04    -0.04 (VIOLATED)
+
+   I_BLENDER_0/s1_op2[1]        8.00           8.03          -0.03  (VIOLATED) 
+     PIN : I_BLENDER_0/s1_op2_reg_1_/Q     8.00     8.03     -0.03  (VIOLATED) 
+
+   I_BLENDER_1/n8062           16.00          16.03          -0.03  (VIOLATED) 
+     PIN : I_BLENDER_1/U914/Y    16.00        16.03          -0.03  (VIOLATED) 
+
+   n699                         8.00           8.03          -0.03  (VIOLATED) 
+     PIN : U212/Y               8.00           8.03          -0.03  (VIOLATED) 
+
+   I_RISC_CORE/ZBUF_81_2939    32.00          32.02          -0.02  (VIOLATED) 
+     PIN : I_RISC_CORE/ZBUF_81_inst_33405/Y    32.00    32.02    -0.02 (VIOLATED)
+
+   I_BLENDER_1/N329             8.00           8.02          -0.02  (VIOLATED) 
+     PIN : I_BLENDER_1/U6729/Y     8.00        8.02          -0.02  (VIOLATED) 
+
+   I_BLENDER_1/n8876            8.00           8.01          -0.01  (VIOLATED) 
+     PIN : I_BLENDER_1/s3_op2_reg_16_/Q     8.00     8.01    -0.01  (VIOLATED) 
+
+   I_BLENDER_1/n7746            8.00           8.00          -0.00  (VIOLATED) 
+     PIN : I_BLENDER_1/mega_shift_reg_10__26_/Q     8.00     8.00    -0.00 (VIOLATED)
+
+   I_PCI_TOP/n9139             16.00          16.00          -0.00  (VIOLATED) 
+     PIN : I_PCI_TOP/I_PCI_CORE_mega_shift_reg_3__20_/Q    16.00    16.00    -0.00 (VIOLATED)
+
+  ---------------------------------------------------------------------------
+   Number of max_capacitance violation(s): 65
+
+
+   Mode: scan Corner: Cmax
+   Scenario: stuck_at_capture
+  ---------------------------------------------------------------------------
+   Number of min_capacitance violation(s): 0
+
+   Total number of violation(s): 68
+1

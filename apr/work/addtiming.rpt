@@ -1,0 +1,49 @@
+Warning: Scenario func_best is not configured for setup analysis: skipping. (UIC-058)
+Warning: Scenario test_best is not configured for setup analysis: skipping. (UIC-058)
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+Design : ORCA_TOP
+Version: Q-2019.12-SP4
+Date   : Sat May 20 09:11:51 2023
+****************************************
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+
+  Startpoint: I_SDRAM_TOP/I_SDRAM_IF/DQ_out_1_reg_30_ (falling edge-triggered flip-flop clocked by ate_clk)
+  Endpoint: sd_DQ_out[30] (output port clocked by v_SDRAM_CLK)
+  Mode: scan
+  Corner: Cmax
+  Scenario: stuck_at_capture
+  Path Group: OUTPUTS
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock ate_clk (fall edge)                      250.00    250.00
+  clock network delay (propagated)                 1.13    251.13
+
+  I_SDRAM_TOP/I_SDRAM_IF/DQ_out_1_reg_30_/CLK (DFFNARX1_RVT)
+                                                   0.00    251.13 f
+  I_SDRAM_TOP/I_SDRAM_IF/DQ_out_1_reg_30_/Q (DFFNARX1_RVT)
+                                                   0.64    251.77 r
+  I_SDRAM_TOP/I_SDRAM_IF/U13009/Y (AO22X2_LVT)     0.23    252.00 r
+  sd_DQ_out[30] (out)                              0.01    252.01 r
+  data arrival time                                        252.01
+
+  clock v_SDRAM_CLK (rise edge)                  250.10    250.10
+  clock network delay (ideal)                      0.50    250.60
+  clock reconvergence pessimism                    0.00    250.60
+  clock uncertainty                               -0.10    250.50
+  output external delay                           -1.10    249.40
+  data required time                                       249.40
+  ------------------------------------------------------------------------
+  data required time                                       249.40
+  data arrival time                                        -252.01
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -2.61
+
+
+1

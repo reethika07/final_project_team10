@@ -12,7 +12,7 @@ if { [info exists synopsys_program_name ] } {
 		}
 
 		puts " Creating ICC2 MCMM "
-		foreach mode { func test } {
+		foreach mode { func test scan atspeed funcu} {
 		  create_mode $mode
 		}
 		foreach corner { {Cmax -40 ss0p75vn40c} {Cmin -40 ff0p95vn40c} } {
@@ -32,7 +32,7 @@ if { [info exists synopsys_program_name ] } {
 		  set_operating_condition $corner_op_cond -library saed32lvt_c
 		}
 
-		foreach scenario { {func_worst func Cmax } {func_best func Cmin} {test_worst test Cmax} {test_best test Cmin} } {
+		foreach scenario { {func_worst func Cmax } {func_best func Cmin} {test_worst test Cmax} {test_best test Cmin} {atspeed_shift atspeed Cmin} {atspeed_capture atspeed Cmax} {stuck_at_shift scan Cmin} {stuck_at_capture scan Cmax} {func_worst_constrained funcu Cmax} {func_best_constrained funcu Cmin} }  {
 		  create_scenario -name [lindex $scenario 0 ] -mode [lindex $scenario 1 ] -corner [lindex $scenario 2 ]
 		  current_scenario [lindex $scenario 0]
 		  source -echo -verbose -continue_on_error ../../constraints/ORCA_TOP_[lindex $scenario 0 ].sdc 

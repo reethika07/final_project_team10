@@ -1,0 +1,53 @@
+Warning: Scenario func_best is not configured for setup analysis: skipping. (UIC-058)
+Warning: Scenario test_best is not configured for setup analysis: skipping. (UIC-058)
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -report_by design
+Design : ORCA_TOP
+Version: Q-2019.12-SP4
+Date   : Fri May 19 19:00:39 2023
+****************************************
+Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
+
+  Startpoint: occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg (rising edge-triggered flip-flop clocked by SYS_2x_CLK)
+  Endpoint: occ_int2/fast_clk_0_clkgt/u_icg (falling clock gating-check end-point clocked by SYS_2x_CLK)
+  Mode: test
+  Corner: Cmax
+  Scenario: test_worst
+  Path Group: SYS_2x_CLK
+  Path Type: max
+
+  Point                                            Incr      Path  
+  ------------------------------------------------------------------------
+  clock SYS_2x_CLK (rise edge)                     0.00      0.00
+  clock network delay (propagated)                 1.31      1.31
+
+  occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/CLK (DFFARX1_LVT)
+                                                   0.00      1.31 r
+  occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/Q (DFFARX1_LVT)
+                                                   0.25      1.56 f
+  occ_int2/U_gf_mux_0/ctmTdsLR_1_24112/Y (AO21X1_LVT)
+                                                   0.12      1.69 f
+  occ_int2/fast_clk_0_clkgt/u_icg/EN (CGLNPRX2_LVT)
+                                                   0.00      1.69 f
+  data arrival time                                          1.69
+
+  clock SYS_2x_CLK (fall edge)                     1.20      1.20
+  clock network delay (propagated)                 0.45      1.65
+  clock reconvergence pessimism                    0.03      1.68
+  occ_int2/fast_clk_0_clkgt/u_icg/CLK (CGLNPRX2_LVT)
+                                                   0.00      1.68 f
+  clock uncertainty                               -0.10      1.58
+  library setup time                              -0.19      1.39
+  data required time                                         1.39
+  ------------------------------------------------------------------------
+  data required time                                         1.39
+  data arrival time                                         -1.69
+  ------------------------------------------------------------------------
+  slack (VIOLATED)                                          -0.30
+
+
+1

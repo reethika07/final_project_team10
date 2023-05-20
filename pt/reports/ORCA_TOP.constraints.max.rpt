@@ -1,0 +1,679 @@
+****************************************
+Report : constraint
+	-all_violators
+	-path slack_only
+Design : ORCA_TOP
+Version: O-2018.06
+Date   : Thu May 18 18:50:14 2023
+****************************************
+
+
+   max_delay/setup ('clock_gating_default' group)
+
+   Endpoint                                                  Slack
+   -----------------------------------------------------------------
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_7_/latch/EN
+                                                            -3.787  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_6_/latch/EN
+                                                            -3.416  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_5_/latch/EN
+                                                            -3.416  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_4_/latch/EN
+                                                            -3.176  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_1_/latch/EN
+                                                            -3.174  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_2_/latch/EN
+                                                            -3.174  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_3_/latch/EN
+                                                            -2.942  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_0_/latch/EN
+                                                            -2.865  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_clk_gate_TOS_int_reg/latch/EN
+                                                            -2.823  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_PopDataOut_reg/latch/EN
+                                                            -1.495  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_clk_gate_PSWL_Carry_reg/latch/EN
+                                                            -1.012  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_clk_gate_Oprnd_A_reg/latch/EN    -0.917  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_clk_gate_Oprnd_B_reg/latch/EN    -0.917  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_clk_gate_Crnt_Instrn_2_reg/latch/EN
+                                                            -0.868  (VIOLATED)
+   I_RISC_CORE/I_ALU_clk_gate_Lachd_Result_reg/latch/EN     -0.702  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_clk_gate_PCint_reg/latch/EN
+                                                            -0.500  (VIOLATED)
+
+   max_delay/setup ('SDRAM_CLK' group)
+
+   Endpoint                                                  Slack
+   -----------------------------------------------------------------
+   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_22_/D                 -0.240  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_20_/D                 -0.168  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_16_/D                 -0.147  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_2_/D                  -0.134  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_7_/D                  -0.127  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_29_/D                 -0.123  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_28_/D                 -0.091  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_11_/D                 -0.067  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_23_/D                 -0.052  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_30_/D                 -0.036  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_18_/D                 -0.013  (VIOLATED)
+
+   max_delay/setup ('SD_DDR_CLK' group)
+
+   Endpoint                                                  Slack
+   -----------------------------------------------------------------
+   sd_DQ_out[24]                                            -1.136  (VIOLATED)
+   sd_DQ_out[26]                                            -1.118  (VIOLATED)
+   sd_DQ_out[2]                                             -1.116  (VIOLATED)
+   sd_DQ_out[14]                                            -1.116  (VIOLATED)
+   sd_DQ_out[15]                                            -1.116  (VIOLATED)
+   sd_DQ_out[22]                                            -1.087  (VIOLATED)
+   sd_DQ_out[7]                                             -0.857  (VIOLATED)
+   sd_DQ_out[11]                                            -0.857  (VIOLATED)
+   sd_DQ_out[28]                                            -0.857  (VIOLATED)
+   sd_DQ_out[23]                                            -0.856  (VIOLATED)
+   sd_DQ_out[3]                                             -0.856  (VIOLATED)
+   sd_DQ_out[21]                                            -0.856  (VIOLATED)
+   sd_DQ_out[1]                                             -0.856  (VIOLATED)
+   sd_DQ_out[9]                                             -0.856  (VIOLATED)
+   sd_DQ_out[12]                                            -0.856  (VIOLATED)
+   sd_DQ_out[16]                                            -0.856  (VIOLATED)
+   sd_DQ_out[17]                                            -0.856  (VIOLATED)
+   sd_DQ_out[27]                                            -0.855  (VIOLATED)
+   sd_DQ_out[20]                                            -0.855  (VIOLATED)
+   sd_DQ_out[19]                                            -0.854  (VIOLATED)
+   sd_DQ_out[31]                                            -0.854  (VIOLATED)
+   sd_DQ_out[0]                                             -0.854  (VIOLATED)
+   sd_DQ_out[4]                                             -0.854  (VIOLATED)
+   sd_DQ_out[6]                                             -0.854  (VIOLATED)
+   sd_DQ_out[10]                                            -0.854  (VIOLATED)
+   sd_DQ_out[18]                                            -0.854  (VIOLATED)
+   sd_DQ_out[30]                                            -0.854  (VIOLATED)
+   sd_DQ_out[25]                                            -0.851  (VIOLATED)
+   sd_DQ_out[5]                                             -0.851  (VIOLATED)
+   sd_DQ_out[8]                                             -0.851  (VIOLATED)
+   sd_DQ_out[13]                                            -0.851  (VIOLATED)
+   sd_DQ_out[29]                                            -0.851  (VIOLATED)
+
+   max_delay/setup ('SYS_2x_CLK' group)
+
+   Endpoint                                                  Slack
+   -----------------------------------------------------------------
+   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_/D
+                                                            -5.916  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_TOS_int_reg_2_/D     -5.546  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_2_/D   -5.498  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_1_/D   -5.455  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_6_/D   -5.455  (VIOLATED)
+   I_RISC_CORE/I_ALU_Lachd_Result_reg_7_/D                  -5.375  (VIOLATED)
+   I_RISC_CORE/I_ALU_Lachd_Result_reg_8_/D                  -5.225  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_5_/D   -5.189  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_TOS_int_reg_0_/D     -5.179  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_4_/D   -5.174  (VIOLATED)
+   I_RISC_CORE/I_ALU_Lachd_Result_reg_10_/D                 -5.148  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_TOS_int_reg_1_/D     -5.127  (VIOLATED)
+   I_RISC_CORE/I_ALU_Lachd_Result_reg_2_/D                  -5.068  (VIOLATED)
+   I_RISC_CORE/R_31/D                                       -5.056  (VIOLATED)
+   I_RISC_CORE/I_ALU_Lachd_Result_reg_12_/D                 -5.002  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_1_/D
+                                                            -5.000  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_0_/D   -4.935  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_3_/D   -4.815  (VIOLATED)
+   I_RISC_CORE/I_ALU_Lachd_Result_reg_9_/D                  -4.801  (VIOLATED)
+   I_RISC_CORE/I_ALU_Lachd_Result_reg_5_/D                  -4.788  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_7_/D   -4.788  (VIOLATED)
+   I_RISC_CORE/R_30/D                                       -4.787  (VIOLATED)
+   I_RISC_CORE/I_ALU_Lachd_Result_reg_11_/D                 -4.787  (VIOLATED)
+   I_RISC_CORE/R_34/D                                       -4.761  (VIOLATED)
+   I_RISC_CORE/I_ALU_Lachd_Result_reg_15_/D                 -4.724  (VIOLATED)
+   I_RISC_CORE/I_ALU_Lachd_Result_reg_4_/D                  -4.673  (VIOLATED)
+   I_RISC_CORE/I_ALU_Lachd_Result_reg_6_/D                  -4.562  (VIOLATED)
+   I_RISC_CORE/I_ALU_Lachd_Result_reg_1_/D                  -4.551  (VIOLATED)
+   I_RISC_CORE/I_ALU_Lachd_Result_reg_3_/D                  -4.506  (VIOLATED)
+   I_RISC_CORE/I_ALU_Lachd_Result_reg_13_/D                 -4.351  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_PopDataOut_reg_3_/D
+                                                            -4.282  (VIOLATED)
+   I_RISC_CORE/I_ALU_Lachd_Result_reg_0_/D                  -4.193  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_PopDataOut_reg_1_/D
+                                                            -4.022  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_PopDataOut_reg_0_/D
+                                                            -4.022  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_PopDataOut_reg_2_/D
+                                                            -4.022  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_PopDataOut_reg_3_/D
+                                                            -4.022  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_PopDataOut_reg_0_/D
+                                                            -4.022  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_PopDataOut_reg_1_/D
+                                                            -4.022  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_PopDataOut_reg_2_/D
+                                                            -4.022  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I3_STACK_MEM_PopDataOut_reg_2_/D
+                                                            -4.022  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_15_/D                -2.824  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_11_/D                -2.824  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_12_/D                -2.824  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_14_/D                -2.824  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_9_/D                 -2.809  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_5_/D                 -2.505  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_8_/D                 -2.438  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_10_/D                -2.207  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_13_/D                -2.207  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_6_/D                 -2.135  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_0_/D                 -2.135  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_4_/D                 -2.135  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_3_/D                 -2.135  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_STACK_FULL_reg/D     -2.058  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_1_/D                 -2.050  (VIOLATED)
+   I_RISC_CORE/I_CONTROL_UseData_Imm_Or_ALU_reg/D           -2.037  (VIOLATED)
+   I_RISC_CORE/I_CONTROL_UseData_Imm_Or_RegB_reg/D          -2.037  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_2_/D                 -2.016  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_7_/D                 -1.931  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_5_/D                 -1.791  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_6_/D                 -1.791  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_7_/D                 -1.791  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_10_/D                -1.791  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_11_/D                -1.791  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_8_/D                 -1.776  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_13_/D                -1.542  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_FSM_Current_State_reg_1_/D
+                                                            -1.379  (VIOLATED)
+   I_RISC_CORE/I_CONTROL_EndOfInstrn_reg/D                  -1.267  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_4_/D                 -1.174  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_9_/D                 -1.174  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_12_/D                -1.174  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_14_/D                -1.174  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_3_/D                 -1.158  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_FSM_Current_State_reg_2_/D
+                                                            -0.984  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I3_STACK_MEM_Stack_Mem_reg_0__2_/D
+                                                            -0.895  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I3_STACK_MEM_Stack_Mem_reg_1__2_/D
+                                                            -0.895  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I3_STACK_MEM_Stack_Mem_reg_2__2_/D
+                                                            -0.895  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I3_STACK_MEM_Stack_Mem_reg_3__2_/D
+                                                            -0.895  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I3_STACK_MEM_Stack_Mem_reg_4__2_/D
+                                                            -0.895  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I3_STACK_MEM_Stack_Mem_reg_5__2_/D
+                                                            -0.895  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I3_STACK_MEM_Stack_Mem_reg_6__2_/D
+                                                            -0.895  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I3_STACK_MEM_Stack_Mem_reg_7__2_/D
+                                                            -0.895  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_0__2_/D
+                                                            -0.848  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_1__2_/D
+                                                            -0.848  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_2__2_/D
+                                                            -0.848  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_3__2_/D
+                                                            -0.848  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_4__2_/D
+                                                            -0.848  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_5__2_/D
+                                                            -0.848  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_6__2_/D
+                                                            -0.848  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_7__2_/D
+                                                            -0.848  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_0__0_/D
+                                                            -0.839  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_3__0_/D
+                                                            -0.839  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_4__0_/D
+                                                            -0.839  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_6__0_/D
+                                                            -0.839  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_7__0_/D
+                                                            -0.839  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_15_/D                -0.835  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_FSM_Current_State_reg_0_/D
+                                                            -0.757  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_0_/D                 -0.666  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_0__1_/D
+                                                            -0.660  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_1__1_/D
+                                                            -0.660  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_2__1_/D
+                                                            -0.660  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_3__1_/D
+                                                            -0.660  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_4__1_/D
+                                                            -0.660  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_5__1_/D
+                                                            -0.660  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_6__1_/D
+                                                            -0.660  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_7__1_/D
+                                                            -0.660  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_0__0_/D
+                                                            -0.616  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_1__0_/D
+                                                            -0.616  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_2__0_/D
+                                                            -0.616  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_3__0_/D
+                                                            -0.616  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_4__0_/D
+                                                            -0.616  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_5__0_/D
+                                                            -0.616  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_6__0_/D
+                                                            -0.616  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_7__0_/D
+                                                            -0.616  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_0__3_/D
+                                                            -0.604  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_1__3_/D
+                                                            -0.604  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_2__3_/D
+                                                            -0.604  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_3__3_/D
+                                                            -0.604  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_4__3_/D
+                                                            -0.604  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_5__3_/D
+                                                            -0.604  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_6__3_/D
+                                                            -0.604  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I1_STACK_MEM_Stack_Mem_reg_7__3_/D
+                                                            -0.604  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_1_/D                 -0.583  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_2_/D                 -0.580  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_7_/D          -0.576  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_0__3_/D
+                                                            -0.571  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_2__3_/D
+                                                            -0.571  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_3__3_/D
+                                                            -0.571  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_4__3_/D
+                                                            -0.571  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_5__3_/D
+                                                            -0.571  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_6__3_/D
+                                                            -0.571  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_7__3_/D
+                                                            -0.571  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_0__1_/D
+                                                            -0.561  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_1__1_/D
+                                                            -0.561  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_2__1_/D
+                                                            -0.561  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_3__1_/D
+                                                            -0.561  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_4__1_/D
+                                                            -0.561  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_5__1_/D
+                                                            -0.561  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_6__1_/D
+                                                            -0.561  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_7__1_/D
+                                                            -0.561  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/I1[6]              -0.545  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/I1[6]              -0.545  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/I1[6]              -0.545  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/I1[4]              -0.512  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/I1[4]              -0.512  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/I1[4]              -0.512  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_20_/D         -0.497  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_1__0_/D
+                                                            -0.492  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_2__0_/D
+                                                            -0.492  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_5__0_/D
+                                                            -0.492  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_12_/D         -0.462  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_18_/D         -0.457  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_22_/D         -0.455  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_21_/D         -0.441  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_19_/D         -0.432  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_17_/D         -0.425  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_25_/D         -0.413  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/I1[14]             -0.410  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/I1[14]             -0.410  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/I1[14]             -0.410  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/I1[14]             -0.410  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_10_/D         -0.403  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/A2[0]              -0.327  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/A2[2]              -0.327  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/A2[0]              -0.327  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/A2[2]              -0.327  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/A2[5]              -0.327  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/A2[5]              -0.327  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/A2[3]              -0.327  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/A2[3]              -0.327  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/A2[4]              -0.327  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/A2[4]              -0.327  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/A2[6]              -0.327  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/A2[6]              -0.327  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/A2[1]              -0.327  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/A2[1]              -0.327  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/I1[3]              -0.314  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/I1[3]              -0.314  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/I1[3]              -0.314  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/I1[3]              -0.314  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/I1[6]              -0.249  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/I1[4]              -0.215  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_PSWL_Zro_reg/D                   -0.215  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_1__3_/D
+                                                            -0.205  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/I1[0]              -0.195  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_2_/D          -0.173  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/I1[0]              -0.173  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/I1[0]              -0.173  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/I1[0]              -0.173  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_0__2_/D
+                                                            -0.162  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_1__2_/D
+                                                            -0.162  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_2__2_/D
+                                                            -0.162  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_3__2_/D
+                                                            -0.162  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_4__2_/D
+                                                            -0.162  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_5__2_/D
+                                                            -0.162  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_6__2_/D
+                                                            -0.162  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_Stack_Mem_reg_7__2_/D
+                                                            -0.162  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/I1[7]              -0.094  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/I1[7]              -0.094  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/I1[7]              -0.094  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/I1[7]              -0.094  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/I1[10]             -0.088  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/I1[10]             -0.088  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/I1[10]             -0.088  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/I1[10]             -0.088  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/I1[2]              -0.081  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/I1[2]              -0.073  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/I1[2]              -0.073  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/I1[2]              -0.073  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/I1[15]             -0.027  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/I1[15]             -0.027  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/I1[15]             -0.027  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/I1[15]             -0.027  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/I1[11]             -0.027  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/I1[12]             -0.027  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/I1[13]             -0.027  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/I1[11]             -0.027  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/I1[12]             -0.027  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/I1[13]             -0.027  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/I1[11]             -0.027  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/I1[12]             -0.027  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_C_RAM/I1[13]             -0.027  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/I1[11]             -0.027  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/I1[12]             -0.027  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/I1[13]             -0.027  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_A_RAM/I1[8]              -0.027  (VIOLATED)
+
+   max_delay/setup ('SYS_CLK' group)
+
+   Endpoint                                                  Slack
+   -----------------------------------------------------------------
+   I_PARSER/i_reg_reg_13_/D                                 -0.960  (VIOLATED)
+   I_PARSER/i_reg_reg_7_/D                                  -0.940  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_2/I1[2]          -0.932  (VIOLATED)
+   I_PARSER/i_reg_reg_6_/D                                  -0.932  (VIOLATED)
+   I_PARSER/i_reg_reg_3_/D                                  -0.907  (VIOLATED)
+   R_678/D                                                  -0.904  (VIOLATED)
+   I_PARSER/i_reg_reg_5_/D                                  -0.821  (VIOLATED)
+   I_PARSER/i_reg_reg_8_/D                                  -0.803  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_7/I1[2]          -0.791  (VIOLATED)
+   I_PARSER/i_reg_reg_12_/D                                 -0.711  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_2/I1[0]          -0.672  (VIOLATED)
+   I_PARSER/pci_w_mux_select_reg_2_/D                       -0.660  (VIOLATED)
+   I_PARSER/pci_w_mux_select_reg_1_/D                       -0.650  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_1/I1[2]          -0.629  (VIOLATED)
+   I_PARSER/i_reg_reg_4_/D                                  -0.624  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_1/I1[1]          -0.620  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_3/I1[1]          -0.613  (VIOLATED)
+   I_PARSER/i_reg_reg_11_/D                                 -0.610  (VIOLATED)
+   I_PARSER/i_reg_reg_1_/D                                  -0.562  (VIOLATED)
+   I_PARSER/i_reg_reg_14_/D                                 -0.535  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_7/I1[3]          -0.514  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_8/I1[0]          -0.514  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[5]       -0.510  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_8/I1[2]          -0.509  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[2]       -0.476  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_5/I1[3]          -0.430  (VIOLATED)
+   I_PARSER/pci_w_mux_select_reg_0_/D                       -0.408  (VIOLATED)
+   I_PARSER/i_reg_reg_9_/D                                  -0.395  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[4]       -0.391  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[12]      -0.373  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_5/I1[0]          -0.315  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_5/I1[1]          -0.315  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_8/I1[1]          -0.315  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_7/I1[1]          -0.279  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_8/I1[3]          -0.263  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[7]       -0.251  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_7/I1[0]          -0.246  (VIOLATED)
+   I_PARSER/i_reg_reg_2_/D                                  -0.234  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_2/I1[1]          -0.225  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[10]      -0.188  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[16]      -0.164  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[17]      -0.164  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[29]      -0.164  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[19]      -0.156  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[25]      -0.156  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[23]      -0.156  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[20]      -0.156  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[21]      -0.156  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[22]      -0.156  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[6]       -0.155  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[3]       -0.123  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[26]      -0.103  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[27]      -0.103  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[28]      -0.103  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[30]      -0.100  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/I1[31]      -0.099  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_4/I1[3]          -0.064  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_3/I1[3]          -0.056  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_6/I1[3]          -0.030  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_6/I1[2]          -0.030  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_6/I1[0]          -0.030  (VIOLATED)
+   I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_6/I1[1]          -0.030  (VIOLATED)
+
+
+
+   clock_gating_setup
+
+   Endpoint                                                  Slack
+   -----------------------------------------------------------------
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_7_/latch/EN
+                                                            -3.787  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_6_/latch/EN
+                                                            -3.416  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_5_/latch/EN
+                                                            -3.416  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_4_/latch/EN
+                                                            -3.176  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_1_/latch/EN
+                                                            -3.174  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_2_/latch/EN
+                                                            -3.174  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_3_/latch/EN
+                                                            -2.942  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_0_/latch/EN
+                                                            -2.865  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_clk_gate_TOS_int_reg/latch/EN
+                                                            -2.823  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_PopDataOut_reg/latch/EN
+                                                            -1.495  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_clk_gate_PSWL_Carry_reg/latch/EN
+                                                            -1.012  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_clk_gate_Oprnd_A_reg/latch/EN    -0.917  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_clk_gate_Oprnd_B_reg/latch/EN    -0.917  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_clk_gate_Crnt_Instrn_2_reg/latch/EN
+                                                            -0.868  (VIOLATED)
+   I_RISC_CORE/I_ALU_clk_gate_Lachd_Result_reg/latch/EN     -0.702  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_clk_gate_PCint_reg/latch/EN
+                                                            -0.500  (VIOLATED)
+
+
+   sequential_clock_pulse_width
+
+                             Required        Actual
+   Pin                      pulse width    pulse width       Slack
+   -----------------------------------------------------------------
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_FSM_Current_State_reg_1_/CLK (low)
+                               1.060          0.938         -0.122  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_FSM_Current_State_reg_2_/CLK (low)
+                               1.060          0.938         -0.122  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_/CLK (low)
+                               1.060          0.939         -0.121  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_TOS_int_reg_0_/CLK (low)
+                               1.060          0.939         -0.121  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_2_/CLK (low)
+                               1.060          0.943         -0.118  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_4_/CLK (low)
+                               1.060          0.943         -0.118  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_5_/CLK (low)
+                               1.060          0.943         -0.118  (VIOLATED)
+   I_CLOCKING/sys_2x_rst_ff_reg/CLK (low)
+                               1.036          0.936         -0.099  (VIOLATED)
+   I_RISC_CORE/I_CONTROL_UseData_Imm_Or_ALU_reg/CLK (low)
+                               1.036          0.938         -0.098  (VIOLATED)
+   I_RISC_CORE/I_CONTROL_UseData_Imm_Or_RegB_reg/CLK (low)
+                               1.036          0.938         -0.098  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_FSM_Current_State_reg_0_/CLK (low)
+                               1.036          0.938         -0.098  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_STACK_FULL_reg/CLK (low)
+                               1.036          0.938         -0.098  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_1_/CLK (low)
+                               1.036          0.939         -0.096  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_TOS_int_reg_1_/CLK (low)
+                               1.036          0.939         -0.096  (VIOLATED)
+   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_TOS_int_reg_2_/CLK (low)
+                               1.036          0.939         -0.096  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_PSWL_Zro_reg/CLK (low)
+                               1.036          0.939         -0.096  (VIOLATED)
+   I_RISC_CORE/R_32/CLK (low)
+                               1.036          0.939         -0.096  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_0_/CLK (low)
+                               1.036          0.943         -0.093  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_1_/CLK (low)
+                               1.036          0.943         -0.093  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_3_/CLK (low)
+                               1.036          0.943         -0.093  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_6_/CLK (low)
+                               1.036          0.943         -0.093  (VIOLATED)
+   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_7_/CLK (low)
+                               1.036          0.943         -0.093  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_3_/CLK (low)
+                               0.964          0.939         -0.024  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_4_/CLK (low)
+                               0.964          0.939         -0.024  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_6_/CLK (low)
+                               0.964          0.939         -0.024  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_12_/CLK (low)
+                               0.964          0.939         -0.024  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_21_/CLK (low)
+                               0.964          0.939         -0.024  (VIOLATED)
+   I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_25_/CLK (low)
+                               0.964          0.939         -0.024  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_5_/CLK (low)
+                               0.964          0.940         -0.024  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_6_/CLK (low)
+                               0.964          0.940         -0.024  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_7_/CLK (low)
+                               0.964          0.940         -0.024  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_10_/CLK (low)
+                               0.964          0.940         -0.024  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_11_/CLK (low)
+                               0.964          0.940         -0.024  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_13_/CLK (low)
+                               0.964          0.940         -0.024  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_11_/CLK (low)
+                               0.964          0.940         -0.023  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_12_/CLK (low)
+                               0.964          0.940         -0.023  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_14_/CLK (low)
+                               0.964          0.940         -0.023  (VIOLATED)
+   I_RISC_CORE/I_DATA_PATH_Oprnd_B_reg_15_/CLK (low)
+                               0.964          0.940         -0.023  (VIOLATED)
+
+
+   max_capacitance
+
+                             Required        Actual
+   Pin                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   ZBUF_145_inst_23334/Y      82.000        160.274        -78.274  (VIOLATED)
+   HFSBUF_11_235/Y            82.000        100.004        -18.004  (VIOLATED)
+   HFSBUF_11_236/Y            82.000        100.004        -18.004  (VIOLATED)
+   HFSBUF_11_238/Y            82.000        100.004        -18.004  (VIOLATED)
+   HFSBUF_11_240/Y            82.000        100.004        -18.004  (VIOLATED)
+   HFSBUF_11_241/Y            82.000        100.004        -18.004  (VIOLATED)
+   HFSBUF_11_243/Y            82.000        100.004        -18.004  (VIOLATED)
+   HFSBUF_11_245/Y            82.000        100.004        -18.004  (VIOLATED)
+   HFSBUF_11_247/Y            82.000        100.004        -18.004  (VIOLATED)
+   HFSBUF_11_248/Y            82.000        100.004        -18.004  (VIOLATED)
+   HFSBUF_11_249/Y            82.000        100.004        -18.004  (VIOLATED)
+   HFSBUF_11_252/Y            82.000        100.004        -18.004  (VIOLATED)
+   HFSBUF_11_256/Y            82.000        100.004        -18.004  (VIOLATED)
+   HFSBUF_11_263/Y            82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_4_inst_23337/Y        82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_4_inst_23338/Y        82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_4_inst_23342/Y        82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_4_inst_23344/Y        82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_4_inst_23345/Y        82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_4_inst_23346/Y        82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_4_inst_23347/Y        82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_4_inst_53985/Y        82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_4_inst_55168/Y        82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_4_inst_55169/Y        82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_4_inst_55170/Y        82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_4_inst_55171/Y        82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_4_inst_55172/Y        82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_4_inst_55173/Y        82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_4_inst_55174/Y        82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_4_inst_55175/Y        82.000        100.004        -18.004  (VIOLATED)
+   ZBUF_7_inst_23340/Y        82.000        100.004        -18.004  (VIOLATED)
+
+
+   min_capacitance
+
+                             Required        Actual
+   Pin                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/O2[0]
+                               0.100          0.011         -0.089  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/O2[1]
+                               0.100          0.011         -0.089  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/O2[2]
+                               0.100          0.011         -0.089  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/O2[3]
+                               0.100          0.011         -0.089  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/O2[4]
+                               0.100          0.011         -0.089  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/O2[5]
+                               0.100          0.011         -0.089  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/O2[6]
+                               0.100          0.011         -0.089  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_B_RAM/O2[7]
+                               0.100          0.011         -0.089  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/O2[8]
+                               0.100          0.011         -0.089  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/O2[9]
+                               0.100          0.011         -0.089  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/O2[10]
+                               0.100          0.011         -0.089  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/O2[11]
+                               0.100          0.011         -0.089  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/O2[12]
+                               0.100          0.011         -0.089  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/O2[13]
+                               0.100          0.011         -0.089  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/O2[14]
+                               0.100          0.011         -0.089  (VIOLATED)
+   I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/O2[15]
+                               0.100          0.011         -0.089  (VIOLATED)
+
+
+1

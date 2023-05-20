@@ -1,0 +1,140 @@
+****************************************
+Report : qor
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Thu May 18 21:17:35 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_fastslow'
+-----------------------------------
+End of Master/Slave Task Processing
+
+  Timing Path Group '**async_default**' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            6 (func_fastslow)
+  Critical Path Length:                 3089.62 (func_fastslow)
+  Critical Path Slack:                 -4722.42 (func_fastslow)
+  Total Negative Slack:             -2595549.25
+  No. of Violating Paths:                  1918
+  ---------------------------------------------
+
+  Timing Path Group '**clock_gating_default**' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            2 (func_fastslow)
+  Critical Path Length:                  186.49 (func_fastslow)
+  Critical Path Slack:                   -34.05 (func_fastslow)
+  Total Negative Slack:                 -263.53
+  No. of Violating Paths:                    13
+  ---------------------------------------------
+
+  Timing Path Group 'PCI_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                           11 (func_fastslow)
+  Critical Path Length:                  286.59 (func_fastslow)
+  Critical Path Slack:                 -2391.32 (func_fastslow)
+  Total Negative Slack:              -275151.56
+  No. of Violating Paths:                   625
+  ---------------------------------------------
+
+  Timing Path Group 'SDRAM_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            5 (func_fastslow)
+  Critical Path Length:                  336.71 (func_fastslow)
+  Critical Path Slack:                 -3899.51 (func_fastslow)
+  Total Negative Slack:             -4324640.50
+  No. of Violating Paths:                  5207
+  ---------------------------------------------
+
+  Timing Path Group 'SD_DDR_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            2 (test_best)
+  Critical Path Length:                  402.09 (test_best)
+  Critical Path Slack:                   392.24 (test_best)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_2x_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            6 (func_fastslow)
+  Critical Path Length:                    4.73 (func_fastslow)
+  Critical Path Slack:                 -1038.24 (func_fastslow)
+  Total Negative Slack:               -48422.00
+  No. of Violating Paths:                   328
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            8 (func_fastslow)
+  Critical Path Length:                    9.41 (func_fastslow)
+  Critical Path Slack:                 -7792.76 (func_fastslow)
+  Total Negative Slack:             -4202025.50
+  No. of Violating Paths:                  3077
+  ---------------------------------------------
+
+  Timing Path Group 'ate_clk' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1 (test_best)
+  Critical Path Length:                  332.16 (test_best)
+  Critical Path Slack:                 -7480.28 (test_best)
+  Total Negative Slack:             -3230961.00
+  No. of Violating Paths:                  4994
+  ---------------------------------------------
+
+  Timing Path Group 'v_PCI_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            3 (func_fastslow)
+  Critical Path Length:                  421.15 (func_fastslow)
+  Critical Path Slack:                   420.80 (func_fastslow)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Cell Count
+  ---------------------------------------------
+  Hierarchical Cell Count:                   63 (test_worst, func_max, func_slowfast, test_slowfast, test_best, test_fastslow, func_min, func_fastslow)
+  Hierarchical Port Count:                 3392 (test_worst, func_max, func_slowfast, test_slowfast, test_best, test_fastslow, func_min, func_fastslow)
+  Leaf Cell Count:                        46086 (test_worst, func_max, func_slowfast, test_slowfast, test_best, test_fastslow, func_min, func_fastslow)
+  ---------------------------------------------
+
+
+  Area
+  ---------------------------------------------
+  Net Interconnect Area:               67912.13 (test_worst, func_max, func_slowfast, test_slowfast, test_best, test_fastslow, func_min, func_fastslow)
+  Total Cell Area:                    383877.28 (test_worst, func_max, func_slowfast, test_slowfast, test_best, test_fastslow, func_min, func_fastslow)
+  Design Area:                        451789.41 (test_worst, func_max, func_slowfast, test_slowfast, test_best, test_fastslow, func_min, func_fastslow)
+  ---------------------------------------------
+
+
+  Design Rule Violations
+  ---------------------------------------------
+  Total No. of Pins in Design:           185845
+  max_capacitance Count:                      1
+  min_capacitance Count:                     16
+  clock_gating_hold Count:                   13
+  sequential_clock_pulse_width Count:      7642
+  max_capacitance Cost:                   78.22
+  min_capacitance Cost:                    1.42
+  clock_gating_hold Cost:                263.53
+  sequential_clock_pulse_width Cost:  169731.80
+  Total DRC Cost:                     170074.97
+  ---------------------------------------------
+1

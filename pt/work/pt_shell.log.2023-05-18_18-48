@@ -1,0 +1,343 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Launching 8 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for   8 (of   8) workers    : Thu May 18 18:49:43 2023
+  Waiting for   0 (of   8) workers    : Thu May 18 18:49:53 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Thu May 18 18:49:53 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           8                       auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         15546         ONLINE
+                   2    mo           -         15540         ONLINE
+                   3    mo           -         15545         ONLINE
+                   4    mo           -         15544         ONLINE
+                   5    mo           -         15547         ONLINE
+                   6    mo           -         15541         ONLINE
+                   7    mo           -         15542         ONLINE
+                   8    mo           -         15543         ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+  --------------------------------------------------------------------
+  Total                                                      32
+
+pt_shell> report_qor
+****************************************
+Report : qor
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Thu May 18 18:51:58 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'func_slowfast'
+-----------------------------------
+End of Master/Slave Task Processing
+
+  Timing Path Group '**async_default**' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            7 (func_max)
+  Critical Path Length:                    2.96 (func_max)
+  Critical Path Slack:                     0.31 (func_max)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group '**clock_gating_default**' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           11 (func_max)
+  Critical Path Length:                    6.84 (func_max)
+  Critical Path Slack:                    -3.79 (func_max)
+  Total Negative Slack:                  -35.18
+  No. of Violating Paths:                    16
+  ---------------------------------------------
+
+  Timing Path Group 'PCI_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           17 (func_max)
+  Critical Path Length:                    7.49 (func_max)
+  Critical Path Slack:                     0.31 (func_max)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'SDRAM_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            6 (func_max)
+  Critical Path Length:                    1.83 (func_max)
+  Critical Path Slack:                    -0.24 (func_max)
+  Total Negative Slack:                   -1.20
+  No. of Violating Paths:                    11
+  ---------------------------------------------
+
+  Timing Path Group 'SD_DDR_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            4 (test_slowfast)
+  Critical Path Length:                    2.90 (test_slowfast)
+  Critical Path Slack:                    -1.14 (test_slowfast)
+  Total Negative Slack:                  -28.92
+  No. of Violating Paths:                    32
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_2x_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           12 (func_max)
+  Critical Path Length:                    7.93 (func_max)
+  Critical Path Slack:                    -5.92 (func_max)
+  Total Negative Slack:                 -338.46
+  No. of Violating Paths:                   346
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            3 (func_max)
+  Critical Path Length:                    3.51 (func_max)
+  Critical Path Slack:                    -0.96 (func_max)
+  Total Negative Slack:                  -24.54
+  No. of Violating Paths:                    62
+  ---------------------------------------------
+
+  Timing Path Group 'ate_clk' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            2 (test_slowfast)
+  Critical Path Length:                    2.32 (test_slowfast)
+  Critical Path Slack:                     8.58 (test_slowfast)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'v_PCI_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            3 (test_slowfast)
+  Critical Path Length:                    2.70 (test_slowfast)
+  Critical Path Slack:                     2.20 (test_slowfast)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group '**async_default**' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            6 (func_fastslow)
+  Critical Path Length:                 3089.62 (func_fastslow)
+  Critical Path Slack:                 -4722.42 (func_fastslow)
+  Total Negative Slack:             -2595549.25
+  No. of Violating Paths:                  1918
+  ---------------------------------------------
+
+  Timing Path Group '**clock_gating_default**' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            2 (func_fastslow)
+  Critical Path Length:                  186.49 (func_fastslow)
+  Critical Path Slack:                   -34.05 (func_fastslow)
+  Total Negative Slack:                 -263.53
+  No. of Violating Paths:                    13
+  ---------------------------------------------
+
+  Timing Path Group 'PCI_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                           11 (func_fastslow)
+  Critical Path Length:                  286.59 (func_fastslow)
+  Critical Path Slack:                 -2391.32 (func_fastslow)
+  Total Negative Slack:              -275151.56
+  No. of Violating Paths:                   625
+  ---------------------------------------------
+
+  Timing Path Group 'SDRAM_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            5 (func_fastslow)
+  Critical Path Length:                  336.71 (func_fastslow)
+  Critical Path Slack:                 -3899.51 (func_fastslow)
+  Total Negative Slack:             -4324640.50
+  No. of Violating Paths:                  5207
+  ---------------------------------------------
+
+  Timing Path Group 'SD_DDR_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            2 (test_best)
+  Critical Path Length:                  402.09 (test_best)
+  Critical Path Slack:                   392.24 (test_best)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_2x_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            6 (func_fastslow)
+  Critical Path Length:                    4.73 (func_fastslow)
+  Critical Path Slack:                 -1038.24 (func_fastslow)
+  Total Negative Slack:               -48422.00
+  No. of Violating Paths:                   328
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            8 (func_fastslow)
+  Critical Path Length:                    9.41 (func_fastslow)
+  Critical Path Slack:                 -7792.76 (func_fastslow)
+  Total Negative Slack:             -4202025.50
+  No. of Violating Paths:                  3077
+  ---------------------------------------------
+
+  Timing Path Group 'ate_clk' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1 (test_best)
+  Critical Path Length:                  332.16 (test_best)
+  Critical Path Slack:                 -7480.28 (test_best)
+  Total Negative Slack:             -3230961.00
+  No. of Violating Paths:                  4994
+  ---------------------------------------------
+
+  Timing Path Group 'v_PCI_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            3 (func_fastslow)
+  Critical Path Length:                  421.15 (func_fastslow)
+  Critical Path Slack:                   420.80 (func_fastslow)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Cell Count
+  ---------------------------------------------
+  Hierarchical Cell Count:                   63 (test_worst, test_slowfast, test_best, test_fastslow, func_min, func_max, func_fastslow, func_slowfast)
+  Hierarchical Port Count:                 3392 (test_worst, test_slowfast, test_best, test_fastslow, func_min, func_max, func_fastslow, func_slowfast)
+  Leaf Cell Count:                        46086 (test_worst, test_slowfast, test_best, test_fastslow, func_min, func_max, func_fastslow, func_slowfast)
+  ---------------------------------------------
+
+
+  Area
+  ---------------------------------------------
+  Net Interconnect Area:               67912.13 (test_worst, test_slowfast, test_best, test_fastslow, func_min, func_max, func_fastslow, func_slowfast)
+  Total Cell Area:                    383877.28 (test_worst, test_slowfast, test_best, test_fastslow, func_min, func_max, func_fastslow, func_slowfast)
+  Design Area:                        451789.41 (test_worst, test_slowfast, test_best, test_fastslow, func_min, func_max, func_fastslow, func_slowfast)
+  ---------------------------------------------
+
+
+  Design Rule Violations
+  ---------------------------------------------
+  Total No. of Pins in Design:           185845
+  max_capacitance Count:                     31
+  min_capacitance Count:                     16
+  clock_gating_setup Count:                  16
+  clock_gating_hold Count:                   13
+  sequential_clock_pulse_width Count:      7680
+  max_capacitance Cost:                  618.39
+  min_capacitance Cost:                    1.42
+  clock_gating_setup Cost:                35.18
+  clock_gating_hold Cost:                263.53
+  sequential_clock_pulse_width Cost:  169734.45
+  Total DRC Cost:                     170652.97
+  ---------------------------------------------
+1
+pt_shell> report_qor > qor3.rpt
+pt_shell> exit
+Maximum memory usage for distributed processes:
+my_opts1        1   mo                 639.78 MB
+                2   mo                 659.42 MB
+                3   mo                 652.36 MB
+                4   mo                 643.34 MB
+                5   mo                 659.02 MB
+                6   mo                 630.89 MB
+                7   mo                 640.21 MB
+                8   mo                 638.23 MB
+CPU time usage for distributed processes:
+my_opts1        1   mo                 96 seconds
+                2   mo                 123 seconds
+                3   mo                 107 seconds
+                4   mo                 107 seconds
+                5   mo                 124 seconds
+                6   mo                 97 seconds
+                7   mo                 107 seconds
+                8   mo                 104 seconds
+Elapsed time for distributed processes:
+my_opts1        1   mo                 3071 seconds
+                2   mo                 3071 seconds
+                3   mo                 3071 seconds
+                4   mo                 3071 seconds
+                5   mo                 3071 seconds
+                6   mo                 3071 seconds
+                7   mo                 3071 seconds
+                8   mo                 3071 seconds
+Maximum memory usage for this session: 892.87 MB
+CPU usage for this session: 4 seconds 
+Elapsed time for this session: 3125 seconds
+Shutting down worker processes ...
+ Shutdown Process 1
+ Shutdown Process 2
+ Shutdown Process 3
+ Shutdown Process 4
+ Shutdown Process 5
+ Shutdown Process 6
+ Shutdown Process 7
+ Shutdown Process 8
+Diagnostics summary: 1 error, 24 informationals
+
+Thank you for using pt_shell!
+

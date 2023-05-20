@@ -1,0 +1,557 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2019 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v19.16-s053_1, built Mon Aug 31 13:16:01 PDT 2020
+Options:	
+Date:		Wed May 17 21:01:05 2023
+Host:		auto.ece.pdx.edu (x86_64 w/Linux 3.10.0-1160.88.1.el7.x86_64) (1core*60cpus*Intel Xeon E312xx (Sandy Bridge, IBRS update) 16384KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	19.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (170 mbytes). Set global soft_stack_size_limit to change the value.
+Sourcing startup file ./enc.tcl
+<CMD> alias fs set top_design fifo1_sram
+<CMD> alias f set top_design fifo1
+<CMD> alias o set top_design ORCA_TOP
+<CMD> alias e set top_design ExampleRocketSystem
+<CMD> set_table_style -name report_timing -max_widths { 8,6,23,70} -no_frame_fix_width
+**WARN: (TCLCMD-1083):	'-no_frame_fix_width are global controls that affect all of the various timing reports.  The -name option is used to specify a report-specific behavior, and therefore cannot be used with these global options. You should use a separate set_table_style command to specify the desired global options. You can then use additional set_table_style commands to refine the behaviors of specific timing reports.'
+<CMD> set_global report_timing_format  {delay arrival slew load fanout cell hpin}
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> o
+### Start verbose source output (echo mode) for '../../ORCA_TOP.design_config.tcl' ...
+# set lib_dir /pkgs/synopsys/2020/32_28nm/SAED32_EDK
+# set top_design ORCA_TOP
+# set FCL 1
+# set add_ios 0
+# set pad_design 0
+# set design_size {1000 800}
+# set design_io_border 10
+# set dc_floorplanning 1
+# set enable_dft 1
+# set innovus_enable_manual_macro_placement 1
+# set split_constraints 0
+# set rtl_list [list ../rtl/$top_design.sv ]
+# set slow_corner "ss0p75vn40c ss0p75vn40c_i0p95v ss0p75vn40c_i0p75v ss0p95vn40c ss0p95vn40c_i0p75v"
+# set fast_corner "ff0p95vn40c ff0p95vn40c_i1p16v ff0p95vn40c_i0p95v ff1p16vn40c ff1p16vn40c_i1p16v ff1p16vn40c_i0p95v"
+# set slow_metal 1p9m_Cmax_-40
+# set fast_metal 1p9m_Cmax_-40
+# set synth_corners $slow_corner
+# set synth_corners_slow $slow_corner
+# set synth_corners_fast $fast_corner
+# set lib_types "stdcell_hvt stdcell_rvt stdcell_lvt sram"
+# set sub_lib_type "saed32?vt_ saed32sram_ saed32?vt_ulvl_ saed32?vt_dlvl_ "
+# if { 0 } {
+    set corners ""
+    #Add Worst corners
+    set corners "$corners ss0p75vn40c ss0p75vn40c_i0p95v ss0p75vn40c_i0p75v ss0p95vn40c ss0p95vn40c_i0p75v"
+    #Add Best corners
+    set corners "$corners ff0p95vn40c ff0p95vn40c_i1p16v ff0p95vn40c_i0p95v ff1p16vn40c ff1p16vn40c_i1p16v ff1p16vn40c_i0p95v"
+    #Add Leakage corners
+    set corners "$corners ff0p95v125c f0p95v125c_i1p16v ff0p95v125c_i0p95v ff1p16v125c ff1p16v125c_i1p16v ff1p16v125c ff1p16v125c_i0p95v"
+    set lib_types "stdcell_hvt stdcell_rvt stdcell_lvt sram_lp"
+    # Get the main standard cells, and also the level shifters.  Plus srams.
+    set sub_lib_type "saed32?vt_ saed32?vt_ulvl_ saed32?vt_dlvl_ saed32sram_"
+}
+# set topdir [ lindex [ regexp -inline "(.*)\(syn\|pt\|apr\)" [pwd] ] 1 ]
+# set sub_block {SDRAM_TOP 
+				BLENDER_0 
+				PCI_TOP 
+				CONTEXT_MEM 
+				RISC_CORE 
+				CLOCKING 
+				BLENDER_1 
+				PARSER 
+				}
+# set sub_block_I {I_SDRAM_TOP I_BLENDER_1  I_BLENDER_0 I_RISC_CORE I_CONTEXT_MEM I_PCI_TOP I_PARSER I_CLOCKING}
+# set macro_block {I_SDRAM_TOP I_PCI_TOP I_RISC_CORE I_CONTEXT_MEM}
+### End verbose source output for '../../ORCA_TOP.design_config.tcl'.
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> set search_path {}
+<CMD> set init_lef_file {../../cadence_cap_tech/tech.lef saed32sram.lef saed32nm_rvt_1p9m.lef saed32nm_hvt_1p9m.lef saed32nm_lvt_1p9m.lef}
+<CMD> set init_mmmc_file mmmc.tcl
+<CMD> set init_design_netlisttype Verilog
+<CMD> set init_verilog ../../syn/outputs/ORCA_TOP.genus_phys.vg
+<CMD> set init_top_cell ORCA_TOP
+<CMD> set init_pwr_net VDD
+<CMD> set init_gnd_net VSS
+<CMD> init_design
+#% Begin Load MMMC data ... (date=05/17 21:01:37, mem=495.4M)
+#% End Load MMMC data ... (date=05/17 21:01:37, total cpu=0:00:00.0, real=0:00:00.0, peak res=495.6M, current mem=495.6M)
+cmin cmax
+
+Loading LEF file ../../cadence_cap_tech/tech.lef ...
+
+Loading LEF file saed32sram.lef ...
+Set DBUPerIGU to M2 pitch 152.
+WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+Without BUSBITCHARS defined, the LEF file is technically incorrect.
+Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file saed32sram.lef at line 197399.
+
+Loading LEF file saed32nm_rvt_1p9m.lef ...
+WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+Without BUSBITCHARS defined, the LEF file is technically incorrect.
+Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file saed32nm_rvt_1p9m.lef at line 148040.
+
+Loading LEF file saed32nm_hvt_1p9m.lef ...
+WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+Without BUSBITCHARS defined, the LEF file is technically incorrect.
+Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file saed32nm_hvt_1p9m.lef at line 191962.
+
+Loading LEF file saed32nm_lvt_1p9m.lef ...
+WARNING (LEFPARS-2003): BUSBITCHARS is a required statement on LEF file with version 5.5 and earlier.
+Without BUSBITCHARS defined, the LEF file is technically incorrect.
+Refer the LEF/DEF 5.5 or earlier Language Referece manual on how to define this statement. See file saed32nm_lvt_1p9m.lef at line 67466.
+
+viaInitial starts at Wed May 17 21:01:38 2023
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA12BAR_C' and 'VIA12SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA12LG_C' and 'VIA12SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA12BAR' and 'VIA12SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA12LG' and 'VIA12SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA23BAR_C' and 'VIA23SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA23LG_C' and 'VIA23SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA23BAR' and 'VIA23SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA23LG' and 'VIA23SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA34BAR_C' and 'VIA34SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA34LG_C' and 'VIA34SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA34BAR' and 'VIA34SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA34LG' and 'VIA34SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA45BAR_C' and 'VIA45SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA45LG_C' and 'VIA45SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA45BAR' and 'VIA45SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA45LG' and 'VIA45SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA56BAR_C' and 'VIA56SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA56LG_C' and 'VIA56SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA56BAR' and 'VIA56SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (IMPPP-543):	Inconsistent cut size definition in VIARULE 'VIA56LG' and 'VIA56SQ_C'.
+Type 'man IMPPP-543' for more detail.
+**WARN: (EMS-27):	Message (IMPPP-543) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+viaInitial ends at Wed May 17 21:01:38 2023
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from mmmc.tcl
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib, Line 84713)
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib, Line 84764)
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib, Line 84815)
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib, Line 120153)
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib, Line 120204)
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib, Line 120255)
+**WARN: (TECHLIB-1161):	The library level attribute default_operating_conditions on line 226791 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+**WARN: (TECHLIB-1161):	The library level attribute default_wire_load on line 226792 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+**WARN: (TECHLIB-1161):	The library level attribute default_wire_load_selection on line 226793 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'PMT3_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'PMT2_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'PMT1_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'NMT3_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'NMT2_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'NMT1_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.lib)
+Read 294 cells in library 'saed32hvt_ss0p75vn40c' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p95v.lib' ...
+**WARN: (TECHLIB-1161):	The library level attribute default_operating_conditions on line 6569 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p95v.lib)
+**WARN: (TECHLIB-1161):	The library level attribute default_wire_load on line 6570 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p95v.lib)
+**WARN: (TECHLIB-1161):	The library level attribute default_wire_load_selection on line 6571 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p95v.lib)
+Read 24 cells in library 'saed32hvt_dlvl_ss0p75vn40c_i0p95v' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p75vn40c_i0p75v.lib' ...
+**WARN: (TECHLIB-1161):	The library level attribute default_operating_conditions on line 3945 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p75vn40c_i0p75v.lib)
+**WARN: (TECHLIB-1161):	The library level attribute default_wire_load on line 3946 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p75vn40c_i0p75v.lib)
+**WARN: (TECHLIB-1161):	The library level attribute default_wire_load_selection on line 3947 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p75vn40c_i0p75v.lib)
+Read 12 cells in library 'saed32hvt_ulvl_ss0p75vn40c_i0p75v' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p75v.lib' ...
+**WARN: (TECHLIB-1161):	The library level attribute default_operating_conditions on line 6569 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p75v.lib)
+**WARN: (TECHLIB-1161):	The library level attribute default_wire_load on line 6570 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p75v.lib)
+**WARN: (TECHLIB-1161):	The library level attribute default_wire_load_selection on line 6571 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p75v.lib)
+Read 24 cells in library 'saed32hvt_dlvl_ss0p75vn40c_i0p75v' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib, Line 84613)
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib, Line 84664)
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib, Line 84715)
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib, Line 120053)
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib, Line 120104)
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib, Line 120155)
+**WARN: (TECHLIB-1161):	The library level attribute default_operating_conditions on line 226348 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+**WARN: (TECHLIB-1161):	The library level attribute default_wire_load on line 226349 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+**WARN: (TECHLIB-1161):	The library level attribute default_wire_load_selection on line 226350 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'PMT3_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'PMT2_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'PMT1_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'NMT3_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'NMT2_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'NMT1_HVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.lib)
+Read 294 cells in library 'saed32hvt_ss0p95vn40c' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p95vn40c_i0p75v.lib' ...
+**WARN: (TECHLIB-1161):	The library level attribute default_operating_conditions on line 3945 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p95vn40c_i0p75v.lib)
+**WARN: (TECHLIB-1161):	The library level attribute default_wire_load on line 3946 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p95vn40c_i0p75v.lib)
+**WARN: (TECHLIB-1161):	The library level attribute default_wire_load_selection on line 3947 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p95vn40c_i0p75v.lib)
+Read 12 cells in library 'saed32hvt_ulvl_ss0p95vn40c_i0p75v' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib, Line 84611)
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib, Line 84662)
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib, Line 84713)
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib, Line 120051)
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib, Line 120102)
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib, Line 120153)
+**WARN: (TECHLIB-1161):	The library level attribute default_operating_conditions on line 226658 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib)
+**WARN: (TECHLIB-1161):	The library level attribute default_wire_load on line 226659 is defined after at least one cell definition. The attribute will be ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib)
+Message <TECHLIB-1161> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+**WARN: (TECHLIB-302):	No function defined for cell 'PMT3_RVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'PMT2_RVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'PMT1_RVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'NMT3_RVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'NMT2_RVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'NMT1_RVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.lib)
+Read 294 cells in library 'saed32rvt_ss0p75vn40c' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_dlvl_ss0p75vn40c_i0p95v.lib' ...
+Read 24 cells in library 'saed32rvt_dlvl_ss0p75vn40c_i0p95v' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ss0p75vn40c_i0p75v.lib' ...
+Read 12 cells in library 'saed32rvt_ulvl_ss0p75vn40c_i0p75v' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_dlvl_ss0p75vn40c_i0p75v.lib' ...
+Read 24 cells in library 'saed32rvt_dlvl_ss0p75vn40c_i0p75v' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95vn40c.lib' ...
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95vn40c.lib, Line 84607)
+**WARN: (TECHLIB-1277):	The attribute 'fanout_load' has been defined for output pin 'D'. 'fanout_load' cannot be defined at this level and is being ignored. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95vn40c.lib, Line 84658)
+Message <TECHLIB-1277> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+**WARN: (TECHLIB-302):	No function defined for cell 'PMT3_RVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95vn40c.lib)
+**WARN: (TECHLIB-302):	No function defined for cell 'PMT2_RVT'. The cell will only be used for analysis. (File /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95vn40c.lib)
+Message <TECHLIB-302> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+Read 294 cells in library 'saed32rvt_ss0p95vn40c' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ss0p95vn40c_i0p75v.lib' ...
+Read 12 cells in library 'saed32rvt_ulvl_ss0p95vn40c_i0p75v' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ss0p75vn40c.lib' ...
+Read 294 cells in library 'saed32lvt_ss0p75vn40c' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_dlvl_ss0p75vn40c_i0p95v.lib' ...
+Read 24 cells in library 'saed32lvt_dlvl_ss0p75vn40c_i0p95v' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ss0p75vn40c_i0p75v.lib' ...
+Read 12 cells in library 'saed32lvt_ulvl_ss0p75vn40c_i0p75v' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_dlvl_ss0p75vn40c_i0p75v.lib' ...
+Read 24 cells in library 'saed32lvt_dlvl_ss0p75vn40c_i0p75v' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ss0p95vn40c.lib' ...
+Read 294 cells in library 'saed32lvt_ss0p95vn40c' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ss0p95vn40c_i0p75v.lib' ...
+Read 12 cells in library 'saed32lvt_ulvl_ss0p95vn40c_i0p75v' 
+Reading worst_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram/db_nldm/saed32sram_ss0p95vn40c.lib' ...
+Read 35 cells in library 'saed32sram_ss0p95vn40c' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ff0p95vn40c.lib' ...
+Read 294 cells in library 'saed32hvt_ff0p95vn40c' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ff0p95vn40c_i1p16v.lib' ...
+Read 24 cells in library 'saed32hvt_dlvl_ff0p95vn40c_i1p16v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ff0p95vn40c_i0p95v.lib' ...
+Read 12 cells in library 'saed32hvt_ulvl_ff0p95vn40c_i0p95v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ff0p95vn40c_i0p95v.lib' ...
+Read 24 cells in library 'saed32hvt_dlvl_ff0p95vn40c_i0p95v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ff1p16vn40c.lib' ...
+Read 294 cells in library 'saed32hvt_ff1p16vn40c' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ff1p16vn40c_i1p16v.lib' ...
+Read 12 cells in library 'saed32hvt_ulvl_ff1p16vn40c_i1p16v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ff1p16vn40c_i1p16v.lib' ...
+Read 24 cells in library 'saed32hvt_dlvl_ff1p16vn40c_i1p16v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ff1p16vn40c_i0p95v.lib' ...
+Read 12 cells in library 'saed32hvt_ulvl_ff1p16vn40c_i0p95v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ff0p95vn40c.lib' ...
+Read 294 cells in library 'saed32rvt_ff0p95vn40c' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_dlvl_ff0p95vn40c_i1p16v.lib' ...
+Read 24 cells in library 'saed32rvt_dlvl_ff0p95vn40c_i1p16v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ff0p95vn40c_i0p95v.lib' ...
+Read 12 cells in library 'saed32rvt_ulvl_ff0p95vn40c_i0p95v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_dlvl_ff0p95vn40c_i0p95v.lib' ...
+Read 24 cells in library 'saed32rvt_dlvl_ff0p95vn40c_i0p95v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ff1p16vn40c.lib' ...
+Read 294 cells in library 'saed32rvt_ff1p16vn40c' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ff1p16vn40c_i1p16v.lib' ...
+Read 12 cells in library 'saed32rvt_ulvl_ff1p16vn40c_i1p16v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_dlvl_ff1p16vn40c_i1p16v.lib' ...
+Read 24 cells in library 'saed32rvt_dlvl_ff1p16vn40c_i1p16v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ff1p16vn40c_i0p95v.lib' ...
+Read 12 cells in library 'saed32rvt_ulvl_ff1p16vn40c_i0p95v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ff0p95vn40c.lib' ...
+Read 294 cells in library 'saed32lvt_ff0p95vn40c' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_dlvl_ff0p95vn40c_i1p16v.lib' ...
+Read 24 cells in library 'saed32lvt_dlvl_ff0p95vn40c_i1p16v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ff0p95vn40c_i0p95v.lib' ...
+Read 12 cells in library 'saed32lvt_ulvl_ff0p95vn40c_i0p95v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_dlvl_ff0p95vn40c_i0p95v.lib' ...
+Read 24 cells in library 'saed32lvt_dlvl_ff0p95vn40c_i0p95v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ff1p16vn40c.lib' ...
+Read 294 cells in library 'saed32lvt_ff1p16vn40c' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ff1p16vn40c_i1p16v.lib' ...
+Read 12 cells in library 'saed32lvt_ulvl_ff1p16vn40c_i1p16v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_dlvl_ff1p16vn40c_i1p16v.lib' ...
+Read 24 cells in library 'saed32lvt_dlvl_ff1p16vn40c_i1p16v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ff1p16vn40c_i0p95v.lib' ...
+Read 12 cells in library 'saed32lvt_ulvl_ff1p16vn40c_i0p95v' 
+Reading best_libs timing library '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram/db_nldm/saed32sram_ff1p16vn40c.lib' ...
+Read 35 cells in library 'saed32sram_ff1p16vn40c' 
+*** End library_loading (cpu=0.18min, real=0.17min, mem=58.4M, fe_cpu=0.50min, fe_real=0.72min, fe_mem=857.9M) ***
+#% Begin Load netlist data ... (date=05/17 21:01:48, mem=564.2M)
+*** Begin netlist parsing (mem=857.9M) ***
+Created 1025 new cells from 44 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../../syn/outputs/ORCA_TOP.genus_phys.vg'
+
+*** Memory Usage v#1 (Current mem = 868.922M, initial mem = 289.684M) ***
+*** End netlist parsing (cpu=0:00:00.4, real=0:00:01.0, mem=868.9M) ***
+#% End Load netlist data ... (date=05/17 21:01:49, total cpu=0:00:00.4, real=0:00:01.0, peak res=616.9M, current mem=616.9M)
+Set top cell to ORCA_TOP.
+Hooked 4138 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell ORCA_TOP ...
+*** Netlist is unique.
+** info: there are 4263 modules.
+** info: there are 45560 stdCell insts.
+** info: there are 40 macros.
+** info: there are 35 multi-height stdCell insts (7 stdCells)
+
+*** Memory Usage v#1 (Current mem = 997.348M, initial mem = 289.684M) ***
+**WARN: (IMPFP-3961):	The techSite 'fillSite' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'cornerSite' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'ioSiteEW' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'ioSiteNS' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Horizontal Layer M1 offset = 0 (derived)
+Vertical Layer M2 offset = 0 (derived)
+Generated pitch 0.228 in M9 is different from 2.432 defined in technology file in preferred direction.
+Generated pitch 0.152 in M8 is different from 1.216 defined in technology file in preferred direction.
+Generated pitch 0.152 in M7 is different from 1.216 defined in technology file in preferred direction.
+Generated pitch 0.152 in M6 is different from 0.608 defined in technology file in preferred direction.
+Generated pitch 0.152 in M5 is different from 0.608 defined in technology file in preferred direction.
+Generated pitch 0.152 in M4 is different from 0.304 defined in technology file in preferred direction.
+Generated pitch 0.152 in M3 is different from 0.304 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+Extraction setup Started 
+Initializing multi-corner RC extraction with 2 active RC Corners ...
+Reading Capacitance Table File ../../cadence_cap_tech/saed32nm_1p9m_Cmax.cap ...
+Process name: saed32nm_1p9m_Cmax.
+Reading Capacitance Table File ../../cadence_cap_tech/saed32nm_1p9m_Cmin.cap ...
+Process name: saed32nm_1p9m_Cmin.
+Importing multi-corner RC tables ... 
+Summary of Active RC-Corners : 
+ 
+ Analysis View: test_worst_scenario
+    RC-Corner Name        : cmax
+    RC-Corner Index       : 0
+    RC-Corner Temperature : -40 Celsius
+    RC-Corner Cap Table   : '../../cadence_cap_tech/saed32nm_1p9m_Cmax.cap'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+ 
+ Analysis View: func_worst_scenario
+    RC-Corner Name        : cmax
+    RC-Corner Index       : 0
+    RC-Corner Temperature : -40 Celsius
+    RC-Corner Cap Table   : '../../cadence_cap_tech/saed32nm_1p9m_Cmax.cap'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+ 
+ Analysis View: test_best_scenario
+    RC-Corner Name        : cmin
+    RC-Corner Index       : 1
+    RC-Corner Temperature : -40 Celsius
+    RC-Corner Cap Table   : '../../cadence_cap_tech/saed32nm_1p9m_Cmin.cap'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+ 
+ Analysis View: func_best_scenario
+    RC-Corner Name        : cmin
+    RC-Corner Index       : 1
+    RC-Corner Temperature : -40 Celsius
+    RC-Corner Cap Table   : '../../cadence_cap_tech/saed32nm_1p9m_Cmin.cap'
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '../../constraints/ORCA_TOP_func_best.sdc' ...
+Current (total cpu=0:00:32.4, real=0:00:46.0, peak res=960.3M, current mem=932.1M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../../constraints/ORCA_TOP_func_best.sdc, Line 8).
+
+**WARN: (TCLCMD-1142):	Virtual clock 'v_PCI_CLK' is being created with no source objects. (File ../../constraints/ORCA_TOP_func_best.sdc, Line 261).
+
+**WARN: (TCLCMD-1142):	Virtual clock 'v_SDRAM_CLK' is being created with no source objects. (File ../../constraints/ORCA_TOP_func_best.sdc, Line 286).
+
+**WARN: (TCLCMD-1333):	The combinational generated clock SD_DDR_CLK was specified without any of -divide_by, -multiply_by, or -edges options which are normally used to define the output waveform. A -divide_by 1 specification has been inferred for this clock. (File ../../constraints/ORCA_TOP_func_best.sdc, Line 289).
+
+**WARN: (TCLCMD-1333):	The combinational generated clock SD_DDR_CLKn was specified without any of -divide_by, -multiply_by, or -edges options which are normally used to define the output waveform. A -divide_by 1 specification has been inferred for this clock. (File ../../constraints/ORCA_TOP_func_best.sdc, Line 292).
+
+**WARN: (TCLCMD-1015):	The set_timing_derate command is not currently supported as a constraint which can be loaded as part of your SDC file. You can use the set_timing_Derate command interactively or in a Tcl command script. (File ../../constraints/ORCA_TOP_func_best.sdc, Line 786).
+
+**WARN: (TCLCMD-1015):	The set_timing_derate command is not currently supported as a constraint which can be loaded as part of your SDC file. You can use the set_timing_Derate command interactively or in a Tcl command script. (File ../../constraints/ORCA_TOP_func_best.sdc, Line 787).
+
+**ERROR: (DMMMC-271):	The software does not currently support the SDC set_voltage command. You should use operating conditions to control the default operating voltage and any power domain specific voltages.
+**ERROR: (DMMMC-271):	The software does not currently support the SDC set_voltage command. You should use operating conditions to control the default operating voltage and any power domain specific voltages.
+**ERROR: (DMMMC-271):	The software does not currently support the SDC set_voltage command. You should use operating conditions to control the default operating voltage and any power domain specific voltages.
+INFO (CTE): Reading of timing constraints file ../../constraints/ORCA_TOP_func_best.sdc completed, with 7 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.2, real=0:00:00.0, peak res=954.9M, current mem=954.9M)
+Current (total cpu=0:00:32.6, real=0:00:46.0, peak res=960.3M, current mem=954.9M)
+Reading timing constraints file '../../constraints/ORCA_TOP_test_best.sdc' ...
+Current (total cpu=0:00:32.6, real=0:00:46.0, peak res=960.3M, current mem=954.9M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../../constraints/ORCA_TOP_test_best.sdc, Line 8).
+
+**WARN: (TCLCMD-1142):	Virtual clock 'v_PCI_CLK' is being created with no source objects. (File ../../constraints/ORCA_TOP_test_best.sdc, Line 265).
+
+**WARN: (TCLCMD-1142):	Virtual clock 'v_SDRAM_CLK' is being created with no source objects. (File ../../constraints/ORCA_TOP_test_best.sdc, Line 290).
+
+**WARN: (TCLCMD-1333):	The combinational generated clock SD_DDR_CLK was specified without any of -divide_by, -multiply_by, or -edges options which are normally used to define the output waveform. A -divide_by 1 specification has been inferred for this clock. (File ../../constraints/ORCA_TOP_test_best.sdc, Line 293).
+
+**WARN: (TCLCMD-1333):	The combinational generated clock SD_DDR_CLKn was specified without any of -divide_by, -multiply_by, or -edges options which are normally used to define the output waveform. A -divide_by 1 specification has been inferred for this clock. (File ../../constraints/ORCA_TOP_test_best.sdc, Line 296).
+
+**WARN: (TCLCMD-1015):	The set_timing_derate command is not currently supported as a constraint which can be loaded as part of your SDC file. You can use the set_timing_Derate command interactively or in a Tcl command script. (File ../../constraints/ORCA_TOP_test_best.sdc, Line 822).
+
+**WARN: (TCLCMD-1015):	The set_timing_derate command is not currently supported as a constraint which can be loaded as part of your SDC file. You can use the set_timing_Derate command interactively or in a Tcl command script. (File ../../constraints/ORCA_TOP_test_best.sdc, Line 823).
+
+**ERROR: (DMMMC-271):	The software does not currently support the SDC set_voltage command. You should use operating conditions to control the default operating voltage and any power domain specific voltages.
+**ERROR: (DMMMC-271):	The software does not currently support the SDC set_voltage command. You should use operating conditions to control the default operating voltage and any power domain specific voltages.
+**ERROR: (DMMMC-271):	The software does not currently support the SDC set_voltage command. You should use operating conditions to control the default operating voltage and any power domain specific voltages.
+INFO (CTE): Reading of timing constraints file ../../constraints/ORCA_TOP_test_best.sdc completed, with 7 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=977.6M, current mem=977.6M)
+Current (total cpu=0:00:32.7, real=0:00:46.0, peak res=977.6M, current mem=977.6M)
+Reading timing constraints file '../../constraints/ORCA_TOP_func_worst.sdc' ...
+Current (total cpu=0:00:32.7, real=0:00:46.0, peak res=977.6M, current mem=977.6M)
+**WARN: (TCLCMD-1142):	Virtual clock 'v_PCI_CLK' is being created with no source objects. (File ../../constraints/ORCA_TOP_func_worst.sdc, Line 263).
+
+**WARN: (TCLCMD-1142):	Virtual clock 'v_SDRAM_CLK' is being created with no source objects. (File ../../constraints/ORCA_TOP_func_worst.sdc, Line 288).
+
+**WARN: (TCLCMD-1333):	The combinational generated clock SD_DDR_CLK was specified without any of -divide_by, -multiply_by, or -edges options which are normally used to define the output waveform. A -divide_by 1 specification has been inferred for this clock. (File ../../constraints/ORCA_TOP_func_worst.sdc, Line 291).
+
+**WARN: (TCLCMD-1333):	The combinational generated clock SD_DDR_CLKn was specified without any of -divide_by, -multiply_by, or -edges options which are normally used to define the output waveform. A -divide_by 1 specification has been inferred for this clock. (File ../../constraints/ORCA_TOP_func_worst.sdc, Line 298).
+
+INFO (CTE): Reading of timing constraints file ../../constraints/ORCA_TOP_func_worst.sdc completed, with 4 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=978.1M, current mem=978.1M)
+Current (total cpu=0:00:32.8, real=0:00:46.0, peak res=978.1M, current mem=978.1M)
+Reading timing constraints file '../../constraints/ORCA_TOP_test_worst.sdc' ...
+Current (total cpu=0:00:32.8, real=0:00:46.0, peak res=978.1M, current mem=978.1M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../../constraints/ORCA_TOP_test_worst.sdc, Line 8).
+
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../../constraints/ORCA_TOP_test_worst.sdc, Line 9).
+
+**WARN: (TCLCMD-1142):	Virtual clock 'v_PCI_CLK' is being created with no source objects. (File ../../constraints/ORCA_TOP_test_worst.sdc, Line 266).
+
+**WARN: (TCLCMD-1142):	Virtual clock 'v_SDRAM_CLK' is being created with no source objects. (File ../../constraints/ORCA_TOP_test_worst.sdc, Line 291).
+
+**WARN: (TCLCMD-1333):	The combinational generated clock SD_DDR_CLK was specified without any of -divide_by, -multiply_by, or -edges options which are normally used to define the output waveform. A -divide_by 1 specification has been inferred for this clock. (File ../../constraints/ORCA_TOP_test_worst.sdc, Line 294).
+
+**WARN: (TCLCMD-1333):	The combinational generated clock SD_DDR_CLKn was specified without any of -divide_by, -multiply_by, or -edges options which are normally used to define the output waveform. A -divide_by 1 specification has been inferred for this clock. (File ../../constraints/ORCA_TOP_test_worst.sdc, Line 301).
+
+**WARN: (TCLCMD-1015):	The set_timing_derate command is not currently supported as a constraint which can be loaded as part of your SDC file. You can use the set_timing_Derate command interactively or in a Tcl command script. (File ../../constraints/ORCA_TOP_test_worst.sdc, Line 831).
+
+**WARN: (TCLCMD-1015):	The set_timing_derate command is not currently supported as a constraint which can be loaded as part of your SDC file. You can use the set_timing_Derate command interactively or in a Tcl command script. (File ../../constraints/ORCA_TOP_test_worst.sdc, Line 832).
+
+**ERROR: (DMMMC-271):	The software does not currently support the SDC set_voltage command. You should use operating conditions to control the default operating voltage and any power domain specific voltages.
+**ERROR: (DMMMC-271):	The software does not currently support the SDC set_voltage command. You should use operating conditions to control the default operating voltage and any power domain specific voltages.
+**ERROR: (DMMMC-271):	The software does not currently support the SDC set_voltage command. You should use operating conditions to control the default operating voltage and any power domain specific voltages.
+INFO (CTE): Reading of timing constraints file ../../constraints/ORCA_TOP_test_worst.sdc completed, with 8 WARNING
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=978.6M, current mem=978.6M)
+Current (total cpu=0:00:32.9, real=0:00:46.0, peak res=978.6M, current mem=978.6M)
+Total number of combinational cells: 402
+Total number of sequential cells: 396
+Total number of tristate cells: 18
+Total number of level shifter cells: 108
+Total number of power gating cells: 0
+Total number of isolation cells: 48
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: NBUFFX2_LVT NBUFFX16_LVT NBUFFX32_LVT NBUFFX4_LVT NBUFFX8_LVT
+Total number of usable buffers: 5
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: IBUFFX2_LVT IBUFFX16_LVT IBUFFX32_LVT INVX0_LVT IBUFFX4_LVT IBUFFX8_LVT INVX16_LVT INVX1_LVT INVX2_LVT INVX32_LVT INVX4_LVT IBUFFX2_RVT INVX8_LVT IBUFFX16_RVT IBUFFX32_RVT INVX0_RVT IBUFFX4_RVT IBUFFX8_RVT INVX16_RVT INVX1_RVT INVX2_RVT INVX32_RVT INVX4_RVT IBUFFX2_HVT INVX8_RVT IBUFFX16_HVT IBUFFX32_HVT INVX0_HVT IBUFFX4_HVT IBUFFX8_HVT INVX16_HVT INVX1_HVT INVX2_HVT INVX32_HVT INVX4_HVT INVX8_HVT
+Total number of usable inverters: 36
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DELLN1X2_LVT DELLN2X2_LVT DELLN3X2_LVT DELLN1X2_RVT DELLN2X2_RVT DELLN3X2_RVT NBUFFX2_RVT NBUFFX16_RVT NBUFFX32_RVT NBUFFX4_RVT NBUFFX8_RVT DELLN1X2_HVT DELLN2X2_HVT DELLN3X2_HVT NBUFFX2_HVT NBUFFX16_HVT NBUFFX32_HVT NBUFFX4_HVT NBUFFX8_HVT
+Total number of identified usable delay cells: 19
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPFP-3961           4  The techSite '%s' has no related standar...
+WARNING   IMPPP-543           28  Inconsistent cut size definition in VIAR...
+ERROR     DMMMC-271            9  The software does not currently support ...
+WARNING   TCLCMD-1014          1  The SDC set_operating_conditions asserti...
+WARNING   TCLCMD-1015          6  The %s command is not currently supporte...
+WARNING   TCLCMD-1142          8  Virtual clock '%s' is being created with...
+WARNING   TCLCMD-1333          8  The combinational generated clock %s was...
+WARNING   TCLCMD-1461          3  Skipped unsupported command: %s          
+WARNING   TECHLIB-302         72  No function defined for cell '%s'. The c...
+WARNING   TECHLIB-1161       132  The library level attribute %s on line %...
+WARNING   TECHLIB-1277        72  The %s '%s' has been defined for %s %s '...
+*** Message Summary: 334 warning(s), 9 error(s)
+
+<CMD> defIn ../outputs/ORCA_TOP.floorplan.innovus.def
+**ERROR: (IMPSYUTIL-96):	Cannot open (for read) def file: '../outputs/ORCA_TOP.floorplan.innovus.def'. The reason is: No such file or directory
+Type 'man IMPSYUTIL-96' for more detail.
+**ERROR: (IMPDF-8):	Could not open def file '../outputs/ORCA_TOP.floorplan.innovus.def'.
+
+
+*** Memory Usage v#1 (Current mem = 1257.980M, initial mem = 289.684M) ***
+*** Message Summary: 335 warning(s), 11 error(s)
+
+--- Ending "Innovus" (totcpu=0:01:46, real=0:06:00, mem=1258.0M) ---

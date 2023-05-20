@@ -1,0 +1,10 @@
+#@ # 
+#@ # Running icc2_shell Version Q-2019.12-SP4 for linux64 -- May 26, 2020
+#@ # Date:   Thu May 18 16:44:03 2023
+#@ # Run by: reethika@auto.ece.pdx.edu
+#@ 
+
+source /home/reethika/common/Documents/ECE510-2023-SPRING/final_prj-team_10/apr/work/.synopsys_icc2.setup
+o
+set flow "fpc"
+source ../scripts/icc2.tcl

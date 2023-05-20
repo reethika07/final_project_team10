@@ -1,0 +1,58 @@
+Information: Checking 'no_input_delay'.
+Information: Checking 'no_driving_cell'.
+Information: Checking 'unconstrained_endpoints'.
+Warning: There are 2 endpoints which are not constrained for maximum delay.
+
+Endpoint
+--------------------------------------------------------------------------------
+sd_CKn
+sd_CK
+
+Information: Checking 'unexpandable_clocks'.
+Information: Checking 'latch_fanout'.
+Information: Checking 'no_clock'.
+Warning: There are 16 register clock pins with no clock.
+
+Clock Pin
+------------------------------------------------------------
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_1/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_2/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_3/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_4/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_5/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_6/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_7/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_8/CE1
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_1/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_2/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_3/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_4/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_5/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_6/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_7/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_8/CE2
+
+Information: Checking 'partial_input_delay'.
+Warning: There are 12 ports with partially defined input delays.
+
+Ports
+------------------------------------------------------------
+occ_bypass
+occ_reset
+prst_n
+scan_enable
+shutdown
+test_mode
+test_si[0]
+test_si[1]
+test_si[2]
+test_si[3]
+test_si[4]
+test_si[5]
+
+Information: Checking 'generic'.
+Information: Checking 'loops'.
+Information: Checking 'generated_clocks'.
+Information: Checking 'pulse_clock_non_pulse_clock_merge'.
+Information: Checking 'pll_configuration'.
+0

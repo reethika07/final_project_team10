@@ -1,0 +1,20 @@
+#@ # 
+#@ # Running icc2_shell Version Q-2019.12-SP4 for linux64 -- May 26, 2020
+#@ # Date:   Fri May 19 09:21:10 2023
+#@ # Run by: reethika@auto.ece.pdx.edu
+#@ 
+
+source /home/reethika/common/Documents/ECE510-2023-SPRING/final_prj-team_10/apr/work/.synopsys_icc2.setup
+o
+current_scenario
+set flow " fpcr"
+current_scenario
+SetMultistoragecpu -local 32host
+setMultiStoragecpu -localhost32
+source ../scripts/icc2.tcl
+current_scenario
+report_qor
+report_scenario
+get_scenarios
+pwd
+exit
