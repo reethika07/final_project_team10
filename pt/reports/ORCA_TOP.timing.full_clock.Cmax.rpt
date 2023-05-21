@@ -13,7 +13,7 @@ Report : timing
 	-sort_by slack
 Design : ORCA_TOP
 Version: O-2018.06
-Date   : Sat May 20 21:25:25 2023
+Date   : Sun May 21 00:13:24 2023
 ****************************************
 
 
@@ -709,7 +709,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -866,7 +866,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -1193,7 +1193,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -1363,7 +1363,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -1520,7 +1520,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -1677,7 +1677,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -1829,7 +1829,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -2157,7 +2157,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -2337,7 +2337,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -2979,7 +2979,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_clk_gate_TOS_int_reg/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_clk_gate_TOS_int_reg/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0638   0.9500            0.2036     3.4137 r
   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_clk_gate_TOS_int_reg/ENCLK (net)
@@ -4692,7 +4692,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -4871,7 +4871,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -5051,7 +5051,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -5215,7 +5215,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -5564,7 +5564,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -5744,7 +5744,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -5924,7 +5924,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -6036,7 +6036,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_ALU_clk_gate_Lachd_Result_reg/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_ALU_clk_gate_Lachd_Result_reg/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_ALU_clk_gate_Lachd_Result_reg/ctsbuf_net_11723303 (net)
@@ -6585,7 +6585,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -6752,7 +6752,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -8243,7 +8243,7 @@ Date   : Sat May 20 21:25:25 2023
   Derate Summary Report
   ------------------------------------------------------------------------------------------
   total derate : required time                                                  0.0576 
-  total derate : arrival time                                                  -0.0000 
+  total derate : arrival time                                                   0.0000 
   ------------------------------------------------------------------------------------------
   total derate : slack                                                          0.0576 
 
@@ -8440,7 +8440,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -8614,7 +8614,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -8789,7 +8789,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -9130,7 +9130,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -9230,7 +9230,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_clk_gate_TOS_int_reg/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_clk_gate_TOS_int_reg/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0638   0.9500            0.2036     3.4137 r
   I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_clk_gate_TOS_int_reg/ENCLK (net)
@@ -9281,7 +9281,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -9446,7 +9446,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -9610,7 +9610,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -9784,7 +9784,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -9942,7 +9942,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -10207,7 +10207,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_clk_gate_PCint_reg/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_clk_gate_PCint_reg/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0755   0.9500            0.2130     3.4231 r
   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_clk_gate_PCint_reg/ENCLK (net)
@@ -10258,7 +10258,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -10688,7 +10688,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_clk_gate_PCint_reg/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_clk_gate_PCint_reg/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0755   0.9500            0.2130     3.4231 r
   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_clk_gate_PCint_reg/ENCLK (net)
@@ -11004,7 +11004,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_clk_gate_PCint_reg/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_clk_gate_PCint_reg/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0755   0.9500            0.2130     3.4231 r
   I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_clk_gate_PCint_reg/ENCLK (net)
@@ -11932,7 +11932,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -12098,7 +12098,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -12262,7 +12262,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -12968,7 +12968,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -13488,7 +13488,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -13950,7 +13950,7 @@ Date   : Sat May 20 21:25:25 2023
   Derate Summary Report
   ------------------------------------------------------------------------------------------
   total derate : required time                                                  0.0576 
-  total derate : arrival time                                                  -0.0000 
+  total derate : arrival time                                                   0.0000 
   ------------------------------------------------------------------------------------------
   total derate : slack                                                          0.0576 
 
@@ -14671,7 +14671,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -15028,7 +15028,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -15374,7 +15374,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -16057,7 +16057,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -16217,7 +16217,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -16565,7 +16565,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -16739,7 +16739,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -16913,7 +16913,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -17088,7 +17088,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -17438,7 +17438,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -17613,7 +17613,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -17950,7 +17950,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -18640,7 +18640,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -18911,7 +18911,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_ALU_clk_gate_Lachd_Result_reg/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_ALU_clk_gate_Lachd_Result_reg/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_ALU_clk_gate_Lachd_Result_reg/ctsbuf_net_11723303 (net)
@@ -18968,7 +18968,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -19132,7 +19132,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -19834,7 +19834,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -20003,7 +20003,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -20341,7 +20341,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -20505,7 +20505,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -20875,7 +20875,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -21060,7 +21060,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -21167,7 +21167,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_ALU_clk_gate_Lachd_Result_reg/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_ALU_clk_gate_Lachd_Result_reg/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_ALU_clk_gate_Lachd_Result_reg/ctsbuf_net_11723303 (net)
@@ -21716,7 +21716,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -21880,7 +21880,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -22044,7 +22044,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -22372,7 +22372,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -22479,7 +22479,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_2_/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_2_/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_2_/ctsbuf_net_10623292 (net)
@@ -22536,7 +22536,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -23028,7 +23028,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -23192,7 +23192,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -23356,7 +23356,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -23520,7 +23520,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -23684,7 +23684,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -23848,7 +23848,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -24340,7 +24340,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -24504,7 +24504,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -24668,7 +24668,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -24996,7 +24996,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -25160,7 +25160,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -25324,7 +25324,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -25431,7 +25431,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_4_/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_4_/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_4_/ctsbuf_net_10823294 (net)
@@ -25923,7 +25923,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_7_/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_7_/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_7_/ctsbuf_net_11123297 (net)
@@ -26144,7 +26144,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -26251,7 +26251,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_0_/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_0_/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_0_/ctsbuf_net_10423290 (net)
@@ -26308,7 +26308,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -26579,7 +26579,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_6_/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_6_/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_6_/ctsbuf_net_11023296 (net)
@@ -26636,7 +26636,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -26800,7 +26800,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -26964,7 +26964,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -27071,7 +27071,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_5_/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_5_/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_5_/ctsbuf_net_10923295 (net)
@@ -27235,7 +27235,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_PopDataOut_reg/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_PopDataOut_reg/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_PopDataOut_reg/ctsbuf_net_11223298 (net)
@@ -27456,7 +27456,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -27563,7 +27563,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_5_/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_5_/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_5_/ctsbuf_net_10923295 (net)
@@ -27620,7 +27620,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -27727,7 +27727,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_6_/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_6_/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_6_/ctsbuf_net_11023296 (net)
@@ -27948,7 +27948,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -28112,7 +28112,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -28218,7 +28218,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_0_/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_0_/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_0_/ctsbuf_net_10423290 (net)
@@ -28439,7 +28439,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -28710,7 +28710,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_5_/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_5_/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_5_/ctsbuf_net_10923295 (net)
@@ -28767,7 +28767,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -29095,7 +29095,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -29915,7 +29915,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -30022,7 +30022,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_4_/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_4_/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_4_/ctsbuf_net_10823294 (net)
@@ -30079,7 +30079,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -30350,7 +30350,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_1_/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_1_/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_1_/ctsbuf_net_10523291 (net)
@@ -30407,7 +30407,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -30571,7 +30571,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -30678,7 +30678,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_0_/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_0_/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_0_/ctsbuf_net_10423290 (net)
@@ -30735,7 +30735,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -30842,7 +30842,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_4_/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_4_/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_4_/ctsbuf_net_10823294 (net)
@@ -30899,7 +30899,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -31662,7 +31662,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_3_/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_3_/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_3_/ctsbuf_net_10723293 (net)
@@ -32386,7 +32386,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -32493,7 +32493,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_ALU_clk_gate_Lachd_Result_reg/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_ALU_clk_gate_Lachd_Result_reg/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_ALU_clk_gate_Lachd_Result_reg/ctsbuf_net_11723303 (net)
@@ -32550,7 +32550,7 @@ Date   : Sat May 20 21:25:25 2023
   cts_dlydt_57767/A (NBUFFX16_LVT)          0.0000   0.0422   1.0000   0.0000   0.0000     0.0776 r
   cts_dlydt_57767/Y (NBUFFX16_LVT)                   0.0338   1.0000            0.0765     0.1541 r
   cts3 (net)                   1   0.7355 
-  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000  -0.0000     0.1541 r
+  cts_dlydt_57763/A (NBUFFX4_LVT)           0.0000   0.0338   1.0000   0.0000   0.0000     0.1541 r
   cts_dlydt_57763/Y (NBUFFX4_LVT)                    0.0395   1.0000            0.0755     0.2296 r
   cts1 (net)                   1   1.4207 
   cto_buf_58700/A (NBUFFX8_LVT)             0.0000   0.0395   1.0000   0.0000   0.0000     0.2296 r
@@ -32657,7 +32657,7 @@ Date   : Sat May 20 21:25:25 2023
   I_RISC_CORE/ctsbuf_net_13323319 (net)
                               15   7.8309 
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_3_/latch/CLK (CGLPPRX2_LVT)
-                                            0.0000   0.0412   0.9500   0.0000   0.0000     3.2101 r
+                                            0.0000   0.0412   0.9500   0.0000  -0.0000     3.2101 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_3_/latch/GCLK (CGLPPRX2_LVT)
                                                      0.0503   0.9500            0.1909     3.4010 r
   I_RISC_CORE/I_STACK_TOP_I2_STACK_MEM_clk_gate_Stack_Mem_reg_3_/ctsbuf_net_10723293 (net)

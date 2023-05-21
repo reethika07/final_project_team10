@@ -1,0 +1,147 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sun May 21 00:06:59 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Warning: The variable 'search_path' contains a directory '/home/reethika/Documents/ECE510-2023-SPRING/final_prj-team_10/' that could not be resolved to an absolute path. (DIST-006)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'test_best'
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'func_slowfast'
+Sourcing   : Scenario specific data files to setup scenario 'test_best'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'func_worstc'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'at_speed_capture'
+Started    : Command execution in scenario 'at_speed_shift'
+Started    : Command execution in scenario 'func_bestc'
+Started    : Command execution in scenario 'stuck_at_capture'
+Sourcing   : Scenario specific data files to setup scenario 'func_min'
+Sourcing   : Scenario specific data files to setup scenario 'test_slowfast'
+Sourcing   : Scenario specific data files to setup scenario 'func_slowfast'
+Sourcing   : Scenario specific data files to setup scenario 'stuck_at_shift'
+Sourcing   : Scenario specific data files to setup scenario 'test_worst'
+Sourcing   : Scenario specific data files to setup scenario 'test_fastslow'
+Sourcing   : Scenario specific data files to setup scenario 'at_speed_capture'
+Sourcing   : Scenario specific data files to setup scenario 'func_max'
+Sourcing   : Scenario specific data files to setup scenario 'func_fastslow'
+Sourcing   : Scenario specific data files to setup scenario 'func_worstc'
+Sourcing   : Scenario specific data files to setup scenario 'func_bestc'
+Sourcing   : Scenario specific data files to setup scenario 'at_speed_shift'
+Sourcing   : Scenario specific data files to setup scenario 'stuck_at_capture'
+Failed     : Command execution in scenario 'at_speed_capture'
+Failed     : Command execution in scenario 'at_speed_capture'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'at_speed_shift'
+Succeeded  : Command execution in scenario 'func_worstc'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_bestc'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'func_min'
+-----------------------------------
+End of Master/Slave Task Processing
+
+Error: Errors detected during master/slave task processing. (MS-016)
+
+  Startpoint: I_PARSER/out_bus_reg_8_
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Endpoint: I_CONTEXT_MEM/I_CONTEXT_RAM_1_1
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Path Group: ate_clk
+  Path Type: max
+  Scenario: at_speed_shift
+  Max Data Paths Derating Factor  : 1.05
+  Min Clock Paths Derating Factor : 0.95
+  Max Clock Paths Derating Factor : 1.05
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  I_PARSER/out_bus_reg_8_/CLK (SDFFARX1_LVT)              0.00       0.00 r
+  I_PARSER/out_bus_reg_8_/Q (SDFFARX1_LVT)                0.07       0.07 f
+  ZBUF_67_inst_6229/Y (NBUFFX2_LVT)                       0.62       0.69 f
+  ZINV_890_inst_80001/Y (INVX1_LVT)                       6.64       7.32 r
+  ZINV_745_inst_79999/Y (INVX4_RVT)                       1.93       9.25 f
+  HFSBUF_26800_4597/Y (NBUFFX8_RVT)                     235.35     244.60 f
+  HFSINV_22065_4595/Y (INVX8_LVT)                      2686.02    2930.61 r
+  HFSINV_19296_4591/Y (INVX4_LVT)                       117.81    3048.42 f
+  I_PARSER/U732/Y (OR2X1_HVT)                          1292.77    4341.19 f
+  I_CONTEXT_MEM/ZBUF_17_inst_34112/Y (NBUFFX8_HVT)        0.37    4341.56 f
+  I_CONTEXT_MEM/HFSINV_191_2702/Y (INVX0_HVT)             1.42    4342.98 r
+  I_CONTEXT_MEM/U198/Y (OR2X2_HVT)                        0.58    4343.56 r
+  I_CONTEXT_MEM/HFSINV_106_378/Y (INVX8_HVT)              1.07    4344.63 f
+  I_CONTEXT_MEM/I_CONTEXT_RAM_1_1/CSB1 (SRAM2RW64x8)      0.11    4344.74 f
+  data arrival time                                               4344.74
+
+  clock ate_clk (rise edge)                              20.00      20.00
+  clock network delay (ideal)                             0.00      20.00
+  clock reconvergence pessimism                           0.00      20.00
+  clock uncertainty                                      -0.10      19.90
+  I_CONTEXT_MEM/I_CONTEXT_RAM_1_1/CE1 (SRAM2RW64x8)                 19.90 r
+  library setup time                                     -0.02      19.88
+  data required time                                                19.88
+  ------------------------------------------------------------------------------
+  data required time                                                19.88
+  data arrival time                                              -4344.74
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -4324.85
+
+
+0

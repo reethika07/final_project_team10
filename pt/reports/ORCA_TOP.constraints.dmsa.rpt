@@ -1,51 +1,62 @@
 
 Start of Master/Slave Task Processing
 -------------------------------------
+Warning: The variable 'search_path' contains a directory '/home/reethika/Documents/ECE510-2023-SPRING/final_prj-team_10/' that could not be resolved to an absolute path. (DIST-006)
 Started    : Command execution in scenario 'func_max'
 Information: Checked out license 'PrimeTime' (PT-019)
 Information: Checked out license 'PrimeTime' (PT-019)
-Information: Checked out license 'PrimeTime' (PT-019)
-Information: Checked out license 'PrimeTime' (PT-019)
-Information: Checked out license 'PrimeTime' (PT-019)
-Information: Checked out license 'PrimeTime' (PT-019)
-Information: Checked out license 'PrimeTime' (PT-019)
-Information: Checked out license 'PrimeTime' (PT-019)
-Information: Checked out license 'PrimeTime' (PT-019)
-Information: Checked out license 'PrimeTime' (PT-019)
-Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'func_fastslow'
 Information: Checked out license 'PrimeTime' (PT-019)
 Started    : Command execution in scenario 'func_min'
 Information: Checked out license 'PrimeTime' (PT-019)
-Started    : Command execution in scenario 'func_slowfast'
-Started    : Command execution in scenario 'func_fastslow'
-Started    : Command execution in scenario 'func_worstc'
-Started    : Command execution in scenario 'test_best'
-Sourcing   : Scenario specific data files to setup scenario 'func_max'
-Started    : Command execution in scenario 'func_bestc'
-Started    : Command execution in scenario 'test_worst'
-Started    : Command execution in scenario 'stuck_at_capture'
-Started    : Command execution in scenario 'at_speed_capture'
 Started    : Command execution in scenario 'test_fastslow'
-Started    : Command execution in scenario 'at_speed_shift'
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'func_bestc'
 Started    : Command execution in scenario 'stuck_at_shift'
+Sourcing   : Scenario specific data files to setup scenario 'func_max'
+Information: Checked out license 'PrimeTime' (PT-019)
 Started    : Command execution in scenario 'test_slowfast'
-Sourcing   : Scenario specific data files to setup scenario 'func_min'
-Sourcing   : Scenario specific data files to setup scenario 'func_slowfast'
+Information: Checked out license 'PrimeTime' (PT-019)
 Sourcing   : Scenario specific data files to setup scenario 'func_fastslow'
-Sourcing   : Scenario specific data files to setup scenario 'test_worst'
-Sourcing   : Scenario specific data files to setup scenario 'func_worstc'
+Sourcing   : Scenario specific data files to setup scenario 'func_min'
+Started    : Command execution in scenario 'at_speed_capture'
+Sourcing   : Scenario specific data files to setup scenario 'test_fastslow'
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'at_speed_shift'
 Sourcing   : Scenario specific data files to setup scenario 'func_bestc'
+Sourcing   : Scenario specific data files to setup scenario 'stuck_at_shift'
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Sourcing   : Scenario specific data files to setup scenario 'test_slowfast'
+Started    : Command execution in scenario 'stuck_at_capture'
+Information: Checked out license 'PrimeTime' (PT-019)
+Sourcing   : Scenario specific data files to setup scenario 'at_speed_capture'
+Started    : Command execution in scenario 'test_best'
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'func_slowfast'
+Sourcing   : Scenario specific data files to setup scenario 'at_speed_shift'
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'func_worstc'
+Started    : Command execution in scenario 'test_worst'
 Sourcing   : Scenario specific data files to setup scenario 'stuck_at_capture'
 Sourcing   : Scenario specific data files to setup scenario 'test_best'
-Sourcing   : Scenario specific data files to setup scenario 'test_slowfast'
-Sourcing   : Scenario specific data files to setup scenario 'test_fastslow'
-Sourcing   : Scenario specific data files to setup scenario 'at_speed_capture'
-Sourcing   : Scenario specific data files to setup scenario 'stuck_at_shift'
-Sourcing   : Scenario specific data files to setup scenario 'at_speed_shift'
-Failed     : Command execution in scenario 'stuck_at_capture'
+Sourcing   : Scenario specific data files to setup scenario 'func_slowfast'
 Failed     : Command execution in scenario 'at_speed_capture'
-Failed     : Command execution in scenario 'stuck_at_capture'
 Failed     : Command execution in scenario 'at_speed_capture'
+Sourcing   : Scenario specific data files to setup scenario 'func_worstc'
+Sourcing   : Scenario specific data files to setup scenario 'test_worst'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
 Information: Checked out license 'PrimeTime-SI' (PT-019)
 Information: Checked out license 'PrimeTime-SI' (PT-019)
 Information: Checked out license 'PrimePower' (PT-019)
@@ -53,18 +64,8 @@ Information: Checked out license 'PrimePower' (PT-019)
 Information: Checked out license 'PrimeTime-SI' (PT-019)
 Information: Checked out license 'PrimePower' (PT-019)
 Information: Checked out license 'PrimeTime-SI' (PT-019)
-Information: Checked out license 'PrimePower' (PT-019)
 Information: Checked out license 'PrimeTime-SI' (PT-019)
 Information: Checked out license 'PrimePower' (PT-019)
-Information: Checked out license 'PrimeTime-SI' (PT-019)
-Information: Checked out license 'PrimePower' (PT-019)
-Information: Checked out license 'PrimeTime-SI' (PT-019)
-Information: Checked out license 'PrimePower' (PT-019)
-Information: Checked out license 'PrimeTime-SI' (PT-019)
-Information: Checked out license 'PrimePower' (PT-019)
-Information: Checked out license 'PrimeTime-SI' (PT-019)
-Information: Checked out license 'PrimePower' (PT-019)
-Information: Checked out license 'PrimeTime-SI' (PT-019)
 Information: Checked out license 'PrimePower' (PT-019)
 Information: Checked out license 'PrimeTime-SI' (PT-019)
 Information: Checked out license 'PrimePower' (PT-019)
@@ -73,13 +74,13 @@ Information: Checked out license 'PrimePower' (PT-019)
 Succeeded  : Command execution in scenario 'stuck_at_shift'
 Succeeded  : Command execution in scenario 'at_speed_shift'
 Succeeded  : Command execution in scenario 'func_worstc'
-Succeeded  : Command execution in scenario 'test_worst'
-Succeeded  : Command execution in scenario 'func_max'
 Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
 Succeeded  : Command execution in scenario 'func_slowfast'
-Succeeded  : Command execution in scenario 'func_bestc'
+Succeeded  : Command execution in scenario 'func_max'
 Succeeded  : Command execution in scenario 'test_best'
 Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_bestc'
 Succeeded  : Command execution in scenario 'func_min'
 Succeeded  : Command execution in scenario 'func_fastslow'
 -----------------------------------
@@ -92,7 +93,7 @@ Report : constraint
 	-path slack_only
 Design : multi_scenario design
 Version: O-2018.06
-Date   : Sat May 20 21:25:40 2023
+Date   : Sun May 21 00:04:12 2023
 ****************************************
 
 
