@@ -1,0 +1,651 @@
+GNU gdb (GDB) Red Hat Enterprise Linux 7.6.1-120.el7
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Attaching to process 26677
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/dgcom_exec...(no debugging symbols found)...done.
+Reading symbols from /lib64/libblkid.so.1...Reading symbols from /lib64/libblkid.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libblkid.so.1
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libFWMerge.so...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libFWMerge.so
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libcppunit-1.12.so.1...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libcppunit-1.12.so.1
+Reading symbols from /lib64/libcrypt.so.1...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libcrypt.so.1
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libnffw.so...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libnffw.so
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libtbb.so.2...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libtbb.so.2
+Reading symbols from /lib64/libpthread.so.0...(no debugging symbols found)...done.
+[New LWP 28798]
+[New LWP 28797]
+[New LWP 28796]
+[New LWP 28795]
+[New LWP 28794]
+[New LWP 28793]
+[New LWP 28792]
+[New LWP 28765]
+[New LWP 28764]
+[New LWP 28763]
+[New LWP 28762]
+[New LWP 28760]
+[New LWP 28761]
+[New LWP 28175]
+[New LWP 27525]
+[New LWP 27524]
+[New LWP 27523]
+[New LWP 27522]
+[New LWP 27521]
+[New LWP 27520]
+[New LWP 27519]
+[New LWP 27518]
+[New LWP 27517]
+[New LWP 27516]
+[New LWP 27515]
+[New LWP 27514]
+[New LWP 27513]
+[New LWP 27512]
+[New LWP 27511]
+[New LWP 27510]
+[New LWP 27509]
+[New LWP 26683]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+Loaded symbols for /lib64/libpthread.so.0
+Reading symbols from /lib64/libuuid.so.1...Reading symbols from /lib64/libuuid.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libuuid.so.1
+Reading symbols from /lib64/libutil.so.1...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libutil.so.1
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libtensorflow_cc.so...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libtensorflow_cc.so
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libtensorflow_framework.so...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libtensorflow_framework.so
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libprotobuf.so.14...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libprotobuf.so.14
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libpython3.5m.so.1.0...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libpython3.5m.so.1.0
+Reading symbols from /lib64/libGL.so.1...Reading symbols from /lib64/libGL.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libGL.so.1
+Reading symbols from /lib64/libxcb-glx.so.0...Reading symbols from /lib64/libxcb-glx.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libxcb-glx.so.0
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Widgets.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Widgets.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Svg.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Svg.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Gui.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Gui.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5X11Extras.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5X11Extras.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5PrintSupport.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5PrintSupport.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Network.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Network.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Xml.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Xml.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Core.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Core.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Sql.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Sql.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libX11.so.6...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libX11.so.6
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libxcb.so.1...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libxcb.so.1
+Reading symbols from /lib64/libfontconfig.so.1...Reading symbols from /lib64/libfontconfig.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libfontconfig.so.1
+Reading symbols from /lib64/librt.so.1...(no debugging symbols found)...done.
+Loaded symbols for /lib64/librt.so.1
+Reading symbols from /lib64/libXft.so.2...Reading symbols from /lib64/libXft.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXft.so.2
+Reading symbols from /lib64/libXss.so.1...Reading symbols from /lib64/libXss.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXss.so.1
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5WebChannel.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5WebChannel.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5WebSockets.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5WebSockets.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5WebKitWidgets.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5WebKitWidgets.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5WebKit.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5WebKit.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libz.so.1...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libz.so.1
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Test.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Test.so.5
+Reading symbols from /lib64/libpng12.so.0...Reading symbols from /lib64/libpng12.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libpng12.so.0
+Reading symbols from /lib64/libdl.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libdl.so.2
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libstdc++.so.6...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libstdc++.so.6
+Reading symbols from /lib64/libm.so.6...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libm.so.6
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libgomp.so.1...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libgomp.so.1
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libgcc_s.so.1...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libgcc_s.so.1
+Reading symbols from /lib64/libc.so.6...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libc.so.6
+Reading symbols from /lib64/ld-linux-x86-64.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/ld-linux-x86-64.so.2
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libsnps_boost_1_68_0_thread-mt.so.1.68.0...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libsnps_boost_1_68_0_thread-mt.so.1.68.0
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libsnps_boost_1_68_0_filesystem-mt.so.1.68.0...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libsnps_boost_1_68_0_filesystem-mt.so.1.68.0
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libsnps_boost_1_68_0_system-mt.so.1.68.0...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libsnps_boost_1_68_0_system-mt.so.1.68.0
+Reading symbols from /lib64/libfreebl3.so...Reading symbols from /lib64/libfreebl3.so...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libfreebl3.so
+Reading symbols from /lib64/libGLX.so.0...Reading symbols from /lib64/libGLX.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libGLX.so.0
+Reading symbols from /lib64/libXext.so.6...Reading symbols from /lib64/libXext.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXext.so.6
+Reading symbols from /lib64/libGLdispatch.so.0...Reading symbols from /lib64/libGLdispatch.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libGLdispatch.so.0
+Reading symbols from /lib64/libXau.so.6...Reading symbols from /lib64/libXau.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXau.so.6
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libicui18n.so.57...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libicui18n.so.57
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libicuuc.so.57...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libicuuc.so.57
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libicudata.so.57...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libicudata.so.57
+Reading symbols from /lib64/libfreetype.so.6...Reading symbols from /lib64/libfreetype.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libfreetype.so.6
+Reading symbols from /lib64/libexpat.so.1...Reading symbols from /lib64/libexpat.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libexpat.so.1
+Reading symbols from /lib64/libXrender.so.1...Reading symbols from /lib64/libXrender.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXrender.so.1
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Qml.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Qml.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libxslt.so.1...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libxslt.so.1
+Reading symbols from /lib64/libxml2.so.2...Reading symbols from /lib64/libxml2.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libxml2.so.2
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libsqlite3.so.0...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libsqlite3.so.0
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Sensors.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Sensors.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Positioning.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Positioning.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5MultimediaWidgets.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5MultimediaWidgets.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Multimedia.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Multimedia.so.5
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5OpenGL.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5OpenGL.so.5
+Reading symbols from /lib64/libXcomposite.so.1...Reading symbols from /lib64/libXcomposite.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXcomposite.so.1
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libjpeg.so.62...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libjpeg.so.62
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Quick.so.5...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libQt5Quick.so.5
+Reading symbols from /lib64/libbz2.so.1...Reading symbols from /lib64/libbz2.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libbz2.so.1
+Reading symbols from /lib64/libpng15.so.15...Reading symbols from /lib64/libpng15.so.15...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libpng15.so.15
+Reading symbols from /lib64/liblzma.so.5...Reading symbols from /lib64/liblzma.so.5...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/liblzma.so.5
+Reading symbols from /lib64/libpulse.so.0...Reading symbols from /lib64/libpulse.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libpulse.so.0
+Reading symbols from /usr/lib64/pulseaudio/libpulsecommon-10.0.so...Reading symbols from /usr/lib64/pulseaudio/libpulsecommon-10.0.so...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/lib64/pulseaudio/libpulsecommon-10.0.so
+Reading symbols from /lib64/libdbus-1.so.3...Reading symbols from /lib64/libdbus-1.so.3...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libdbus-1.so.3
+Reading symbols from /lib64/libcap.so.2...Reading symbols from /lib64/libcap.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libcap.so.2
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libX11-xcb.so.1...(no debugging symbols found)...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libX11-xcb.so.1
+Reading symbols from /lib64/libICE.so.6...Reading symbols from /lib64/libICE.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libICE.so.6
+Reading symbols from /lib64/libSM.so.6...Reading symbols from /lib64/libSM.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libSM.so.6
+Reading symbols from /lib64/libXtst.so.6...Reading symbols from /lib64/libXtst.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXtst.so.6
+Reading symbols from /lib64/libsystemd.so.0...Reading symbols from /lib64/libsystemd.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libsystemd.so.0
+Reading symbols from /lib64/libwrap.so.0...Reading symbols from /lib64/libwrap.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libwrap.so.0
+Reading symbols from /lib64/libsndfile.so.1...Reading symbols from /lib64/libsndfile.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libsndfile.so.1
+Reading symbols from /lib64/libasyncns.so.0...Reading symbols from /lib64/libasyncns.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libasyncns.so.0
+Reading symbols from /lib64/libattr.so.1...Reading symbols from /lib64/libattr.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libattr.so.1
+Reading symbols from /lib64/libXi.so.6...Reading symbols from /lib64/libXi.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXi.so.6
+Reading symbols from /lib64/libselinux.so.1...Reading symbols from /lib64/libselinux.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libselinux.so.1
+Reading symbols from /lib64/liblz4.so.1...Reading symbols from /lib64/liblz4.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/liblz4.so.1
+Reading symbols from /lib64/libgcrypt.so.11...Reading symbols from /lib64/libgcrypt.so.11...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgcrypt.so.11
+Reading symbols from /lib64/libgpg-error.so.0...Reading symbols from /lib64/libgpg-error.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgpg-error.so.0
+Reading symbols from /lib64/libresolv.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libresolv.so.2
+Reading symbols from /lib64/libdw.so.1...Reading symbols from /lib64/libdw.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libdw.so.1
+Reading symbols from /lib64/libnsl.so.1...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libnsl.so.1
+Reading symbols from /lib64/libgsm.so.1...Reading symbols from /lib64/libgsm.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgsm.so.1
+Reading symbols from /lib64/libFLAC.so.8...Reading symbols from /lib64/libFLAC.so.8...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libFLAC.so.8
+Reading symbols from /lib64/libvorbisenc.so.2...Reading symbols from /lib64/libvorbisenc.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libvorbisenc.so.2
+Reading symbols from /lib64/libvorbis.so.0...Reading symbols from /lib64/libvorbis.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libvorbis.so.0
+Reading symbols from /lib64/libogg.so.0...Reading symbols from /lib64/libogg.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libogg.so.0
+Reading symbols from /lib64/libpcre.so.1...Reading symbols from /lib64/libpcre.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libpcre.so.1
+Reading symbols from /lib64/libelf.so.1...Reading symbols from /lib64/libelf.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libelf.so.1
+Reading symbols from /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libtbbmalloc.so.2...done.
+Loaded symbols for /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/../shlib/libtbbmalloc.so.2
+Reading symbols from /usr/lib64/gconv/UTF-16.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/lib64/gconv/UTF-16.so
+Reading symbols from /lib64/libnss_compat.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libnss_compat.so.2
+Reading symbols from /lib64/libnss_nis.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libnss_nis.so.2
+Reading symbols from /lib64/libnss_files.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libnss_files.so.2
+Reading symbols from /lib64/libnss_sss.so.2...Reading symbols from /lib64/libnss_sss.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libnss_sss.so.2
+Reading symbols from /lib64/libudev.so.1...Reading symbols from /lib64/libudev.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libudev.so.1
+Reading symbols from /lib64/libdbus-glib-1.so.2...Reading symbols from /lib64/libdbus-glib-1.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libdbus-glib-1.so.2
+Reading symbols from /lib64/libgio-2.0.so.0...Reading symbols from /lib64/libgio-2.0.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgio-2.0.so.0
+Reading symbols from /lib64/libgobject-2.0.so.0...Reading symbols from /lib64/libgobject-2.0.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgobject-2.0.so.0
+Reading symbols from /lib64/libglib-2.0.so.0...Reading symbols from /lib64/libglib-2.0.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libglib-2.0.so.0
+Reading symbols from /lib64/libffi.so.6...Reading symbols from /lib64/libffi.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libffi.so.6
+Reading symbols from /lib64/libgmodule-2.0.so.0...Reading symbols from /lib64/libgmodule-2.0.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgmodule-2.0.so.0
+Reading symbols from /lib64/libmount.so.1...Reading symbols from /lib64/libmount.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libmount.so.1
+Reading symbols from /lib64/libnss_dns.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libnss_dns.so.2
+0x00000000194bffc9 in SNPSee_f24454fb9af828aa41eea689c44d5ce4b731775f85b475dc6e9c6cb00758c60b ()
+Missing separate debuginfos, use: debuginfo-install bzip2-libs-1.0.6-13.el7.x86_64 dbus-glib-0.100-7.el7.x86_64 dbus-libs-1.10.24-15.el7.x86_64 elfutils-libelf-0.176-5.el7.x86_64 elfutils-libs-0.176-5.el7.x86_64 expat-2.1.0-15.el7_9.x86_64 flac-libs-1.3.0-5.el7_1.x86_64 fontconfig-2.13.0-4.3.el7.x86_64 freetype-2.8-14.el7_9.1.x86_64 glib2-2.56.1-9.el7_9.x86_64 glibc-2.17-326.el7_9.x86_64 gsm-1.0.13-11.el7.x86_64 libICE-1.0.9-9.el7.x86_64 libSM-1.2.2-2.el7.x86_64 libXScrnSaver-1.2.2-6.1.el7.x86_64 libXau-1.0.8-2.1.el7.x86_64 libXcomposite-0.4.4-4.1.el7.x86_64 libXext-1.3.3-3.el7.x86_64 libXft-2.3.2-2.el7.x86_64 libXi-1.7.9-1.el7.x86_64 libXrender-0.9.10-1.el7.x86_64 libXtst-1.2.3-1.el7.x86_64 libasyncns-0.8-7.el7.x86_64 libattr-2.4.46-13.el7.x86_64 libblkid-2.23.2-65.el7_9.1.x86_64 libcap-2.22-11.el7.x86_64 libffi-3.0.13-19.el7.x86_64 libgcrypt-1.5.3-14.el7.x86_64 libglvnd-1.0.1-0.8.git5baa1e5.el7.x86_64 libglvnd-glx-1.0.1-0.8.git5baa1e5.el7.x86_64 libgpg-error-1.12-3.el7.x86_64 libmount-2.23.2-65.el7_9.1.x86_64 libogg-1.3.0-7.el7.x86_64 libpng-1.5.13-8.el7.x86_64 libpng12-1.2.50-10.el7.x86_64 libselinux-2.5-15.el7.x86_64 libsndfile-1.0.25-12.el7_9.1.x86_64 libuuid-2.23.2-65.el7_9.1.x86_64 libvorbis-1.3.3-8.el7.1.x86_64 libxcb-1.13-1.el7.x86_64 libxml2-2.9.1-6.el7_9.6.x86_64 lz4-1.8.3-1.el7.x86_64 nss-softokn-freebl-3.79.0-4.el7_9.x86_64 pcre-8.32-17.el7.x86_64 pulseaudio-libs-10.0-6.el7_9.x86_64 sssd-client-1.16.5-10.el7_9.15.x86_64 systemd-libs-219-78.el7_9.7.x86_64 tcp_wrappers-libs-7.6-77.el7.x86_64 xz-libs-5.2.2-2.el7_9.x86_64
+(gdb) (gdb) 
+Thread 33 (Thread 0x7f5e737da700 (LWP 26683)):
+#0  0x00007f5e7f4f9b43 in select () at /lib64/libc.so.6
+#1  0x0000000024c85736 in SNPSee_554ec7c90557bab679d871cd58526530 ()
+#2  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#4  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 32 (Thread 0x7f5e7123d700 (LWP 27509)):
+#0  0x00007f5e7f4fce29 in syscall () at /lib64/libc.so.6
+#1  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (comparand=2, futex=0x7f5e74a840ac) at ../../include/tbb/machine/linux_common.h:60
+#2  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a840ac) at ../../src/tbb/semaphore.h:206
+#3  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (c=<synthetic pointer>, this=0x7f5e74a840a0) at ../../src/rml/include/../server/thread_monitor.h:259
+#4  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a84080) at ../../src/tbb/private_server.cpp:277
+#5  0x00007f5e8bcef519 in tbb::internal::rml::private_worker::thread_routine(void*) (arg=<optimized out>) at ../../src/tbb/private_server.cpp:223
+#6  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#8  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 31 (Thread 0x7f5e70a3c700 (LWP 27510)):
+#0  0x00007f5e7f4fce29 in syscall () at /lib64/libc.so.6
+#1  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (comparand=2, futex=0x7f5e74a8412c) at ../../include/tbb/machine/linux_common.h:60
+#2  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a8412c) at ../../src/tbb/semaphore.h:206
+#3  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (c=<synthetic pointer>, this=0x7f5e74a84120) at ../../src/rml/include/../server/thread_monitor.h:259
+#4  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a84100) at ../../src/tbb/private_server.cpp:277
+#5  0x00007f5e8bcef519 in tbb::internal::rml::private_worker::thread_routine(void*) (arg=<optimized out>) at ../../src/tbb/private_server.cpp:223
+#6  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#8  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 30 (Thread 0x7f5e7023b700 (LWP 27511)):
+#0  0x00007f5e8bac3a35 in pthread_cond_wait@@GLIBC_2.3.2 () at /lib64/libpthread.so.0
+#1  0x0000000022317c19 in SNPSee_05df245ab75e88bb922a52816f42e51b56c95f2ebe24276cd0e6e48563956768d71f9b2a14cc67f3b4966d8fd01ea975e42c45ed702021ab ()
+#2  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#4  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 29 (Thread 0x7f5e6fa3a700 (LWP 27512)):
+#0  0x00007f5e8bac3a35 in pthread_cond_wait@@GLIBC_2.3.2 () at /lib64/libpthread.so.0
+#1  0x0000000022317c19 in SNPSee_05df245ab75e88bb922a52816f42e51b56c95f2ebe24276cd0e6e48563956768d71f9b2a14cc67f3b4966d8fd01ea975e42c45ed702021ab ()
+#2  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#4  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 28 (Thread 0x7f5e6f239700 (LWP 27513)):
+#0  0x00007f5e8bac3a35 in pthread_cond_wait@@GLIBC_2.3.2 () at /lib64/libpthread.so.0
+#1  0x0000000022317c19 in SNPSee_05df245ab75e88bb922a52816f42e51b56c95f2ebe24276cd0e6e48563956768d71f9b2a14cc67f3b4966d8fd01ea975e42c45ed702021ab ()
+#2  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#4  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 27 (Thread 0x7f5e6ea38700 (LWP 27514)):
+#0  0x00007f5e8bac3a35 in pthread_cond_wait@@GLIBC_2.3.2 () at /lib64/libpthread.so.0
+#1  0x0000000022317c19 in SNPSee_05df245ab75e88bb922a52816f42e51b56c95f2ebe24276cd0e6e48563956768d71f9b2a14cc67f3b4966d8fd01ea975e42c45ed702021ab ()
+#2  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#4  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 26 (Thread 0x7f5e6e237700 (LWP 27515)):
+#0  0x00007f5e8bac3a35 in pthread_cond_wait@@GLIBC_2.3.2 () at /lib64/libpthread.so.0
+#1  0x0000000022317c19 in SNPSee_05df245ab75e88bb922a52816f42e51b56c95f2ebe24276cd0e6e48563956768d71f9b2a14cc67f3b4966d8fd01ea975e42c45ed702021ab ()
+#2  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#4  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 25 (Thread 0x7f5e6da36700 (LWP 27516)):
+#0  0x00007f5e7f4c9659 in waitpid () at /lib64/libc.so.6
+#1  0x00007f5e7f446f62 in do_system () at /lib64/libc.so.6
+#2  0x00007f5e7f447311 in system () at /lib64/libc.so.6
+#3  0x0000000023e18b8c in SNPSee_216f3c2f4c55dbceb170dcb7639b9c2cdd496024a8e266b98132685c735317487fd2aa296d8a7317 ()
+#4  0x0000000023e1a65b in SNPSee_216f3c2f4c55dbceb170dcb7639b9c2cdd496024a8e266b98132685c735317484a021951c8b3b34314fe2ade355c4696 ()
+#5  0x000000002229226a in SNPSee_9ea8dbbd5e74784445edf9ed12a0bc4777b489dcaefdb88f6aa47f4097fccf5e ()
+#6  0x00000000222942a5 in SNPSee_9ea8dbbd5e74784484d3cce2fced02c05a3783bc3b9f8fad6989ef886e673ad9 ()
+#7  0x00007f5e8bac7630 in <signal handler called> () at /lib64/libpthread.so.0
+#8  0x00007f5e8bac3a33 in pthread_cond_wait@@GLIBC_2.3.2 () at /lib64/libpthread.so.0
+#9  0x0000000022317c19 in SNPSee_05df245ab75e88bb922a52816f42e51b56c95f2ebe24276cd0e6e48563956768d71f9b2a14cc67f3b4966d8fd01ea975e42c45ed702021ab ()
+#10 0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#11 0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#12 0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 24 (Thread 0x7f5e6d235700 (LWP 27517)):
+#0  0x00007f5e8bac3a35 in pthread_cond_wait@@GLIBC_2.3.2 () at /lib64/libpthread.so.0
+#1  0x0000000022317c19 in SNPSee_05df245ab75e88bb922a52816f42e51b56c95f2ebe24276cd0e6e48563956768d71f9b2a14cc67f3b4966d8fd01ea975e42c45ed702021ab ()
+#2  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#4  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 23 (Thread 0x7f5e6ca34700 (LWP 27518)):
+#0  0x00007f5e8bac3a35 in pthread_cond_wait@@GLIBC_2.3.2 () at /lib64/libpthread.so.0
+#1  0x0000000022317c19 in SNPSee_05df245ab75e88bb922a52816f42e51b56c95f2ebe24276cd0e6e48563956768d71f9b2a14cc67f3b4966d8fd01ea975e42c45ed702021ab ()
+#2  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#4  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 22 (Thread 0x7f5e6c233700 (LWP 27519)):
+#0  0x00007f5e8bac3a35 in pthread_cond_wait@@GLIBC_2.3.2 () at /lib64/libpthread.so.0
+#1  0x0000000022317c19 in SNPSee_05df245ab75e88bb922a52816f42e51b56c95f2ebe24276cd0e6e48563956768d71f9b2a14cc67f3b4966d8fd01ea975e42c45ed702021ab ()
+#2  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#4  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 21 (Thread 0x7f5e6ba32700 (LWP 27520)):
+#0  0x00007f5e8bac3a35 in pthread_cond_wait@@GLIBC_2.3.2 () at /lib64/libpthread.so.0
+#1  0x0000000022317c19 in SNPSee_05df245ab75e88bb922a52816f42e51b56c95f2ebe24276cd0e6e48563956768d71f9b2a14cc67f3b4966d8fd01ea975e42c45ed702021ab ()
+#2  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#4  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 20 (Thread 0x7f5e6b231700 (LWP 27521)):
+#0  0x00007f5e8bac3a35 in pthread_cond_wait@@GLIBC_2.3.2 () at /lib64/libpthread.so.0
+#1  0x0000000022317c19 in SNPSee_05df245ab75e88bb922a52816f42e51b56c95f2ebe24276cd0e6e48563956768d71f9b2a14cc67f3b4966d8fd01ea975e42c45ed702021ab ()
+#2  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#4  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 19 (Thread 0x7f5e6aa30700 (LWP 27522)):
+#0  0x00007f5e8bac3a35 in pthread_cond_wait@@GLIBC_2.3.2 () at /lib64/libpthread.so.0
+#1  0x0000000022317c19 in SNPSee_05df245ab75e88bb922a52816f42e51b56c95f2ebe24276cd0e6e48563956768d71f9b2a14cc67f3b4966d8fd01ea975e42c45ed702021ab ()
+#2  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#4  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 18 (Thread 0x7f5e6a22f700 (LWP 27523)):
+#0  0x00007f5e8bac3a35 in pthread_cond_wait@@GLIBC_2.3.2 () at /lib64/libpthread.so.0
+#1  0x0000000022317c19 in SNPSee_05df245ab75e88bb922a52816f42e51b56c95f2ebe24276cd0e6e48563956768d71f9b2a14cc67f3b4966d8fd01ea975e42c45ed702021ab ()
+#2  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#4  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 17 (Thread 0x7f5e69a2e700 (LWP 27524)):
+#0  0x00007f5e8bac3a35 in pthread_cond_wait@@GLIBC_2.3.2 () at /lib64/libpthread.so.0
+#1  0x0000000022317c19 in SNPSee_05df245ab75e88bb922a52816f42e51b56c95f2ebe24276cd0e6e48563956768d71f9b2a14cc67f3b4966d8fd01ea975e42c45ed702021ab ()
+#2  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#4  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 16 (Thread 0x7f5e6922d700 (LWP 27525)):
+#0  0x00007f5e8bac3a35 in pthread_cond_wait@@GLIBC_2.3.2 () at /lib64/libpthread.so.0
+#1  0x0000000022317c19 in SNPSee_05df245ab75e88bb922a52816f42e51b56c95f2ebe24276cd0e6e48563956768d71f9b2a14cc67f3b4966d8fd01ea975e42c45ed702021ab ()
+#2  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#4  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 15 (Thread 0x7f5e68a2c700 (LWP 28175)):
+#0  0x00007f5e8bac3a35 in pthread_cond_wait@@GLIBC_2.3.2 () at /lib64/libpthread.so.0
+#1  0x000000000579ae7f in SNPSee_db91c352a71d9a3b1a5869e809fba9a97d67c41157869eadf11579c3e9fe590233b09a26e9224a87 ()
+#2  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#4  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 14 (Thread 0x7f5e6071c700 (LWP 28761)):
+#0  0x00007f5e7f4fce29 in syscall () at /lib64/libc.so.6
+#1  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (comparand=2, futex=0x7f5e74a83fac) at ../../include/tbb/machine/linux_common.h:60
+#2  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83fac) at ../../src/tbb/semaphore.h:206
+#3  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (c=<synthetic pointer>, this=0x7f5e74a83fa0) at ../../src/rml/include/../server/thread_monitor.h:259
+#4  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83f80) at ../../src/tbb/private_server.cpp:277
+#5  0x00007f5e8bcef519 in tbb::internal::rml::private_worker::thread_routine(void*) (arg=<optimized out>) at ../../src/tbb/private_server.cpp:223
+#6  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#8  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 13 (Thread 0x7f5e6171e700 (LWP 28760)):
+#0  0x00007f5e7f4fce29 in syscall () at /lib64/libc.so.6
+#1  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (comparand=2, futex=0x7f5e74a83eac) at ../../include/tbb/machine/linux_common.h:60
+#2  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83eac) at ../../src/tbb/semaphore.h:206
+#3  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (c=<synthetic pointer>, this=0x7f5e74a83ea0) at ../../src/rml/include/../server/thread_monitor.h:259
+#4  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83e80) at ../../src/tbb/private_server.cpp:277
+#5  0x00007f5e8bcef519 in tbb::internal::rml::private_worker::thread_routine(void*) (arg=<optimized out>) at ../../src/tbb/private_server.cpp:223
+#6  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#8  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 12 (Thread 0x7f5e6211f700 (LWP 28762)):
+#0  0x00007f5e7f4fce29 in syscall () at /lib64/libc.so.6
+#1  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (comparand=2, futex=0x7f5e74a83f2c) at ../../include/tbb/machine/linux_common.h:60
+#2  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83f2c) at ../../src/tbb/semaphore.h:206
+#3  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (c=<synthetic pointer>, this=0x7f5e74a83f20) at ../../src/rml/include/../server/thread_monitor.h:259
+#4  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83f00) at ../../src/tbb/private_server.cpp:277
+#5  0x00007f5e8bcef519 in tbb::internal::rml::private_worker::thread_routine(void*) (arg=<optimized out>) at ../../src/tbb/private_server.cpp:223
+#6  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#8  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 11 (Thread 0x7f5e62a20700 (LWP 28763)):
+#0  0x00007f5e7f4fce29 in syscall () at /lib64/libc.so.6
+#1  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (comparand=2, futex=0x7f5e74a8402c) at ../../include/tbb/machine/linux_common.h:60
+#2  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a8402c) at ../../src/tbb/semaphore.h:206
+#3  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (c=<synthetic pointer>, this=0x7f5e74a84020) at ../../src/rml/include/../server/thread_monitor.h:259
+#4  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a84000) at ../../src/tbb/private_server.cpp:277
+#5  0x00007f5e8bcef519 in tbb::internal::rml::private_worker::thread_routine(void*) (arg=<optimized out>) at ../../src/tbb/private_server.cpp:223
+#6  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#8  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 10 (Thread 0x7f5e6822b700 (LWP 28764)):
+#0  0x00007f5e7f4fce29 in syscall () at /lib64/libc.so.6
+#1  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (comparand=2, futex=0x7f5e74a83dac) at ../../include/tbb/machine/linux_common.h:60
+#2  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83dac) at ../../src/tbb/semaphore.h:206
+#3  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (c=<synthetic pointer>, this=0x7f5e74a83da0) at ../../src/rml/include/../server/thread_monitor.h:259
+#4  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83d80) at ../../src/tbb/private_server.cpp:277
+#5  0x00007f5e8bcef519 in tbb::internal::rml::private_worker::thread_routine(void*) (arg=<optimized out>) at ../../src/tbb/private_server.cpp:223
+#6  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#8  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 9 (Thread 0x7f5e67229700 (LWP 28765)):
+#0  0x00007f5e7f4fce29 in syscall () at /lib64/libc.so.6
+#1  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (comparand=2, futex=0x7f5e74a83e2c) at ../../include/tbb/machine/linux_common.h:60
+#2  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83e2c) at ../../src/tbb/semaphore.h:206
+#3  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (c=<synthetic pointer>, this=0x7f5e74a83e20) at ../../src/rml/include/../server/thread_monitor.h:259
+#4  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83e00) at ../../src/tbb/private_server.cpp:277
+#5  0x00007f5e8bcef519 in tbb::internal::rml::private_worker::thread_routine(void*) (arg=<optimized out>) at ../../src/tbb/private_server.cpp:223
+#6  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#8  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 8 (Thread 0x7f5e65225700 (LWP 28792)):
+#0  0x00007f5e7f4fce29 in syscall () at /lib64/libc.so.6
+#1  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (comparand=2, futex=0x7f5e74a83c2c) at ../../include/tbb/machine/linux_common.h:60
+#2  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83c2c) at ../../src/tbb/semaphore.h:206
+#3  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (c=<synthetic pointer>, this=0x7f5e74a83c20) at ../../src/rml/include/../server/thread_monitor.h:259
+#4  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83c00) at ../../src/tbb/private_server.cpp:277
+#5  0x00007f5e8bcef519 in tbb::internal::rml::private_worker::thread_routine(void*) (arg=<optimized out>) at ../../src/tbb/private_server.cpp:223
+#6  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#8  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 7 (Thread 0x7f5e66a28700 (LWP 28793)):
+#0  0x00007f5e7f4fce29 in syscall () at /lib64/libc.so.6
+#1  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (comparand=2, futex=0x7f5e74a83d2c) at ../../include/tbb/machine/linux_common.h:60
+#2  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83d2c) at ../../src/tbb/semaphore.h:206
+#3  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (c=<synthetic pointer>, this=0x7f5e74a83d20) at ../../src/rml/include/../server/thread_monitor.h:259
+#4  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83d00) at ../../src/tbb/private_server.cpp:277
+#5  0x00007f5e8bcef519 in tbb::internal::rml::private_worker::thread_routine(void*) (arg=<optimized out>) at ../../src/tbb/private_server.cpp:223
+#6  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#8  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 6 (Thread 0x7f5e64223700 (LWP 28794)):
+#0  0x00007f5e7f4fce29 in syscall () at /lib64/libc.so.6
+#1  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (comparand=2, futex=0x7f5e74a83b2c) at ../../include/tbb/machine/linux_common.h:60
+#2  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83b2c) at ../../src/tbb/semaphore.h:206
+#3  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (c=<synthetic pointer>, this=0x7f5e74a83b20) at ../../src/rml/include/../server/thread_monitor.h:259
+#4  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83b00) at ../../src/tbb/private_server.cpp:277
+#5  0x00007f5e8bcef519 in tbb::internal::rml::private_worker::thread_routine(void*) (arg=<optimized out>) at ../../src/tbb/private_server.cpp:223
+#6  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#8  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 5 (Thread 0x7f5e63a22700 (LWP 28795)):
+#0  0x00007f5e7f4fce29 in syscall () at /lib64/libc.so.6
+#1  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (comparand=2, futex=0x7f5e74a83cac) at ../../include/tbb/machine/linux_common.h:60
+#2  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83cac) at ../../src/tbb/semaphore.h:206
+#3  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (c=<synthetic pointer>, this=0x7f5e74a83ca0) at ../../src/rml/include/../server/thread_monitor.h:259
+#4  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83c80) at ../../src/tbb/private_server.cpp:277
+#5  0x00007f5e8bcef519 in tbb::internal::rml::private_worker::thread_routine(void*) (arg=<optimized out>) at ../../src/tbb/private_server.cpp:223
+#6  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#8  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 4 (Thread 0x7f5e66227700 (LWP 28796)):
+#0  0x00007f5e7f4fce29 in syscall () at /lib64/libc.so.6
+#1  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (comparand=2, futex=0x7f5e74a83a2c) at ../../include/tbb/machine/linux_common.h:60
+#2  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83a2c) at ../../src/tbb/semaphore.h:206
+#3  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (c=<synthetic pointer>, this=0x7f5e74a83a20) at ../../src/rml/include/../server/thread_monitor.h:259
+#4  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83a00) at ../../src/tbb/private_server.cpp:277
+#5  0x00007f5e8bcef519 in tbb::internal::rml::private_worker::thread_routine(void*) (arg=<optimized out>) at ../../src/tbb/private_server.cpp:223
+#6  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#8  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 3 (Thread 0x7f5e5f71a700 (LWP 28797)):
+#0  0x00007f5e7f4fce29 in syscall () at /lib64/libc.so.6
+#1  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (comparand=2, futex=0x7f5e74a83bac) at ../../include/tbb/machine/linux_common.h:60
+#2  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83bac) at ../../src/tbb/semaphore.h:206
+#3  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (c=<synthetic pointer>, this=0x7f5e74a83ba0) at ../../src/rml/include/../server/thread_monitor.h:259
+#4  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83b80) at ../../src/tbb/private_server.cpp:277
+#5  0x00007f5e8bcef519 in tbb::internal::rml::private_worker::thread_routine(void*) (arg=<optimized out>) at ../../src/tbb/private_server.cpp:223
+#6  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#8  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 2 (Thread 0x7f5e5ef19700 (LWP 28798)):
+#0  0x00007f5e7f4fce29 in syscall () at /lib64/libc.so.6
+#1  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (comparand=2, futex=0x7f5e74a83aac) at ../../include/tbb/machine/linux_common.h:60
+#2  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83aac) at ../../src/tbb/semaphore.h:206
+#3  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (c=<synthetic pointer>, this=0x7f5e74a83aa0) at ../../src/rml/include/../server/thread_monitor.h:259
+#4  0x00007f5e8bcef4fa in tbb::internal::rml::private_worker::run() (this=0x7f5e74a83a80) at ../../src/tbb/private_server.cpp:277
+#5  0x00007f5e8bcef519 in tbb::internal::rml::private_worker::thread_routine(void*) (arg=<optimized out>) at ../../src/tbb/private_server.cpp:223
+#6  0x0000000023e16c7f in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f5e8babfea5 in start_thread () at /lib64/libpthread.so.0
+#8  0x00007f5e7f502b0d in clone () at /lib64/libc.so.6
+
+Thread 1 (Thread 0x7f5e8dac8140 (LWP 26677)):
+#0  0x00000000194bffc9 in SNPSee_f24454fb9af828aa41eea689c44d5ce4b731775f85b475dc6e9c6cb00758c60b ()
+#1  0x000000001959967f in SNPSee_25d2a0c3ecd7204b4164d59ed80d5e68f68dcda980ea6836 ()
+#2  0x0000000019599d08 in SNPSee_25d2a0c3ecd7204bae15f0812fbe39f2cef3a7d3dc07315c ()
+#3  0x00000000195886bb in SNPSee_25d2a0c3ecd7204b487fd7ed59441eb3ae1bf0b26591434fe9731f1e9f0c0b43 ()
+#4  0x0000000019588885 in SNPSee_25d2a0c3ecd7204bd87f08c9991f9a13fa01020fa662d7a0 ()
+#5  0x00000000195c190a in SNPSee_f24454fb9af828aa93f2e371ef054f82 ()
+#6  0x00007f5e7f43dce9 in __run_exit_handlers () at /lib64/libc.so.6
+#7  0x00007f5e7f43dd37 in  () at /lib64/libc.so.6
+#8  0x00007f5e7f42655c in __libc_start_main () at /lib64/libc.so.6
+#9  0x0000000001633e41 in SNPSee_d06eed713327be76 ()
+(gdb) Detaching from program: /pkgs/synopsys/2020/icc2/icc2/Q-2019.12-SP4/linux64/nwtn/bin/dgcom_exec, process 26677
+[Inferior 1 (process 26677) detached]
+(gdb) GNU gdb (GDB) Red Hat Enterprise Linux 7.6.1-120.el7
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Attaching to process 26677
+(gdb) (gdb) (gdb) (gdb) 

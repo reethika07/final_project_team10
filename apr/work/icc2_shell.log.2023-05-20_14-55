@@ -1,0 +1,13 @@
+setting auto_restore_mw_cel_lib_setup true
+icc2_shell> o
+setting top_design to: 
+ORCA_TOP
+icc2_shell> gvim addtiming.rpt
+Error: unknown command 'gvim' (CMD-005)
+icc2_shell> exit
+Maximum memory usage for this session: 176.73 MB
+Maximum memory usage for this session including child processes: 176.73 MB
+CPU usage for this session:     12 seconds (  0.00 hours)
+Elapsed time for this session:     55 seconds (  0.02 hours)
+Thank you for using IC Compiler II.
+

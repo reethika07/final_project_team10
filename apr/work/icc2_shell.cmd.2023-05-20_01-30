@@ -10,3 +10,5 @@ source ../scripts/icc2.tcl
 report_scenarios
 report_qor > addqor.rpt
 report_timing > addtiming.rpt
+pwd
+exit

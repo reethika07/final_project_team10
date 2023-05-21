@@ -249,7 +249,7 @@ set_load -pin_load 10 [get_ports {sd_DQ_en[0]}]
 #set_propagated_clock [get_ports sd_CK]
 #set_propagated_clock [get_ports sd_CKn]
 #set_propagated_clock [get_pins I_CLOCKING/sys_clk_in_reg/Q]
-set_case_analysis 1 [get_ports test_mode]
+set_case_analysis 0 [get_ports test_mode]
 set_case_analysis 1 [get_ports scan_enable]
 #create_voltage_area -name PD_RISC_CORE  -coordinate {582.92 10.032 1003.2 190.608}  -guard_band_x 0  -guard_band_y 0  [get_cells I_RISC_CORE]
 create_clock [get_ports pclk]  -name PCI_CLK  -period 7.5  -waveform {0 3.75}

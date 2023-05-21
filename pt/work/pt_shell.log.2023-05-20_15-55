@@ -1,0 +1,94 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Launching 8 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for   8 (of   8) workers    : Sat May 20 15:55:20 2023
+  Waiting for   0 (of   8) workers    : Sat May 20 15:55:30 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Sat May 20 15:55:30 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           8                       auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         3643          ONLINE
+                   2    mo           -         3636          ONLINE
+                   3    mo           -         3638          ONLINE
+                   4    mo           -         3642          ONLINE
+                   5    mo           -         3641          ONLINE
+                   6    mo           -         3640          ONLINE
+                   7    mo           -         3637          ONLINE
+                   8    mo           -         3639          ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+  --------------------------------------------------------------------
+  Total                                                      32
+
+pt_shell> current_design
+Error: Command 'current_design' is disabled. (CMD-080)
+pt_shell> current_scenario
+{"func_max", "func_min", "test_best", "test_worst", "func_slowfast", "func_fastslow", "test_slowfast", "test_fastslow", "func_worstc", "func_bestc", "stuck_at_shift", "stuck_at_capture", "at_speed_shift", "at_speed_capture"}
+pt_shell> man Error: could not open script file "/home/reethika/common/Documents/ECE510-2023-SPRING/final_prj-team_10/pt/work/ms_session_1/at_speed_ca/ORCA_TOP.design_config.tcl" (CMD-015)
+Error: extra positional option 'could' (CMD-012)
+Error: extra positional option 'not' (CMD-012)
+Error: extra positional option 'open' (CMD-012)
+Error: extra positional option 'script' (CMD-012)
+Error: extra positional option 'file' (CMD-012)
+Error: extra positional option '/home/reethika/common/Documents/ECE510-2023-SPRING/final_prj-team_10/pt/work/ms_session_1/at_speed_ca/ORCA_TOP.design_config.tcl' (CMD-012)
+Error: extra positional option '(CMD-015)' (CMD-012)
+pt_shell> man could not open script file "/home/reethika/common/Documents/ECE510-2023-SPRING/final_prj-team_10/pt/work/ms_session_1/stuck_at_ca/ORCA_TOP.design_config.tcl" (CMD-015)
+Error: extra positional option 'not' (CMD-012)
+Error: extra positional option 'open' (CMD-012)
+Error: extra positional option 'script' (CMD-012)
+Error: extra positional option 'file' (CMD-012)
+Error: extra positional option '/home/reethika/common/Documents/ECE510-2023-SPRING/final_prj-team_10/pt/work/ms_session_1/stuck_at_ca/ORCA_TOP.design_config.tcl' (CMD-012)
+Error: extra positional option '(CMD-015)' (CMD-012)
+pt_shell> 

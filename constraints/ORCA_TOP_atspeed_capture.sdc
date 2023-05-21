@@ -118,7 +118,7 @@ set_input_delay 0.6 -clock v_SDRAM_CLK [get_ports {sd_DQ_in[1]}]
 set_input_delay 0.6 -clock v_SDRAM_CLK [get_ports {sd_DQ_in[0]}]
 
 #output delay
-set_output_delay 2.2, -clock v_PCI_CLK [get_ports {pad_out[0]}]
+set_output_delay 2.2 -clock v_PCI_CLK [get_ports {pad_out[0]}]
 set_output_delay 2.2 -clock v_PCI_CLK [get_ports {pad_out[1]}]
 set_output_delay 2.2 -clock v_PCI_CLK [get_ports {pad_out[2]}]
 set_output_delay 2.2 -clock v_PCI_CLK [get_ports {pad_out[3]}]
@@ -247,7 +247,7 @@ set_input_delay 4.0 -clock ate_clk [get_ports occ_reset]
 # set_drive
 # set_driving_cell
 set_driving_cell -lib_cell INVX2_HVT [get_ports -filter "direction==in"]
-set_driving_cell -lib_cell INVX8_HVT [get_ports -filter "direction==in&&full_name=~*clk*"]
+set_driving_cell -lib_cell INVX8_HVT [get_ports -filter "direction==in&&full_name=~clk"]
 
 # set_load
 set_load -pin_load 10 [get_ports -filter "direction==out"]
@@ -260,7 +260,7 @@ group_path -name group_sys -from [get_clocks SYS_CLK] -to [get_clocks SYS_CLK]
 # group_path -name group_ddr -from [get_clocks SD_DDR_CLK] -to [get_clocks SD_DDR_CLK]
 # group_path -name group_ddrn -from [get_clocks SD_DDR_CLKn] -to [get_clocks SD_DDR_CLKn]
 # IO
-group_path -name INPUTS -from [ get_ports -filter "direction==in&&full_name!~*clk*" ]
+group_path -name INPUTS -from [ get_ports -filter "direction==in&&full_name!~clk" ]
 group_path -name OUTPUTS -to [ get_ports -filter "direction==out" ]
 
 #Exceptions
@@ -300,4 +300,4 @@ set_voltage 0.95  -min 0.95  -object_list VDDH
 }
 
 set_clock_groups -asynchronous -name func_async -group [list [get_clocks SYS_2x_CLK] [get_clocks SYS_CLK]] -group [list [get_clocks PCI_CLK] [get_clocks v_PCI_CLK]] -group [list [get_clocks SDRAM_CLK] [get_clocks v_SDRAM_CLK]]
-set_clock_groups -asynchronous -name my_occ_clock_groups -group [get_clocks ate_clk] -group [list [get_clocks SYS_2x_CLK] [get_clocks SYS_CLK] [get_clocks SDRAM_CLK] [get_clocks v_SDRAM_CLK] [get_clocks PCI_CLK] [get_clocks v_PCI_CLK]]
+set_clock_groups -asynchronous -name my_occ_clock_groups -group [get_clocks ate_clk] -group [list [get_clocks SYS_2x_CLK] [get_clocks SYS_CLK] [get_clocks SDRAM_CLK] [get_clocks v_SDRAM_CLK] [get_clocks PCI_CLK] [get_clocks v_PCI_CLK]]

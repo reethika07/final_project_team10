@@ -29579,4 +29579,12 @@ test_best *     test            Cmin            true    false  true  true     tr
 1
 icc2_shell> report_qor > addqor.rpt
 icc2_shell> report_timing > addtiming.rpt
-icc2_shell> 
+icc2_shell> pwd
+/home/reethika/common/Documents/ECE510-2023-SPRING/final_prj-team_10/apr/work
+icc2_shell> exit
+Maximum memory usage for this session: 3356.10 MB
+Maximum memory usage for this session including child processes: 3356.10 MB
+CPU usage for this session:  25999 seconds (  7.22 hours)
+Elapsed time for this session:  41450 seconds ( 11.51 hours)
+Thank you for using IC Compiler II.
+

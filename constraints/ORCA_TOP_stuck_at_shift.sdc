@@ -228,7 +228,7 @@ set_input_delay 4.0 -clock ate_clk [get_ports occ_reset]
 # set_drive
 # set_driving_cell
 set_driving_cell -lib_cell INVX2_HVT [get_ports -filter "direction==in"]
-set_driving_cell -lib_cell INVX8_HVT [get_ports -filter "direction==in&&full_name=~*clk*"]
+set_driving_cell -lib_cell INVX8_HVT [get_ports -filter "direction==in&&full_name=~clk"]
 
 # set_load
 set_load -pin_load 10 [get_ports -filter "direction==out"]
@@ -241,7 +241,7 @@ group_path -name group_sys -from [get_clocks SYS_CLK] -to [get_clocks SYS_CLK]
 # group_path -name group_ddr -from [get_clocks SD_DDR_CLK] -to [get_clocks SD_DDR_CLK]
 # group_path -name group_ddrn -from [get_clocks SD_DDR_CLKn] -to [get_clocks SD_DDR_CLKn]
 # IO
-group_path -name INPUTS -from [ get_ports -filter "direction==in&&full_name!~*clk*" ]
+group_path -name INPUTS -from [ get_ports -filter "direction==in&&full_name!~clk" ]
 group_path -name OUTPUTS -to [ get_ports -filter "direction==out" ]
 
 #Exceptions
@@ -273,5 +273,5 @@ set_timing_derate -early -net_delay 1.15
 set_timing_derate -early -cell_delay 1.15
 set_voltage 0  -min 0  -object_list VSS
 set_voltage 0.75  -min 0.75  -object_list VDD
-set_voltage 1.15  -min 1.15  -object_list VDDH
+set_voltage 1.15  -min 1.15  -object_list VDDH
 }

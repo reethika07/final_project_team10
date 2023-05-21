@@ -94,6 +94,31 @@ if { [info exists synopsys_program_name ] } {
 		    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
 		    source $topdir/constraints/ORCA_TOP_test_worst.sdc
 		}
+         if [ regexp "Cmax" $corner_name] {
+            set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+		    source $topdir/constraints/ORCA_TOP_func_worst_constrained.sdc
+       }
+       if [ regexp "Cmin" $corner_name] {
+            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+		    source $topdir/constraints/ORCA_TOP_func_best_constrained.sdc
+       }
+      if [ regexp "Ccmin" $corner_name] {
+            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+		    source $topdir/constraints/ORCA_TOP_stuck_at_shift.sdc
+      }
+      if [ regexp "Ccmax" $corner_name] {
+            set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+		    source $topdir/constraints/ORCA_TOP_stuck_at_capture.sdc
+      }
+      if [ regexp "Cmax_s" $corner_name] {
+            set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+		    source $topdir/constraints/ORCA_TOP_atspeed_capture.sdc
+      }
+      if [ regexp "Cmin_s" $corner_name] {
+            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+		    source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc
+      }
+     
 	 }
 	}
 } elseif {[get_db root: .program_short_name] == "genus"} {

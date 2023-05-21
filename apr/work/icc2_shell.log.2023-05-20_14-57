@@ -1,0 +1,13 @@
+setting auto_restore_mw_cel_lib_setup true
+icc2_shell> o
+setting top_design to: 
+ORCA_TOP
+icc2_shell> get_pins [get_cells I_SDRAM_TOP/I_SDRAM_IF/DQ_out_1_reg_30_]
+Error: Current block is not defined. (DES-001)
+icc2_shell> exit
+Maximum memory usage for this session: 176.73 MB
+Maximum memory usage for this session including child processes: 176.73 MB
+CPU usage for this session:     22 seconds (  0.01 hours)
+Elapsed time for this session:   2279 seconds (  0.63 hours)
+Thank you for using IC Compiler II.
+

@@ -4,6 +4,8 @@ set topdir [lindex [ regexp -inline "(.*)pt" [pwd] ] 1 ]
 
 source $topdir/$top_design.design_config.tcl
 
+puts "success running design config"
+
 set corners $slow_corner
 
 source -echo -verbose $topdir/pt/scripts/pt-get-timlibs.tcl
