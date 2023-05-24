@@ -1,3 +1,4 @@
+Information: Variable 'search_path' is assigned the value ' /home/reethika/common/Documents/ECE510-2023-SPRING' following merging of the worker-side value '' and the master-side value '/home/reethika/common/Documents/ECE510-2023-SPRING' (DIST-005)
 set top_design {ORCA_TOP}
 ORCA_TOP
 set dmsa {2}
@@ -43,8 +44,8 @@ read_verilog $topdir/apr/outputs/${top_design}.route2.vg.gz
 current_design ${top_design}
 Information: current_design won't return any data before link (DES-071)
 link
-Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ff0p95vn40c.db'
 Loading verilog file '/home/reethika/common/Documents/ECE510-2023-SPRING/final_prj-team_10/apr/outputs/ORCA_TOP.route2.vg.gz'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ff0p95vn40c.db'
 Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ff0p95vn40c_i1p16v.db'
 Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ff0p95vn40c_i0p95v.db'
 Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ff0p95vn40c_i0p95v.db'
@@ -203,30 +204,30 @@ if { [info exists synopsys_program_name ] } {
 		    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
 		    source $topdir/constraints/ORCA_TOP_test_worst.sdc
 		}
-         if [ regexp "Cmax" $corner_name] {
-            set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
-		    source $topdir/constraints/ORCA_TOP_func_worst_constrained.sdc
-       }
-       if [ regexp "Cmin" $corner_name] {
-            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-		    source $topdir/constraints/ORCA_TOP_func_best_constrained.sdc
-       }
-      if [ regexp "Ccmin" $corner_name] {
-            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-		    source $topdir/constraints/ORCA_TOP_stuck_at_shift.sdc
-      }
-      if [ regexp "Ccmax" $corner_name] {
-            set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
-		    source $topdir/constraints/ORCA_TOP_stuck_at_capture.sdc
-      }
-      if [ regexp "Cmax_s" $corner_name] {
-            set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
-		    source $topdir/constraints/ORCA_TOP_atspeed_capture.sdc
-      }
-      if [ regexp "Cmin_s" $corner_name] {
-            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-		    source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc
-      }
+                if [ regexp "Cmax" $corner_name] {
+                   set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+       		    source $topdir/constraints/ORCA_TOP_func_worst_constrained.sdc
+              	}
+              	if [ regexp "Cmin" $corner_name] {
+                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+       		    source $topdir/constraints/ORCA_TOP_func_best_constrained.sdc
+              	}
+             	if [ regexp "Ccmin" $corner_name] {
+                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+       		    source $topdir/constraints/ORCA_TOP_stuck_at_shift.sdc
+             	}
+             	if [ regexp "Ccmax" $corner_name] {
+                   set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+       		    source $topdir/constraints/ORCA_TOP_stuck_at_capture.sdc
+             	}
+             	if [ regexp "Cmax_s" $corner_name] {
+                   set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+       		    source $topdir/constraints/ORCA_TOP_atspeed_capture.sdc
+             	}
+             	if [ regexp "Cmin_s" $corner_name] {
+                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+       		    source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc
+             	}
      
 	 }
 	}
@@ -291,8 +292,8 @@ Extended error info:
 "source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc"
     invoked from within
 "if [ regexp "Cmin_s" $corner_name] {
-            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-		    source $topdir/constraints/..."
+                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+       		    source $topdi..."
     invoked from within
 "if { [info exists synopsys_program_name ] } {
 	switch $synopsys_program_name {
@@ -316,8 +317,8 @@ Extended error info:
 "source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc"
     invoked from within
 "if [ regexp "Cmin_s" $corner_name] {
-            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-		    source $topdir/constraints/..."
+                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+       		    source $topdi..."
     invoked from within
 "if { [info exists synopsys_program_name ] } {
 	switch $synopsys_program_name {
@@ -476,15 +477,16 @@ Error: Generated clock 'SD_DDR_CLKn' has no path to its master clock. (PTE-075)
 Information: Signal integrity analysis is enabled but the design has no signal integrity data. (XTALK-011)
 Information: Starting crosstalk aware timing iteration 1. (XTALK-001)
 Warning: For computing a common base period for a number of clocks PrimeTime limits the waveform expansion of the smallest period to be no more than 1000 times and the waveform expansion of the largest period to be no more than 101 times. PrimeTime has computed a common base period bounded by these limits. (PTE-053)
-Information: Expanding clock 'SDRAM_CLK' to base period of 2021.300 (old period was 4.100, added 984 edges). (PTE-016)
+Information: Expanding clock 'SYS_CLK' to base period of 2020.800 (old period was 4.800, added 840 edges). (PTE-016)
 Information: Expanding clock 'ate_clk' to base period of 2020.000 (old period was 20.000, added 200 edges). (PTE-016)
 Information: Expanding clock 'PCI_CLK' to base period of 2025.000 (old period was 7.500, added 538 edges). (PTE-016)
+Information: Expanding clock 'SDRAM_CLK' to base period of 2021.300 (old period was 4.100, added 984 edges). (PTE-016)
 Information: Expanding clock 'SYS_2x_CLK' to base period of 2020.800 (old period was 2.400, added 1682 edges). (PTE-016)
-Information: Expanding clock 'SYS_CLK' to base period of 2020.800 (old period was 4.800, added 840 edges). (PTE-016)
 Information: Expanding clock 'v_SDRAM_CLK' to base period of 2021.300 (old period was 4.100, added 984 edges). (PTE-016)
 Information: Expanding clock 'v_PCI_CLK' to base period of 2025.000 (old period was 7.500, added 538 edges). (PTE-016)
 Information: Number of nets evaluated in the previous iteration: 51395. (XTALK-105)
 1
+Information: Variable 'search_path' is assigned the value ' /home/reethika/common/Documents/ECE510-2023-SPRING' following merging of the worker-side value '' and the master-side value '/home/reethika/common/Documents/ECE510-2023-SPRING' (DIST-005)
 set top_design {ORCA_TOP}
 ORCA_TOP
 set dmsa {2}
@@ -690,30 +692,30 @@ if { [info exists synopsys_program_name ] } {
 		    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
 		    source $topdir/constraints/ORCA_TOP_test_worst.sdc
 		}
-         if [ regexp "Cmax" $corner_name] {
-            set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
-		    source $topdir/constraints/ORCA_TOP_func_worst_constrained.sdc
-       }
-       if [ regexp "Cmin" $corner_name] {
-            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-		    source $topdir/constraints/ORCA_TOP_func_best_constrained.sdc
-       }
-      if [ regexp "Ccmin" $corner_name] {
-            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-		    source $topdir/constraints/ORCA_TOP_stuck_at_shift.sdc
-      }
-      if [ regexp "Ccmax" $corner_name] {
-            set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
-		    source $topdir/constraints/ORCA_TOP_stuck_at_capture.sdc
-      }
-      if [ regexp "Cmax_s" $corner_name] {
-            set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
-		    source $topdir/constraints/ORCA_TOP_atspeed_capture.sdc
-      }
-      if [ regexp "Cmin_s" $corner_name] {
-            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-		    source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc
-      }
+                if [ regexp "Cmax" $corner_name] {
+                   set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+       		    source $topdir/constraints/ORCA_TOP_func_worst_constrained.sdc
+              	}
+              	if [ regexp "Cmin" $corner_name] {
+                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+       		    source $topdir/constraints/ORCA_TOP_func_best_constrained.sdc
+              	}
+             	if [ regexp "Ccmin" $corner_name] {
+                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+       		    source $topdir/constraints/ORCA_TOP_stuck_at_shift.sdc
+             	}
+             	if [ regexp "Ccmax" $corner_name] {
+                   set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+       		    source $topdir/constraints/ORCA_TOP_stuck_at_capture.sdc
+             	}
+             	if [ regexp "Cmax_s" $corner_name] {
+                   set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+       		    source $topdir/constraints/ORCA_TOP_atspeed_capture.sdc
+             	}
+             	if [ regexp "Cmin_s" $corner_name] {
+                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+       		    source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc
+             	}
      
 	 }
 	}
@@ -778,8 +780,8 @@ Extended error info:
 "source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc"
     invoked from within
 "if [ regexp "Cmin_s" $corner_name] {
-            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-		    source $topdir/constraints/..."
+                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+       		    source $topdi..."
     invoked from within
 "if { [info exists synopsys_program_name ] } {
 	switch $synopsys_program_name {
@@ -803,8 +805,8 @@ Extended error info:
 "source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc"
     invoked from within
 "if [ regexp "Cmin_s" $corner_name] {
-            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-		    source $topdir/constraints/..."
+                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+       		    source $topdi..."
     invoked from within
 "if { [info exists synopsys_program_name ] } {
 	switch $synopsys_program_name {
@@ -819,7 +821,7 @@ Extended error info:
 Error: 
 	Use error_info for more info. (CMD-013)
 
-report_timing
+report_constraint -all_violators -nosplit
 Information: Setting rc_cache_min_max_rise_fall_ceff to TRUE. (XTALK-015)
 Information: Using automatic max wire load selection group 'predcaps'. (ENV-003)
 Information: Using automatic min wire load selection group 'predcaps'. (ENV-003)
@@ -963,17 +965,16 @@ Error: Generated clock 'SD_DDR_CLKn' has no path to its master clock. (PTE-075)
 Information: Signal integrity analysis is enabled but the design has no signal integrity data. (XTALK-011)
 Information: Starting crosstalk aware timing iteration 1. (XTALK-001)
 Warning: For computing a common base period for a number of clocks PrimeTime limits the waveform expansion of the smallest period to be no more than 1000 times and the waveform expansion of the largest period to be no more than 101 times. PrimeTime has computed a common base period bounded by these limits. (PTE-053)
-Information: Expanding clock 'SDRAM_CLK' to base period of 2021.300 (old period was 4.100, added 984 edges). (PTE-016)
 Information: Expanding clock 'ate_clk' to base period of 2020.000 (old period was 20.000, added 200 edges). (PTE-016)
 Information: Expanding clock 'PCI_CLK' to base period of 2025.000 (old period was 7.500, added 538 edges). (PTE-016)
 Information: Expanding clock 'SYS_2x_CLK' to base period of 2020.800 (old period was 2.400, added 1682 edges). (PTE-016)
 Information: Expanding clock 'SYS_CLK' to base period of 2020.800 (old period was 4.800, added 840 edges). (PTE-016)
-Information: Expanding clock 'v_SDRAM_CLK' to base period of 2021.300 (old period was 4.100, added 984 edges). (PTE-016)
+Information: Expanding clock 'SDRAM_CLK' to base period of 2021.300 (old period was 4.100, added 984 edges). (PTE-016)
 Information: Expanding clock 'v_PCI_CLK' to base period of 2025.000 (old period was 7.500, added 538 edges). (PTE-016)
+Information: Expanding clock 'v_SDRAM_CLK' to base period of 2021.300 (old period was 4.100, added 984 edges). (PTE-016)
 Information: Number of nets evaluated in the previous iteration: 51395. (XTALK-105)
 1
-report_qor
-1
+Information: Variable 'search_path' is assigned the value ' /home/reethika/common/Documents/ECE510-2023-SPRING' following merging of the worker-side value '' and the master-side value '/home/reethika/common/Documents/ECE510-2023-SPRING' (DIST-005)
 set top_design {ORCA_TOP}
 ORCA_TOP
 set dmsa {2}
@@ -1019,8 +1020,8 @@ read_verilog $topdir/apr/outputs/${top_design}.route2.vg.gz
 current_design ${top_design}
 Information: current_design won't return any data before link (DES-071)
 link
-Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ff0p95vn40c.db'
 Loading verilog file '/home/reethika/common/Documents/ECE510-2023-SPRING/final_prj-team_10/apr/outputs/ORCA_TOP.route2.vg.gz'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ff0p95vn40c.db'
 Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ff0p95vn40c_i1p16v.db'
 Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ff0p95vn40c_i0p95v.db'
 Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ff0p95vn40c_i0p95v.db'
@@ -1179,30 +1180,30 @@ if { [info exists synopsys_program_name ] } {
 		    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
 		    source $topdir/constraints/ORCA_TOP_test_worst.sdc
 		}
-         if [ regexp "Cmax" $corner_name] {
-            set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
-		    source $topdir/constraints/ORCA_TOP_func_worst_constrained.sdc
-       }
-       if [ regexp "Cmin" $corner_name] {
-            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-		    source $topdir/constraints/ORCA_TOP_func_best_constrained.sdc
-       }
-      if [ regexp "Ccmin" $corner_name] {
-            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-		    source $topdir/constraints/ORCA_TOP_stuck_at_shift.sdc
-      }
-      if [ regexp "Ccmax" $corner_name] {
-            set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
-		    source $topdir/constraints/ORCA_TOP_stuck_at_capture.sdc
-      }
-      if [ regexp "Cmax_s" $corner_name] {
-            set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
-		    source $topdir/constraints/ORCA_TOP_atspeed_capture.sdc
-      }
-      if [ regexp "Cmin_s" $corner_name] {
-            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-		    source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc
-      }
+                if [ regexp "Cmax" $corner_name] {
+                   set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+       		    source $topdir/constraints/ORCA_TOP_func_worst_constrained.sdc
+              	}
+              	if [ regexp "Cmin" $corner_name] {
+                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+       		    source $topdir/constraints/ORCA_TOP_func_best_constrained.sdc
+              	}
+             	if [ regexp "Ccmin" $corner_name] {
+                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+       		    source $topdir/constraints/ORCA_TOP_stuck_at_shift.sdc
+             	}
+             	if [ regexp "Ccmax" $corner_name] {
+                   set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+       		    source $topdir/constraints/ORCA_TOP_stuck_at_capture.sdc
+             	}
+             	if [ regexp "Cmax_s" $corner_name] {
+                   set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+       		    source $topdir/constraints/ORCA_TOP_atspeed_capture.sdc
+             	}
+             	if [ regexp "Cmin_s" $corner_name] {
+                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+       		    source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc
+             	}
      
 	 }
 	}
@@ -1267,8 +1268,8 @@ Extended error info:
 "source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc"
     invoked from within
 "if [ regexp "Cmin_s" $corner_name] {
-            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-		    source $topdir/constraints/..."
+                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+       		    source $topdi..."
     invoked from within
 "if { [info exists synopsys_program_name ] } {
 	switch $synopsys_program_name {
@@ -1292,8 +1293,8 @@ Extended error info:
 "source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc"
     invoked from within
 "if [ regexp "Cmin_s" $corner_name] {
-            set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-		    source $topdir/constraints/..."
+                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+       		    source $topdi..."
     invoked from within
 "if { [info exists synopsys_program_name ] } {
 	switch $synopsys_program_name {
@@ -1308,7 +1309,7 @@ Extended error info:
 Error: 
 	Use error_info for more info. (CMD-013)
 
-report_timing
+report_constraint -all_violators -nosplit
 Information: Setting rc_cache_min_max_rise_fall_ceff to TRUE. (XTALK-015)
 Information: Using automatic max wire load selection group 'predcaps'. (ENV-003)
 Information: Using automatic min wire load selection group 'predcaps'. (ENV-003)
@@ -1452,14 +1453,12 @@ Error: Generated clock 'SD_DDR_CLKn' has no path to its master clock. (PTE-075)
 Information: Signal integrity analysis is enabled but the design has no signal integrity data. (XTALK-011)
 Information: Starting crosstalk aware timing iteration 1. (XTALK-001)
 Warning: For computing a common base period for a number of clocks PrimeTime limits the waveform expansion of the smallest period to be no more than 1000 times and the waveform expansion of the largest period to be no more than 101 times. PrimeTime has computed a common base period bounded by these limits. (PTE-053)
-Information: Expanding clock 'SYS_2x_CLK' to base period of 2020.800 (old period was 2.400, added 1682 edges). (PTE-016)
-Information: Expanding clock 'ate_clk' to base period of 2020.000 (old period was 20.000, added 200 edges). (PTE-016)
 Information: Expanding clock 'PCI_CLK' to base period of 2025.000 (old period was 7.500, added 538 edges). (PTE-016)
+Information: Expanding clock 'ate_clk' to base period of 2020.000 (old period was 20.000, added 200 edges). (PTE-016)
+Information: Expanding clock 'SYS_2x_CLK' to base period of 2020.800 (old period was 2.400, added 1682 edges). (PTE-016)
 Information: Expanding clock 'SYS_CLK' to base period of 2020.800 (old period was 4.800, added 840 edges). (PTE-016)
 Information: Expanding clock 'SDRAM_CLK' to base period of 2021.300 (old period was 4.100, added 984 edges). (PTE-016)
 Information: Expanding clock 'v_PCI_CLK' to base period of 2025.000 (old period was 7.500, added 538 edges). (PTE-016)
 Information: Expanding clock 'v_SDRAM_CLK' to base period of 2021.300 (old period was 4.100, added 984 edges). (PTE-016)
 Information: Number of nets evaluated in the previous iteration: 51395. (XTALK-105)
-1
-report_qor
 1

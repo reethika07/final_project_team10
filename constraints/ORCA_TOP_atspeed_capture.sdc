@@ -300,4 +300,4 @@ set_voltage 0.95  -min 0.95  -object_list VDDH
 }
 
 set_clock_groups -asynchronous -name func_async -group [list [get_clocks SYS_2x_CLK] [get_clocks SYS_CLK]] -group [list [get_clocks PCI_CLK] [get_clocks v_PCI_CLK]] -group [list [get_clocks SDRAM_CLK] [get_clocks v_SDRAM_CLK]]
-set_clock_groups -asynchronous -name my_occ_clock_groups -group [get_clocks ate_clk] -group [list [get_clocks SYS_2x_CLK] [get_clocks SYS_CLK] [get_clocks SDRAM_CLK] [get_clocks v_SDRAM_CLK] [get_clocks PCI_CLK] [get_clocks v_PCI_CLK]]
+set_clock_groups -asynchronous -name my_occ_clock_groups -group [get_clocks ate_clk] -group [list [get_clocks SYS_2x_CLK] [get_clocks SYS_CLK] [get_clocks SDRAM_CLK] [get_clocks v_SDRAM_CLK] [get_clocks PCI_CLK] [get_clocks v_PCI_CLK]]

@@ -1,3 +1,4 @@
+Information: Variable 'search_path' is assigned the value ' /home/reethika/common/Documents/ECE510-2023-SPRING' following merging of the worker-side value '' and the master-side value '/home/reethika/common/Documents/ECE510-2023-SPRING' (DIST-005)
 set top_design {ORCA_TOP}
 ORCA_TOP
 set dmsa {2}
@@ -22,6 +23,7 @@ Error:
 report_constraint -all_violators -nosplit
 Error: Current design is not defined. (DES-001)
 
+Information: Variable 'search_path' is assigned the value ' /home/reethika/common/Documents/ECE510-2023-SPRING' following merging of the worker-side value '' and the master-side value '/home/reethika/common/Documents/ECE510-2023-SPRING' (DIST-005)
 set top_design {ORCA_TOP}
 ORCA_TOP
 set dmsa {2}
@@ -43,11 +45,10 @@ Extended error info:
 Error: 
 	Use error_info for more info. (CMD-013)
 
-report_timing
+report_constraint -all_violators -nosplit
 Error: Current design is not defined. (DES-001)
 
-report_qor
-0
+Information: Variable 'search_path' is assigned the value ' /home/reethika/common/Documents/ECE510-2023-SPRING' following merging of the worker-side value '' and the master-side value '/home/reethika/common/Documents/ECE510-2023-SPRING' (DIST-005)
 set top_design {ORCA_TOP}
 ORCA_TOP
 set dmsa {2}
@@ -69,8 +70,6 @@ Extended error info:
 Error: 
 	Use error_info for more info. (CMD-013)
 
-report_timing
+report_constraint -all_violators -nosplit
 Error: Current design is not defined. (DES-001)
 
-report_qor
-0

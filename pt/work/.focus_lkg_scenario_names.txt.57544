@@ -1,0 +1,14 @@
+func_max
+func_min
+test_best
+test_worst
+func_slowfast
+func_fastslow
+test_slowfast
+test_fastslow
+func_worstc
+func_bestc
+stuck_at_shift
+stuck_at_capture
+at_speed_shift
+at_speed_capture

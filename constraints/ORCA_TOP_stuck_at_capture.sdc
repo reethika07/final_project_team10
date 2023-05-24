@@ -290,5 +290,5 @@ set_timing_derate -early -net_delay 1.15
 set_timing_derate -early -cell_delay 1.15
 set_voltage 0  -min 0  -object_list VSS
 set_voltage 0.75  -min 0.75  -object_list VDD
-set_voltage 1.15  -min 1.15  -object_list VDDH
+set_voltage 1.15  -min 1.15  -object_list VDDH
 }

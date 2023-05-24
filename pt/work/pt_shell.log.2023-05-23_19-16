@@ -1,0 +1,701 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> 
+pt_shell> 
+pt_shell> sh gvim ../scripts/dmsa_g10.tcl
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> source ../scripts/dmsa_g10.tcl
+Launching 8 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for   8 (of   8) workers    : Tue May 23 19:16:57 2023
+  Waiting for   0 (of   8) workers    : Tue May 23 19:17:07 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Tue May 23 19:17:08 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           8                       auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         9423          ONLINE
+                   2    mo           -         9404          ONLINE
+                   3    mo           -         9406          ONLINE
+                   4    mo           -         9407          ONLINE
+                   5    mo           -         9403          ONLINE
+                   6    mo           -         9409          ONLINE
+                   7    mo           -         9405          ONLINE
+                   8    mo           -         9410          ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+  --------------------------------------------------------------------
+  Total                                                      32
+
+Error: top_design
+        Use error_info for more info. (CMD-013)
+Error: Scenario 'func_max' could not be created. (UIMS-025)
+Error: top_design
+        Use error_info for more info. (CMD-013)
+Error: Scenario 'func_min' could not be created. (UIMS-025)
+Error: top_design
+        Use error_info for more info. (CMD-013)
+Error: Scenario 'test_best' could not be created. (UIMS-025)
+Error: top_design
+        Use error_info for more info. (CMD-013)
+Error: Scenario 'test_worst' could not be created. (UIMS-025)
+Error: top_design
+        Use error_info for more info. (CMD-013)
+Error: Scenario 'func_slowfast' could not be created. (UIMS-025)
+Error: top_design
+        Use error_info for more info. (CMD-013)
+Error: Scenario 'func_fastslow' could not be created. (UIMS-025)
+Error: top_design
+        Use error_info for more info. (CMD-013)
+Error: Scenario 'test_slowfast' could not be created. (UIMS-025)
+Error: top_design
+        Use error_info for more info. (CMD-013)
+Error: Scenario 'test_fastslow' could not be created. (UIMS-025)
+Error: top_design
+        Use error_info for more info. (CMD-013)
+Error: Scenario 'func_worstc' could not be created. (UIMS-025)
+Error: top_design
+        Use error_info for more info. (CMD-013)
+Error: Scenario 'func_bestc' could not be created. (UIMS-025)
+Error: top_design
+        Use error_info for more info. (CMD-013)
+Error: Scenario 'stuck_at_shift' could not be created. (UIMS-025)
+Error: top_design
+        Use error_info for more info. (CMD-013)
+Error: Scenario 'stuck_at_cap' could not be created. (UIMS-025)
+Error: top_design
+        Use error_info for more info. (CMD-013)
+Error: Scenario 'at_speed_shift' could not be created. (UIMS-025)
+Error: top_design
+        Use error_info for more info. (CMD-013)
+Error: Scenario 'at_speed_cap' could not be created. (UIMS-025)
+Warning: Nothing implicitly matched 'func_max' (SEL-003)
+Warning: Nothing implicitly matched 'func_min' (SEL-003)
+Warning: Nothing implicitly matched 'test_best' (SEL-003)
+Warning: Nothing implicitly matched 'test_worst' (SEL-003)
+Warning: Nothing implicitly matched 'func_slowfast' (SEL-003)
+Warning: Nothing implicitly matched 'func_fastslow' (SEL-003)
+Warning: Nothing implicitly matched 'test_slowfast' (SEL-003)
+Warning: Nothing implicitly matched 'test_fastslow' (SEL-003)
+Warning: Nothing implicitly matched 'func_worstc' (SEL-003)
+Warning: Nothing implicitly matched 'func_bestc' (SEL-003)
+Warning: Nothing implicitly matched 'stuck_at_shift' (SEL-003)
+Warning: Nothing implicitly matched 'stuck_at_cap' (SEL-003)
+Warning: Nothing implicitly matched 'at_speed_shift' (SEL-003)
+Warning: Nothing implicitly matched 'at_speed_cap' (SEL-003)
+Error: Nothing matched for scenario_list (SEL-005)
+Error: There is no current session. (UIMS-008)
+Information: script '../scripts/dmsa_g10.tcl'
+        stopped at line 32 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"current_session {func_max func_min test_best test_worst func_slowfast func_fastslow test_slowfast test_fastslow func_worstc func_bestc stuck_at_shift ..."
+ -- End Extended Error Info
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> history
+     1  sh gvim ../scripts/dmsa_g10.tcl
+     2  source ../scripts/dmsa_g10.tcl
+     3  history
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa_g10.tcl
+Warning: Replacing host options 'my_opts1'. (CMCR-003)
+Shutting down worker processes ...
+ Shutdown Process 1
+ Shutdown Process 2
+ Shutdown Process 3
+ Shutdown Process 4
+ Shutdown Process 5
+ Shutdown Process 6
+ Shutdown Process 7
+ Shutdown Process 8
+Launching 8 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for   8 (of   8) workers    : Tue May 23 19:17:51 2023
+  Waiting for   0 (of   8) workers    : Tue May 23 19:18:01 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Tue May 23 19:18:01 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           8                       auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         9    mo           -         11444         ONLINE
+                   10   mo           -         11458         ONLINE
+                   11   mo           -         11441         ONLINE
+                   12   mo           -         11439         ONLINE
+                   13   mo           -         11447         ONLINE
+                   14   mo           -         11448         ONLINE
+                   15   mo           -         11438         ONLINE
+                   16   mo           -         11440         ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         9                                         4
+                   10                                        4
+                   11                                        4
+                   12                                        4
+                   13                                        4
+                   14                                        4
+                   15                                        4
+                   16                                        4
+  --------------------------------------------------------------------
+  Total                                                      32
+
+pt_shell> pwd
+/home/reethika/common/Documents/ECE510-2023-SPRING/final_prj-team_10/pt/work
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Tue May 23 19:22:55 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'at_speed_shift'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'func_bestc'
+Started    : Command execution in scenario 'func_worstc'
+Started    : Command execution in scenario 'at_speed_cap'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_bestc'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'func_worstc'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'at_speed_shift'
+Succeeded  : Command execution in scenario 'at_speed_cap'
+Saving     : Current image for scenario 'func_bestc'
+Saving     : Current image for scenario 'func_min'
+Saving     : Current image for scenario 'func_fastslow'
+Saving     : Current image for scenario 'stuck_at_shift'
+Restoring  : Current image for scenario 'func_max'
+Restoring  : Current image for scenario 'test_worst'
+Restoring  : Current image for scenario 'func_slowfast'
+Restoring  : Current image for scenario 'test_best'
+Started    : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'func_max'
+Saving     : Current image for scenario 'func_worstc'
+Saving     : Current image for scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'test_best'
+Restoring  : Current image for scenario 'test_slowfast'
+Restoring  : Current image for scenario 'test_fastslow'
+Started    : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'test_fastslow'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_PARSER/out_bus_reg_8_
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Endpoint: I_CONTEXT_MEM/I_CONTEXT_RAM_1_1
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Path Group: ate_clk
+  Path Type: max
+  Scenario: at_speed_shift
+  Max Data Paths Derating Factor  : 1.05
+  Min Clock Paths Derating Factor : 0.95
+  Max Clock Paths Derating Factor : 1.05
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  I_PARSER/out_bus_reg_8_/CLK (SDFFARX1_LVT)              0.00       0.00 r
+  I_PARSER/out_bus_reg_8_/Q (SDFFARX1_LVT)                0.07       0.07 f
+  ZBUF_67_inst_6229/Y (NBUFFX2_LVT)                       0.62       0.69 f
+  ZINV_890_inst_80001/Y (INVX1_LVT)                       6.64       7.32 r
+  ZINV_745_inst_79999/Y (INVX4_RVT)                       1.93       9.25 f
+  HFSBUF_26800_4597/Y (NBUFFX8_RVT)                     235.35     244.60 f
+  HFSINV_22065_4595/Y (INVX8_LVT)                      2686.02    2930.61 r
+  HFSINV_19296_4591/Y (INVX4_LVT)                       117.81    3048.42 f
+  I_PARSER/U732/Y (OR2X1_HVT)                          1292.77    4341.19 f
+  I_CONTEXT_MEM/ZBUF_17_inst_34112/Y (NBUFFX8_HVT)        0.37    4341.56 f
+  I_CONTEXT_MEM/HFSINV_191_2702/Y (INVX0_HVT)             1.42    4342.98 r
+  I_CONTEXT_MEM/U198/Y (OR2X2_HVT)                        0.58    4343.56 r
+  I_CONTEXT_MEM/HFSINV_106_378/Y (INVX8_HVT)              1.07    4344.63 f
+  I_CONTEXT_MEM/I_CONTEXT_RAM_1_1/CSB1 (SRAM2RW64x8)      0.11    4344.74 f
+  data arrival time                                               4344.74
+
+  clock ate_clk (rise edge)                              20.00      20.00
+  clock network delay (ideal)                             0.00      20.00
+  clock reconvergence pessimism                           0.00      20.00
+  clock uncertainty                                      -0.10      19.90
+  I_CONTEXT_MEM/I_CONTEXT_RAM_1_1/CE1 (SRAM2RW64x8)                 19.90 r
+  library setup time                                     -0.02      19.88
+  data required time                                                19.88
+  ------------------------------------------------------------------------------
+  data required time                                                19.88
+  data arrival time                                              -4344.74
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -4324.85
+
+
+1
+pt_shell> report_qor
+****************************************
+Report : qor
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Tue May 23 19:23:25 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'at_speed_shift'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'at_speed_cap'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'at_speed_shift'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Saving     : Current image for scenario 'test_best'
+Saving     : Current image for scenario 'test_worst'
+Succeeded  : Command execution in scenario 'at_speed_cap'
+Succeeded  : Command execution in scenario 'func_max'
+Saving     : Current image for scenario 'at_speed_shift'
+Saving     : Current image for scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Restoring  : Current image for scenario 'func_fastslow'
+Restoring  : Current image for scenario 'func_worstc'
+Restoring  : Current image for scenario 'func_min'
+Restoring  : Current image for scenario 'func_bestc'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'func_worstc'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'func_bestc'
+Succeeded  : Command execution in scenario 'func_worstc'
+Saving     : Current image for scenario 'test_slowfast'
+Saving     : Current image for scenario 'at_speed_cap'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'func_bestc'
+Succeeded  : Command execution in scenario 'func_min'
+Restoring  : Current image for scenario 'stuck_at_cap'
+Restoring  : Current image for scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+-----------------------------------
+End of Master/Slave Task Processing
+
+  Timing Path Group '**async_default**' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            7 (func_max)
+  Critical Path Length:                    2.73 (func_max)
+  Critical Path Slack:                     0.41 (func_max)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group '**clock_gating_default**' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            9 (func_max)
+  Critical Path Length:                    6.29 (func_max)
+  Critical Path Slack:                    -3.26 (func_max)
+  Total Negative Slack:                  -34.76
+  No. of Violating Paths:                    16
+  ---------------------------------------------
+
+  Timing Path Group 'INPUTS' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            7 (at_speed_shift)
+  Critical Path Length:                  669.78 (at_speed_shift)
+  Critical Path Slack:                  -670.38 (at_speed_shift)
+  Total Negative Slack:               -21484.56
+  No. of Violating Paths:                    99
+  ---------------------------------------------
+
+  Timing Path Group 'OUTPUTS' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            3 (at_speed_shift)
+  Critical Path Length:                 2657.32 (at_speed_shift)
+  Critical Path Slack:                 -2657.92 (at_speed_shift)
+  Total Negative Slack:               -85328.95
+  No. of Violating Paths:                   110
+  ---------------------------------------------
+
+  Timing Path Group 'PCI_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            3 (stuck_at_cap)
+  Critical Path Length:                    2.32 (stuck_at_cap)
+  Critical Path Slack:                     0.23 (stuck_at_cap)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'SDRAM_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            3 (at_speed_shift)
+  Critical Path Length:                    1.61 (at_speed_shift)
+  Critical Path Slack:                    -1.13 (at_speed_shift)
+  Total Negative Slack:                   -1.28
+  No. of Violating Paths:                     3
+  ---------------------------------------------
+
+  Timing Path Group 'SD_DDR_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            2 (test_slowfast)
+  Critical Path Length:                    1.66 (test_slowfast)
+  Critical Path Slack:                     0.08 (test_slowfast)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_2x_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           14 (func_max)
+  Critical Path Length:                    8.24 (func_max)
+  Critical Path Slack:                    -5.99 (func_max)
+  Total Negative Slack:                 -344.92
+  No. of Violating Paths:                   348
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           40 (func_max)
+  Critical Path Length:                    6.19 (func_max)
+  Critical Path Slack:                    -1.25 (func_max)
+  Total Negative Slack:                  -37.55
+  No. of Violating Paths:                   117
+  ---------------------------------------------
+
+  Timing Path Group 'ate_clk' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           12 (at_speed_shift)
+  Critical Path Length:                 4344.74 (at_speed_shift)
+  Critical Path Slack:                 -4324.85 (at_speed_shift)
+  Total Negative Slack:              -327793.19
+  No. of Violating Paths:                   287
+  ---------------------------------------------
+
+  Timing Path Group 'group_pclk' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           13 (at_speed_cap)
+  Critical Path Length:                    7.52 (at_speed_cap)
+  Critical Path Slack:                     0.38 (at_speed_cap)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'group_sdram' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            5 (at_speed_cap)
+  Critical Path Length:                    3.45 (at_speed_cap)
+  Critical Path Slack:                     0.10 (at_speed_cap)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'group_sys' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           40 (at_speed_cap)
+  Critical Path Length:                    6.22 (at_speed_cap)
+  Critical Path Slack:                     3.55 (at_speed_cap)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'group_sys2x' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           14 (at_speed_cap)
+  Critical Path Length:                    8.27 (at_speed_cap)
+  Critical Path Slack:                    -5.99 (at_speed_cap)
+  Total Negative Slack:                 -349.09
+  No. of Violating Paths:                   214
+  ---------------------------------------------
+
+  Timing Path Group 'v_PCI_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            2 (test_slowfast)
+  Critical Path Length:                    1.29 (test_slowfast)
+  Critical Path Slack:                     3.61 (test_slowfast)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group '**async_default**' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            5 (func_bestc)
+  Critical Path Length:                 3059.00 (func_bestc)
+  Critical Path Slack:                 -5637.04 (func_bestc)
+  Total Negative Slack:             -3405672.00
+  No. of Violating Paths:                  2241
+  ---------------------------------------------
+
+  Timing Path Group '**clock_gating_default**' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            2 (func_fastslow)
+  Critical Path Length:                   93.27 (func_fastslow)
+  Critical Path Slack:                   -11.52 (func_fastslow)
+  Total Negative Slack:                  -87.21
+  No. of Violating Paths:                    10
+  ---------------------------------------------
+
+  Timing Path Group 'INPUTS' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1 (at_speed_shift)
+  Critical Path Length:                    0.95 (at_speed_shift)
+  Critical Path Slack:                    -9.05 (at_speed_shift)
+  Total Negative Slack:                  -25.27
+  No. of Violating Paths:                     3
+  ---------------------------------------------
+
+  Timing Path Group 'OUTPUTS' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            2 (at_speed_shift)
+  Critical Path Length:                    2.46 (at_speed_shift)
+  Critical Path Slack:                     3.06 (at_speed_shift)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'PCI_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            2 (func_fastslow)
+  Critical Path Length:                  676.25 (func_fastslow)
+  Critical Path Slack:                 -2825.54 (func_fastslow)
+  Total Negative Slack:              -335002.22
+  No. of Violating Paths:                   607
+  ---------------------------------------------
+
+  Timing Path Group 'SDRAM_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1 (func_bestc)
+  Critical Path Length:                   27.94 (func_bestc)
+  Critical Path Slack:                 -3914.55 (func_bestc)
+  Total Negative Slack:             -4129819.75
+  No. of Violating Paths:                  5195
+  ---------------------------------------------
+
+  Timing Path Group 'SD_DDR_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            5 (test_best)
+  Critical Path Length:                  401.49 (test_best)
+  Critical Path Slack:                   392.34 (test_best)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_2x_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            6 (func_fastslow)
+  Critical Path Length:                    3.64 (func_fastslow)
+  Critical Path Slack:                  -827.26 (func_fastslow)
+  Total Negative Slack:               -40090.91
+  No. of Violating Paths:                   320
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                           20 (func_fastslow)
+  Critical Path Length:                   76.47 (func_fastslow)
+  Critical Path Slack:                 -8619.28 (func_fastslow)
+  Total Negative Slack:             -2939702.75
+  No. of Violating Paths:                  3150
+  ---------------------------------------------
+
+  Timing Path Group 'ate_clk' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1 (test_best)
+  Critical Path Length:                  117.05 (test_best)
+  Critical Path Slack:                 -8579.37 (test_best)
+  Total Negative Slack:             -2736199.25
+  No. of Violating Paths:                  5124
+  ---------------------------------------------
+
+  Timing Path Group 'group_pclk' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1 (at_speed_shift)
+  Critical Path Length:                    0.66 (at_speed_shift)
+  Critical Path Slack:                     0.13 (at_speed_shift)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'group_sdram' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1 (at_speed_shift)
+  Critical Path Length:                    0.55 (at_speed_shift)
+  Critical Path Slack:                     0.02 (at_speed_shift)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'group_sys' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1 (at_speed_shift)
+  Critical Path Length:                    0.55 (at_speed_shift)
+  Critical Path Slack:                     0.02 (at_speed_shift)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'group_sys2x' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1 (at_speed_shift)
+  Critical Path Length:                    0.55 (at_speed_shift)
+  Critical Path Slack:                     0.02 (at_speed_shift)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'v_PCI_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            2 (func_bestc)
+  Critical Path Length:                  755.63 (func_bestc)
+  Critical Path Slack:                   755.28 (func_bestc)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Cell Count
+  ---------------------------------------------
+  Hierarchical Cell Count:                   63 (test_worst, test_best, test_fastslow, at_speed_shift, test_slowfast, at_speed_cap, func_max, func_slowfast, func_worstc, func_bestc, func_fastslow, func_min, stuck_at_cap, stuck_at_shift)
+  Hierarchical Port Count:                 3295 (test_worst, test_best, test_fastslow, at_speed_shift, test_slowfast, at_speed_cap, func_max, func_slowfast, func_worstc, func_bestc, func_fastslow, func_min, stuck_at_cap, stuck_at_shift)
+  Leaf Cell Count:                        48424 (test_worst, test_best, test_fastslow, at_speed_shift, test_slowfast, at_speed_cap, func_max, func_slowfast, func_worstc, func_bestc, func_fastslow, func_min, stuck_at_cap, stuck_at_shift)
+  ---------------------------------------------
+
+
+  Area
+  ---------------------------------------------
+  Net Interconnect Area:               68088.55 (test_worst, test_best, test_fastslow, at_speed_shift, test_slowfast, at_speed_cap, func_max, func_slowfast, func_worstc, func_bestc, func_fastslow, func_min, stuck_at_cap, stuck_at_shift)
+  Total Cell Area:                    390720.50 (test_worst, test_best, test_fastslow, at_speed_shift, test_slowfast, at_speed_cap, func_max, func_slowfast, func_worstc, func_bestc, func_fastslow, func_min, stuck_at_cap, stuck_at_shift)
+  Design Area:                        458809.06 (test_worst, test_best, test_fastslow, at_speed_shift, test_slowfast, at_speed_cap, func_max, func_slowfast, func_worstc, func_bestc, func_fastslow, func_min, stuck_at_cap, stuck_at_shift)
+  ---------------------------------------------
+
+
+  Design Rule Violations
+  ---------------------------------------------
+  Total No. of Pins in Design:           191958
+  max_capacitance Count:                     31
+  min_capacitance Count:                     16
+  clock_gating_setup Count:                  16
+  clock_gating_hold Count:                   10
+  sequential_clock_pulse_width Count:      7224
+  max_capacitance Cost:                  678.66
+  min_capacitance Cost:                    1.42
+  clock_gating_setup Cost:                34.76
+  clock_gating_hold Cost:                 87.21
+  sequential_clock_pulse_width Cost:  170301.64
+  Total DRC Cost:                     171103.69
+  ---------------------------------------------
+1
+pt_shell> create_scenario
+Error: Must specify one of these options: -name or -mode. (CMD-004)
+Error: Scenario '(null)' could not be created. (UIMS-025)
+0
+pt_shell> current_scenario
+{"func_max", "func_min", "test_best", "test_worst", "func_slowfast", "func_fastslow", "test_slowfast", "test_fastslow", "func_worstc", "func_bestc", "stuck_at_shift", "stuck_at_cap", "at_speed_shift", "at_speed_cap"}
+pt_shell> 

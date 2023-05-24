@@ -4,10 +4,10 @@
 fix_eco_power -pattern_priority {HVT RVT LVT}
 
 #command for fixing capacitance
-fix_eco_drc -max_capacitance -buffer_list {NBUFFX8_HVT}
+fix_eco_drc -type max_capacitance -buffer_list {NBUFFX8_HVT}
 
 #command for fixing transition
-fix_eco_drc -max_transition -buffer_list {NBUFFX8_HVT}
+fix_eco_drc -type max_transition -buffer_list {NBUFFX8_HVT}
 
 #command for fixing setup timing violations
 fix_eco_timing -type setup
