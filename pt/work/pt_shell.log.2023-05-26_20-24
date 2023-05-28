@@ -1,0 +1,360 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa_g10.tcl
+Launching 8 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for   8 (of   8) workers    : Fri May 26 20:25:02 2023
+  Waiting for   0 (of   8) workers    : Fri May 26 20:25:12 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Fri May 26 20:25:13 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           8                       auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         10492         ONLINE
+                   2    mo           -         10516         ONLINE
+                   3    mo           -         10482         ONLINE
+                   4    mo           -         10487         ONLINE
+                   5    mo           -         10483         ONLINE
+                   6    mo           -         10494         ONLINE
+                   7    mo           -         10493         ONLINE
+                   8    mo           -         10506         ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+  --------------------------------------------------------------------
+  Total                                                      32
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'func_max'
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'test_fastslow'
+Sourcing   : Scenario specific data files to setup scenario 'func_max'
+Sourcing   : Scenario specific data files to setup scenario 'test_best'
+Sourcing   : Scenario specific data files to setup scenario 'test_slowfast'
+Sourcing   : Scenario specific data files to setup scenario 'test_worst'
+Sourcing   : Scenario specific data files to setup scenario 'func_slowfast'
+Sourcing   : Scenario specific data files to setup scenario 'func_min'
+Sourcing   : Scenario specific data files to setup scenario 'test_fastslow'
+Sourcing   : Scenario specific data files to setup scenario 'func_fastslow'
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_best'
+Saving     : Current image for scenario 'test_fastslow'
+Saving     : Current image for scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'func_max'
+Saving     : Current image for scenario 'func_min'
+Saving     : Current image for scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'stuck_at_shift'
+Sourcing   : Scenario specific data files to setup scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'stuck_at_cap'
+Sourcing   : Scenario specific data files to setup scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'at_speed_cap'
+Started    : Command execution in scenario 'at_speed_shift'
+Sourcing   : Scenario specific data files to setup scenario 'at_speed_cap'
+Sourcing   : Scenario specific data files to setup scenario 'at_speed_shift'
+Succeeded  : Command execution in scenario 'at_speed_shift'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'at_speed_cap'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+-----------------------------------
+End of Master/Slave Task Processing
+
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Fri May 26 20:28:19 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Saving     : Current image for scenario 'test_fastslow'
+Saving     : Current image for scenario 'test_worst'
+Saving     : Current image for scenario 'stuck_at_cap'
+Saving     : Current image for scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Restoring  : Current image for scenario 'at_speed_shift'
+Restoring  : Current image for scenario 'func_max'
+Restoring  : Current image for scenario 'at_speed_cap'
+Started    : Command execution in scenario 'at_speed_shift'
+Succeeded  : Command execution in scenario 'at_speed_shift'
+Started    : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'at_speed_cap'
+Succeeded  : Command execution in scenario 'at_speed_cap'
+Restoring  : Current image for scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_BLENDER_0/R_137
+               (rising edge-triggered flip-flop clocked by SYS_CLK)
+  Endpoint: I_BLENDER_0/R_525
+               (rising edge-triggered flip-flop clocked by SYS_CLK)
+  Last common pin: I_BLENDER_0/cto_buf_drc_58216/Y
+  Path Group: SYS_CLK
+  Path Type: max
+  Scenario: func_max
+  Min Clock Paths Derating Factor : 0.95
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SYS_CLK (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        1.65       1.65
+  I_BLENDER_0/R_137/CLK (SDFFX1_HVT)                      0.00       1.65 r
+  I_BLENDER_0/R_137/Q (SDFFX1_HVT)                        1.21 &     2.85 f
+  I_BLENDER_0/HFSBUF_193_6182/Y (NBUFFX2_LVT)             0.20 &     3.05 f
+  I_BLENDER_0/ctmTdsLR_1_82144/Y (NAND3X0_LVT)            0.08 &     3.14 r
+  I_BLENDER_0/ctmTdsLR_1_81291/Y (NOR2X0_LVT)             0.13 &     3.27 f
+  I_BLENDER_0/ctmTdsLR_2_81001/Y (AO21X1_LVT)             0.12 &     3.38 f
+  I_BLENDER_0/ctmTdsLR_1_81000/Y (AO21X1_LVT)             0.09 &     3.48 f
+  I_BLENDER_0/U3521/Y (NAND2X0_LVT)                       0.07 &     3.55 r
+  I_BLENDER_0/U1409/Y (AND3X1_LVT)                        0.13 &     3.68 r
+  I_BLENDER_0/ctmTdsLR_2_81420/Y (NAND3X0_LVT)            0.08 &     3.76 f
+  I_BLENDER_0/ctmTdsLR_1_81419/Y (AND3X1_LVT)             0.14 &     3.90 f
+  I_BLENDER_0/ctmTdsLR_1_39357/Y (OR2X1_LVT)              0.10 &     4.01 f
+  I_BLENDER_0/U1598/Y (AO22X1_LVT)                        0.11 &     4.11 f
+  I_BLENDER_0/ctmTdsLR_2_38074/Y (NAND2X0_LVT)            0.08 &     4.19 r
+  I_BLENDER_0/ctmTdsLR_1_38073/Y (AND3X1_LVT)             0.12 &     4.31 r
+  I_BLENDER_0/U2456/Y (AO21X1_LVT)                        0.09 &     4.40 r
+  I_BLENDER_0/U2451/Y (XNOR2X2_LVT)                       0.15 &     4.55 f
+  I_BLENDER_0/U2447/Y (NAND2X0_LVT)                       0.09 &     4.64 r
+  I_BLENDER_0/U4723/Y (NAND3X0_LVT)                       0.08 &     4.72 f
+  I_BLENDER_0/U1244/Y (AND2X1_LVT)                        0.12 &     4.84 f
+  I_BLENDER_0/U1237/Y (AND3X1_LVT)                        0.12 &     4.96 f
+  I_BLENDER_0/ctmTdsLR_2_80925/Y (NAND2X0_LVT)            0.09 &     5.05 r
+  I_BLENDER_0/ctmTdsLR_1_80924/Y (NAND3X0_LVT)            0.10 &     5.15 f
+  I_BLENDER_0/U8639/Y (XOR2X2_LVT)                        0.18 &     5.32 r
+  I_BLENDER_0/ctmTdsLR_1_82559/Y (INVX1_LVT)              0.03 &     5.36 f
+  I_BLENDER_0/U1755/Y (AND2X1_LVT)                        0.09 &     5.45 f
+  I_BLENDER_0/ctmTdsLR_1_81687/Y (INVX2_LVT)              0.04 &     5.49 r
+  I_BLENDER_0/ctmTdsLR_2_82290/Y (NAND3X0_LVT)            0.06 &     5.55 f
+  I_BLENDER_0/ctmTdsLR_1_82289/Y (NAND3X2_LVT)            0.17 &     5.72 r
+  I_BLENDER_0/U3546/Y (OR2X2_LVT)                         0.08 &     5.80 r
+  I_BLENDER_0/U1950/Y (AND2X2_LVT)                        0.12 &     5.92 r
+  I_BLENDER_0/ctmTdsLR_2_81684/Y (INVX1_LVT)              0.03 &     5.95 f
+  I_BLENDER_0/ctmTdsLR_2_82668/Y (OA21X1_LVT)             0.13 &     6.08 f
+  I_BLENDER_0/ctmTdsLR_1_82667/Y (OR2X2_LVT)              0.12 &     6.20 f
+  I_BLENDER_0/U1833/Y (MUX21X2_LVT)                       0.18 &     6.38 f
+  I_BLENDER_0/U1858/Y (AO21X1_LVT)                        0.17 &     6.55 f
+  I_BLENDER_0/U1859/Y (OAI22X2_LVT)                       0.15 &     6.70 r
+  I_BLENDER_0/U1863/Y (XNOR2X2_LVT)                       0.14 &     6.84 f
+  I_BLENDER_0/ctmTdsLR_1_39289/Y (OR2X1_LVT)              0.10 &     6.94 f
+  I_BLENDER_0/R_525/D (SDFFX1_HVT)                        0.01 &     6.95 f
+  data arrival time                                                  6.95
+
+  clock SYS_CLK (rise edge)                               4.80       4.80
+  clock network delay (propagated)                        1.50       6.30
+  clock reconvergence pessimism                           0.15       6.44
+  clock uncertainty                                      -0.10       6.34
+  I_BLENDER_0/R_525/CLK (SDFFX1_HVT)                                 6.34 r
+  library setup time                                     -1.15       5.20
+  data required time                                                 5.20
+  ------------------------------------------------------------------------------
+  data required time                                                 5.20
+  data arrival time                                                 -6.95
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.75
+
+
+1
+pt_shell> report_timing -delay_type min
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Fri May 26 20:28:56 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'at_speed_cap'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'at_speed_shift'
+Started    : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'at_speed_cap'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'at_speed_shift'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Saving     : Current image for scenario 'test_slowfast'
+Saving     : Current image for scenario 'test_best'
+Saving     : Current image for scenario 'func_slowfast'
+Saving     : Current image for scenario 'at_speed_cap'
+Restoring  : Current image for scenario 'test_fastslow'
+Restoring  : Current image for scenario 'func_min'
+Restoring  : Current image for scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Restoring  : Current image for scenario 'test_worst'
+Started    : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'test_worst'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_CLOCKING/occ_int1/U_clk_control_i_0/slow_clk_enable_l_reg
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Endpoint: I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_0_l_reg
+               (rising edge-triggered flip-flop clocked by SYS_CLK)
+  Path Group: SYS_CLK
+  Path Type: min
+  Scenario: stuck_at_shift
+  Min Data Paths Derating Factor  : 1.05
+  Min Clock Paths Derating Factor : 1.05
+  Max Clock Paths Derating Factor : 1.05
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.13       0.13
+  I_CLOCKING/occ_int1/U_clk_control_i_0/slow_clk_enable_l_reg/CLK (DFFARX1_HVT)
+                                                          0.00       0.13 r
+  I_CLOCKING/occ_int1/U_clk_control_i_0/slow_clk_enable_l_reg/QN (DFFARX1_HVT)
+                                                          0.05 &     0.18 f
+  I_CLOCKING/occ_int1/U_clk_control_i_0/copt_h_inst_82984/Y (NBUFFX2_LVT)
+                                                          0.01 &     0.20 f
+  I_CLOCKING/occ_int1/U_clk_control_i_0/copt_h_inst_82985/Y (NBUFFX2_HVT)
+                                                          0.02 &     0.21 f
+  I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_0_l_reg/D (DFFARX1_LVT)
+                                                          0.00 &     0.21 f
+  data arrival time                                                  0.21
+
+  clock SYS_CLK (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.25       0.25
+  clock reconvergence pessimism                           0.00       0.25
+  I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_0_l_reg/CLK (DFFARX1_LVT)
+                                                                     0.25 r
+  library hold time                                       0.00       0.26
+  data required time                                                 0.26
+  ------------------------------------------------------------------------------
+  data required time                                                 0.26
+  data arrival time                                                 -0.21
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+1
+pt_shell> 
+? ? ? ? ? 

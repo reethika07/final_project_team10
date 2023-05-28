@@ -32,7 +32,7 @@ if { [info exists synopsys_program_name ] } {
 		  set_operating_condition $corner_op_cond -library saed32lvt_c
 		}
 
-		foreach scenario { {func_worst func Cmax } {func_best func Cmin} {test_worst test Cmax} {test_best test Cmin} {atspeed_shift atspeed Cmin} {atspeed_capture atspeed Cmax} {stuck_at_shift scan Cmin} {stuck_at_capture scan Cmax} {func_worst_constrained funcu Cmax} {func_best_constrained funcu Cmin} }  {
+		foreach scenario { {func_worst func Cmax } {func_best func Cmin} {test_worst test Cmax} {test_best test Cmin} {atspeed_shift atspeed Cmin} {atspeed_cap atspeed Cmax} {stuck_at_shift scan Cmin} {stuck_at_cap scan Cmax} {func_worst_constrained funcu Cmax} {func_best_constrained funcu Cmin} }  {
 		  create_scenario -name [lindex $scenario 0 ] -mode [lindex $scenario 1 ] -corner [lindex $scenario 2 ]
 		  current_scenario [lindex $scenario 0]
 		  source -echo -verbose -continue_on_error ../../constraints/ORCA_TOP_[lindex $scenario 0 ].sdc 
@@ -108,11 +108,11 @@ if { [info exists synopsys_program_name ] } {
              	}
              	if [ regexp "Ccmax" $corner_name] {
                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
-       		    source $topdir/constraints/ORCA_TOP_stuck_at_capture.sdc
+       		    source $topdir/constraints/ORCA_TOP_stuck_at_cap.sdc
              	}
              	if [ regexp "Cmax_s" $corner_name] {
                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
-       		    source $topdir/constraints/ORCA_TOP_atspeed_capture.sdc
+       		    source $topdir/constraints/ORCA_TOP_atspeed_cap.sdc
              	}
              	if [ regexp "Cmin_s" $corner_name] {
                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c

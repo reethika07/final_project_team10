@@ -5,15 +5,13 @@ Warning: There are 25 endpoints which are not constrained for maximum delay.
 
 Endpoint
 --------------------------------------------------------------------------------
-snps_clk_chain_1/U_shftreg_0/ff_4/q_reg/D
-snps_clk_chain_1/U_shftreg_0/ff_0/q_reg/D
 test_so[5]
 snps_clk_chain_1/U_shftreg_0/ff_1/q_reg/D
 sd_CK
 test_so[4]
-test_so[3]
 snps_clk_chain_1/U_shftreg_0/ff_2/q_reg/D
 I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_1/q_reg/D
+test_so[3]
 test_so[0]
 I_CLOCKING/sys_rst_n_buf_reg/RSTB
 test_so[2]
@@ -30,6 +28,8 @@ I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_0/q_reg/D
 I_CLOCKING/pci_rst_n_buf_reg/RSTB
 test_so7
 I_CLOCKING/prst_ff_reg/RSTB
+snps_clk_chain_1/U_shftreg_0/ff_0/q_reg/D
+snps_clk_chain_1/U_shftreg_0/ff_4/q_reg/D
 
 Information: Checking 'unexpandable_clocks'.
 Information: Checking 'latch_fanout'.

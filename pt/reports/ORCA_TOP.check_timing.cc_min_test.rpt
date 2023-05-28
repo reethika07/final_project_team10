@@ -1,5 +1,13 @@
 Information: Checking 'no_input_delay'.
 Information: Checking 'no_driving_cell'.
+Warning: There are 3 ports with parasitics but with no driving cell.
+
+Ports
+------------------------------------------------------------
+pll_bypass
+pll_reset
+test_si7
+
 Information: Checking 'unconstrained_endpoints'.
 Warning: There are 2 endpoints which are not constrained for maximum delay.
 

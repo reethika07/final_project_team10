@@ -1,10 +1,31 @@
 Information: Checking 'no_input_delay'.
 Information: Checking 'no_driving_cell'.
+Warning: There are 3 ports with parasitics but with no driving cell.
+
+Ports
+------------------------------------------------------------
+pll_bypass
+pll_reset
+test_si7
+
 Information: Checking 'unconstrained_endpoints'.
 Warning: There are 65 endpoints which are not constrained for maximum delay.
 
 Endpoint
 --------------------------------------------------------------------------------
+I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_2_l_reg/RSTB
+occ_int2/U_clk_control_i_0/load_n_meta_0_l_reg/D
+occ_int2/U_clk_control_i_0/load_n_meta_0_l_reg/RSTB
+sd_CK
+occ_int2/U_clk_control_i_2/load_n_meta_0_l_reg/RSTB
+occ_int2/U_clk_control_i_2/load_n_meta_0_l_reg/D
+occ_int2/U2/A3
+snps_clk_chain_1/U_shftreg_0/ff_0/q_reg/D
+I_CLOCKING/occ_int1/U1/A3
+I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_1/q_reg/D
+occ_int2/U_clk_control_i_0/pipeline_or_tree_l_reg/RSTB
+occ_int2/U_clk_control_i_2/fast_clk_enable_l_reg/RSTB
+snps_clk_chain_1/U_shftreg_0/ff_5/q_reg/D
 I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_0/q_reg/D
 occ_int2/U_clk_control_i_1/fast_clk_enable_l_reg/RSTB
 I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_0_l_reg/D
@@ -12,8 +33,8 @@ I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_0_l_reg/RSTB
 occ_int2/U_clk_control_i_0/U_cycle_ctr_i/count_int_reg[1]/RSTB
 occ_int2/U_clk_control_i_2/U_cycle_ctr_i/tercnt_n_reg_reg/RSTB
 snps_clk_chain_1/U_shftreg_0/ff_4/q_reg/D
-occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/RSTB
 I_CLOCKING/sdram_rst_ff_reg/RSTB
+occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/RSTB
 test_so[5]
 test_so[4]
 test_so[3]
@@ -37,9 +58,9 @@ occ_int2/U_clk_control_i_1/U_cycle_ctr_i/count_int_reg[1]/RSTB
 snps_clk_chain_1/U_shftreg_0/ff_3/q_reg/D
 I_CLOCKING/occ_int1/U_clk_control_i_0/U_cycle_ctr_i/tercnt_n_reg_reg/RSTB
 I_CLOCKING/sys_rst_ff_reg/RSTB
+occ_int2/U_clk_control_i_1/pipeline_or_tree_l_reg/RSTB
 occ_int2/U_clk_control_i_1/load_n_meta_0_l_reg/D
 occ_int2/U_clk_control_i_1/load_n_meta_0_l_reg/RSTB
-occ_int2/U_clk_control_i_1/pipeline_or_tree_l_reg/RSTB
 occ_int2/U_clk_control_i_1/U_cycle_ctr_i/tercnt_n_reg_reg/RSTB
 I_CLOCKING/sys_2x_rst_ff_reg/RSTB
 I_CLOCKING/prst_ff_reg/RSTB
@@ -57,19 +78,6 @@ occ_int2/U_clk_control_i_2/pipeline_or_tree_l_reg/RSTB
 occ_int2/U_clk_control_i_1/load_n_meta_1_l_reg/RSTB
 snps_clk_chain_1/U_shftreg_0/ff_2/q_reg/D
 occ_int2/U_clk_control_i_2/U_cycle_ctr_i/count_int_reg[0]/RSTB
-I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_2_l_reg/RSTB
-occ_int2/U_clk_control_i_0/load_n_meta_0_l_reg/D
-occ_int2/U_clk_control_i_0/load_n_meta_0_l_reg/RSTB
-sd_CK
-occ_int2/U_clk_control_i_2/load_n_meta_0_l_reg/RSTB
-occ_int2/U_clk_control_i_2/load_n_meta_0_l_reg/D
-occ_int2/U2/A3
-snps_clk_chain_1/U_shftreg_0/ff_0/q_reg/D
-I_CLOCKING/occ_int1/U1/A3
-I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_1/q_reg/D
-snps_clk_chain_1/U_shftreg_0/ff_5/q_reg/D
-occ_int2/U_clk_control_i_0/pipeline_or_tree_l_reg/RSTB
-occ_int2/U_clk_control_i_2/fast_clk_enable_l_reg/RSTB
 
 Information: Checking 'unexpandable_clocks'.
 Information: Checking 'latch_fanout'.

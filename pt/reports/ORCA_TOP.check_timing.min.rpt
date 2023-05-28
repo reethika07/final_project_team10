@@ -1,10 +1,23 @@
 Information: Checking 'no_input_delay'.
 Information: Checking 'no_driving_cell'.
+Warning: There are 3 ports with parasitics but with no driving cell.
+
+Ports
+------------------------------------------------------------
+pll_bypass
+pll_reset
+test_si7
+
 Information: Checking 'unconstrained_endpoints'.
 Warning: There are 12 endpoints which are not constrained for maximum delay.
 
 Endpoint
 --------------------------------------------------------------------------------
+I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_0/q_reg/D
+snps_clk_chain_1/U_shftreg_0/ff_3/q_reg/D
+snps_clk_chain_1/U_shftreg_0/ff_2/q_reg/D
+snps_clk_chain_1/U_shftreg_0/ff_1/q_reg/D
+snps_clk_chain_1/U_shftreg_0/ff_0/q_reg/D
 test_so[5]
 snps_clk_chain_1/U_shftreg_0/ff_4/q_reg/D
 test_so[4]
@@ -12,11 +25,6 @@ sd_CK
 sd_CKn
 I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_1/q_reg/D
 snps_clk_chain_1/U_shftreg_0/ff_5/q_reg/D
-I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_0/q_reg/D
-snps_clk_chain_1/U_shftreg_0/ff_3/q_reg/D
-snps_clk_chain_1/U_shftreg_0/ff_0/q_reg/D
-snps_clk_chain_1/U_shftreg_0/ff_1/q_reg/D
-snps_clk_chain_1/U_shftreg_0/ff_2/q_reg/D
 
 Information: Checking 'unexpandable_clocks'.
 Information: Checking 'latch_fanout'.

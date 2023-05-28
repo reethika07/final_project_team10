@@ -2,79 +2,79 @@
 Report : qor
 Design : ORCA_TOP
 Version: O-2018.06
-Date   : Tue May 23 19:18:20 2023
+Date   : Fri May 26 22:58:43 2023
 ****************************************
 
   Timing Path Group '**async_default**' (min_delay/hold)
   ---------------------------------------------
-  Levels of Logic:                            5
-  Critical Path Length:                3059.000
-  Critical Path Slack:                -5637.041
-  Total Negative Slack:            -3405672.000
-  No. of Violating Paths:                  2241
+  Levels of Logic:                            4
+  Critical Path Length:                   0.410
+  Critical Path Slack:                    0.009
+  Total Negative Slack:                   0.000
+  No. of Violating Paths:                     0
   ---------------------------------------------
 
   Timing Path Group '**clock_gating_default**' (min_delay/hold)
   ---------------------------------------------
   Levels of Logic:                            2
-  Critical Path Length:                  93.270
-  Critical Path Slack:                  -11.521
-  Total Negative Slack:                 -77.731
-  No. of Violating Paths:                     9
+  Critical Path Length:                   0.397
+  Critical Path Slack:                    0.177
+  Total Negative Slack:                   0.000
+  No. of Violating Paths:                     0
   ---------------------------------------------
 
   Timing Path Group 'PCI_CLK' (min_delay/hold)
   ---------------------------------------------
-  Levels of Logic:                            2
-  Critical Path Length:                 676.253
-  Critical Path Slack:                -2825.540
-  Total Negative Slack:             -223776.062
-  No. of Violating Paths:                   266
+  Levels of Logic:                            1
+  Critical Path Length:                   0.222
+  Critical Path Slack:                    0.046
+  Total Negative Slack:                   0.000
+  No. of Violating Paths:                     0
   ---------------------------------------------
 
   Timing Path Group 'SDRAM_CLK' (min_delay/hold)
   ---------------------------------------------
-  Levels of Logic:                            4
-  Critical Path Length:                  28.482
-  Critical Path Slack:                -3913.998
-  Total Negative Slack:            -2574721.750
-  No. of Violating Paths:                  2587
+  Levels of Logic:                            0
+  Critical Path Length:                   0.106
+  Critical Path Slack:                   -0.087
+  Total Negative Slack:                  -4.684
+  No. of Violating Paths:                    64
   ---------------------------------------------
 
   Timing Path Group 'SD_DDR_CLK' (min_delay/hold)
   ---------------------------------------------
   Levels of Logic:                            5
-  Critical Path Length:                 401.489
-  Critical Path Slack:                  392.337
+  Critical Path Length:                   0.127
+  Critical Path Slack:                    0.065
   Total Negative Slack:                   0.000
   No. of Violating Paths:                     0
   ---------------------------------------------
 
   Timing Path Group 'SYS_2x_CLK' (min_delay/hold)
   ---------------------------------------------
-  Levels of Logic:                            6
-  Critical Path Length:                   3.639
-  Critical Path Slack:                 -827.264
-  Total Negative Slack:              -25237.176
-  No. of Violating Paths:                   153
+  Levels of Logic:                            3
+  Critical Path Length:                   0.330
+  Critical Path Slack:                    0.024
+  Total Negative Slack:                   0.000
+  No. of Violating Paths:                     0
   ---------------------------------------------
 
   Timing Path Group 'SYS_CLK' (min_delay/hold)
   ---------------------------------------------
-  Levels of Logic:                           20
-  Critical Path Length:                  76.471
-  Critical Path Slack:                -8619.284
-  Total Negative Slack:            -2157558.000
-  No. of Violating Paths:                  1749
+  Levels of Logic:                            2
+  Critical Path Length:                   0.308
+  Critical Path Slack:                    0.025
+  Total Negative Slack:                   0.000
+  No. of Violating Paths:                     0
   ---------------------------------------------
 
   Timing Path Group 'v_PCI_CLK' (min_delay/hold)
   ---------------------------------------------
   Levels of Logic:                            2
-  Critical Path Length:                 755.632
-  Critical Path Slack:                  755.282
-  Total Negative Slack:                   0.000
-  No. of Violating Paths:                     0
+  Critical Path Length:                   0.239
+  Critical Path Slack:                   -0.111
+  Total Negative Slack:                  -3.433
+  No. of Violating Paths:                    32
   ---------------------------------------------
 
   Cell Count
@@ -96,15 +96,13 @@ Date   : Tue May 23 19:18:20 2023
   Design Rule Violations
   ---------------------------------------------
   Total No. of Pins in Design:           191958
-  clock_gating_hold Count:                    9
-  sequential_clock_pulse_width Count:      5187
-  max_capacitance Count:                      2
+  max_capacitance Count:                     57
   min_capacitance Count:                     16
-  clock_gating_hold Cost:               -77.731
-  sequential_clock_pulse_width Cost:-105255.484
-  max_capacitance Cost:                -156.447
+  max_transition Count:                       2
+  max_capacitance Cost:                -405.117
   min_capacitance Cost:                  -1.424
-  Total DRC Cost:                   -105491.086
+  max_transition Cost:                   -0.002
+  Total DRC Cost:                      -406.543
   ---------------------------------------------
 
 1
