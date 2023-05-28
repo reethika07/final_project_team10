@@ -1,0 +1,10 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> exit
+Maximum memory usage for this session: 749.33 MB
+CPU usage for this session: 3 seconds 
+Elapsed time for this session: 5 seconds
+Diagnostics summary: 1 error
+
+Thank you for using pt_shell!
+

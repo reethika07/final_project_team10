@@ -1,31 +1,86 @@
 Information: Checking 'no_input_delay'.
 Information: Checking 'no_driving_cell'.
 Information: Checking 'unconstrained_endpoints'.
-Warning: There are 2 endpoints which are not constrained for maximum delay.
+Warning: There are 65 endpoints which are not constrained for maximum delay.
 
 Endpoint
 --------------------------------------------------------------------------------
-sd_CK
+occ_int2/U_clk_control_i_0/load_n_meta_1_l_reg/RSTB
+I_CLOCKING/occ_int1/U_clk_control_i_0/fast_clk_enable_l_reg/RSTB
+occ_int2/U_clk_control_i_2/U_cycle_ctr_i/count_int_reg[1]/RSTB
+snps_clk_chain_1/U_shftreg_0/ff_2/q_reg/D
+I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_0_l_reg/RSTB
+I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_0_l_reg/D
+I_CLOCKING/sys_rst_ff_reg/RSTB
+I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_2_l_reg/RSTB
+test_so7
+occ_int2/U_clk_control_i_0/U_cycle_ctr_i/count_int_reg[0]/RSTB
+occ_int2/U_clk_control_i_1/load_n_meta_1_l_reg/RSTB
+occ_int2/U3/A3
+occ_int2/U_clk_control_i_2/load_n_meta_2_l_reg/RSTB
+occ_int2/U2/A3
+snps_clk_chain_1/U_shftreg_0/ff_3/q_reg/D
+I_CLOCKING/occ_int1/U1/A3
+I_CLOCKING/occ_int1/U_clk_control_i_0/U_cycle_ctr_i/count_int_reg[0]/RSTB
+occ_int2/U_clk_control_i_0/load_n_meta_0_l_reg/D
+occ_int2/U_clk_control_i_0/U_cycle_ctr_i/count_int_reg[1]/RSTB
+occ_int2/U_clk_control_i_0/load_n_meta_0_l_reg/RSTB
+I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_1/q_reg/D
+occ_int2/U_clk_control_i_1/pipeline_or_tree_l_reg/RSTB
+I_CLOCKING/sdram_rst_ff_reg/RSTB
+occ_int2/U_clk_control_i_1/fast_clk_enable_l_reg/RSTB
+I_CLOCKING/sdram_rst_n_buf_reg/RSTB
+occ_int2/U_clk_control_i_1/U_cycle_ctr_i/count_int_reg[0]/RSTB
+occ_int2/U_clk_control_i_2/fast_clk_enable_l_reg/RSTB
+occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/RSTB
+I_CLOCKING/occ_int1/U_clk_control_i_0/U_cycle_ctr_i/count_int_reg[1]/RSTB
+I_CLOCKING/pci_rst_n_buf_reg/RSTB
+occ_int2/U_clk_control_i_2/U_cycle_ctr_i/count_int_reg[0]/RSTB
+occ_int2/U_clk_control_i_1/U_cycle_ctr_i/count_int_reg[1]/RSTB
+I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_1_l_reg/RSTB
+I_CLOCKING/sys_2x_rst_ff_reg/RSTB
 sd_CKn
+I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_0/q_reg/D
+I_CLOCKING/prst_ff_reg/RSTB
+occ_int2/U_clk_control_i_0/pipeline_or_tree_l_reg/RSTB
+I_CLOCKING/occ_int1/U_clk_control_i_0/U_cycle_ctr_i/tercnt_n_reg_reg/RSTB
+snps_clk_chain_1/U_shftreg_0/ff_5/q_reg/D
+occ_int2/U_clk_control_i_0/U_cycle_ctr_i/tercnt_n_reg_reg/RSTB
+sd_CK
+occ_int2/U_clk_control_i_1/load_n_meta_0_l_reg/D
+occ_int2/U_clk_control_i_1/load_n_meta_0_l_reg/RSTB
+test_so[1]
+occ_int2/U_clk_control_i_2/load_n_meta_0_l_reg/D
+occ_int2/U_clk_control_i_2/load_n_meta_0_l_reg/RSTB
+occ_int2/U_clk_control_i_2/pipeline_or_tree_l_reg/RSTB
+test_so[5]
+test_so[4]
+occ_int2/U_clk_control_i_2/U_cycle_ctr_i/tercnt_n_reg_reg/RSTB
+test_so[0]
+test_so[3]
+test_so[2]
+snps_clk_chain_1/U_shftreg_0/ff_0/q_reg/D
+occ_int2/U_clk_control_i_0/load_n_meta_2_l_reg/RSTB
+I_CLOCKING/occ_int1/U_clk_control_i_0/pipeline_or_tree_l_reg/RSTB
+occ_int2/U_clk_control_i_2/load_n_meta_1_l_reg/RSTB
+snps_clk_chain_1/U_shftreg_0/ff_1/q_reg/D
+occ_int2/U_clk_control_i_1/U_cycle_ctr_i/tercnt_n_reg_reg/RSTB
+I_CLOCKING/sys_rst_n_buf_reg/RSTB
+occ_int2/U_clk_control_i_1/load_n_meta_2_l_reg/RSTB
+snps_clk_chain_1/U_shftreg_0/ff_4/q_reg/D
+I_CLOCKING/sys_2x_rst_n_buf_reg/RSTB
+occ_int2/U1/A3
 
 Information: Checking 'unexpandable_clocks'.
-Warning: There is 1 clock set for which periods were not expandable.
-
- Failed clocks set      Related clocks
---------------------------------------------------------------------------------
-  1                     PCI_CLK
-  1                     SDRAM_CLK
-  1                     SYS_2x_CLK
-  1                     SYS_CLK
-  1                     ate_clk
-  1                     v_SDRAM_CLK
-
 Information: Checking 'latch_fanout'.
 Information: Checking 'no_clock'.
-Warning: There are 16 register clock pins with no clock.
+Warning: There are 28 register clock pins with no clock.
 
 Clock Pin
 ------------------------------------------------------------
+I_CLOCKING/occ_int1/U_clk_control_i_0/slow_clk_enable_l_reg/CLK
+I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_0/q_reg/CLK
+I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_1/q_reg/CLK
 I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_1/CE1
 I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_2/CE1
 I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_3/CE1
@@ -42,12 +97,19 @@ I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_5/CE2
 I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_6/CE2
 I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_7/CE2
 I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_8/CE2
+occ_int2/U_clk_control_i_0/slow_clk_enable_l_reg/CLK
+occ_int2/U_clk_control_i_1/slow_clk_enable_l_reg/CLK
+occ_int2/U_clk_control_i_2/slow_clk_enable_l_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_0/q_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_1/q_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_2/q_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_3/q_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_4/q_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_5/q_reg/CLK
 
 Information: Checking 'partial_input_delay'.
 Information: Checking 'generic'.
 Information: Checking 'loops'.
-Error: Generated clock 'SD_DDR_CLK' has no path to its master clock. (PTE-075)
-Error: Generated clock 'SD_DDR_CLKn' has no path to its master clock. (PTE-075)
 Information: Checking 'generated_clocks'.
 Information: Checking 'pulse_clock_non_pulse_clock_merge'.
 Information: Checking 'pll_configuration'.

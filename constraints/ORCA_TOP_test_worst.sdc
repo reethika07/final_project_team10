@@ -281,14 +281,14 @@ set_clock_transition -max -rise 0.2 [get_clocks SYS_CLK]
 set_clock_transition -max -fall 0.2 [get_clocks SYS_CLK]
 set_clock_transition -min -rise 0.2 [get_clocks SYS_CLK]
 set_clock_transition -min -fall 0.2 [get_clocks SYS_CLK]
-create_clock [get_ports sdram_clk]  -name SDRAM_CLK  -period 4.1  -waveform {0 2.05}
+create_clock [get_ports sdram_clk]  -name SDRAM_CLK  -period 6.0  -waveform {0 3.00}
 set_clock_uncertainty -setup 0.1  [get_clocks SDRAM_CLK]
 set_clock_uncertainty -hold 0  [get_clocks SDRAM_CLK]
 set_clock_transition -max -rise 0.2 [get_clocks SDRAM_CLK]
 set_clock_transition -max -fall 0.2 [get_clocks SDRAM_CLK]
 set_clock_transition -min -rise 0.2 [get_clocks SDRAM_CLK]
 set_clock_transition -min -fall 0.2 [get_clocks SDRAM_CLK]
-create_clock -name v_SDRAM_CLK  -period 4.1  -waveform {0 2.05}
+create_clock -name v_SDRAM_CLK  -period 6.0  -waveform {0 3.00}
 set_clock_uncertainty -setup 0.1  [get_clocks v_SDRAM_CLK]
 set_clock_uncertainty -hold 0  [get_clocks v_SDRAM_CLK]
 create_generated_clock [get_ports sd_CK] -name SD_DDR_CLK -source [get_ports sdram_clk] -combinational

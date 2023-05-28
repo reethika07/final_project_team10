@@ -1,0 +1,581 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Launching 14 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   9] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  10] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  11] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  12] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  13] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  14] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for  14 (of  14) workers    : Thu May 25 11:46:10 2023
+  Waiting for   0 (of  14) workers    : Thu May 25 11:46:20 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Thu May 25 11:46:20 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           14                      auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         16078         ONLINE
+                   2    mo           -         16012         ONLINE
+                   3    mo           -         16059         ONLINE
+                   4    mo           -         16053         ONLINE
+                   5    mo           -         16013         ONLINE
+                   6    mo           -         16049         ONLINE
+                   7    mo           -         16011         ONLINE
+                   8    mo           -         16074         ONLINE
+                   9    mo           -         16242         ONLINE
+                   10   mo           -         16243         ONLINE
+                   11   mo           -         16233         ONLINE
+                   12   mo           -         16236         ONLINE
+                   13   mo           -         16240         ONLINE
+                   14   mo           -         16237         ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+                   9                                         4
+                   10                                        4
+                   11                                        4
+                   12                                        4
+                   13                                        4
+                   14                                        4
+  --------------------------------------------------------------------
+  Total                                                      56
+
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Thu May 25 11:48:04 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'test_worst'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_SDRAM_TOP/I_SDRAM_IF/DQ_out_1_reg_18_
+               (falling edge-triggered flip-flop clocked by SDRAM_CLK)
+  Endpoint: sd_DQ_out[18]
+               (output port clocked by v_SDRAM_CLK)
+  Path Group: OUTPUTS
+  Path Type: max
+  Scenario: atspeed_cap
+  Min Clock Paths Derating Factor : 0.95
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SDRAM_CLK (fall edge)                             2.05       2.05
+  clock network delay (propagated)                        1.18       3.23
+  I_SDRAM_TOP/I_SDRAM_IF/DQ_out_1_reg_18_/CLK (DFFNARX1_HVT)
+                                                          0.00       3.23 f
+  I_SDRAM_TOP/I_SDRAM_IF/DQ_out_1_reg_18_/Q (DFFNARX1_HVT)
+                                                          1.29 &     4.52 f
+  I_SDRAM_TOP/I_SDRAM_IF/U13021/Y (AO22X1_RVT)            0.63 &     5.16 f
+  I_SDRAM_TOP/I_SDRAM_IF/ZBUF_20_inst_53781/Y (NBUFFX2_RVT)
+                                                          0.18 &     5.34 f
+  ZBUF_4_inst_53737/Y (NBUFFX2_LVT)                       0.14 &     5.48 f
+  sd_DQ_out[18] (out)                                     0.00 &     5.48 f
+  data arrival time                                                  5.48
+
+  clock v_SDRAM_CLK (rise edge)                           4.10       4.10
+  clock network delay (ideal)                             0.50       4.60
+  clock reconvergence pessimism                           0.00       4.60
+  clock uncertainty                                      -0.10       4.50
+  output external delay                                  -1.10       3.40
+  data required time                                                 3.40
+  ------------------------------------------------------------------------------
+  data required time                                                 3.40
+  data arrival time                                                 -5.48
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -2.08
+
+
+1
+pt_shell> report_timing -delay_type  min
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Thu May 25 11:48:19 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'test_best'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_8/CE2
+               (internal path startpoint clocked by ate_clk)
+  Endpoint: I_CONTEXT_MEM/I_CONTEXT_RAM_3_4
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Last common pin: I_CLOCKING/occ_int1/cts_buf_693832355/Y
+  Path Group: ate_clk
+  Path Type: min
+  Scenario: atspeed_shift
+  Min Data Paths Derating Factor  : 0.75
+  Min Clock Paths Derating Factor : 0.75
+  Max Clock Paths Derating Factor : 1.05
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.17       0.17
+  I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_8/CE2 (SRAM2RW32x4)
+                                                          0.00       0.17 r
+  I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_8/O2[2] (SRAM2RW32x4)
+                                                          0.02 &     0.19 f
+  I_PCI_TOP/sram_fixcell_365/Y (NBUFFX16_HVT)             0.02 &     0.22 f
+  I_CONTEXT_MEM/U236/Y (NBUFFX32_LVT)                     0.04 &     0.25 f
+  I_CONTEXT_MEM/I_CONTEXT_RAM_3_4/I1[6] (SRAM2RW64x8)    -0.00 &     0.25 f
+  data arrival time                                                  0.25
+
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.24       0.24
+  clock reconvergence pessimism                          -0.03       0.21
+  I_CONTEXT_MEM/I_CONTEXT_RAM_3_4/CE1 (SRAM2RW64x8)                  0.21 r
+  library hold time                                       0.05       0.26
+  data required time                                                 0.26
+  ------------------------------------------------------------------------------
+  data required time                                                 0.26
+  data arrival time                                                 -0.25
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+1
+pt_shell> report_timing -delay_type  max
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Thu May 25 11:48:45 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_SDRAM_TOP/I_SDRAM_IF/DQ_out_1_reg_18_
+               (falling edge-triggered flip-flop clocked by SDRAM_CLK)
+  Endpoint: sd_DQ_out[18]
+               (output port clocked by v_SDRAM_CLK)
+  Path Group: OUTPUTS
+  Path Type: max
+  Scenario: atspeed_cap
+  Min Clock Paths Derating Factor : 0.95
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SDRAM_CLK (fall edge)                             2.05       2.05
+  clock network delay (propagated)                        1.18       3.23
+  I_SDRAM_TOP/I_SDRAM_IF/DQ_out_1_reg_18_/CLK (DFFNARX1_HVT)
+                                                          0.00       3.23 f
+  I_SDRAM_TOP/I_SDRAM_IF/DQ_out_1_reg_18_/Q (DFFNARX1_HVT)
+                                                          1.29 &     4.52 f
+  I_SDRAM_TOP/I_SDRAM_IF/U13021/Y (AO22X1_RVT)            0.63 &     5.16 f
+  I_SDRAM_TOP/I_SDRAM_IF/ZBUF_20_inst_53781/Y (NBUFFX2_RVT)
+                                                          0.18 &     5.34 f
+  ZBUF_4_inst_53737/Y (NBUFFX2_LVT)                       0.14 &     5.48 f
+  sd_DQ_out[18] (out)                                     0.00 &     5.48 f
+  data arrival time                                                  5.48
+
+  clock v_SDRAM_CLK (rise edge)                           4.10       4.10
+  clock network delay (ideal)                             0.50       4.60
+  clock reconvergence pessimism                           0.00       4.60
+  clock uncertainty                                      -0.10       4.50
+  output external delay                                  -1.10       3.40
+  data required time                                                 3.40
+  ------------------------------------------------------------------------------
+  data required time                                                 3.40
+  data arrival time                                                 -5.48
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -2.08
+
+
+1
+pt_shell> report_timing -delay_type  min
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Thu May 25 11:49:47 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_8/CE2
+               (internal path startpoint clocked by ate_clk)
+  Endpoint: I_CONTEXT_MEM/I_CONTEXT_RAM_3_4
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Last common pin: I_CLOCKING/occ_int1/cts_buf_693832355/Y
+  Path Group: ate_clk
+  Path Type: min
+  Scenario: atspeed_shift
+  Min Data Paths Derating Factor  : 0.75
+  Min Clock Paths Derating Factor : 0.75
+  Max Clock Paths Derating Factor : 1.05
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.17       0.17
+  I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_8/CE2 (SRAM2RW32x4)
+                                                          0.00       0.17 r
+  I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_8/O2[2] (SRAM2RW32x4)
+                                                          0.02 &     0.19 f
+  I_PCI_TOP/sram_fixcell_365/Y (NBUFFX16_HVT)             0.02 &     0.22 f
+  I_CONTEXT_MEM/U236/Y (NBUFFX32_LVT)                     0.04 &     0.25 f
+  I_CONTEXT_MEM/I_CONTEXT_RAM_3_4/I1[6] (SRAM2RW64x8)    -0.00 &     0.25 f
+  data arrival time                                                  0.25
+
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.24       0.24
+  clock reconvergence pessimism                          -0.03       0.21
+  I_CONTEXT_MEM/I_CONTEXT_RAM_3_4/CE1 (SRAM2RW64x8)                  0.21 r
+  library hold time                                       0.05       0.26
+  data required time                                                 0.26
+  ------------------------------------------------------------------------------
+  data required time                                                 0.26
+  data arrival time                                                 -0.25
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.01
+
+
+1
+pt_shell> report_timing -delay_type  max
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Thu May 25 11:50:05 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'test_slowfast'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_SDRAM_TOP/I_SDRAM_IF/DQ_out_1_reg_18_
+               (falling edge-triggered flip-flop clocked by SDRAM_CLK)
+  Endpoint: sd_DQ_out[18]
+               (output port clocked by v_SDRAM_CLK)
+  Path Group: OUTPUTS
+  Path Type: max
+  Scenario: atspeed_cap
+  Min Clock Paths Derating Factor : 0.95
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SDRAM_CLK (fall edge)                             2.05       2.05
+  clock network delay (propagated)                        1.18       3.23
+  I_SDRAM_TOP/I_SDRAM_IF/DQ_out_1_reg_18_/CLK (DFFNARX1_HVT)
+                                                          0.00       3.23 f
+  I_SDRAM_TOP/I_SDRAM_IF/DQ_out_1_reg_18_/Q (DFFNARX1_HVT)
+                                                          1.29 &     4.52 f
+  I_SDRAM_TOP/I_SDRAM_IF/U13021/Y (AO22X1_RVT)            0.63 &     5.16 f
+  I_SDRAM_TOP/I_SDRAM_IF/ZBUF_20_inst_53781/Y (NBUFFX2_RVT)
+                                                          0.18 &     5.34 f
+  ZBUF_4_inst_53737/Y (NBUFFX2_LVT)                       0.14 &     5.48 f
+  sd_DQ_out[18] (out)                                     0.00 &     5.48 f
+  data arrival time                                                  5.48
+
+  clock v_SDRAM_CLK (rise edge)                           4.10       4.10
+  clock network delay (ideal)                             0.50       4.60
+  clock reconvergence pessimism                           0.00       4.60
+  clock uncertainty                                      -0.10       4.50
+  output external delay                                  -1.10       3.40
+  data required time                                                 3.40
+  ------------------------------------------------------------------------------
+  data required time                                                 3.40
+  data arrival time                                                 -5.48
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -2.08
+
+
+1
+pt_shell> ,,,,,,,lp ,0
+Error: unknown command ',,,,,,,lp' (CMD-005)
+pt_shell> exit
+Maximum memory usage for distributed processes:
+my_opts1        1   mo                 782.07 MB
+                2   mo                 772.91 MB
+                3   mo                 790.99 MB
+                4   mo                 751.16 MB
+                5   mo                 761.84 MB
+                6   mo                 788.80 MB
+                7   mo                 637.59 MB
+                8   mo                 780.95 MB
+                9   mo                 764.50 MB
+                10  mo                 746.35 MB
+                11  mo                 779.75 MB
+                12  mo                 786.34 MB
+                13  mo                 778.17 MB
+                14  mo                 764.50 MB
+CPU time usage for distributed processes:
+my_opts1        1   mo                 202 seconds
+                2   mo                 198 seconds
+                3   mo                 200 seconds
+                4   mo                 196 seconds
+                5   mo                 203 seconds
+                6   mo                 198 seconds
+                7   mo                 83 seconds
+                8   mo                 198 seconds
+                9   mo                 2 seconds
+                10  mo                 197 seconds
+                11  mo                 186 seconds
+                12  mo                 190 seconds
+                13  mo                 195 seconds
+                14  mo                 2 seconds
+Elapsed time for distributed processes:
+my_opts1        1   mo                 963 seconds
+                2   mo                 963 seconds
+                3   mo                 962 seconds
+                4   mo                 963 seconds
+                5   mo                 963 seconds
+                6   mo                 963 seconds
+                7   mo                 963 seconds
+                8   mo                 963 seconds
+                9   mo                 962 seconds
+                10  mo                 962 seconds
+                11  mo                 962 seconds
+                12  mo                 962 seconds
+                13  mo                 962 seconds
+                14  mo                 961 seconds
+Maximum memory usage for this session: 853.36 MB
+CPU usage for this session: 2 seconds 
+Elapsed time for this session: 973 seconds
+Shutting down worker processes ...
+ Shutdown Process 1
+ Shutdown Process 2
+ Shutdown Process 3
+ Shutdown Process 4
+ Shutdown Process 5
+ Shutdown Process 6
+ Shutdown Process 7
+ Shutdown Process 8
+ Shutdown Process 9
+ Shutdown Process 10
+ Shutdown Process 11
+ Shutdown Process 12
+ Shutdown Process 13
+ Shutdown Process 14
+Diagnostics summary: 2 errors, 36 informationals
+
+Thank you for using pt_shell!
+

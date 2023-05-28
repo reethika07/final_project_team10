@@ -1,0 +1,224 @@
+set top_design {ORCA_TOP}
+ORCA_TOP
+set dmsa {2}
+2
+source -echo /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts/atspeed_capture.tcl
+#set topdir /u/$env(USER)/PSU_RTL2GDS
+set topdir [lindex [ regexp -inline "(.*)pt" [pwd] ] 1 ]
+source $topdir/$top_design.design_config.tcl
+Error: could not open script file "/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/atspeed_ca/ORCA_TOP.design_config.tcl" (CMD-015)
+Information: script '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts/atspeed_capture.tcl'
+	stopped at line 5 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"snps_cci_builtin_source  /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/atspeed_ca/ORCA_TOP.design_config.tcl"
+    invoked from within
+"source $topdir/$top_design.design_config.tcl"
+ -- End Extended Error Info
+Error: 
+	Use error_info for more info. (CMD-013)
+
+report_timing
+Error: Current design is not defined. (DES-001)
+
+report_qor
+0
+report_timing
+Error: Current design is not defined. (DES-001)
+
+set top_design {ORCA_TOP}
+ORCA_TOP
+set dmsa {2}
+2
+source -echo /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts/atspeed_capture.tcl
+#set topdir /u/$env(USER)/PSU_RTL2GDS
+set topdir [lindex [ regexp -inline "(.*)pt" [pwd] ] 1 ]
+source $topdir/$top_design.design_config.tcl
+Error: could not open script file "/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/atspeed_ca/ORCA_TOP.design_config.tcl" (CMD-015)
+Information: script '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts/atspeed_capture.tcl'
+	stopped at line 5 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"snps_cci_builtin_source  /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/atspeed_ca/ORCA_TOP.design_config.tcl"
+    invoked from within
+"source $topdir/$top_design.design_config.tcl"
+ -- End Extended Error Info
+Error: 
+	Use error_info for more info. (CMD-013)
+
+report_timing
+Error: Current design is not defined. (DES-001)
+
+report_timing -nworst 100
+
+report_timing  -group {{test_best/}  }
+Error: Current design is not defined. (DES-001)
+
+report_timing  -group {{PCI_CLK}  }
+
+report_timing -path_type full_clock
+Error: Current design is not defined. (DES-001)
+
+report_timing -path_type full_clock_expanded
+
+set top_design {ORCA_TOP}
+ORCA_TOP
+set dmsa {2}
+2
+source -echo /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts/atspeed_capture.tcl
+#set topdir /u/$env(USER)/PSU_RTL2GDS
+set topdir [lindex [ regexp -inline "(.*)pt" [pwd] ] 1 ]
+source $topdir/$top_design.design_config.tcl
+Error: could not open script file "/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/atspeed_ca/ORCA_TOP.design_config.tcl" (CMD-015)
+Information: script '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts/atspeed_capture.tcl'
+	stopped at line 5 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"snps_cci_builtin_source  /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/atspeed_ca/ORCA_TOP.design_config.tcl"
+    invoked from within
+"source $topdir/$top_design.design_config.tcl"
+ -- End Extended Error Info
+Error: 
+	Use error_info for more info. (CMD-013)
+
+report_timing
+Error: Current design is not defined. (DES-001)
+
+report_qor
+0
+report_qor
+Error: Current design is not defined. (DES-001)
+0
+Information: Variable 'search_path' is assigned the value ' /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts' following merging of the worker-side value '' and the master-side value '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts' (DIST-005)
+set top_design {ORCA_TOP}
+ORCA_TOP
+set dmsa {2}
+2
+source -echo /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts/atspeed_capture.tcl
+#set topdir /u/$env(USER)/PSU_RTL2GDS
+set topdir [lindex [ regexp -inline "(.*)pt" [pwd] ] 1 ]
+source $topdir/$top_design.design_config.tcl
+Error: could not open script file "/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/atspeed_ca/ORCA_TOP.design_config.tcl" (CMD-015)
+Information: script '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts/atspeed_capture.tcl'
+	stopped at line 5 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"snps_cci_builtin_source  /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/atspeed_ca/ORCA_TOP.design_config.tcl"
+    invoked from within
+"source $topdir/$top_design.design_config.tcl"
+ -- End Extended Error Info
+Error: 
+	Use error_info for more info. (CMD-013)
+
+report_constraint -all_violators -nosplit
+Error: Current design is not defined. (DES-001)
+
+report_timing
+
+report_timing -delay_type min
+Error: Current design is not defined. (DES-001)
+
+Information: Variable 'search_path' is assigned the value ' /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts' following merging of the worker-side value '' and the master-side value '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts' (DIST-005)
+set top_design {ORCA_TOP}
+ORCA_TOP
+set dmsa {2}
+2
+source -echo /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts/atspeed_capture.tcl
+#set topdir /u/$env(USER)/PSU_RTL2GDS
+set topdir [lindex [ regexp -inline "(.*)pt" [pwd] ] 1 ]
+source $topdir/$top_design.design_config.tcl
+Error: could not open script file "/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/atspeed_ca/ORCA_TOP.design_config.tcl" (CMD-015)
+Information: script '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts/atspeed_capture.tcl'
+	stopped at line 5 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"snps_cci_builtin_source  /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/atspeed_ca/ORCA_TOP.design_config.tcl"
+    invoked from within
+"source $topdir/$top_design.design_config.tcl"
+ -- End Extended Error Info
+Error: 
+	Use error_info for more info. (CMD-013)
+
+report_constraint -all_violators -nosplit
+Error: Current design is not defined. (DES-001)
+
+Information: Variable 'search_path' is assigned the value ' /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master' following merging of the worker-side value '' and the master-side value '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master' (DIST-005)
+set top_design {ORCA_TOP}
+ORCA_TOP
+set dmsa {2}
+2
+source -echo /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts/atspeed_capture.tcl
+#set topdir /u/$env(USER)/PSU_RTL2GDS
+set topdir [lindex [ regexp -inline "(.*)pt" [pwd] ] 1 ]
+source $topdir/$top_design.design_config.tcl
+Error: could not open script file "/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/atspeed_ca/ORCA_TOP.design_config.tcl" (CMD-015)
+Information: script '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts/atspeed_capture.tcl'
+	stopped at line 5 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"snps_cci_builtin_source  /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/atspeed_ca/ORCA_TOP.design_config.tcl"
+    invoked from within
+"source $topdir/$top_design.design_config.tcl"
+ -- End Extended Error Info
+Error: 
+	Use error_info for more info. (CMD-013)
+
+report_constraint -all_violators -nosplit
+Error: Current design is not defined. (DES-001)
+
+Information: Variable 'search_path' is assigned the value ' /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master' following merging of the worker-side value '' and the master-side value '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master' (DIST-005)
+set top_design {ORCA_TOP}
+ORCA_TOP
+set dmsa {2}
+2
+source -echo /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts/atspeed_capture.tcl
+#set topdir /u/$env(USER)/PSU_RTL2GDS
+set topdir [lindex [ regexp -inline "(.*)pt" [pwd] ] 1 ]
+source $topdir/$top_design.design_config.tcl
+Error: could not open script file "/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/atspeed_ca/ORCA_TOP.design_config.tcl" (CMD-015)
+Information: script '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts/atspeed_capture.tcl'
+	stopped at line 5 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"snps_cci_builtin_source  /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/atspeed_ca/ORCA_TOP.design_config.tcl"
+    invoked from within
+"source $topdir/$top_design.design_config.tcl"
+ -- End Extended Error Info
+Error: 
+	Use error_info for more info. (CMD-013)
+
+report_constraint -all_violators -nosplit
+Error: Current design is not defined. (DES-001)
+
+Information: Variable 'search_path' is assigned the value ' /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master' following merging of the worker-side value '' and the master-side value '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master' (DIST-005)
+set top_design {ORCA_TOP}
+ORCA_TOP
+set dmsa {2}
+2
+source -echo /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts/atspeed_capture.tcl
+#set topdir /u/$env(USER)/PSU_RTL2GDS
+set topdir [lindex [ regexp -inline "(.*)pt" [pwd] ] 1 ]
+source $topdir/$top_design.design_config.tcl
+Error: could not open script file "/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/atspeed_ca/ORCA_TOP.design_config.tcl" (CMD-015)
+Information: script '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/scripts/atspeed_capture.tcl'
+	stopped at line 5 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"snps_cci_builtin_source  /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/atspeed_ca/ORCA_TOP.design_config.tcl"
+    invoked from within
+"source $topdir/$top_design.design_config.tcl"
+ -- End Extended Error Info
+Error: 
+	Use error_info for more info. (CMD-013)
+
+report_constraint -all_violators -nosplit
+Error: Current design is not defined. (DES-001)
+

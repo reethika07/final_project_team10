@@ -1,0 +1,48 @@
+Information: Checking 'no_input_delay'.
+Information: Checking 'no_driving_cell'.
+Information: Checking 'unconstrained_endpoints'.
+Information: Checking 'unexpandable_clocks'.
+Warning: There is 1 clock set for which periods were not expandable.
+
+ Failed clocks set      Related clocks
+--------------------------------------------------------------------------------
+  1                     PCI_CLK
+  1                     SDRAM_CLK
+  1                     SYS_2x_CLK
+  1                     SYS_CLK
+  1                     ate_clk
+  1                     v_PCI_CLK
+  1                     v_SDRAM_CLK
+
+Information: Checking 'latch_fanout'.
+Information: Checking 'no_clock'.
+Warning: There are 16 register clock pins with no clock.
+
+Clock Pin
+------------------------------------------------------------
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_1/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_2/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_3/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_4/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_5/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_6/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_7/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_8/CE1
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_1/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_2/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_3/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_4/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_5/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_6/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_7/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_8/CE2
+
+Information: Checking 'partial_input_delay'.
+Information: Checking 'generic'.
+Information: Checking 'loops'.
+Error: Generated clock 'SD_DDR_CLK' has no path to its master clock. (PTE-075)
+Error: Generated clock 'SD_DDR_CLKn' has no path to its master clock. (PTE-075)
+Information: Checking 'generated_clocks'.
+Information: Checking 'pulse_clock_non_pulse_clock_merge'.
+Information: Checking 'pll_configuration'.
+0

@@ -1,0 +1,77 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl .t
+Error: extra positional option '.t' (CMD-012)
+pt_shell> source ../scripts/dmsa.tcl
+Error: 'start_hosts' can only be called in a distributed processing context. (CMCR-012)
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Sat May 20 21:20:42 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           8                       auto
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1                                                   -
+  --------------------------------------------------------------------
+  Total                                                      4
+
+Error: unknown command 'create_scenario' (CMD-005)
+Information: script '../scripts/dmsa.tcl'
+        stopped at line 14 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"create_scenario -name func_max -specific_data pt_max.tcl -common_variable {top_design dmsa}"
+ -- End Extended Error Info
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Warning: Replacing host options 'my_opts1'. (CMCR-003)
+Error: 'start_hosts' can only be called in a distributed processing context. (CMCR-012)
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Sat May 20 21:20:57 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           8                       auto
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1                                                   -
+  --------------------------------------------------------------------
+  Total                                                      4
+
+Error: unknown command 'create_scenario' (CMD-005)
+Information: script '../scripts/dmsa.tcl'
+        stopped at line 14 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"create_scenario -name func_max -specific_data pt_max.tcl -common_variable {top_design dmsa}"
+ -- End Extended Error Info
+pt_shell> exit
+Maximum memory usage for this session: 787.07 MB
+CPU usage for this session: 2 seconds 
+Elapsed time for this session: 113 seconds
+Diagnostics summary: 6 errors, 1 warning, 2 informationals
+
+Thank you for using pt_shell!
+

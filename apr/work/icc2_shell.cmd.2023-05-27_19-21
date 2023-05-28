@@ -1,0 +1,15 @@
+#@ # 
+#@ # Running icc2_shell Version Q-2019.12-SP4 for linux64 -- May 26, 2020
+#@ # Date:   Sat May 27 19:21:43 2023
+#@ # Run by: reethika@auto.ece.pdx.edu
+#@ 
+
+source /home/reethika/common/Desktop/final_prj-team_10-final/apr/work/.synopsys_icc2.setup
+o
+source ../scripts/icc2.tcl
+report_timing
+report_timing > reportbefore.rpt
+report_qor > qorbefore.rpt
+report_timing -group SDRAM_CLK
+report_timing -group SDRAM_CLK -type min
+report_timing -group SDRAM_CLK -delay_type min

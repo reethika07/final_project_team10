@@ -1,0 +1,184 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Launching 14 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   9] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  10] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  11] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  12] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  13] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  14] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for  14 (of  14) workers    : Sat May 20 23:37:52 2023
+  Waiting for   0 (of  14) workers    : Sat May 20 23:38:02 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Sat May 20 23:38:03 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           14                      auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         4132          ONLINE
+                   2    mo           -         4109          ONLINE
+                   3    mo           -         4110          ONLINE
+                   4    mo           -         4106          ONLINE
+                   5    mo           -         4107          ONLINE
+                   6    mo           -         4103          ONLINE
+                   7    mo           -         4105          ONLINE
+                   8    mo           -         4102          ONLINE
+                   9    mo           -         4376          ONLINE
+                   10   mo           -         4366          ONLINE
+                   11   mo           -         4402          ONLINE
+                   12   mo           -         4382          ONLINE
+                   13   mo           -         4412          ONLINE
+                   14   mo           -         4485          ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+                   9                                         4
+                   10                                        4
+                   11                                        4
+                   12                                        4
+                   13                                        4
+                   14                                        4
+  --------------------------------------------------------------------
+  Total                                                      56
+
+Error: Cannot open the following specific_data type files  '../scripts/ORCA_TOP_atspeed_shift.tcl' . (UIMS-004)
+Error: Scenario 'test_at_speed_shift' could not be created. (UIMS-025)
+Error: Cannot open the following specific_data type files  '../scripts/ORCA_TOP_atspeed_capture.tcl' . (UIMS-004)
+Error: Scenario 'test_at_speed_capture' could not be created. (UIMS-025)
+Error: Cannot open the following specific_data type files  '../scripts/ORCA_TOP_stuck_at_shift.tcl' . (UIMS-004)
+Error: Scenario 'test_stuck_at_shift' could not be created. (UIMS-025)
+Error: Cannot open the following specific_data type files  '../scripts/ORCA_TOP_stuck_at_capture.tcl' . (UIMS-004)
+Error: Scenario 'test_stuck_at_capture' could not be created. (UIMS-025)
+Warning: Nothing implicitly matched 'test_at_speed_shift' (SEL-003)
+Warning: Nothing implicitly matched 'test_at_speed_capture' (SEL-003)
+Warning: Nothing implicitly matched 'test_stuck_at_shift' (SEL-003)
+Warning: Nothing implicitly matched 'test_stuck_at_capture' (SEL-003)
+pt_shell> exit
+Maximum memory usage for distributed processes:
+my_opts1        1   mo                 763.41 MB
+                2   mo                 763.42 MB
+                3   mo                 763.42 MB
+                4   mo                 763.42 MB
+                5   mo                 763.42 MB
+                6   mo                 763.42 MB
+                7   mo                 763.40 MB
+                8   mo                 763.42 MB
+                9   mo                 763.41 MB
+                10  mo                 763.42 MB
+                11  mo                 763.41 MB
+                12  mo                 763.42 MB
+                13  mo                 763.42 MB
+                14  mo                 763.42 MB
+CPU time usage for distributed processes:
+my_opts1        1   mo                 2 seconds
+                2   mo                 2 seconds
+                3   mo                 2 seconds
+                4   mo                 2 seconds
+                5   mo                 2 seconds
+                6   mo                 2 seconds
+                7   mo                 2 seconds
+                8   mo                 2 seconds
+                9   mo                 2 seconds
+                10  mo                 2 seconds
+                11  mo                 2 seconds
+                12  mo                 2 seconds
+                13  mo                 2 seconds
+                14  mo                 2 seconds
+Elapsed time for distributed processes:
+my_opts1        1   mo                 342 seconds
+                2   mo                 342 seconds
+                3   mo                 342 seconds
+                4   mo                 342 seconds
+                5   mo                 342 seconds
+                6   mo                 342 seconds
+                7   mo                 342 seconds
+                8   mo                 342 seconds
+                9   mo                 341 seconds
+                10  mo                 341 seconds
+                11  mo                 341 seconds
+                12  mo                 341 seconds
+                13  mo                 341 seconds
+                14  mo                 341 seconds
+Maximum memory usage for this session: 846.57 MB
+CPU usage for this session: 2 seconds 
+Elapsed time for this session: 355 seconds
+Shutting down worker processes ...
+ Shutdown Process 1
+ Shutdown Process 2
+ Shutdown Process 3
+ Shutdown Process 4
+ Shutdown Process 5
+ Shutdown Process 6
+ Shutdown Process 7
+ Shutdown Process 8
+ Shutdown Process 9
+ Shutdown Process 10
+ Shutdown Process 11
+ Shutdown Process 12
+ Shutdown Process 13
+ Shutdown Process 14
+Diagnostics summary: 9 errors, 4 warnings, 1 informational
+
+Thank you for using pt_shell!
+

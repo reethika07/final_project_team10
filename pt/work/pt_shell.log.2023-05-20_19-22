@@ -1,0 +1,125 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Launching 8 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for   8 (of   8) workers    : Sat May 20 19:22:20 2023
+  Waiting for   0 (of   8) workers    : Sat May 20 19:22:30 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Sat May 20 19:22:31 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           8                       auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         21896         ONLINE
+                   2    mo           -         21897         ONLINE
+                   3    mo           -         21901         ONLINE
+                   4    mo           -         21900         ONLINE
+                   5    mo           -         21997         ONLINE
+                   6    mo           -         21902         ONLINE
+                   7    mo           -         21983         ONLINE
+                   8    mo           -         21895         ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+  --------------------------------------------------------------------
+  Total                                                      32
+
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 
+pt_shell> 

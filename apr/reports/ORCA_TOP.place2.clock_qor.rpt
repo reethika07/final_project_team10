@@ -5,7 +5,7 @@ Report : clock qor
         -type summary
 Design : ORCA_TOP
 Version: Q-2019.12-SP4
-Date   : Fri May 26 23:39:15 2023
+Date   : Sat May 27 20:34:46 2023
 ****************************************
 
 Attributes
@@ -26,42 +26,23 @@ Clock /                               Attrs     Sinks Levels    Clock     Clock 
 Skew Group                                                   Repeater  Repeater   Stdcell   Latency      Skew     Count     Count
                                                                 Count      Area      Area
 ------------------------------------------------------------------------------------------------------------------------------------
-### Mode: atspeed, Scenario: atspeed_cap
-SYS_2x_CLK                              M,D        16      2        0      0.00     21.35      0.50      0.00         0         0
- SYS_CLK                                  G         8      1        0      0.00      6.35      0.00      0.00         0         0
-PCI_CLK                                 M,D         8      1        0      0.00      6.35      0.50      0.00         0         0
-SDRAM_CLK                               M,D         8      1        0      0.00      6.35      0.50      0.00         0         0
-ate_clk                                 M,D         4      1        0      0.00     25.41      0.00      0.00         0         0
 ### Mode: func, Scenario: func_worst
-SDRAM_CLK                               M,D      2860      4        0      0.00     27.96      0.00      0.00         0         0
+SDRAM_CLK                               M,D      2860      4        0      0.00     24.91      0.00      0.00         0         0
  SD_DDR_CLK                               G         0      0        0      0.00      0.00        --        --         0         0
  SD_DDR_CLKn                              G         0      0        0      0.00      0.00        --        --         0         0
 SYS_2x_CLK                              M,D      1928      5        0      0.00    159.35      0.00      0.00         0         0
  SYS_CLK                                  G      1724      4        0      0.00     29.73      0.00      0.00         0         0
 PCI_CLK                                 M,D       394      4        0      0.00     16.27      0.00      0.00         0         0
-### Mode: funcu, Scenario: func_worst_constrained
-SDRAM_CLK                               M,D      2860      4        0      0.00     27.96      0.00      0.00         0         0
- SD_DDR_CLK                               G         0      0        0      0.00      0.00        --        --         0         0
- SD_DDR_CLKn                              G         0      0        0      0.00      0.00        --        --         0         0
-SYS_2x_CLK                              M,D      1928      5        0      0.00    159.35      0.00      0.00         0         0
- SYS_CLK                                  G      1724      4        0      0.00     29.73      0.00      0.00         0         0
-PCI_CLK                                 M,D       394      4        0      0.00     16.27      0.00      0.00         0         0
-### Mode: scan, Scenario: stuck_at_cap
-ate_clk                                 M,D      5162      4        0      0.00    194.93      0.00      0.00         0         0
-SYS_2x_CLK                              M,D        16      2        0      0.00     21.35      0.50      0.00         0         0
- SYS_CLK                                  G         8      1        0      0.00      6.35      0.00      0.00         0         0
-PCI_CLK                                 M,D         8      1        0      0.00      6.35      0.50      0.00         0         0
-SDRAM_CLK                               M,D         8      1        0      0.00      6.35      0.50      0.00         0         0
 ### Mode: test, Scenario: test_worst
-ate_clk                                 M,D      5162      4        0      0.00    194.93      0.00      0.00         0         0
-SDRAM_CLK                               M,D      2860      4        0      0.00     27.96      0.00      0.00         0         0
+ate_clk                                 M,D      5162      4        0      0.00    191.88      0.00      0.00         0         0
+SDRAM_CLK                               M,D      2860      4        0      0.00     24.91      0.00      0.00         0         0
  SD_DDR_CLK                               G         0      0        0      0.00      0.00        --        --         0         0
  SD_DDR_CLKn                              G         0      0        0      0.00      0.00        --        --         0         0
 SYS_2x_CLK                              M,D      1928      5        0      0.00    159.35      0.00      0.00         0         0
  SYS_CLK                                  G      1724      4        0      0.00     29.73      0.00      0.00         0         0
 PCI_CLK                                 M,D       394      4        0      0.00     16.27      0.00      0.00         0         0
 ------------------------------------------------------------------------------------------------------------------------------------
-All Clocks                                       5194      5        0      0.00    228.98      0.50      0.00         0         0
+All Clocks                                       5194      5        0      0.00    225.93      0.00      0.00         0         0
 
 
 Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)
@@ -74,42 +55,23 @@ Clock /                               Attrs     Sinks Levels    Clock     Clock 
 Skew Group                                                   Repeater  Repeater   Stdcell   Latency      Skew     Count     Count
                                                                 Count      Area      Area
 ------------------------------------------------------------------------------------------------------------------------------------
-### Mode: atspeed, Scenario: atspeed_shift
-SYS_2x_CLK                              M,D        16      2        0      0.00     21.35      0.50      0.00         0         0
- SYS_CLK                                  G         8      1        0      0.00      6.35      0.00      0.00         0         0
-PCI_CLK                                 M,D         8      1        0      0.00      6.35      0.50      0.00         0         0
-SDRAM_CLK                               M,D         8      1        0      0.00      6.35      0.50      0.00         0         0
-ate_clk                                 M,D         4      1        0      0.00     25.41      0.00      0.00         0         0
 ### Mode: func, Scenario: func_best
-SDRAM_CLK                               M,D      2860      4        0      0.00     27.96      0.00      0.00         0         0
+SDRAM_CLK                               M,D      2860      4        0      0.00     24.91      0.00      0.00         0         0
  SD_DDR_CLK                               G         0      0        0      0.00      0.00        --        --         0         0
  SD_DDR_CLKn                              G         0      0        0      0.00      0.00        --        --         0         0
 SYS_2x_CLK                              M,D      1928      5        0      0.00    159.35      0.00      0.00         0         0
  SYS_CLK                                  G      1724      4        0      0.00     29.73      0.00      0.00         0         0
 PCI_CLK                                 M,D       394      4        0      0.00     16.27      0.00      0.00         0         0
-### Mode: funcu, Scenario: func_best_constrained
-SDRAM_CLK                               M,D      2860      4        0      0.00     27.96      0.00      0.00         0         0
- SD_DDR_CLK                               G         0      0        0      0.00      0.00        --        --         0         0
- SD_DDR_CLKn                              G         0      0        0      0.00      0.00        --        --         0         0
-SYS_2x_CLK                              M,D      1928      5        0      0.00    159.35      0.00      0.00         0         0
- SYS_CLK                                  G      1724      4        0      0.00     29.73      0.00      0.00         0         0
-PCI_CLK                                 M,D       394      4        0      0.00     16.27      0.00      0.00         0         0
-### Mode: scan, Scenario: stuck_at_shift
-ate_clk                                 M,D      5162      4        0      0.00    194.93      0.00      0.00         0         0
-SYS_2x_CLK                              M,D        16      2        0      0.00     21.35      0.50      0.00         0         0
- SYS_CLK                                  G         8      1        0      0.00      6.35      0.00      0.00         0         0
-PCI_CLK                                 M,D         8      1        0      0.00      6.35      0.50      0.00         0         0
-SDRAM_CLK                               M,D         8      1        0      0.00      6.35      0.50      0.00         0         0
 ### Mode: test, Scenario: test_best
-ate_clk                                 M,D      5162      4        0      0.00    194.93      0.00      0.00         0         0
-SDRAM_CLK                               M,D      2860      4        0      0.00     27.96      0.00      0.00         0         0
+ate_clk                                 M,D      5162      4        0      0.00    191.88      0.00      0.00         0         0
+SDRAM_CLK                               M,D      2860      4        0      0.00     24.91      0.00      0.00         0         0
  SD_DDR_CLK                               G         0      0        0      0.00      0.00        --        --         0         0
  SD_DDR_CLKn                              G         0      0        0      0.00      0.00        --        --         0         0
 SYS_2x_CLK                              M,D      1928      5        0      0.00    159.35      0.00      0.00         0         0
  SYS_CLK                                  G      1724      4        0      0.00     29.73      0.00      0.00         0         0
 PCI_CLK                                 M,D       394      4        0      0.00     16.27      0.00      0.00         0         0
 ------------------------------------------------------------------------------------------------------------------------------------
-All Clocks                                       5194      5        0      0.00    228.98      0.50      0.00         0         0
+All Clocks                                       5194      5        0      0.00    225.93      0.00      0.00         0         0
 
 
 Warning: Please use -largest / -smallest / -all switches with -show_verbose_paths / -show_paths to report the clock paths. (CTS-956)

@@ -1,0 +1,347 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Launching 8 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for   8 (of   8) workers    : Sat May 20 21:57:15 2023
+  Waiting for   0 (of   8) workers    : Sat May 20 21:57:25 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Sat May 20 21:57:25 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           8                       auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         29760         ONLINE
+                   2    mo           -         29740         ONLINE
+                   3    mo           -         29746         ONLINE
+                   4    mo           -         29742         ONLINE
+                   5    mo           -         29743         ONLINE
+                   6    mo           -         29741         ONLINE
+                   7    mo           -         29745         ONLINE
+                   8    mo           -         29748         ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+  --------------------------------------------------------------------
+  Total                                                      32
+
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sat May 20 21:58:45 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'stuck_at_capture'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'aocv'
+Started    : Command execution in scenario 'atspeed_capture'
+Started    : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'aocv'
+Failed     : Command execution in scenario 'atspeed_capture'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Failed     : Command execution in scenario 'atspeed_capture'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Saving     : Current image for scenario 'func_fastslow'
+Saving     : Current image for scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_min'
+Saving     : Current image for scenario 'atspeed_capture'
+Saving     : Current image for scenario 'aocv'
+Succeeded  : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'test_slowfast'
+Failed     : Command execution in scenario 'test_slowfast'
+Failed     : Command execution in scenario 'test_slowfast'
+Saving     : Current image for scenario 'stuck_at_capture'
+Started    : Command execution in scenario 'test_fastslow'
+Failed     : Command execution in scenario 'test_fastslow'
+Failed     : Command execution in scenario 'test_fastslow'
+Restoring  : Current image for scenario 'func_slowfast'
+Restoring  : Current image for scenario 'test_worst'
+Restoring  : Current image for scenario 'func_max'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'test_worst'
+-----------------------------------
+End of Master/Slave Task Processing
+
+Error: Errors detected during master/slave task processing. (MS-016)
+
+  Startpoint: I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_19_
+               (rising edge-triggered flip-flop clocked by SYS_2x_CLK)
+  Endpoint: I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_
+               (rising edge-triggered flip-flop clocked by SYS_2x_CLK)
+  Last common pin: I_RISC_CORE/cts_buf_694432293/Y
+  Path Group: SYS_2x_CLK
+  Path Type: max
+  Scenario: func_max
+  Min Clock Paths Derating Factor : 0.95
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SYS_2x_CLK (rise edge)                            0.00       0.00
+  clock network delay (propagated)                        1.23       1.23
+  I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_19_/CLK (SDFFX2_HVT)
+                                                          0.00       1.23 r
+  I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_19_/QN (SDFFX2_HVT)
+                                                          1.10       2.33 r
+  I_RISC_CORE/HFSINV_270_1792/Y (INVX16_HVT)              0.26       2.59 f
+  I_RISC_CORE/U172/Y (OR4X1_HVT)                          1.24       3.83 f
+  I_RISC_CORE/U81/Y (OR3X2_HVT)                           0.63       4.47 f
+  I_RISC_CORE/U174/Y (AO221X1_RVT)                        0.32       4.78 f
+  I_RISC_CORE/U72/Y (OA22X1_RVT)                          0.28       5.06 f
+  I_RISC_CORE/U180/Y (NOR4X1_RVT)                         0.58       5.64 r
+  I_RISC_CORE/U45/Y (NBUFFX2_HVT)                         0.28       5.92 r
+  I_RISC_CORE/U181/Y (AND2X1_HVT)                         0.49       6.41 r
+  I_RISC_CORE/U182/Y (NAND3X1_RVT)                        0.36       6.77 f
+  I_RISC_CORE/U494/Y (AO21X1_HVT)                         0.49       7.25 f
+  I_RISC_CORE/U496/Y (AO222X1_HVT)                        0.69       7.95 f
+  I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_/D (SDFFARX1_HVT)
+                                                          0.00       7.95 f
+  data arrival time                                                  7.95
+
+  clock SYS_2x_CLK (rise edge)                            2.40       2.40
+  clock network delay (propagated)                        1.03       3.43
+  clock reconvergence pessimism                           0.09       3.52
+  clock uncertainty                                      -0.10       3.42
+  I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_/CLK (SDFFARX1_HVT)
+                                                                     3.42 r
+  library setup time                                     -1.42       2.00
+  data required time                                                 2.00
+  ------------------------------------------------------------------------------
+  data required time                                                 2.00
+  data arrival time                                                 -7.95
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -5.95
+
+
+0
+pt_shell> report_qor
+****************************************
+Report : qor
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sat May 20 21:58:57 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'test_worst'
+Failed     : Command execution in scenario 'test_slowfast'
+Failed     : Command execution in scenario 'test_slowfast'
+Failed     : Command execution in scenario 'test_fastslow'
+Failed     : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Saving     : Current image for scenario 'test_fastslow'
+Saving     : Current image for scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_max'
+Saving     : Current image for scenario 'test_best'
+Saving     : Current image for scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'func_fastslow'
+Failed     : Command execution in scenario 'func_fastslow'
+Failed     : Command execution in scenario 'func_fastslow'
+Saving     : Current image for scenario 'atspeed_shift'
+Started    : Command execution in scenario 'atspeed_capture'
+Failed     : Command execution in scenario 'atspeed_capture'
+Failed     : Command execution in scenario 'atspeed_capture'
+Restoring  : Current image for scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'stuck_at_capture'
+Restoring  : Current image for scenario 'aocv'
+Sourcing   : Scenario specific data files to setup scenario 'stuck_at_capture'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'aocv'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'aocv'
+-----------------------------------
+End of Master/Slave Task Processing
+
+Error: Errors detected during master/slave task processing. (MS-016)
+0
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sat May 20 22:37:46 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'atspeed_capture'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'stuck_at_capture'
+Started    : Command execution in scenario 'aocv'
+Failed     : Command execution in scenario 'atspeed_capture'
+Failed     : Command execution in scenario 'atspeed_capture'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Failed     : Command execution in scenario 'func_fastslow'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Failed     : Command execution in scenario 'func_fastslow'
+Saving     : Current image for scenario 'func_min'
+Saving     : Current image for scenario 'stuck_at_shift'
+Saving     : Current image for scenario 'atspeed_capture'
+Saving     : Current image for scenario 'func_max'
+Succeeded  : Command execution in scenario 'aocv'
+Restoring  : Current image for scenario 'test_worst'
+Restoring  : Current image for scenario 'test_slowfast'
+Restoring  : Current image for scenario 'test_fastslow'
+Started    : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'test_worst'
+Saving     : Current image for scenario 'stuck_at_capture'
+Started    : Command execution in scenario 'test_best'
+Failed     : Command execution in scenario 'test_best'
+Failed     : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'test_fastslow'
+Failed     : Command execution in scenario 'test_slowfast'
+Failed     : Command execution in scenario 'test_slowfast'
+Failed     : Command execution in scenario 'test_fastslow'
+Failed     : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'atspeed_shift'
+Failed     : Command execution in scenario 'atspeed_shift'
+Failed     : Command execution in scenario 'atspeed_shift'
+-----------------------------------
+End of Master/Slave Task Processing
+
+Error: Errors detected during master/slave task processing. (MS-016)
+
+  Startpoint: I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_19_
+               (rising edge-triggered flip-flop clocked by SYS_2x_CLK)
+  Endpoint: I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_
+               (rising edge-triggered flip-flop clocked by SYS_2x_CLK)
+  Last common pin: I_RISC_CORE/cts_buf_694432293/Y
+  Path Group: SYS_2x_CLK
+  Path Type: max
+  Scenario: func_max
+  Min Clock Paths Derating Factor : 0.95
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SYS_2x_CLK (rise edge)                            0.00       0.00
+  clock network delay (propagated)                        1.23       1.23
+  I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_19_/CLK (SDFFX2_HVT)
+                                                          0.00       1.23 r
+  I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_19_/QN (SDFFX2_HVT)
+                                                          1.10       2.33 r
+  I_RISC_CORE/HFSINV_270_1792/Y (INVX16_HVT)              0.26       2.59 f
+  I_RISC_CORE/U172/Y (OR4X1_HVT)                          1.24       3.83 f
+  I_RISC_CORE/U81/Y (OR3X2_HVT)                           0.63       4.47 f
+  I_RISC_CORE/U174/Y (AO221X1_RVT)                        0.32       4.78 f
+  I_RISC_CORE/U72/Y (OA22X1_RVT)                          0.28       5.06 f
+  I_RISC_CORE/U180/Y (NOR4X1_RVT)                         0.58       5.64 r
+  I_RISC_CORE/U45/Y (NBUFFX2_HVT)                         0.28       5.92 r
+  I_RISC_CORE/U181/Y (AND2X1_HVT)                         0.49       6.41 r
+  I_RISC_CORE/U182/Y (NAND3X1_RVT)                        0.36       6.77 f
+  I_RISC_CORE/U494/Y (AO21X1_HVT)                         0.49       7.25 f
+  I_RISC_CORE/U496/Y (AO222X1_HVT)                        0.69       7.95 f
+  I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_/D (SDFFARX1_HVT)
+                                                          0.00       7.95 f
+  data arrival time                                                  7.95
+
+  clock SYS_2x_CLK (rise edge)                            2.40       2.40
+  clock network delay (propagated)                        1.03       3.43
+  clock reconvergence pessimism                           0.09       3.52
+  clock uncertainty                                      -0.10       3.42
+  I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_/CLK (SDFFARX1_HVT)
+                                                                     3.42 r
+  library setup time                                     -1.42       2.00
+  data required time                                                 2.00
+  ------------------------------------------------------------------------------
+  data required time                                                 2.00
+  data arrival time                                                 -7.95
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -5.95
+
+
+0
+pt_shell> 

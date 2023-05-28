@@ -1,0 +1,112 @@
+################################################################################
+#
+# Created by icc2 (Q-2019.12-SP4) split_upf on Wed May 17 12:55:06 2023
+#
+################################################################################
+
+################################################################################
+#
+# Units
+# time_unit               : 1e-09
+# resistance_unit         : 1000000
+# capacitive_load_unit    : 1e-15
+# voltage_unit            : 1
+# current_unit            : 1e-06
+# power_unit              : 1e-12
+################################################################################
+
+# Implemented: supplies
+
+set_design_attributes -elements . -attribute lower_domain_boundary false
+create_supply_port VSS
+create_supply_port VDD
+create_supply_port VDDH
+
+create_power_domain PD_RISC_CORE
+
+create_supply_net VSS -domain PD_RISC_CORE
+create_supply_net VDD -domain PD_RISC_CORE
+create_supply_net VDDH -domain PD_RISC_CORE
+
+set_domain_supply_net PD_RISC_CORE -primary_power_net VDDH -primary_ground_net \
+    VSS
+
+connect_supply_net VDD -ports {Instrn_27__UPF_LS/VDDL Instrn_28__UPF_LS/VDDL \
+    Instrn_26__UPF_LS/VDDL Instrn_31__UPF_LS/VDDL Instrn_24__UPF_LS/VDDL \
+    Instrn_4__UPF_LS/VDDL Instrn_5__UPF_LS/VDDL Instrn_17__UPF_LS/VDDL \
+    Instrn_16__UPF_LS/VDDL Instrn_18__UPF_LS/VDDL Instrn_20__UPF_LS/VDDL \
+    Instrn_29__UPF_LS/VDDL Instrn_13__UPF_LS/VDDL Instrn_12__UPF_LS/VDDL \
+    Instrn_21__UPF_LS/VDDL Instrn_8__UPF_LS/VDDL Instrn_9__UPF_LS/VDDL \
+    Instrn_14__UPF_LS/VDDL Instrn_11__UPF_LS/VDDL Instrn_10__UPF_LS/VDDL \
+    Instrn_15__UPF_LS/VDDL Instrn_23__UPF_LS/VDDL Instrn_22__UPF_LS/VDDL \
+    reset_n_UPF_LS/VDDL Instrn_30__UPF_LS/VDDL Instrn_7__UPF_LS/VDDL \
+    Instrn_0__UPF_LS/VDDL Instrn_2__UPF_LS/VDDL Instrn_3__UPF_LS/VDDL \
+    Instrn_1__UPF_LS/VDDL test_si1_UPF_LS/VDDL scan_enable_UPF_LS/VDDL \
+    Instrn_6__UPF_LS/VDDL Instrn_25__UPF_LS/VDDL Instrn_19__UPF_LS/VDDL}
+connect_supply_net VDDH -ports {Instrn_27__UPF_LS/VDDH Instrn_28__UPF_LS/VDDH \
+    Instrn_26__UPF_LS/VDDH Instrn_31__UPF_LS/VDDH Instrn_24__UPF_LS/VDDH \
+    Instrn_4__UPF_LS/VDDH Instrn_5__UPF_LS/VDDH Instrn_17__UPF_LS/VDDH \
+    Instrn_16__UPF_LS/VDDH Instrn_18__UPF_LS/VDDH Instrn_20__UPF_LS/VDDH \
+    Instrn_29__UPF_LS/VDDH Instrn_13__UPF_LS/VDDH Instrn_12__UPF_LS/VDDH \
+    Instrn_21__UPF_LS/VDDH Instrn_8__UPF_LS/VDDH Instrn_9__UPF_LS/VDDH \
+    Instrn_14__UPF_LS/VDDH Instrn_11__UPF_LS/VDDH Instrn_10__UPF_LS/VDDH \
+    Instrn_15__UPF_LS/VDDH Instrn_23__UPF_LS/VDDH Instrn_22__UPF_LS/VDDH \
+    reset_n_UPF_LS/VDDH Instrn_30__UPF_LS/VDDH Instrn_7__UPF_LS/VDDH \
+    Instrn_0__UPF_LS/VDDH Instrn_2__UPF_LS/VDDH Instrn_3__UPF_LS/VDDH \
+    Instrn_1__UPF_LS/VDDH test_si1_UPF_LS/VDDH scan_enable_UPF_LS/VDDH \
+    Instrn_6__UPF_LS/VDDH Instrn_25__UPF_LS/VDDH Instrn_19__UPF_LS/VDDH}
+connect_supply_net VSS -ports {Instrn_27__UPF_LS/VSS Instrn_28__UPF_LS/VSS \
+    Instrn_26__UPF_LS/VSS Instrn_31__UPF_LS/VSS Instrn_24__UPF_LS/VSS \
+    Instrn_4__UPF_LS/VSS Instrn_5__UPF_LS/VSS Instrn_17__UPF_LS/VSS \
+    Instrn_16__UPF_LS/VSS Instrn_18__UPF_LS/VSS Instrn_20__UPF_LS/VSS \
+    Instrn_29__UPF_LS/VSS Instrn_13__UPF_LS/VSS Instrn_12__UPF_LS/VSS \
+    Instrn_21__UPF_LS/VSS Instrn_8__UPF_LS/VSS Instrn_9__UPF_LS/VSS \
+    Instrn_14__UPF_LS/VSS Instrn_11__UPF_LS/VSS Instrn_10__UPF_LS/VSS \
+    Instrn_15__UPF_LS/VSS Instrn_23__UPF_LS/VSS Instrn_22__UPF_LS/VSS \
+    reset_n_UPF_LS/VSS Instrn_30__UPF_LS/VSS Instrn_7__UPF_LS/VSS \
+    Instrn_0__UPF_LS/VSS Instrn_2__UPF_LS/VSS Instrn_3__UPF_LS/VSS \
+    Instrn_1__UPF_LS/VSS test_si1_UPF_LS/VSS scan_enable_UPF_LS/VSS \
+    Instrn_6__UPF_LS/VSS Instrn_25__UPF_LS/VSS Instrn_19__UPF_LS/VSS}
+connect_supply_net VSS -ports VSS
+connect_supply_net VDD -ports VDD
+connect_supply_net VDDH -ports VDDH
+
+set_level_shifter ls_in -domain PD_RISC_CORE -location self -applies_to inputs \
+    -rule low_to_high
+
+add_port_state VSS -state {always 0}
+add_port_state VDD -state {V0p75 0.75}
+add_port_state VDD -state {V0p95 0.95}
+add_port_state VDDH -state {V0p75 0.75}
+add_port_state VDDH -state {V0p95 0.95}
+add_port_state VDDH -state {V1p16 1.16}
+create_pst pst -supplies {VDD VDDH VSS}
+add_pst_state state_1 -pst pst -state {V0p75 V0p75 always}
+add_pst_state state_2 -pst pst -state {V0p75 V0p95 always}
+add_pst_state state_3 -pst pst -state {V0p95 V1p16 always}
+add_pst_state state_4 -pst pst -state {V0p95 V0p95 always}
+
+if {[info exists upf_extension] && $upf_extension} {
+set_related_supply_net -ground VSS -object_list {n1194 n437 n1211 n1213 n445 \
+    n429 net_parser_risc_Instrn_lo[4] net_parser_risc_Instrn_lo[5] n455 n453 \
+    n1228 n954 n960 n1221 n953 n457 n958 n431 n425 n1215 n417 n427 n1224 n459 \
+    n1788 n443 net_parser_risc_Instrn_lo[7] n1210 net_parser_risc_Instrn_lo[2] \
+    net_parser_risc_Instrn_lo[3] net_parser_risc_Instrn_lo[1] test_si[1] n913 \
+    net_parser_risc_Instrn_lo[6] n1217 n1226 n379 n378 n377 n376 n375 n374 n373 \
+    n372 n371 n370 n369 n368 n367 n365 n364 n363 n362 n361 n360 n359 n358 n357 \
+    n356 n355 n354 n353 n352 n351 n349 n348 n389 n388 n387 n385 n383 n382 n381 \
+    n408 n407 n406 n405 n404 n403 n402 n401 n400 n399 n398 n397 n396 n395 n394 \
+    n393 n380 n409 n384 n366 n350 n410 n392 n386}
+set_related_supply_net -power VDD -object_list {n1194 n437 n1211 n1213 n445 \
+    n429 net_parser_risc_Instrn_lo[4] net_parser_risc_Instrn_lo[5] n455 n453 \
+    n1228 n954 n960 n1221 n953 n457 n958 n431 n425 n1215 n417 n427 n1224 n459 \
+    n1788 n443 net_parser_risc_Instrn_lo[7] n1210 net_parser_risc_Instrn_lo[2] \
+    net_parser_risc_Instrn_lo[3] net_parser_risc_Instrn_lo[1] test_si[1] n913 \
+    net_parser_risc_Instrn_lo[6] n1217 n1226}
+set_related_supply_net -power VDDH -object_list {n379 n378 n377 n376 n375 n374 \
+    n373 n372 n371 n370 n369 n368 n367 n365 n364 n363 n362 n361 n360 n359 n358 \
+    n357 n356 n355 n354 n353 n352 n351 n349 n348 n389 n388 n387 n385 n383 n382 \
+    n381 n408 n407 n406 n405 n404 n403 n402 n401 n400 n399 n398 n397 n396 n395 \
+    n394 n393 n380 n409 n384 n366 n350 n410 n392 n386}
+}
+

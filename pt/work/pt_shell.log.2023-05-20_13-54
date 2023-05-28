@@ -1,0 +1,256 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Launching 8 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for   8 (of   8) workers    : Sat May 20 13:54:26 2023
+  Waiting for   0 (of   8) workers    : Sat May 20 13:54:36 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Sat May 20 13:54:36 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           8                       auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         16877         ONLINE
+                   2    mo           -         16923         ONLINE
+                   3    mo           -         16880         ONLINE
+                   4    mo           -         16882         ONLINE
+                   5    mo           -         16881         ONLINE
+                   6    mo           -         16883         ONLINE
+                   7    mo           -         16878         ONLINE
+                   8    mo           -         16879         ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+  --------------------------------------------------------------------
+  Total                                                      32
+
+Warning: Nothing implicitly matched 'atspeed_scan' (SEL-003)
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sat May 20 13:57:21 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'stuck_at_capture'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'atspeed_capture'
+Started    : Command execution in scenario 'func_best_constrained'
+Started    : Command execution in scenario 'func_worst_constrained'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'func_worst_constrained'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Failed     : Command execution in scenario 'atspeed_capture'
+Failed     : Command execution in scenario 'atspeed_capture'
+Saving     : Current image for scenario 'stuck_at_shift'
+Saving     : Current image for scenario 'func_worst_constrained'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_best_constrained'
+Saving     : Current image for scenario 'stuck_at_capture'
+Saving     : Current image for scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_worst'
+Failed     : Command execution in scenario 'test_worst'
+Failed     : Command execution in scenario 'test_worst'
+Saving     : Current image for scenario 'atspeed_capture'
+Started    : Command execution in scenario 'test_slowfast'
+Failed     : Command execution in scenario 'test_slowfast'
+Failed     : Command execution in scenario 'test_slowfast'
+Restoring  : Current image for scenario 'test_best'
+Restoring  : Current image for scenario 'func_max'
+Restoring  : Current image for scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'func_max'
+-----------------------------------
+End of Master/Slave Task Processing
+
+Error: Errors detected during master/slave task processing. (MS-016)
+
+  Startpoint: I_BLENDER_1/result_reg_8_
+               (rising edge-triggered flip-flop clocked by SYS_CLK)
+  Endpoint: I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_3
+               (rising edge-triggered flip-flop clocked by SYS_CLK)
+  Last common pin: I_CLOCKING/occ_int1/cts_buf_702632375/Y
+  Path Group: SYS_CLK
+  Path Type: max
+  Scenario: func_best_constrained
+  Max Data Paths Derating Factor  : 1.05
+  Min Clock Paths Derating Factor : 0.95
+  Max Clock Paths Derating Factor : 1.05
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SYS_CLK (rise edge)                               0.00       0.00
+  clock network delay (propagated)                     9247.54    9247.54
+  I_BLENDER_1/result_reg_8_/CLK (DFFARX1_HVT)             0.00    9247.54 r
+  I_BLENDER_1/result_reg_8_/Q (DFFARX1_HVT)               0.12    9247.66 r
+  U325/Y (AOI22X2_HVT)                                    1.63    9249.29 f
+  U430/Y (NAND3X1_HVT)                                    0.19    9249.48 r
+  I_PCI_TOP/HFSBUF_106_114/Y (NBUFFX16_HVT)               0.52    9250.00 r
+  I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_3/I1[0] (SRAM2RW32x4)
+                                                          0.00    9250.00 r
+  data arrival time                                               9250.00
+
+  clock SYS_CLK (rise edge)                               4.80       4.80
+  clock network delay (propagated)                       40.22      45.02
+  clock reconvergence pessimism                           0.26      45.28
+  clock uncertainty                                      -0.10      45.18
+  I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_3/CE1 (SRAM2RW32x4)       45.18 r
+  library setup time                                      0.02      45.21
+  data required time                                                45.21
+  ------------------------------------------------------------------------------
+  data required time                                                45.21
+  data arrival time                                              -9250.00
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -9204.79
+
+
+0
+pt_shell> source ../scripts/atspeed_scan.tcl
+# Set up the search path to the librariesi
+# One of the typical lines of the resultant search path is:
+# /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm
+# /          $lib_dir                   /lib/ $lib_type /db_nldm
+# The variables are defined in design_config.tcl
+set search_path ""
+foreach i $lib_types { lappend search_path $lib_dir/lib/$i/db_nldm }
+# Smartly find all the libraries you need
+# Will end up with sometihng like this: 
+# saed32hvt_ss0p75v125c.db saed32hvt_ss0p95v125c.db saed32rvt_ss0p75v125c.db saed32rvt_ss0p95v125c.db saed32lvt_ss0p75v125c.db saed32lvt_ss0p95v125c.db saed32sram_ss0p95v125c.db dw_foundation.sldb *
+# This contains all the VTs you want, all the corners you want, and designate any library subtypes like level shifters you might want
+# The variables are defined in the design_config.tcl
+# Example:
+#     saed32hvt_ss0p75v125c.db
+#     |sub_lib  corner    .db
+set link_library ""
+foreach i $search_path {
+  foreach k $corners {
+      foreach m $sub_lib_type {
+        foreach j [glob -nocomplain $i/$m$k.db ] {
+          lappend link_library [file tail $j ]
+        }
+      }
+  }
+}
+lappend link_library *
+saed32hvt_ss0p75vn40c.db saed32hvt_dlvl_ss0p75vn40c_i0p95v.db saed32hvt_ulvl_ss0p75vn40c_i0p75v.db saed32hvt_dlvl_ss0p75vn40c_i0p75v.db saed32hvt_ss0p95vn40c.db saed32hvt_ulvl_ss0p95vn40c_i0p75v.db saed32rvt_ss0p75vn40c.db saed32rvt_dlvl_ss0p75vn40c_i0p95v.db saed32rvt_ulvl_ss0p75vn40c_i0p75v.db saed32rvt_dlvl_ss0p75vn40c_i0p75v.db saed32rvt_ss0p95vn40c.db saed32rvt_ulvl_ss0p95vn40c_i0p75v.db saed32lvt_ss0p75vn40c.db saed32lvt_dlvl_ss0p75vn40c_i0p95v.db saed32lvt_ulvl_ss0p75vn40c_i0p75v.db saed32lvt_dlvl_ss0p75vn40c_i0p75v.db saed32lvt_ss0p95vn40c.db saed32lvt_ulvl_ss0p95vn40c_i0p75v.db saed32sram_ss0p95vn40c.db *
+# Add the local directory "." to the search path after we have used it in the above loop.  If you add . before hand, it will cause some problems.
+lappend search_path .
+/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram/db_nldm .
+Error: Command 'read_verilog' is disabled. (CMD-080)
+Information: script '../scripts/atspeed_scan.tcl'
+        stopped at line 11 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"read_verilog $topdir/apr/outputs/${top_design}.route2.vg.gz"
+ -- End Extended Error Info
+pt_shell> exit
+Maximum memory usage for distributed processes:
+my_opts1        1   mo                 945.55 MB
+                2   mo                 648.43 MB
+                3   mo                 943.52 MB
+                4   mo                 957.56 MB
+                5   mo                 647.56 MB
+                6   mo                 651.54 MB
+                7   mo                 631.77 MB
+                8   mo                 641.28 MB
+CPU time usage for distributed processes:
+my_opts1        1   mo                 165 seconds
+                2   mo                 154 seconds
+                3   mo                 121 seconds
+                4   mo                 170 seconds
+                5   mo                 89 seconds
+                6   mo                 112 seconds
+                7   mo                 99 seconds
+                8   mo                 91 seconds
+Elapsed time for distributed processes:
+my_opts1        1   mo                 211 seconds
+                2   mo                 211 seconds
+                3   mo                 211 seconds
+                4   mo                 212 seconds
+                5   mo                 212 seconds
+                6   mo                 212 seconds
+                7   mo                 211 seconds
+                8   mo                 211 seconds
+Maximum memory usage for this session: 862.66 MB
+CPU usage for this session: 3 seconds 
+Elapsed time for this session: 226 seconds
+Shutting down worker processes ...
+ Shutdown Process 1
+ Shutdown Process 2
+ Shutdown Process 3
+ Shutdown Process 4
+ Shutdown Process 5
+ Shutdown Process 6
+ Shutdown Process 7
+ Shutdown Process 8
+Diagnostics summary: 4 errors, 1 warning, 25 informationals
+
+Thank you for using pt_shell!
+

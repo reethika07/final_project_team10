@@ -1,0 +1,459 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Launching 14 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   9] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  10] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  11] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  12] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  13] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  14] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for  14 (of  14) workers    : Sat May 20 23:43:56 2023
+  Waiting for   0 (of  14) workers    : Sat May 20 23:44:06 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Sat May 20 23:44:07 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           14                      auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         10109         ONLINE
+                   2    mo           -         10103         ONLINE
+                   3    mo           -         10107         ONLINE
+                   4    mo           -         10105         ONLINE
+                   5    mo           -         10108         ONLINE
+                   6    mo           -         10104         ONLINE
+                   7    mo           -         10106         ONLINE
+                   8    mo           -         10101         ONLINE
+                   9    mo           -         10341         ONLINE
+                   10   mo           -         10379         ONLINE
+                   11   mo           -         10317         ONLINE
+                   12   mo           -         10342         ONLINE
+                   13   mo           -         10324         ONLINE
+                   14   mo           -         10336         ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+                   9                                         4
+                   10                                        4
+                   11                                        4
+                   12                                        4
+                   13                                        4
+                   14                                        4
+  --------------------------------------------------------------------
+  Total                                                      56
+
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sat May 20 23:51:51 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Warning: The variable 'search_path' contains a directory '/home/ramadugu/Documents/fresh'/final_prj-team_10-master/' that could not be resolved to an absolute path. (DIST-006)
+Started    : Command execution in scenario 'atspeed_shift'
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'func_fastslow'
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'stuck_at_capture'
+Started    : Command execution in scenario 'test_worst'
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'stuck_at_shift'
+Information: Checked out license 'PrimeTime' (PT-019)
+Sourcing   : Scenario specific data files to setup scenario 'atspeed_shift'
+Started    : Command execution in scenario 'test_best'
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'atspeed_capture'
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'func_slowfast'
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'func_min'
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'test_slowfast'
+Information: Checked out license 'PrimeTime' (PT-019)
+Started    : Command execution in scenario 'aocv'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'test_fastslow'
+Sourcing   : Scenario specific data files to setup scenario 'func_fastslow'
+Sourcing   : Scenario specific data files to setup scenario 'stuck_at_capture'
+Sourcing   : Scenario specific data files to setup scenario 'test_worst'
+Sourcing   : Scenario specific data files to setup scenario 'stuck_at_shift'
+Sourcing   : Scenario specific data files to setup scenario 'test_best'
+Sourcing   : Scenario specific data files to setup scenario 'func_slowfast'
+Sourcing   : Scenario specific data files to setup scenario 'atspeed_capture'
+Sourcing   : Scenario specific data files to setup scenario 'func_min'
+Sourcing   : Scenario specific data files to setup scenario 'test_fastslow'
+Sourcing   : Scenario specific data files to setup scenario 'func_max'
+Sourcing   : Scenario specific data files to setup scenario 'test_slowfast'
+Sourcing   : Scenario specific data files to setup scenario 'aocv'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Failed     : Command execution in scenario 'atspeed_capture'
+Failed     : Command execution in scenario 'atspeed_capture'
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Checked out license 'PrimePower' (PT-019)
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'aocv'
+-----------------------------------
+End of Master/Slave Task Processing
+
+Error: Errors detected during master/slave task processing. (MS-016)
+
+  Startpoint: I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_19_
+               (rising edge-triggered flip-flop clocked by SYS_2x_CLK)
+  Endpoint: I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_
+               (rising edge-triggered flip-flop clocked by SYS_2x_CLK)
+  Last common pin: I_RISC_CORE/cts_buf_694432293/Y
+  Path Group: SYS_2x_CLK
+  Path Type: max
+  Scenario: func_max
+  Min Clock Paths Derating Factor : 0.950
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SYS_2x_CLK (rise edge)                           0.000      0.000
+  clock network delay (propagated)                       1.234      1.234
+  I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_19_/CLK (SDFFX2_HVT)
+                                                         0.000      1.234 r
+  I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_19_/QN (SDFFX2_HVT)
+                                                         1.098      2.332 r
+  I_RISC_CORE/HFSINV_270_1792/Y (INVX16_HVT)             0.261      2.593 f
+  I_RISC_CORE/U172/Y (OR4X1_HVT)                         1.240      3.833 f
+  I_RISC_CORE/U81/Y (OR3X2_HVT)                          0.633      4.466 f
+  I_RISC_CORE/U174/Y (AO221X1_RVT)                       0.319      4.785 f
+  I_RISC_CORE/U72/Y (OA22X1_RVT)                         0.277      5.062 f
+  I_RISC_CORE/U180/Y (NOR4X1_RVT)                        0.580      5.641 r
+  I_RISC_CORE/U45/Y (NBUFFX2_HVT)                        0.277      5.918 r
+  I_RISC_CORE/U181/Y (AND2X1_HVT)                        0.491      6.409 r
+  I_RISC_CORE/U182/Y (NAND3X1_RVT)                       0.360      6.769 f
+  I_RISC_CORE/U494/Y (AO21X1_HVT)                        0.486      7.254 f
+  I_RISC_CORE/U496/Y (AO222X1_HVT)                       0.691      7.945 f
+  I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_/D (SDFFARX1_HVT)
+                                                         0.000      7.945 f
+  data arrival time                                                 7.945
+
+  clock SYS_2x_CLK (rise edge)                           2.400      2.400
+  clock network delay (propagated)                       1.030      3.430
+  clock reconvergence pessimism                          0.086      3.516
+  clock uncertainty                                     -0.100      3.416
+  I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_/CLK (SDFFARX1_HVT)
+                                                                    3.416 r
+  library setup time                                    -1.420      1.996
+  data required time                                                1.996
+  ------------------------------------------------------------------------------
+  data required time                                                1.996
+  data arrival time                                                -7.945
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                 -5.949
+
+
+0
+pt_shell> report_qor
+****************************************
+Report : qor
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sat May 20 23:54:50 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Warning: The variable 'search_path' contains a directory '/home/ramadugu/Documents/fresh'/final_prj-team_10-master/' that could not be resolved to an absolute path. (DIST-006)
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'atspeed_capture'
+Started    : Command execution in scenario 'stuck_at_capture'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'aocv'
+Started    : Command execution in scenario 'func_max'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Failed     : Command execution in scenario 'atspeed_capture'
+Failed     : Command execution in scenario 'atspeed_capture'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'aocv'
+-----------------------------------
+End of Master/Slave Task Processing
+
+Error: Errors detected during master/slave task processing. (MS-016)
+0
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sat May 20 23:55:08 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Warning: The variable 'search_path' contains a directory '/home/ramadugu/Documents/fresh'/final_prj-team_10-master/' that could not be resolved to an absolute path. (DIST-006)
+Started    : Command execution in scenario 'atspeed_capture'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'stuck_at_capture'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'aocv'
+Failed     : Command execution in scenario 'atspeed_capture'
+Succeeded  : Command execution in scenario 'func_min'
+Failed     : Command execution in scenario 'atspeed_capture'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
+Failed     : Command execution in scenario 'stuck_at_capture'
+Succeeded  : Command execution in scenario 'aocv'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'func_max'
+-----------------------------------
+End of Master/Slave Task Processing
+
+Error: Errors detected during master/slave task processing. (MS-016)
+
+  Startpoint: I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_19_
+               (rising edge-triggered flip-flop clocked by SYS_2x_CLK)
+  Endpoint: I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_
+               (rising edge-triggered flip-flop clocked by SYS_2x_CLK)
+  Last common pin: I_RISC_CORE/cts_buf_694432293/Y
+  Path Group: SYS_2x_CLK
+  Path Type: max
+  Scenario: func_max
+  Min Clock Paths Derating Factor : 0.95
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SYS_2x_CLK (rise edge)                            0.00       0.00
+  clock network delay (propagated)                        1.23       1.23
+  I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_19_/CLK (SDFFX2_HVT)
+                                                          0.00       1.23 r
+  I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_19_/QN (SDFFX2_HVT)
+                                                          1.10       2.33 r
+  I_RISC_CORE/HFSINV_270_1792/Y (INVX16_HVT)              0.26       2.59 f
+  I_RISC_CORE/U172/Y (OR4X1_HVT)                          1.24       3.83 f
+  I_RISC_CORE/U81/Y (OR3X2_HVT)                           0.63       4.47 f
+  I_RISC_CORE/U174/Y (AO221X1_RVT)                        0.32       4.78 f
+  I_RISC_CORE/U72/Y (OA22X1_RVT)                          0.28       5.06 f
+  I_RISC_CORE/U180/Y (NOR4X1_RVT)                         0.58       5.64 r
+  I_RISC_CORE/U45/Y (NBUFFX2_HVT)                         0.28       5.92 r
+  I_RISC_CORE/U181/Y (AND2X1_HVT)                         0.49       6.41 r
+  I_RISC_CORE/U182/Y (NAND3X1_RVT)                        0.36       6.77 f
+  I_RISC_CORE/U494/Y (AO21X1_HVT)                         0.49       7.25 f
+  I_RISC_CORE/U496/Y (AO222X1_HVT)                        0.69       7.95 f
+  I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_/D (SDFFARX1_HVT)
+                                                          0.00       7.95 f
+  data arrival time                                                  7.95
+
+  clock SYS_2x_CLK (rise edge)                            2.40       2.40
+  clock network delay (propagated)                        1.03       3.43
+  clock reconvergence pessimism                           0.09       3.52
+  clock uncertainty                                      -0.10       3.42
+  I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_/CLK (SDFFARX1_HVT)
+                                                                     3.42 r
+  library setup time                                     -1.42       2.00
+  data required time                                                 2.00
+  ------------------------------------------------------------------------------
+  data required time                                                 2.00
+  data arrival time                                                 -7.95
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -5.95
+
+
+0
+pt_shell> exit
+Maximum memory usage for distributed processes:
+my_opts1        1   mo                 627.05 MB
+                2   mo                 631.64 MB
+                3   mo                 634.35 MB
+                4   mo                 626.55 MB
+                5   mo                 634.04 MB
+                6   mo                 655.65 MB
+                7   mo                 656.06 MB
+                8   mo                 630.75 MB
+                9   mo                 627.65 MB
+                10  mo                 474.22 MB
+                11  mo                 660.35 MB
+                12  mo                 763.49 MB
+                13  mo                 654.51 MB
+                14  mo                 474.22 MB
+CPU time usage for distributed processes:
+my_opts1        1   mo                 91 seconds
+                2   mo                 102 seconds
+                3   mo                 102 seconds
+                4   mo                 91 seconds
+                5   mo                 104 seconds
+                6   mo                 120 seconds
+                7   mo                 122 seconds
+                8   mo                 102 seconds
+                9   mo                 94 seconds
+                10  mo                 3 seconds
+                11  mo                 129 seconds
+                12  mo                 2 seconds
+                13  mo                 121 seconds
+                14  mo                 3 seconds
+Elapsed time for distributed processes:
+my_opts1        1   mo                 742 seconds
+                2   mo                 742 seconds
+                3   mo                 742 seconds
+                4   mo                 742 seconds
+                5   mo                 742 seconds
+                6   mo                 742 seconds
+                7   mo                 742 seconds
+                8   mo                 742 seconds
+                9   mo                 741 seconds
+                10  mo                 741 seconds
+                11  mo                 741 seconds
+                12  mo                 741 seconds
+                13  mo                 741 seconds
+                14  mo                 741 seconds
+Maximum memory usage for this session: 861.20 MB
+CPU usage for this session: 3 seconds 
+Elapsed time for this session: 759 seconds
+Shutting down worker processes ...
+ Shutdown Process 1
+ Shutdown Process 2
+ Shutdown Process 3
+ Shutdown Process 4
+ Shutdown Process 5
+ Shutdown Process 6
+ Shutdown Process 7
+ Shutdown Process 8
+ Shutdown Process 9
+ Shutdown Process 10
+ Shutdown Process 11
+ Shutdown Process 12
+ Shutdown Process 13
+ Shutdown Process 14
+Diagnostics summary: 4 errors, 3 warnings, 34 informationals
+
+Thank you for using pt_shell!
+

@@ -1,0 +1,172 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Launching 14 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   9] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  10] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  11] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  12] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  13] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  14] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for  14 (of  14) workers    : Tue May 23 15:20:13 2023
+  Waiting for   0 (of  14) workers    : Tue May 23 15:20:23 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Tue May 23 15:20:24 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           14                      auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         28653         ONLINE
+                   2    mo           -         28614         ONLINE
+                   3    mo           -         28646         ONLINE
+                   4    mo           -         28691         ONLINE
+                   5    mo           -         28724         ONLINE
+                   6    mo           -         28627         ONLINE
+                   7    mo           -         28639         ONLINE
+                   8    mo           -         28645         ONLINE
+                   9    mo           -         29035         ONLINE
+                   10   mo           -         29040         ONLINE
+                   11   mo           -         29037         ONLINE
+                   12   mo           -         29068         ONLINE
+                   13   mo           -         29036         ONLINE
+                   14   mo           -         29038         ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+                   9                                         4
+                   10                                        4
+                   11                                        4
+                   12                                        4
+                   13                                        4
+                   14                                        4
+  --------------------------------------------------------------------
+  Total                                                      56
+
+pt_shell> exit
+Maximum memory usage for distributed processes:
+my_opts1        1   mo                 643.43 MB
+                2   mo                 641.31 MB
+                3   mo                 646.83 MB
+                4   mo                 643.52 MB
+                5   mo                 642.54 MB
+                6   mo                 669.52 MB
+                7   mo                 659.30 MB
+                8   mo                 669.00 MB
+                9   mo                 643.32 MB
+                10  mo                 646.83 MB
+                11  mo                 474.22 MB
+                12  mo                 763.61 MB
+                13  mo                 474.22 MB
+                14  mo                 763.61 MB
+CPU time usage for distributed processes:
+my_opts1        1   mo                 48 seconds
+                2   mo                 49 seconds
+                3   mo                 50 seconds
+                4   mo                 48 seconds
+                5   mo                 49 seconds
+                6   mo                 50 seconds
+                7   mo                 49 seconds
+                8   mo                 49 seconds
+                9   mo                 49 seconds
+                10  mo                 49 seconds
+                11  mo                 3 seconds
+                12  mo                 2 seconds
+                13  mo                 2 seconds
+                14  mo                 2 seconds
+Elapsed time for distributed processes:
+my_opts1        1   mo                 19468 seconds
+                2   mo                 19468 seconds
+                3   mo                 19468 seconds
+                4   mo                 19468 seconds
+                5   mo                 19468 seconds
+                6   mo                 19468 seconds
+                7   mo                 19468 seconds
+                8   mo                 19468 seconds
+                9   mo                 19467 seconds
+                10  mo                 19467 seconds
+                11  mo                 19467 seconds
+                12  mo                 19467 seconds
+                13  mo                 19467 seconds
+                14  mo                 19467 seconds
+Maximum memory usage for this session: 851.73 MB
+CPU usage for this session: 7 seconds 
+Elapsed time for this session: 19480 seconds
+Shutting down worker processes ...
+ Shutdown Process 1
+ Shutdown Process 2
+ Shutdown Process 3
+ Shutdown Process 4
+ Shutdown Process 5
+ Shutdown Process 6
+ Shutdown Process 7
+ Shutdown Process 8
+ Shutdown Process 9
+ Shutdown Process 10
+ Shutdown Process 11
+ Shutdown Process 12
+ Shutdown Process 13
+ Shutdown Process 14
+Diagnostics summary: 2 errors, 32 informationals
+
+Thank you for using pt_shell!
+

@@ -1,0 +1,36 @@
+****************************************
+Report : qor
+Design : ORCA_TOP
+Version: O-2018.06
+Date   : Thu May 25 11:27:32 2023
+****************************************
+
+  Cell Count
+  ---------------------------------------------
+  Hierarchical Cell Count:                   63
+  Hierarchical Port Count:                 3355
+  Leaf Cell Count:                        45912
+  ---------------------------------------------
+
+
+  Area
+  ---------------------------------------------
+  Net Interconnect area:              67857.641
+  Total cell area:                   383476.438
+  Design Area:                       451334.062
+  ---------------------------------------------
+
+
+  Design Rule Violations
+  ---------------------------------------------
+  Total No. of Pins in Design:           185479
+  max_capacitance Count:                     12
+  min_capacitance Count:                     16
+  max_transition Count:                       9
+  max_capacitance Cost:                 -25.920
+  min_capacitance Cost:                  -1.424
+  max_transition Cost:                   -0.551
+  Total DRC Cost:                       -27.895
+  ---------------------------------------------
+
+1

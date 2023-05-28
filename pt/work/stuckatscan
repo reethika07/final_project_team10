@@ -1,0 +1,55 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : ORCA_TOP
+Version: O-2018.06
+Date   : Sat May 20 21:52:23 2023
+****************************************
+
+
+  Startpoint: I_BLENDER_0/trans2_reg
+               (rising edge-triggered flip-flop clocked by SYS_CLK)
+  Endpoint: I_BLENDER_0/R_566
+               (rising edge-triggered flip-flop clocked by SYS_CLK)
+  Last common pin: I_BLENDER_1/clk_gate_rem_green_reg/cts_buf_691332262/Y
+  Path Group: SYS_CLK
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.050
+  Min Clock Paths Derating Factor : 0.950
+  Max Clock Paths Derating Factor : 1.050
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SYS_CLK (rise edge)                              0.000      0.000
+  clock network delay (propagated)                    9247.537   9247.537
+  I_BLENDER_0/trans2_reg/CLK (SDFFARX1_LVT)              0.000   9247.537 r
+  I_BLENDER_0/trans2_reg/Q (SDFFARX1_LVT)                0.070   9247.607 r
+  I_BLENDER_0/U7241/Y (AND2X1_LVT)                       5.898   9253.505 r
+  I_BLENDER_0/ZINV_3302_inst_2427/Y (INVX4_LVT)          0.061   9253.567 f
+  I_BLENDER_0/ZINV_2879_inst_2426/Y (INVX8_LVT)          0.289   9253.855 r
+  I_BLENDER_0/U5827/Y (AND2X4_RVT)                      97.002   9350.857 r
+  I_BLENDER_0/U8935/Y (NBUFFX4_HVT)                     16.308   9367.165 r
+  I_BLENDER_0/U8554/Y (AO22X1_HVT)                      14.436   9381.602 r
+  I_BLENDER_0/U8555/Y (AO22X1_RVT)                       0.042   9381.643 r
+  I_BLENDER_0/U8576/Y (NAND2X0_HVT)                      0.072   9381.715 f
+  I_BLENDER_0/R_566/D (SDFFX1_LVT)                       0.010   9381.725 f
+  data arrival time                                              9381.726
+
+  clock SYS_CLK (rise edge)                              4.800      4.800
+  clock network delay (propagated)                     103.282    108.082
+  clock reconvergence pessimism                          0.671    108.754
+  clock uncertainty                                     -0.100    108.654
+  I_BLENDER_0/R_566/CLK (SDFFX1_LVT)                              108.654 r
+  library setup time                                    -0.041    108.613
+  data required time                                              108.613
+  ------------------------------------------------------------------------------
+  data required time                                              108.613
+  data arrival time                                              -9381.726
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -9273.112
+
+
+1

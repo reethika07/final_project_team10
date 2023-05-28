@@ -1,0 +1,67 @@
+****************************************
+Report : timing
+	-path_type full_clock_expanded
+	-delay_type min
+	-input_pins
+	-max_paths 1
+	-sort_by slack
+Design : ORCA_TOP
+Version: O-2018.06
+Date   : Sat May 27 13:21:38 2023
+****************************************
+
+
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_25_
+               (rising edge-triggered flip-flop clocked by PCI_CLK)
+  Endpoint: pad_out[25]
+               (output port clocked by v_PCI_CLK)
+  Path Group: v_PCI_CLK
+  Path Type: min
+  Sigma: 3.0
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock PCI_CLK (rise edge)                              0.000      0.000
+  clock source latency                                   0.000      0.000
+  pclk (in)                                              0.003 &    0.003 r
+  occ_int2/fast_clk_2_clkgt/u_icg/CLK (CGLNPRX2_LVT)     0.000 &    0.003 r
+  occ_int2/fast_clk_2_clkgt/u_icg/GCLK (CGLNPRX2_LVT)    0.029 &    0.031 r
+  occ_int2/U1/A1 (AO21X1_LVT)                            0.000 &    0.031 r
+  occ_int2/U1/Y (AO21X1_LVT)                             0.020 &    0.051 r
+  occ_int2/cts_buf_591831335/A (NBUFFX16_LVT)            0.000 &    0.051 r
+  occ_int2/cts_buf_591831335/Y (NBUFFX16_LVT)            0.017 &    0.069 r
+  I_PCI_TOP/I_PCI_CORE_clk_gate_pad_out_buf_reg/latch/CLK (CGLPPRX2_LVT)
+                                                         0.010 &    0.078 r
+  I_PCI_TOP/I_PCI_CORE_clk_gate_pad_out_buf_reg/latch/GCLK (CGLPPRX2_LVT)
+                                                         0.033 &    0.112 r
+  I_PCI_TOP/I_PCI_CORE_clk_gate_pad_out_buf_reg/cts_buf_589131308/A (NBUFFX16_LVT)
+                                                         0.000 &    0.112 r
+  I_PCI_TOP/I_PCI_CORE_clk_gate_pad_out_buf_reg/cts_buf_589131308/Y (NBUFFX16_LVT)
+                                                         0.021 &    0.132 r
+  I_PCI_TOP/I_PCI_CORE_clk_gate_pad_out_buf_reg/cts_buf_588131298/A (NBUFFX16_LVT)
+                                                         0.003 &    0.136 r
+  I_PCI_TOP/I_PCI_CORE_clk_gate_pad_out_buf_reg/cts_buf_588131298/Y (NBUFFX16_LVT)
+                                                         0.022 &    0.158 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_25_/CLK (DFFARX1_HVT)
+                                                         0.006 &    0.164 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_25_/Q (DFFARX1_HVT)
+                                                         0.079 &    0.243 r
+  HFSBUF_11_227/A (NBUFFX16_RVT)                        -0.004 &    0.239 r
+  HFSBUF_11_227/Y (NBUFFX16_RVT)                         0.023 &    0.262 r
+  pad_out[25] (out)                                      0.004 &    0.266 r
+  data arrival time                                                 0.266
+
+  clock v_PCI_CLK (rise edge)                            0.000      0.000
+  clock network delay (ideal)                            0.050      0.050
+  clock reconvergence pessimism                          0.000      0.050
+  output external delay                                  0.300      0.350
+  data required time                                                0.350
+  ------------------------------------------------------------------------------
+  data required time                                                0.350
+  data arrival time                                                -0.266
+  ------------------------------------------------------------------------------
+  statistical adjustment                                -0.000     -0.084
+  slack (VIOLATED)                                                 -0.084
+
+
+1

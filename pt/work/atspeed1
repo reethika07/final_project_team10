@@ -1,0 +1,62 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : ORCA_TOP
+Version: O-2018.06
+Date   : Sat May 20 21:49:25 2023
+****************************************
+
+
+  Startpoint: I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_19_
+               (rising edge-triggered flip-flop clocked by SYS_2x_CLK)
+  Endpoint: I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_
+               (rising edge-triggered flip-flop clocked by SYS_2x_CLK)
+  Last common pin: I_RISC_CORE/cts_buf_694432293/Y
+  Path Group: SYS_2x_CLK
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.050
+  Min Clock Paths Derating Factor : 0.950
+  Max Clock Paths Derating Factor : 1.050
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SYS_2x_CLK (rise edge)                           0.000      0.000
+  clock network delay (propagated)                       1.296      1.296
+  I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_19_/CLK (SDFFX2_HVT)
+                                                         0.000      1.296 r
+  I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_19_/QN (SDFFX2_HVT)
+                                                         1.153      2.449 r
+  I_RISC_CORE/HFSINV_270_1792/Y (INVX16_HVT)             0.274      2.723 f
+  I_RISC_CORE/U172/Y (OR4X1_HVT)                         1.302      4.025 f
+  I_RISC_CORE/U81/Y (OR3X2_HVT)                          0.664      4.689 f
+  I_RISC_CORE/U174/Y (AO221X1_RVT)                       0.335      5.024 f
+  I_RISC_CORE/U72/Y (OA22X1_RVT)                         0.291      5.315 f
+  I_RISC_CORE/U180/Y (NOR4X1_RVT)                        0.609      5.923 r
+  I_RISC_CORE/U45/Y (NBUFFX2_HVT)                        0.291      6.214 r
+  I_RISC_CORE/U181/Y (AND2X1_HVT)                        0.515      6.729 r
+  I_RISC_CORE/U182/Y (NAND3X1_RVT)                       0.378      7.107 f
+  I_RISC_CORE/U494/Y (AO21X1_HVT)                        0.510      7.617 f
+  I_RISC_CORE/U496/Y (AO222X1_HVT)                       0.726      8.343 f
+  I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_/D (SDFFARX1_HVT)
+                                                         0.000      8.343 f
+  data arrival time                                                 8.343
+
+  clock SYS_2x_CLK (rise edge)                           2.400      2.400
+  clock network delay (propagated)                       1.030      3.430
+  clock reconvergence pessimism                          0.132      3.562
+  clock uncertainty                                     -0.100      3.462
+  I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_Crnt_Stack_reg_0_/CLK (SDFFARX1_HVT)
+                                                                    3.462 r
+  library setup time                                    -1.420      2.041
+  data required time                                                2.041
+  ------------------------------------------------------------------------------
+  data required time                                                2.041
+  data arrival time                                                -8.343
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                 -6.301
+
+
+1

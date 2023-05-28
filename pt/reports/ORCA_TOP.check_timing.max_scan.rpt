@@ -1,0 +1,71 @@
+Information: Checking 'no_input_delay'.
+Information: Checking 'no_driving_cell'.
+Warning: There are 3 ports with parasitics but with no driving cell.
+
+Ports
+------------------------------------------------------------
+pll_bypass
+pll_reset
+test_si7
+
+Information: Checking 'unconstrained_endpoints'.
+Warning: There are 12 endpoints which are not constrained for maximum delay.
+
+Endpoint
+--------------------------------------------------------------------------------
+snps_clk_chain_1/U_shftreg_0/ff_3/q_reg/D
+snps_clk_chain_1/U_shftreg_0/ff_4/q_reg/D
+I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_0/q_reg/D
+sd_CKn
+snps_clk_chain_1/U_shftreg_0/ff_5/q_reg/D
+test_so[5]
+sd_CK
+test_so[4]
+snps_clk_chain_1/U_shftreg_0/ff_1/q_reg/D
+snps_clk_chain_1/U_shftreg_0/ff_0/q_reg/D
+snps_clk_chain_1/U_shftreg_0/ff_2/q_reg/D
+I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_1/q_reg/D
+
+Information: Checking 'unexpandable_clocks'.
+Information: Checking 'latch_fanout'.
+Information: Checking 'no_clock'.
+Warning: There are 28 register clock pins with no clock.
+
+Clock Pin
+------------------------------------------------------------
+I_CLOCKING/occ_int1/U_clk_control_i_0/slow_clk_enable_l_reg/CLK
+I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_0/q_reg/CLK
+I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_1/q_reg/CLK
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_1/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_2/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_3/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_4/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_5/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_6/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_7/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_8/CE1
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_1/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_2/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_3/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_4/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_5/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_6/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_7/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_8/CE2
+occ_int2/U_clk_control_i_0/slow_clk_enable_l_reg/CLK
+occ_int2/U_clk_control_i_1/slow_clk_enable_l_reg/CLK
+occ_int2/U_clk_control_i_2/slow_clk_enable_l_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_0/q_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_1/q_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_2/q_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_3/q_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_4/q_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_5/q_reg/CLK
+
+Information: Checking 'partial_input_delay'.
+Information: Checking 'generic'.
+Information: Checking 'loops'.
+Information: Checking 'generated_clocks'.
+Information: Checking 'pulse_clock_non_pulse_clock_merge'.
+Information: Checking 'pll_configuration'.
+0

@@ -32,7 +32,8 @@ if { [info exists synopsys_program_name ] } {
 		  set_operating_condition $corner_op_cond -library saed32lvt_c
 		}
 
-		foreach scenario { {func_worst func Cmax } {func_best func Cmin} {test_worst test Cmax} {test_best test Cmin} {atspeed_shift atspeed Cmin} {atspeed_cap atspeed Cmax} {stuck_at_shift scan Cmin} {stuck_at_cap scan Cmax} {func_worst_constrained funcu Cmax} {func_best_constrained funcu Cmin} }  {
+		#foreach scenario { {func_worst func Cmax } {func_best func Cmin} {test_worst test Cmax} {test_best test Cmin} {atspeed_shift atspeed Cmin} {atspeed_cap atspeed Cmax} {stuck_at_shift scan Cmin} {stuck_at_cap scan Cmax}  }
+foreach scenario { {func_worst func Cmax } {func_best func Cmin} {test_worst test Cmax} {test_best test Cmin} }  {
 		  create_scenario -name [lindex $scenario 0 ] -mode [lindex $scenario 1 ] -corner [lindex $scenario 2 ]
 		  current_scenario [lindex $scenario 0]
 		  source -echo -verbose -continue_on_error ../../constraints/ORCA_TOP_[lindex $scenario 0 ].sdc 
@@ -94,33 +95,27 @@ if { [info exists synopsys_program_name ] } {
 		    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
 		    source $topdir/constraints/ORCA_TOP_test_worst.sdc
 		}
-                if [ regexp "Cmax" $corner_name] {
-                   set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
-       		    source $topdir/constraints/ORCA_TOP_func_worst_constrained.sdc
-              	}
-              	if [ regexp "Cmin" $corner_name] {
-                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-       		    source $topdir/constraints/ORCA_TOP_func_best_constrained.sdc
-              	}
-             	if [ regexp "Ccmin" $corner_name] {
-                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-       		    source $topdir/constraints/ORCA_TOP_stuck_at_shift.sdc
-             	}
-             	if [ regexp "Ccmax" $corner_name] {
-                   set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
-       		    source $topdir/constraints/ORCA_TOP_stuck_at_cap.sdc
-             	}
-             	if [ regexp "Cmax_s" $corner_name] {
-                   set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
-       		    source $topdir/constraints/ORCA_TOP_atspeed_cap.sdc
-             	}
-             	if [ regexp "Cmin_s" $corner_name] {
-                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-       		    source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc
-             	}
-     
-	 }
-	}
+if [ regexp "max_capture" $corner_name ] {
+		    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+		    source $topdir/constraints/ORCA_TOP_atspeed_cap.sdc
+		}
+if [ regexp "min_scan" $corner_name ] {
+		    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+		    source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc
+		}
+if [ regexp "min_capture" $corner_name ] {
+		    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+		    source $topdir/constraints/ORCA_TOP_stuck_at_cap.sdc
+		}
+if [ regexp "min_shift" $corner_name ] {
+		    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+		    source $topdir/constraints/ORCA_TOP_stuck_at_shift.sdc
+		}
+}
+
+}
+	 
+	
 } elseif {[get_db root: .program_short_name] == "genus"} {
    read_power_intent ../../constraints/ORCA_TOP.upf -version 2.0 -module $top_design
    apply_power_intent

@@ -1,0 +1,40 @@
+catch { setAnalysisMode -analysisType bcwc }
+catch { setAnalysisMode -checkType setup }
+catch { setAnalysisMode -clkSrcPath true }
+catch { setAnalysisMode -clockPropagation forcedIdeal }
+catch { setOptMode -activeHoldViews { test_best_scenario func_best_scenario } }
+catch { setOptMode -activeSetupViews { test_worst_scenario func_worst_scenario } }
+catch { setOptMode -autoSetupViews { func_worst_scenario test_worst_scenario} }
+catch { setOptMode -autoTDGRSetupViews { func_worst_scenario test_worst_scenario} }
+catch { setOptMode -drcMargin 0 }
+catch { setOptMode -fixDrc true }
+catch { setOptMode -optimizeFF true }
+catch { setOptMode -placementSetupViews { func_worst_scenario  } }
+catch { setOptMode -setupTargetSlack 0 }
+catch { setOptMode -usefulSkew false }
+catch { setOptMode -usefulSkewCCOpt none }
+catch { setOptMode -usefulSkewPostRoute false }
+catch { setOptMode -usefulSkewPreCTS false }
+catch { setPathGroupOptions reg2reg -effortLevel high -weight 2 }
+catch { setPathGroupOptions reg2out -effortLevel low }
+catch { setPathGroupOptions reg2cgate -effortLevel high -weight 1 }
+catch { setPathGroupOptions in2reg -effortLevel low }
+catch { setPathGroupOptions in2out -effortLevel low }
+catch { setExtractRCMode  -engine preRoute }
+catch {setNanoRouteMode -quiet -drouteEndIteration 5}
+catch {setNanoRouteMode -quiet -extractThirdPartyCompatible false}
+catch {setNanoRouteMode -quiet -grouteExpTdStdDelay 10.900000}
+catch {setNanoRouteMode -quiet -routeWithViaOnlyForMacroCellPin "false"}
+catch {setNanoRouteMode -quiet -routeWithViaOnlyForStandardCellPin "1:1"}
+
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepInstInSdc false -keepFlatten true }
+catch { setDelayCalMode -enable_high_fanout true }
+catch { setDelayCalMode -eng_copyNetPropToNewNet true }
+catch { setDelayCalMode -engine aae }
+catch { setDelayCalMode -ignoreNetLoad false }
+catch { setPinAssignMode -pinEditInBatch false }
+catch { setMsvMode -allowSinglePowerDomain true }
+catch { setSIMode -separate_delta_delay_on_data true }
+catch { setEcoMode -batchMode false }
+catch { setFPlanMode -maxIoHeight false }
+catch { setFPlanMode -powerRailLayer {} }

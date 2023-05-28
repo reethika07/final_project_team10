@@ -1,0 +1,250 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Launching 14 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   9] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  10] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  11] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  12] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  13] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  14] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for  14 (of  14) workers    : Thu May 25 12:02:33 2023
+  Waiting for   0 (of  14) workers    : Thu May 25 12:02:43 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Thu May 25 12:02:43 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           14                      auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         5441          ONLINE
+                   2    mo           -         5447          ONLINE
+                   3    mo           -         5442          ONLINE
+                   4    mo           -         5443          ONLINE
+                   5    mo           -         5440          ONLINE
+                   6    mo           -         5445          ONLINE
+                   7    mo           -         5446          ONLINE
+                   8    mo           -         5448          ONLINE
+                   9    mo           -         5622          ONLINE
+                   10   mo           -         5590          ONLINE
+                   11   mo           -         6092          ONLINE
+                   12   mo           -         5613          ONLINE
+                   13   mo           -         5593          ONLINE
+                   14   mo           -         5588          ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+                   9                                         4
+                   10                                        4
+                   11                                        4
+                   12                                        4
+                   13                                        4
+                   14                                        4
+  --------------------------------------------------------------------
+  Total                                                      56
+
+pt_shell> report_Timing
+Error: unknown command 'report_Timing' (CMD-005)
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Thu May 25 12:04:59 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_SDRAM_TOP/I_SDRAM_IF/R_19
+               (rising edge-triggered flip-flop clocked by SDRAM_CLK)
+  Endpoint: sd_A[9] (output port clocked by v_SDRAM_CLK)
+  Path Group: OUTPUTS
+  Path Type: max
+  Scenario: atspeed_cap
+  Min Clock Paths Derating Factor : 0.95
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SDRAM_CLK (rise edge)                            67.50      67.50
+  clock network delay (propagated)                        1.07      68.57
+  I_SDRAM_TOP/I_SDRAM_IF/R_19/CLK (SDFFASX1_HVT)          0.00      68.57 r
+  I_SDRAM_TOP/I_SDRAM_IF/R_19/Q (SDFFASX1_HVT)            1.38 &    69.95 f
+  I_SDRAM_TOP/I_SDRAM_IF/U51/SO (HADDX1_HVT)              0.88 &    70.83 f
+  HFSBUF_4_200/Y (NBUFFX8_HVT)                            0.55 &    71.38 f
+  sd_A[9] (out)                                           0.01 &    71.39 f
+  data arrival time                                                 71.39
+
+  clock v_SDRAM_CLK (rise edge)                          67.60      67.60
+  clock network delay (ideal)                             0.50      68.10
+  clock reconvergence pessimism                           0.00      68.10
+  clock uncertainty                                      -0.10      68.00
+  output external delay                                  -1.10      66.90
+  data required time                                                66.90
+  ------------------------------------------------------------------------------
+  data required time                                                66.90
+  data arrival time                                                -71.39
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -4.49
+
+
+1
+pt_shell> exit
+Maximum memory usage for distributed processes:
+my_opts1        1   mo                 764.67 MB
+                2   mo                 638.61 MB
+                3   mo                 764.62 MB
+                4   mo                 781.77 MB
+                5   mo                 784.00 MB
+                6   mo                 774.24 MB
+                7   mo                 764.18 MB
+                8   mo                 775.15 MB
+                9   mo                 781.66 MB
+                10  mo                 753.58 MB
+                11  mo                 785.91 MB
+                12  mo                 777.06 MB
+                13  mo                 776.78 MB
+                14  mo                 774.23 MB
+CPU time usage for distributed processes:
+my_opts1        1   mo                 202 seconds
+                2   mo                 88 seconds
+                3   mo                 2 seconds
+                4   mo                 190 seconds
+                5   mo                 202 seconds
+                6   mo                 198 seconds
+                7   mo                 2 seconds
+                8   mo                 199 seconds
+                9   mo                 203 seconds
+                10  mo                 208 seconds
+                11  mo                 193 seconds
+                12  mo                 208 seconds
+                13  mo                 202 seconds
+                14  mo                 207 seconds
+Elapsed time for distributed processes:
+my_opts1        1   mo                 225 seconds
+                2   mo                 225 seconds
+                3   mo                 220 seconds
+                4   mo                 225 seconds
+                5   mo                 220 seconds
+                6   mo                 225 seconds
+                7   mo                 220 seconds
+                8   mo                 225 seconds
+                9   mo                 225 seconds
+                10  mo                 225 seconds
+                11  mo                 221 seconds
+                12  mo                 225 seconds
+                13  mo                 225 seconds
+                14  mo                 225 seconds
+Maximum memory usage for this session: 853.33 MB
+CPU usage for this session: 2 seconds 
+Elapsed time for this session: 245 seconds
+Shutting down worker processes ...
+ Shutdown Process 1
+ Shutdown Process 2
+ Shutdown Process 3
+ Shutdown Process 4
+ Shutdown Process 5
+ Shutdown Process 6
+ Shutdown Process 7
+ Shutdown Process 8
+ Shutdown Process 9
+ Shutdown Process 10
+ Shutdown Process 11
+ Shutdown Process 12
+ Shutdown Process 13
+ Shutdown Process 14
+Diagnostics summary: 2 errors, 36 informationals
+
+Thank you for using pt_shell!
+

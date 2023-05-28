@@ -1,0 +1,412 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Launching 14 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   9] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  10] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  11] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  12] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  13] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  14] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for  14 (of  14) workers    : Sat May 27 11:28:39 2023
+  Waiting for   0 (of  14) workers    : Sat May 27 11:28:49 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Sat May 27 11:28:50 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           14                      auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         8368          ONLINE
+                   2    mo           -         8374          ONLINE
+                   3    mo           -         8371          ONLINE
+                   4    mo           -         8367          ONLINE
+                   5    mo           -         8369          ONLINE
+                   6    mo           -         8372          ONLINE
+                   7    mo           -         8366          ONLINE
+                   8    mo           -         8370          ONLINE
+                   9    mo           -         8553          ONLINE
+                   10   mo           -         8555          ONLINE
+                   11   mo           -         8554          ONLINE
+                   12   mo           -         8556          ONLINE
+                   13   mo           -         8552          ONLINE
+                   14   mo           -         8561          ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+                   9                                         4
+                   10                                        4
+                   11                                        4
+                   12                                        4
+                   13                                        4
+                   14                                        4
+  --------------------------------------------------------------------
+  Total                                                      56
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_min'
+-----------------------------------
+End of Master/Slave Task Processing
+
+1
+1
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sat May 27 11:30:20 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'test_slowfast'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/CLK
+               (internal path startpoint clocked by SYS_2x_CLK)
+  Endpoint: occ_int2/fast_clk_0_clkgt/u_icg
+               (falling clock gating-check end-point clocked by SYS_2x_CLK)
+  Last common pin: cts_dlydt_32422/Y
+  Path Group: **clock_gating_default**
+  Path Type: max
+  Scenario: test_slowfast
+  Min Clock Paths Derating Factor : 0.95
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SYS_2x_CLK (rise edge)                            0.00       0.00
+  clock network delay (propagated)                        1.38       1.38
+  occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/CLK (DFFARX1_LVT)
+                                                          0.00       1.38 r
+  occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/Q (DFFARX1_LVT)
+                                                          0.25 &     1.63 f
+  occ_int2/U_gf_mux_0/ctmTdsLR_1_24113/Y (AO21X1_LVT)     0.13 &     1.76 f
+  occ_int2/fast_clk_0_clkgt/u_icg/EN (CGLNPRX2_LVT)       0.00 &     1.76 f
+  data arrival time                                                  1.76
+
+  clock SYS_2x_CLK (fall edge)                            1.20       1.20
+  clock network delay (propagated)                        0.32       1.52
+  clock reconvergence pessimism                           0.02       1.54
+  clock uncertainty                                      -0.10       1.44
+  occ_int2/fast_clk_0_clkgt/u_icg/CLK (CGLNPRX2_LVT)                 1.44 f
+  clock gating setup time                                -0.19       1.26
+  data required time                                                 1.26
+  ------------------------------------------------------------------------------
+  data required time                                                 1.26
+  data arrival time                                                 -1.76
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.50
+
+
+1
+pt_shell> report_timing -delay_type  min'
+Error: value 'min'' for option '-delay_type' is not valid.  Specify one of:
+        max, min, min_max, max_rise, max_fall, min_rise, min_fall (CMD-031)
+pt_shell> report_timing -delay_type  min
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sat May 27 11:31:17 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_fastslow'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_CONTEXT_MEM/ram_write_addr_reg_4_
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Endpoint: I_CONTEXT_MEM/I_CONTEXT_RAM_1_3
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Last common pin: I_CLOCKING/occ_int1/cts_buf_693832355/Y
+  Path Group: ate_clk
+  Path Type: min
+  Scenario: atspeed_shift
+  Min Data Paths Derating Factor  : 0.95
+  Min Clock Paths Derating Factor : 0.95
+  Max Clock Paths Derating Factor : 1.05
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.17       0.17
+  I_CONTEXT_MEM/ram_write_addr_reg_4_/CLK (SDFFARX1_RVT)
+                                                          0.00       0.17 r
+  I_CONTEXT_MEM/ram_write_addr_reg_4_/Q (SDFFARX1_RVT)
+                                                          0.06 &     0.22 f
+  I_CONTEXT_MEM/HFSBUF_205_527/Y (NBUFFX16_HVT)           0.02 &     0.25 f
+  I_CONTEXT_MEM/I_CONTEXT_RAM_1_3/A1[4] (SRAM2RW64x8)     0.00 &     0.25 f
+  data arrival time                                                  0.25
+
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.20       0.20
+  clock reconvergence pessimism                          -0.01       0.19
+  I_CONTEXT_MEM/I_CONTEXT_RAM_1_3/CE1 (SRAM2RW64x8)                  0.19 r
+  library hold time                                       0.04       0.24
+  data required time                                                 0.24
+  ------------------------------------------------------------------------------
+  data required time                                                 0.24
+  data arrival time                                                 -0.25
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+1
+pt_shell> report_timing -delay_type  min -significant_digits  5
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sat May 27 11:31:53 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_fastslow'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_CONTEXT_MEM/ram_write_addr_reg_4_
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Endpoint: I_CONTEXT_MEM/I_CONTEXT_RAM_1_3
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Last common pin: I_CLOCKING/occ_int1/cts_buf_693832355/Y
+  Path Group: ate_clk
+  Path Type: min
+  Scenario: atspeed_shift
+  Min Data Paths Derating Factor  : 0.95000
+  Min Clock Paths Derating Factor : 0.95000
+  Max Clock Paths Derating Factor : 1.05000
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock ate_clk (rise edge)                            0.00000    0.00000
+  clock network delay (propagated)                     0.16729    0.16729
+  I_CONTEXT_MEM/ram_write_addr_reg_4_/CLK (SDFFARX1_RVT)
+                                                       0.00000    0.16729 r
+  I_CONTEXT_MEM/ram_write_addr_reg_4_/Q (SDFFARX1_RVT)
+                                                       0.05707 &  0.22436 f
+  I_CONTEXT_MEM/HFSBUF_205_527/Y (NBUFFX16_HVT)        0.02316 &  0.24752 f
+  I_CONTEXT_MEM/I_CONTEXT_RAM_1_3/A1[4] (SRAM2RW64x8)  0.00454 &  0.25206 f
+  data arrival time                                               0.25206
+
+  clock ate_clk (rise edge)                            0.00000    0.00000
+  clock network delay (propagated)                     0.19922    0.19922
+  clock reconvergence pessimism                       -0.00907    0.19014
+  I_CONTEXT_MEM/I_CONTEXT_RAM_1_3/CE1 (SRAM2RW64x8)               0.19014 r
+  library hold time                                    0.04495    0.23509
+  data required time                                              0.23509
+  ------------------------------------------------------------------------------
+  data required time                                              0.23509
+  data arrival time                                              -0.25206
+  ------------------------------------------------------------------------------
+  slack (MET)                                                     0.01697
+
+
+1
+pt_shell> 

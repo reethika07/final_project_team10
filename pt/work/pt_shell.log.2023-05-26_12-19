@@ -1,0 +1,22 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> exec rm -rf ms_session_1
+Error: rm: cannot remove 'ms_session_1/command_log/.nfs00000000005db32f00008189': Device or resource busy
+rm: cannot remove 'ms_session_1/command_log/.nfs00000000005db21f00008192': Device or resource busy
+rm: cannot remove 'ms_session_1/command_log/.nfs00000000005d8f730000818d': Device or resource busy
+rm: cannot remove 'ms_session_1/command_log/.nfs00000000005db1290000818b': Device or resource busy
+rm: cannot remove 'ms_session_1/command_log/.nfs00000000005db0da00008187': Device or resource busy
+rm: cannot remove 'ms_session_1/command_log/.nfs00000000005db32d00008185': Device or resource busy
+rm: cannot remove 'ms_session_1/command_log/.nfs00000000005db40300008191': Device or resource busy
+rm: cannot remove 'ms_session_1/command_log/.nfs00000000005db33100008188': Device or resource busy
+rm: cannot remove 'ms_session_1/command_log/.nfs00000000005db1280000818e': Device or resource busy
+rm: cannot remove 'ms_session_1/command_log/.nfs00000000005db0de00008186': Device or resource busy
+rm: cannot remove 'ms_session_1/command_log/.nfs00000000005db0dc00008190': Device or resource busy
+rm: cannot remove 'ms_session_1/command_log/.nfs00000000005dafbd0000818c': Device or resource busy
+rm: cannot remove 'ms_session_1/command_log/.nfs00000000005db1270000818f': Device or resource busy
+rm: cannot remove 'ms_session_1/command_log/.nfs00000000005db1260000818a': Device or resource busy
+        Use error_info for more info. (CMD-013)
+pt_shell> 

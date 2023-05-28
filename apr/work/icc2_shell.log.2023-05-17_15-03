@@ -1,0 +1,339 @@
+setting auto_restore_mw_cel_lib_setup true
+icc2_shell> o
+setting top_design to: 
+ORCA_TOP
+icc2_shell> source ../scripts/icc2.tcl
+set lib_dir /pkgs/synopsys/2020/32_28nm/SAED32_EDK
+/pkgs/synopsys/2020/32_28nm/SAED32_EDK
+# Decoder ring for the libraries
+# You will need to follow another example or look in the library directories to understand.
+# lib_types is used for the dc/dct linking variables and ICC2 NDM lcoations.
+# /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm
+# /          $lib_dir                   /lib/ $lib_type /db_nldm
+# link_library, Target_library use the sub_lib_types and corner variables. 
+# For sub_lib_types and corner:
+# Example:
+#     saed32hvt_ss0p75v125c.db
+#     |sub_lib  corner    .db
+# The current flow tries to find all sub_lib and all corners in all the search paths.  Any match will be put in the library list.
+# Wild cards can be used, but be careful.  Multiple matches can occur in ways you don't want.
+# For the target library, the same method is used as the link library except only HVT and RVT lib_types are used.
+# ICC2 NDM choosing also uses the sub_lib_types so that only the required libraries and extras are not loaded.
+# ORCA
+# The RTL version does not currently have macros
+# The one pulled from a lab does have macros, but no RTL.  Similar to the version with RTL.
+# Below is an effort to get the design pulled from a lap working for ICC2
+# Original lab had sram_lp memories, but the NDMs don't seem to be build correctly for the current libraries.  Converted code to regular SRAMs.
+set top_design ORCA_TOP
+ORCA_TOP
+set FCL 1
+1
+set add_ios 0
+0
+set pad_design 0
+0
+set design_size {800 750}
+800 750
+set design_io_border 10
+10
+set dc_floorplanning 1
+1
+set enable_dft 1
+1
+set innovus_enable_manual_macro_placement 1
+1
+set split_constraints 0
+0
+# This is the raw RTL without SRAMS
+#set rtl_list [list [glob /pkgs/synopsys/32_28nm/SAED_EDK32.28nm_REF_v_15032018/SAED32_EDK/references/orca/dc/rtl/*.vhd ] ../rtl/MUX21X2.sv ]
+# This is hacked P&R netlist with SRAMs and test and level shifters removed.
+set rtl_list [list ../rtl/$top_design.sv ]
+../rtl/ORCA_TOP.sv
+set slow_corner "ss0p75vn40c ss0p75vn40c_i0p95v ss0p75vn40c_i0p75v ss0p95vn40c ss0p95vn40c_i0p75v"
+ss0p75vn40c ss0p75vn40c_i0p95v ss0p75vn40c_i0p75v ss0p95vn40c ss0p95vn40c_i0p75v
+#set slow_corner "ss0p95vn40c_i0p95v ss0p95vn40c "
+set fast_corner "ff0p95vn40c ff0p95vn40c_i1p16v ff0p95vn40c_i0p95v ff1p16vn40c ff1p16vn40c_i1p16v ff1p16vn40c_i0p95v"
+ff0p95vn40c ff0p95vn40c_i1p16v ff0p95vn40c_i0p95v ff1p16vn40c ff1p16vn40c_i1p16v ff1p16vn40c_i0p95v
+set slow_metal 1p9m_Cmax_-40
+1p9m_Cmax_-40
+set fast_metal 1p9m_Cmax_-40
+1p9m_Cmax_-40
+set synth_corners $slow_corner
+ss0p75vn40c ss0p75vn40c_i0p95v ss0p75vn40c_i0p75v ss0p95vn40c ss0p95vn40c_i0p75v
+set synth_corners_slow $slow_corner
+ss0p75vn40c ss0p75vn40c_i0p95v ss0p75vn40c_i0p75v ss0p95vn40c ss0p95vn40c_i0p75v
+set synth_corners_fast $fast_corner
+ff0p95vn40c ff0p95vn40c_i1p16v ff0p95vn40c_i0p95v ff1p16vn40c ff1p16vn40c_i1p16v ff1p16vn40c_i0p95v
+set lib_types "stdcell_hvt stdcell_rvt stdcell_lvt sram"
+stdcell_hvt stdcell_rvt stdcell_lvt sram
+# Get just the main standard cells, srams
+set sub_lib_type "saed32?vt_ saed32sram_ saed32?vt_ulvl_ saed32?vt_dlvl_ "
+saed32?vt_ saed32sram_ saed32?vt_ulvl_ saed32?vt_dlvl_ 
+# Full MCMM Corners
+if { 0 } {
+    set corners ""
+    #Add Worst corners
+    set corners "$corners ss0p75vn40c ss0p75vn40c_i0p95v ss0p75vn40c_i0p75v ss0p95vn40c ss0p95vn40c_i0p75v"
+    #Add Best corners
+    set corners "$corners ff0p95vn40c ff0p95vn40c_i1p16v ff0p95vn40c_i0p95v ff1p16vn40c ff1p16vn40c_i1p16v ff1p16vn40c_i0p95v"
+    #Add Leakage corners
+    set corners "$corners ff0p95v125c f0p95v125c_i1p16v ff0p95v125c_i0p95v ff1p16v125c ff1p16v125c_i1p16v ff1p16v125c ff1p16v125c_i0p95v"
+    set lib_types "stdcell_hvt stdcell_rvt stdcell_lvt sram_lp"
+    # Get the main standard cells, and also the level shifters.  Plus srams.
+    set sub_lib_type "saed32?vt_ saed32?vt_ulvl_ saed32?vt_dlvl_ saed32sram_"
+}
+#set topdir /u/$env(USER)/PSU_RTL2GDS
+set topdir [ lindex [ regexp -inline "(.*)\(syn\|pt\|apr\)" [pwd] ] 1 ]
+/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/
+#declaring sub blocks
+set sub_block {SDRAM_TOP 
+                                BLENDER_0 
+                                PCI_TOP 
+                                CONTEXT_MEM 
+                                RISC_CORE 
+                                CLOCKING 
+                                BLENDER_1 
+                                PARSER 
+                                }
+SDRAM_TOP 
+                                BLENDER_0 
+                                PCI_TOP 
+                                CONTEXT_MEM 
+                                RISC_CORE 
+                                CLOCKING 
+                                BLENDER_1 
+                                PARSER 
+                                
+set sub_block_I {I_SDRAM_TOP I_BLENDER_1  I_BLENDER_0 I_RISC_CORE I_CONTEXT_MEM I_PCI_TOP I_PARSER I_CLOCKING}
+I_SDRAM_TOP I_BLENDER_1  I_BLENDER_0 I_RISC_CORE I_CONTEXT_MEM I_PCI_TOP I_PARSER I_CLOCKING
+set macro_block {I_SDRAM_TOP I_PCI_TOP I_RISC_CORE I_CONTEXT_MEM}
+I_SDRAM_TOP I_PCI_TOP I_RISC_CORE I_CONTEXT_MEM
+######## STARTING INITIALIZE and FLOORPLAN #################
+# Look for directories like this "/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/ndm"
+# This may not be used
+set search_path ""
+foreach i $lib_types { lappend search_path $lib_dir/lib/$i/ndm }
+#set synthetic_library dw_foundation.sldb
+# Changed to only be the slow corner libraries
+#set target_library "saed32hvt_ss0p75v125c.db saed32lvt_ss0p75v125c.db saed32rvt_ss0p75v125c.db"
+# enable the lvt and rvt library for now at the slow corner
+#set target_library "saed32lvt_ss0p75v125c.db saed32rvt_ss0p75v125c.db saed32io_wb_ss0p95v125c_2p25v.db"
+set libs ""
+# should we use _pg_c.ndm, _c.ndm, dlvl_v.ndm, _ulvl_v.ndm
+set suffix "c.ndm 5v.ndm v.ndm"
+c.ndm 5v.ndm v.ndm
+# Look for files like this "/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/ndm/saed32hvt$suffix"
+set libs ""
+foreach i $lib_types { 
+    foreach j $suffix {
+        foreach k $sub_lib_type {
+          foreach m [glob -nocomplain $lib_dir/lib/$i/ndm/$k$j ] {
+            lappend libs $m
+          }
+        }
+    }
+}
+set tf_dir "$lib_dir/tech/milkyway/"
+/pkgs/synopsys/2020/32_28nm/SAED32_EDK/tech/milkyway/
+set tlu_dir "$lib_dir/tech/star_rcxt/"
+/pkgs/synopsys/2020/32_28nm/SAED32_EDK/tech/star_rcxt/
+#set_tlu_plus_files  -max_tluplus $tlu_dir/saed32nm_1p9m_Cmax.tluplus  #                    -min_tluplus $tlu_dir/saed32nm_1p9m_Cmin.tluplus  #                    -tech2itf_map  $tlu_dir/saed32nm_tf_itf_tluplus.map
+if { [ info exists dc_floorplanning ] && $dc_floorplanning } {
+   set verilog_file ../../syn/outputs/${top_design}.dc.vg
+} else {
+   set verilog_file ../../syn/outputs/${top_design}.dct.vg
+}
+../../syn/outputs/ORCA_TOP.dct.vg
+file delete -force $my_lib 
+# Adding the tech file causes problems later with missing routing directions for some reason.
+#create_lib $my_lib -ref_libs $libs -tech $tf_dir/saed32nm_1p9m_mw.tf 
+create_lib $my_lib -ref_libs $libs  -use_technology_lib [lindex $libs 0 ] 
+{ORCA_TOP_lib}
+create_block ${top_design}
+Information: Creating block 'ORCA_TOP.design' in library 'ORCA_TOP_lib'. (DES-013)
+{ORCA_TOP_lib:ORCA_TOP.design}
+open_block ${top_design}
+Information: Incrementing open_count of block 'ORCA_TOP_lib:ORCA_TOP.design' to 2. (DES-021)
+{ORCA_TOP_lib:ORCA_TOP.design}
+#import_designs $verilog_file # -format verilog #       -cel $top_design #      -top $top_design
+read_verilog  -top $top_design  $verilog_file
+Loading verilog file '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/syn/outputs/ORCA_TOP.dct.vg'
+Warning: Found redefinition of module 'ORCA_TOP' (overwriting with new version found at line 67765 in /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/syn/outputs/ORCA_TOP.dct.vg). (VR-018)
+Number of modules read: 33
+Top level ports: 237
+Total ports in all modules: 2178
+Total nets in all modules: 47150
+Total instances in all modules: 41748
+Elapsed = 00:00:00.96, CPU = 00:00:00.91
+1
+# Read the SCANDEF information created by DFTC
+# read_def $scandef_file
+if { [info exists synopsys_program_name ] } {
+        switch $synopsys_program_name {
+         "icc2_shell"  {
+                # If the flow variable is set, then we should be in regular APR flow and not the macro floorplanning mode
+                # We want to use the UPF associated with the correct netlist.  APR flow uses DCT output.  Macro fp uses DC output.
+                if { [info exists flow ] } {
+                    puts " Sourcing the Physical Synthesis DCT UPF"
+                    source ../../syn/outputs/ORCA_TOP.dct.upf
+                } else {
+                    puts " Sourcing the Logical Synthesis DC UPF"
+                    source ../../syn/outputs/ORCA_TOP.dc.upf
+                }
+
+                puts " Creating ICC2 MCMM "
+                foreach mode { func test } {
+                  create_mode $mode
+                }
+                foreach corner { {Cmax -40 ss0p75vn40c} {Cmin -40 ff0p95vn40c} } {
+                  set corner_name [lindex $corner 0 ]
+                  set corner_temp [lindex $corner 1 ]
+                  set corner_op_cond [ lindex $corner 2 ]
+                  create_corner $corner_name
+                  # Read the TLUplus file and give it a name.  
+                  read_parasitic_tech -tlup $tlu_dir/saed32nm_1p9m_${corner_name}.tluplus -layermap $tlu_dir/saed32nm_tf_itf_tluplus.map -name ${corner_name}.tlup
+                  # In our current case, we will use the same TLUplus and temperature for both launch and capture and for setup and hold for a particular corner.
+                  # set the TLUplus and temp to be used for early side of paths.  (launch on setup, capture on hold)
+                  set_parasitic_parameters -early_spec ${corner_name}.tlup -early_temperature $corner_temp
+                  # set the TLUplus and temp to be used for late side of paths.  (capture on setup, launch on hold)
+                  set_parasitic_parameters -late_spec ${corner_name}.tlup -late_temperature $corner_temp
+                  # indicate which operating condition to use for the standard cells. It needs to know the PVT.  
+                  # UPF may indicate additional information for the voltage in a multivoltage design.
+                  set_operating_condition $corner_op_cond -library saed32lvt_c
+                }
+
+                foreach scenario { {func_worst func Cmax } {func_best func Cmin} {test_worst test Cmax} {test_best test Cmin} } {
+                  create_scenario -name [lindex $scenario 0 ] -mode [lindex $scenario 1 ] -corner [lindex $scenario 2 ]
+                  current_scenario [lindex $scenario 0]
+                  source -echo -verbose -continue_on_error ../../constraints/ORCA_TOP_[lindex $scenario 0 ].sdc 
+                  set_false_path -from SDRAM_CLK -to SD_DDR_CLK 
+                }
+
+                set_scenario_status func_worst -active true -hold false -setup true
+                set_scenario_status func_best  -active true -hold true  -setup false
+                set_scenario_status test_worst -active true -hold false -setup true
+                set_scenario_status test_best  -active true -hold true  -setup false
+
+                current_scenario "func_worst"
+
+         }
+         "dc_shell" {
+                 set upf_create_implicit_supply_sets false
+                source ../../constraints/ORCA_TOP.upf
+                set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                source ../../constraints/ORCA_TOP_func_worst.sdc
+                set_false_path -from SDRAM_CLK -to SD_DDR_CLK
+
+                # Define voltage area for DCT mode.  We define the mw_lib variable in DCT mode script.
+                # In the ICC2_flow it is defined in ORCA_TOP.design_options.tcl. Slightly different syntax.
+                if { [ info exists mw_lib ] } {
+                   create_voltage_area  -coordinate {{580 0} {1000 400}} -power_domain PD_RISC_CORE
+                }
+         }
+         "pt_shell" {
+                source $topdir/apr/outputs/ORCA_TOP.route2.upf
+                if [ regexp "max" $corner_name ] {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_func_worst.sdc
+                }
+                if [ regexp "min" $corner_name]  {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_func_best.sdc
+                }
+                 if [ regexp "min_test" $corner_name]  {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_test_best.sdc
+                }
+                if [ regexp "max_test" $corner_name]  {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_test_worst.sdc
+                }
+                 if [ regexp "cc_min" $corner_name]  {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_func_best.sdc
+                }
+                 if [ regexp "cc_max" $corner_name]  {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_func_worst.sdc
+                }
+                 if [ regexp "cc_min_test" $corner_name]  {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_test_best.sdc
+                }
+                 if [ regexp "cc_max_test" $corner_name]  {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_test_worst.sdc
+                }
+         }
+        }
+} elseif {[get_db root: .program_short_name] == "genus"} {
+   read_power_intent ../../constraints/ORCA_TOP.upf -version 2.0 -module $top_design
+   apply_power_intent
+   commit_power_intent
+#   report_power_intent 
+   set_units -time ns
+   source -echo -verbose ../../constraints/${top_design}_func_worst.sdc
+   set_false_path -from SDRAM_CLK -to SD_DDR_CLK
+   
+} elseif {[get_db root: .program_short_name] == "innovus"} {
+
+        set_units -time ns -resistance MOhm -capacitance fF -voltage V -current uA
+}
+ Sourcing the Physical Synthesis DCT UPF
+Using libraries: ORCA_TOP_lib saed32hvt_c saed32hvt_ulvl_v saed32hvt_dlvl_v saed32rvt_c saed32rvt_ulvl_v saed32rvt_dlvl_v saed32lvt_c saed32lvt_ulvl_v saed32lvt_dlvl_v saed32sram_c
+Linking block ORCA_TOP_lib:ORCA_TOP.design
+Information: User units loaded from library 'saed32hvt_c' (LNK-040)
+Design 'ORCA_TOP' was successfully linked.
+Information: The lower_domain_boundary design attribute will be made obsolete in future. Consider using -applies_to_boundary option of set_isolation/set_level_shifter/set_repeater strategy commands. (UPF-355)
+Warning: Nothing implicitly matched 'I_RISC_CORE/test_si1_UPF_LS/VSS' (SEL-003)
+Warning: Nothing implicitly matched 'I_RISC_CORE/scan_enable_UPF_LS/VSS' (SEL-003)
+Error: Valid supply ports or PG leaf pins have not been specified. (UPF-071)
+Error: problem in connect_supply_net
+        Use error_info for more info. (CMD-013)
+Information: script '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/syn/outputs/ORCA_TOP.dct.upf'
+                stopped at line 39 due to error. (CMD-081)
+Extended error info:
+problem in connect_supply_net
+    while executing
+"connect_supply_net VSS -ports {I_RISC_CORE/test_si1_UPF_LS/VSS I_RISC_CORE/scan_enable_UPF_LS/VSS}"
+ -- End Extended Error Info
+Information: script '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/constraints/ORCA_TOP.sdc'
+                stopped at line 111 due to error. (CMD-081)
+Extended error info:
+problem in connect_supply_net
+    while executing
+"connect_supply_net VSS -ports {I_RISC_CORE/test_si1_UPF_LS/VSS I_RISC_CORE/scan_enable_UPF_LS/VSS}"
+    (file "/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/syn/outputs/ORCA_TOP.dct.upf" line 39)
+    invoked from within
+"source ../../syn/outputs/ORCA_TOP.dct.upf"
+    invoked from within
+"if { [info exists synopsys_program_name ] } {
+        switch $synopsys_program_name {
+         "icc2_shell"  {
+                # If the flow variable is set, then we should be in..."
+ -- End Extended Error Info
+Information: script '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/apr/scripts/icc2.tcl'
+                stopped at line 78 due to error. (CMD-081)
+Extended error info:
+problem in connect_supply_net
+    while executing
+"connect_supply_net VSS -ports {I_RISC_CORE/test_si1_UPF_LS/VSS I_RISC_CORE/scan_enable_UPF_LS/VSS}"
+    (file "/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/syn/outputs/ORCA_TOP.dct.upf" line 39)
+    invoked from within
+"source ../../syn/outputs/ORCA_TOP.dct.upf"
+    invoked from within
+"if { [info exists synopsys_program_name ] } {
+        switch $synopsys_program_name {
+         "icc2_shell"  {
+                # If the flow variable is set, then we should be in..."
+    (file "/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/constraints/ORCA_TOP.sdc", between lines 1 and 111)
+    invoked from within
+"source -echo -verbose ../../constraints/${top_design}.sdc"
+    invoked from within
+"if { [regexp -nocase "f" $flow ] } {
+    puts "######## STARTING INITIALIZE and FLOORPLAN #################"
+
+    # Use the DCT netlist
+    set dc_flo..."
+ -- End Extended Error Info
+icc2_shell> 

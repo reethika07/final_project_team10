@@ -1,0 +1,52 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/stuck_at_cap.tcl
+# Set up the search path to the librariesi
+# One of the typical lines of the resultant search path is:
+# /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm
+# /          $lib_dir                   /lib/ $lib_type /db_nldm
+# The variables are defined in design_config.tcl
+set search_path ""
+foreach i $lib_types { lappend search_path $lib_dir/lib/$i/db_nldm }
+# Smartly find all the libraries you need
+# Will end up with sometihng like this: 
+# saed32hvt_ss0p75v125c.db saed32hvt_ss0p95v125c.db saed32rvt_ss0p75v125c.db saed32rvt_ss0p95v125c.db saed32lvt_ss0p75v125c.db saed32lvt_ss0p95v125c.db saed32sram_ss0p95v125c.db dw_foundation.sldb *
+# This contains all the VTs you want, all the corners you want, and designate any library subtypes like level shifters you might want
+# The variables are defined in the design_config.tcl
+# Example:
+#     saed32hvt_ss0p75v125c.db
+#     |sub_lib  corner    .db
+set link_library ""
+foreach i $search_path {
+  foreach k $corners {
+      foreach m $sub_lib_type {
+        foreach j [glob -nocomplain $i/$m$k.db ] {
+          lappend link_library [file tail $j ]
+        }
+      }
+  }
+}
+lappend link_library *
+saed32hvt_ss0p75vn40c.db saed32hvt_dlvl_ss0p75vn40c_i0p95v.db saed32hvt_ulvl_ss0p75vn40c_i0p75v.db saed32hvt_dlvl_ss0p75vn40c_i0p75v.db saed32hvt_ss0p95vn40c.db saed32hvt_ulvl_ss0p95vn40c_i0p75v.db saed32rvt_ss0p75vn40c.db saed32rvt_dlvl_ss0p75vn40c_i0p95v.db saed32rvt_ulvl_ss0p75vn40c_i0p75v.db saed32rvt_dlvl_ss0p75vn40c_i0p75v.db saed32rvt_ss0p95vn40c.db saed32rvt_ulvl_ss0p95vn40c_i0p75v.db saed32lvt_ss0p75vn40c.db saed32lvt_dlvl_ss0p75vn40c_i0p95v.db saed32lvt_ulvl_ss0p75vn40c_i0p75v.db saed32lvt_dlvl_ss0p75vn40c_i0p75v.db saed32lvt_ss0p95vn40c.db saed32lvt_ulvl_ss0p95vn40c_i0p75v.db saed32sram_ss0p95vn40c.db *
+# Add the local directory "." to the search path after we have used it in the above loop.  If you add . before hand, it will cause some problems.
+lappend search_path .
+/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram/db_nldm .
+Error: Command 'read_verilog' is disabled. (CMD-080)
+Information: script '../scripts/stuck_at_cap.tcl'
+        stopped at line 11 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"read_verilog $topdir/apr/outputs/${top_design}.route2.vg.gz"
+ -- End Extended Error Info
+pt_shell> exit
+Maximum memory usage for this session: 788.50 MB
+CPU usage for this session: 1 seconds 
+Elapsed time for this session: 30 seconds
+Diagnostics summary: 2 errors, 2 informationals
+
+Thank you for using pt_shell!
+

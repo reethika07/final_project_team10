@@ -1,7 +1,7 @@
 #set topdir /u/$env(USER)/PSU_RTL2GDS
 set topdir [lindex [ regexp -inline "(.*)pt" [pwd] ] 1 ]
 
-
+#set topdir /u/$env(USER)/Desktop/final_prj-team_10-final
 source $topdir/$top_design.design_config.tcl
 
 set corners $slow_corner

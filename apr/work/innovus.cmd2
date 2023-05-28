@@ -1,0 +1,353 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Wed May 24 23:44:01 2023                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v19.16-s053_1 (64bit) 08/31/2020 13:16 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: NanoRoute 19.16-s053_1 NR200827-1939/19_16-UB (database version 18.20, 510.7.1) {superthreading v1.53}
+#@(#)CDS: AAE 19.16-s019 (64bit) 08/31/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: CTE 19.16-s019_1 () Aug 22 2020 00:37:42 ( )
+#@(#)CDS: SYNTECH 19.16-s010_1 () Aug 17 2020 09:10:13 ( )
+#@(#)CDS: CPE v19.16-s038
+#@(#)CDS: IQuantus/TQuantus 19.1.3-s268 (64bit) Mon Aug 10 22:57:12 PDT 2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+
+setPreference DesignHierChar /
+setPreference DEFHierChar /
+setPreference PDEFBusDelim {[]}
+setPreference LecDofile 0
+setPreference CmdLogMode 1
+setPreference ConstraintUserXGrid 0.0
+setPreference ConstraintUserYGrid 0.0
+setPreference ConstraintUserXOffset 0.0
+setPreference ConstraintUserYOffset 0.0
+setPreference SnapAllCorners 0
+setPreference UserGridUnit 0
+setPreference LogTypeInCmd 0
+setPreference logviewer 0
+setPreference EnableRectilinearDesign 0
+setPreference MinFPModuleSize 100
+setPreference MinFlightLineWidth 1
+setPreference MaxFlightLineNetTerms 500
+setPreference LevelFlight 1
+setPreference DirectionSink 1
+setPreference DirectionSource 1
+setPreference HiliteNetWhenQueryObj 1
+setPreference HiliteShapeWhenSelectNet 0
+setPreference SelectNetWhenSelectPin 0
+setPreference HiliteNetWhenSelectPin 1
+setPreference HiliteNetWhenSelectWire 1
+setPreference QueryWireNet 0
+setPreference ControlPinSelectabilityByInstance 1
+setPreference OnlySelectHighlighted 0
+setPreference SelectByArea 0
+setPreference WinSelectMargin 8
+setPreference ShowNumberBlockConnection 0
+setPreference StrecthRestriction 0
+setPreference StretchRectilinear 0
+setPreference MoveRestriction 0
+setPreference DisplayRelFPlan 1
+setPreference LegalizeMacro 0
+setPreference DisplayPtnPin 1
+setPreference DisplayFPlanFlightLine 1
+setPreference DisplayPinName 0
+setPreference CopyNetKeepNetName 1
+setPreference InstanceText Instance
+setPreference ShowNetFullName 0
+setPreference ShowNetNameWithLayerColor 0
+setPreference TermCrossPix 4
+setPreference hInstInnerText t
+setPreference ExclusiveFlight 0
+setPreference ShowToUnplace 0
+setPreference FlightLineInMove 1
+setPreference AutoRedraw 1
+setPreference ShowViaMetal 0
+setPreference IgnoreAmoebaRatio 0
+setPreference DisplayCellPattern 0
+setPreference DrawInstByPlaceStatus 1
+setPreference DrawWireByWireStatus 1
+setPreference ShowCrossLineWhenSelect 1
+setPreference FullViewOutsideDieArea 0
+setPreference UseDigitFillPattern 1
+setPreference DisplayCutPattern 1
+setPreference DrawDetailWhenMoveVia 1
+setPreference TurnOnLayersWhenEditWire 1
+setPreference DisplayIndicatorOfViaPillar 0
+setPreference ShowConnectionInOutNumber 0
+setPreference ConnectionColorType 0
+setPreference OnlyBundleNetFlight 0
+setPreference FromOutputPin 0
+setPreference ShowFlightLineTermMark 0
+setPreference BlockFlightLine 1
+setPreference InstFlightLine 1
+setPreference ModuleFlightLine 1
+setPreference IoCellFlightLine 1
+setPreference BlackBoxFlightLine 1
+setPreference ShowConnectionWithWidth 0
+setPreference FLWidthThresholdLow 20
+setPreference FLWidthThresholdHigh 80
+setPreference percentageOfPan 30
+setPreference marginOfZoomSelected 50
+setPreference scaleOfZoom 3.0
+setPreference WheelZoomWithModify 0
+setPreference ShowBothInputConnection 0
+setPreference ShowNetWeightConnection 1
+setPreference ShowFlightLineThruPtnPin 0
+setPreference ShowLefLayerName 1
+setPreference ShowAttrPopup 1
+setPreference EnlargeLogicalPin 1
+setPreference ShowDelBox 0
+setPreference SelectByLine 0
+setPreference SelectStickyMode 0
+setPreference ShowUnplacedInst 0
+setPreference ShowRectilinearPad 0
+setPreference zoomPrevCount 9
+setPreference saveManually 0
+setPreference displayViaSize 1
+setPreference noInsideMacro 0
+setPreference noInsidePartition 0
+setPreference ShowParentModule 0
+setPreference ShowChildPartition 0
+setPreference ShowAllFence 0
+setPreference SkipBufferFlightline 0
+setPreference ShowFPObjInPlace 0
+setPreference DrawFlightlineLast 0
+setPreference DetailDisplayFactor 16
+setPreference SingleLayerMode 0
+setPreference QuerySkipInst 0
+setPreference QuerySkipInstObs 0
+setPreference QuerySkipInstPin 0
+setPreference QuerySkipRegular 0
+setPreference QuerySkipSpecial 0
+setPreference ShowModuleText 1
+setPreference ShowAmoebaModuleText 1
+setPreference ShowRowSiteText 1
+setPreference ShowIoPadText 1
+setPreference ShowInstanceText 1
+setPreference ShowInstancePinText 1
+setPreference ShowIoPinText 1
+setPreference ShowGroupText 1
+setPreference ShowBumpText 1
+setPreference ShowClockTreeText 1
+setPreference ShowChannelText 1
+setPreference ShowLefPortNumText 1
+setPreference ShowMacroSitePtnText 1
+setPreference ShowSIPFingerText 1
+setPreference ShowNetText 1
+setPreference ShowUtilizationText 1
+setPreference TextDisplaySize a
+setPreference AutoDetailDisplay 0
+setPreference CloneSnapMaster 0
+setPreference MoveMacrosWithGuide 0
+setPreference MoveMacrosWithRegion 0
+setPreference MoveMacrosWithFence 1
+setPreference MoveStdCellWithGuide 0
+setPreference MoveStdCellWithRegion 0
+setPreference MoveStdCellWithFence 0
+setPreference MovePreplacedStdCellOnly 0
+setPreference VertViolation 0.0
+setPreference HorzViolation 0.0
+setPreference congestionMap_nrStyle 0
+setPreference congestionMap_trStyle 0
+setPreference congestionMap_range0 -2
+setPreference congestionMap_color0 0
+setPreference congestionMap_range1 -1
+setPreference congestionMap_color1 0
+setPreference congestionMap_range2 0
+setPreference congestionMap_color2 1
+setPreference congestionMap_range3 1
+setPreference congestionMap_color3 2
+setPreference congestionMap_range4 2
+setPreference congestionMap_color4 3
+setPreference congestionMap_range5 3
+setPreference congestionMap_color5 5
+setPreference congestionMap_range6 4
+setPreference congestionMap_color6 9
+setPreference congestionMap_range7 5
+setPreference congestionMap_color7 11
+setPreference congestionMap_range8 6
+setPreference congestionMap_color8 11
+setPreference congestionMap_range9 36
+setPreference congestionMap_color9 11
+setLayerPreference congestH -isVisible 1
+setLayerPreference congestV -isVisible 1
+setLayerPreference congestObj -isVisible 1
+setPreference SpeedLevel 0
+setPreference HighlightColorNumber 64
+setPreference SingleConnectionColor blue
+alias fs set top_design fifo1_sram
+alias f set top_design fifo1
+alias o set top_design ORCA_TOP
+alias e set top_design ExampleRocketSystem
+set_table_style -name report_timing -max_widths { 8,6,23,70} -no_frame_fix_width
+set_global report_timing_format  {delay arrival slew load fanout cell hpin}
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+win
+uiSetTool addVia
+o
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+set search_path {}
+set init_lef_file {../../cadence_cap_tech/tech.lef saed32nm_lvt_1p9m.lef saed32nm_rvt_1p9m.lef saed32sram.lef saed32nm_hvt_1p9m.lef}
+set init_mmmc_file mmmc.tcl
+set init_design_netlisttype Verilog
+set init_verilog ../../syn/outputs/ORCA_TOP.genus_phys.vg
+set init_top_cell ORCA_TOP
+set init_pwr_net VDD
+set init_gnd_net VSS
+init_design
+defIn ../outputs/ORCA_TOP.floorplan.innovus.def
+add_tracks -honor_pitch
+defIn ../../syn/outputs/ORCA_TOP.genus.scan.def
+read_power_intent ../../syn/outputs/ORCA_TOP.genus.upf -1801
+commit_power_intent
+modifyPowerDomainAttr PD_RISC_CORE -box 580 0 1000 400
+setNanoRouteMode -drouteEndIteration 10
+set_ccopt_property target_max_trans 0.3ns
+setNanoRouteMode -drouteEndIteration 5
+setNanoRouteMode -routeWithViaOnlyForMacroCellPin false
+setNanoRouteMode -routeWithViaOnlyForStandardCellPin 1:1
+setOptMode -usefulSkew false
+setOptMode -usefulSkewCCOpt none
+setOptMode -usefulSkewPostRoute false
+setOptMode -usefulSkewPreCTS false
+setPinAssignMode -pinEditInBatch true
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+editPin -edge 3 -pin {sdram_clk sys_2x_clk shutdown test_mode test_si[5] test_si[4] test_si[3] test_si[2] test_si[1] test_si[0] test_so[5] test_so[4] test_so[3] test_so[2] test_so[1] test_so[0] scan_enable ate_clk occ_bypass occ_reset pclk prst_n pidsel pgnt_n pad_in[31] pad_in[30] pad_in[29] pad_in[28] pad_in[27] pad_in[26] pad_in[25] pad_in[24] pad_in[23] pad_in[22] pad_in[21] pad_in[20] pad_in[19] pad_in[18] pad_in[17] pad_in[16] pad_in[15] pad_in[14] pad_in[13] pad_in[12] pad_in[11] pad_in[10] pad_in[9] pad_in[8] pad_in[7] pad_in[6] pad_in[5] pad_in[4] pad_in[3] pad_in[2] pad_in[1] pad_in[0] pad_out[31] pad_out[30] pad_out[29] pad_out[28] pad_out[27] pad_out[26] pad_out[25] pad_out[24] pad_out[23] pad_out[22] pad_out[21] pad_out[20] pad_out[19] pad_out[18] pad_out[17] pad_out[16] pad_out[15] pad_out[14] pad_out[13] pad_out[12] pad_out[11] pad_out[10] pad_out[9] pad_out[8] pad_out[7] pad_out[6] pad_out[5] pad_out[4] pad_out[3] pad_out[2] pad_out[1] pad_out[0] pad_en ppar_in ppar_out ppar_en pc_be_in[3] pc_be_in[2] pc_be_in[1] pc_be_in[0] pc_be_out[3] pc_be_out[2] pc_be_out[1] pc_be_out[0] pc_be_en pframe_n_in pframe_n_out pframe_n_en ptrdy_n_in ptrdy_n_out ptrdy_n_en pirdy_n_in pirdy_n_out pirdy_n_en pdevsel_n_in pdevsel_n_out pdevsel_n_en pstop_n_in pstop_n_out pstop_n_en pperr_n_in pperr_n_out pperr_n_en pserr_n_in pserr_n_out} -layer M6 -spreadDirection counterclockwise -spreadType START -offsetStart 500 -spacing 1 -unit MICRON -fixedPin 1
+get_message -id GLOBAL-100 -suppress
+get_message -id GLOBAL-100 -suppress
+editPin -edge 3 -pin {pserr_n_en preq_n pack_n pm66en sd_A[9] sd_A[8] sd_A[7] sd_A[6] sd_A[5] sd_A[4] sd_A[3] sd_A[2] sd_A[1] sd_A[0] sd_CK sd_CKn sd_LD sd_RW sd_BWS[1] sd_BWS[0] sd_DQ_in[31] sd_DQ_in[30] sd_DQ_in[29] sd_DQ_in[28] sd_DQ_in[27] sd_DQ_in[26] sd_DQ_in[25] sd_DQ_in[24] sd_DQ_in[23] sd_DQ_in[22] sd_DQ_in[21] sd_DQ_in[20] sd_DQ_in[19] sd_DQ_in[18] sd_DQ_in[17] sd_DQ_in[16] sd_DQ_in[15] sd_DQ_in[14] sd_DQ_in[13] sd_DQ_in[12] sd_DQ_in[11] sd_DQ_in[10] sd_DQ_in[9] sd_DQ_in[8] sd_DQ_in[7] sd_DQ_in[6] sd_DQ_in[5] sd_DQ_in[4] sd_DQ_in[3] sd_DQ_in[2] sd_DQ_in[1] sd_DQ_in[0] sd_DQ_out[31] sd_DQ_out[30] sd_DQ_out[29] sd_DQ_out[28] sd_DQ_out[27] sd_DQ_out[26] sd_DQ_out[25] sd_DQ_out[24] sd_DQ_out[23] sd_DQ_out[22] sd_DQ_out[21] sd_DQ_out[20] sd_DQ_out[19] sd_DQ_out[18] sd_DQ_out[17] sd_DQ_out[16] sd_DQ_out[15] sd_DQ_out[14] sd_DQ_out[13] sd_DQ_out[12] sd_DQ_out[11] sd_DQ_out[10] sd_DQ_out[9] sd_DQ_out[8] sd_DQ_out[7] sd_DQ_out[6] sd_DQ_out[5] sd_DQ_out[4] sd_DQ_out[3] sd_DQ_out[2] sd_DQ_out[1] sd_DQ_out[0] sd_DQ_en[31] sd_DQ_en[30] sd_DQ_en[29] sd_DQ_en[28] sd_DQ_en[27] sd_DQ_en[26] sd_DQ_en[25] sd_DQ_en[24] sd_DQ_en[23] sd_DQ_en[22] sd_DQ_en[21] sd_DQ_en[20] sd_DQ_en[19] sd_DQ_en[18] sd_DQ_en[17] sd_DQ_en[16] sd_DQ_en[15] sd_DQ_en[14] sd_DQ_en[13] sd_DQ_en[12] sd_DQ_en[11] sd_DQ_en[10] sd_DQ_en[9] sd_DQ_en[8] sd_DQ_en[7] sd_DQ_en[6] sd_DQ_en[5] sd_DQ_en[4] sd_DQ_en[3] sd_DQ_en[2] sd_DQ_en[1] sd_DQ_en[0] pll_bypass pll_reset test_si7 test_so7} -layer M8 -spreadDirection counterclockwise -spreadType START -offsetStart 500 -spacing 1 -unit MICRON -fixedPin 1
+setPinAssignMode -pinEditInBatch false
+all_constraint_modes -active
+set_interactive_constraint_modes [all_constraint_modes -active]
+set_units -time ns -resistance MOhm -capacitance fF -voltage V -current uA
+setDontUse *DELLN* true
+createBasicPathGroups -expanded
+saveDesign ORCA_TOP_floorplan.innovus
+setOptMode -usefulSkew false
+setOptMode -usefulSkewCCOpt none
+setOptMode -usefulSkewPostRoute false
+setOptMode -usefulSkewPreCTS false
+create_library_set -name worst_libs_vddh -timing {
+update_delay_corner -name worst_corner -power_domain PD_RISC_CORE -library_set worst_libs_vddh
+setEcoMode -batchMode true
+ecoChangeCell -inst Xecutng_Instrn_0__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_1__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_2__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_3__UPF_LS -cell LSDNSSX4_LVT
+ecoChangeCell -inst Xecutng_Instrn_4__UPF_LS -cell LSDNSSX4_LVT
+ecoChangeCell -inst Xecutng_Instrn_5__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_6__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_7__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_8__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_9__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_10__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_11__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_12__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_14__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_15__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_16__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_17__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_18__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_19__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_20__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_21__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_22__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_23__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_24__UPF_LS -cell LSDNSSX4_LVT
+ecoChangeCell -inst Xecutng_Instrn_25__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_26__UPF_LS -cell LSDNSSX4_LVT
+ecoChangeCell -inst Xecutng_Instrn_27__UPF_LS -cell LSDNSSX4_LVT
+ecoChangeCell -inst Xecutng_Instrn_28__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_30__UPF_LS -cell LSDNSSX4_LVT
+ecoChangeCell -inst Xecutng_Instrn_31__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst PSW_2__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst PSW_3__UPF_LS -cell LSDNSSX2_LVT
+ecoChangeCell -inst PSW_4__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst PSW_6__UPF_LS -cell LSDNSSX4_LVT
+ecoChangeCell -inst PSW_8__UPF_LS -cell LSDNSSX4_LVT
+ecoChangeCell -inst PSW_9__UPF_LS -cell LSDNSSX4_LVT
+ecoChangeCell -inst PSW_10__UPF_LS -cell LSDNSSX4_LVT
+ecoChangeCell -inst RESULT_DATA_0__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst RESULT_DATA_1__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst RESULT_DATA_2__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst RESULT_DATA_3__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst RESULT_DATA_4__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst RESULT_DATA_5__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst RESULT_DATA_6__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst RESULT_DATA_7__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst RESULT_DATA_8__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst RESULT_DATA_9__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst RESULT_DATA_10__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst RESULT_DATA_11__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst RESULT_DATA_12__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst RESULT_DATA_13__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst RESULT_DATA_14__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst RESULT_DATA_15__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst EndOfInstrn_UPF_LS -cell LSDNSSX2_LVT
+ecoChangeCell -inst OUT_VALID_UPF_LS -cell LSDNSSX4_LVT
+ecoChangeCell -inst PSW_7__UPF_LS -cell LSDNSSX4_LVT
+ecoChangeCell -inst Xecutng_Instrn_13__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst Xecutng_Instrn_29__UPF_LS -cell LSDNSSX8_LVT
+ecoChangeCell -inst STACK_FULL_UPF_LS -cell LSDNSSX2_LVT
+ecoChangeCell -inst Rd_Instr_UPF_LS -cell LSDNSSX2_LVT
+ecoChangeCell -inst PSW_5__UPF_LS -cell LSDNSSX4_LVT
+setEcoMode -batchMode false
+place_opt_design
+redirect -tee ../reports/ORCA_TOP.innovus.place.congestion.2d.rpt { reportCongestion -hotSpot -overflow -includeBlockage }
+redirect -tee ../reports/ORCA_TOP.innovus.place.congestion.3d.rpt { reportCongestion -hotSpot -overflow -includeBlockage -3d }
+timeDesign -preCTS -prefix place -outDir ../reports/ORCA_TOP.innovus -expandedViews
+redirect -tee ../reports/ORCA_TOP.innovus.place.density.rpt { reportDensityMap }
+summaryReport -noHtml -outfile ../reports/ORCA_TOP.innovus.place.summary.rpt
+saveDesign ORCA_TOP_place.innovus
+setDesignMode -process 28
+setOptMode -usefulSkew false
+setOptMode -usefulSkewCCOpt none
+setOptMode -usefulSkewPostRoute false
+setOptMode -usefulSkewPreCTS false
+set_ccopt_property update_io_latency false
+set_ccopt_property routing_top_min_fanout 10000
+add_ndr -name CTS_RULE -spacing {M1 0.1 M2:M8 0.112 } -width_multiplier {M3:M8 2 } -generate_via
+create_route_type -name top_type -non_default_rule CTS_RULE -top_preferred_layer M8 -bottom_preferred_layer M7
+set_ccopt_property -net_type top route_type top_type
+create_route_type -name trunk_type -non_default_rule CTS_RULE -top_preferred_layer M6 -bottom_preferred_layer M5
+set_ccopt_property -net_type trunk route_type trunk_type
+setNanoRouteMode -droutePostRouteSpreadWire false
+ccopt_design
+setAnalysisMode -analysisType onChipVariation
+setAnalysisMode -cppr both
+optDesign -postCTS -hold
+report_ccopt_skew_groups -summary -file ../reports/ORCA_TOP.innovus.postcts.ccopt_skew_groups.rpt
+report_ccopt_clock_trees -summary -file ../reports/ORCA_TOP.innovus.postcts.ccopt_clock_trees.rpt
+timeDesign -postCTS -prefix postcts -outDir ../reports/ORCA_TOP.innovus -expandedViews
+timeDesign -postCTS -hold -prefix postcts -outDir ../reports/ORCA_TOP.innovus -expandedViews
+redirect -tee ../reports/ORCA_TOP.innovus.postcts.density.rpt { reportDensityMap }
+summaryReport -noHtml -outfile ../reports/ORCA_TOP.innovus.postcts.summary.rpt
+saveDesign ORCA_TOP_postcts.innovus
+setOptMode -usefulSkew false
+setOptMode -usefulSkewCCOpt none
+setOptMode -usefulSkewPostRoute false
+setOptMode -usefulSkewPreCTS false
+setNanoRouteMode -droutePostRouteSpreadWire false
+routeDesign
+optDesign -postRoute -setup -hold
+globalNetConnect VDD -type pgpin -pin VDD -inst *
+globalNetConnect VSS -type pgpin -pin VSS -inst *
+saveDesign ORCA_TOP_route.innovus
+report_ccopt_skew_groups -summary -file ../reports/ORCA_TOP.innovus.route.ccopt_skew_groups.rpt
+report_ccopt_clock_trees -summary -file ../reports/ORCA_TOP.innovus.route.ccopt_clock_trees.rpt
+verify_drc -limit 100000 -report ../reports/ORCA_TOP.innovus.route.drc.all.rpt
+verify_drc -limit 100000 -check_only regular -report ../reports/ORCA_TOP.innovus.route.drc.regular.rpt
+verifyConnectivity -error 100000 -noAntenna -report ../reports/ORCA_TOP.innovus.route.connectivity.rpt
+timeDesign -postRoute -prefix route -outDir ../reports/ORCA_TOP.innovus -expandedViews
+timeDesign -postRoute -si -prefix route_si -outDir ../reports/ORCA_TOP.innovus -expandedViews
+timeDesign -postRoute -hold -prefix route -outDir ../reports/ORCA_TOP.innovus -expandedViews
+timeDesign -postRoute -hold -si -prefix route_si -outDir ../reports/ORCA_TOP.innovus -expandedViews
+report_power > ../reports/ORCA_TOP.innovus.route.power.rpt
+redirect -tee ../reports/ORCA_TOP.innovus.route.density.rpt { reportDensityMap }
+summaryReport -noHtml -outfile ../reports/ORCA_TOP.innovus.route.summary.rpt
+saveNetlist ../outputs/ORCA_TOP.route.innovus.vg
+saveModel -spef -dir ORCA_TOP_route_spef
+report_timing

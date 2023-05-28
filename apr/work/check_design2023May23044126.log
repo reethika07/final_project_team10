@@ -1,0 +1,234 @@
+****************************************
+Report : Data Mismatches
+Version: Q-2019.12-SP4
+Date   : Tue May 23 04:41:26 2023
+****************************************
+No mismatches exist on the design.
+1
+****************************************
+Report : SCANDEF check
+Design : ORCA_TOP
+Version: Q-2019.12-SP4
+Date   : Tue May 23 04:41:26 2023
+****************************************
+  Checking between SCANDEF file and design:
+
+  Total PARTITION group count: 5
+  Total SCANCHAINS checked: 5
+  VALIDATED :  5
+  FAILED    :  0
+
+  Chain name     Status    #cells    #bits     PARTITION      Scan in        Scan out
+  3              V         1662      1662      I_CLOCKING/sys_clk_in_reg/Q_45_45_0.750000_PD_ORCA_TOP test_si[3] test_so[3]
+  4              V         1471      1471      sdram_clk_45_45_0.750000_PD_ORCA_TOP test_si[2] test_so[2]
+  5_UPF2         V         184       184       sys_2x_clk_45_45_0.950000_PD_RISC_CORE I_RISC_CORE/I_CONTROL_EndOfInstrn_reg/Q I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_29_/SI
+  6              V         384       384       pclk_45_45_0.750000_PD_ORCA_TOP test_si[0] test_so[0]
+  7              V         1375      1375      sdram_clk_55_55_0.750000_PD_ORCA_TOP test_si7 test_so7
+1
+NEX: 51433 nets
+NEX: 99.94%(51400/51433) nets are valid placed
+
+Histogram of "num of nodes per net"
+  value: 	percent%
+     0: 	0.0% 
+     1: 	0.1% 
+     2: 	57.4% (peak)
+     3: 	20.2% 
+     4: 	8.2% 
+     5: 	10.0% (average = 5) 
+    10: 	1.9% 
+    20: 	2.1% 
+    40: 	0.2% 
+    1000: 	0.0% 
+    10000: 	0.0% 
+
+
+Histogram of "net bbox size(um)"
+  value: 	percent%
+   0.00: 	0.1% 
+   0.50: 	0.1% 
+   1.00: 	5.2% 
+   2.00: 	15.8% (peak)
+   3.00: 	8.1% 
+   4.00: 	11.8% 
+   5.00: 	25.8% 
+   10.00: 	17.2% (average = 16.7) 
+   20.00: 	8.1% 
+   40.00: 	5.4% 
+   100.00: 	1.3% 
+   200.00: 	0.9% 
+   400.00: 	0.2% 
+
+
+Histogram of "net bbox aspect()"
+  value: 	percent%
+   0.00: 	0.1% 
+   1.00: 	9.3% (peak)
+   1.10: 	8.6% 
+   1.20: 	7.5% 
+   1.30: 	6.8% 
+   1.40: 	5.8% 
+   1.50: 	5.1% 
+   1.60: 	4.6% 
+   1.70: 	4.2% 
+   1.80: 	3.7% 
+   1.90: 	3.3% 
+   2.00: 	12.6% 
+   2.50: 	8.1% (average = 2.7) 
+   3.00: 	8.5% 
+   4.00: 	4.2% 
+   5.00: 	5.5% 
+   10.00: 	1.5% 
+   20.00: 	0.3% 
+   30.00: 	0.2% 
+   40.00: 	0.1% 
+   50.00: 	0.2% 
+   100.00: 	0.1% 
+
+NEX: 246751 insts
+
+Histogram of "inst bbox size(um)"
+  value: 	percent%
+   1.00: 	91.1% (peak)
+   2.00: 	1.6% (average = 2.5) 
+   3.00: 	1.1% 
+   4.00: 	0.6% 
+   5.00: 	2.7% 
+   10.00: 	3.0% 
+   40.00: 	0.0% 
+   100.00: 	0.0% 
+
+NEX: 1 NDR rules: 
+  [0] clock_double_spacing
+1
+
+=========================================================
+==     Check for global route app-option  ==
+=========================================================
+
+>>> The option values are suggested.
+
+
+======================================================
+=== Check global route congestion map for overflow ===
+======================================================
+
+>>> Running global route to generate congestion map...
+
+Turn off antenna since no rule is specified
+Cell Min-Routing-Layer = M2
+Cell Max-Routing-Layer = M7
+Warning: Cannot find a default contact code for layer CO. (ZRT-022)
+Warning: Ignore 3 top cell ports with no pins. (ZRT-027)
+Skipping 4 internal pins that are not physical. Set route.common.verbose_level to > 0 and run routing command to get skipped pin names.
+Info: number of net_type_blockage: 0 
+Found 1 voltage-areas.
+When applicable Min-max layer allow_pin_connection mode will allow paths of length 3.55 outside the layer range.
+Loading parastics information to the router ...
+parastics information loaded to the router.
+Information: RC layer preference is turned off for this design. (ZRT-613)
+
+>>> No gCell with overflow >= 30 is found.
+Printing options for 'route.common.*'
+common.verbose_level                                    :	 0                   
+
+Printing options for 'route.detail.*'
+detail.eco_route_use_soft_spacing_for_timing_optimization:	 true                
+detail.force_end_on_preferred_grid                      :	 true                
+
+Printing options for 'route.auto_via_ladder.*'
+
+Information: RC layer preference is turned off for this design. (ZRT-613)
+
+============================================
+==  Check for design                       ==
+============================================
+
+>>> No net contains a large number of ports 
+
+>>> No port contains a large number of pins 
+
+============================================
+==  Check for PG PreRoute setting          ==
+============================================
+ No number_of_secondary_pg_pin_connections setting and skip checking 
+ 
+============================================
+==  Check for overlap of standard cells   ==
+============================================
+
+>>>>>> No overlap of standard cells found
+
+============================================
+==     Check for min-grid violations      ==
+============================================
+
+>>>>>> No min-grid violations found
+
+
+============================================
+==    Check for out-of-boundary ports     ==
+============================================
+
+>>>>>> No out-of-boundary error found
+
+============================================
+==        Check for blocked ports         ==
+============================================
+
+>>>>>> No blocked ports found
+
+>>>>>> No blocked nets found
+
+============================================
+==     Check for shielding violations     ==
+============================================
+
+>>>>>> The following Non-PG net has a shape with shape_use shield_route
+
+>>> No non-PG net has a shape with shape_use shield_route.
+
+>>>>>> The following PG net has shape with shape_use detail_route and shape length is too long.
+
+>>> No PG net has shape with shape_use detail_route and shape length is too long.
+
+>>>>>> The following nets with shield non-default rule has no internal data representation in Zroute.
+
+>>> No nets with shield non-default rule has no internal data representation in Zroute.
+
+============================================
+==     Check for via cut blockage violation   ==
+============================================
+
+>>>>>> The following via cut blockages are wrongly treated as real vias.
+
+>>> No via cut blockage is wrongly treated as real via.
+
+============================================
+==     Check for custom via definition    ==
+============================================
+
+>>> No custom via definition has too many cuts
+
+============================================
+==          Check for via master          ==
+============================================
+
+>>> The total number of via master definition is 476
+
+===============================================
+==     Check non-default rule setting        ==
+===============================================
+
+>>> No NDR width is larger than signalRouteMaxWidth
+
+>>> No NDR shield width is larger than signalRouteMaxWidth
+
+======================================================
+==     Check redundant duplicated PG shapes         ==
+======================================================
+
+>>> No redundant duplicated PG shapes overlap with each other.
+
+End of check_routability
+1

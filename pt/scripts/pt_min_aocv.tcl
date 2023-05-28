@@ -1,6 +1,6 @@
-#set topdir /u/$env(USER)/PSU_RTL2GDS
-set topdir [lindex [ regexp -inline "(.*)pt" [pwd] ] 1 ]
-
+#set topdir /u/$env(USER)/PSU_RTL2G
+#set topdir [lindex [ regexp -inline "(.*)pt" [pwd] ] 1 ]
+set topdir /u/$env(USER)/Desktop/final_prj-team_10-final
 source $topdir/$top_design.design_config.tcl
 
 
@@ -12,7 +12,7 @@ read_verilog $topdir/apr/outputs/${top_design}.route2.vg.gz
 current_design ${top_design}
 link
 set_app_var si_enable_analysis true
-read_parasitics -keep_capacitive_coupling $topdir/apr/outputs/${top_design}.route2.$fast_metal.spef.gz
+read_parasitics -keep_capacitive_coupling $topdir/apr/outputs/${top_design}.route2.cmax.spef.gz
 
 set corner_name min-aocv
 

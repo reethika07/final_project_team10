@@ -1,26 +1,24 @@
 #set topdir /u/$env(USER)/PSU_RTL2GDS
 set topdir [lindex [ regexp -inline "(.*)pt" [pwd] ] 1 ]
 
-
+#set topdir /u/$env(USER)/Desktop/final_prj-team_10-final
 source $topdir/$top_design.design_config.tcl
 
 set corners $fast_corner
 
-source -echo -verbose $topdir/pt/scripts/pt-get-timlibs.tcl
+source  $topdir/pt/scripts/pt-get-timlibs.tcl
 
 read_verilog $topdir/apr/outputs/${top_design}.route2.vg.gz
 #read_verilog ../../apr/outputs/${top_design}.route2.vg
 current_design ${top_design}
-
 set link_path {* saed32hvt_ff1p16vn40c.db saed32hvt_ulvl_ff1p16vn40c_i1p16v.db saed32hvt_dlvl_ff1p16vn40c_i1p16v.db saed32lvt_ff1p16vn40c.db saed32lvt_ulvl_ff1p16vn40c_i1p16v.db saed32lvt_dlvl_ff1p16vn40c_i1p16v.db saed32rvt_ff1p16vn40c.db saed32rvt_ulvl_ff1p16vn40c_i1p16v.db saed32rvt_dlvl_ff1p16vn40c_i1p16v.db saed32sram_ff1p16vn40c.db}
-
 set link_path_per_instance [list [list {I_RISC_CORE} {* saed32hvt_ff0p95vn40c.db saed32hvt_dlvl_ff0p95vn40c_i0p95v.db saed32hvt_ulvl_ff0p95vn40c_i0p95v.db saed32lvt_ff0p95vn40c.db saed32lvt_dlvl_ff0p95vn40c_i0p95v.db saed32lvt_ulvl_ff0p95vn40c_i0p95v.db saed32rvt_ff0p95vn40c.db saed32rvt_dlvl_ff0p95vn40c_i0p95v.db saed32rvt_ulvl_ff0p95vn40c_i0p95v.db saed32sram_ff1p16vn40c.db}] ]
 link
 set_app_var si_enable_analysis true
 read_parasitics -keep_capacitive_coupling $topdir/apr/outputs/${top_design}.route2.Cmin.spef.gz
-#read_parasitics -keep_capacitive_coupling ../../apr/outputs/${top_design}.route2.$slow_metal.spef
+#read_parasitics -keep_capacitive_coupling ../../apr/outputs/${top_design}.route2.$fast_metal.spef
 
-set corner_name Ccmin
+set corner_name min_shift
 set power_enable_analysis "true"
 source -echo -verbose $topdir/constraints/${top_design}.sdc
 
@@ -31,8 +29,8 @@ set report_default_significant_digits 3
 set_propagated_clock [ all_clocks ]
 
 # set flat timing derate?
-#set_timing_derate -early 0.9
-#set_timing_derate -late 1.1
+#set_timing_derate -early 0.95
+#set_timing_derate -late 1.05
 set timing_remove_clock_reconvergence_pessimism true
 set timing_crpr_threshold_ps 1
 

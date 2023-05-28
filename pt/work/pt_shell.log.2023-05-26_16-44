@@ -1,0 +1,78 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> osource ../scripts/dmsa.tcl
+Error: unknown command 'osource' (CMD-005)
+pt_shell> source ../scripts/dmsa.tcl
+Error: rm: cannot remove 'ms_session_1/func_slowfast': Directory not empty
+rm: cannot remove 'ms_session_1/func_min': Directory not empty
+rm: cannot remove 'ms_session_1/test_fastslow': Directory not empty
+rm: cannot remove 'ms_session_1/test_best': Directory not empty
+rm: cannot remove 'ms_session_1/atspeed_cap': Directory not empty
+rm: cannot remove 'ms_session_1/command_log': Directory not empty
+rm: cannot remove 'ms_session_1/system_log': Directory not empty
+rm: cannot remove 'ms_session_1/test_slowfast': Directory not empty
+rm: cannot remove 'ms_session_1/func_fastslow': Directory not empty
+rm: cannot remove 'ms_session_1/test_worst': Directory not empty
+rm: cannot remove 'ms_session_1/atspeed_shift': Directory not empty
+rm: cannot remove 'ms_session_1/stuck_at_cap': Directory not empty
+rm: cannot remove 'ms_session_1/stuck_at_shift': Directory not empty
+        Use error_info for more info. (CMD-013)
+Information: script '../scripts/dmsa.tcl'
+        stopped at line 5 due to error. (CMD-081)
+Extended error info:
+rm: cannot remove 'ms_session_1/func_slowfast': Directory not empty
+rm: cannot remove 'ms_session_1/func_min': Directory not empty
+rm: cannot remove 'ms_session_1/test_fastslow': Directory not empty
+rm: cannot remove 'ms_session_1/test_best': Directory not empty
+rm: cannot remove 'ms_session_1/atspeed_cap': Directory not empty
+rm: cannot remove 'ms_session_1/command_log': Directory not empty
+rm: cannot remove 'ms_session_1/system_log': Directory not empty
+rm: cannot remove 'ms_session_1/test_slowfast': Directory not empty
+rm: cannot remove 'ms_session_1/func_fastslow': Directory not empty
+rm: cannot remove 'ms_session_1/test_worst': Directory not empty
+rm: cannot remove 'ms_session_1/atspeed_shift': Directory not empty
+rm: cannot remove 'ms_session_1/stuck_at_cap': Directory not empty
+rm: cannot remove 'ms_session_1/stuck_at_shift': Directory not empty
+    while executing
+"exec rm -rf ms_session_1"
+ -- End Extended Error Info
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Error: 'start_hosts' can only be called in a distributed processing context. (CMCR-012)
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Fri May 26 17:19:20 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           14                      auto
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1                                                   -
+  --------------------------------------------------------------------
+  Total                                                      4
+
+Error: unknown command 'create_scenario' (CMD-005)
+Information: script '../scripts/dmsa.tcl'
+        stopped at line 16 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"create_scenario -name func_max -specific_data ../scripts/pt_max.tcl -common_variable {top_design dmsa}"
+ -- End Extended Error Info
+pt_shell> exit
+Maximum memory usage for this session: 834.64 MB
+CPU usage for this session: 4 seconds 
+Elapsed time for this session: 2080 seconds
+Diagnostics summary: 5 errors, 2 informationals
+
+Thank you for using pt_shell!
+

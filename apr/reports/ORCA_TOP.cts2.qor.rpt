@@ -2,166 +2,26 @@
 Report : qor
 Design : ORCA_TOP
 Version: Q-2019.12-SP4
-Date   : Sat May 20 06:22:35 2023
+Date   : Sat May 27 20:47:57 2023
 ****************************************
 Information: The stitching and editing of coupling caps is turned ON for design 'ORCA_TOP_lib:ORCA_TOP.design'. (TIM-125)
-Information: Design ORCA_TOP has 58251 nets, 0 global routed, 308 detail routed. (NEX-024)
+Information: Design ORCA_TOP has 49132 nets, 0 global routed, 300 detail routed. (NEX-024)
 Information: The RC mode used is CTO for design 'ORCA_TOP'. (NEX-022)
 Information: Crosstalk analysis has been disabled. (TIM-114)
 Information: Design Average RC for design ORCA_TOP  (NEX-011)
-Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.084042 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
-Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.102098 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
+Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.083981 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+Information: r = 1.785714 ohm/um, via_r = 0.500000 ohm/cut, c = 0.101926 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
-Information: Net estimation statistics: timing graph nets = 58248, routed nets = 308, across physical hierarchy nets = 0, parasitics cached nets = 58248, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 732. (TIM-112)
+Information: Net estimation statistics: timing graph nets = 49129, routed nets = 300, across physical hierarchy nets = 0, parasitics cached nets = 49129, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 713. (TIM-112)
 Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
 
-
-Scenario           'atspeed_capture'
-Timing Path Group  'group_pclk'
-----------------------------------------
-Levels of Logic:                      2
-Critical Path Length:              1.56
-Critical Path Slack:               1.06
-Critical Path Clk Period:          7.50
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'atspeed_capture'
-Timing Path Group  'group_sdram'
-----------------------------------------
-Levels of Logic:                      3
-Critical Path Length:              3.38
-Critical Path Slack:              -0.01
-Critical Path Clk Period:          4.10
-Total Negative Slack:             -0.01
-No. of Violating Paths:               1
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'atspeed_capture'
-Timing Path Group  'group_sys2x'
-----------------------------------------
-Levels of Logic:                      1
-Critical Path Length:              0.38
-Critical Path Slack:              -0.22
-Critical Path Clk Period:          2.40
-Total Negative Slack:             -0.22
-No. of Violating Paths:               1
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'atspeed_capture'
-Timing Path Group  'group_sys'
-----------------------------------------
-Levels of Logic:                      1
-Critical Path Length:              0.37
-Critical Path Slack:               5.42
-Critical Path Clk Period:          4.80
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'atspeed_capture'
-Timing Path Group  'OUTPUTS'
-----------------------------------------
-Levels of Logic:                      5
-Critical Path Length:              1.70
-Critical Path Slack:              -0.37
-Critical Path Clk Period:          4.10
-Total Negative Slack:             -8.90
-No. of Violating Paths:              30
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'atspeed_shift'
-Timing Path Group  'group_pclk'
-----------------------------------------
-Levels of Logic:                      2
-Critical Path Length:              0.16
-Critical Path Slack:               3.26
-Critical Path Clk Period:          7.50
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'atspeed_shift'
-Timing Path Group  'group_sdram'
-----------------------------------------
-Levels of Logic:                      1
-Critical Path Length:              0.07
-Critical Path Slack:               1.60
-Critical Path Clk Period:          4.10
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'atspeed_shift'
-Timing Path Group  'group_sys2x'
-----------------------------------------
-Levels of Logic:                      1
-Critical Path Length:              0.07
-Critical Path Slack:               0.84
-Critical Path Clk Period:          2.40
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'atspeed_shift'
-Timing Path Group  'group_sys'
-----------------------------------------
-Levels of Logic:                      1
-Critical Path Length:              0.07
-Critical Path Slack:               6.77
-Critical Path Clk Period:          4.80
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'atspeed_shift'
-Timing Path Group  'OUTPUTS'
-----------------------------------------
-Levels of Logic:                      6
-Critical Path Length:              0.27
-Critical Path Slack:               1.08
-Critical Path Clk Period:          4.10
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
 
 Scenario           'func_worst'
 Timing Path Group  '**in2reg_default**'
 ----------------------------------------
-Levels of Logic:                      2
-Critical Path Length:              2.86
-Critical Path Slack:               1.71
+Levels of Logic:                      0
+Critical Path Length:              0.76
+Critical Path Slack:               1.50
 Critical Path Clk Period:          4.10
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -170,9 +30,9 @@ No. of Violating Paths:               0
 Scenario           'func_worst'
 Timing Path Group  '**reg2out_default**'
 ----------------------------------------
-Levels of Logic:                      1
-Critical Path Length:              0.55
-Critical Path Slack:               3.29
+Levels of Logic:                      2
+Critical Path Length:              2.10
+Critical Path Slack:               1.83
 Critical Path Clk Period:          7.50
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -181,8 +41,8 @@ No. of Violating Paths:               0
 Scenario           'func_worst'
 Timing Path Group  'PCI_CLK'
 ----------------------------------------
-Levels of Logic:                     31
-Critical Path Length:              7.05
+Levels of Logic:                     19
+Critical Path Length:              7.04
 Critical Path Slack:               0.01
 Critical Path Clk Period:          7.50
 Total Negative Slack:              0.00
@@ -193,61 +53,53 @@ Scenario           'func_worst'
 Timing Path Group  'SYS_2x_CLK'
 ----------------------------------------
 Levels of Logic:                      9
-Critical Path Length:              2.16
-Critical Path Slack:              -0.13
+Critical Path Length:              2.13
+Critical Path Slack:              -0.18
 Critical Path Clk Period:          2.40
-Total Negative Slack:             -1.20
-No. of Violating Paths:              17
+Total Negative Slack:             -2.08
+No. of Violating Paths:              21
 ----------------------------------------
 
 Scenario           'func_worst'
 Timing Path Group  'SYS_CLK'
 ----------------------------------------
-Levels of Logic:                     28
-Critical Path Length:              5.59
-Critical Path Slack:              -2.06
+Levels of Logic:                      5
+Critical Path Length:              4.93
+Critical Path Slack:              -4.10
 Critical Path Clk Period:          4.80
-Total Negative Slack:           -234.64
-No. of Violating Paths:             271
+Total Negative Slack:             -4.24
+No. of Violating Paths:              12
 ----------------------------------------
 
 Scenario           'func_worst'
 Timing Path Group  'SDRAM_CLK'
 ----------------------------------------
-Levels of Logic:                      5
-Critical Path Length:              3.77
-Critical Path Slack:              -0.05
+Levels of Logic:                      3
+Critical Path Length:              3.32
+Critical Path Slack:               0.04
 Critical Path Clk Period:          4.10
-Total Negative Slack:             -1.08
-No. of Violating Paths:              64
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
 ----------------------------------------
 
 Scenario           'func_best'
 Timing Path Group  '**in2reg_default**'
 ----------------------------------------
-Worst Hold Violation:             -0.14
-Total Hold Violation:             -7.02
+Worst Hold Violation:             -0.12
+Total Hold Violation:             -6.71
 No. of Hold Violations:              64
 ----------------------------------------
 
 Scenario           'func_best'
 Timing Path Group  '**reg2out_default**'
 ----------------------------------------
-Worst Hold Violation:             -0.01
-Total Hold Violation:             -0.03
-No. of Hold Violations:              10
-----------------------------------------
-
-Scenario           'func_best'
-Timing Path Group  'PCI_CLK'
-----------------------------------------
 Worst Hold Violation:              0.00
 Total Hold Violation:              0.00
 No. of Hold Violations:               0
 ----------------------------------------
 
 Scenario           'func_best'
-Timing Path Group  'SYS_2x_CLK'
+Timing Path Group  'PCI_CLK'
 ----------------------------------------
 Worst Hold Violation:              0.00
 Total Hold Violation:              0.00
@@ -255,6 +107,14 @@ No. of Hold Violations:               0
 ----------------------------------------
 
 Scenario           'func_best'
+Timing Path Group  'SYS_2x_CLK'
+----------------------------------------
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func_best'
 Timing Path Group  'SYS_CLK'
 ----------------------------------------
 Worst Hold Violation:              0.00
@@ -265,454 +125,6 @@ No. of Hold Violations:               0
 Scenario           'func_best'
 Timing Path Group  'SDRAM_CLK'
 ----------------------------------------
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'func_worst_constrained'
-Timing Path Group  '**reg2out_default**'
-----------------------------------------
-Levels of Logic:                      1
-Critical Path Length:              0.55
-Critical Path Slack:               3.25
-Critical Path Clk Period:          7.50
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:             -0.11
-Total Hold Violation:             -2.31
-No. of Hold Violations:              32
-----------------------------------------
-
-Scenario           'func_worst_constrained'
-Timing Path Group  'PCI_CLK'
-----------------------------------------
-Levels of Logic:                      2
-Critical Path Length:              1.56
-Critical Path Slack:               1.06
-Critical Path Clk Period:          7.50
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'func_worst_constrained'
-Timing Path Group  'SYS_2x_CLK'
-----------------------------------------
-Levels of Logic:                      1
-Critical Path Length:              0.38
-Critical Path Slack:              -0.22
-Critical Path Clk Period:          2.40
-Total Negative Slack:             -0.22
-No. of Violating Paths:               1
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'func_worst_constrained'
-Timing Path Group  'SYS_CLK'
-----------------------------------------
-Levels of Logic:                      6
-Critical Path Length:              2.41
-Critical Path Slack:              -0.09
-Critical Path Clk Period:          4.80
-Total Negative Slack:             -0.27
-No. of Violating Paths:               6
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'func_worst_constrained'
-Timing Path Group  'SDRAM_CLK'
-----------------------------------------
-Levels of Logic:                      3
-Critical Path Length:              3.48
-Critical Path Slack:              -0.07
-Critical Path Clk Period:          4.10
-Total Negative Slack:             -0.26
-No. of Violating Paths:               9
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'func_best_constrained'
-Timing Path Group  '**reg2out_default**'
-----------------------------------------
-Levels of Logic:                      1
-Critical Path Length:              0.10
-Critical Path Slack:               5.11
-Critical Path Clk Period:          7.50
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:             -0.01
-Total Hold Violation:             -0.03
-No. of Hold Violations:              10
-----------------------------------------
-
-Scenario           'func_best_constrained'
-Timing Path Group  'PCI_CLK'
-----------------------------------------
-Levels of Logic:                      2
-Critical Path Length:              0.16
-Critical Path Slack:               3.26
-Critical Path Clk Period:          7.50
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'func_best_constrained'
-Timing Path Group  'SYS_2x_CLK'
-----------------------------------------
-Levels of Logic:                      1
-Critical Path Length:              0.07
-Critical Path Slack:               0.84
-Critical Path Clk Period:          2.40
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'func_best_constrained'
-Timing Path Group  'SYS_CLK'
-----------------------------------------
-Levels of Logic:                      6
-Critical Path Length:              0.37
-Critical Path Slack:               1.93
-Critical Path Clk Period:          4.80
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'func_best_constrained'
-Timing Path Group  'SDRAM_CLK'
-----------------------------------------
-Levels of Logic:                      1
-Critical Path Length:              0.07
-Critical Path Slack:               1.59
-Critical Path Clk Period:          4.10
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_capture'
-Timing Path Group  'PCI_CLK'
-----------------------------------------
-Levels of Logic:                      2
-Critical Path Length:              2.17
-Critical Path Slack:              -0.37
-Critical Path Clk Period:          7.50
-Total Negative Slack:             -0.63
-No. of Violating Paths:               2
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_capture'
-Timing Path Group  'SYS_2x_CLK'
-----------------------------------------
-Levels of Logic:                      0
-Critical Path Length:              0.94
-Critical Path Slack:              -0.45
-Critical Path Clk Period:          2.40
-Total Negative Slack:             -0.45
-No. of Violating Paths:               1
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_capture'
-Timing Path Group  'SDRAM_CLK'
-----------------------------------------
-Levels of Logic:                      2
-Critical Path Length:              1.15
-Critical Path Slack:              -0.89
-Critical Path Clk Period:          4.10
-Total Negative Slack:             -2.05
-No. of Violating Paths:               3
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_capture'
-Timing Path Group  'SYS_CLK'
-----------------------------------------
-Levels of Logic:                      0
-Critical Path Length:              0.93
-Critical Path Slack:              -0.46
-Critical Path Clk Period:          4.80
-Total Negative Slack:             -0.46
-No. of Violating Paths:               1
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_capture'
-Timing Path Group  'ate_clk'
-----------------------------------------
-Levels of Logic:                     13
-Critical Path Length:              5.77
-Critical Path Slack:               2.68
-Critical Path Clk Period:         20.00
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_capture'
-Timing Path Group  'group_pclk'
-----------------------------------------
-Levels of Logic:                      3
-Critical Path Length:              3.35
-Critical Path Slack:               3.43
-Critical Path Clk Period:          7.50
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_capture'
-Timing Path Group  'group_sdram'
-----------------------------------------
-Levels of Logic:                      3
-Critical Path Length:              3.38
-Critical Path Slack:              -0.01
-Critical Path Clk Period:          4.10
-Total Negative Slack:             -0.01
-No. of Violating Paths:               1
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_capture'
-Timing Path Group  'group_sys2x'
-----------------------------------------
-Levels of Logic:                      2
-Critical Path Length:              1.93
-Critical Path Slack:               0.29
-Critical Path Clk Period:          2.40
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_capture'
-Timing Path Group  'group_sys'
-----------------------------------------
-Levels of Logic:                      3
-Critical Path Length:              3.44
-Critical Path Slack:               5.44
-Critical Path Clk Period:          4.80
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_capture'
-Timing Path Group  'INPUTS'
-----------------------------------------
-Levels of Logic:                      2
-Critical Path Length:            160.71
-Critical Path Slack:              -0.87
-Critical Path Clk Period:         20.00
-Total Negative Slack:            -47.79
-No. of Violating Paths:              64
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_capture'
-Timing Path Group  'OUTPUTS'
-----------------------------------------
-Levels of Logic:                      3
-Critical Path Length:              4.17
-Critical Path Slack:              -5.92
-Critical Path Clk Period:          4.10
-Total Negative Slack:           -303.65
-No. of Violating Paths:             112
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_shift'
-Timing Path Group  'PCI_CLK'
-----------------------------------------
-Levels of Logic:                      2
-Critical Path Length:              0.20
-Critical Path Slack:               2.22
-Critical Path Clk Period:          7.50
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_shift'
-Timing Path Group  'SYS_2x_CLK'
-----------------------------------------
-Levels of Logic:                      2
-Critical Path Length:              0.09
-Critical Path Slack:               0.36
-Critical Path Clk Period:          2.40
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:             -0.04
-Total Hold Violation:             -0.04
-No. of Hold Violations:               2
-----------------------------------------
-
-Scenario           'stuck_at_shift'
-Timing Path Group  'SDRAM_CLK'
-----------------------------------------
-Levels of Logic:                      2
-Critical Path Length:              0.13
-Critical Path Slack:              -0.03
-Critical Path Clk Period:          4.10
-Total Negative Slack:             -0.04
-No. of Violating Paths:               2
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_shift'
-Timing Path Group  'SYS_CLK'
-----------------------------------------
-Levels of Logic:                      2
-Critical Path Length:              0.10
-Critical Path Slack:               0.36
-Critical Path Clk Period:          4.80
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:             -0.04
-Total Hold Violation:             -0.04
-No. of Hold Violations:               2
-----------------------------------------
-
-Scenario           'stuck_at_shift'
-Timing Path Group  'ate_clk'
-----------------------------------------
-Levels of Logic:                     18
-Critical Path Length:              0.80
-Critical Path Slack:               8.99
-Critical Path Clk Period:         20.00
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_shift'
-Timing Path Group  'group_pclk'
-----------------------------------------
-Levels of Logic:                      3
-Critical Path Length:              0.31
-Critical Path Slack:               7.07
-Critical Path Clk Period:          7.50
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_shift'
-Timing Path Group  'group_sdram'
-----------------------------------------
-Levels of Logic:                      3
-Critical Path Length:              0.31
-Critical Path Slack:               3.67
-Critical Path Clk Period:          4.10
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_shift'
-Timing Path Group  'group_sys2x'
-----------------------------------------
-Levels of Logic:                      4
-Critical Path Length:              0.20
-Critical Path Slack:               2.11
-Critical Path Clk Period:          2.40
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_shift'
-Timing Path Group  'group_sys'
-----------------------------------------
-Levels of Logic:                      3
-Critical Path Length:              0.32
-Critical Path Slack:               9.17
-Critical Path Clk Period:          4.80
-Total Negative Slack:              0.00
-No. of Violating Paths:               0
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_shift'
-Timing Path Group  'INPUTS'
-----------------------------------------
-Levels of Logic:                      1
-Critical Path Length:            570.53
-Critical Path Slack:              -0.93
-Critical Path Clk Period:         20.00
-Total Negative Slack:            -59.09
-No. of Violating Paths:              64
-Worst Hold Violation:              0.00
-Total Hold Violation:              0.00
-No. of Hold Violations:               0
-----------------------------------------
-
-Scenario           'stuck_at_shift'
-Timing Path Group  'OUTPUTS'
-----------------------------------------
-Levels of Logic:                      3
-Critical Path Length:              0.38
-Critical Path Slack:              -1.21
-Critical Path Clk Period:          4.10
-Total Negative Slack:            -82.02
-No. of Violating Paths:              80
 Worst Hold Violation:              0.00
 Total Hold Violation:              0.00
 No. of Hold Violations:               0
@@ -722,8 +134,8 @@ Scenario           'test_worst'
 Timing Path Group  '**in2reg_default**'
 ----------------------------------------
 Levels of Logic:                      1
-Critical Path Length:              4.64
-Critical Path Slack:               9.75
+Critical Path Length:              4.60
+Critical Path Slack:               9.53
 Critical Path Clk Period:         30.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -732,9 +144,9 @@ No. of Violating Paths:               0
 Scenario           'test_worst'
 Timing Path Group  '**reg2out_default**'
 ----------------------------------------
-Levels of Logic:                      1
-Critical Path Length:              0.55
-Critical Path Slack:               3.25
+Levels of Logic:                      2
+Critical Path Length:              2.10
+Critical Path Slack:               1.79
 Critical Path Clk Period:          7.50
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -744,8 +156,8 @@ Scenario           'test_worst'
 Timing Path Group  'PCI_CLK'
 ----------------------------------------
 Levels of Logic:                      2
-Critical Path Length:              1.56
-Critical Path Slack:               1.06
+Critical Path Length:              1.60
+Critical Path Slack:               0.99
 Critical Path Clk Period:          7.50
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -755,41 +167,41 @@ Scenario           'test_worst'
 Timing Path Group  'SYS_2x_CLK'
 ----------------------------------------
 Levels of Logic:                      1
-Critical Path Length:              0.38
-Critical Path Slack:              -0.22
+Critical Path Length:              0.39
+Critical Path Slack:              -0.34
 Critical Path Clk Period:          2.40
-Total Negative Slack:             -0.22
+Total Negative Slack:             -0.34
 No. of Violating Paths:               1
 ----------------------------------------
 
 Scenario           'test_worst'
 Timing Path Group  'SYS_CLK'
 ----------------------------------------
-Levels of Logic:                      6
-Critical Path Length:              2.41
-Critical Path Slack:              -0.09
+Levels of Logic:                      1
+Critical Path Length:              4.35
+Critical Path Slack:              -0.01
 Critical Path Clk Period:          4.80
-Total Negative Slack:             -0.27
-No. of Violating Paths:               6
+Total Negative Slack:             -0.01
+No. of Violating Paths:               1
 ----------------------------------------
 
 Scenario           'test_worst'
 Timing Path Group  'SDRAM_CLK'
 ----------------------------------------
-Levels of Logic:                      3
-Critical Path Length:              3.48
-Critical Path Slack:              -0.07
+Levels of Logic:                      1
+Critical Path Length:              0.39
+Critical Path Slack:               0.35
 Critical Path Clk Period:          4.10
-Total Negative Slack:             -0.26
-No. of Violating Paths:               9
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
 ----------------------------------------
 
 Scenario           'test_worst'
 Timing Path Group  'ate_clk'
 ----------------------------------------
 Levels of Logic:                      2
-Critical Path Length:              2.34
-Critical Path Slack:              11.61
+Critical Path Length:              2.31
+Critical Path Slack:              11.44
 Critical Path Clk Period:         30.00
 Total Negative Slack:              0.00
 No. of Violating Paths:               0
@@ -798,9 +210,9 @@ No. of Violating Paths:               0
 Scenario           'test_best'
 Timing Path Group  '**reg2out_default**'
 ----------------------------------------
-Worst Hold Violation:             -0.01
-Total Hold Violation:             -0.03
-No. of Hold Violations:              10
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
 ----------------------------------------
 
 Scenario           'test_best'
@@ -847,13 +259,13 @@ No. of Hold Violations:               0
 Cell Count
 ----------------------------------------
 Hierarchical Cell Count:             63
-Hierarchical Port Count:           3304
-Leaf Cell Count:                  55287
-Buf/Inv Cell Count:               16318
-Buf Cell Count:                   10426
-Inv Cell Count:                    5892
+Hierarchical Port Count:           3368
+Leaf Cell Count:                  46136
+Buf/Inv Cell Count:                7823
+Buf Cell Count:                    2567
+Inv Cell Count:                    5256
 CT Buf/Inv Cell Count:                0
-Combinational Cell Count:         50086
+Combinational Cell Count:         40935
    Single-bit Isolation Cell Count:                        0
    Multi-bit Isolation Cell Count:                         0
    Isolation Cell Banking Ratio:                           0.00%
@@ -876,27 +288,27 @@ Macro Count:                         40
 
 Area
 ----------------------------------------
-Combinational Area:           143867.36
-Noncombinational Area:         47362.78
-Buf/Inv Area:                  52889.65
-Total Buffer Area:             41117.70
-Total Inverter Area:           11771.95
+Combinational Area:           105248.40
+Noncombinational Area:         46644.32
+Buf/Inv Area:                  16586.96
+Total Buffer Area:              8084.83
+Total Inverter Area:            8502.13
 Macro/Black Box Area:         231744.78
 Net Area:                             0
-Net XLength:                   25801.43
-Net YLength:                   28658.53
+Net XLength:                   27014.53
+Net YLength:                   25930.96
 ----------------------------------------
-Cell Area (netlist):                         422974.93
-Cell Area (netlist and physical only):       428848.20
-Net Length:                    54459.96
+Cell Area (netlist):                         383637.50
+Cell Area (netlist and physical only):       389510.77
+Net Length:                    52945.49
 
 
 Design Rules
 ----------------------------------------
-Total Number of Nets:             58284
-Nets with Violations:               399
-Max Trans Violations:               232
-Max Cap Violations:                 366
+Total Number of Nets:             49165
+Nets with Violations:               150
+Max Trans Violations:                56
+Max Cap Violations:                 104
 ----------------------------------------
 
 1

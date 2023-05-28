@@ -1,0 +1,78 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type max
+	-max_paths 1
+	-sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sat May 27 23:23:04 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'func_max'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: occ_int2/U_clk_control_i_1/U_cycle_ctr_i/count_int_reg[0]
+               (rising edge-triggered flip-flop clocked by SDRAM_CLK)
+  Endpoint: occ_int2/U_clk_control_i_1/U_cycle_ctr_i/tercnt_n_reg_reg
+               (rising edge-triggered flip-flop clocked by SDRAM_CLK)
+  Last common pin: occ_int2/cts_buf_641032316/Y
+  Path Group: SDRAM_CLK
+  Path Type: max
+  Scenario: func_max
+  Min Clock Paths Derating Factor : 0.95
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SDRAM_CLK (rise edge)                             0.00       0.00
+  clock network delay (propagated)                        0.76       0.76
+  occ_int2/U_clk_control_i_1/U_cycle_ctr_i/count_int_reg[0]/CLK (DFFARX1_HVT)
+                                                          0.00       0.76 r
+  occ_int2/U_clk_control_i_1/U_cycle_ctr_i/count_int_reg[0]/Q (DFFARX1_HVT)
+                                                          1.36       2.12 r
+  occ_int2/U_clk_control_i_1/U_cycle_ctr_i/add_252/U3/Y (XOR2X1_HVT)
+                                                          1.07       3.19 f
+  occ_int2/U_clk_control_i_1/U_cycle_ctr_i/U10/Y (AND2X1_HVT)
+                                                          0.45       3.64 f
+  occ_int2/U_clk_control_i_1/U_cycle_ctr_i/U9/Y (AND2X1_HVT)
+                                                          0.37       4.01 f
+  occ_int2/U_clk_control_i_1/U_cycle_ctr_i/tercnt_n_reg_reg/D (DFFARX1_HVT)
+                                                          0.00       4.01 f
+  data arrival time                                                  4.01
+
+  clock SDRAM_CLK (rise edge)                             4.10       4.10
+  clock network delay (propagated)                        0.70       4.80
+  clock reconvergence pessimism                           0.06       4.86
+  clock uncertainty                                      -0.10       4.76
+  occ_int2/U_clk_control_i_1/U_cycle_ctr_i/tercnt_n_reg_reg/CLK (DFFARX1_HVT)
+                                                                     4.76 r
+  library setup time                                     -0.61       4.15
+  data required time                                                 4.15
+  ------------------------------------------------------------------------------
+  data required time                                                 4.15
+  data arrival time                                                 -4.01
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.14
+
+
+1

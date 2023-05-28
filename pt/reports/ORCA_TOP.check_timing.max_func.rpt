@@ -1,0 +1,125 @@
+Information: Checking 'no_input_delay'.
+Information: Checking 'no_driving_cell'.
+Information: Checking 'unconstrained_endpoints'.
+Warning: There are 74 endpoints which are not constrained for maximum delay.
+
+Endpoint
+--------------------------------------------------------------------------------
+I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_27_/SI
+occ_int2/U_clk_control_i_0/pipeline_or_tree_l_reg/RSTB
+sd_CK
+sd_CKn
+occ_int2/U2/A3
+occ_int2/U_clk_control_i_0/load_n_meta_1_l_reg/RSTB
+I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_2_l_reg/RSTB
+occ_int2/U_clk_control_i_1/U_cycle_ctr_i/count_int_reg[1]/RSTB
+occ_int2/U_clk_control_i_1/load_n_meta_2_l_reg/RSTB
+occ_int2/U_clk_control_i_1/slow_clk_enable_l_reg/D
+occ_int2/U_clk_control_i_1/slow_clk_enable_l_reg/RSTB
+occ_int2/U_clk_control_i_1/pipeline_or_tree_l_reg/RSTB
+occ_int2/U_clk_control_i_1/load_n_meta_1_l_reg/RSTB
+I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_0_l_reg/D
+I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_0_l_reg/RSTB
+snps_clk_chain_1/U_shftreg_0/ff_1/q_reg/D
+I_CLOCKING/prst_ff_reg/RSTB
+occ_int2/U_clk_control_i_2/load_n_meta_0_l_reg/RSTB
+occ_int2/U_clk_control_i_2/load_n_meta_0_l_reg/D
+I_CLOCKING/sys_2x_rst_n_buf_reg/RSTB
+test_so[1]
+I_CLOCKING/occ_int1/U_clk_control_i_0/U_cycle_ctr_i/count_int_reg[0]/RSTB
+occ_int2/U_clk_control_i_0/U_cycle_ctr_i/tercnt_n_reg_reg/RSTB
+occ_int2/U_clk_control_i_2/U_cycle_ctr_i/tercnt_n_reg_reg/RSTB
+I_RISC_CORE/I_CONTROL_EndOfInstrn_reg/SI
+occ_int2/U_clk_control_i_0/load_n_meta_0_l_reg/D
+snps_clk_chain_1/U_shftreg_0/ff_0/q_reg/D
+occ_int2/U_clk_control_i_0/load_n_meta_0_l_reg/RSTB
+occ_int2/U_clk_control_i_2/load_n_meta_2_l_reg/RSTB
+occ_int2/U_clk_control_i_2/pipeline_or_tree_l_reg/RSTB
+I_CLOCKING/sys_rst_ff_reg/RSTB
+I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_0/q_reg/D
+occ_int2/U_clk_control_i_2/U_cycle_ctr_i/count_int_reg[0]/RSTB
+I_BLENDER_1/R_600/SI
+I_CLOCKING/occ_int1/U_clk_control_i_0/U_cycle_ctr_i/tercnt_n_reg_reg/RSTB
+occ_int2/U3/A3
+occ_int2/U_clk_control_i_2/U_cycle_ctr_i/count_int_reg[1]/RSTB
+test_so[4]
+test_so[5]
+occ_int2/U_clk_control_i_2/slow_clk_enable_l_reg/RSTB
+occ_int2/U_clk_control_i_2/slow_clk_enable_l_reg/D
+test_so[2]
+test_so[3]
+test_so[0]
+I_CLOCKING/occ_int1/U_clk_control_i_0/load_n_meta_1_l_reg/RSTB
+I_CLOCKING/pci_rst_n_buf_reg/RSTB
+occ_int2/U_clk_control_i_0/load_n_meta_2_l_reg/RSTB
+occ_int2/U_clk_control_i_2/load_n_meta_1_l_reg/RSTB
+occ_int2/U1/A3
+I_CLOCKING/occ_int1/U1/A3
+I_CLOCKING/sys_2x_rst_ff_reg/RSTB
+I_CLOCKING/occ_int1/U_clk_control_i_0/U_cycle_ctr_i/count_int_reg[1]/RSTB
+I_CLOCKING/sdram_rst_n_buf_reg/RSTB
+test_so7
+snps_clk_chain_1/U_shftreg_0/ff_2/q_reg/D
+I_CLOCKING/sys_rst_n_buf_reg/RSTB
+occ_int2/U_clk_control_i_0/U_cycle_ctr_i/count_int_reg[0]/RSTB
+I_CLOCKING/occ_int1/U_clk_control_i_0/slow_clk_enable_l_reg/D
+I_CLOCKING/occ_int1/U_clk_control_i_0/slow_clk_enable_l_reg/RSTB
+snps_clk_chain_1/U_shftreg_0/ff_4/q_reg/D
+occ_int2/U_clk_control_i_1/load_n_meta_0_l_reg/RSTB
+occ_int2/U_clk_control_i_1/load_n_meta_0_l_reg/D
+I_CLOCKING/sdram_rst_ff_reg/RSTB
+snps_clk_chain_1/U_shftreg_0/ff_3/q_reg/D
+snps_clk_chain_1/U_shftreg_0/ff_5/q_reg/D
+I_CLOCKING/occ_int1/U_clk_control_i_0/pipeline_or_tree_l_reg/RSTB
+occ_int2/U_clk_control_i_1/U_cycle_ctr_i/count_int_reg[0]/RSTB
+I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_reg_5__31_/SI
+occ_int2/U_clk_control_i_0/slow_clk_enable_l_reg/D
+occ_int2/U_clk_control_i_0/slow_clk_enable_l_reg/RSTB
+I_PCI_TOP/I_PCI_CORE_mega_shift_reg_0__29_/SI
+occ_int2/U_clk_control_i_0/U_cycle_ctr_i/count_int_reg[1]/RSTB
+I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_1/q_reg/D
+occ_int2/U_clk_control_i_1/U_cycle_ctr_i/tercnt_n_reg_reg/RSTB
+
+Information: Checking 'unexpandable_clocks'.
+Information: Checking 'latch_fanout'.
+Information: Checking 'no_clock'.
+Warning: There are 28 register clock pins with no clock.
+
+Clock Pin
+------------------------------------------------------------
+I_CLOCKING/occ_int1/U_clk_control_i_0/slow_clk_enable_l_reg/CLK
+I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_0/q_reg/CLK
+I_CLOCKING/snps_clk_chain_0/U_shftreg_0/ff_1/q_reg/CLK
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_1/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_2/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_3/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_4/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_5/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_6/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_7/CE1
+I_PCI_TOP/I_PCI_READ_FIFO_PCI_FIFO_RAM_8/CE1
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_1/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_2/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_3/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_4/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_5/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_6/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_7/CE2
+I_PCI_TOP/I_PCI_WRITE_FIFO_PCI_FIFO_RAM_8/CE2
+occ_int2/U_clk_control_i_0/slow_clk_enable_l_reg/CLK
+occ_int2/U_clk_control_i_1/slow_clk_enable_l_reg/CLK
+occ_int2/U_clk_control_i_2/slow_clk_enable_l_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_0/q_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_1/q_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_2/q_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_3/q_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_4/q_reg/CLK
+snps_clk_chain_1/U_shftreg_0/ff_5/q_reg/CLK
+
+Information: Checking 'partial_input_delay'.
+Information: Checking 'generic'.
+Information: Checking 'loops'.
+Information: Checking 'generated_clocks'.
+Information: Checking 'pulse_clock_non_pulse_clock_merge'.
+Information: Checking 'pll_configuration'.
+0

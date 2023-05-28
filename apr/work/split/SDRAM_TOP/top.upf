@@ -1,0 +1,231 @@
+################################################################################
+#
+# Created by icc2 (Q-2019.12-SP4) split_upf on Wed May 17 12:55:05 2023
+#
+################################################################################
+
+################################################################################
+#
+# Units
+# time_unit               : 1e-09
+# resistance_unit         : 1000000
+# capacitive_load_unit    : 1e-15
+# voltage_unit            : 1
+# current_unit            : 1e-06
+# power_unit              : 1e-12
+################################################################################
+
+# Implemented: supplies
+
+set_design_attributes -elements . -attribute lower_domain_boundary false
+create_supply_port VSS
+create_supply_port VDD
+create_supply_port VDDH
+
+create_power_domain PD_ORCA_TOP
+
+create_supply_net VSS -domain PD_ORCA_TOP
+create_supply_net VDD -domain PD_ORCA_TOP
+create_supply_net VDDH -domain PD_ORCA_TOP
+
+set_domain_supply_net PD_ORCA_TOP -primary_power_net VDD -primary_ground_net VSS
+
+connect_supply_net VSS -ports VSS
+connect_supply_net VDD -ports VDD
+connect_supply_net VDDH -ports VDDH
+
+add_port_state VSS -state {always 0}
+add_port_state VDD -state {V0p75 0.75}
+add_port_state VDD -state {V0p95 0.95}
+add_port_state VDDH -state {V0p75 0.75}
+add_port_state VDDH -state {V0p95 0.95}
+add_port_state VDDH -state {V1p16 1.16}
+create_pst pst -supplies {VDD VDDH VSS}
+add_pst_state state_1 -pst pst -state {V0p75 V0p75 always}
+add_pst_state state_2 -pst pst -state {V0p75 V0p95 always}
+add_pst_state state_3 -pst pst -state {V0p95 V1p16 always}
+add_pst_state state_4 -pst pst -state {V0p95 V0p95 always}
+
+if {[info exists upf_extension] && $upf_extension} {
+set_related_supply_net -ground VSS -object_list {n871 n409 n410 n380 n381 n382 \
+    n383 n384 n385 n386 n387 n389 n392 sd_A[4] sd_A[3] sd_A[2] sd_A[1] sd_A[0] \
+    sd_CK sd_RW sd_BWS[0] sd_DQ_in[31] sd_DQ_in[30] sd_DQ_in[29] sd_DQ_in[28] \
+    sd_DQ_in[27] sd_DQ_in[26] sd_DQ_in[25] sd_DQ_in[24] sd_DQ_in[23] \
+    sd_DQ_in[22] sd_DQ_in[21] sd_DQ_in[20] sd_DQ_in[19] sd_DQ_in[18] \
+    sd_DQ_in[17] sd_DQ_in[16] sd_DQ_in[15] sd_DQ_in[14] sd_DQ_in[13] \
+    sd_DQ_in[12] sd_DQ_in[11] sd_DQ_in[10] sd_DQ_in[9] sd_DQ_in[8] sd_DQ_in[7] \
+    sd_DQ_in[6] sd_DQ_in[5] sd_DQ_in[4] sd_DQ_in[3] sd_DQ_in[2] sd_DQ_in[1] \
+    sd_DQ_in[0] sd_DQ_out[31] sd_DQ_out[30] sd_DQ_out[29] sd_DQ_out[28] \
+    sd_DQ_out[27] sd_DQ_out[26] sd_DQ_out[25] sd_DQ_out[24] sd_DQ_out[23] \
+    sd_DQ_out[22] sd_DQ_out[21] sd_DQ_out[20] sd_DQ_out[19] sd_DQ_out[18] \
+    sd_DQ_out[17] sd_DQ_out[16] sd_DQ_out[15] sd_DQ_out[14] sd_DQ_out[13] \
+    sd_DQ_out[12] sd_DQ_out[11] sd_DQ_out[10] sd_DQ_out[9] sd_DQ_out[8] \
+    sd_DQ_out[7] sd_DQ_out[6] sd_DQ_out[5] sd_DQ_out[4] sd_DQ_out[3] \
+    sd_DQ_out[2] sd_DQ_out[1] sd_DQ_out[0] test_so7 n934 test_si7 test_si[2] \
+    n932 n931 n930 n929 n928 n927 n926 n925 n924 n923 n921 n920 n918 n912 n908 \
+    n905 n904 n902 n900 n898 n895 n893 n892 scan_enable n799 n922 n1195 n798 \
+    n944 net_sd_sys_read_data[31] net_sd_sys_read_data[30] \
+    net_sd_sys_read_data[29] net_sd_sys_read_data[28] net_sd_sys_read_data[27] \
+    net_sd_sys_read_data[26] net_sd_sys_read_data[25] net_sd_sys_read_data[24] \
+    net_sd_sys_read_data[23] net_sd_sys_read_data[22] net_sd_sys_read_data[21] \
+    net_sd_sys_read_data[20] net_sd_sys_read_data[19] net_sd_sys_read_data[18] \
+    net_sd_sys_read_data[17] net_sd_sys_read_data[16] net_sd_sys_read_data[15] \
+    net_sd_sys_read_data[14] net_sd_sys_read_data[13] net_sd_sys_read_data[12] \
+    net_sd_sys_read_data[11] net_sd_sys_read_data[10] net_sd_sys_read_data[9] \
+    net_sd_sys_read_data[8] net_sd_sys_read_data[7] net_sd_sys_read_data[6] \
+    net_sd_sys_read_data[5] net_sd_sys_read_data[4] net_sd_sys_read_data[3] \
+    net_sd_sys_read_data[2] net_sd_sys_read_data[1] net_sd_sys_read_data[0] \
+    net_sd_sys_read_data[63] net_sd_sys_read_data[62] net_sd_sys_read_data[61] \
+    net_sd_sys_read_data[60] net_sd_sys_read_data[59] net_sd_sys_read_data[58] \
+    net_sd_sys_read_data[57] net_sd_sys_read_data[56] net_sd_sys_read_data[55] \
+    net_sd_sys_read_data[54] net_sd_sys_read_data[53] net_sd_sys_read_data[52] \
+    net_sd_sys_read_data[51] net_sd_sys_read_data[50] net_sd_sys_read_data[49] \
+    net_sd_sys_read_data[48] net_sd_sys_read_data[47] net_sd_sys_read_data[46] \
+    net_sd_sys_read_data[45] net_sd_sys_read_data[44] net_sd_sys_read_data[43] \
+    net_sd_sys_read_data[42] net_sd_sys_read_data[41] net_sd_sys_read_data[40] \
+    net_sd_sys_read_data[39] net_sd_sys_read_data[38] net_sd_sys_read_data[37] \
+    net_sd_sys_read_data[36] net_sd_sys_read_data[35] net_sd_sys_read_data[34] \
+    net_sd_sys_read_data[33] net_sd_sys_read_data[32] n910 sd_CKn \
+    net_blender_result_0__22_ n402 net_blender_result_0__31_ n393 \
+    net_blender_result_0__3_ n360 net_blender_result_0__1_ n362 \
+    net_blender_result_0__27_ n397 net_blender_result_0__30_ n394 \
+    net_blender_result_0__29_ n395 net_blender_result_0__21_ n403 \
+    net_blender_result_0__28_ n396 net_blender_result_0__23_ n401 \
+    net_blender_result_0__18_ n406 net_blender_result_0__19_ n405 \
+    net_blender_result_0__16_ n408 net_blender_result_0__17_ n407 \
+    net_blender_result_0__24_ n400 net_blender_result_0__25_ n399 \
+    net_blender_result_0__20_ n404 net_blender_result_0__12_ n351 \
+    net_blender_result_0__14_ n349 net_blender_result_0__4_ n359 \
+    net_blender_result_0__5_ n358 net_blender_result_0__26_ n398 \
+    net_blender_result_0__0_ n363 net_pci_w_mux_select[0] \
+    net_pci_w_mux_select[2] net_pci_w_mux_select[1] sd_DQ_en[29] sd_DQ_en[1] \
+    n948 n569 n947 n570 n949 n571 n572 n576 n945 n577 n797 n344 n953 \
+    net_blender_result_1__12_ n425 net_blender_result_1__14_ n459 \
+    net_blender_result_1__22_ n447 net_blender_result_1__20_ n961 \
+    net_blender_result_1__23_ n457 net_blender_result_1__21_ n369 \
+    net_blender_result_0__10_ n372 n973 n376 n368 net_blender_result_0__11_ \
+    n364 net_blender_result_0__15_ n375 n366 net_blender_result_0__13_ n365 \
+    n374 n378 n370 net_blender_result_0__9_ n377 net_blender_result_0__2_ n373 \
+    net_blender_result_0__6_ n2157 n2007 n2145 net_blender_result_1__7_ \
+    net_pci_context_data_1 n1155 net_pci_context_data[5] \
+    net_blender_result_1__5_ n371 net_blender_result_0__8_ n681 n679 n680 n677 \
+    n676 n541 sd_DQ_en[6] sd_DQ_en[23] sd_DQ_en[19] sd_DQ_en[14] n352 n361 n348 \
+    net_blender_result_1__26_ n1987 n2005 net_blender_result_1__10_ \
+    net_blender_result_1__11_ net_blender_result_1__8_ net_blender_result_1__9_ \
+    net_blender_result_1__13_ net_blender_result_1__24_ \
+    net_blender_result_1__25_ net_blender_result_1__16_ \
+    net_blender_result_1__17_ net_blender_result_1__18_ \
+    net_blender_result_1__19_ net_blender_result_1__28_ \
+    net_blender_result_1__15_ n2009 net_blender_result_1__29_ n975 \
+    net_blender_result_1__30_ n1365 net_blender_result_1__31_ sd_LD sd_A[9] \
+    sd_BWS[1] sd_A[8] sd_A[6] net_pci_wfifo_data[27] net_pci_wfifo_data[26] \
+    net_pci_wfifo_data[24] net_pci_wfifo_data[25] net_pci_wfifo_data[20] \
+    net_pci_wfifo_data[21] net_pci_wfifo_data[22] net_pci_wfifo_data[12] \
+    net_pci_wfifo_data[14] net_pci_wfifo_data[23] net_pci_wfifo_data[15] \
+    net_pci_wfifo_data[13] n1457 net_pci_wfifo_data[8] n1643 n1651 \
+    net_pci_wfifo_data[18] net_pci_wfifo_data_30 n1483 n1786 n763 n575 n886 \
+    n887 n888 n891 n894 n896 n897 n899 n901 n903 n906 n907 n909 n911 n913 n914 \
+    n915 n916 n917 n919 n933 test_mode n935 n549 n936 n548 n937 n388 n946 n550 \
+    net_blender_op[3] sd_A[5] sd_A[7] n1787 n2140 n2151 net_pci_context_data_2 \
+    net_pci_context_data[6] net_pci_wfifo_data[28] net_pci_wfifo_data_31 n445 \
+    n437 n427 n1211 n959 n367 n443 n951 n1226 n379 n455 n958 n431 n429 n453 \
+    n956 n1213 n957 n1228 n960 net_pci_wfifo_data[9] net_pci_wfifo_data[11] \
+    net_pci_wfifo_data_3 n353 n970 n941 n1455 net_sd_w_mux_select[1] \
+    net_sd_w_mux_select[0] net_blender_op[2] n542 n355 n350 n357 n356 \
+    net_pci_wfifo_data[10] n1456 net_parser_sd_wfifo_push sys_rst_n \
+    net_context_cmd[6] n689 n354 n568 n952 n955 n950 n415 n421 n1221 n1215 \
+    n1217 n417 net_blender_result_0__7_ net_blender_result_1__27_ n1892 n536 \
+    n954 n1219 n1224 test_so[1] n972 n977 n978 net_sd_rfifo_parser_empty \
+    net_parser_sd_rfifo_pop n800 n796 n816 n801 test_so[2] n815}
+set_related_supply_net -power VDD -object_list {n871 n409 n410 n380 n381 n382 \
+    n383 n384 n385 n386 n387 n389 n392 sd_A[4] sd_A[3] sd_A[2] sd_A[1] sd_A[0] \
+    sd_CK sd_RW sd_BWS[0] sd_DQ_in[31] sd_DQ_in[30] sd_DQ_in[29] sd_DQ_in[28] \
+    sd_DQ_in[27] sd_DQ_in[26] sd_DQ_in[25] sd_DQ_in[24] sd_DQ_in[23] \
+    sd_DQ_in[22] sd_DQ_in[21] sd_DQ_in[20] sd_DQ_in[19] sd_DQ_in[18] \
+    sd_DQ_in[17] sd_DQ_in[16] sd_DQ_in[15] sd_DQ_in[14] sd_DQ_in[13] \
+    sd_DQ_in[12] sd_DQ_in[11] sd_DQ_in[10] sd_DQ_in[9] sd_DQ_in[8] sd_DQ_in[7] \
+    sd_DQ_in[6] sd_DQ_in[5] sd_DQ_in[4] sd_DQ_in[3] sd_DQ_in[2] sd_DQ_in[1] \
+    sd_DQ_in[0] sd_DQ_out[31] sd_DQ_out[30] sd_DQ_out[29] sd_DQ_out[28] \
+    sd_DQ_out[27] sd_DQ_out[26] sd_DQ_out[25] sd_DQ_out[24] sd_DQ_out[23] \
+    sd_DQ_out[22] sd_DQ_out[21] sd_DQ_out[20] sd_DQ_out[19] sd_DQ_out[18] \
+    sd_DQ_out[17] sd_DQ_out[16] sd_DQ_out[15] sd_DQ_out[14] sd_DQ_out[13] \
+    sd_DQ_out[12] sd_DQ_out[11] sd_DQ_out[10] sd_DQ_out[9] sd_DQ_out[8] \
+    sd_DQ_out[7] sd_DQ_out[6] sd_DQ_out[5] sd_DQ_out[4] sd_DQ_out[3] \
+    sd_DQ_out[2] sd_DQ_out[1] sd_DQ_out[0] test_so7 n934 test_si7 test_si[2] \
+    n932 n931 n930 n929 n928 n927 n926 n925 n924 n923 n921 n920 n918 n912 n908 \
+    n905 n904 n902 n900 n898 n895 n893 n892 scan_enable n799 n922 n1195 n798 \
+    n944 net_sd_sys_read_data[31] net_sd_sys_read_data[30] \
+    net_sd_sys_read_data[29] net_sd_sys_read_data[28] net_sd_sys_read_data[27] \
+    net_sd_sys_read_data[26] net_sd_sys_read_data[25] net_sd_sys_read_data[24] \
+    net_sd_sys_read_data[23] net_sd_sys_read_data[22] net_sd_sys_read_data[21] \
+    net_sd_sys_read_data[20] net_sd_sys_read_data[19] net_sd_sys_read_data[18] \
+    net_sd_sys_read_data[17] net_sd_sys_read_data[16] net_sd_sys_read_data[15] \
+    net_sd_sys_read_data[14] net_sd_sys_read_data[13] net_sd_sys_read_data[12] \
+    net_sd_sys_read_data[11] net_sd_sys_read_data[10] net_sd_sys_read_data[9] \
+    net_sd_sys_read_data[8] net_sd_sys_read_data[7] net_sd_sys_read_data[6] \
+    net_sd_sys_read_data[5] net_sd_sys_read_data[4] net_sd_sys_read_data[3] \
+    net_sd_sys_read_data[2] net_sd_sys_read_data[1] net_sd_sys_read_data[0] \
+    net_sd_sys_read_data[63] net_sd_sys_read_data[62] net_sd_sys_read_data[61] \
+    net_sd_sys_read_data[60] net_sd_sys_read_data[59] net_sd_sys_read_data[58] \
+    net_sd_sys_read_data[57] net_sd_sys_read_data[56] net_sd_sys_read_data[55] \
+    net_sd_sys_read_data[54] net_sd_sys_read_data[53] net_sd_sys_read_data[52] \
+    net_sd_sys_read_data[51] net_sd_sys_read_data[50] net_sd_sys_read_data[49] \
+    net_sd_sys_read_data[48] net_sd_sys_read_data[47] net_sd_sys_read_data[46] \
+    net_sd_sys_read_data[45] net_sd_sys_read_data[44] net_sd_sys_read_data[43] \
+    net_sd_sys_read_data[42] net_sd_sys_read_data[41] net_sd_sys_read_data[40] \
+    net_sd_sys_read_data[39] net_sd_sys_read_data[38] net_sd_sys_read_data[37] \
+    net_sd_sys_read_data[36] net_sd_sys_read_data[35] net_sd_sys_read_data[34] \
+    net_sd_sys_read_data[33] net_sd_sys_read_data[32] n910 sd_CKn \
+    net_blender_result_0__22_ n402 net_blender_result_0__31_ n393 \
+    net_blender_result_0__3_ n360 net_blender_result_0__1_ n362 \
+    net_blender_result_0__27_ n397 net_blender_result_0__30_ n394 \
+    net_blender_result_0__29_ n395 net_blender_result_0__21_ n403 \
+    net_blender_result_0__28_ n396 net_blender_result_0__23_ n401 \
+    net_blender_result_0__18_ n406 net_blender_result_0__19_ n405 \
+    net_blender_result_0__16_ n408 net_blender_result_0__17_ n407 \
+    net_blender_result_0__24_ n400 net_blender_result_0__25_ n399 \
+    net_blender_result_0__20_ n404 net_blender_result_0__12_ n351 \
+    net_blender_result_0__14_ n349 net_blender_result_0__4_ n359 \
+    net_blender_result_0__5_ n358 net_blender_result_0__26_ n398 \
+    net_blender_result_0__0_ n363 net_pci_w_mux_select[0] \
+    net_pci_w_mux_select[2] net_pci_w_mux_select[1] sd_DQ_en[29] sd_DQ_en[1] \
+    n948 n569 n947 n570 n949 n571 n572 n576 n945 n577 n797 n344 n953 \
+    net_blender_result_1__12_ n425 net_blender_result_1__14_ n459 \
+    net_blender_result_1__22_ n447 net_blender_result_1__20_ n961 \
+    net_blender_result_1__23_ n457 net_blender_result_1__21_ n369 \
+    net_blender_result_0__10_ n372 n973 n376 n368 net_blender_result_0__11_ \
+    n364 net_blender_result_0__15_ n375 n366 net_blender_result_0__13_ n365 \
+    n374 n378 n370 net_blender_result_0__9_ n377 net_blender_result_0__2_ n373 \
+    net_blender_result_0__6_ n2157 n2007 n2145 net_blender_result_1__7_ \
+    net_pci_context_data_1 n1155 net_pci_context_data[5] \
+    net_blender_result_1__5_ n371 net_blender_result_0__8_ n681 n679 n680 n677 \
+    n676 n541 sd_DQ_en[6] sd_DQ_en[23] sd_DQ_en[19] sd_DQ_en[14] n352 n361 n348 \
+    net_blender_result_1__26_ n1987 n2005 net_blender_result_1__10_ \
+    net_blender_result_1__11_ net_blender_result_1__8_ net_blender_result_1__9_ \
+    net_blender_result_1__13_ net_blender_result_1__24_ \
+    net_blender_result_1__25_ net_blender_result_1__16_ \
+    net_blender_result_1__17_ net_blender_result_1__18_ \
+    net_blender_result_1__19_ net_blender_result_1__28_ \
+    net_blender_result_1__15_ n2009 net_blender_result_1__29_ n975 \
+    net_blender_result_1__30_ n1365 net_blender_result_1__31_ sd_LD sd_A[9] \
+    sd_BWS[1] sd_A[8] sd_A[6] net_pci_wfifo_data[27] net_pci_wfifo_data[26] \
+    net_pci_wfifo_data[24] net_pci_wfifo_data[25] net_pci_wfifo_data[20] \
+    net_pci_wfifo_data[21] net_pci_wfifo_data[22] net_pci_wfifo_data[12] \
+    net_pci_wfifo_data[14] net_pci_wfifo_data[23] net_pci_wfifo_data[15] \
+    net_pci_wfifo_data[13] n1457 net_pci_wfifo_data[8] n1643 n1651 \
+    net_pci_wfifo_data[18] net_pci_wfifo_data_30 n1483 n1786 n763 n575 n886 \
+    n887 n888 n891 n894 n896 n897 n899 n901 n903 n906 n907 n909 n911 n913 n914 \
+    n915 n916 n917 n919 n933 test_mode n935 n549 n936 n548 n937 n388 n946 n550 \
+    net_blender_op[3] sd_A[5] sd_A[7] n1787 n2140 n2151 net_pci_context_data_2 \
+    net_pci_context_data[6] net_pci_wfifo_data[28] net_pci_wfifo_data_31 n445 \
+    n437 n427 n1211 n959 n367 n443 n951 n1226 n379 n455 n958 n431 n429 n453 \
+    n956 n1213 n957 n1228 n960 net_pci_wfifo_data[9] net_pci_wfifo_data[11] \
+    net_pci_wfifo_data_3 n353 n970 n941 n1455 net_sd_w_mux_select[1] \
+    net_sd_w_mux_select[0] net_blender_op[2] n542 n355 n350 n357 n356 \
+    net_pci_wfifo_data[10] n1456 net_parser_sd_wfifo_push sys_rst_n \
+    net_context_cmd[6] n689 n354 n568 n952 n955 n950 n415 n421 n1221 n1215 \
+    n1217 n417 net_blender_result_0__7_ net_blender_result_1__27_ n1892 n536 \
+    n954 n1219 n1224 test_so[1] n972 n977 n978 net_sd_rfifo_parser_empty \
+    net_parser_sd_rfifo_pop n800 n796 n816 n801 test_so[2] n815}
+}
+

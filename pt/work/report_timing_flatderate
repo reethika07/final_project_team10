@@ -1,0 +1,155 @@
+****************************************
+Report : timing
+	-path_type full_clock_expanded
+	-delay_type min
+	-input_pins
+	-max_paths 1
+	-derate
+	-sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sat May 27 13:12:58 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_CONTEXT_MEM/ram_write_addr_reg_4_
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Endpoint: I_CONTEXT_MEM/I_CONTEXT_RAM_1_3
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Last common pin: I_CLOCKING/occ_int1/cts_buf_693832355/Y
+  Path Group: ate_clk
+  Path Type: min
+  Scenario: atspeed_shift
+
+  Point                          Derate  Incr     Path
+  -----------------------------------------------------
+  clock ate_clk (rise edge)            0.00     0.00
+  clock source latency                 0.00     0.00
+  ate_clk (in)                         0.00 &   0.00 r
+  I_CLOCKING/occ_int1/slow_clk_clkgt/u_icg/CLK (CGLNPRX2_LVT)
+                                0.95   0.00 &   0.01 r
+  I_CLOCKING/occ_int1/slow_clk_clkgt/u_icg/GCLK (CGLNPRX2_LVT)
+                                0.95   0.03 &   0.04 r
+  I_CLOCKING/occ_int1/U1/A3 (AO21X1_LVT)
+                                0.95   0.00 &   0.04 r
+  I_CLOCKING/occ_int1/U1/Y (AO21X1_LVT)
+                                0.95   0.01 &   0.05 r
+  I_CLOCKING/occ_int1/cts_buf_693832355/A (NBUFFX16_LVT)
+                                0.95   0.00 &   0.05 r
+  I_CLOCKING/occ_int1/cts_buf_693832355/Y (NBUFFX16_LVT)
+                                0.95   0.02 &   0.07 r
+  I_CLOCKING/occ_int1/cts_buf_693432351/A (NBUFFX16_LVT)
+                                0.95   0.01 &   0.08 r
+  I_CLOCKING/occ_int1/cts_buf_693432351/Y (NBUFFX16_LVT)
+                                0.95   0.02 &   0.10 r
+  cto_buf_33133/A (NBUFFX8_LVT)
+                                0.95   0.00 &   0.11 r
+  cto_buf_33133/Y (NBUFFX8_LVT)
+                                0.95   0.02 &   0.13 r
+  I_CONTEXT_MEM/clk_gate_ram_write_addr_reg/latch/CLK (CGLPPRX2_LVT)
+                                0.95   0.00 &   0.13 r
+  I_CONTEXT_MEM/clk_gate_ram_write_addr_reg/latch/GCLK (CGLPPRX2_LVT)
+                                0.95   0.04 &   0.17 r
+  I_CONTEXT_MEM/ram_write_addr_reg_4_/CLK (SDFFARX1_RVT)
+                                0.95   0.00 &   0.17 r
+  I_CONTEXT_MEM/ram_write_addr_reg_4_/Q (SDFFARX1_RVT)
+                                0.95   0.06 &   0.22 f
+  I_CONTEXT_MEM/HFSBUF_205_527/A (NBUFFX16_HVT)
+                                0.95   0.00 &   0.22 f
+  I_CONTEXT_MEM/HFSBUF_205_527/Y (NBUFFX16_HVT)
+                                0.95   0.02 &   0.25 f
+  I_CONTEXT_MEM/I_CONTEXT_RAM_1_3/A1[4] (SRAM2RW64x8)
+                                0.95   0.00 &   0.25 f
+  data arrival time                             0.25
+
+  clock ate_clk (rise edge)            0.00     0.00
+  clock source latency                 0.00     0.00
+  ate_clk (in)                         0.00 &   0.00 r
+  I_CLOCKING/occ_int1/slow_clk_clkgt/u_icg/CLK (CGLNPRX2_LVT)
+                                1.05   0.00 &   0.01 r
+  I_CLOCKING/occ_int1/slow_clk_clkgt/u_icg/GCLK (CGLNPRX2_LVT)
+                                1.05   0.04 &   0.04 r
+  I_CLOCKING/occ_int1/U1/A3 (AO21X1_LVT)
+                                1.05   0.00 &   0.04 r
+  I_CLOCKING/occ_int1/U1/Y (AO21X1_LVT)
+                                1.05   0.02 &   0.06 r
+  I_CLOCKING/occ_int1/cts_buf_693832355/A (NBUFFX16_LVT)
+                                1.05   0.00 &   0.06 r
+  I_CLOCKING/occ_int1/cts_buf_693832355/Y (NBUFFX16_LVT)
+                                1.05   0.02 &   0.08 r
+  I_CLOCKING/occ_int1/cto_buf_33189/A (NBUFFX2_LVT)
+                                1.05   0.01 &   0.09 r
+  I_CLOCKING/occ_int1/cto_buf_33189/Y (NBUFFX2_LVT)
+                                1.05   0.02 &   0.11 r
+  I_CLOCKING/occ_int1/cto_buf_33225/A (NBUFFX4_LVT)
+                                1.05   0.00 &   0.11 r
+  I_CLOCKING/occ_int1/cto_buf_33225/Y (NBUFFX4_LVT)
+                                1.05   0.02 &   0.13 r
+  I_CLOCKING/occ_int1/cts_buf_692932346/A (NBUFFX8_LVT)
+                                1.05   0.00 &   0.14 r
+  I_CLOCKING/occ_int1/cts_buf_692932346/Y (NBUFFX8_LVT)
+                                1.05   0.02 &   0.16 r
+  I_CLOCKING/occ_int1/cts_buf_691832335/A (NBUFFX16_LVT)
+                                1.05   0.01 &   0.17 r
+  I_CLOCKING/occ_int1/cts_buf_691832335/Y (NBUFFX16_LVT)
+                                1.05   0.02 &   0.20 r
+  I_CONTEXT_MEM/I_CONTEXT_RAM_1_3/CE1 (SRAM2RW64x8)
+                                1.05   0.00 &   0.20 r
+  clock reconvergence pessimism       -0.01     0.19
+  clock uncertainty                    0.10     0.29
+  library hold time             1.00   0.04     0.34
+  data required time                            0.34
+  -----------------------------------------------------
+  data required time                            0.34
+  data arrival time                            -0.25
+  -----------------------------------------------------
+  slack (VIOLATED)                             -0.08
+
+  Derate Summary Report
+  -----------------------------------------------
+  total derate : required time        -0.01 
+  total derate : arrival time          0.01 
+  -----------------------------------------------
+  total derate : slack                 0.02 
+
+  slack (with derating applied) (VIOLATED)
+                                      -0.08 
+  clock reconvergence pessimism (due to derating)
+                                      -0.01 
+  -----------------------------------------------
+  slack (with no derating) (VIOLATED)
+                                      -0.07 
+
+
+
+1

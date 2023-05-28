@@ -3,7 +3,7 @@ setting auto_restore_mw_cel_lib_setup true
 pt_shell> o
 setting top_design to: 
 ORCA_TOP
-pt_shell> source ../scripts/at_speed_cap.tcl
+pt_shell> source ../scripts/atspeed_cap.tcl
 # Set up the search path to the librariesi
 # One of the typical lines of the resultant search path is:
 # /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm
@@ -35,8 +35,8 @@ saed32hvt_ss0p75vn40c.db saed32hvt_dlvl_ss0p75vn40c_i0p95v.db saed32hvt_ulvl_ss0
 lappend search_path .
 /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram/db_nldm .
 Information: current_design won't return any data before link (DES-071)
-Loading verilog file '/home/reethika/common/Documents/ECE510-2023-SPRING/final_prj-team_10/apr/outputs/ORCA_TOP.route2.vg.gz'
 Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.db'
+Loading verilog file '/home/ramadugu/common/Documents/freshp/final_prj-team_10-master/apr/outputs/ORCA_TOP.route2.vg.gz'
 Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p75vn40c_i0p75v.db'
 Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p75v.db'
 Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ss0p75vn40c.db'
@@ -53,27 +53,27 @@ Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/
 Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95vn40c.db'
 Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ss0p95vn40c_i0p75v.db'
 Linking design ORCA_TOP...
-Removed 198327 unconnected cells and blackboxes.
+Removed 200394 unconnected cells and blackboxes.
 Information: Removing 63 unneeded designs..... (LNK-034)
-Information: 205 (69.73%) library cells are unused in library saed32hvt_ss0p75vn40c..... (LNK-045)
+Information: 207 (70.41%) library cells are unused in library saed32hvt_ss0p75vn40c..... (LNK-045)
 Information: 12 (100.00%) library cells are unused in library saed32hvt_ulvl_ss0p75vn40c_i0p75v..... (LNK-045)
-Information: 20 (83.33%) library cells are unused in library saed32hvt_dlvl_ss0p75vn40c_i0p75v..... (LNK-045)
-Information: 194 (65.99%) library cells are unused in library saed32lvt_ss0p75vn40c..... (LNK-045)
+Information: 21 (87.50%) library cells are unused in library saed32hvt_dlvl_ss0p75vn40c_i0p75v..... (LNK-045)
+Information: 204 (69.39%) library cells are unused in library saed32lvt_ss0p75vn40c..... (LNK-045)
 Information: 12 (100.00%) library cells are unused in library saed32lvt_ulvl_ss0p75vn40c_i0p75v..... (LNK-045)
-Information: 21 (87.50%) library cells are unused in library saed32lvt_dlvl_ss0p75vn40c_i0p75v..... (LNK-045)
-Information: 213 (72.45%) library cells are unused in library saed32rvt_ss0p75vn40c..... (LNK-045)
+Information: 23 (95.83%) library cells are unused in library saed32lvt_dlvl_ss0p75vn40c_i0p75v..... (LNK-045)
+Information: 220 (74.83%) library cells are unused in library saed32rvt_ss0p75vn40c..... (LNK-045)
 Information: 12 (100.00%) library cells are unused in library saed32rvt_ulvl_ss0p75vn40c_i0p75v..... (LNK-045)
-Information: 21 (87.50%) library cells are unused in library saed32rvt_dlvl_ss0p75vn40c_i0p75v..... (LNK-045)
+Information: 22 (91.67%) library cells are unused in library saed32rvt_dlvl_ss0p75vn40c_i0p75v..... (LNK-045)
 Information: 31 (88.57%) library cells are unused in library saed32sram_ss0p95vn40c..... (LNK-045)
-Information: 231 (78.57%) library cells are unused in library saed32hvt_ss0p95vn40c..... (LNK-045)
+Information: 234 (79.59%) library cells are unused in library saed32hvt_ss0p95vn40c..... (LNK-045)
 Information: 10 (83.33%) library cells are unused in library saed32hvt_ulvl_ss0p95vn40c_i0p75v..... (LNK-045)
-Information: 248 (84.35%) library cells are unused in library saed32lvt_ss0p95vn40c..... (LNK-045)
-Information: 9 (75.00%) library cells are unused in library saed32lvt_ulvl_ss0p95vn40c_i0p75v..... (LNK-045)
-Information: 260 (88.44%) library cells are unused in library saed32rvt_ss0p95vn40c..... (LNK-045)
+Information: 260 (88.44%) library cells are unused in library saed32lvt_ss0p95vn40c..... (LNK-045)
+Information: 8 (66.67%) library cells are unused in library saed32lvt_ulvl_ss0p95vn40c_i0p75v..... (LNK-045)
+Information: 264 (89.80%) library cells are unused in library saed32rvt_ss0p95vn40c..... (LNK-045)
 Information: 8 (66.67%) library cells are unused in library saed32rvt_ulvl_ss0p95vn40c_i0p75v..... (LNK-045)
-Information: total 1507 library cells are unused (LNK-046)
+Information: total 1548 library cells are unused (LNK-046)
 Design 'ORCA_TOP' was successfully linked.
-Information: There are 48729 leaf cells, ports, hiers and 54844 nets in the design (LNK-047)
+Information: There are 46217 leaf cells, ports, hiers and 52441 nets in the design (LNK-047)
 Information: Checked out license 'PrimeTime-SI' (PT-019)
 Information: Log for 'read_parasitics command' will be generated in 'parasitics_command.log'. (PARA-107)
 Information: Checked out license 'PrimePower' (PT-019)
@@ -111,7 +111,8 @@ if { [info exists synopsys_program_name ] } {
                   set_operating_condition $corner_op_cond -library saed32lvt_c
                 }
 
-                foreach scenario { {func_worst func Cmax } {func_best func Cmin} {test_worst test Cmax} {test_best test Cmin} {atspeed_shift atspeed Cmin} {atspeed_cap atspeed Cmax} {stuck_at_shift scan Cmin} {stuck_at_cap scan Cmax} {func_worst_constrained funcu Cmax} {func_best_constrained funcu Cmin} }  {
+                #foreach scenario { {func_worst func Cmax } {func_best func Cmin} {test_worst test Cmax} {test_best test Cmin} {atspeed_shift atspeed Cmin} {atspeed_cap atspeed Cmax} {stuck_at_shift scan Cmin} {stuck_at_cap scan Cmax}  }
+foreach scenario { {func_worst func Cmax } {func_best func Cmin} {test_worst test Cmax} {test_best test Cmin} }  {
                   create_scenario -name [lindex $scenario 0 ] -mode [lindex $scenario 1 ] -corner [lindex $scenario 2 ]
                   current_scenario [lindex $scenario 0]
                   source -echo -verbose -continue_on_error ../../constraints/ORCA_TOP_[lindex $scenario 0 ].sdc 
@@ -173,33 +174,27 @@ if { [info exists synopsys_program_name ] } {
                     set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
                     source $topdir/constraints/ORCA_TOP_test_worst.sdc
                 }
-                if [ regexp "Cmax" $corner_name] {
-                   set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
-                    source $topdir/constraints/ORCA_TOP_func_worst_constrained.sdc
-                }
-                if [ regexp "Cmin" $corner_name] {
-                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-                    source $topdir/constraints/ORCA_TOP_func_best_constrained.sdc
-                }
-                if [ regexp "Ccmin" $corner_name] {
-                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
-                    source $topdir/constraints/ORCA_TOP_stuck_at_shift.sdc
-                }
-                if [ regexp "Ccmax" $corner_name] {
-                   set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
-                    source $topdir/constraints/ORCA_TOP_stuck_at_cap.sdc
-                }
-                if [ regexp "Cmax_s" $corner_name] {
-                   set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+if [ regexp "max_capture" $corner_name ] {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
                     source $topdir/constraints/ORCA_TOP_atspeed_cap.sdc
                 }
-                if [ regexp "Cmin_s" $corner_name] {
-                   set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+if [ regexp "min_scan" $corner_name ] {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
                     source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc
                 }
-     
-         }
-        }
+if [ regexp "min_capture" $corner_name ] {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_stuck_at_cap.sdc
+                }
+if [ regexp "min_shift" $corner_name ] {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_stuck_at_shift.sdc
+                }
+}
+
+}
+         
+        
 } elseif {[get_db root: .program_short_name] == "genus"} {
    read_power_intent ../../constraints/ORCA_TOP.upf -version 2.0 -module $top_design
    apply_power_intent
@@ -222,16 +217,8 @@ Warning: Creating virtual clock named 'v_SDRAM_CLK' with no sources. (UITE-121)
 Information: Setting sdc_version outside of an SDC file has no effect (SDC-1)
 Warning: Creating virtual clock named 'v_PCI_CLK' with no sources. (UITE-121)
 Warning: Creating virtual clock named 'v_SDRAM_CLK' with no sources. (UITE-121)
-Warning: Clock groups with same clocks are already set. (UITE-318)
-1
-Information: Setting sdc_version outside of an SDC file has no effect (SDC-1)
-Warning: Creating virtual clock named 'v_PCI_CLK' with no sources. (UITE-121)
-Warning: Creating virtual clock named 'v_SDRAM_CLK' with no sources. (UITE-121)
 Warning: Cannot set output delay on a clock port (sd_CK) that does not fanout to any data sink. (UITE-485)
 Warning: Cannot set output delay on a clock port (sd_CKn) that does not fanout to any data sink. (UITE-485)
-Warning: No port objects matched '*' (SEL-004)
-Error: Nothing matched for ports (SEL-005)
-Error: Nothing matched for port_list (SEL-005)
 1
 Warning: Converting clock object 'PCI_CLK' from ideal to propagated. (UITE-315)
 Warning: Virtual clock 'v_PCI_CLK' cannot be made propagated. (UITE-316)
@@ -239,8 +226,6 @@ Warning: Converting clock object 'SYS_2x_CLK' from ideal to propagated. (UITE-31
 Warning: Converting clock object 'SYS_CLK' from ideal to propagated. (UITE-315)
 Warning: Converting clock object 'SDRAM_CLK' from ideal to propagated. (UITE-315)
 Warning: Virtual clock 'v_SDRAM_CLK' cannot be made propagated. (UITE-316)
-Warning: Converting clock object 'SD_DDR_CLK' from ideal to propagated. (UITE-315)
-Warning: Converting clock object 'SD_DDR_CLKn' from ideal to propagated. (UITE-315)
 Warning: Setting this variable to a lower value can cause a significant performance degradation during a timing update. (PTE-067)
 Information: Setting rc_cache_min_max_rise_fall_ceff to TRUE. (XTALK-015)
 Information: Using automatic max wire load selection group 'predcaps'. (ENV-003)
@@ -379,23 +364,21 @@ Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_T
 Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13032/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13032/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13032. (PTE-060)
 Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13032/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13032/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13032. (PTE-060)
 Information: Inferring 4 clock-gating checks. (PTE-017)
-Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cts_buf_701957683/Y' to the pin 'cto_buf_58691/A' in the network 'n872'. (RC-005)
-Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cts_buf_701957683/Y' to the pin 'I_RISC_CORE/cts_buf_700357667/A' in the network 'n872'. (RC-005)
-Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cts_buf_701957683/Y' to the pin 'I_RISC_CORE/cts_buf_699957663/A' in the network 'n872'. (RC-005)
-Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cts_buf_701957683/Y' to the pin 'cto_buf_58691/A' in the network 'n872'. (RC-005)
-Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cts_buf_701957683/Y' to the pin 'I_RISC_CORE/cts_buf_700357667/A' in the network 'n872'. (RC-005)
-Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cts_buf_701957683/Y' to the pin 'I_RISC_CORE/cts_buf_699957663/A' in the network 'n872'. (RC-005)
-Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cts_buf_701957683/Y' to the pin 'cto_buf_58691/A' in the network 'n872'. (RC-005)
-Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cts_buf_701957683/Y' to the pin 'I_RISC_CORE/cts_buf_700357667/A' in the network 'n872'. (RC-005)
-Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cts_buf_701957683/Y' to the pin 'I_RISC_CORE/cts_buf_699957663/A' in the network 'n872'. (RC-005)
-Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cts_buf_701957683/Y' to the pin 'cto_buf_58691/A' in the network 'n872'. (RC-005)
-Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cts_buf_701957683/Y' to the pin 'I_RISC_CORE/cts_buf_700357667/A' in the network 'n872'. (RC-005)
-Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cts_buf_701957683/Y' to the pin 'I_RISC_CORE/cts_buf_699957663/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'cto_buf_33224/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'I_RISC_CORE/cts_buf_685132268/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'cto_buf_33224/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'I_RISC_CORE/cts_buf_685132268/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'cto_buf_33224/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'I_RISC_CORE/cts_buf_685132268/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'cto_buf_33224/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'I_RISC_CORE/cts_buf_685132268/A' in the network 'n872'. (RC-005)
 Warning: The type of RC delay calculation problems that have occurred prevents the min and max results from bounding the correct values. (RC-008)
 Information: Starting crosstalk aware timing iteration 1. (XTALK-001)
 Information: Starting crosstalk aware timing iteration 2. (XTALK-001)
+Information: Expanding clock 'v_SDRAM_CLK' to base period of 20.000 (old period was 5.000, added 6 edges). (PTE-016)
+Information: Expanding clock 'SDRAM_CLK' to base period of 20.000 (old period was 4.000, added 8 edges). (PTE-016)
 Information: Expanding clock 'SYS_2x_CLK' to base period of 4.800 (old period was 2.400, added 2 edges). (PTE-016)
-Information: Number of nets evaluated in the previous iteration: 51395. (XTALK-105)
+Information: Number of nets evaluated in the previous iteration: 48930. (XTALK-105)
 pt_shell> report_timing
 ****************************************
 Report : timing
@@ -405,57 +388,40 @@ Report : timing
         -sort_by slack
 Design : ORCA_TOP
 Version: O-2018.06
-Date   : Fri May 26 16:23:37 2023
+Date   : Fri May 26 16:24:25 2023
 ****************************************
 
 
-  Startpoint: I_SDRAM_TOP/I_SDRAM_IF/DQ_out_1_reg_30_
-               (falling edge-triggered flip-flop clocked by SDRAM_CLK)
-  Endpoint: sd_DQ_out[30]
-               (output port clocked by v_SDRAM_CLK)
+  Startpoint: I_SDRAM_TOP/I_SDRAM_IF/R_19
+               (rising edge-triggered flip-flop clocked by SDRAM_CLK)
+  Endpoint: sd_A[9] (output port clocked by v_SDRAM_CLK)
   Path Group: OUTPUTS
   Path Type: max
   Min Clock Paths Derating Factor : 0.950
 
   Point                                                   Incr       Path
   ------------------------------------------------------------------------------
-  clock SDRAM_CLK (fall edge)                            2.050      2.050
-  clock network delay (propagated)                       1.334      3.384
-  I_SDRAM_TOP/I_SDRAM_IF/DQ_out_1_reg_30_/CLK (DFFNARX1_RVT)
-                                                         0.000      3.384 f
-  I_SDRAM_TOP/I_SDRAM_IF/DQ_out_1_reg_30_/Q (DFFNARX1_RVT)
-                                                         0.641 &    4.026 r
-  I_SDRAM_TOP/I_SDRAM_IF/U13009/Y (AO22X2_LVT)           0.247 &    4.273 r
-  sd_DQ_out[30] (out)                                    0.006 &    4.279 r
-  data arrival time                                                 4.279
+  clock SDRAM_CLK (rise edge)                            4.000      4.000
+  clock network delay (propagated)                       1.073      5.073
+  I_SDRAM_TOP/I_SDRAM_IF/R_19/CLK (SDFFASX1_HVT)         0.000      5.073 r
+  I_SDRAM_TOP/I_SDRAM_IF/R_19/Q (SDFFASX1_HVT)           1.376 &    6.449 f
+  I_SDRAM_TOP/I_SDRAM_IF/U51/SO (HADDX1_HVT)             0.883 &    7.333 f
+  HFSBUF_4_200/Y (NBUFFX8_HVT)                           0.546 &    7.879 f
+  sd_A[9] (out)                                          0.012 &    7.891 f
+  data arrival time                                                 7.891
 
-  clock v_SDRAM_CLK (rise edge)                          4.100      4.100
-  clock network delay (ideal)                            0.500      4.600
-  clock reconvergence pessimism                          0.000      4.600
-  clock uncertainty                                     -0.100      4.500
-  output external delay                                 -1.100      3.400
-  data required time                                                3.400
+  clock v_SDRAM_CLK (rise edge)                          5.000      5.000
+  clock network delay (ideal)                            0.500      5.500
+  clock reconvergence pessimism                          0.000      5.500
+  clock uncertainty                                     -0.100      5.400
+  output external delay                                 -1.100      4.300
+  data required time                                                4.300
   ------------------------------------------------------------------------------
-  data required time                                                3.400
-  data arrival time                                                -4.279
+  data required time                                                4.300
+  data arrival time                                                -7.891
   ------------------------------------------------------------------------------
-  slack (VIOLATED)                                                 -0.879
+  slack (VIOLATED)                                                 -3.591
 
-
-1
-pt_shell> report_timing -delay_type min
-****************************************
-Report : timing
-        -path_type full
-        -delay_type min
-        -max_paths 1
-        -sort_by slack
-Design : ORCA_TOP
-Version: O-2018.06
-Date   : Fri May 26 16:23:49 2023
-****************************************
-
-No constrained paths.
 
 1
 pt_shell> exit
@@ -464,10 +430,10 @@ Id          Severity      Occurrences   Suppressed
 -------------------------------------------------------------------------------
 PTE-060     Warning               128           28
 Total 1 type of message is suppressed
-Maximum memory usage for this session: 1137.50 MB
-CPU usage for this session: 59 seconds 
-Elapsed time for this session: 62 seconds
-Diagnostics summary: 3 errors, 135 warnings, 66 informationals
+Maximum memory usage for this session: 1118.45 MB
+CPU usage for this session: 101 seconds 
+Elapsed time for this session: 101 seconds
+Diagnostics summary: 1 error, 125 warnings, 67 informationals
 
 Thank you for using pt_shell!
 

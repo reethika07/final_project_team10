@@ -1,0 +1,51 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-max_paths 1
+	-sort_by slack
+Design : ORCA_TOP
+Version: O-2018.06
+Date   : Sat May 20 21:53:53 2023
+****************************************
+
+
+  Startpoint: I_CONTEXT_MEM/I_CONTEXT_RAM_3_3
+               (rising edge-triggered flip-flop clocked by SYS_CLK)
+  Endpoint: I_BLENDER_0/s1_op2_reg_19_
+               (rising edge-triggered flip-flop clocked by SYS_CLK)
+  Last common pin: I_CLOCKING/occ_int1/cts_buf_702632375/Y
+  Path Group: SYS_CLK
+  Path Type: min
+  Min Data Paths Derating Factor  : 0.950
+  Min Clock Paths Derating Factor : 0.950
+  Max Clock Paths Derating Factor : 1.050
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SYS_CLK (rise edge)                              0.000      0.000
+  clock network delay (propagated)                       3.487      3.487
+  I_CONTEXT_MEM/I_CONTEXT_RAM_3_3/CE2 (SRAM2RW64x8)      0.000      3.487 r
+  I_CONTEXT_MEM/I_CONTEXT_RAM_3_3/O2[3] (SRAM2RW64x8)    0.020      3.506 f
+  I_CONTEXT_MEM/sram_fixcell_188/Y (NBUFFX4_HVT)         0.121      3.628 f
+  I_CONTEXT_MEM/U176/Y (AOI22X2_LVT)                     0.101      3.729 r
+  I_CONTEXT_MEM/U178/Y (NAND3X0_LVT)                     0.092      3.821 f
+  I_BLENDER_0/U6527/Y (AO222X1_HVT)                      2.425      6.246 f
+  I_BLENDER_0/ZBUF_2_inst_23440/Y (NBUFFX4_HVT)          0.031      6.277 f
+  I_BLENDER_0/s1_op2_reg_19_/D (SDFFARX1_RVT)            0.007      6.284 f
+  data arrival time                                                 6.284
+
+  clock SYS_CLK (rise edge)                              0.000      0.000
+  clock network delay (propagated)                    9247.537   9247.537
+  clock reconvergence pessimism                         -0.262   9247.275
+  I_BLENDER_0/s1_op2_reg_19_/CLK (SDFFARX1_RVT)                  9247.275 r
+  library hold time                                     -0.021   9247.254
+  data required time                                             9247.254
+  ------------------------------------------------------------------------------
+  data required time                                             9247.254
+  data arrival time                                                -6.284
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -9240.970
+
+
+1

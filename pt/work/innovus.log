@@ -1,0 +1,191 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2019 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v19.16-s053_1, built Mon Aug 31 13:16:01 PDT 2020
+Options:	
+Date:		Wed May 24 17:09:42 2023
+Host:		auto.ece.pdx.edu (x86_64 w/Linux 3.10.0-1160.88.1.el7.x86_64) (1core*60cpus*Intel Xeon E312xx (Sandy Bridge, IBRS update) 16384KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	19.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (170 mbytes). Set global soft_stack_size_limit to change the value.
+Sourcing startup file /u/ramadugu/.cadence/innovus/gui.pref.tcl
+<CMD> setPreference DesignHierChar /
+<CMD> setPreference DEFHierChar /
+<CMD> setPreference PDEFBusDelim {[]}
+<CMD> setPreference LecDofile 0
+<CMD> setPreference CmdLogMode 1
+<CMD> setPreference ConstraintUserXGrid 0.0
+<CMD> setPreference ConstraintUserYGrid 0.0
+<CMD> setPreference ConstraintUserXOffset 0.0
+<CMD> setPreference ConstraintUserYOffset 0.0
+<CMD> setPreference SnapAllCorners 0
+<CMD> setPreference UserGridUnit 0
+<CMD> setPreference LogTypeInCmd 0
+<CMD> setPreference logviewer 0
+<CMD> setPreference EnableRectilinearDesign 0
+<CMD> setPreference MinFPModuleSize 100
+<CMD> setPreference MinFlightLineWidth 1
+<CMD> setPreference MaxFlightLineNetTerms 500
+<CMD> setPreference LevelFlight 1
+<CMD> setPreference DirectionSink 1
+<CMD> setPreference DirectionSource 1
+<CMD> setPreference HiliteNetWhenQueryObj 1
+<CMD> setPreference HiliteShapeWhenSelectNet 0
+<CMD> setPreference SelectNetWhenSelectPin 0
+<CMD> setPreference HiliteNetWhenSelectPin 1
+<CMD> setPreference HiliteNetWhenSelectWire 1
+<CMD> setPreference QueryWireNet 0
+<CMD> setPreference ControlPinSelectabilityByInstance 1
+<CMD> setPreference OnlySelectHighlighted 0
+<CMD> setPreference SelectByArea 0
+<CMD> setPreference WinSelectMargin 8
+<CMD> setPreference ShowNumberBlockConnection 0
+<CMD> setPreference StrecthRestriction 0
+<CMD> setPreference StretchRectilinear 0
+<CMD> setPreference MoveRestriction 0
+<CMD> setPreference DisplayRelFPlan 1
+<CMD> setPreference LegalizeMacro 0
+<CMD> setPreference DisplayPtnPin 1
+<CMD> setPreference DisplayFPlanFlightLine 1
+<CMD> setPreference DisplayPinName 0
+<CMD> setPreference CopyNetKeepNetName 1
+<CMD> setPreference InstanceText Instance
+<CMD> setPreference ShowNetFullName 0
+<CMD> setPreference ShowNetNameWithLayerColor 0
+<CMD> setPreference TermCrossPix 4
+<CMD> setPreference hInstInnerText t
+<CMD> setPreference ExclusiveFlight 0
+<CMD> setPreference ShowToUnplace 0
+<CMD> setPreference FlightLineInMove 1
+<CMD> setPreference AutoRedraw 1
+<CMD> setPreference ShowViaMetal 0
+<CMD> setPreference IgnoreAmoebaRatio 0
+<CMD> setPreference DisplayCellPattern 0
+<CMD> setPreference DrawInstByPlaceStatus 1
+<CMD> setPreference DrawWireByWireStatus 1
+<CMD> setPreference ShowCrossLineWhenSelect 1
+<CMD> setPreference FullViewOutsideDieArea 0
+<CMD> setPreference UseDigitFillPattern 1
+<CMD> setPreference DisplayCutPattern 1
+<CMD> setPreference DrawDetailWhenMoveVia 1
+<CMD> setPreference TurnOnLayersWhenEditWire 1
+<CMD> setPreference DisplayIndicatorOfViaPillar 0
+<CMD> setPreference ShowConnectionInOutNumber 0
+<CMD> setPreference ConnectionColorType 0
+<CMD> setPreference OnlyBundleNetFlight 0
+<CMD> setPreference FromOutputPin 0
+<CMD> setPreference ShowFlightLineTermMark 0
+<CMD> setPreference BlockFlightLine 1
+<CMD> setPreference InstFlightLine 1
+<CMD> setPreference ModuleFlightLine 1
+<CMD> setPreference IoCellFlightLine 1
+<CMD> setPreference BlackBoxFlightLine 1
+<CMD> setPreference ShowConnectionWithWidth 0
+<CMD> setPreference FLWidthThresholdLow 20
+<CMD> setPreference FLWidthThresholdHigh 80
+<CMD> setPreference percentageOfPan 30
+<CMD> setPreference marginOfZoomSelected 50
+<CMD> setPreference scaleOfZoom 3.0
+<CMD> setPreference WheelZoomWithModify 0
+<CMD> setPreference ShowBothInputConnection 0
+<CMD> setPreference ShowNetWeightConnection 1
+<CMD> setPreference ShowFlightLineThruPtnPin 0
+<CMD> setPreference ShowLefLayerName 1
+<CMD> setPreference ShowAttrPopup 1
+<CMD> setPreference EnlargeLogicalPin 1
+<CMD> setPreference ShowDelBox 0
+<CMD> setPreference SelectByLine 0
+<CMD> setPreference SelectStickyMode 0
+<CMD> setPreference ShowUnplacedInst 0
+<CMD> setPreference ShowRectilinearPad 0
+<CMD> setPreference zoomPrevCount 9
+<CMD> setPreference saveManually 0
+<CMD> setPreference displayViaSize 1
+<CMD> setPreference noInsideMacro 0
+<CMD> setPreference noInsidePartition 0
+<CMD> setPreference ShowParentModule 0
+<CMD> setPreference ShowChildPartition 0
+<CMD> setPreference ShowAllFence 0
+<CMD> setPreference SkipBufferFlightline 0
+<CMD> setPreference ShowFPObjInPlace 0
+<CMD> setPreference DrawFlightlineLast 0
+<CMD> setPreference DetailDisplayFactor 16
+<CMD> setPreference SingleLayerMode 0
+<CMD> setPreference QuerySkipInst 0
+<CMD> setPreference QuerySkipInstObs 0
+<CMD> setPreference QuerySkipInstPin 0
+<CMD> setPreference QuerySkipRegular 0
+<CMD> setPreference QuerySkipSpecial 0
+<CMD> setPreference ShowModuleText 1
+<CMD> setPreference ShowAmoebaModuleText 1
+<CMD> setPreference ShowRowSiteText 1
+<CMD> setPreference ShowIoPadText 1
+<CMD> setPreference ShowInstanceText 1
+<CMD> setPreference ShowInstancePinText 1
+<CMD> setPreference ShowIoPinText 1
+<CMD> setPreference ShowGroupText 1
+<CMD> setPreference ShowBumpText 1
+<CMD> setPreference ShowClockTreeText 1
+<CMD> setPreference ShowChannelText 1
+<CMD> setPreference ShowLefPortNumText 1
+<CMD> setPreference ShowMacroSitePtnText 1
+<CMD> setPreference ShowSIPFingerText 1
+<CMD> setPreference ShowNetText 1
+<CMD> setPreference ShowUtilizationText 1
+<CMD> setPreference TextDisplaySize a
+<CMD> setPreference AutoDetailDisplay 0
+<CMD> setPreference CloneSnapMaster 0
+<CMD> setPreference MoveMacrosWithGuide 0
+<CMD> setPreference MoveMacrosWithRegion 0
+<CMD> setPreference MoveMacrosWithFence 1
+<CMD> setPreference MoveStdCellWithGuide 0
+<CMD> setPreference MoveStdCellWithRegion 0
+<CMD> setPreference MoveStdCellWithFence 0
+<CMD> setPreference MovePreplacedStdCellOnly 0
+<CMD> setPreference VertViolation 0.0
+<CMD> setPreference HorzViolation 0.0
+<CMD> setPreference congestionMap_nrStyle 0
+<CMD> setPreference congestionMap_trStyle 0
+<CMD> setPreference congestionMap_range0 -2
+<CMD> setPreference congestionMap_color0 0
+<CMD> setPreference congestionMap_range1 -1
+<CMD> setPreference congestionMap_color1 0
+<CMD> setPreference congestionMap_range2 0
+<CMD> setPreference congestionMap_color2 1
+<CMD> setPreference congestionMap_range3 1
+<CMD> setPreference congestionMap_color3 2
+<CMD> setPreference congestionMap_range4 2
+<CMD> setPreference congestionMap_color4 3
+<CMD> setPreference congestionMap_range5 3
+<CMD> setPreference congestionMap_color5 5
+<CMD> setPreference congestionMap_range6 4
+<CMD> setPreference congestionMap_color6 9
+<CMD> setPreference congestionMap_range7 5
+<CMD> setPreference congestionMap_color7 11
+<CMD> setPreference congestionMap_range8 6
+<CMD> setPreference congestionMap_color8 11
+<CMD> setPreference congestionMap_range9 36
+<CMD> setPreference congestionMap_color9 11
+<CMD> setLayerPreference congestH -isVisible 1
+<CMD> setLayerPreference congestV -isVisible 1
+<CMD> setLayerPreference congestObj -isVisible 1
+<CMD> setPreference SpeedLevel 0
+<CMD> setPreference HighlightColorNumber 64
+<CMD> setPreference SingleConnectionColor blue
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+ambiguous command name "o": oaIn oaOut open optBusSinkGroup optDesign optPower optVirtual option overlay
+invalid command name "exot"
+
+*** Memory Usage v#1 (Current mem = 765.949M, initial mem = 289.684M) ***
+*** Message Summary: 0 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:00:58.0, real=0:03:24, mem=765.9M) ---

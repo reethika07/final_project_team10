@@ -1,0 +1,592 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Launching 14 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   9] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  10] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  11] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  12] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  13] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  14] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for  14 (of  14) workers    : Sat May 27 13:08:01 2023
+  Waiting for   0 (of  14) workers    : Sat May 27 13:08:11 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Sat May 27 13:08:12 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           14                      auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         15001         ONLINE
+                   2    mo           -         15004         ONLINE
+                   3    mo           -         15003         ONLINE
+                   4    mo           -         15002         ONLINE
+                   5    mo           -         15006         ONLINE
+                   6    mo           -         15000         ONLINE
+                   7    mo           -         15020         ONLINE
+                   8    mo           -         15018         ONLINE
+                   9    mo           -         15383         ONLINE
+                   10   mo           -         15406         ONLINE
+                   11   mo           -         15384         ONLINE
+                   12   mo           -         15404         ONLINE
+                   13   mo           -         15381         ONLINE
+                   14   mo           -         15382         ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+                   9                                         4
+                   10                                        4
+                   11                                        4
+                   12                                        4
+                   13                                        4
+                   14                                        4
+  --------------------------------------------------------------------
+  Total                                                      56
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'test_slowfast'
+-----------------------------------
+End of Master/Slave Task Processing
+
+pt_shell> report_timing -delay_type  min  -derate -input -path full_clock_expanded
+****************************************
+Report : timing
+        -path_type full_clock_expanded
+        -delay_type min
+        -input_pins
+        -max_paths 1
+        -derate
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sat May 27 13:11:37 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_CONTEXT_MEM/ram_write_addr_reg_4_
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Endpoint: I_CONTEXT_MEM/I_CONTEXT_RAM_1_3
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Last common pin: I_CLOCKING/occ_int1/cts_buf_693832355/Y
+  Path Group: ate_clk
+  Path Type: min
+  Scenario: atspeed_shift
+
+  Point                          Derate  Incr     Path
+  -----------------------------------------------------
+  clock ate_clk (rise edge)            0.00     0.00
+  clock source latency                 0.00     0.00
+  ate_clk (in)                         0.00 &   0.00 r
+  I_CLOCKING/occ_int1/slow_clk_clkgt/u_icg/CLK (CGLNPRX2_LVT)
+                                0.95   0.00 &   0.01 r
+  I_CLOCKING/occ_int1/slow_clk_clkgt/u_icg/GCLK (CGLNPRX2_LVT)
+                                0.95   0.03 &   0.04 r
+  I_CLOCKING/occ_int1/U1/A3 (AO21X1_LVT)
+                                0.95   0.00 &   0.04 r
+  I_CLOCKING/occ_int1/U1/Y (AO21X1_LVT)
+                                0.95   0.01 &   0.05 r
+  I_CLOCKING/occ_int1/cts_buf_693832355/A (NBUFFX16_LVT)
+                                0.95   0.00 &   0.05 r
+  I_CLOCKING/occ_int1/cts_buf_693832355/Y (NBUFFX16_LVT)
+                                0.95   0.02 &   0.07 r
+  I_CLOCKING/occ_int1/cts_buf_693432351/A (NBUFFX16_LVT)
+                                0.95   0.01 &   0.08 r
+  I_CLOCKING/occ_int1/cts_buf_693432351/Y (NBUFFX16_LVT)
+                                0.95   0.02 &   0.10 r
+  cto_buf_33133/A (NBUFFX8_LVT)
+                                0.95   0.00 &   0.11 r
+  cto_buf_33133/Y (NBUFFX8_LVT)
+                                0.95   0.02 &   0.13 r
+  I_CONTEXT_MEM/clk_gate_ram_write_addr_reg/latch/CLK (CGLPPRX2_LVT)
+                                0.95   0.00 &   0.13 r
+  I_CONTEXT_MEM/clk_gate_ram_write_addr_reg/latch/GCLK (CGLPPRX2_LVT)
+                                0.95   0.04 &   0.17 r
+  I_CONTEXT_MEM/ram_write_addr_reg_4_/CLK (SDFFARX1_RVT)
+                                0.95   0.00 &   0.17 r
+  I_CONTEXT_MEM/ram_write_addr_reg_4_/Q (SDFFARX1_RVT)
+                                0.95   0.06 &   0.22 f
+  I_CONTEXT_MEM/HFSBUF_205_527/A (NBUFFX16_HVT)
+                                0.95   0.00 &   0.22 f
+  I_CONTEXT_MEM/HFSBUF_205_527/Y (NBUFFX16_HVT)
+                                0.95   0.02 &   0.25 f
+  I_CONTEXT_MEM/I_CONTEXT_RAM_1_3/A1[4] (SRAM2RW64x8)
+                                0.95   0.00 &   0.25 f
+  data arrival time                             0.25
+
+  clock ate_clk (rise edge)            0.00     0.00
+  clock source latency                 0.00     0.00
+  ate_clk (in)                         0.00 &   0.00 r
+  I_CLOCKING/occ_int1/slow_clk_clkgt/u_icg/CLK (CGLNPRX2_LVT)
+                                1.05   0.00 &   0.01 r
+  I_CLOCKING/occ_int1/slow_clk_clkgt/u_icg/GCLK (CGLNPRX2_LVT)
+                                1.05   0.04 &   0.04 r
+  I_CLOCKING/occ_int1/U1/A3 (AO21X1_LVT)
+                                1.05   0.00 &   0.04 r
+  I_CLOCKING/occ_int1/U1/Y (AO21X1_LVT)
+                                1.05   0.02 &   0.06 r
+  I_CLOCKING/occ_int1/cts_buf_693832355/A (NBUFFX16_LVT)
+                                1.05   0.00 &   0.06 r
+  I_CLOCKING/occ_int1/cts_buf_693832355/Y (NBUFFX16_LVT)
+                                1.05   0.02 &   0.08 r
+  I_CLOCKING/occ_int1/cto_buf_33189/A (NBUFFX2_LVT)
+                                1.05   0.01 &   0.09 r
+  I_CLOCKING/occ_int1/cto_buf_33189/Y (NBUFFX2_LVT)
+                                1.05   0.02 &   0.11 r
+  I_CLOCKING/occ_int1/cto_buf_33225/A (NBUFFX4_LVT)
+                                1.05   0.00 &   0.11 r
+  I_CLOCKING/occ_int1/cto_buf_33225/Y (NBUFFX4_LVT)
+                                1.05   0.02 &   0.13 r
+  I_CLOCKING/occ_int1/cts_buf_692932346/A (NBUFFX8_LVT)
+                                1.05   0.00 &   0.14 r
+  I_CLOCKING/occ_int1/cts_buf_692932346/Y (NBUFFX8_LVT)
+                                1.05   0.02 &   0.16 r
+  I_CLOCKING/occ_int1/cts_buf_691832335/A (NBUFFX16_LVT)
+                                1.05   0.01 &   0.17 r
+  I_CLOCKING/occ_int1/cts_buf_691832335/Y (NBUFFX16_LVT)
+                                1.05   0.02 &   0.20 r
+  I_CONTEXT_MEM/I_CONTEXT_RAM_1_3/CE1 (SRAM2RW64x8)
+                                1.05   0.00 &   0.20 r
+  clock reconvergence pessimism       -0.01     0.19
+  clock uncertainty                    0.10     0.29
+  library hold time             1.00   0.04     0.34
+  data required time                            0.34
+  -----------------------------------------------------
+  data required time                            0.34
+  data arrival time                            -0.25
+  -----------------------------------------------------
+  slack (VIOLATED)                             -0.08
+
+  Derate Summary Report
+  -----------------------------------------------
+  total derate : required time        -0.01 
+  total derate : arrival time          0.01 
+  -----------------------------------------------
+  total derate : slack                 0.02 
+
+  slack (with derating applied) (VIOLATED)
+                                      -0.08 
+  clock reconvergence pessimism (due to derating)
+                                      -0.01 
+  -----------------------------------------------
+  slack (with no derating) (VIOLATED)
+                                      -0.07 
+
+
+
+1
+pt_shell> report_timing -delay_type  min  -derate -input -path full_clock_expanded > report_timing_flatderate
+pt_shell> report_qor
+****************************************
+Report : qor
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sat May 27 13:13:27 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'func_slowfast'
+-----------------------------------
+End of Master/Slave Task Processing
+
+  Timing Path Group '**async_default**' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            7 (func_slowfast)
+  Critical Path Length:                    3.59 (func_slowfast)
+  Critical Path Slack:                    -0.05 (func_slowfast)
+  Total Negative Slack:                   -0.37
+  No. of Violating Paths:                    12
+  ---------------------------------------------
+
+  Timing Path Group '**clock_gating_default**' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            2 (test_slowfast)
+  Critical Path Length:                    1.76 (test_slowfast)
+  Critical Path Slack:                    -0.50 (test_slowfast)
+  Total Negative Slack:                   -0.50
+  No. of Violating Paths:                     1
+  ---------------------------------------------
+
+  Timing Path Group 'PCI_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           18 (func_slowfast)
+  Critical Path Length:                    7.77 (func_slowfast)
+  Critical Path Slack:                    -0.08 (func_slowfast)
+  Total Negative Slack:                   -1.03
+  No. of Violating Paths:                    25
+  ---------------------------------------------
+
+  Timing Path Group 'SDRAM_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            5 (func_slowfast)
+  Critical Path Length:                    3.80 (func_slowfast)
+  Critical Path Slack:                    -0.09 (func_slowfast)
+  Total Negative Slack:                   -9.80
+  No. of Violating Paths:                   443
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_2x_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           11 (func_slowfast)
+  Critical Path Length:                    3.26 (func_slowfast)
+  Critical Path Slack:                    -0.07 (func_slowfast)
+  Total Negative Slack:                   -1.38
+  No. of Violating Paths:                    34
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_CLK' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                           33 (func_slowfast)
+  Critical Path Length:                    5.96 (func_slowfast)
+  Critical Path Slack:                    -0.09 (func_slowfast)
+  Total Negative Slack:                   -7.43
+  No. of Violating Paths:                   210
+  ---------------------------------------------
+
+  Timing Path Group 'ate_clk' (max_delay/setup)
+  ---------------------------------------------
+  Levels of Logic:                            2 (test_slowfast)
+  Critical Path Length:                    2.59 (test_slowfast)
+  Critical Path Slack:                    13.34 (test_slowfast)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group '**async_default**' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            4 (func_fastslow)
+  Critical Path Length:                    0.42 (func_fastslow)
+  Critical Path Slack:                     0.03 (func_fastslow)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group '**clock_gating_default**' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            2 (func_fastslow)
+  Critical Path Length:                    0.39 (func_fastslow)
+  Critical Path Slack:                     0.19 (func_fastslow)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'PCI_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1 (test_fastslow)
+  Critical Path Length:                    0.22 (test_fastslow)
+  Critical Path Slack:                     0.05 (test_fastslow)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'SDRAM_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1 (test_fastslow)
+  Critical Path Length:                    0.23 (test_fastslow)
+  Critical Path Slack:                     0.02 (test_fastslow)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_2x_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1 (stuck_at_cap)
+  Critical Path Length:                    0.27 (stuck_at_cap)
+  Critical Path Slack:                     0.04 (stuck_at_cap)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            2 (test_fastslow)
+  Critical Path Length:                    0.30 (test_fastslow)
+  Critical Path Slack:                     0.02 (test_fastslow)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'ate_clk' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            2 (atspeed_shift)
+  Critical Path Length:                    0.25 (atspeed_shift)
+  Critical Path Slack:                    -0.08 (atspeed_shift)
+  Total Negative Slack:                 -131.95
+  No. of Violating Paths:                  5282
+  ---------------------------------------------
+
+  Timing Path Group 'group_pclk' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1 (atspeed_shift)
+  Critical Path Length:                    0.22 (atspeed_shift)
+  Critical Path Slack:                     0.06 (atspeed_shift)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'group_sdram' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1 (atspeed_shift)
+  Critical Path Length:                    0.23 (atspeed_shift)
+  Critical Path Slack:                     0.06 (atspeed_shift)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'group_sys' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1 (atspeed_shift)
+  Critical Path Length:                    0.27 (atspeed_shift)
+  Critical Path Slack:                     0.06 (atspeed_shift)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'group_sys2x' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            1 (atspeed_shift)
+  Critical Path Length:                    0.03 (atspeed_shift)
+  Critical Path Slack:                     0.04 (atspeed_shift)
+  Total Negative Slack:                    0.00
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Cell Count
+  ---------------------------------------------
+  Hierarchical Cell Count:                   63 (stuck_at_shift, test_best, stuck_at_cap, atspeed_shift, atspeed_cap, test_fastslow, test_worst, func_fastslow, test_slowfast, func_min, func_max, func_slowfast)
+  Hierarchical Port Count:                 3355 (stuck_at_shift, test_best, stuck_at_cap, atspeed_shift, atspeed_cap, test_fastslow, test_worst, func_fastslow, test_slowfast, func_min, func_max, func_slowfast)
+  Leaf Cell Count:                        45912 (stuck_at_shift, test_best, stuck_at_cap, atspeed_shift, atspeed_cap, test_fastslow, test_worst, func_fastslow, test_slowfast, func_min, func_max, func_slowfast)
+  ---------------------------------------------
+
+
+  Area
+  ---------------------------------------------
+  Net Interconnect Area:               67857.64 (stuck_at_shift, test_best, stuck_at_cap, atspeed_shift, atspeed_cap, test_fastslow, test_worst, func_fastslow, test_slowfast, func_min, func_max, func_slowfast)
+  Total Cell Area:                    383476.44 (stuck_at_shift, test_best, stuck_at_cap, atspeed_shift, atspeed_cap, test_fastslow, test_worst, func_fastslow, test_slowfast, func_min, func_max, func_slowfast)
+  Design Area:                        451334.06 (stuck_at_shift, test_best, stuck_at_cap, atspeed_shift, atspeed_cap, test_fastslow, test_worst, func_fastslow, test_slowfast, func_min, func_max, func_slowfast)
+  ---------------------------------------------
+
+
+  Design Rule Violations
+  ---------------------------------------------
+  Total No. of Pins in Design:           185479
+  max_capacitance Count:                    262
+  min_capacitance Count:                     16
+  max_transition Count:                      21
+  clock_gating_setup Count:                   1
+  sequential_clock_pulse_width Count:         1
+  max_capacitance Cost:                 1265.28
+  min_capacitance Cost:                    1.42
+  max_transition Cost:                     0.35
+  clock_gating_setup Cost:                 0.50
+  sequential_clock_pulse_width Cost:       0.09
+  Total DRC Cost:                       1267.65
+  ---------------------------------------------
+1
+pt_shell> report_qor > overallqor
+pt_shell> exit
+Maximum memory usage for distributed processes:
+my_opts1        1   mo                 777.80 MB
+                2   mo                 791.29 MB
+                3   mo                 797.35 MB
+                4   mo                 642.42 MB
+                5   mo                 799.55 MB
+                6   mo                 794.72 MB
+                7   mo                 788.07 MB
+                8   mo                 788.54 MB
+                9   mo                 780.40 MB
+                10  mo                 765.64 MB
+                11  mo                 789.04 MB
+                12  mo                 789.16 MB
+                13  mo                 765.64 MB
+                14  mo                 792.38 MB
+CPU time usage for distributed processes:
+my_opts1        1   mo                 347 seconds
+                2   mo                 348 seconds
+                3   mo                 354 seconds
+                4   mo                 159 seconds
+                5   mo                 346 seconds
+                6   mo                 355 seconds
+                7   mo                 367 seconds
+                8   mo                 348 seconds
+                9   mo                 348 seconds
+                10  mo                 2 seconds
+                11  mo                 341 seconds
+                12  mo                 342 seconds
+                13  mo                 2 seconds
+                14  mo                 327 seconds
+Elapsed time for distributed processes:
+my_opts1        1   mo                 368 seconds
+                2   mo                 368 seconds
+                3   mo                 367 seconds
+                4   mo                 368 seconds
+                5   mo                 367 seconds
+                6   mo                 367 seconds
+                7   mo                 367 seconds
+                8   mo                 368 seconds
+                9   mo                 367 seconds
+                10  mo                 367 seconds
+                11  mo                 367 seconds
+                12  mo                 367 seconds
+                13  mo                 367 seconds
+                14  mo                 367 seconds
+Maximum memory usage for this session: 922.59 MB
+CPU usage for this session: 3 seconds 
+Elapsed time for this session: 381 seconds
+Shutting down worker processes ...
+ Shutdown Process 1
+ Shutdown Process 2
+ Shutdown Process 3
+ Shutdown Process 4
+ Shutdown Process 5
+ Shutdown Process 6
+ Shutdown Process 7
+ Shutdown Process 8
+ Shutdown Process 9
+ Shutdown Process 10
+ Shutdown Process 11
+ Shutdown Process 12
+ Shutdown Process 13
+ Shutdown Process 14
+Diagnostics summary: 1 error, 36 informationals
+
+Thank you for using pt_shell!
+

@@ -1,0 +1,26 @@
+****************************************
+Report : annotated_parasitics
+	-check
+	-internal_nets
+	-boundary_nets
+Design : ORCA_TOP
+Version: O-2018.06
+Date   : Fri May 26 12:23:58 2023
+****************************************
+
+                    |         |         |         |   RC    | Coupled |   Not   |
+Net Type            |  Total  | Lumped  |  RC pi  | network | network |Annotated|
+--------------------+---------+---------+---------+---------+---------+---------+
+Internal nets       |         |         |         |         |         |         |
+  - Pin to pin nets |   48759 |       0 |       0 |    3941 |   44818 |       0 |
+  - Driverless nets |    1209 |       0 |       0 |       0 |       0 |    1209 |
+  - Loadless nets   |      16 |       0 |       0 |       0 |       0 |      16 |
+--------------------+---------+---------+---------+---------+---------+---------+
+Boundary/port nets  |         |         |         |         |         |         |
+  - Pin to pin nets |     173 |       0 |       0 |      29 |     144 |       0 |
+  - Driverless nets |       0 |       0 |       0 |       0 |       0 |       0 |
+  - Loadless nets   |      14 |       0 |       0 |       0 |       0 |      14 |
+--------------------+---------+---------+---------+---------+---------+---------+
+                    |   50171 |       0 |       0 |    3970 |   44962 |    1239 |
+
+1

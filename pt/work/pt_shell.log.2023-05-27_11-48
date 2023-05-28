@@ -1,0 +1,22 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/atspeed_shift.tcl
+Error: Command 'read_verilog' is disabled. (CMD-080)
+Information: script '../scripts/atspeed_shift.tcl'
+        stopped at line 11 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"read_verilog $topdir/apr/outputs/${top_design}.route2.vg.gz"
+ -- End Extended Error Info
+pt_shell> exit
+Maximum memory usage for this session: 788.05 MB
+CPU usage for this session: 2 seconds 
+Elapsed time for this session: 14 seconds
+Diagnostics summary: 2 errors, 2 informationals
+
+Thank you for using pt_shell!
+

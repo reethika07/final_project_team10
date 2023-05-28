@@ -1,0 +1,175 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Launching 8 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for   8 (of   8) workers    : Wed May 17 21:56:02 2023
+  Waiting for   0 (of   8) workers    : Wed May 17 21:56:12 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Wed May 17 21:56:13 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           8                       auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         31751         ONLINE
+                   2    mo           -         31750         ONLINE
+                   3    mo           -         31747         ONLINE
+                   4    mo           -         31748         ONLINE
+                   5    mo           -         31755         ONLINE
+                   6    mo           -         31753         ONLINE
+                   7    mo           -         31754         ONLINE
+                   8    mo           -         31752         ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+  --------------------------------------------------------------------
+  Total                                                      32
+
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Warning: Replacing host options 'my_opts1'. (CMCR-003)
+Warning: Removing the current session. (MS-019)
+Warning: Following scenarios are reset: func_max, func_min, test_best, test_worst, func_slowfast, func_fastslow, test_slowfast, test_fastslow. (MS-003)
+Shutting down worker processes ...
+ Shutdown Process 1
+ Shutdown Process 2
+ Shutdown Process 3
+ Shutdown Process 4
+ Shutdown Process 5
+ Shutdown Process 6
+ Shutdown Process 7
+ Shutdown Process 8
+Launching 8 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for   8 (of   8) workers    : Wed May 17 21:56:27 2023
+  Waiting for   0 (of   8) workers    : Wed May 17 21:56:37 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Wed May 17 21:56:38 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           8                       auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         9    mo           -         32538         ONLINE
+                   10   mo           -         32449         ONLINE
+                   11   mo           -         32451         ONLINE
+                   12   mo           -         32456         ONLINE
+                   13   mo           -         32450         ONLINE
+                   14   mo           -         32452         ONLINE
+                   15   mo           -         32455         ONLINE
+                   16   mo           -         32454         ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         9                                         4
+                   10                                        4
+                   11                                        4
+                   12                                        4
+                   13                                        4
+                   14                                        4
+                   15                                        4
+                   16                                        4
+  --------------------------------------------------------------------
+  Total                                                      32
+
+Error: Scenario 'func_max' already exists. (UIMS-005)
+Error: Scenario 'func_max' could not be created. (UIMS-025)
+Error: Scenario 'func_min' already exists. (UIMS-005)
+Error: Scenario 'func_min' could not be created. (UIMS-025)
+Error: Scenario 'test_best' already exists. (UIMS-005)
+Error: Scenario 'test_best' could not be created. (UIMS-025)
+Error: Scenario 'test_worst' already exists. (UIMS-005)
+Error: Scenario 'test_worst' could not be created. (UIMS-025)
+Error: Scenario 'func_slowfast' already exists. (UIMS-005)
+Error: Scenario 'func_slowfast' could not be created. (UIMS-025)
+Error: Scenario 'func_fastslow' already exists. (UIMS-005)
+Error: Scenario 'func_fastslow' could not be created. (UIMS-025)
+Error: Scenario 'test_slowfast' already exists. (UIMS-005)
+Error: Scenario 'test_slowfast' could not be created. (UIMS-025)
+Error: Scenario 'test_fastslow' already exists. (UIMS-005)
+Error: Scenario 'test_fastslow' could not be created. (UIMS-025)
+pt_shell> 

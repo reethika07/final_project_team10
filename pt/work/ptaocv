@@ -1,0 +1,110 @@
+****************************************
+Report : qor
+Design : ORCA_TOP
+Version: O-2018.06
+Date   : Sat May 20 21:56:41 2023
+****************************************
+
+  Timing Path Group '**async_default**' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            8
+  Critical Path Length:                3720.644
+  Critical Path Slack:                -5086.451
+  Total Negative Slack:            -2906382.250
+  No. of Violating Paths:                  1768
+  ---------------------------------------------
+
+  Timing Path Group '**clock_gating_default**' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            3
+  Critical Path Length:                  44.391
+  Critical Path Slack:                  -65.251
+  Total Negative Slack:                -899.060
+  No. of Violating Paths:                    16
+  ---------------------------------------------
+
+  Timing Path Group 'PCI_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            3
+  Critical Path Length:                1902.566
+  Critical Path Slack:                -2475.398
+  Total Negative Slack:             -416985.094
+  No. of Violating Paths:                   348
+  ---------------------------------------------
+
+  Timing Path Group 'SDRAM_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            5
+  Critical Path Length:                1142.453
+  Critical Path Slack:                -3504.852
+  Total Negative Slack:            -2252701.500
+  No. of Violating Paths:                  2579
+  ---------------------------------------------
+
+  Timing Path Group 'SD_DDR_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            4
+  Critical Path Length:                 441.050
+  Critical Path Slack:                  436.126
+  Total Negative Slack:                   0.000
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_2x_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            5
+  Critical Path Length:                   5.104
+  Critical Path Slack:                 -887.031
+  Total Negative Slack:              -29701.205
+  No. of Violating Paths:                   137
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            6
+  Critical Path Length:                   6.600
+  Critical Path Slack:                -8800.394
+  Total Negative Slack:            -3313129.000
+  No. of Violating Paths:                  1693
+  ---------------------------------------------
+
+  Timing Path Group 'v_PCI_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            3
+  Critical Path Length:                3648.520
+  Critical Path Slack:                 3648.170
+  Total Negative Slack:                   0.000
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Cell Count
+  ---------------------------------------------
+  Hierarchical Cell Count:                   63
+  Hierarchical Port Count:                 3210
+  Leaf Cell Count:                        45787
+  ---------------------------------------------
+
+
+  Area
+  ---------------------------------------------
+  Net Interconnect area:              67290.227
+  Total cell area:                   382815.219
+  Design Area:                       450105.438
+  ---------------------------------------------
+
+
+  Design Rule Violations
+  ---------------------------------------------
+  Total No. of Pins in Design:           185284
+  clock_gating_hold Count:                   16
+  sequential_clock_pulse_width Count:      5385
+  max_capacitance Count:                      2
+  min_capacitance Count:                     16
+  clock_gating_hold Cost:              -899.060
+  sequential_clock_pulse_width Cost:-137161.109
+  max_capacitance Cost:                -156.450
+  min_capacitance Cost:                  -1.424
+  Total DRC Cost:                   -138218.047
+  ---------------------------------------------
+
+1

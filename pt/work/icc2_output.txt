@@ -11,21 +11,14 @@
  of a written license agreement with Synopsys, Inc. All other use, reproduction,
             or distribution of this software is strictly prohibited.
 
-icc2_shell> pwd
-/home/reethika/common/Documents/ECE510-2023-SPRING/final_prj-team_10/pt/work
-icc2_shell> cd ../../apr/work
-icc2_shell> pwd
-/home/reethika/common/Documents/ECE510-2023-SPRING/final_prj-team_10/apr/work
-icc2_shell> o
-Error: ambiguous command 'o' matched 11 commands:
-        (open_attachment, open_block, open_drc_error_data ...) (CMD-006)
+Loading user preference file /u/ramadugu/.synopsys_icc2_gui/preferences.tcl
 icc2_shell> o
 Error: ambiguous command 'o' matched 11 commands:
         (open_attachment, open_block, open_drc_error_data ...) (CMD-006)
 icc2_shell> exit
-Maximum memory usage for this session: 176.73 MB
-Maximum memory usage for this session including child processes: 176.73 MB
-CPU usage for this session:     12 seconds (  0.00 hours)
-Elapsed time for this session:     41 seconds (  0.01 hours)
+Maximum memory usage for this session: 176.72 MB
+Maximum memory usage for this session including child processes: 176.72 MB
+CPU usage for this session:     16 seconds (  0.00 hours)
+Elapsed time for this session:     25 seconds (  0.01 hours)
 Thank you for using IC Compiler II.
 

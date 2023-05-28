@@ -1,0 +1,17 @@
+set_attribute -quiet [get_net {sd_CK}] -name net_type -value clock
+set_attribute -quiet [get_net {I_SDRAM_IF/sdram_clk}] -name net_type -value clock
+set_attribute -quiet [get_net {n871}] -name net_type -value clock
+set_attribute -quiet [get_net {I_SDRAM_IF/sdram_clk_cts_3_BAR}] -name net_type -value clock
+set_attribute -quiet [get_net {I_SDRAM_IF/sdram_clk_cts_4}] -name net_type -value clock
+set_attribute -quiet [get_net {I_SDRAM_IF/clk_gate_mega_shift_0_reg_0_/CLK}] -name net_type -value clock
+set_attribute -quiet [get_net {I_SDRAM_IF/sdram_clk_cts_2}] -name net_type -value clock
+set_attribute -quiet [get_net {I_SDRAM_IF/sdram_clk_cts_1}] -name net_type -value clock
+set_attribute -quiet [get_net {I_SDRAM_IF/sdram_clk_cts_0}] -name net_type -value clock
+set_attribute -quiet [get_net {I_SDRAM_IF/clk_gate_mega_shift_1_reg_0_/CLK}] -name net_type -value clock
+set_attribute -quiet [get_net {n515}] -name net_type -value clock
+set_attribute -quiet [get_net {sd_CKn}] -name net_type -value clock
+set_attribute -quiet [get_net {I_SDRAM_IF/clk_gate_mega_shift_1_reg_0_/ENCLK}] -name net_type -value clock
+set_attribute -quiet [get_net {I_SDRAM_IF/net23031}] -name net_type -value clock
+set_attribute -quiet [get_net {I_SDRAM_IF/clk_gate_mega_shift_0_reg_0_/ENCLK}] -name net_type -value clock
+set_attribute -quiet [get_net {I_SDRAM_IF/net23014}] -name net_type -value clock
+set_attribute -quiet [get_net {n1195}] -name net_type -value clock

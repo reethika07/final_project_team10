@@ -3,7 +3,7 @@
  Options: { pre_route_stage }
  Design : ORCA_TOP
  Version: Q-2019.12-SP4
- Date   : Sat May 20 08:41:34 2023
+ Date   : Sat May 27 22:38:35 2023
 ****************************************
 
 Running mega-check 'pre_route_stage': 
@@ -20,12 +20,11 @@ Running mega-check 'pre_route_stage':
   Rule         Type   Count      Message
   ----------------------------------------------------------------------------------------------------
   MV-012       Warn   2          %drvType '%driver' (supply net '%drvSupplyNet' [%drvVoltage]) ca...
-  TCK-001      Warn   74681      The reported endpoint '%endpoint' is unconstrained. Reason: '%re...
-  TCK-002      Warn   5182       The register clock pin '%pin' has no fanin clocks. Mode:'%mode'.
-  TCK-012      Warn   38         The input port '%port' has no clock_relative delay specified. Mo...
-  TCK-013      Warn   12         The clocks '%clocks' at gated clock point '%conn' has no fanout ...
+  TCK-001      Warn   25219      The reported endpoint '%endpoint' is unconstrained. Reason: '%re...
+  TCK-002      Warn   12         The register clock pin '%pin' has no fanin clocks. Mode:'%mode'.
+  TCK-012      Warn   12         The input port '%port' has no clock_relative delay specified. Mo...
   ----------------------------------------------------------------------------------------------------
-  Total 79915 EMS messages : 0 errors, 79915 warnings, 0 info.
+  Total 25245 EMS messages : 0 errors, 25245 warnings, 0 info.
   ----------------------------------------------------------------------------------------------------
 
   *** Non-EMS message summary ***
@@ -42,5 +41,5 @@ Running mega-check 'pre_route_stage':
 Warning: EMS database "check_design.ems" already exists, over-writing it. (EMS-040)
 
 Information: EMS database is saved to file 'check_design.ems'.
-Information: Non-EMS messages are saved into file 'check_design2023May20084134.log'.
+Information: Non-EMS messages are saved into file 'check_design2023May27223835.log'.
 1

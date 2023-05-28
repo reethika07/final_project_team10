@@ -1,0 +1,521 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/pt_min_aocv.tcl
+Information: current_design won't return any data before link (DES-071)
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ff0p95vn40c.db'
+Loading verilog file '/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/apr/outputs/ORCA_TOP.route2.vg.gz'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ff0p95vn40c_i1p16v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ff0p95vn40c_i0p95v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ff0p95vn40c_i0p95v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ff1p16vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ff1p16vn40c_i1p16v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ff1p16vn40c_i1p16v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ff1p16vn40c_i0p95v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ff0p95vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_dlvl_ff0p95vn40c_i1p16v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ff0p95vn40c_i0p95v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_dlvl_ff0p95vn40c_i0p95v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ff1p16vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ff1p16vn40c_i1p16v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_dlvl_ff1p16vn40c_i1p16v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ff1p16vn40c_i0p95v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ff0p95vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_dlvl_ff0p95vn40c_i1p16v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ff0p95vn40c_i0p95v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_dlvl_ff0p95vn40c_i0p95v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ff1p16vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ff1p16vn40c_i1p16v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_dlvl_ff1p16vn40c_i1p16v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ff1p16vn40c_i0p95v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram/db_nldm/saed32sram_ff1p16vn40c.db'
+Linking design ORCA_TOP...
+Removed 188615 unconnected cells and blackboxes.
+Information: Removing 63 unneeded designs..... (LNK-034)
+Information: 203 (69.05%) library cells are unused in library saed32hvt_ff0p95vn40c..... (LNK-045)
+Information: 20 (83.33%) library cells are unused in library saed32hvt_dlvl_ff0p95vn40c_i1p16v..... (LNK-045)
+Information: 10 (83.33%) library cells are unused in library saed32hvt_ulvl_ff0p95vn40c_i0p95v..... (LNK-045)
+Information: 24 (100.00%) library cells are unused in library saed32hvt_dlvl_ff0p95vn40c_i0p95v..... (LNK-045)
+Information: 294 (100.00%) library cells are unused in library saed32hvt_ff1p16vn40c..... (LNK-045)
+Information: 12 (100.00%) library cells are unused in library saed32hvt_ulvl_ff1p16vn40c_i1p16v..... (LNK-045)
+Information: 24 (100.00%) library cells are unused in library saed32hvt_dlvl_ff1p16vn40c_i1p16v..... (LNK-045)
+Information: 12 (100.00%) library cells are unused in library saed32hvt_ulvl_ff1p16vn40c_i0p95v..... (LNK-045)
+Information: 208 (70.75%) library cells are unused in library saed32rvt_ff0p95vn40c..... (LNK-045)
+Information: 22 (91.67%) library cells are unused in library saed32rvt_dlvl_ff0p95vn40c_i1p16v..... (LNK-045)
+Information: 9 (75.00%) library cells are unused in library saed32rvt_ulvl_ff0p95vn40c_i0p95v..... (LNK-045)
+Information: 24 (100.00%) library cells are unused in library saed32rvt_dlvl_ff0p95vn40c_i0p95v..... (LNK-045)
+Information: 294 (100.00%) library cells are unused in library saed32rvt_ff1p16vn40c..... (LNK-045)
+Information: 12 (100.00%) library cells are unused in library saed32rvt_ulvl_ff1p16vn40c_i1p16v..... (LNK-045)
+Information: 24 (100.00%) library cells are unused in library saed32rvt_dlvl_ff1p16vn40c_i1p16v..... (LNK-045)
+Information: 12 (100.00%) library cells are unused in library saed32rvt_ulvl_ff1p16vn40c_i0p95v..... (LNK-045)
+Information: 204 (69.39%) library cells are unused in library saed32lvt_ff0p95vn40c..... (LNK-045)
+Information: 21 (87.50%) library cells are unused in library saed32lvt_dlvl_ff0p95vn40c_i1p16v..... (LNK-045)
+Information: 9 (75.00%) library cells are unused in library saed32lvt_ulvl_ff0p95vn40c_i0p95v..... (LNK-045)
+Information: 24 (100.00%) library cells are unused in library saed32lvt_dlvl_ff0p95vn40c_i0p95v..... (LNK-045)
+Information: 294 (100.00%) library cells are unused in library saed32lvt_ff1p16vn40c..... (LNK-045)
+Information: 12 (100.00%) library cells are unused in library saed32lvt_ulvl_ff1p16vn40c_i1p16v..... (LNK-045)
+Information: 24 (100.00%) library cells are unused in library saed32lvt_dlvl_ff1p16vn40c_i1p16v..... (LNK-045)
+Information: 12 (100.00%) library cells are unused in library saed32lvt_ulvl_ff1p16vn40c_i0p95v..... (LNK-045)
+Information: 31 (88.57%) library cells are unused in library saed32sram_ff1p16vn40c..... (LNK-045)
+Information: total 1835 library cells are unused (LNK-046)
+Design 'ORCA_TOP' was successfully linked.
+Information: There are 46092 leaf cells, ports, hiers and 52156 nets in the design (LNK-047)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Log for 'read_parasitics command' will be generated in 'parasitics_command.log'. (PARA-107)
+if { [info exists synopsys_program_name ] } {
+        switch $synopsys_program_name {
+         "icc2_shell"  {
+                # If the flow variable is set, then we should be in regular APR flow and not the macro floorplanning mode
+                # We want to use the UPF associated with the correct netlist.  APR flow uses DCT output.  Macro fp uses DC output.
+                if { [info exists flow ] } {
+                    puts " Sourcing the Physical Synthesis DCT UPF"
+                    source ../../syn/outputs/ORCA_TOP.dct.upf
+                } else {
+                    puts " Sourcing the Logical Synthesis DC UPF"
+                    source ../../syn/outputs/ORCA_TOP.dc.upf
+                }
+
+                puts " Creating ICC2 MCMM "
+                foreach mode { func test scan atspeed funcu} {
+                  create_mode $mode
+                }
+                foreach corner { {Cmax -40 ss0p75vn40c} {Cmin -40 ff0p95vn40c} } {
+                  set corner_name [lindex $corner 0 ]
+                  set corner_temp [lindex $corner 1 ]
+                  set corner_op_cond [ lindex $corner 2 ]
+                  create_corner $corner_name
+                  # Read the TLUplus file and give it a name.  
+                  read_parasitic_tech -tlup $tlu_dir/saed32nm_1p9m_${corner_name}.tluplus -layermap $tlu_dir/saed32nm_tf_itf_tluplus.map -name ${corner_name}.tlup
+                  # In our current case, we will use the same TLUplus and temperature for both launch and capture and for setup and hold for a particular corner.
+                  # set the TLUplus and temp to be used for early side of paths.  (launch on setup, capture on hold)
+                  set_parasitic_parameters -early_spec ${corner_name}.tlup -early_temperature $corner_temp
+                  # set the TLUplus and temp to be used for late side of paths.  (capture on setup, launch on hold)
+                  set_parasitic_parameters -late_spec ${corner_name}.tlup -late_temperature $corner_temp
+                  # indicate which operating condition to use for the standard cells. It needs to know the PVT.  
+                  # UPF may indicate additional information for the voltage in a multivoltage design.
+                  set_operating_condition $corner_op_cond -library saed32lvt_c
+                }
+
+                foreach scenario { {func_worst func Cmax } {func_best func Cmin} {test_worst test Cmax} {test_best test Cmin} {atspeed_shift atspeed Cmin} {atspeed_capture atspeed Cmax} {stuck_at_shift scan Cmin} {stuck_at_capture scan Cmax} {func_worst_constrained funcu Cmax} {func_best_constrained funcu Cmin} }  {
+                  create_scenario -name [lindex $scenario 0 ] -mode [lindex $scenario 1 ] -corner [lindex $scenario 2 ]
+                  current_scenario [lindex $scenario 0]
+                  source -echo -verbose -continue_on_error ../../constraints/ORCA_TOP_[lindex $scenario 0 ].sdc 
+                  set_false_path -from SDRAM_CLK -to SD_DDR_CLK 
+                }
+
+                set_scenario_status func_worst -active true -hold false -setup true
+                set_scenario_status func_best  -active true -hold true  -setup false
+                set_scenario_status test_worst -active true -hold false -setup true
+                set_scenario_status test_best  -active true -hold true  -setup false
+
+                current_scenario "func_worst"
+
+         }
+         "dc_shell" {
+                 set upf_create_implicit_supply_sets false
+                source ../../constraints/ORCA_TOP.upf
+                set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                source ../../constraints/ORCA_TOP_func_worst.sdc
+                set_false_path -from SDRAM_CLK -to SD_DDR_CLK
+
+                # Define voltage area for DCT mode.  We define the mw_lib variable in DCT mode script.
+                # In the ICC2_flow it is defined in ORCA_TOP.design_options.tcl. Slightly different syntax.
+                if { [ info exists mw_lib ] } {
+                   create_voltage_area  -coordinate {{580 0} {1000 400}} -power_domain PD_RISC_CORE
+                }
+         }
+         "pt_shell" {
+                source $topdir/apr/outputs/ORCA_TOP.route2.upf
+                if [ regexp "max" $corner_name ] {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_func_worst.sdc
+                }
+                if [ regexp "min" $corner_name]  {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_func_best.sdc
+                }
+                 if [ regexp "min_test" $corner_name]  {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_test_best.sdc
+                }
+                if [ regexp "max_test" $corner_name]  {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_test_worst.sdc
+                }
+                 if [ regexp "cc_min" $corner_name]  {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_func_best.sdc
+                }
+                 if [ regexp "cc_max" $corner_name]  {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_func_worst.sdc
+                }
+                 if [ regexp "cc_min_test" $corner_name]  {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_test_best.sdc
+                }
+                 if [ regexp "cc_max_test" $corner_name]  {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_test_worst.sdc
+                }
+         }
+        }
+} elseif {[get_db root: .program_short_name] == "genus"} {
+   read_power_intent ../../constraints/ORCA_TOP.upf -version 2.0 -module $top_design
+   apply_power_intent
+   commit_power_intent
+#   report_power_intent 
+   set_units -time ns
+   source -echo -verbose ../../constraints/${top_design}_func_worst.sdc
+   set_false_path -from SDRAM_CLK -to SD_DDR_CLK
+   
+} elseif {[get_db root: .program_short_name] == "innovus"} {
+
+        set_units -time ns -resistance MOhm -capacitance fF -voltage V -current uA
+}
+Information: Resolving '.' to the current scope '<top design>'.
+false
+Information: Setting sdc_version outside of an SDC file has no effect (SDC-1)
+Warning: Creating virtual clock named 'v_PCI_CLK' with no sources. (UITE-121)
+Warning: Creating virtual clock named 'v_SDRAM_CLK' with no sources. (UITE-121)
+1
+Warning: Virtual clock 'v_PCI_CLK' cannot be made propagated. (UITE-316)
+Warning: Virtual clock 'v_SDRAM_CLK' cannot be made propagated. (UITE-316)
+Warning: Setting this variable to a lower value can cause a significant performance degradation during a timing update. (PTE-067)
+Information: Setting rc_cache_min_max_rise_fall_ceff to TRUE. (XTALK-015)
+Information: Using automatic max wire load selection group 'predcaps'. (ENV-003)
+Information: Using automatic min wire load selection group 'predcaps'. (ENV-003)
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13008/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13009/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13010/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13011/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13012/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13013/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13014/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13015/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13016/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13017/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13018/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13019/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13020/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13021/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13022/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13023/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13024/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13025/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13026/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13027/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13028/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13029/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13030/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13031/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13032/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13033/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13034/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13035/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13036/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13037/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13038/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13039/Y'. (PTE-070)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13008/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13008/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13008. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13008/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13008/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13008. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13008/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13008/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13008. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13008/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13008/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13008. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13009/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13009/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13009. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13009/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13009/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13009. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13009/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13009/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13009. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13009/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13009/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13009. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13010/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13010/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13010. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13010/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13010/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13010. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13010/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13010/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13010. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13010/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13010/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13010. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13011/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13011/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13011. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13011/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13011/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13011. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13011/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13011/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13011. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13011/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13011/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13011. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13012/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13012/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13012. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13012/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13012/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13012. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13012/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13012/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13012. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13012/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13012/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13012. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13013/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13013/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13013. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13013/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13013/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13013. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13013/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13013/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13013. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13013/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13013/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13013. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13014/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13014/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13014. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13014/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13014/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13014. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13014/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13014/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13014. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13014/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13014/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13014. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13015/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13015/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13015. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13015/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13015/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13015. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13015/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13015/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13015. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13015/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13015/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13015. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13016/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13016/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13016. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13016/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13016/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13016. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13016/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13016/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13016. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13016/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13016/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13016. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13017/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13017/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13017. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13017/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13017/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13017. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13017/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13017/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13017. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13017/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13017/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13017. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13018/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13018/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13018. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13018/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13018/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13018. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13018/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13018/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13018. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13018/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13018/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13018. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13019/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13019/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13019. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13019/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13019/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13019. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13019/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13019/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13019. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13019/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13019/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13019. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13020/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13020/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13020. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13020/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13020/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13020. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13020/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13020/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13020. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13020/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13020/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13020. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13021/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13021/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13021. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13021/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13021/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13021. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13021/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13021/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13021. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13021/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13021/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13021. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13022/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13022/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13022. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13022/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13022/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13022. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13022/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13022/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13022. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13022/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13022/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13022. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13023/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13023/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13023. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13023/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13023/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13023. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13023/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13023/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13023. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13023/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13023/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13023. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13024/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13024/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13024. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13024/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13024/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13024. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13024/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13024/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13024. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13024/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13024/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13024. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13025/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13025/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13025. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13025/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13025/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13025. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13025/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13025/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13025. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13025/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13025/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13025. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13026/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13026/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13026. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13026/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13026/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13026. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13026/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13026/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13026. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13026/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13026/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13026. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13027/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13027/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13027. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13027/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13027/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13027. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13027/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13027/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13027. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13027/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13027/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13027. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13028/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13028/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13028. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13028/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13028/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13028. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13028/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13028/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13028. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13028/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13028/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13028. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13029/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13029/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13029. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13029/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13029/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13029. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13029/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13029/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13029. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13029/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13029/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13029. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13030/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13030/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13030. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13030/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13030/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13030. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13030/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13030/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13030. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13030/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13030/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13030. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13031/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13031/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13031. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13031/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13031/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13031. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13031/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13031/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13031. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13031/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13031/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13031. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13032/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13032/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13032. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13032/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13032/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13032. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13032/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13032/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13032. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13032/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13032/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13032. (PTE-060)
+Information: Inferring 4 clock-gating checks. (PTE-017)
+Information: Signal integrity analysis is enabled but the design has no signal integrity data. (XTALK-011)
+Information: Starting crosstalk aware timing iteration 1. (XTALK-001)
+Information: Expanding clock 'SYS_2x_CLK' to base period of 4.800 (old period was 2.400, added 2 edges). (PTE-016)
+Information: Number of nets evaluated in the previous iteration: 48797. (XTALK-105)
+pt_shell> report_timing'
+Error: unknown command 'report_timing'' (CMD-005)
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : ORCA_TOP
+Version: O-2018.06
+Date   : Sat May 20 21:56:16 2023
+****************************************
+
+No constrained paths.
+
+1
+pt_shell> report_timing -delay_type min
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -sort_by slack
+Design : ORCA_TOP
+Version: O-2018.06
+Date   : Sat May 20 21:56:21 2023
+****************************************
+
+
+  Startpoint: I_CONTEXT_MEM/I_CONTEXT_RAM_3_3
+               (rising edge-triggered flip-flop clocked by SYS_CLK)
+  Endpoint: I_BLENDER_0/s1_op2_reg_19_
+               (rising edge-triggered flip-flop clocked by SYS_CLK)
+  Last common pin: I_CLOCKING/occ_int1/cts_buf_702632375/Y
+  Path Group: SYS_CLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SYS_CLK (rise edge)                              0.000      0.000
+  clock network delay (propagated)                       3.663      3.663
+  I_CONTEXT_MEM/I_CONTEXT_RAM_3_3/CE2 (SRAM2RW64x8)      0.000      3.663 r
+  I_CONTEXT_MEM/I_CONTEXT_RAM_3_3/O2[3] (SRAM2RW64x8)    0.020      3.682 f
+  I_CONTEXT_MEM/sram_fixcell_188/Y (NBUFFX4_HVT)         0.127      3.809 f
+  I_CONTEXT_MEM/U176/Y (AOI22X2_LVT)                     0.106      3.915 r
+  I_CONTEXT_MEM/U178/Y (NAND3X0_LVT)                     0.096      4.011 f
+  I_BLENDER_0/U6527/Y (AO222X1_HVT)                      2.551      6.561 f
+  I_BLENDER_0/ZBUF_2_inst_23440/Y (NBUFFX4_HVT)          0.032      6.593 f
+  I_BLENDER_0/s1_op2_reg_19_/D (SDFFARX1_RVT)            0.007      6.600 f
+  data arrival time                                                 6.600
+
+  clock SYS_CLK (rise edge)                              0.000      0.000
+  clock network delay (propagated)                    8807.190   8807.190
+  clock reconvergence pessimism                         -0.177   8807.014
+  I_BLENDER_0/s1_op2_reg_19_/CLK (SDFFARX1_RVT)                  8807.014 r
+  library hold time                                     -0.021   8806.993
+  data required time                                             8806.993
+  ------------------------------------------------------------------------------
+  data required time                                             8806.993
+  data arrival time                                                -6.600
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                               -8800.393
+
+
+1
+pt_shell> report_timing -delay_type min > ptaocv
+pt_shell> report_qor
+****************************************
+Report : qor
+Design : ORCA_TOP
+Version: O-2018.06
+Date   : Sat May 20 21:56:33 2023
+****************************************
+
+  Timing Path Group '**async_default**' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            8
+  Critical Path Length:                3720.644
+  Critical Path Slack:                -5086.451
+  Total Negative Slack:            -2906382.250
+  No. of Violating Paths:                  1768
+  ---------------------------------------------
+
+  Timing Path Group '**clock_gating_default**' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            3
+  Critical Path Length:                  44.391
+  Critical Path Slack:                  -65.251
+  Total Negative Slack:                -899.060
+  No. of Violating Paths:                    16
+  ---------------------------------------------
+
+  Timing Path Group 'PCI_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            3
+  Critical Path Length:                1902.566
+  Critical Path Slack:                -2475.398
+  Total Negative Slack:             -416985.094
+  No. of Violating Paths:                   348
+  ---------------------------------------------
+
+  Timing Path Group 'SDRAM_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            5
+  Critical Path Length:                1142.453
+  Critical Path Slack:                -3504.852
+  Total Negative Slack:            -2252701.500
+  No. of Violating Paths:                  2579
+  ---------------------------------------------
+
+  Timing Path Group 'SD_DDR_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            4
+  Critical Path Length:                 441.050
+  Critical Path Slack:                  436.126
+  Total Negative Slack:                   0.000
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_2x_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            5
+  Critical Path Length:                   5.104
+  Critical Path Slack:                 -887.031
+  Total Negative Slack:              -29701.205
+  No. of Violating Paths:                   137
+  ---------------------------------------------
+
+  Timing Path Group 'SYS_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            6
+  Critical Path Length:                   6.600
+  Critical Path Slack:                -8800.394
+  Total Negative Slack:            -3313129.000
+  No. of Violating Paths:                  1693
+  ---------------------------------------------
+
+  Timing Path Group 'v_PCI_CLK' (min_delay/hold)
+  ---------------------------------------------
+  Levels of Logic:                            3
+  Critical Path Length:                3648.520
+  Critical Path Slack:                 3648.170
+  Total Negative Slack:                   0.000
+  No. of Violating Paths:                     0
+  ---------------------------------------------
+
+  Cell Count
+  ---------------------------------------------
+  Hierarchical Cell Count:                   63
+  Hierarchical Port Count:                 3210
+  Leaf Cell Count:                        45787
+  ---------------------------------------------
+
+
+  Area
+  ---------------------------------------------
+  Net Interconnect area:              67290.227
+  Total cell area:                   382815.219
+  Design Area:                       450105.438
+  ---------------------------------------------
+
+
+  Design Rule Violations
+  ---------------------------------------------
+  Total No. of Pins in Design:           185284
+  clock_gating_hold Count:                   16
+  sequential_clock_pulse_width Count:      5385
+  max_capacitance Count:                      2
+  min_capacitance Count:                     16
+  clock_gating_hold Cost:              -899.060
+  sequential_clock_pulse_width Cost:-137161.109
+  max_capacitance Cost:                -156.450
+  min_capacitance Cost:                  -1.424
+  Total DRC Cost:                   -138218.047
+  ---------------------------------------------
+
+1
+pt_shell> report_qor >ptaocv
+Error: extra positional option '>ptaocv' (CMD-012)
+pt_shell> report_qor > ptaocv
+pt_shell> exit
+Suppressed Messages Summary:
+Id          Severity      Occurrences   Suppressed
+-------------------------------------------------------------------------------
+PTE-060     Warning               128           28
+Total 1 type of message is suppressed
+Maximum memory usage for this session: 968.48 MB
+CPU usage for this session: 64 seconds 
+Elapsed time for this session: 77 seconds
+Diagnostics summary: 3 errors, 107 warnings, 72 informationals
+
+Thank you for using pt_shell!
+

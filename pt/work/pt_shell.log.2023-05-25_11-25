@@ -1,0 +1,27 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ..s/cdmsa.t
+Error: could not open script file "..s/cdmsa.t" (CMD-015)
+pt_shell> source ../scripts/dmsa.tcl
+Error: rm: cannot remove 'ms_session_1/system_log/.nfs00000000005d7a7900005720': Device or resource busy
+rm: cannot remove 'ms_session_1/system_log/.nfs00000000005d7a780000571f': Device or resource busy
+        Use error_info for more info. (CMD-013)
+Information: script '../scripts/dmsa.tcl'
+        stopped at line 5 due to error. (CMD-081)
+Extended error info:
+rm: cannot remove 'ms_session_1/system_log/.nfs00000000005d7a7900005720': Device or resource busy
+rm: cannot remove 'ms_session_1/system_log/.nfs00000000005d7a780000571f': Device or resource busy
+    while executing
+"exec rm -rf ms_session_1"
+ -- End Extended Error Info
+pt_shell> exit
+Maximum memory usage for this session: 786.60 MB
+CPU usage for this session: 1 seconds 
+Elapsed time for this session: 39 seconds
+Diagnostics summary: 3 errors, 2 informationals
+
+Thank you for using pt_shell!
+

@@ -1,0 +1,13 @@
+setting auto_restore_mw_cel_lib_setup true
+icc2_shell> o
+setting top_design to: 
+ORCA_TOP
+icc2_shell> get_cells *
+Error: Current block is not defined. (DES-001)
+icc2_shell> get_cells*
+Error: unknown command 'get_cells*' (CMD-005)
+icc2_shell> get_cells ORCA_TOP
+Error: Current block is not defined. (DES-001)
+icc2_shell> get_cells -of_objects *
+Error: Current block is not defined. (DES-001)
+icc2_shell> 

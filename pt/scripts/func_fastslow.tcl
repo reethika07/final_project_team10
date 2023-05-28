@@ -12,7 +12,6 @@ read_verilog $topdir/apr/outputs/${top_design}.route2.vg.gz
 #read_verilog ../../apr/outputs/${top_design}.route2.vg
 current_design ${top_design}
 set link_path {* saed32hvt_ff1p16vn40c.db saed32hvt_ulvl_ff1p16vn40c_i1p16v.db saed32hvt_dlvl_ff1p16vn40c_i1p16v.db saed32lvt_ff1p16vn40c.db saed32lvt_ulvl_ff1p16vn40c_i1p16v.db saed32lvt_dlvl_ff1p16vn40c_i1p16v.db saed32rvt_ff1p16vn40c.db saed32rvt_ulvl_ff1p16vn40c_i1p16v.db saed32rvt_dlvl_ff1p16vn40c_i1p16v.db saed32sram_ff1p16vn40c.db}
-
 set link_path_per_instance [list [list {I_RISC_CORE} {* saed32hvt_ff0p95vn40c.db saed32hvt_dlvl_ff0p95vn40c_i0p95v.db saed32hvt_ulvl_ff0p95vn40c_i0p95v.db saed32lvt_ff0p95vn40c.db saed32lvt_dlvl_ff0p95vn40c_i0p95v.db saed32lvt_ulvl_ff0p95vn40c_i0p95v.db saed32rvt_ff0p95vn40c.db saed32rvt_dlvl_ff0p95vn40c_i0p95v.db saed32rvt_ulvl_ff0p95vn40c_i0p95v.db saed32sram_ff1p16vn40c.db}] ]
 link
 set_app_var si_enable_analysis true

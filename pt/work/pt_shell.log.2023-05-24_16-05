@@ -1,0 +1,177 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Launching 14 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   9] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  10] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  11] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  12] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  13] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  14] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for  14 (of  14) workers    : Wed May 24 16:05:13 2023
+  Waiting for   0 (of  14) workers    : Wed May 24 16:05:23 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Wed May 24 16:05:24 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           14                      auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         6576          ONLINE
+                   2    mo           -         6572          ONLINE
+                   3    mo           -         6574          ONLINE
+                   4    mo           -         6570          ONLINE
+                   5    mo           -         6600          ONLINE
+                   6    mo           -         6571          ONLINE
+                   7    mo           -         6579          ONLINE
+                   8    mo           -         6573          ONLINE
+                   9    mo           -         6747          ONLINE
+                   10   mo           -         6746          ONLINE
+                   11   mo           -         6744          ONLINE
+                   12   mo           -         6743          ONLINE
+                   13   mo           -         6777          ONLINE
+                   14   mo           -         6745          ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+                   9                                         4
+                   10                                        4
+                   11                                        4
+                   12                                        4
+                   13                                        4
+                   14                                        4
+  --------------------------------------------------------------------
+  Total                                                      56
+
+pt_shell> echo $topdir
+/home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/
+pt_shell> 
+pt_shell> 
+pt_shell> exit
+Maximum memory usage for distributed processes:
+my_opts1        1   mo                 664.05 MB
+                2   mo                 651.14 MB
+                3   mo                 648.46 MB
+                4   mo                 653.57 MB
+                5   mo                 647.29 MB
+                6   mo                 664.05 MB
+                7   mo                 651.49 MB
+                8   mo                 643.55 MB
+                9   mo                 765.41 MB
+                10  mo                 646.75 MB
+                11  mo                 638.48 MB
+                12  mo                 765.41 MB
+                13  mo                 641.02 MB
+                14  mo                 665.73 MB
+CPU time usage for distributed processes:
+my_opts1        1   mo                 120 seconds
+                2   mo                 95 seconds
+                3   mo                 110 seconds
+                4   mo                 90 seconds
+                5   mo                 109 seconds
+                6   mo                 120 seconds
+                7   mo                 91 seconds
+                8   mo                 97 seconds
+                9   mo                 2 seconds
+                10  mo                 101 seconds
+                11  mo                 53 seconds
+                12  mo                 2 seconds
+                13  mo                 51 seconds
+                14  mo                 91 seconds
+Elapsed time for distributed processes:
+my_opts1        1   mo                 922 seconds
+                2   mo                 922 seconds
+                3   mo                 922 seconds
+                4   mo                 921 seconds
+                5   mo                 921 seconds
+                6   mo                 921 seconds
+                7   mo                 922 seconds
+                8   mo                 922 seconds
+                9   mo                 921 seconds
+                10  mo                 921 seconds
+                11  mo                 921 seconds
+                12  mo                 921 seconds
+                13  mo                 921 seconds
+                14  mo                 921 seconds
+Maximum memory usage for this session: 906.04 MB
+CPU usage for this session: 2 seconds 
+Elapsed time for this session: 940 seconds
+Shutting down worker processes ...
+ Shutdown Process 1
+ Shutdown Process 2
+ Shutdown Process 3
+ Shutdown Process 4
+ Shutdown Process 5
+ Shutdown Process 6
+ Shutdown Process 7
+ Shutdown Process 8
+ Shutdown Process 9
+ Shutdown Process 10
+ Shutdown Process 11
+ Shutdown Process 12
+ Shutdown Process 13
+ Shutdown Process 14
+Diagnostics summary: 1 error, 32 informationals
+
+Thank you for using pt_shell!
+Error: Failed to create common data directory /home/ramadugu/common/Documents/fresh'/final_prj-team_10-master/pt/work/common_data. (MS-027)
+

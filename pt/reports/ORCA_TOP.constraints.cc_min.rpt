@@ -4,7 +4,7 @@ Report : constraint
 	-path slack_only
 Design : ORCA_TOP
 Version: O-2018.06
-Date   : Fri May 26 22:58:48 2023
+Date   : Sun May 28 00:44:58 2023
 ****************************************
 
 
@@ -12,107 +12,44 @@ Date   : Fri May 26 22:58:48 2023
 
    Endpoint                                                  Slack
    -----------------------------------------------------------------
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_31_/D                 -0.087  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_29_/D                 -0.087  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_27_/D                 -0.087  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_31_/D                 -0.083  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_29_/D                 -0.083  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_27_/D                 -0.083  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_13_/D                 -0.078  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_8_/D                  -0.077  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_26_/D                 -0.077  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_11_/D                 -0.077  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_17_/D                 -0.076  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_22_/D                 -0.076  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_16_/D                 -0.076  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_9_/D                  -0.076  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_3_/D                  -0.075  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_14_/D                 -0.075  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_25_/D                 -0.075  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_10_/D                 -0.075  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_21_/D                 -0.075  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_7_/D                  -0.075  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_0_/D                  -0.075  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_1_/D                  -0.074  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_5_/D                  -0.074  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_19_/D                 -0.074  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_15_/D                 -0.074  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_4_/D                  -0.074  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_24_/D                 -0.073  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_26_/D                 -0.073  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_17_/D                 -0.073  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_18_/D                 -0.073  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_11_/D                 -0.073  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_6_/D                  -0.073  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_30_/D                 -0.072  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_25_/D                 -0.072  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_22_/D                 -0.072  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_21_/D                 -0.072  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_12_/D                 -0.072  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_23_/D                 -0.072  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_14_/D                 -0.072  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_9_/D                  -0.071  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_2_/D                  -0.071  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_8_/D                  -0.071  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_28_/D                 -0.071  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_1_/D                  -0.071  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_16_/D                 -0.071  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_10_/D                 -0.071  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_19_/D                 -0.070  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_5_/D                  -0.070  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_1_reg_20_/D                 -0.070  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_15_/D                 -0.070  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_0_/D                  -0.069  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_24_/D                 -0.069  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_18_/D                 -0.069  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_6_/D                  -0.069  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_3_/D                  -0.069  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_12_/D                 -0.068  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_4_/D                  -0.068  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_7_/D                  -0.068  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_23_/D                 -0.068  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_30_/D                 -0.068  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_28_/D                 -0.067  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_2_/D                  -0.066  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_20_/D                 -0.066  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_13_/D                 -0.062  (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_28_/D                 -0.025  (VIOLATED)
 
    min_delay/hold ('v_PCI_CLK' group)
 
    Endpoint                                                  Slack
    -----------------------------------------------------------------
-   pad_out[11]                                              -0.111  (VIOLATED)
-   pad_out[16]                                              -0.111  (VIOLATED)
-   pad_out[25]                                              -0.111  (VIOLATED)
-   pad_out[7]                                               -0.111  (VIOLATED)
-   pad_out[15]                                              -0.110  (VIOLATED)
-   pad_out[20]                                              -0.110  (VIOLATED)
-   pad_out[19]                                              -0.110  (VIOLATED)
-   pad_out[27]                                              -0.110  (VIOLATED)
-   pad_out[13]                                              -0.110  (VIOLATED)
-   pad_out[31]                                              -0.109  (VIOLATED)
-   pad_out[9]                                               -0.109  (VIOLATED)
-   pad_out[3]                                               -0.109  (VIOLATED)
-   pad_out[1]                                               -0.108  (VIOLATED)
-   pad_out[23]                                              -0.108  (VIOLATED)
-   pad_out[4]                                               -0.107  (VIOLATED)
-   pad_out[5]                                               -0.107  (VIOLATED)
-   pad_out[0]                                               -0.107  (VIOLATED)
-   pad_out[21]                                              -0.107  (VIOLATED)
-   pad_out[8]                                               -0.107  (VIOLATED)
-   pad_out[26]                                              -0.106  (VIOLATED)
-   pad_out[12]                                              -0.106  (VIOLATED)
-   pad_out[2]                                               -0.106  (VIOLATED)
-   pad_out[28]                                              -0.105  (VIOLATED)
-   pad_out[18]                                              -0.105  (VIOLATED)
-   pad_out[22]                                              -0.105  (VIOLATED)
-   pad_out[6]                                               -0.105  (VIOLATED)
-   pad_out[10]                                              -0.105  (VIOLATED)
-   pad_out[30]                                              -0.105  (VIOLATED)
-   pad_out[14]                                              -0.104  (VIOLATED)
-   pad_out[24]                                              -0.104  (VIOLATED)
-   pad_out[29]                                              -0.103  (VIOLATED)
-   pad_out[17]                                              -0.102  (VIOLATED)
+   pad_out[17]                                              -0.079  (VIOLATED)
+   pad_out[1]                                               -0.079  (VIOLATED)
+   pad_out[11]                                              -0.078  (VIOLATED)
+   pad_out[23]                                              -0.078  (VIOLATED)
+   pad_out[29]                                              -0.078  (VIOLATED)
+   pad_out[5]                                               -0.078  (VIOLATED)
+   pad_out[7]                                               -0.077  (VIOLATED)
+   pad_out[9]                                               -0.077  (VIOLATED)
+   pad_out[21]                                              -0.077  (VIOLATED)
+   pad_out[15]                                              -0.076  (VIOLATED)
+   pad_out[25]                                              -0.076  (VIOLATED)
+   pad_out[3]                                               -0.075  (VIOLATED)
+   pad_out[31]                                              -0.075  (VIOLATED)
+   pad_out[19]                                              -0.075  (VIOLATED)
+   pad_out[6]                                               -0.075  (VIOLATED)
+   pad_out[27]                                              -0.073  (VIOLATED)
+   pad_out[8]                                               -0.073  (VIOLATED)
+   pad_out[18]                                              -0.072  (VIOLATED)
+   pad_out[0]                                               -0.072  (VIOLATED)
+   pad_out[22]                                              -0.071  (VIOLATED)
+   pad_out[12]                                              -0.071  (VIOLATED)
+   pad_out[30]                                              -0.071  (VIOLATED)
+   pad_out[14]                                              -0.070  (VIOLATED)
+   pad_out[24]                                              -0.070  (VIOLATED)
+   pad_out[2]                                               -0.069  (VIOLATED)
+   pad_out[4]                                               -0.069  (VIOLATED)
+   pad_out[10]                                              -0.069  (VIOLATED)
+   pad_out[16]                                              -0.068  (VIOLATED)
+   pad_out[13]                                              -0.058  (VIOLATED)
+   pad_out[26]                                              -0.054  (VIOLATED)
+   pad_out[20]                                              -0.048  (VIOLATED)
+   pad_out[28]                                              -0.047  (VIOLATED)
 
 
 
@@ -122,86 +59,22 @@ Date   : Fri May 26 22:58:48 2023
                              Required        Actual
    Pin                      Capacitance    Capacitance       Slack
    -----------------------------------------------------------------
-   HFSINV_319_561/Y           82.000        164.259        -82.259  (VIOLATED)
-   HFSINV_134_562/Y           82.000        162.507        -80.507  (VIOLATED)
-   ZBUF_49_inst_27516/Y       82.000        101.128        -19.128  (VIOLATED)
-   I_SDRAM_TOP/ZBUF_9_inst_27175/Y
-                              82.000        100.577        -18.577  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/HFSINV_22142_3395/Y
-                              82.000         98.835        -16.835  (VIOLATED)
-   ZBUF_73_inst_79695/Y       82.000         97.566        -15.566  (VIOLATED)
-   ZBUF_118_inst_27515/Y      82.000         94.977        -12.977  (VIOLATED)
-   ZBUF_53_inst_27522/Y       82.000         93.904        -11.904  (VIOLATED)
-   ZBUF_47_inst_27518/Y       82.000         93.791        -11.791  (VIOLATED)
-   I_BLENDER_1/U6402/Y        16.000         27.495        -11.495  (VIOLATED)
-   ZBUF_56_inst_27532/Y       82.000         92.286        -10.286  (VIOLATED)
-   I_SDRAM_TOP/sram_fixcell_118/Y
-                              82.000         90.961         -8.961  (VIOLATED)
-   I_BLENDER_1/s2_op1_reg_27_/Q
-                              16.000         24.619         -8.619  (VIOLATED)
-   ZBUF_72_inst_27614/Y       82.000         90.069         -8.069  (VIOLATED)
-   I_SDRAM_TOP/U21/Y          16.000         23.560         -7.560  (VIOLATED)
-   U226/Y                     16.000         23.421         -7.421  (VIOLATED)
-   ZBUF_87_inst_27520/Y       82.000         88.954         -6.954  (VIOLATED)
-   ZBUF_269_inst_27508/Y      82.000         88.498         -6.498  (VIOLATED)
-   I_CONTEXT_MEM/U165/Y       32.000         37.166         -5.166  (VIOLATED)
-   ZBUF_57_inst_27509/Y       82.000         87.067         -5.067  (VIOLATED)
-   I_BLENDER_0/U6437/Y        16.000         20.908         -4.908  (VIOLATED)
-   I_BLENDER_0/s1_op1_reg_11_/Q
-                              16.000         20.798         -4.798  (VIOLATED)
-   I_BLENDER_1/U4473/Y        16.000         20.226         -4.226  (VIOLATED)
-   I_BLENDER_0/s1_op1_reg_1_/Q
-                              16.000         19.471         -3.471  (VIOLATED)
-   I_BLENDER_1/U6512/Y        16.000         19.450         -3.450  (VIOLATED)
-   I_BLENDER_1/U6696/Y        16.000         18.841         -2.841  (VIOLATED)
-   ZBUF_230_inst_27510/Y      82.000         84.814         -2.814  (VIOLATED)
-   I_BLENDER_1/R_671/Q         8.000         10.707         -2.707  (VIOLATED)
-   I_BLENDER_1/R_518/Q         8.000         10.564         -2.564  (VIOLATED)
-   I_BLENDER_0/s3_op2_reg_29_/QN
-                              16.000         18.518         -2.518  (VIOLATED)
-   I_CONTEXT_MEM/HFSINV_564_382/Y
-                              64.000         66.071         -2.071  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/ctmTdsLR_1_82109/Y
-                              16.000         17.805         -1.805  (VIOLATED)
-   I_BLENDER_0/mega_shift_reg_10__29_/Q
-                              16.000         17.453         -1.453  (VIOLATED)
-   I_BLENDER_1/R_667_IP/QN    16.000         17.332         -1.332  (VIOLATED)
-   U237/Y                     16.000         17.320         -1.320  (VIOLATED)
-   I_BLENDER_0/mega_shift_reg_10__9_/Q
-                               8.000          9.308         -1.308  (VIOLATED)
-   I_BLENDER_1/result_reg_3_/Q
-                               8.000          9.207         -1.207  (VIOLATED)
-   I_BLENDER_1/U2713/Y        16.000         16.925         -0.925  (VIOLATED)
-   ZBUF_113_inst_27624/Y      82.000         82.923         -0.923  (VIOLATED)
-   I_BLENDER_1/R_351/Q         8.000          8.698         -0.698  (VIOLATED)
-   I_BLENDER_1/result_reg_29_/Q
-                               8.000          8.696         -0.696  (VIOLATED)
-   I_BLENDER_1/R_492/Q         8.000          8.233         -0.233  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/ZBUF_676_inst_79722/Y
-                              32.000         32.206         -0.206  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_reg_12__30_/Q
-                               8.000          8.191         -0.191  (VIOLATED)
-   I_BLENDER_1/trans3_reg/Q   16.000         16.144         -0.144  (VIOLATED)
-   HFSBUF_2_467/Y             32.000         32.124         -0.124  (VIOLATED)
-   I_BLENDER_1/R_349/Q         8.000          8.104         -0.104  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_CTL_U2_syncff_reg_4_/Q
-                               8.000          8.102         -0.102  (VIOLATED)
-   I_BLENDER_1/s2_op2_reg_27_/QN
-                               8.000          8.090         -0.090  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/HFSBUF_79782_3598/Y
-                              32.000         32.069         -0.069  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/HFSINV_66461_3568/Y
-                              32.000         32.067         -0.067  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/ZBUF_698_inst_83362/Y
-                              32.000         32.055         -0.055  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/mega_shift_1_reg_29__13_/Q
-                               8.000          8.014         -0.014  (VIOLATED)
-   I_BLENDER_1/R_542/Q        16.000         16.014         -0.014  (VIOLATED)
-   I_BLENDER_1/U4670/S         8.000          8.014         -0.014  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_reg_16__30_/Q
-                               8.000          8.012         -0.012  (VIOLATED)
-   I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_reg_28__13_/Q
-                               8.000          8.004         -0.004  (VIOLATED)
+   ZBUF_64_inst_23278/Y       82.000        155.247        -73.247  (VIOLATED)
+   occ_int2/cts_buf_638432290/Y
+                              82.000         94.759        -12.759  (VIOLATED)
+   I_BLENDER_1/R_124/Q        16.000         17.933         -1.933  (VIOLATED)
+   I_BLENDER_1/ropt_mt_inst_54963/Y
+                              16.000         16.132         -0.132  (VIOLATED)
+   I_SDRAM_TOP/ZBUF_211_inst_54901/Y
+                              32.000         32.131         -0.131  (VIOLATED)
+   I_BLENDER_0/ropt_mt_inst_54958/Y
+                              16.000         16.129         -0.129  (VIOLATED)
+   I_BLENDER_0/s3_op2_reg_28_/QN
+                              16.000         16.050         -0.050  (VIOLATED)
+   I_PCI_TOP/I_PCI_CORE_mega_shift_reg_7__30_/QN
+                               8.000          8.049         -0.049  (VIOLATED)
+   I_BLENDER_0/s1_op1_reg_14_/Q
+                               8.000          8.006         -0.006  (VIOLATED)
 
 
    min_capacitance
@@ -241,15 +114,6 @@ Date   : Fri May 26 22:58:48 2023
                                0.100          0.011         -0.089  (VIOLATED)
    I_RISC_CORE/I_REG_FILE_REG_FILE_D_RAM/O2[15]
                                0.100          0.011         -0.089  (VIOLATED)
-
-
-   max_transition
-
-                             Required        Actual
-   Pin                      Transition     Transition        Slack
-   -----------------------------------------------------------------
-   I_BLENDER_1/R_671/Q         0.043          0.044         -0.001  (VIOLATED)
-   I_BLENDER_1/R_518/Q         0.043          0.043         -0.001  (VIOLATED)
 
 
 1

@@ -1,0 +1,734 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/stuck_at_cap.tcl
+# Set up the search path to the librariesi
+# One of the typical lines of the resultant search path is:
+# /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm
+# /          $lib_dir                   /lib/ $lib_type /db_nldm
+# The variables are defined in design_config.tcl
+set search_path ""
+foreach i $lib_types { lappend search_path $lib_dir/lib/$i/db_nldm }
+# Smartly find all the libraries you need
+# Will end up with sometihng like this: 
+# saed32hvt_ss0p75v125c.db saed32hvt_ss0p95v125c.db saed32rvt_ss0p75v125c.db saed32rvt_ss0p95v125c.db saed32lvt_ss0p75v125c.db saed32lvt_ss0p95v125c.db saed32sram_ss0p95v125c.db dw_foundation.sldb *
+# This contains all the VTs you want, all the corners you want, and designate any library subtypes like level shifters you might want
+# The variables are defined in the design_config.tcl
+# Example:
+#     saed32hvt_ss0p75v125c.db
+#     |sub_lib  corner    .db
+set link_library ""
+foreach i $search_path {
+  foreach k $corners {
+      foreach m $sub_lib_type {
+        foreach j [glob -nocomplain $i/$m$k.db ] {
+          lappend link_library [file tail $j ]
+        }
+      }
+  }
+}
+lappend link_library *
+saed32hvt_ss0p75vn40c.db saed32hvt_dlvl_ss0p75vn40c_i0p95v.db saed32hvt_ulvl_ss0p75vn40c_i0p75v.db saed32hvt_dlvl_ss0p75vn40c_i0p75v.db saed32hvt_ss0p95vn40c.db saed32hvt_ulvl_ss0p95vn40c_i0p75v.db saed32rvt_ss0p75vn40c.db saed32rvt_dlvl_ss0p75vn40c_i0p95v.db saed32rvt_ulvl_ss0p75vn40c_i0p75v.db saed32rvt_dlvl_ss0p75vn40c_i0p75v.db saed32rvt_ss0p95vn40c.db saed32rvt_ulvl_ss0p95vn40c_i0p75v.db saed32lvt_ss0p75vn40c.db saed32lvt_dlvl_ss0p75vn40c_i0p95v.db saed32lvt_ulvl_ss0p75vn40c_i0p75v.db saed32lvt_dlvl_ss0p75vn40c_i0p75v.db saed32lvt_ss0p95vn40c.db saed32lvt_ulvl_ss0p95vn40c_i0p75v.db saed32sram_ss0p95vn40c.db *
+# Add the local directory "." to the search path after we have used it in the above loop.  If you add . before hand, it will cause some problems.
+lappend search_path .
+/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram/db_nldm .
+Information: current_design won't return any data before link (DES-071)
+Loading verilog file '/home/ramadugu/common/Documents/freshp/final_prj-team_10-master/apr/outputs/ORCA_TOP.route2.vg.gz'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p75vn40c_i0p75v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p75v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ss0p75vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ss0p75vn40c_i0p75v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_dlvl_ss0p75vn40c_i0p75v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ss0p75vn40c_i0p75v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_dlvl_ss0p75vn40c_i0p75v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram/db_nldm/saed32sram_ss0p95vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p95vn40c_i0p75v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ss0p95vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ss0p95vn40c_i0p75v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ss0p95vn40c_i0p75v.db'
+Linking design ORCA_TOP...
+Removed 200394 unconnected cells and blackboxes.
+Information: Removing 63 unneeded designs..... (LNK-034)
+Information: 207 (70.41%) library cells are unused in library saed32hvt_ss0p75vn40c..... (LNK-045)
+Information: 12 (100.00%) library cells are unused in library saed32hvt_ulvl_ss0p75vn40c_i0p75v..... (LNK-045)
+Information: 21 (87.50%) library cells are unused in library saed32hvt_dlvl_ss0p75vn40c_i0p75v..... (LNK-045)
+Information: 204 (69.39%) library cells are unused in library saed32lvt_ss0p75vn40c..... (LNK-045)
+Information: 12 (100.00%) library cells are unused in library saed32lvt_ulvl_ss0p75vn40c_i0p75v..... (LNK-045)
+Information: 23 (95.83%) library cells are unused in library saed32lvt_dlvl_ss0p75vn40c_i0p75v..... (LNK-045)
+Information: 220 (74.83%) library cells are unused in library saed32rvt_ss0p75vn40c..... (LNK-045)
+Information: 12 (100.00%) library cells are unused in library saed32rvt_ulvl_ss0p75vn40c_i0p75v..... (LNK-045)
+Information: 22 (91.67%) library cells are unused in library saed32rvt_dlvl_ss0p75vn40c_i0p75v..... (LNK-045)
+Information: 31 (88.57%) library cells are unused in library saed32sram_ss0p95vn40c..... (LNK-045)
+Information: 234 (79.59%) library cells are unused in library saed32hvt_ss0p95vn40c..... (LNK-045)
+Information: 10 (83.33%) library cells are unused in library saed32hvt_ulvl_ss0p95vn40c_i0p75v..... (LNK-045)
+Information: 260 (88.44%) library cells are unused in library saed32lvt_ss0p95vn40c..... (LNK-045)
+Information: 8 (66.67%) library cells are unused in library saed32lvt_ulvl_ss0p95vn40c_i0p75v..... (LNK-045)
+Information: 264 (89.80%) library cells are unused in library saed32rvt_ss0p95vn40c..... (LNK-045)
+Information: 8 (66.67%) library cells are unused in library saed32rvt_ulvl_ss0p95vn40c_i0p75v..... (LNK-045)
+Information: total 1548 library cells are unused (LNK-046)
+Design 'ORCA_TOP' was successfully linked.
+Information: There are 46217 leaf cells, ports, hiers and 52441 nets in the design (LNK-047)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Log for 'read_parasitics command' will be generated in 'parasitics_command.log'. (PARA-107)
+Information: Checked out license 'PrimePower' (PT-019)
+if { [info exists synopsys_program_name ] } {
+        switch $synopsys_program_name {
+         "icc2_shell"  {
+                # If the flow variable is set, then we should be in regular APR flow and not the macro floorplanning mode
+                # We want to use the UPF associated with the correct netlist.  APR flow uses DCT output.  Macro fp uses DC output.
+                if { [info exists flow ] } {
+                    puts " Sourcing the Physical Synthesis DCT UPF"
+                    source ../../syn/outputs/ORCA_TOP.dct.upf
+                } else {
+                    puts " Sourcing the Logical Synthesis DC UPF"
+                    source ../../syn/outputs/ORCA_TOP.dc.upf
+                }
+
+                puts " Creating ICC2 MCMM "
+                foreach mode { func test scan atspeed funcu} {
+                  create_mode $mode
+                }
+                foreach corner { {Cmax -40 ss0p75vn40c} {Cmin -40 ff0p95vn40c} } {
+                  set corner_name [lindex $corner 0 ]
+                  set corner_temp [lindex $corner 1 ]
+                  set corner_op_cond [ lindex $corner 2 ]
+                  create_corner $corner_name
+                  # Read the TLUplus file and give it a name.  
+                  read_parasitic_tech -tlup $tlu_dir/saed32nm_1p9m_${corner_name}.tluplus -layermap $tlu_dir/saed32nm_tf_itf_tluplus.map -name ${corner_name}.tlup
+                  # In our current case, we will use the same TLUplus and temperature for both launch and capture and for setup and hold for a particular corner.
+                  # set the TLUplus and temp to be used for early side of paths.  (launch on setup, capture on hold)
+                  set_parasitic_parameters -early_spec ${corner_name}.tlup -early_temperature $corner_temp
+                  # set the TLUplus and temp to be used for late side of paths.  (capture on setup, launch on hold)
+                  set_parasitic_parameters -late_spec ${corner_name}.tlup -late_temperature $corner_temp
+                  # indicate which operating condition to use for the standard cells. It needs to know the PVT.  
+                  # UPF may indicate additional information for the voltage in a multivoltage design.
+                  set_operating_condition $corner_op_cond -library saed32lvt_c
+                }
+
+                #foreach scenario { {func_worst func Cmax } {func_best func Cmin} {test_worst test Cmax} {test_best test Cmin} {atspeed_shift atspeed Cmin} {atspeed_cap atspeed Cmax} {stuck_at_shift scan Cmin} {stuck_at_cap scan Cmax}  }
+foreach scenario { {func_worst func Cmax } {func_best func Cmin} {test_worst test Cmax} {test_best test Cmin} }  {
+                  create_scenario -name [lindex $scenario 0 ] -mode [lindex $scenario 1 ] -corner [lindex $scenario 2 ]
+                  current_scenario [lindex $scenario 0]
+                  source -echo -verbose -continue_on_error ../../constraints/ORCA_TOP_[lindex $scenario 0 ].sdc 
+                  set_false_path -from SDRAM_CLK -to SD_DDR_CLK 
+                }
+
+                set_scenario_status func_worst -active true -hold false -setup true
+                set_scenario_status func_best  -active true -hold true  -setup false
+                set_scenario_status test_worst -active true -hold false -setup true
+                set_scenario_status test_best  -active true -hold true  -setup false
+
+                current_scenario "func_worst"
+
+         }
+         "dc_shell" {
+                 set upf_create_implicit_supply_sets false
+                source ../../constraints/ORCA_TOP.upf
+                set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                source ../../constraints/ORCA_TOP_func_worst.sdc
+                set_false_path -from SDRAM_CLK -to SD_DDR_CLK
+
+                # Define voltage area for DCT mode.  We define the mw_lib variable in DCT mode script.
+                # In the ICC2_flow it is defined in ORCA_TOP.design_options.tcl. Slightly different syntax.
+                if { [ info exists mw_lib ] } {
+                   create_voltage_area  -coordinate {{580 0} {1000 400}} -power_domain PD_RISC_CORE
+                }
+         }
+         "pt_shell" {
+                source $topdir/apr/outputs/ORCA_TOP.route2.upf
+                if [ regexp "max" $corner_name ] {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_func_worst.sdc
+                }
+                if [ regexp "min" $corner_name]  {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_func_best.sdc
+                }
+                 if [ regexp "min_test" $corner_name]  {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_test_best.sdc
+                }
+                if [ regexp "max_test" $corner_name]  {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_test_worst.sdc
+                }
+                 if [ regexp "cc_min" $corner_name]  {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_func_best.sdc
+                }
+                 if [ regexp "cc_max" $corner_name]  {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_func_worst.sdc
+                }
+                 if [ regexp "cc_min_test" $corner_name]  {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_test_best.sdc
+                }
+                 if [ regexp "cc_max_test" $corner_name]  {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_test_worst.sdc
+                }
+if [ regexp "max_capture" $corner_name ] {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_atspeed_cap.sdc
+                }
+if [ regexp "min_scan" $corner_name ] {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc
+                }
+if [ regexp "min_capture" $corner_name ] {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_stuck_at_cap.sdc
+                }
+if [ regexp "min_shift" $corner_name ] {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_stuck_at_shift.sdc
+                }
+}
+
+}
+         
+        
+} elseif {[get_db root: .program_short_name] == "genus"} {
+   read_power_intent ../../constraints/ORCA_TOP.upf -version 2.0 -module $top_design
+   apply_power_intent
+   commit_power_intent
+#   report_power_intent 
+   set_units -time ns
+   source -echo -verbose ../../constraints/${top_design}_func_worst.sdc
+   set_false_path -from SDRAM_CLK -to SD_DDR_CLK
+   
+} elseif {[get_db root: .program_short_name] == "innovus"} {
+
+        set_units -time ns -resistance MOhm -capacitance fF -voltage V -current uA
+}
+Information: Resolving '.' to the current scope '<top design>'.
+false
+Warning: Nothing implicitly matched 'saed32lvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for lib (SEL-005)
+Information: Setting sdc_version outside of an SDC file has no effect (SDC-1)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX8_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX8_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX8_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX8_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Nothing implicitly matched 'saed32hvt_ff0p95vn40c' (SEL-003)
+Error: Nothing matched for collection (SEL-005)
+Error: Cannot find library cell 'INVX2_HVT' in library 'saed32hvt_ff0p95vn40c'. (DES-008)
+Warning: Creating virtual clock named 'v_PCI_CLK' with no sources. (UITE-121)
+Warning: Creating virtual clock named 'v_SDRAM_CLK' with no sources. (UITE-121)
+1
+Information: Setting sdc_version outside of an SDC file has no effect (SDC-1)
+Warning: Creating virtual clock named 'v_PCI_CLK' with no sources. (UITE-121)
+Warning: Creating virtual clock named 'v_SDRAM_CLK' with no sources. (UITE-121)
+Warning: Cannot set output delay on a clock port (sd_CK) that does not fanout to any data sink. (UITE-485)
+Warning: Cannot set output delay on a clock port (sd_CKn) that does not fanout to any data sink. (UITE-485)
+1
+Warning: Converting clock object 'PCI_CLK' from ideal to propagated. (UITE-315)
+Warning: Virtual clock 'v_PCI_CLK' cannot be made propagated. (UITE-316)
+Warning: Converting clock object 'SYS_2x_CLK' from ideal to propagated. (UITE-315)
+Warning: Converting clock object 'SYS_CLK' from ideal to propagated. (UITE-315)
+Warning: Converting clock object 'SDRAM_CLK' from ideal to propagated. (UITE-315)
+Warning: Virtual clock 'v_SDRAM_CLK' cannot be made propagated. (UITE-316)
+Warning: Setting this variable to a lower value can cause a significant performance degradation during a timing update. (PTE-067)
+Information: Setting rc_cache_min_max_rise_fall_ceff to TRUE. (XTALK-015)
+Information: Using automatic max wire load selection group 'predcaps'. (ENV-003)
+Information: Using automatic min wire load selection group 'predcaps'. (ENV-003)
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13008/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13009/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13010/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13011/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13012/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13013/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13014/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13015/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13016/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13017/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13018/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13019/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13020/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13021/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13022/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13023/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13024/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13025/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13026/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13027/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13028/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13029/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13030/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13031/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13032/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13033/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13034/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13035/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13036/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13037/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13038/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'ate_clk' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13039/Y'. (PTE-070)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13008/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13008/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13008. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13008/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13008/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13008. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13008/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13008/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13008. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13008/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13008/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13008. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13014/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13014/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13014. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13014/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13014/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13014. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13014/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13014/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13014. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13014/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13014/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13014. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13013/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13013/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13013. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13013/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13013/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13013. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13013/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13013/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13013. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13013/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13013/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13013. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13012/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13012/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13012. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13012/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13012/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13012. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13012/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13012/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13012. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13012/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13012/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13012. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13011/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13011/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13011. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13011/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13011/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13011. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13011/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13011/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13011. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13011/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13011/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13011. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13010/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13010/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13010. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13010/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13010/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13010. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13010/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13010/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13010. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13010/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13010/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13010. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13009/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13009/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13009. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13009/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13009/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13009. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13009/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13009/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13009. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13009/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13009/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13009. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13021/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13021/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13021. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13021/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13021/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13021. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13021/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13021/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13021. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13021/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13021/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13021. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13020/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13020/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13020. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13020/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13020/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13020. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13020/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13020/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13020. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13020/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13020/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13020. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13019/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13019/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13019. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13019/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13019/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13019. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13019/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13019/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13019. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13019/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13019/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13019. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13018/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13018/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13018. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13018/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13018/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13018. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13018/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13018/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13018. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13018/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13018/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13018. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13017/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13017/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13017. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13017/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13017/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13017. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13017/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13017/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13017. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13017/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13017/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13017. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13016/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13016/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13016. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13016/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13016/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13016. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13016/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13016/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13016. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13016/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13016/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13016. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13015/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13015/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13015. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13015/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13015/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13015. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13015/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13015/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13015. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13015/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13015/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13015. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13025/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13025/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13025. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13025/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13025/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13025. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13025/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13025/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13025. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13025/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13025/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13025. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13024/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13024/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13024. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13024/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13024/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13024. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13024/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13024/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13024. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13024/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13024/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13024. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13023/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13023/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13023. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13023/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13023/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13023. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13023/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13023/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13023. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13023/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13023/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13023. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13022/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13022/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13022. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13022/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13022/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13022. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13022/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13022/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13022. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13022/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13022/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13022. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13026/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13026/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13026. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13026/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13026/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13026. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13026/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13026/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13026. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13026/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13026/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13026. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13027/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13027/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13027. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13027/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13027/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13027. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13027/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13027/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13027. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13027/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13027/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13027. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13028/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13028/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13028. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13028/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13028/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13028. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13028/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13028/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13028. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13028/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13028/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13028. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13029/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13029/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13029. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13029/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13029/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13029. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13029/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13029/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13029. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13029/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13029/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13029. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13030/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13030/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13030. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13030/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13030/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13030. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13030/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13030/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13030. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13030/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13030/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13030. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13031/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13031/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13031. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13031/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13031/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13031. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13031/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13031/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13031. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13031/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13031/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13031. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13032/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13032/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13032. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13032/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13032/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13032. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13032/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13032/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13032. (PTE-060)
+Warning: No clock-gating check is inferred for clock ate_clk at pins I_SDRAM_TOP/I_SDRAM_IF/U13032/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13032/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13032. (PTE-060)
+Error: Generated clock 'SD_DDR_CLK' has no path to its master clock. (PTE-075)
+Error: Generated clock 'SD_DDR_CLKn' has no path to its master clock. (PTE-075)
+Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'cto_buf_33224/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'I_RISC_CORE/cts_buf_685132268/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'cto_buf_33224/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'I_RISC_CORE/cts_buf_685132268/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'cto_buf_33224/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'I_RISC_CORE/cts_buf_685132268/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'cto_buf_33224/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'I_RISC_CORE/cts_buf_685132268/A' in the network 'n872'. (RC-005)
+Warning: The type of RC delay calculation problems that have occurred prevents the min and max results from bounding the correct values. (RC-008)
+Information: Starting crosstalk aware timing iteration 1. (XTALK-001)
+Information: Starting crosstalk aware timing iteration 2. (XTALK-001)
+Warning: For computing a common base period for a number of clocks PrimeTime limits the waveform expansion of the smallest period to be no more than 1000 times and the waveform expansion of the largest period to be no more than 101 times. PrimeTime has computed a common base period bounded by these limits. (PTE-053)
+Information: Expanding clock 'v_SDRAM_CLK' to base period of 1215.000 (old period was 5.000, added 484 edges). (PTE-016)
+Information: Expanding clock 'ate_clk' to base period of 1212.000 (old period was 12.000, added 200 edges). (PTE-016)
+Information: Expanding clock 'PCI_CLK' to base period of 1215.000 (old period was 7.500, added 322 edges). (PTE-016)
+Information: Expanding clock 'SYS_2x_CLK' to base period of 1212.000 (old period was 2.400, added 1008 edges). (PTE-016)
+Information: Expanding clock 'SYS_CLK' to base period of 1214.400 (old period was 4.800, added 504 edges). (PTE-016)
+Information: Expanding clock 'SDRAM_CLK' to base period of 1213.600 (old period was 4.100, added 590 edges). (PTE-016)
+Information: Expanding clock 'v_PCI_CLK' to base period of 1215.000 (old period was 7.500, added 322 edges). (PTE-016)
+Information: Number of nets evaluated in the previous iteration: 48930. (XTALK-105)
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : ORCA_TOP
+Version: O-2018.06
+Date   : Fri May 26 15:53:38 2023
+****************************************
+
+
+  Startpoint: I_SDRAM_TOP/I_SDRAM_IF/R_19
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Endpoint: sd_A[9] (output port clocked by v_SDRAM_CLK)
+  Path Group: OUTPUTS
+  Path Type: max
+  Max Data Paths Derating Factor  : 1.050
+  Min Clock Paths Derating Factor : 1.150
+  Max Clock Paths Derating Factor : 1.050
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock ate_clk (rise edge)                             24.000     24.000
+  clock network delay (propagated)                       1.164     25.164
+  I_SDRAM_TOP/I_SDRAM_IF/R_19/CLK (SDFFASX1_HVT)         0.000     25.164 r
+  I_SDRAM_TOP/I_SDRAM_IF/R_19/Q (SDFFASX1_HVT)           1.451 &   26.614 f
+  I_SDRAM_TOP/I_SDRAM_IF/U51/SO (HADDX1_HVT)             0.943 &   27.557 f
+  HFSBUF_4_200/Y (NBUFFX8_HVT)                           0.589 &   28.146 f
+  sd_A[9] (out)                                          0.014 &   28.160 f
+  data arrival time                                                28.160
+
+  clock v_SDRAM_CLK (rise edge)                         25.000     25.000
+  clock network delay (ideal)                            0.500     25.500
+  clock reconvergence pessimism                          0.000     25.500
+  clock uncertainty                                     -0.100     25.400
+  output external delay                                 -1.100     24.300
+  data required time                                               24.300
+  ------------------------------------------------------------------------------
+  data required time                                               24.300
+  data arrival time                                               -28.160
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                 -3.860
+
+
+1
+pt_shell> exit
+Suppressed Messages Summary:
+Id          Severity      Occurrences   Suppressed
+-------------------------------------------------------------------------------
+PTE-060     Warning               128           28
+Total 1 type of message is suppressed
+Maximum memory usage for this session: 1114.91 MB
+CPU usage for this session: 97 seconds 
+Elapsed time for this session: 61 seconds
+Diagnostics summary: 196 errors, 222 warnings, 70 informationals
+
+Thank you for using pt_shell!
+
