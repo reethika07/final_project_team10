@@ -3,7 +3,7 @@ Report : constraint
         -all_violators
 Design : ORCA_TOP
 Version: Q-2019.12-SP4
-Date   : Sat May 27 20:34:47 2023
+Date   : Sun May 28 03:44:10 2023
 ****************************************
 
    late_timing
@@ -12,31 +12,49 @@ Date   : Sat May 27 20:34:47 2023
 Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
 Endpoint                         Path Delay     Path Required       CRP    Slack Group    Scenario
 ----------------------------------------------------------------------------------------------------------
-I_BLENDER_1/R_620/D (SDFFX2_LVT)   4.44 f         4.38           0.00    -0.07   SYS_CLK  func_worst
+I_RISC_CORE/R_31/D (SDFFARX1_LVT)   2.21 r        2.20           0.00    -0.01   SYS_2x_CLK func_worst
+I_BLENDER_0/R_384/D (SDFFX1_LVT)   4.55 f         4.47           0.00    -0.08   SYS_CLK  func_worst
+I_BLENDER_0/R_323/D (SDFFX1_LVT)   4.55 f         4.47           0.00    -0.08   SYS_CLK  func_worst
+I_BLENDER_0/R_239/D (SDFFX1_LVT)   4.59 r         4.52           0.00    -0.07   SYS_CLK  func_worst
+I_BLENDER_0/R_422/D (SDFFX1_LVT)   4.52 f         4.46           0.00    -0.06   SYS_CLK  func_worst
+I_BLENDER_0/R_391/D (SDFFX1_LVT)   4.52 f         4.47           0.00    -0.05   SYS_CLK  func_worst
+I_BLENDER_0/R_704/D (SDFFX1_LVT)   4.51 f         4.46           0.00    -0.05   SYS_CLK  func_worst
 I_BLENDER_0/R_248/D (SDFFX1_LVT)   4.57 r         4.52           0.00    -0.04   SYS_CLK  func_worst
-I_BLENDER_0/R_391/D (SDFFX1_LVT)   4.51 f         4.47           0.00    -0.04   SYS_CLK  func_worst
-I_BLENDER_0/R_507/D (SDFFX1_LVT)   4.50 f         4.46           0.00    -0.04   SYS_CLK  func_worst
-I_BLENDER_0/R_239/D (SDFFX1_LVT)   4.48 f         4.45           0.00    -0.03   SYS_CLK  func_worst
-I_BLENDER_1/s4_op1_reg_21_/D (SDFFX2_LVT)   4.40 f   4.38        0.00    -0.02   SYS_CLK  func_worst
-I_BLENDER_0/R_432/D (SDFFX1_LVT)   4.50 f         4.47           0.00    -0.02   SYS_CLK  func_worst
-I_BLENDER_0/R_697/D (SDFFX1_LVT)   4.55 r         4.53           0.00    -0.02   SYS_CLK  func_worst
-I_BLENDER_0/R_559/D (SDFFX2_LVT)   4.39 f         4.37           0.00    -0.02   SYS_CLK  func_worst
+I_BLENDER_0/s4_op2_reg_30_/D (SDFFX2_LVT)   4.42 f   4.38        0.00    -0.04   SYS_CLK  func_worst
+I_BLENDER_1/R_395/D (SDFFX2_LVT)   4.41 f         4.37           0.00    -0.04   SYS_CLK  func_worst
+I_BLENDER_0/R_507/D (SDFFX1_LVT)   4.48 f         4.46           0.00    -0.02   SYS_CLK  func_worst
+I_BLENDER_1/R_235/D (SDFFX1_LVT)   4.49 f         4.47           0.00    -0.02   SYS_CLK  func_worst
+I_BLENDER_1/R_410/D (SDFFX1_LVT)   4.48 f         4.46           0.00    -0.02   SYS_CLK  func_worst
+I_BLENDER_0/R_697/D (SDFFX1_LVT)   4.49 f         4.47           0.00    -0.02   SYS_CLK  func_worst
+I_BLENDER_1/R_414/D (SDFFX1_LVT)   4.49 f         4.47           0.00    -0.02   SYS_CLK  func_worst
 I_BLENDER_0/R_699/D (SDFFX1_LVT)   4.48 f         4.46           0.00    -0.02   SYS_CLK  func_worst
-I_BLENDER_1/R_377/D (SDFFX1_LVT)   4.48 f         4.47           0.00    -0.02   SYS_CLK  func_worst
-I_BLENDER_0/R_581/D (SDFFX1_LVT)   4.48 f         4.47           0.00    -0.01   SYS_CLK  func_worst
-I_BLENDER_0/R_577/D (SDFFX2_LVT)   4.40 f         4.39           0.00    -0.01   SYS_CLK  func_worst
-I_BLENDER_0/R_496/D (SDFFX1_LVT)   4.46 f         4.45           0.00    -0.01   SYS_CLK  func_worst
-I_BLENDER_1/R_414/D (SDFFX1_LVT)   4.48 f         4.47           0.00    -0.01   SYS_CLK  func_worst
-I_BLENDER_0/R_329/D (SDFFX1_LVT)   4.55 r         4.54           0.00    -0.01   SYS_CLK  func_worst
-I_BLENDER_0/R_704/D (SDFFX1_LVT)   4.47 f         4.46           0.00    -0.01   SYS_CLK  func_worst
+I_BLENDER_0/R_521/D (SDFFX1_LVT)   4.44 f         4.42           0.00    -0.01   SYS_CLK  func_worst
+I_BLENDER_1/R_464/D (SDFFX1_LVT)   4.48 f         4.47           0.00    -0.01   SYS_CLK  func_worst
+I_BLENDER_0/s4_op2_reg_24_/D (SDFFX2_LVT)   4.40 f   4.39        0.00    -0.01   SYS_CLK  func_worst
+I_BLENDER_0/s4_op1_reg_29_/D (SDFFX1_LVT)   4.47 f   4.46        0.00    -0.01   SYS_CLK  func_worst
+I_BLENDER_0/R_553/D (SDFFX2_LVT)   4.39 f         4.39           0.00    -0.01   SYS_CLK  func_worst
 I_BLENDER_1/R_417/D (SDFFX1_LVT)   4.48 f         4.47           0.00    -0.01   SYS_CLK  func_worst
-I_BLENDER_0/R_323/D (SDFFX1_LVT)   4.47 f         4.47           0.00    -0.01   SYS_CLK  func_worst
-I_BLENDER_1/R_410/D (SDFFX1_LVT)   4.46 f         4.46           0.00    -0.01   SYS_CLK  func_worst
-I_BLENDER_0/R_553/D (SDFFX2_LVT)   4.39 f         4.38           0.00    -0.00   SYS_CLK  func_worst
-I_BLENDER_0/s4_op2_reg_30_/D (SDFFX2_LVT)   4.39 f   4.39        0.00    -0.00   SYS_CLK  func_worst
-I_BLENDER_1/R_652/D (SDFFX2_LVT)   4.38 f         4.38           0.00    -0.00   SYS_CLK  func_worst
-I_BLENDER_1/R_427/D (SDFFX1_LVT)   4.47 f         4.47           0.00    -0.00   SYS_CLK  func_worst
-I_BLENDER_1/R_476/D (SDFFX1_LVT)   4.45 f         4.45           0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_1/R_377/D (SDFFX1_LVT)   4.47 f         4.46           0.00    -0.01   SYS_CLK  func_worst
+I_BLENDER_1/R_413/D (SDFFX1_LVT)   4.47 f         4.46           0.00    -0.01   SYS_CLK  func_worst
+I_BLENDER_1/R_476/D (SDFFX1_LVT)   4.45 f         4.45           0.00    -0.01   SYS_CLK  func_worst
+I_BLENDER_0/s4_op2_reg_26_/D (SDFFX2_LVT)   4.38 f   4.38        0.00    -0.01   SYS_CLK  func_worst
+I_BLENDER_0/R_160/D (SDFFX1_LVT)   4.47 f         4.47           0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_1/R_620/D (SDFFX2_LVT)   4.37 f         4.37           0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_0/s4_op2_reg_20_/D (SDFFX2_LVT)   4.40 f   4.39        0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_1/s4_op2_reg_18_/D (SDFFX2_LVT)   4.39 f   4.38        0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_0/R_432/D (SDFFX1_LVT)   4.46 f         4.46           0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_0/s4_op1_reg_17_/D (SDFFX2_LVT)   4.40 f   4.39        0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_1/R_470/D (SDFFX1_LVT)   4.46 f         4.45           0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_0/R_332/D (SDFFX1_LVT)   4.54 r         4.54           0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_0/s3_op1_reg_22_/D (SDFFX2_LVT)   4.37 f   4.37        0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_1/s4_op2_reg_17_/D (SDFFX2_LVT)   4.40 f   4.39        0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_1/R_632/D (SDFFX2_LVT)   4.38 f         4.38           0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_1/R_298/D (SDFFX1_LVT)   4.54 r         4.53           0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_0/R_446/D (SDFFX1_LVT)   4.46 f         4.46           0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_1/R_482/D (SDFFX1_LVT)   4.45 f         4.45           0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_1/s4_op2_reg_16_/D (SDFFX2_LVT)   4.39 f   4.39        0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_1/R_626/D (SDFFX1_LVT)   4.46 f         4.46           0.00    -0.00   SYS_CLK  func_worst
+I_BLENDER_1/R_604/D (SDFFX1_LVT)   4.47 f         4.47           0.00    -0.00   SYS_CLK  func_worst
 
    early_timing
    -----------
@@ -54,26 +72,23 @@ No paths.
                              Required        Actual                            
    Net                      Transition     Transition        Slack  Violation  
   ---------------------------------------------------------------------------
-   I_BLENDER_1/n2768            0.14           0.16          -0.02  (VIOLATED) 
-     PIN : I_BLENDER_1/R_568/Q     0.14        0.16          -0.02  (VIOLATED) 
+   I_BLENDER_0/n8647            0.17           0.23          -0.06  (VIOLATED) 
+     PIN : I_BLENDER_0/s3_op2_reg_21_/Q     0.17     0.23    -0.06  (VIOLATED) 
 
-   I_BLENDER_1/n1278            0.14           0.16          -0.02  (VIOLATED) 
-     PIN : I_BLENDER_1/R_482/Q     0.14        0.16          -0.02  (VIOLATED) 
+   I_BLENDER_0/n6154            0.15           0.17          -0.02  (VIOLATED) 
+     PIN : I_BLENDER_0/U158/Y     0.15         0.17          -0.02  (VIOLATED) 
 
    I_BLENDER_1/n4719            0.14           0.15          -0.01  (VIOLATED) 
      PIN : I_BLENDER_1/R_752/Q     0.14        0.15          -0.01  (VIOLATED) 
 
-   I_BLENDER_0/s4_op2[15]       0.14           0.14          -0.00  (VIOLATED) 
-     PIN : I_BLENDER_0/s4_op2_reg_15_/Q     0.14     0.14    -0.00  (VIOLATED) 
+   I_BLENDER_0/n8648            0.21           0.21          -0.00  (VIOLATED) 
+     PIN : I_BLENDER_0/R_78/QN     0.21        0.21          -0.00  (VIOLATED) 
 
-   I_BLENDER_0/s2_op2[4]        0.17           0.17          -0.00  (VIOLATED) 
-     PIN : I_BLENDER_0/R_118/Q     0.17        0.17          -0.00  (VIOLATED) 
-
-   I_BLENDER_0/ZBUF_781_14      0.14           0.14          -0.00  (VIOLATED) 
-     PIN : I_BLENDER_0/ZBUF_781_inst_2355/Y     0.14     0.14    -0.00 (VIOLATED)
+   I_BLENDER_0/n379             0.21           0.21          -0.00  (VIOLATED) 
+     PIN : I_BLENDER_0/R_116/QN     0.21       0.21          -0.00  (VIOLATED) 
 
   ---------------------------------------------------------------------------
-   Number of max_transition violation(s): 6
+   Number of max_transition violation(s): 5
 
    Mode: func Corner: Cmax
    Scenario: func_worst
@@ -81,190 +96,217 @@ No paths.
                              Required        Actual                            
    Net                      Capacitance    Capacitance       Slack  Violation  
   ---------------------------------------------------------------------------
-   sd_DQ_en[0]                 82.00         165.78         -83.78  (VIOLATED) 
-     PIN : ZBUF_64_inst_23278/Y    82.00     165.78         -83.78  (VIOLATED) 
+   sd_DQ_en[2]                 82.00         164.70         -82.70  (VIOLATED) 
+     PIN : ZBUF_64_inst_25399/Y    82.00     164.70         -82.70  (VIOLATED) 
 
-   pad_out[2]                  82.00         118.69         -36.69  (VIOLATED) 
-     PIN : HFSBUF_11_236/Y     82.00         118.69         -36.69  (VIOLATED) 
+   sd_DQ_en[0]                 82.00         163.83         -81.83  (VIOLATED) 
+     PIN : ZBUF_64_inst_23336/Y    82.00     163.83         -81.83  (VIOLATED) 
 
-   pad_out[14]                 82.00         118.67         -36.67  (VIOLATED) 
-     PIN : HFSBUF_11_241/Y     82.00         118.67         -36.67  (VIOLATED) 
+   pad_out[2]                  82.00         118.56         -36.56  (VIOLATED) 
+     PIN : HFSBUF_11_232/Y     82.00         118.56         -36.56  (VIOLATED) 
 
-   pad_out[16]                 82.00         118.66         -36.66  (VIOLATED) 
-     PIN : HFSBUF_11_237/Y     82.00         118.66         -36.66  (VIOLATED) 
+   pad_out[16]                 82.00         118.42         -36.42  (VIOLATED) 
+     PIN : HFSBUF_11_233/Y     82.00         118.42         -36.42  (VIOLATED) 
 
-   pad_out[8]                  82.00         118.62         -36.62  (VIOLATED) 
-     PIN : HFSBUF_11_238/Y     82.00         118.62         -36.62  (VIOLATED) 
+   pad_out[14]                 82.00         118.41         -36.41  (VIOLATED) 
+     PIN : HFSBUF_11_236/Y     82.00         118.41         -36.41  (VIOLATED) 
 
-   pad_out[10]                 82.00         118.20         -36.20  (VIOLATED) 
-     PIN : HFSBUF_11_249/Y     82.00         118.20         -36.20  (VIOLATED) 
+   pad_out[4]                  82.00         118.30         -36.30  (VIOLATED) 
+     PIN : HFSBUF_11_241/Y     82.00         118.30         -36.30  (VIOLATED) 
 
-   pad_out[4]                  82.00         117.85         -35.85  (VIOLATED) 
-     PIN : HFSBUF_11_247/Y     82.00         117.85         -35.85  (VIOLATED) 
+   pad_out[12]                 82.00         117.86         -35.86  (VIOLATED) 
+     PIN : HFSBUF_11_230/Y     82.00         117.86         -35.86  (VIOLATED) 
 
-   pad_out[12]                 82.00         117.77         -35.77  (VIOLATED) 
-     PIN : HFSBUF_11_233/Y     82.00         117.77         -35.77  (VIOLATED) 
+   pad_out[24]                 82.00         117.86         -35.86  (VIOLATED) 
+     PIN : HFSBUF_11_242/Y     82.00         117.86         -35.86  (VIOLATED) 
 
-   pad_out[6]                  82.00         117.43         -35.43  (VIOLATED) 
-     PIN : HFSBUF_11_227/Y     82.00         117.43         -35.43  (VIOLATED) 
+   pad_out[6]                  82.00         117.64         -35.64  (VIOLATED) 
+     PIN : HFSBUF_11_226/Y     82.00         117.64         -35.64  (VIOLATED) 
 
-   pad_out[0]                  82.00         116.97         -34.97  (VIOLATED) 
-     PIN : HFSBUF_11_231/Y     82.00         116.97         -34.97  (VIOLATED) 
+   pad_out[18]                 82.00         117.34         -35.34  (VIOLATED) 
+     PIN : HFSBUF_11_240/Y     82.00         117.34         -35.34  (VIOLATED) 
 
-   pad_out[18]                 82.00         116.94         -34.94  (VIOLATED) 
-     PIN : HFSBUF_11_246/Y     82.00         116.94         -34.94  (VIOLATED) 
+   pad_out[20]                 82.00         117.13         -35.13  (VIOLATED) 
+     PIN : HFSBUF_11_229/Y     82.00         117.13         -35.13  (VIOLATED) 
 
-   pad_out[24]                 82.00         116.69         -34.69  (VIOLATED) 
-     PIN : HFSBUF_11_248/Y     82.00         116.69         -34.69  (VIOLATED) 
+   pad_out[22]                 82.00         116.94         -34.94  (VIOLATED) 
+     PIN : HFSBUF_11_249/Y     82.00         116.94         -34.94  (VIOLATED) 
 
-   pad_out[30]                 82.00         116.45         -34.45  (VIOLATED) 
-     PIN : HFSBUF_11_235/Y     82.00         116.45         -34.45  (VIOLATED) 
+   pad_out[10]                 82.00         116.91         -34.91  (VIOLATED) 
+     PIN : HFSBUF_11_243/Y     82.00         116.91         -34.91  (VIOLATED) 
 
-   pad_out[20]                 82.00         116.24         -34.24  (VIOLATED) 
-     PIN : HFSBUF_11_230/Y     82.00         116.24         -34.24  (VIOLATED) 
+   pad_out[30]                 82.00         116.61         -34.61  (VIOLATED) 
+     PIN : ZBUF_4_inst_23148/Y    82.00      116.61         -34.61  (VIOLATED) 
 
-   pad_out[26]                 82.00         115.02         -33.02  (VIOLATED) 
-     PIN : HFSBUF_11_242/Y     82.00         115.02         -33.02  (VIOLATED) 
+   pad_out[28]                 82.00         116.10         -34.10  (VIOLATED) 
+     PIN : ZBUF_4_inst_23149/Y    82.00      116.10         -34.10  (VIOLATED) 
 
-   pad_out[28]                 82.00         114.65         -32.65  (VIOLATED) 
-     PIN : HFSINV_13_244/Y     82.00         114.65         -32.65  (VIOLATED) 
+   pad_out[26]                 82.00         116.03         -34.03  (VIOLATED) 
+     PIN : HFSBUF_11_237/Y     82.00         116.03         -34.03  (VIOLATED) 
 
-   pad_out[22]                 82.00         114.54         -32.54  (VIOLATED) 
-     PIN : HFSINV_13_255/Y     82.00         114.54         -32.54  (VIOLATED) 
+   pad_out[15]                 82.00         110.22         -28.22  (VIOLATED) 
+     PIN : HFSBUF_11_252/Y     82.00         110.22         -28.22  (VIOLATED) 
 
-   pad_out[27]                 82.00         109.89         -27.89  (VIOLATED) 
-     PIN : HFSBUF_11_229/Y     82.00         109.89         -27.89  (VIOLATED) 
+   pad_out[11]                 82.00         109.62         -27.62  (VIOLATED) 
+     PIN : HFSBUF_11_235/Y     82.00         109.62         -27.62  (VIOLATED) 
 
-   pad_out[11]                 82.00         109.25         -27.25  (VIOLATED) 
-     PIN : HFSBUF_11_240/Y     82.00         109.25         -27.25  (VIOLATED) 
+   pad_out[27]                 82.00         109.57         -27.57  (VIOLATED) 
+     PIN : HFSBUF_11_228/Y     82.00         109.57         -27.57  (VIOLATED) 
 
-   pad_out[7]                  82.00         108.89         -26.89  (VIOLATED) 
-     PIN : HFSBUF_11_250/Y     82.00         108.89         -26.89  (VIOLATED) 
+   pad_out[23]                 82.00         109.17         -27.17  (VIOLATED) 
+     PIN : HFSBUF_11_238/Y     82.00         109.17         -27.17  (VIOLATED) 
 
-   pad_out[3]                  82.00         108.53         -26.53  (VIOLATED) 
-     PIN : HFSBUF_11_251/Y     82.00         108.53         -26.53  (VIOLATED) 
+   pad_out[3]                  82.00         108.59         -26.59  (VIOLATED) 
+     PIN : HFSBUF_11_246/Y     82.00         108.59         -26.59  (VIOLATED) 
 
-   pad_out[1]                  82.00         108.42         -26.42  (VIOLATED) 
-     PIN : HFSBUF_11_239/Y     82.00         108.42         -26.42  (VIOLATED) 
+   pad_out[7]                  82.00         108.54         -26.54  (VIOLATED) 
+     PIN : HFSBUF_11_245/Y     82.00         108.54         -26.54  (VIOLATED) 
 
-   pad_out[9]                  82.00         108.36         -26.36  (VIOLATED) 
-     PIN : HFSBUF_11_258/Y     82.00         108.36         -26.36  (VIOLATED) 
+   pad_out[9]                  82.00         108.40         -26.40  (VIOLATED) 
+     PIN : HFSBUF_11_253/Y     82.00         108.40         -26.40  (VIOLATED) 
 
-   pad_out[15]                 82.00         108.33         -26.33  (VIOLATED) 
-     PIN : HFSBUF_11_257/Y     82.00         108.33         -26.33  (VIOLATED) 
+   pad_out[17]                 82.00         107.95         -25.95  (VIOLATED) 
+     PIN : HFSBUF_11_254/Y     82.00         107.95         -25.95  (VIOLATED) 
 
-   pad_out[31]                 82.00         108.20         -26.20  (VIOLATED) 
-     PIN : ZBUF_4_inst_24034/Y    82.00      108.20         -26.20  (VIOLATED) 
+   pad_out[1]                  82.00         107.86         -25.86  (VIOLATED) 
+     PIN : HFSBUF_11_234/Y     82.00         107.86         -25.86  (VIOLATED) 
 
-   pad_out[13]                 82.00         107.07         -25.07  (VIOLATED) 
-     PIN : HFSBUF_11_253/Y     82.00         107.07         -25.07  (VIOLATED) 
+   pad_out[5]                  82.00         107.61         -25.61  (VIOLATED) 
+     PIN : HFSBUF_11_250/Y     82.00         107.61         -25.61  (VIOLATED) 
 
-   pad_out[25]                 82.00         107.02         -25.02  (VIOLATED) 
-     PIN : I_PCI_TOP/HFSBUF_8_228/Y    82.00   107.02       -25.02  (VIOLATED) 
+   pad_out[19]                 82.00         107.15         -25.15  (VIOLATED) 
+     PIN : I_PCI_TOP/HFSBUF_8_251/Y    82.00   107.15       -25.15  (VIOLATED) 
 
-   pad_out[29]                 82.00         104.77         -22.77  (VIOLATED) 
-     PIN : HFSBUF_11_234/Y     82.00         104.77         -22.77  (VIOLATED) 
+   pad_out[21]                 82.00         106.87         -24.87  (VIOLATED) 
+     PIN : HFSBUF_11_244/Y     82.00         106.87         -24.87  (VIOLATED) 
 
-   I_BLENDER_1/n4310           16.00          26.84         -10.84  (VIOLATED) 
-     PIN : I_BLENDER_1/U307/Y    16.00        26.84         -10.84  (VIOLATED) 
+   pad_out[25]                 82.00         106.76         -24.76  (VIOLATED) 
+     PIN : HFSBUF_11_227/Y     82.00         106.76         -24.76  (VIOLATED) 
 
-   I_BLENDER_1/n2768            8.00           9.83          -1.83  (VIOLATED) 
-     PIN : I_BLENDER_1/R_568/Q     8.00        9.83          -1.83  (VIOLATED) 
+   pad_out[13]                 82.00         105.49         -23.49  (VIOLATED) 
+     PIN : HFSBUF_11_248/Y     82.00         105.49         -23.49  (VIOLATED) 
 
-   I_BLENDER_1/n1278            8.00           9.69          -1.69  (VIOLATED) 
-     PIN : I_BLENDER_1/R_482/Q     8.00        9.69          -1.69  (VIOLATED) 
+   I_BLENDER_1/n4083           32.00          48.93         -16.93  (VIOLATED) 
+     PIN : I_BLENDER_1/U3984/Y    32.00       48.93         -16.93  (VIOLATED) 
 
-   I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_24__0_     8.00     9.03    -1.03 (VIOLATED)
-     PIN : I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_reg_24__0_/Q     8.00     9.03    -1.03 (VIOLATED)
+   I_BLENDER_0/n6154           32.00          41.19          -9.19  (VIOLATED) 
+     PIN : I_BLENDER_0/U158/Y    32.00        41.19          -9.19  (VIOLATED) 
 
-   I_BLENDER_1/n4719            8.00           8.81          -0.81  (VIOLATED) 
-     PIN : I_BLENDER_1/R_752/Q     8.00        8.81          -0.81  (VIOLATED) 
+   I_BLENDER_0/n8647           16.00          24.06          -8.06  (VIOLATED) 
+     PIN : I_BLENDER_0/s3_op2_reg_21_/Q    16.00    24.06    -8.06  (VIOLATED) 
 
-   I_BLENDER_1/n1800           16.00          16.54          -0.54  (VIOLATED) 
-     PIN : I_BLENDER_1/U8968/Y    16.00       16.54          -0.54  (VIOLATED) 
+   HFSNET_281                  82.00          88.87          -6.87  (VIOLATED) 
+     PIN : HFSBUF_11716_1474/Y    82.00       88.87          -6.87  (VIOLATED) 
 
-   I_BLENDER_1/n1675           16.00          16.40          -0.40  (VIOLATED) 
-     PIN : I_BLENDER_1/U623/Y    16.00        16.40          -0.40  (VIOLATED) 
+   I_BLENDER_1/n9627            8.00          10.92          -2.92  (VIOLATED) 
+     PIN : I_BLENDER_1/U7211/Y     8.00       10.92          -2.92  (VIOLATED) 
 
-   I_BLENDER_0/s4_op2[15]       8.00           8.19          -0.19  (VIOLATED) 
-     PIN : I_BLENDER_0/s4_op2_reg_15_/Q     8.00     8.19    -0.19  (VIOLATED) 
+   I_BLENDER_1/n3799           16.00          18.83          -2.83  (VIOLATED) 
+     PIN : I_BLENDER_1/U2751/Y    16.00       18.83          -2.83  (VIOLATED) 
 
-   I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_13__8_     8.00     8.17    -0.17 (VIOLATED)
-     PIN : I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_reg_13__8_/Q     8.00     8.17    -0.17 (VIOLATED)
+   I_BLENDER_0/n348            16.00          17.14          -1.14  (VIOLATED) 
+     PIN : I_BLENDER_0/U2410/Y    16.00       17.14          -1.14  (VIOLATED) 
 
-   I_SDRAM_TOP/n226             8.00           8.09          -0.09  (VIOLATED) 
-     PIN : I_SDRAM_TOP/U42/Y     8.00          8.09          -0.09  (VIOLATED) 
+   I_BLENDER_1/n4719            8.00           9.02          -1.02  (VIOLATED) 
+     PIN : I_BLENDER_1/R_752/Q     8.00        9.02          -1.02  (VIOLATED) 
 
-   I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_19__31_     8.00     8.08    -0.08 (VIOLATED)
-     PIN : I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_reg_19__31_/Q     8.00     8.08    -0.08 (VIOLATED)
+   I_BLENDER_1/s2_op2[21]       8.00           8.24          -0.24  (VIOLATED) 
+     PIN : I_BLENDER_1/R_56/Q     8.00         8.24          -0.24  (VIOLATED) 
 
-   I_SDRAM_TOP/I_SDRAM_IF/n17409     8.00      8.07          -0.07  (VIOLATED) 
-     PIN : I_SDRAM_TOP/I_SDRAM_IF/mega_shift_1_reg_10__5_/Q     8.00     8.07    -0.07 (VIOLATED)
+   n503                         8.00           8.16          -0.16  (VIOLATED) 
+     PIN : I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_11_/Q     8.00     8.16    -0.16 (VIOLATED)
 
-   I_BLENDER_1/N611             8.00           8.07          -0.07  (VIOLATED) 
-     PIN : I_BLENDER_1/U6020/Y     8.00        8.07          -0.07  (VIOLATED) 
+   I_SDRAM_TOP/I_SDRAM_IF/mega_shift_1_8     8.00     8.12    -0.12 (VIOLATED) 
+     PIN : I_SDRAM_TOP/I_SDRAM_IF/mega_shift_1_reg_40__9_/Q     8.00     8.12    -0.12 (VIOLATED)
 
-   I_SDRAM_TOP/I_SDRAM_IF/n17645     8.00      8.07          -0.07  (VIOLATED) 
-     PIN : I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_reg_30__5_/Q     8.00     8.07    -0.07 (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_IF/HFSNET_645    16.00    16.09       -0.09  (VIOLATED) 
+     PIN : I_SDRAM_TOP/I_SDRAM_IF/HFSBUF_44500_1360/Y    16.00    16.09    -0.09 (VIOLATED)
 
-   I_BLENDER_0/s2_op1_2        16.00          16.06          -0.06  (VIOLATED) 
-     PIN : I_BLENDER_0/s2_op1_reg_2_/Q    16.00    16.06     -0.06  (VIOLATED) 
+   I_BLENDER_1/n5675            8.00           8.09          -0.09  (VIOLATED) 
+     PIN : I_BLENDER_1/U5536/Y     8.00        8.09          -0.09  (VIOLATED) 
 
-   I_RISC_CORE/Oprnd_A[12]     16.00          16.06          -0.06  (VIOLATED) 
-     PIN : I_RISC_CORE/I_DATA_PATH_Oprnd_A_reg_12_/Q    16.00    16.06    -0.06 (VIOLATED)
+   I_BLENDER_1/n7281           16.00          16.09          -0.09  (VIOLATED) 
+     PIN : I_BLENDER_1/U5055/Y    16.00       16.09          -0.09  (VIOLATED) 
 
-   I_SDRAM_TOP/I_SDRAM_IF/HFSNET_594    32.00    32.05       -0.05  (VIOLATED) 
-     PIN : I_SDRAM_TOP/I_SDRAM_IF/HFSINV_41195_1211/Y    32.00    32.05    -0.05 (VIOLATED)
+   I_SDRAM_TOP/I_SDRAM_READ_FIFO_SD_FIFO_CTL_U1_other_addr_g_sync_6_     8.00     8.09    -0.09 (VIOLATED)
+     PIN : I_SDRAM_TOP/I_SDRAM_READ_FIFO_SD_FIFO_CTL_U1_syncff_reg_6_/Q     8.00     8.09    -0.09 (VIOLATED)
 
-   I_BLENDER_0/ZBUF_781_14     16.00          16.05          -0.05  (VIOLATED) 
-     PIN : I_BLENDER_0/ZBUF_781_inst_2355/Y    16.00    16.05    -0.05 (VIOLATED)
+   I_CONTEXT_MEM/n204          32.00          32.07          -0.07  (VIOLATED) 
+     PIN : I_CONTEXT_MEM/U308/Y    32.00      32.07          -0.07  (VIOLATED) 
 
-   I_BLENDER_0/n287             8.00           8.05          -0.05  (VIOLATED) 
-     PIN : I_BLENDER_0/U6186/Y     8.00        8.05          -0.05  (VIOLATED) 
+   I_BLENDER_0/n5679            8.00           8.07          -0.07  (VIOLATED) 
+     PIN : I_BLENDER_0/U2617/Y     8.00        8.07          -0.07  (VIOLATED) 
 
-   dftopt118                    8.00           8.04          -0.04  (VIOLATED) 
-     PIN : I_BLENDER_0/s1_op1_reg_17_/Q     8.00     8.04    -0.04  (VIOLATED) 
+   I_CONTEXT_MEM/n127          16.00          16.07          -0.07  (VIOLATED) 
+     PIN : I_CONTEXT_MEM/U147/Y    16.00      16.07          -0.07  (VIOLATED) 
 
-   I_BLENDER_0/s2_op2[4]       16.00          16.04          -0.04  (VIOLATED) 
-     PIN : I_BLENDER_0/R_118/Q    16.00       16.04          -0.04  (VIOLATED) 
+   I_BLENDER_1/n1342            8.00           8.06          -0.06  (VIOLATED) 
+     PIN : I_BLENDER_1/R_410/Q     8.00        8.06          -0.06  (VIOLATED) 
 
-   n494                        64.00          64.04          -0.04  (VIOLATED) 
-     PIN : I_RISC_CORE/HFSINV_292_1935/Y    64.00    64.04    -0.04 (VIOLATED) 
+   I_BLENDER_1/s1_op1_1_        8.00           8.06          -0.06  (VIOLATED) 
+     PIN : I_BLENDER_1/s1_op1_reg_1_/Q     8.00     8.06     -0.06  (VIOLATED) 
 
-   I_BLENDER_0/s3_op2_31       16.00          16.03          -0.03  (VIOLATED) 
-     PIN : I_BLENDER_0/s3_op2_reg_31_/Q    16.00    16.03    -0.03  (VIOLATED) 
+   I_BLENDER_0/s3_op1_13        8.00           8.05          -0.05  (VIOLATED) 
+     PIN : I_BLENDER_0/s3_op1_reg_13_/Q     8.00     8.05    -0.05  (VIOLATED) 
 
-   net_blender_result_0__19_    16.00         16.03          -0.03  (VIOLATED) 
-     PIN : I_BLENDER_0/HFSBUF_78_479/Y    16.00    16.03     -0.03  (VIOLATED) 
+   I_BLENDER_0/n5868            8.00           8.04          -0.04  (VIOLATED) 
+     PIN : I_BLENDER_0/U6046/Y     8.00        8.04          -0.04  (VIOLATED) 
 
-   I_SDRAM_TOP/I_SDRAM_IF/n17763     8.00      8.02          -0.02  (VIOLATED) 
-     PIN : I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_reg_23__3_/Q     8.00     8.02    -0.02 (VIOLATED)
+   aps_rename_41_               8.00           8.04          -0.04  (VIOLATED) 
+     PIN : I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_12_/Q     8.00     8.04    -0.04 (VIOLATED)
 
-   n398                        32.00          32.02          -0.02  (VIOLATED) 
-     PIN : RESULT_DATA_10__UPF_LS/Y    32.00    32.02        -0.02  (VIOLATED) 
+   I_BLENDER_0/n1380            8.00           8.04          -0.04  (VIOLATED) 
+     PIN : I_BLENDER_0/U1442/CO     8.00       8.04          -0.04  (VIOLATED) 
 
-   I_SDRAM_TOP/I_SDRAM_IF/n11039     8.00      8.02          -0.02  (VIOLATED) 
-     PIN : I_SDRAM_TOP/I_SDRAM_IF/U11935/Y     8.00     8.02    -0.02 (VIOLATED)
+   I_BLENDER_0/n7945            8.00           8.03          -0.03  (VIOLATED) 
+     PIN : I_BLENDER_0/U8422/Y     8.00        8.03          -0.03  (VIOLATED) 
 
-   pad_in[18]                  16.00          16.02          -0.02  (VIOLATED) 
-     PORT: pad_in[18]          16.00          16.02          -0.02  (VIOLATED) 
+   aps_rename_47_               8.00           8.03          -0.03  (VIOLATED) 
+     PIN : I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_5_/Q     8.00     8.03    -0.03 (VIOLATED)
 
-   I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_39__24_     8.00     8.01    -0.01 (VIOLATED)
-     PIN : I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_reg_39__24_/Q     8.00     8.01    -0.01 (VIOLATED)
+   aps_rename_43_               8.00           8.03          -0.03  (VIOLATED) 
+     PIN : I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_10_/Q     8.00     8.03    -0.03 (VIOLATED)
 
-   I_BLENDER_0/n1860            8.00           8.01          -0.01  (VIOLATED) 
-     PIN : I_BLENDER_0/U8810/Y     8.00        8.01          -0.01  (VIOLATED) 
+   I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_36__28_     8.00     8.03    -0.03 (VIOLATED)
+     PIN : I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_reg_36__28_/Q     8.00     8.03    -0.03 (VIOLATED)
 
-   I_RISC_CORE/sram_fixnet_141    32.00       32.01          -0.01  (VIOLATED) 
-     PIN : I_RISC_CORE/sram_fixcell_141/Y    32.00    32.01    -0.01 (VIOLATED)
+   I_BLENDER_1/s1_op1_8_        8.00           8.03          -0.03  (VIOLATED) 
+     PIN : I_BLENDER_1/s1_op1_reg_8_/Q     8.00     8.03     -0.03  (VIOLATED) 
 
-   I_PCI_TOP/ZBUF_2_61         16.00          16.00          -0.00  (VIOLATED) 
-     PIN : I_PCI_TOP/ZBUF_2_inst_23268/Y    16.00    16.00    -0.00 (VIOLATED) 
+   I_BLENDER_1/s3_op1_4         8.00           8.03          -0.03  (VIOLATED) 
+     PIN : I_BLENDER_1/s3_op1_reg_4_/Q     8.00     8.03     -0.03  (VIOLATED) 
+
+   I_SDRAM_TOP/I_SDRAM_IF/HFSNET_247    32.00    32.03       -0.03  (VIOLATED) 
+     PIN : I_SDRAM_TOP/I_SDRAM_IF/HFSBUF_2802_846/Y    32.00    32.03    -0.03 (VIOLATED)
+
+   I_BLENDER_1/s2_op2[9]       16.00          16.02          -0.02  (VIOLATED) 
+     PIN : I_BLENDER_1/R_542/Q    16.00       16.02          -0.02  (VIOLATED) 
+
+   I_BLENDER_1/n1513            8.00           8.02          -0.02  (VIOLATED) 
+     PIN : I_BLENDER_1/U6755/Y     8.00        8.02          -0.02  (VIOLATED) 
+
+   I_BLENDER_1/n1147            8.00           8.02          -0.02  (VIOLATED) 
+     PIN : I_BLENDER_1/U5292/SO     8.00       8.02          -0.02  (VIOLATED) 
+
+   I_BLENDER_1/s1_op2_11_       8.00           8.02          -0.02  (VIOLATED) 
+     PIN : I_BLENDER_1/s1_op2_reg_11_/Q     8.00     8.02    -0.02  (VIOLATED) 
+
+   I_SDRAM_TOP/sram_fixnet_8    16.00         16.02          -0.02  (VIOLATED) 
+     PIN : I_SDRAM_TOP/sram_fixcell_8/Y    16.00    16.02    -0.02  (VIOLATED) 
+
+   I_BLENDER_0/n8648           16.00          16.01          -0.01  (VIOLATED) 
+     PIN : I_BLENDER_0/R_78/QN    16.00       16.01          -0.01  (VIOLATED) 
+
+   I_SDRAM_TOP/I_SDRAM_IF/HFSNET_431    82.00    82.01       -0.01  (VIOLATED) 
+     PIN : I_SDRAM_TOP/I_SDRAM_IF/HFSBUF_62412_1032/Y    82.00    82.01    -0.01 (VIOLATED)
+
+   I_BLENDER_1/n2620            8.00           8.01          -0.01  (VIOLATED) 
+     PIN : I_BLENDER_1/ctmTdsLR_1_25273/Y     8.00     8.01    -0.01 (VIOLATED)
 
   ---------------------------------------------------------------------------
-   Number of max_capacitance violation(s): 60
+   Number of max_capacitance violation(s): 69
 
 
 
-   Total number of violation(s): 66
+   Total number of violation(s): 74
 1

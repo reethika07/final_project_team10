@@ -13,8 +13,8 @@ Warning: There are 2 endpoints which are not constrained for maximum delay.
 
 Endpoint
 --------------------------------------------------------------------------------
-sd_CKn
 sd_CK
+sd_CKn
 
 Information: Checking 'unexpandable_clocks'.
 Information: Checking 'latch_fanout'.

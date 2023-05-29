@@ -1,0 +1,3240 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Launching 14 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   9] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  10] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  11] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  12] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  13] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  14] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for  14 (of  14) workers    : Sat May 27 23:48:26 2023
+  Waiting for   0 (of  14) workers    : Sat May 27 23:48:36 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Sat May 27 23:48:37 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           14                      auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         16331         ONLINE
+                   2    mo           -         16335         ONLINE
+                   3    mo           -         16346         ONLINE
+                   4    mo           -         16327         ONLINE
+                   5    mo           -         16344         ONLINE
+                   6    mo           -         16341         ONLINE
+                   7    mo           -         16345         ONLINE
+                   8    mo           -         16342         ONLINE
+                   9    mo           -         16503         ONLINE
+                   10   mo           -         16501         ONLINE
+                   11   mo           -         16502         ONLINE
+                   12   mo           -         16508         ONLINE
+                   13   mo           -         16507         ONLINE
+                   14   mo           -         16509         ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+                   9                                         4
+                   10                                        4
+                   11                                        4
+                   12                                        4
+                   13                                        4
+                   14                                        4
+  --------------------------------------------------------------------
+  Total                                                      56
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_fastslow'
+-----------------------------------
+End of Master/Slave Task Processing
+
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sat May 27 23:49:51 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'test_slowfast'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/CLK
+               (internal path startpoint clocked by SYS_2x_CLK)
+  Endpoint: occ_int2/fast_clk_0_clkgt/u_icg
+               (falling clock gating-check end-point clocked by SYS_2x_CLK)
+  Last common pin: cts_dlydt_32422/Y
+  Path Group: **clock_gating_default**
+  Path Type: max
+  Scenario: test_slowfast
+  Min Clock Paths Derating Factor : 0.95
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SYS_2x_CLK (rise edge)                            0.00       0.00
+  clock network delay (propagated)                        1.38       1.38
+  occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/CLK (DFFARX1_LVT)
+                                                          0.00       1.38 r
+  occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/Q (DFFARX1_LVT)
+                                                          0.25 &     1.63 f
+  occ_int2/U_gf_mux_0/ctmTdsLR_1_24113/Y (AO21X1_LVT)     0.13 &     1.76 f
+  occ_int2/fast_clk_0_clkgt/u_icg/EN (CGLNPRX2_LVT)       0.00 &     1.76 f
+  data arrival time                                                  1.76
+
+  clock SYS_2x_CLK (fall edge)                            1.20       1.20
+  clock network delay (propagated)                        0.32       1.52
+  clock reconvergence pessimism                           0.02       1.54
+  clock uncertainty                                      -0.10       1.44
+  occ_int2/fast_clk_0_clkgt/u_icg/CLK (CGLNPRX2_LVT)                 1.44 f
+  clock gating setup time                                -0.19       1.26
+  data required time                                                 1.26
+  ------------------------------------------------------------------------------
+  data required time                                                 1.26
+  data arrival time                                                 -1.76
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.50
+
+
+1
+pt_shell> report_timing -delay_type  min
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sat May 27 23:50:34 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_min'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_CONTEXT_MEM/ram_write_addr_reg_4_
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Endpoint: I_CONTEXT_MEM/I_CONTEXT_RAM_1_3
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Last common pin: I_CLOCKING/occ_int1/cts_buf_693832355/Y
+  Path Group: ate_clk
+  Path Type: min
+  Scenario: atspeed_shift
+  Min Data Paths Derating Factor  : 0.95
+  Min Clock Paths Derating Factor : 0.95
+  Max Clock Paths Derating Factor : 1.05
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.17       0.17
+  I_CONTEXT_MEM/ram_write_addr_reg_4_/CLK (SDFFARX1_RVT)
+                                                          0.00       0.17 r
+  I_CONTEXT_MEM/ram_write_addr_reg_4_/Q (SDFFARX1_RVT)
+                                                          0.06 &     0.22 f
+  I_CONTEXT_MEM/HFSBUF_205_527/Y (NBUFFX16_HVT)           0.02 &     0.25 f
+  I_CONTEXT_MEM/I_CONTEXT_RAM_1_3/A1[4] (SRAM2RW64x8)     0.00 &     0.25 f
+  data arrival time                                                  0.25
+
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.20       0.20
+  clock reconvergence pessimism                          -0.01       0.19
+  clock uncertainty                                       0.10       0.29
+  I_CONTEXT_MEM/I_CONTEXT_RAM_1_3/CE1 (SRAM2RW64x8)                  0.29 r
+  library hold time                                       0.04       0.34
+  data required time                                                 0.34
+  ------------------------------------------------------------------------------
+  data required time                                                 0.34
+  data arrival time                                                 -0.25
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.08
+
+
+1
+pt_shell> pwd
+/home/ramadugu/common/Documents/backupp/sai/pt/work
+pt_shell> souorce ../scripts/eco_fixing.tcl
+Error: unknown command 'souorce' (CMD-005)
+pt_shell> source ../scripts/eco_fixing.tcl
+Information: Starting cell swapping at [ Sat May 27 23:51:07 2023 ]...
+
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Initial library cell patterns:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         23882 ( 52%)
+RVT                                          9163 ( 20%)
+LVT                                         12827 ( 28%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45912 (100%)
+
+Information: Sequential and combinational cells will be swapped.
+Information: Analyzing scenarios for setup timing...
+Information: Starting iteration 1 at [ Sat May 27 23:51:16 2023 ]...
+Information: Analyzing constraints...
+Information: Finalizing ECO change list...
+Information: 7 cells have been swapped.
+Information: Starting updating timing at [ Sat May 27 23:51:17 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:51:19 2023 ]...
+Information: Starting pre-DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sat May 27 23:51:27 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:51:27 2023 ]...
+Information: 2 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Timing tuning process completed.
+
+Library cell patterns after iteration 1:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         23882 ( 52%)
+RVT                                          9168 ( 20%)
+LVT                                         12822 ( 28%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45912 (100%)
+
+Information: Starting iteration 2 at [ Sat May 27 23:51:30 2023 ]...
+Information: Finalizing ECO change list...
+Information: 1348 cells have been swapped.
+Information: Starting updating timing at [ Sat May 27 23:51:32 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:51:52 2023 ]...
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sat May 27 23:52:00 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:52:12 2023 ]...
+Information: 349 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sat May 27 23:52:16 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:52:22 2023 ]...
+Information: 148 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sat May 27 23:52:26 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:52:28 2023 ]...
+Information: 38 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Starting updating timing at [ Sat May 27 23:52:31 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:52:32 2023 ]...
+Information: 4 cells have been tuned.
+Information: Starting timing tuning phase 5...
+Information: Timing tuning process completed.
+
+Library cell patterns after iteration 2:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         23882 ( 52%)
+RVT                                          9977 ( 22%)
+LVT                                         12013 ( 26%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45912 (100%)
+
+Information: Starting iteration 3 at [ Sat May 27 23:52:36 2023 ]...
+Information: Finalizing ECO change list...
+Information: 1542 cells have been swapped.
+Information: Starting updating timing at [ Sat May 27 23:52:38 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:53:04 2023 ]...
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sat May 27 23:53:12 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:53:28 2023 ]...
+Information: 624 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sat May 27 23:53:32 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:53:38 2023 ]...
+Information: 168 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sat May 27 23:53:42 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:53:44 2023 ]...
+Information: 15 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Timing tuning process completed.
+
+Library cell patterns after iteration 3:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         24617 ( 54%)
+RVT                                          9242 ( 20%)
+LVT                                         12013 ( 26%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45912 (100%)
+
+Information: Starting final iteration at [ Sat May 27 23:53:48 2023 ]...
+Information: Starting pre-DRC tuning phase 1...
+Information: Starting updating timing at [ Sat May 27 23:53:50 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:53:53 2023 ]...
+Information: 24 cells have been tuned.
+Information: Starting pre-DRC tuning phase 2...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sat May 27 23:53:59 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:54:00 2023 ]...
+Information: 8 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Timing tuning process completed.
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: The cell swapping process is complete.
+
+Final library cell patterns:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         24603 ( 54%)
+RVT                                          9234 ( 20%)
+LVT                                         12035 ( 26%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45912 (100%)
+
+Information: Elapsed time [              180 seconds ]
+Information: Completed at [ Sat May 27 23:54:07 2023 ]
+
+Information: Starting DRC fix iteration 1 at [ Sat May 27 23:54:07 2023 ]...
+Information: Analyzing scenarios...
+
+Available buffers:
+Lib_cell               Area
+--------------------------------------------------------
+NBUFFX8_HVT            3.81
+
+Information: 233 max capacitance violations located in the func_min scenario... (PTECO-023)
+Information: 1274 max capacitance violations located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sat May 27 23:54:42 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:55:33 2023 ]...
+Information: 139 cells have been resized.
+Information: 115 buffers have been inserted.
+
+Information: Starting DRC fix iteration 2 at [ Sat May 27 23:55:33 2023 ]...
+Information: Analyzing scenarios...
+Information: 29 max capacitance violations located in the func_min scenario... (PTECO-023)
+Information: 195 max capacitance violations located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sat May 27 23:55:38 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:55:41 2023 ]...
+Information: 1 cells have been resized.
+Information: 18 buffers have been inserted.
+
+Information: Starting DRC fix iteration 3 at [ Sat May 27 23:55:41 2023 ]...
+Information: Analyzing scenarios...
+Information: 10 max capacitance violations located in the func_min scenario... (PTECO-023)
+Information: 46 max capacitance violations located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: No more fixes are available.
+Information: The DRC violation fixing process is complete.
+
+
+Remaining Violations:
+Scenario                               Total  Unfixable
+--------------------------------------------------------
+func_max                                   0          0
+func_min                                  10         10
+test_best                                  9          9
+test_worst                                 1          1
+func_slowfast                              2          2
+func_fastslow                              1          1
+test_slowfast                              2          2
+test_fastslow                              1          1
+atspeed_cap                                1          1
+atspeed_shift                              9          9
+stuck_at_shift                             1          1
+stuck_at_cap                               9          9
+--------------------------------------------------------
+Total                                     46         46
+
+Inserted buffers:
+   Count Lib_cell               Area          Total_area
+--------------------------------------------------------
+     133 NBUFFX8_HVT            3.81              507.02
+--------------------------------------------------------
+     133 TOTAL                                    507.02
+
+Final ECO Summary:
+--------------------------------------------------------
+Number of size_cell commands                         140
+Number of insert_buffer commands                     133
+Total number of commands                             273
+Area increased by cell sizing                     247.79
+Area increased by buffer insertion                507.02
+Total area increased                              754.81
+
+Information: Elapsed time [              101 seconds ]
+Information: Completed at [ Sat May 27 23:55:48 2023 ]
+
+Information: Starting DRC fix iteration 1 at [ Sat May 27 23:55:51 2023 ]...
+Information: Analyzing scenarios...
+
+Available buffers:
+Lib_cell               Area
+--------------------------------------------------------
+NBUFFX8_HVT            3.81
+
+Information: 1 max transition violations located in the func_min scenario... (PTECO-023)
+Information: 6 max transition violations located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sat May 27 23:56:29 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:56:29 2023 ]...
+Information: 1 buffers have been inserted.
+
+Information: Starting DRC fix iteration 2 at [ Sat May 27 23:56:29 2023 ]...
+Information: Analyzing scenarios...
+Information: 0 max transition violations located in all scenarios... (PTECO-024)
+Information: No more fixes are available.
+Information: The DRC violation fixing process is complete.
+
+
+Remaining Violations:
+Scenario                               Total  Unfixable
+--------------------------------------------------------
+func_max                                   0          0
+func_min                                   0          0
+test_best                                  0          0
+test_worst                                 0          0
+func_slowfast                              0          0
+func_fastslow                              0          0
+test_slowfast                              0          0
+test_fastslow                              0          0
+atspeed_cap                                0          0
+atspeed_shift                              0          0
+stuck_at_shift                             0          0
+stuck_at_cap                               0          0
+--------------------------------------------------------
+Total                                      0          0
+
+Inserted buffers:
+   Count Lib_cell               Area          Total_area
+--------------------------------------------------------
+       1 NBUFFX8_HVT            3.81                3.81
+--------------------------------------------------------
+       1 TOTAL                                      3.81
+
+Final ECO Summary:
+--------------------------------------------------------
+Number of insert_buffer commands                       1
+Total number of commands                               1
+Area increased by buffer insertion                  3.81
+Total area increased                                3.81
+
+Information: Elapsed time [               40 seconds ]
+Information: Completed at [ Sat May 27 23:56:31 2023 ]
+
+Information: Starting timing fix iteration 1 at [ Sat May 27 23:56:31 2023 ]...
+Information: Analyzing scenarios...
+Information: 872 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 880 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sat May 27 23:56:38 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:57:10 2023 ]...
+Information: 1112 cells have been resized.
+
+Information: Starting timing fix iteration 2 at [ Sat May 27 23:57:10 2023 ]...
+Information: Analyzing scenarios...
+Information: 173 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 175 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sat May 27 23:57:15 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:57:28 2023 ]...
+Information: 400 cells have been resized.
+
+Information: Starting timing fix iteration 3 at [ Sat May 27 23:57:28 2023 ]...
+Information: Analyzing scenarios...
+Information: 91 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 93 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sat May 27 23:57:32 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:57:37 2023 ]...
+Information: 148 cells have been resized.
+
+Information: Starting timing fix iteration 4 at [ Sat May 27 23:57:37 2023 ]...
+Information: Analyzing scenarios...
+Information: 74 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 76 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sat May 27 23:57:41 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:57:45 2023 ]...
+Information: 87 cells have been resized.
+
+Information: Starting timing fix iteration 5 at [ Sat May 27 23:57:45 2023 ]...
+Information: Analyzing scenarios...
+Information: 68 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 70 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sat May 27 23:57:53 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:58:01 2023 ]...
+Information: 32 cells have been resized.
+
+Information: Starting timing fix iteration 6 at [ Sat May 27 23:58:01 2023 ]...
+Information: Analyzing scenarios...
+Information: 63 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 65 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sat May 27 23:58:10 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:58:13 2023 ]...
+Information: 9 cells have been resized.
+
+Information: Starting timing fix iteration 7 at [ Sat May 27 23:58:13 2023 ]...
+Information: Analyzing scenarios...
+Information: 63 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 65 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sat May 27 23:58:21 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:58:25 2023 ]...
+Information: 14 cells have been resized.
+
+Information: Starting timing fix iteration 8 at [ Sat May 27 23:58:25 2023 ]...
+Information: Analyzing scenarios...
+Information: 62 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 64 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sat May 27 23:58:34 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:58:36 2023 ]...
+Information: 2 cells have been resized.
+
+Information: Starting timing fix iteration 9 at [ Sat May 27 23:58:36 2023 ]...
+Information: Analyzing scenarios...
+Information: 62 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 64 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sat May 27 23:58:43 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:58:44 2023 ]...
+Information: 1 cells have been resized.
+
+Information: Starting timing fix iteration 10 at [ Sat May 27 23:58:44 2023 ]...
+Information: Analyzing scenarios...
+Information: 62 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 64 violating endpoints located in all scenarios... (PTECO-024)
+Information: Quality of results may not improve in following iterations...
+Information: No more fixes are available.
+Information: The timing violation fixing process is complete.
+
+Final ECO Summary:
+--------------------------------------------------------
+Number of size_cell commands                        1805
+Total number of commands                            1805
+Area increased by cell sizing                     214.50
+Total area increased                              214.50
+
+Fixing Summary:
+--------------------------------------------------------
+Total violating endpoints found                      880
+Total violating endpoints fixed                      816
+Total violating endpoints remaining                   64
+Total percentage of violations fixed                92.7%
+
+Information: Elapsed time [              133 seconds ]
+Information: Completed at [ Sat May 27 23:58:44 2023 ]
+
+Information: Starting timing fix iteration 1 at [ Sat May 27 23:58:45 2023 ]...
+Information: Analyzing scenarios...
+
+Available buffers:
+Lib_cell               Area
+--------------------------------------------------------
+NBUFFX8_HVT            3.81
+
+Information: 5235 violating endpoints located in the atspeed_shift scenario... (PTECO-023)
+Information: 5235 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sat May 27 23:59:01 2023 ]...
+Information: Finished updating timing at [ Sat May 27 23:59:50 2023 ]...
+Information: Analyzing timing improvement...
+Information: Tuning changes...
+Information: Starting updating timing at [ Sat May 27 23:59:51 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:00:02 2023 ]...
+Information: 26 cells have been resized.
+Information: 4225 buffers have been inserted.
+
+Information: Starting timing fix iteration 2 at [ Sun May 28 00:00:02 2023 ]...
+Information: Analyzing scenarios...
+Information: 1591 violating endpoints located in the atspeed_shift scenario... (PTECO-023)
+Information: 1591 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 00:00:07 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:00:21 2023 ]...
+Information: Analyzing timing improvement...
+Information: Tuning changes...
+Information: Starting updating timing at [ Sun May 28 00:00:22 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:00:29 2023 ]...
+Information: 660 cells have been resized.
+Information: 235 buffers have been inserted.
+
+Information: Starting timing fix iteration 3 at [ Sun May 28 00:00:29 2023 ]...
+Information: Analyzing scenarios...
+Information: 743 violating endpoints located in the atspeed_shift scenario... (PTECO-023)
+Information: 743 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 00:00:31 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:00:35 2023 ]...
+Information: Analyzing timing improvement...
+Information: Tuning changes...
+Information: Starting updating timing at [ Sun May 28 00:00:35 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:00:36 2023 ]...
+Information: 33 cells have been resized.
+Information: 65 buffers have been inserted.
+
+Information: Starting timing fix iteration 4 at [ Sun May 28 00:00:36 2023 ]...
+Information: Analyzing scenarios...
+Information: 678 violating endpoints located in the atspeed_shift scenario... (PTECO-023)
+Information: 678 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 00:00:39 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:00:41 2023 ]...
+Information: Analyzing timing improvement...
+Information: Tuning changes...
+Information: Starting updating timing at [ Sun May 28 00:00:41 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:00:42 2023 ]...
+Information: 2 cells have been resized.
+Information: 52 buffers have been inserted.
+
+Information: Starting timing fix iteration 5 at [ Sun May 28 00:00:42 2023 ]...
+Information: Analyzing scenarios...
+Information: 642 violating endpoints located in the atspeed_shift scenario... (PTECO-023)
+Information: 642 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 00:00:44 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:00:45 2023 ]...
+Information: Analyzing timing improvement...
+Information: Tuning changes...
+Information: Starting updating timing at [ Sun May 28 00:00:46 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:00:46 2023 ]...
+Information: 34 buffers have been inserted.
+
+Information: Starting timing fix iteration 6 at [ Sun May 28 00:00:46 2023 ]...
+Information: Analyzing scenarios...
+Information: 621 violating endpoints located in the atspeed_shift scenario... (PTECO-023)
+Information: 621 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 00:00:49 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:00:50 2023 ]...
+Information: Analyzing timing improvement...
+Information: Tuning changes...
+Information: Starting updating timing at [ Sun May 28 00:00:50 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:00:51 2023 ]...
+Information: 20 buffers have been inserted.
+
+Information: Starting timing fix iteration 7 at [ Sun May 28 00:00:51 2023 ]...
+Information: Analyzing scenarios...
+Information: 609 violating endpoints located in the atspeed_shift scenario... (PTECO-023)
+Information: 609 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 00:00:54 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:00:54 2023 ]...
+Information: Analyzing timing improvement...
+Information: Tuning changes...
+Information: Starting updating timing at [ Sun May 28 00:00:55 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:00:55 2023 ]...
+Information: 19 buffers have been inserted.
+
+Information: Starting timing fix iteration 8 at [ Sun May 28 00:00:55 2023 ]...
+Information: Analyzing scenarios...
+Information: 598 violating endpoints located in the atspeed_shift scenario... (PTECO-023)
+Information: 598 violating endpoints located in all scenarios... (PTECO-024)
+Information: Quality of results may not improve in following iterations...
+Information: No more fixes are available.
+Information: The timing violation fixing process is complete.
+
+Inserted buffers:
+   Count Lib_cell               Area          Total_area
+--------------------------------------------------------
+    4650 NBUFFX8_HVT            3.81            17726.54
+--------------------------------------------------------
+    4650 TOTAL                                  17726.54
+
+Final ECO Summary:
+--------------------------------------------------------
+Number of size_cell commands                         721
+Number of insert_buffer commands                    4650
+Total number of commands                            5371
+Area increased by cell sizing                    1173.64
+Area increased by buffer insertion              17727.13
+Total area increased                            18900.77
+
+Fixing Summary:
+--------------------------------------------------------
+Total violating endpoints found                     5235
+Total violating endpoints fixed                     4637
+Total violating endpoints remaining                  598
+Total percentage of violations fixed                88.6%
+
+Information: Elapsed time [              130 seconds ]
+Information: Completed at [ Sun May 28 00:00:55 2023 ]
+
+Information: Starting cell swapping at [ Sun May 28 00:00:56 2023 ]...
+
+Initial library cell patterns:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         28297 ( 56%)
+RVT                                          9192 ( 18%)
+LVT                                         13167 ( 26%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50696 (100%)
+
+Information: Sequential and combinational cells will be swapped.
+Information: Analyzing scenarios for setup timing...
+Information: Starting iteration 1 at [ Sun May 28 00:00:57 2023 ]...
+Information: Analyzing constraints...
+Information: Finalizing ECO change list...
+Information: 1 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 00:00:58 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:00:58 2023 ]...
+Information: Starting pre-DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:01:03 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:01:04 2023 ]...
+Information: 1 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Timing tuning process completed.
+
+Library cell patterns after iteration 1:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         28297 ( 56%)
+RVT                                          9192 ( 18%)
+LVT                                         13167 ( 26%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50696 (100%)
+
+Information: Starting iteration 2 at [ Sun May 28 00:01:06 2023 ]...
+Information: Finalizing ECO change list...
+Information: 2158 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 00:01:07 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:01:32 2023 ]...
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:01:37 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:01:53 2023 ]...
+Information: 635 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 00:01:57 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:02:06 2023 ]...
+Information: 379 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sun May 28 00:02:10 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:02:14 2023 ]...
+Information: 168 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Starting updating timing at [ Sun May 28 00:02:17 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:02:19 2023 ]...
+Information: 65 cells have been tuned.
+Information: Starting timing tuning phase 5...
+Information: Starting updating timing at [ Sun May 28 00:02:21 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:02:23 2023 ]...
+Information: 8 cells have been tuned.
+Information: Starting timing tuning phase 6...
+Information: Starting updating timing at [ Sun May 28 00:02:25 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:02:25 2023 ]...
+Information: 1 cells have been tuned.
+Information: Starting timing tuning phase 7...
+Information: Timing tuning process completed.
+
+Library cell patterns after iteration 2:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         28297 ( 56%)
+RVT                                         10094 ( 20%)
+LVT                                         12265 ( 24%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50696 (100%)
+
+Information: Starting iteration 3 at [ Sun May 28 00:02:28 2023 ]...
+Information: Finalizing ECO change list...
+Information: 1959 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 00:02:29 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:02:55 2023 ]...
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:03:01 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:03:21 2023 ]...
+Information: 884 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 00:03:25 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:03:33 2023 ]...
+Information: 239 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sun May 28 00:03:36 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:03:38 2023 ]...
+Information: 51 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Starting updating timing at [ Sun May 28 00:03:40 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:03:42 2023 ]...
+Information: 13 cells have been tuned.
+Information: Starting timing tuning phase 5...
+Information: Timing tuning process completed.
+
+Library cell patterns after iteration 3:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         29069 ( 57%)
+RVT                                          9322 ( 18%)
+LVT                                         12265 ( 24%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50696 (100%)
+
+Information: Starting final iteration at [ Sun May 28 00:03:45 2023 ]...
+Information: Starting pre-DRC tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:03:47 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:03:48 2023 ]...
+Information: 7 cells have been tuned.
+Information: Starting pre-DRC tuning phase 2...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:03:53 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:03:53 2023 ]...
+Information: 9 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Timing tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:03:58 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:03:59 2023 ]...
+Information: 12 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 00:04:01 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:04:02 2023 ]...
+Information: 3 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting timing tuning phase 4...
+Information: Timing tuning process completed.
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: The cell swapping process is complete.
+
+Final library cell patterns:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         29058 ( 57%)
+RVT                                          9312 ( 18%)
+LVT                                         12286 ( 24%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50696 (100%)
+
+Information: Elapsed time [              192 seconds ]
+Information: Completed at [ Sun May 28 00:04:07 2023 ]
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+-----------------------------------
+End of Master/Slave Task Processing
+
+1
+1
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sun May 28 00:04:12 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'func_slowfast'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/CLK
+               (internal path startpoint clocked by SYS_2x_CLK)
+  Endpoint: occ_int2/fast_clk_0_clkgt/u_icg
+               (falling clock gating-check end-point clocked by SYS_2x_CLK)
+  Last common pin: cts_dlydt_32422/Y
+  Path Group: **clock_gating_default**
+  Path Type: max
+  Scenario: test_slowfast
+  Min Clock Paths Derating Factor : 0.95
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SYS_2x_CLK (rise edge)                            0.00       0.00
+  clock network delay (propagated)                        1.38       1.38
+  occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/CLK (DFFARX1_LVT)
+                                                          0.00       1.38 r
+  occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/Q (DFFARX1_LVT)
+                                                          0.25 &     1.63 f
+  occ_int2/U_gf_mux_0/ctmTdsLR_1_24113/Y (AO21X1_LVT)     0.13 &     1.76 f
+  occ_int2/fast_clk_0_clkgt/u_icg/EN (CGLNPRX2_LVT)       0.00 &     1.76 f
+  data arrival time                                                  1.76
+
+  clock SYS_2x_CLK (fall edge)                            1.20       1.20
+  clock network delay (propagated)                        0.32       1.52
+  clock reconvergence pessimism                           0.02       1.54
+  clock uncertainty                                      -0.10       1.44
+  occ_int2/fast_clk_0_clkgt/u_icg/CLK (CGLNPRX2_LVT)                 1.44 f
+  clock gating setup time                                -0.19       1.26
+  data required time                                                 1.26
+  ------------------------------------------------------------------------------
+  data required time                                                 1.26
+  data arrival time                                                 -1.76
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.50
+
+
+1
+pt_shell> report_timing -delay_type min
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sun May 28 00:04:19 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'test_best'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_CTL_U1_count_int_reg_0_
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Endpoint: I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_0
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Last common pin: I_CLOCKING/occ_int1/cts_buf_692932346/Y
+  Path Group: ate_clk
+  Path Type: min
+  Scenario: atspeed_shift
+  Min Data Paths Derating Factor  : 0.95
+  Min Clock Paths Derating Factor : 0.95
+  Max Clock Paths Derating Factor : 1.05
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.18       0.18
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_CTL_U1_count_int_reg_0_/CLK (SDFFARX1_LVT)
+                                                          0.00       0.18 r
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_CTL_U1_count_int_reg_0_/Q (SDFFARX1_LVT)
+                                                          0.05 &     0.23 f
+  I_SDRAM_TOP/HFSBUF_170_1760/Y (NBUFFX8_RVT)             0.02 &     0.25 f
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_0/A1[0] (SRAM2RW64x32)
+                                                         -0.00 &     0.25 f
+  data arrival time                                                  0.25
+
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.21       0.21
+  clock reconvergence pessimism                          -0.02       0.19
+  clock uncertainty                                       0.10       0.29
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_0/CE1 (SRAM2RW64x32)
+                                                                     0.29 r
+  library hold time                                       0.04       0.33
+  data required time                                                 0.33
+  ------------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -0.25
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.08
+
+
+1
+pt_shell> set_app_var eco_report_unfixed_reason_max_endpoints 50
+50
+pt_shell> man set_App_var
+Error: No manual entry for 'set_App_var' (CMD-025)
+pt_shell> man set_app_var
+2.  Synopsys Commands                                        Command Reference
+                                  set_app_var
+
+NAME
+       set_app_var
+              Sets the value of an application variable.
+
+SYNTAX
+       string set_app_var
+              -default
+              var
+              value
+
+   Data Types
+       var        string
+       value      string
+
+ARGUMENTS
+       -default
+              Resets the variable to its default value.
+
+       var    Specifies the application variable to set.
+
+       value  Specifies the value to which the variable is to be set.
+
+DESCRIPTION
+       The  set_app_var command sets the specified application variable.  This
+       command sets the variable to its default value or to a  new  value  you
+       specify.
+
+       This command returns the new value of the variable if setting the vari-
+       able was successful.  If the application variable  could  not  be  set,
+       then an error is returned indicating the reason for the failure.
+
+       Reasons for failure include:
+
+        o  The  specified variable name is not an application variable, unless
+         the application variable sh_allow_tcl_with_set_app_var is set to true
+         See the sh_allow_tcl_with_set_app_var man page for details.
+
+        o The specified application variable is read only.
+
+        o  The value specified is not a legal value for this application vari-
+         able
+
+EXAMPLES
+       The following example attempts to set a read-only application variable:
+
+         prompt> set_app_var synopsys_root /tmp
+         Error: can't set "synopsys_root": variable is read-only
+                Use error_info for more info. (CMD-013)
+
+       In  this example, the application variable name is entered incorrectly,
+       which generates an error message:
+
+         prompt> set_app_var sh_enabel_page_mode 1
+         Error: "sh_enabel_page_mode" is not an application variable
+                 Use error_info for more info. (CMD-013)
+
+       This example shows the variable name entered correctly:
+
+         prompt> set_app_var sh_enable_page_mode 1
+         1
+
+       This example resets the variable to its default value:
+
+         prompt> set_app_var sh_enable_page_mode -default
+         0
+
+SEE ALSO
+       get_app_var(2)
+       report_app_var(2)
+       write_app_var(2)
+
+                     Version M-2016.12-BETA-20180516
+            Copyright (c) 2018 Synopsys, Inc. All rights reserved.
+pt_shell> report_timing -delay_type min
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sun May 28 00:07:15 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'test_best'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_CTL_U1_count_int_reg_0_
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Endpoint: I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_0
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Last common pin: I_CLOCKING/occ_int1/cts_buf_692932346/Y
+  Path Group: ate_clk
+  Path Type: min
+  Scenario: atspeed_shift
+  Min Data Paths Derating Factor  : 0.95
+  Min Clock Paths Derating Factor : 0.95
+  Max Clock Paths Derating Factor : 1.05
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.18       0.18
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_CTL_U1_count_int_reg_0_/CLK (SDFFARX1_LVT)
+                                                          0.00       0.18 r
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_CTL_U1_count_int_reg_0_/Q (SDFFARX1_LVT)
+                                                          0.05 &     0.23 f
+  I_SDRAM_TOP/HFSBUF_170_1760/Y (NBUFFX8_RVT)             0.02 &     0.25 f
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_0/A1[0] (SRAM2RW64x32)
+                                                         -0.00 &     0.25 f
+  data arrival time                                                  0.25
+
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.21       0.21
+  clock reconvergence pessimism                          -0.02       0.19
+  clock uncertainty                                       0.10       0.29
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_0/CE1 (SRAM2RW64x32)
+                                                                     0.29 r
+  library hold time                                       0.04       0.33
+  data required time                                                 0.33
+  ------------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -0.25
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.08
+
+
+1
+pt_shell> pwd
+/home/ramadugu/common/Documents/backupp/sai/pt/work
+pt_shell> #script for fixing eco on drc, timing and power
+pt_shell> set_app_var eco_report_unfixed_reason_max_endpoints 50
+50
+pt_shell> #command for fixing power
+pt_shell> fix_eco_power -verbose -pattern_priority {HVT RVT LVT}
+Information: Starting cell swapping at [ Sun May 28 00:08:21 2023 ]...
+
+Initial setup violating endpoints:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                               0
+test_best                                              0
+test_worst                                             1
+func_slowfast                                         80
+func_fastslow                                          0
+test_slowfast                                          1
+test_fastslow                                          0
+atspeed_cap                                            0
+atspeed_shift                                          0
+stuck_at_shift                                         0
+stuck_at_cap                                           0
+--------------------------------------------------------
+Total                                                 82
+
+Initial library cell patterns:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         29058 ( 57%)
+RVT                                          9312 ( 18%)
+LVT                                         12286 ( 24%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50696 (100%)
+
+Information: Sequential and combinational cells will be swapped.
+Information: Analyzing scenarios for setup timing...
+Information: Starting iteration 1 at [ Sun May 28 00:08:23 2023 ]...
+Information: Analyzing constraints...
+Information: Finalizing ECO change list...
+Information: 1 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 00:08:23 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:08:24 2023 ]...
+Information: Starting pre-DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:08:29 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:08:29 2023 ]...
+Information: 1 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Timing tuning process completed.
+
+Setup violating endpoints after iteration 1:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                               0
+test_best                                              0
+test_worst                                             1
+func_slowfast                                         80
+func_fastslow                                          0
+test_slowfast                                          1
+test_fastslow                                          0
+atspeed_cap                                            0
+atspeed_shift                                          0
+stuck_at_shift                                         0
+stuck_at_cap                                           0
+--------------------------------------------------------
+Total                                                 82
+
+Library cell patterns after iteration 1:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         29058 ( 57%)
+RVT                                          9312 ( 18%)
+LVT                                         12286 ( 24%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50696 (100%)
+
+Information: Starting iteration 2 at [ Sun May 28 00:08:32 2023 ]...
+Information: Finalizing ECO change list...
+Information: 978 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 00:08:33 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:08:48 2023 ]...
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:08:54 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:09:06 2023 ]...
+Information: 417 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 00:09:10 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:09:17 2023 ]...
+Information: 258 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sun May 28 00:09:20 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:09:24 2023 ]...
+Information: 134 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Starting updating timing at [ Sun May 28 00:09:26 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:09:28 2023 ]...
+Information: 38 cells have been tuned.
+Information: Starting timing tuning phase 5...
+Information: Starting updating timing at [ Sun May 28 00:09:30 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:09:31 2023 ]...
+Information: 2 cells have been tuned.
+Information: Starting timing tuning phase 6...
+Information: Timing tuning process completed.
+
+Setup violating endpoints after iteration 2:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                               0
+test_best                                              0
+test_worst                                             1
+func_slowfast                                         82
+func_fastslow                                          0
+test_slowfast                                          1
+test_fastslow                                          0
+atspeed_cap                                            0
+atspeed_shift                                          0
+stuck_at_shift                                         0
+stuck_at_cap                                           0
+--------------------------------------------------------
+Total                                                 84
+
+Library cell patterns after iteration 2:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         29058 ( 57%)
+RVT                                          9441 ( 19%)
+LVT                                         12157 ( 24%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50696 (100%)
+
+Information: Starting iteration 3 at [ Sun May 28 00:09:33 2023 ]...
+Information: Finalizing ECO change list...
+Information: 1126 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 00:09:35 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:09:56 2023 ]...
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:10:03 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:10:23 2023 ]...
+Information: 801 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 00:10:26 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:10:34 2023 ]...
+Information: 234 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sun May 28 00:10:36 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:10:39 2023 ]...
+Information: 48 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Starting updating timing at [ Sun May 28 00:10:41 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:10:42 2023 ]...
+Information: 8 cells have been tuned.
+Information: Starting timing tuning phase 5...
+Information: Starting updating timing at [ Sun May 28 00:10:44 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:10:45 2023 ]...
+Information: 1 cells have been tuned.
+Information: Starting timing tuning phase 6...
+Information: Timing tuning process completed.
+
+Setup violating endpoints after iteration 3:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                               0
+test_best                                              0
+test_worst                                             1
+func_slowfast                                         81
+func_fastslow                                          0
+test_slowfast                                          1
+test_fastslow                                          0
+atspeed_cap                                            0
+atspeed_shift                                          0
+stuck_at_shift                                         0
+stuck_at_cap                                           0
+--------------------------------------------------------
+Total                                                 83
+
+Library cell patterns after iteration 3:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         29092 ( 57%)
+RVT                                          9407 ( 19%)
+LVT                                         12157 ( 24%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50696 (100%)
+
+Information: Starting final iteration at [ Sun May 28 00:10:47 2023 ]...
+Information: Starting pre-DRC tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:10:49 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:10:51 2023 ]...
+Information: 8 cells have been tuned.
+Information: Starting pre-DRC tuning phase 2...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Timing tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting timing tuning phase 2...
+Information: Starting timing tuning phase 3...
+Information: Starting timing tuning phase 4...
+Information: Timing tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:11:06 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:11:08 2023 ]...
+Information: 38 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting timing tuning phase 3...
+Information: Starting timing tuning phase 4...
+Information: Timing tuning process completed.
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: The cell swapping process is complete.
+
+Final setup violating endpoints:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                               0
+test_best                                              0
+test_worst                                             1
+func_slowfast                                         64
+func_fastslow                                          0
+test_slowfast                                          1
+test_fastslow                                          0
+atspeed_cap                                            0
+atspeed_shift                                          0
+stuck_at_shift                                         0
+stuck_at_cap                                           0
+--------------------------------------------------------
+Total                                                 66
+
+Final library cell patterns:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         29076 ( 57%)
+RVT                                          9393 ( 19%)
+LVT                                         12187 ( 24%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50696 (100%)
+
+Information: Elapsed time [              170 seconds ]
+Information: Completed at [ Sun May 28 00:11:11 2023 ]
+
+1
+pt_shell> 
+pt_shell> #command for fixing capacitance
+pt_shell> fix_eco_drc -verbose -type max_capacitance -buffer_list {NBUFFX8_HVT}
+Information: Starting DRC fix iteration 1 at [ Sun May 28 00:11:11 2023 ]...
+Information: Analyzing scenarios...
+
+Available buffers:
+Lib_cell               Area
+--------------------------------------------------------
+NBUFFX8_HVT            3.81
+
+Information: 27 max capacitance violations located in the func_min scenario... (PTECO-023)
+Information: 122 max capacitance violations located in all scenarios... (PTECO-024)
+
+Violation Totals:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                              27
+test_best                                             26
+test_worst                                             1
+func_slowfast                                          3
+func_fastslow                                          3
+test_slowfast                                          3
+test_fastslow                                          3
+atspeed_cap                                            1
+atspeed_shift                                         26
+stuck_at_shift                                         3
+stuck_at_cap                                          26
+--------------------------------------------------------
+Total                                                122
+
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 00:11:44 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:11:47 2023 ]...
+
+ECO Summary:
+--------------------------------------------------------
+Number of size_cell commands                          16
+Number of insert_buffer commands                       1
+Total number of commands                              17
+Area increased by cell sizing                       9.15
+Area increased by buffer insertion                  3.81
+Total area increased                               12.96
+
+Information: Starting DRC fix iteration 2 at [ Sun May 28 00:11:47 2023 ]...
+Information: Analyzing scenarios...
+Information: 10 max capacitance violations located in the func_min scenario... (PTECO-023)
+Information: 46 max capacitance violations located in all scenarios... (PTECO-024)
+
+Violation Totals:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                              10
+test_best                                              9
+test_worst                                             1
+func_slowfast                                          2
+func_fastslow                                          1
+test_slowfast                                          2
+test_fastslow                                          1
+atspeed_cap                                            1
+atspeed_shift                                          9
+stuck_at_shift                                         1
+stuck_at_cap                                           9
+--------------------------------------------------------
+Total                                                 46
+
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: No more fixes are available.
+Information: The DRC violation fixing process is complete.
+
+
+Unfixable violations:
+  A - There are available lib cells outside area limit
+  C - The violation is in clock network
+  I - Buffer insertion with given lib cells cannot fix the violation
+  P - Driver cell of the violation is a port
+  Q - Driver cell of the violation is a sequential cell
+  S - Cell sizing with alternative lib cells cannot fix the violation
+  T - Timing margin is too tight to fix the violation
+  V - Driver cell of the violation is dont_touched
+  U - UPF restricts fixing the violation
+
+  Violation                                                     Reasons
+  ---------------------------------------------------------------------
+  I_SDRAM_TOP/I_SDRAM_IF/HFSINV_40772_1618/Y                    A I               
+  I_BLENDER_0/HFSINV_1318_1744/Y                                A I               
+  I_SDRAM_TOP/I_SDRAM_IF/HFSBUF_38490_1615/Y                    A I               
+  I_SDRAM_TOP/I_SDRAM_IF/HFSINV_34662_961/Y                     A I               
+  I_SDRAM_TOP/I_SDRAM_IF/HFSINV_110902_1218/Y                   A I               
+  I_PCI_TOP/HFSINV_3933_477/Y                                   A I               
+  OUT_VALID_UPF_LS/Y                                            U                 
+  occ_int2/cts_buf_646231879/Y                                  C                 
+  occ_int2/cts_buf_645931876/Y                                  C                 
+  I_SDRAM_TOP/I_SDRAM_IF/U13008/Y                               C                 
+
+Remaining Violations:
+Scenario                               Total  Unfixable
+--------------------------------------------------------
+func_max                                   0          0
+func_min                                  10         10
+test_best                                  9          9
+test_worst                                 1          1
+func_slowfast                              2          2
+func_fastslow                              1          1
+test_slowfast                              2          2
+test_fastslow                              1          1
+atspeed_cap                                1          1
+atspeed_shift                              9          9
+stuck_at_shift                             1          1
+stuck_at_cap                               9          9
+--------------------------------------------------------
+Total                                     46         46
+
+Inserted buffers:
+   Count Lib_cell               Area          Total_area
+--------------------------------------------------------
+       1 NBUFFX8_HVT            3.81                3.81
+--------------------------------------------------------
+       1 TOTAL                                      3.81
+
+Final ECO Summary:
+--------------------------------------------------------
+Number of size_cell commands                          16
+Number of insert_buffer commands                       1
+Total number of commands                              17
+Area increased by cell sizing                       9.15
+Area increased by buffer insertion                  3.81
+Total area increased                               12.96
+
+Information: Elapsed time [               39 seconds ]
+Information: Completed at [ Sun May 28 00:11:50 2023 ]
+
+1
+pt_shell> 
+pt_shell> #command for fixing transition
+pt_shell> fix_eco_drc -verbose  -type max_transition -buffer_list {NBUFFX8_HVT}
+Information: Starting DRC fix iteration 1 at [ Sun May 28 00:11:50 2023 ]...
+Information: Analyzing scenarios...
+
+Available buffers:
+Lib_cell               Area
+--------------------------------------------------------
+NBUFFX8_HVT            3.81
+
+Information: 0 max transition violations located in all scenarios... (PTECO-024)
+
+Violation Totals:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                               0
+test_best                                              0
+test_worst                                             0
+func_slowfast                                          0
+func_fastslow                                          0
+test_slowfast                                          0
+test_fastslow                                          0
+atspeed_cap                                            0
+atspeed_shift                                          0
+stuck_at_shift                                         0
+stuck_at_cap                                           0
+--------------------------------------------------------
+Total                                                  0
+
+Information: No more fixes are available.
+Information: The DRC violation fixing process is complete.
+
+
+Unfixable violations:
+  A - There are available lib cells outside area limit
+  C - The violation is in clock network
+  I - Buffer insertion with given lib cells cannot fix the violation
+  P - Driver cell of the violation is a port
+  Q - Driver cell of the violation is a sequential cell
+  S - Cell sizing with alternative lib cells cannot fix the violation
+  T - Timing margin is too tight to fix the violation
+  V - Driver cell of the violation is dont_touched
+  U - UPF restricts fixing the violation
+
+  Violation                                                     Reasons
+  ---------------------------------------------------------------------
+  None
+
+Remaining Violations:
+Scenario                               Total  Unfixable
+--------------------------------------------------------
+func_max                                   0          0
+func_min                                   0          0
+test_best                                  0          0
+test_worst                                 0          0
+func_slowfast                              0          0
+func_fastslow                              0          0
+test_slowfast                              0          0
+test_fastslow                              0          0
+atspeed_cap                                0          0
+atspeed_shift                              0          0
+stuck_at_shift                             0          0
+stuck_at_cap                               0          0
+--------------------------------------------------------
+Total                                      0          0
+
+Inserted buffers:
+   Count Lib_cell               Area          Total_area
+--------------------------------------------------------
+         No buffer           
+--------------------------------------------------------
+       0 TOTAL                                      0.00
+
+Final ECO Summary:
+--------------------------------------------------------
+Total number of commands                               0
+Total area increased                                0.00
+
+Information: Elapsed time [               32 seconds ]
+Information: Completed at [ Sun May 28 00:12:22 2023 ]
+
+0
+pt_shell> 
+pt_shell> #command for fixing setup timing violations
+pt_shell> fix_eco_timing -verbose  -type setup
+Information: Starting timing fix iteration 1 at [ Sun May 28 00:12:22 2023 ]...
+Information: Analyzing scenarios...
+Information: 159 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 172 violating endpoints located in all scenarios... (PTECO-024)
+
+Violation Totals:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                              11
+func_min                                               0
+test_best                                              0
+test_worst                                             1
+func_slowfast                                        159
+func_fastslow                                          0
+test_slowfast                                          1
+test_fastslow                                          0
+atspeed_cap                                            0
+atspeed_shift                                          0
+stuck_at_shift                                         0
+stuck_at_cap                                           0
+--------------------------------------------------------
+Total                                                172
+
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 00:12:26 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:12:30 2023 ]...
+
+ECO Summary:
+--------------------------------------------------------
+Number of size_cell commands                          45
+Total number of commands                              45
+Area increased by cell sizing                      -4.32
+Total area increased                               -4.32
+
+Information: Starting timing fix iteration 2 at [ Sun May 28 00:12:30 2023 ]...
+Information: Analyzing scenarios...
+Information: 64 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 66 violating endpoints located in all scenarios... (PTECO-024)
+
+Violation Totals:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                               0
+test_best                                              0
+test_worst                                             1
+func_slowfast                                         64
+func_fastslow                                          0
+test_slowfast                                          1
+test_fastslow                                          0
+atspeed_cap                                            0
+atspeed_shift                                          0
+stuck_at_shift                                         0
+stuck_at_cap                                           0
+--------------------------------------------------------
+Total                                                 66
+
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 00:12:33 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:12:34 2023 ]...
+
+ECO Summary:
+--------------------------------------------------------
+Number of size_cell commands                           4
+Total number of commands                               4
+Area increased by cell sizing                       1.02
+Total area increased                                1.02
+
+Information: Starting timing fix iteration 3 at [ Sun May 28 00:12:34 2023 ]...
+Information: Analyzing scenarios...
+Information: 62 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 64 violating endpoints located in all scenarios... (PTECO-024)
+
+Violation Totals:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                               0
+test_best                                              0
+test_worst                                             1
+func_slowfast                                         62
+func_fastslow                                          0
+test_slowfast                                          1
+test_fastslow                                          0
+atspeed_cap                                            0
+atspeed_shift                                          0
+stuck_at_shift                                         0
+stuck_at_cap                                           0
+--------------------------------------------------------
+Total                                                 64
+
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting timing fix iteration 4 at [ Sun May 28 00:12:37 2023 ]...
+Information: Analyzing scenarios...
+Information: 62 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 64 violating endpoints located in all scenarios... (PTECO-024)
+
+Violation Totals:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                               0
+test_best                                              0
+test_worst                                             1
+func_slowfast                                         62
+func_fastslow                                          0
+test_slowfast                                          1
+test_fastslow                                          0
+atspeed_cap                                            0
+atspeed_shift                                          0
+stuck_at_shift                                         0
+stuck_at_cap                                           0
+--------------------------------------------------------
+Total                                                 64
+
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 00:12:40 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:12:41 2023 ]...
+
+ECO Summary:
+--------------------------------------------------------
+Number of size_cell commands                           6
+Total number of commands                               6
+Area increased by cell sizing                       1.52
+Total area increased                                1.52
+
+Information: Starting timing fix iteration 5 at [ Sun May 28 00:12:41 2023 ]...
+Information: Analyzing scenarios...
+Information: 62 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 64 violating endpoints located in all scenarios... (PTECO-024)
+
+Violation Totals:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                               0
+test_best                                              0
+test_worst                                             1
+func_slowfast                                         62
+func_fastslow                                          0
+test_slowfast                                          1
+test_fastslow                                          0
+atspeed_cap                                            0
+atspeed_shift                                          0
+stuck_at_shift                                         0
+stuck_at_cap                                           0
+--------------------------------------------------------
+Total                                                 64
+
+Information: Quality of results may not improve in following iterations...
+Information: No more fixes are available.
+Information: The timing violation fixing process is complete.
+
+Unfixable violations:
+  A - There are available library cells outside area limit
+  B - Delay improvement is too small to fix the violation
+  C - The violation is in clock network
+  I - Buffer insertion with given library cells cannot fix the violation
+  S - Cell sizing with alternative library cells cannot fix the violation
+  T - Timing margin is too tight to fix the violation
+  U - UPF restricts fixing the violation
+  V - Net or cell is invalid or has dont_touch attribute
+  W - Fixing the violation might degrade DRC violations
+
+  Violation                                                    Reasons  Prio/slk
+  ------------------------------------------------------------------------------
+  S:occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/Q                          
+    occ_int2/U_gf_mux_0/ctmTdsLR_1_24113/Y                           S        P9
+  E:occ_int2/fast_clk_0_clkgt/u_icg/EN                                    -0.502
+  S:I_BLENDER_0/R_739/Q                                                         
+    I_BLENDER_0/U1538/Y                                            A S        P3
+    I_BLENDER_0/U1539/Y                                            A S        P3
+    I_BLENDER_0/U6939/Y                                            A S        P2
+    I_BLENDER_0/ctmTdsLR_1_24412/Y                                 A S        P2
+    I_BLENDER_0/U1409/Y                                            A S        P2
+    I_BLENDER_0/U1946/Y                                            A S        P0
+    I_BLENDER_0/U1599/Y                                            A S        P0
+    I_BLENDER_0/U1936/Y                                            A S        P0
+    I_BLENDER_0/U1598/Y                                            A S        P0
+    I_BLENDER_0/U503/Y                                             A S        P0
+    I_BLENDER_0/U4729/Y                                            A S        P0
+    I_BLENDER_0/U2456/Y                                            A S        P0
+    I_BLENDER_0/U2451/Y                                            A S        P0
+    I_BLENDER_0/U1959/Y                                            A S        P0
+    I_BLENDER_0/U2124/Y                                            A S        P0
+    I_BLENDER_0/U2121/Y                                            A S        P0
+    I_BLENDER_0/U2120/Y                                            A S        P0
+    I_BLENDER_0/U2119/Y                                            A S        P0
+    I_BLENDER_0/U2294/Y                                            A S        P0
+    I_BLENDER_0/U2293/Y                                            A S        P0
+    I_BLENDER_0/U1591/Y                                            A S        P0
+    I_BLENDER_0/U7016/Y                                            A S        P0
+    I_BLENDER_0/U1604/Y                                            A S        P0
+    I_BLENDER_0/U2291/Y                                            A S        P0
+    I_BLENDER_0/U3839/Y                                            A S        P0
+    I_BLENDER_0/U3546/Y                                            A S        P0
+    I_BLENDER_0/U1775/Y                                            A S        P0
+    I_BLENDER_0/U1776/Y                                            A S        P0
+    I_BLENDER_0/ctmTdsLR_1_24553/Y                                 A S        P0
+    I_BLENDER_0/U1789/Y                                            A S        P1
+    I_BLENDER_0/U1790/Y                                            A S        P1
+    I_BLENDER_0/U1798/Y                                            A S        P2
+    I_BLENDER_0/ctmTdsLR_2_24548/Y                                   S        P4
+    I_BLENDER_0/ctmTdsLR_1_24547/Y                                 A S        P4
+    I_BLENDER_0/ctmTdsLR_1_24309/Y                                 A S        P4
+    I_BLENDER_0/U6597/Y                                            A S        P4
+    I_BLENDER_0/U5896/Y                                            A S        P4
+    I_BLENDER_0/ctmTdsLR_2_24505/Y                                 A S        P4
+    I_BLENDER_0/ctmTdsLR_1_24504/Y                                   S        P9
+  E:I_BLENDER_0/R_581/D                                                   -0.059
+  S:I_BLENDER_1/R_509/Q                                                         
+    I_BLENDER_1/U341/Y                                               S        P8
+    I_BLENDER_1/U346/Y                                               S        P9
+    I_BLENDER_1/ctmTdsLR_2_25099/Y                                 A S        P2
+    I_BLENDER_1/ctmTdsLR_1_25098/Y                                   S        P2
+    I_BLENDER_1/U2364/Y                                            A S        P0
+    I_BLENDER_1/U4920/Y                                            A S        P0
+    I_BLENDER_1/U4919/Y                                            A S        P0
+    I_BLENDER_1/U3366/Y                                            A S        P0
+    I_BLENDER_1/U1361/Y                                          A S W        P0
+    I_BLENDER_1/U2378/Y                                          A S W        P0
+    I_BLENDER_1/ctmTdsLR_1_24866/Y                               A S W        P0
+    I_BLENDER_1/U347/Y                                           A S W        P0
+    I_BLENDER_1/U1366/Y                                          A S W        P0
+    I_BLENDER_1/U1362/Y                                          A S W        P0
+    I_BLENDER_1/U3763/Y                                          A S W        P0
+    I_BLENDER_1/U1357/Y                                          A S W        P0
+    I_BLENDER_1/U2831/Y                                          A S W        P0
+    I_BLENDER_1/U2829/Y                                          A S W        P0
+    I_BLENDER_1/U2828/Y                                            A S        P0
+    I_BLENDER_1/U2908/Y                                            A S        P0
+    I_BLENDER_1/U109/Y                                             A S        P0
+    I_BLENDER_1/U9068/Y                                            A S        P0
+    I_BLENDER_1/U3840/Y                                            A S        P0
+    I_BLENDER_1/U3841/Y                                            A S        P0
+    I_BLENDER_1/U2533/Y                                            A S        P0
+    I_BLENDER_1/U3924/Y                                            A S        P0
+    I_BLENDER_1/U349/Y                                             A S        P1
+    I_BLENDER_1/U6478/Y                                            A S        P1
+    I_BLENDER_1/U8718/Y                                            A S        P1
+    I_BLENDER_1/ctmTdsLR_1_25199/Y                                   S        P5
+    I_BLENDER_1/U9000/Y                                              S        P5
+    I_BLENDER_1/U9173/Y                                              S        P5
+  E:I_BLENDER_1/R_476/D                                                   -0.058
+  C:I_BLENDER_0/ctmTdsLR_1_24309/Y                                              
+    I_BLENDER_0/U3983/Y                                              A        P9
+    I_BLENDER_0/ctmTdsLR_1_24640/Y                                 A S        P8
+  E:I_BLENDER_0/R_432/D                                                   -0.056
+  S:I_BLENDER_0/R_564/Q                                                         
+    I_BLENDER_0/ZBUF_83_inst_2217/Y                                A S        P8
+    I_BLENDER_0/U3295/Y                                            A S        P8
+    I_BLENDER_0/U2194/Y                                            A S        P8
+    I_BLENDER_0/U3992/Y                                            A S        P9
+    I_BLENDER_0/U1480/Y                                              A        P9
+    I_BLENDER_0/U177/Y                                             A S        P9
+    I_BLENDER_0/U3278/Y                                            A S        P9
+    I_BLENDER_0/U3613/Y                                            A S        P3
+    I_BLENDER_0/U3614/Y                                            A S        P2
+    I_BLENDER_0/U3615/Y                                            A S        P2
+    I_BLENDER_0/U3641/Y                                          A S W        P0
+    I_BLENDER_0/U3648/Y                                          A S W        P0
+    I_BLENDER_0/U4041/Y                                          A S W        P0
+    I_BLENDER_0/U4043/Y                                          A S W        P0
+    I_BLENDER_0/U4044/Y                                          A S W        P0
+    I_BLENDER_0/U4046/Y                                          A S W        P0
+    I_BLENDER_0/U8871/Y                                          A S W        P0
+    I_BLENDER_0/U8870/Y                                          A S W        P0
+    I_BLENDER_0/U2200/Y                                          A S W        P0
+    I_BLENDER_0/U2199/Y                                          A S W        P0
+    I_BLENDER_0/U5548/Y                                          A S W        P0
+    I_BLENDER_0/U7229/Y                                          A S W        P0
+    I_BLENDER_0/U4283/Y                                          A S W        P0
+    I_BLENDER_0/U7230/Y                                          A S W        P0
+    I_BLENDER_0/U8604/Y                                          A S W        P0
+    I_BLENDER_0/U5442/Y                                          A S W        P0
+    I_BLENDER_0/U7416/Y                                          A S W        P0
+    I_BLENDER_0/U268/Y                                             A S        P1
+    I_BLENDER_0/U6592/Y                                            A S        P7
+    I_BLENDER_0/U8646/Y                                            A S        P7
+    I_BLENDER_0/U5365/Y                                            A S        P7
+    I_BLENDER_0/U5341/Y                                            A S        P7
+  E:I_BLENDER_0/s4_op1_reg_28_/D                                          -0.055
+  S:I_BLENDER_0/s3_op2_reg_24_/Q                                                
+    I_BLENDER_0/U1962/Y                                              S        P9
+    I_BLENDER_0/U85/Y                                                S        P9
+    I_BLENDER_0/U5646/Y                                            A S        P2
+    I_BLENDER_0/U7651/Y                                            A S        P2
+    I_BLENDER_0/U4322/Y                                            A S        P2
+    I_BLENDER_0/U5719/Y                                            A S        P0
+    I_BLENDER_0/U5721/Y                                          A S W        P0
+    I_BLENDER_0/U303/Y                                             A S        P0
+    I_BLENDER_0/ZBUF_889_inst_2391/Y                             A S W        P0
+    I_BLENDER_0/U678/Y                                             A S        P0
+    I_BLENDER_0/U679/Y                                             A S        P0
+    I_BLENDER_0/U680/Y                                             A S        P0
+    I_BLENDER_0/U6915/Y                                            A S        P0
+    I_BLENDER_0/U789/CO                                            A S        P0
+    I_BLENDER_0/U1940/Y                                          A S W        P0
+    I_BLENDER_0/U1931/Y                                          A S W        P0
+    I_BLENDER_0/U1925/Y                                          A S W        P0
+    I_BLENDER_0/U6686/Y                                          A S W        P0
+    I_BLENDER_0/U4634/Y                                          A S W        P0
+    I_BLENDER_0/U1078/Y                                          A S W        P0
+    I_BLENDER_0/U2368/Y                                          A S W        P0
+    I_BLENDER_0/U1548/Y                                          A S W        P0
+    I_BLENDER_0/ctmTdsLR_2_24192/Y                                 A S        P0
+    I_BLENDER_0/ctmTdsLR_1_24191/Y                                 A S        P2
+    I_BLENDER_0/U4396/Y                                            A S        P2
+    I_BLENDER_0/U5482/Y                                            A S        P2
+    I_BLENDER_0/U8654/Y                                            A S        P2
+    I_BLENDER_0/U6345/CO                                           A S        P2
+    I_BLENDER_0/ctmTdsLR_4_54238/Y                                 A S        P2
+    I_BLENDER_0/ctmTdsLR_1_54235/Y                                   S        P6
+    I_BLENDER_0/U6692/Y                                            A S        P6
+  E:I_BLENDER_0/s4_op2_reg_30_/D                                          -0.051
+  S:I_BLENDER_1/R_672/Q                                                         
+    I_BLENDER_1/U42/Y                                              A S        P6
+    I_BLENDER_1/U2650/Y                                            A S        P6
+    I_BLENDER_1/U2649/Y                                            A S        P6
+    I_BLENDER_1/U1185/Y                                            A S        P1
+    I_BLENDER_1/U630/Y                                             A S        P1
+    I_BLENDER_1/U4668/Y                                            A S        P1
+    I_BLENDER_1/U6566/Y                                            A S        P0
+    I_BLENDER_1/U97/Y                                            A S W        P0
+    I_BLENDER_1/U2634/Y                                          A S W        P0
+    I_BLENDER_1/U7330/Y                                          A S W        P0
+    I_BLENDER_1/U2628/Y                                          A S W        P0
+    I_BLENDER_1/U5035/Y                                          A S W        P0
+    I_BLENDER_1/U105/Y                                           A S W        P0
+    I_BLENDER_1/U104/Y                                           A S W        P0
+    I_BLENDER_1/U5034/Y                                          A S W        P0
+    I_BLENDER_1/ctmTdsLR_2_24550/Y                               A S W        P0
+    I_BLENDER_1/ctmTdsLR_1_24549/Y                               A S W        P0
+    I_BLENDER_1/ctmTdsLR_1_24387/Y                               A S W        P0
+    I_BLENDER_1/ctmTdsLR_1_24664/Y                               A S W        P0
+    I_BLENDER_1/U103/Y                                           A S W        P0
+    I_BLENDER_1/U102/Y                                           A S W        P0
+    I_BLENDER_1/U210/Y                                           A S W        P0
+    I_BLENDER_1/U211/Y                                           A S W        P0
+    I_BLENDER_1/ZINV_4_inst_54067/Y                              A S W        P0
+    I_BLENDER_1/U1188/Y                                            A S        P2
+    I_BLENDER_1/U218/Y                                             A S        P2
+    I_BLENDER_1/U231/Y                                             A S        P2
+    I_BLENDER_1/U266/Y                                             A S        P2
+    I_BLENDER_1/ctmTdsLR_1_24295/Y                                   A        P9
+    I_BLENDER_1/U9135/Y                                            A S        P9
+    I_BLENDER_1/U9134/Y                                            A S        P9
+    I_BLENDER_1/U303/Y                                             A S        P9
+    I_BLENDER_1/ctmTdsLR_2_24161/Y                                 A S        P8
+    I_BLENDER_1/ctmTdsLR_1_24160/Y                                 A S        P8
+    I_BLENDER_1/U8951/Y                                            A S        P8
+  E:I_BLENDER_1/R_310/D                                                   -0.050
+  C:I_BLENDER_0/U5482/Y                                                         
+    I_BLENDER_0/U6318/Y                                            A S        P9
+    I_BLENDER_0/U6323/Y                                              A        P9
+    I_BLENDER_0/U6324/Y                                            A S        P9
+    I_BLENDER_0/U6325/Y                                            A S        P9
+  E:I_BLENDER_0/R_553/D                                                   -0.046
+  C:I_BLENDER_0/ctmTdsLR_1_24309/Y                                              
+    I_BLENDER_0/U3738/Y                                              A        P9
+    I_BLENDER_0/U3737/Y                                            A S        P9
+    I_BLENDER_0/ctmTdsLR_1_24885/Y                                 A S        P9
+  E:I_BLENDER_0/R_332/D                                                   -0.045
+  C:I_BLENDER_0/U3983/Y                                                         
+    I_BLENDER_0/U3958/Y                                              S        P9
+  E:I_BLENDER_0/R_447/D                                                   -0.045
+  C:I_BLENDER_1/U1188/Y                                                         
+    I_BLENDER_1/U4174/Y                                            A S        P0
+    I_BLENDER_1/U279/Y                                             A S        P0
+    I_BLENDER_1/ctmTdsLR_2_54309/Y                                 A S        P1
+    I_BLENDER_1/ctmTdsLR_1_54308/Y                                 A S        P2
+    I_BLENDER_1/ctmTdsLR_1_54209/Y                                   S        P3
+    I_BLENDER_1/U3113/Y                                              S        P5
+    I_BLENDER_1/U298/Y                                               S        P9
+    I_BLENDER_1/U248/Y                                               S        P9
+    I_BLENDER_1/ctmTdsLR_1_54269/Y                                   S        P9
+  E:I_BLENDER_1/R_395/D                                                   -0.044
+  C:I_BLENDER_0/U1798/Y                                                         
+    I_BLENDER_0/U1858/Y                                              S        P9
+    I_BLENDER_0/U6360/Y                                              S        P8
+    I_BLENDER_0/U6361/Y                                            A S        P8
+    I_BLENDER_0/U6362/Y                                              S        P8
+  E:I_BLENDER_0/R_745/D                                                   -0.043
+  C:I_BLENDER_0/ctmTdsLR_1_24309/Y                                              
+    I_BLENDER_0/U5893/Y                                            A S        P4
+    I_BLENDER_0/U5894/Y                                            A S        P4
+    I_BLENDER_0/U5897/Y                                              S        P9
+  E:I_BLENDER_0/R_577/D                                                   -0.042
+  S:I_BLENDER_0/s2_op1_reg_25_/Q                                                
+    I_BLENDER_0/ZBUF_339_inst_2354/Y                               A S        P6
+    I_BLENDER_0/ctmTdsLR_2_24749/Y                               A S W        P1
+    I_BLENDER_0/ctmTdsLR_1_24748/Y                               A S W        P1
+    I_BLENDER_0/U1647/Y                                          A S W        P0
+    I_BLENDER_0/ctmTdsLR_1_24500/Y                               A S W        P0
+    I_BLENDER_0/U1653/Y                                          A S W        P0
+    I_BLENDER_0/ctmTdsLR_1_24242/Y                               A S W        P0
+    I_BLENDER_0/U2296/Y                                          A S W        P0
+    I_BLENDER_0/U2955/Y                                          A S W        P0
+    I_BLENDER_0/ctmTdsLR_2_24138/Y                               A S W        P0
+    I_BLENDER_0/ctmTdsLR_1_24137/Y                               A S W        P0
+    I_BLENDER_0/U4730/Y                                          A S W        P0
+    I_BLENDER_0/U1436/Y                                          A S W        P0
+    I_BLENDER_0/U2665/Y                                          A S W        P0
+    I_BLENDER_0/U2182/Y                                          A S W        P0
+    I_BLENDER_0/U1638/Y                                          A S W        P0
+    I_BLENDER_0/U1336/Y                                          A S W        P0
+    I_BLENDER_0/ctmTdsLR_2_24211/Y                               A S W        P0
+    I_BLENDER_0/ctmTdsLR_1_24210/Y                               A S W        P0
+    I_BLENDER_0/ctmTdsLR_1_24291/Y                               A S W        P0
+    I_BLENDER_0/ctmTdsLR_1_24741/Y                               A S W        P0
+    I_BLENDER_0/ctmTdsLR_1_24542/Y                               A S W        P0
+    I_BLENDER_0/ctmTdsLR_2_24525/Y                               A S W        P0
+    I_BLENDER_0/ctmTdsLR_1_24524/Y                               A S W        P0
+    I_BLENDER_0/U1752/Y                                          A S W        P0
+    I_BLENDER_0/U1584/Y                                          A S W        P0
+    I_BLENDER_0/ctmTdsLR_1_24214/Y                               A S W        P0
+    I_BLENDER_0/U3342/Y                                          A S W        P0
+    I_BLENDER_0/U2663/Y                                          A S W        P0
+    I_BLENDER_0/U2281/Y                                          A S W        P0
+    I_BLENDER_0/ctmTdsLR_2_24475/Y                               A S W        P0
+    I_BLENDER_0/ctmTdsLR_1_24474/Y                               A S W        P0
+    I_BLENDER_0/ctmTdsLR_2_24264/Y                               A S W        P0
+    I_BLENDER_0/ctmTdsLR_2_24308/Y                               A S W        P0
+    I_BLENDER_0/ctmTdsLR_1_24307/Y                               A S W        P0
+    I_BLENDER_0/U1617/Y                                          A S W        P0
+    I_BLENDER_0/U2754/Y                                            A S        P4
+    I_BLENDER_0/U2753/Y                                              S        P9
+  E:I_BLENDER_0/R_391/D                                                   -0.041
+  C:I_BLENDER_0/U268/Y                                                          
+    I_BLENDER_0/ctmTdsLR_2_24829/Y                                   S        P9
+    I_BLENDER_0/ctmTdsLR_1_24828/Y                                   S        P9
+    I_BLENDER_0/U8655/Y                                              S        P9
+    I_BLENDER_0/U8656/Y                                              S        P9
+  E:I_BLENDER_0/s4_op1_reg_29_/D                                          -0.041
+  C:I_BLENDER_1/U4093/Y                                                         
+    I_BLENDER_1/ctmTdsLR_2_24384/Y                                   S        P6
+    I_BLENDER_1/ctmTdsLR_1_54202/Y                                   S        P6
+    I_BLENDER_1/ctmTdsLR_2_24716/Y                                   S        P6
+    I_BLENDER_1/ctmTdsLR_1_24715/Y                                   S        P6
+    I_BLENDER_1/ctmTdsLR_2_54316/Y                                   S        P5
+    I_BLENDER_1/ctmTdsLR_1_54315/Y                                   S        P5
+    I_BLENDER_1/ctmTdsLR_1_54274/Y                                   S        P5
+    I_BLENDER_1/ctmTdsLR_1_25069/Y                                   S        P0
+    I_BLENDER_1/U2969/Y                                              S        P0
+    I_BLENDER_1/U7136/Y                                              S        P0
+    I_BLENDER_1/U1788/Y                                              S        P0
+    I_BLENDER_1/U1621/Y                                          A S W        P0
+    I_BLENDER_1/U659/Y                                           A S W        P0
+    I_BLENDER_1/ZINV_1022_inst_54676/Y                           A S W        P0
+    I_BLENDER_1/ZINV_870_inst_2220/Y                             A S W        P0
+    I_BLENDER_1/U1738/Y                                          A S W        P0
+    I_BLENDER_1/U3415/Y                                          A S W        P0
+    I_BLENDER_1/U3411/Y                                          A S W        P0
+    I_BLENDER_1/U3410/Y                                          A S W        P0
+    I_BLENDER_1/U3887/Y                                          A S W        P0
+    I_BLENDER_1/U1940/Y                                          A S W        P0
+    I_BLENDER_1/U3786/Y                                          A S W        P0
+    I_BLENDER_1/U4202/Y                                          A S W        P0
+    I_BLENDER_1/U462/Y                                           A S W        P0
+    I_BLENDER_1/U7258/Y                                          A S W        P0
+    I_BLENDER_1/U1988/Y                                          A S W        P0
+    I_BLENDER_1/ctmTdsLR_1_54219/Y                               A S W        P0
+    I_BLENDER_1/U2006/Y                                          A S W        P0
+    I_BLENDER_1/ctmTdsLR_3_24986/Y                               A S W        P0
+    I_BLENDER_1/ctmTdsLR_2_24985/Y                               A S W        P0
+    I_BLENDER_1/ctmTdsLR_1_24984/Y                               A S W        P0
+    I_BLENDER_1/U2020/Y                                          A S W        P0
+    I_BLENDER_1/U7005/Y                                          A S W        P0
+    I_BLENDER_1/U7004/Y                                              S        P3
+    I_BLENDER_1/ctmTdsLR_1_24135/Y                                   S        P9
+    I_BLENDER_1/U4925/Y                                              S        P9
+  E:I_BLENDER_1/R_652/D                                                   -0.039
+  C:I_BLENDER_1/ctmTdsLR_1_25148/Y                                              
+    I_BLENDER_1/U6482/Y                                              S        P9
+    I_BLENDER_1/U2221/Y                                              S        P9
+    I_BLENDER_1/ctmTdsLR_1_24757/Y                                   S        P9
+  E:I_BLENDER_1/R_464/D                                                   -0.037
+  C:I_BLENDER_0/U5482/Y                                                         
+    I_BLENDER_0/U6286/Y                                              A        P9
+    I_BLENDER_0/U8855/Y                                            A S        P8
+    I_BLENDER_0/U6288/Y                                            A S        P8
+    I_BLENDER_0/U6289/Y                                            A S        P8
+    I_BLENDER_0/U6290/Y                                            A S        P8
+  E:I_BLENDER_0/s4_op2_reg_22_/D                                          -0.036
+  C:I_BLENDER_1/U2020/Y                                                         
+    I_BLENDER_1/U9047/Y                                              S        P0
+    I_BLENDER_1/U6975/Y                                            A S        P0
+    I_BLENDER_1/U4170/Y                                              S        P9
+    I_BLENDER_1/U4095/Y                                              S        P9
+  E:I_BLENDER_1/R_646/D                                                   -0.036
+  C:I_BLENDER_0/U5482/Y                                                         
+    I_BLENDER_0/U2312/Y                                              S        P1
+    I_BLENDER_0/U4190/Y                                              S        P4
+    I_BLENDER_0/U1143/Y                                              S        P4
+    I_BLENDER_0/U5781/Y                                              S        P4
+    I_BLENDER_0/ctmTdsLR_1_24162/Y                                   S        P9
+  E:I_BLENDER_0/s4_op2_reg_26_/D                                          -0.034
+  C:I_BLENDER_1/U349/Y                                                          
+    I_BLENDER_1/U9058/Y                                              S        P9
+    I_BLENDER_1/ctmTdsLR_1_25188/Y                                   S        P9
+    I_BLENDER_1/U6544/S                                              S        P9
+  E:I_BLENDER_1/R_470/D                                                   -0.029
+  C:I_BLENDER_1/U1788/Y                                                         
+    I_BLENDER_1/U9074/Y                                              S        P0
+    I_BLENDER_1/U5044/Y                                              S        P0
+    I_BLENDER_1/U4979/Y                                            S W        P0
+    I_BLENDER_1/U1071/Y                                            S W        P0
+    I_BLENDER_1/U9105/Y                                          A S W        P0
+    I_BLENDER_1/ZINV_1178_inst_54115/Y                           A S W        P0
+    I_BLENDER_1/U3173/Y                                        A B S W        P0
+    I_BLENDER_1/U3176/Y                                        A B S W        P0
+    I_BLENDER_1/U1866/Y                                        A B S W        P0
+    I_BLENDER_1/U1886/Y                                        A B S W        P0
+    I_BLENDER_1/U1900/Y                                        A B S W        P0
+    I_BLENDER_1/U1937/Y                                        A B S W        P0
+    I_BLENDER_1/U2605/Y                                        A B S W        P0
+    I_BLENDER_1/ctmTdsLR_1_54336/Y                             A B S W        P0
+    I_BLENDER_1/U2082/Y                                        A B S W        P0
+    I_BLENDER_1/U2151/Y                                        A B S W        P0
+    I_BLENDER_1/U9053/Y                                        A B S W        P0
+    I_BLENDER_1/U5128/Y                                        A B S W        P0
+    I_BLENDER_1/ZINV_132_inst_54084/Y                          A B S W        P0
+    I_BLENDER_1/ctmTdsLR_2_24520/Y                                   S        P9
+    I_BLENDER_1/ctmTdsLR_1_24519/Y                                   S        P9
+    I_BLENDER_1/U1694/Y                                              S        P9
+  E:I_BLENDER_1/R_632/D                                                   -0.029
+  S:I_BLENDER_1/R_545/Q                                                         
+    I_BLENDER_1/U2211/Y                                              S        P9
+    I_BLENDER_1/U1671/Y                                            B S        P3
+    I_BLENDER_1/U6113/Y                                          A B S        P0
+    I_BLENDER_1/U633/Y                                           A B S        P0
+    I_BLENDER_1/U6112/Y                                            B S        P0
+    I_BLENDER_1/U6321/Y                                          A B S        P0
+    I_BLENDER_1/ctmTdsLR_2_54261/Y                                 B S        P0
+    I_BLENDER_1/ctmTdsLR_1_54260/Y                                 B S        P0
+    I_BLENDER_1/ctmTdsLR_1_25116/Y                                 B S        P0
+    I_BLENDER_1/U4031/Y                                        A B S W        P0
+    I_BLENDER_1/U4024/Y                                        A B S W        P0
+    I_BLENDER_1/ctmTdsLR_1_24878/Y                             A B S W        P0
+    I_BLENDER_1/ctmTdsLR_1_24381/Y                             A B S W        P0
+    I_BLENDER_1/U2258/Y                                        A B S W        P0
+    I_BLENDER_1/U395/Y                                         A B S W        P0
+    I_BLENDER_1/U753/Y                                         A B S W        P0
+    I_BLENDER_1/U2910/Y                                        A B S W        P0
+    I_BLENDER_1/ctmTdsLR_1_54188/Y                             A B S W        P0
+    I_BLENDER_1/U2367/Y                                        A B S W        P0
+    I_BLENDER_1/U2368/Y                                        A B S W        P0
+    I_BLENDER_1/U6407/Y                                        A B S W        P0
+    I_BLENDER_1/ctmTdsLR_2_24657/Y                             A B S W        P0
+    I_BLENDER_1/ctmTdsLR_1_24656/Y                             A B S W        P0
+    I_BLENDER_1/U2382/Y                                        A B S W        P0
+    I_BLENDER_1/U2383/Y                                        A B S W        P0
+    I_BLENDER_1/U7024/Y                                        A B S W        P0
+    I_BLENDER_1/U7020/Y                                        A B S W        P0
+    I_BLENDER_1/U7454/Y                                        A B S W        P0
+    I_BLENDER_1/U6047/Y                                        A B S W        P0
+    I_BLENDER_1/ZINV_724_inst_54058/Y                          A B S W        P0
+    I_BLENDER_1/U4900/Y                                        A B S W        P0
+    I_BLENDER_1/ctmTdsLR_4_24689/Y                             A B S W        P0
+    I_BLENDER_1/ctmTdsLR_1_24686/Y                             A B S W        P0
+    I_BLENDER_1/ctmTdsLR_1_24571/Y                                   S        P5
+    I_BLENDER_1/U5185/Y                                              S        P5
+    I_BLENDER_1/U4153/Y                                              S        P5
+    I_BLENDER_1/U4154/Y                                              S        P6
+    I_BLENDER_1/ctmTdsLR_2_54197/Y                                   S        P6
+    I_BLENDER_1/ctmTdsLR_1_54196/Y                                   S        P8
+  E:I_BLENDER_1/R_417/D                                                   -0.028
+  C:I_BLENDER_1/ctmTdsLR_1_54274/Y                                              
+    I_BLENDER_1/ctmTdsLR_1_25094/Y                                   S        P6
+    I_BLENDER_1/U1777/Y                                            A S        P1
+    I_BLENDER_1/U3838/Y                                            A S        P1
+    I_BLENDER_1/U1431/Y                                          A S W        P1
+    I_BLENDER_1/U1247/Y                                        A B S W        P0
+    I_BLENDER_1/U935/Y                                           A S W        P0
+    I_BLENDER_1/U3733/Y                                        A B S W        P0
+    I_BLENDER_1/U3697/Y                                        A B S W        P0
+    I_BLENDER_1/U1844/Y                                        A B S W        P0
+    I_BLENDER_1/U330/Y                                         A B S W        P0
+    I_BLENDER_1/U3507/Y                                        A B S W        P0
+    I_BLENDER_1/U2136/Y                                        A B S W        P0
+    I_BLENDER_1/U2011/Y                                        A B S W        P0
+    I_BLENDER_1/U2874/Y                                        A B S W        P0
+    I_BLENDER_1/U3685/Y                                        A B S W        P0
+    I_BLENDER_1/U4932/Y                                        A B S W        P0
+    I_BLENDER_1/U2016/Y                                        A B S W        P0
+    I_BLENDER_1/U2013/Y                                          A S W        P0
+    I_BLENDER_1/U1718/Y                                          A S W        P0
+    I_BLENDER_1/U4924/Y                                            A S        P2
+    I_BLENDER_1/U1770/Y                                            A S        P2
+    I_BLENDER_1/U1664/Y                                            A S        P4
+    I_BLENDER_1/ZINV_100_inst_54116/Y                              A S        P4
+    I_BLENDER_1/U4425/Y                                            A S        P4
+    I_BLENDER_1/U905/Y                                             A S        P4
+    I_BLENDER_1/U2925/Y                                              S        P9
+    I_BLENDER_1/U1159/Y                                              S        P9
+    I_BLENDER_1/U2921/Y                                              S        P9
+  E:I_BLENDER_1/s4_op1_reg_18_/D                                          -0.027
+  C:I_BLENDER_0/U2643/Y                                                         
+    I_BLENDER_0/U7219/Y                                            A S        P1
+    I_BLENDER_0/ctmTdsLR_1_24143/Y                                 A S        P1
+    I_BLENDER_0/U2297/Y                                            A S        P3
+    I_BLENDER_0/U2688/Y                                              S        P9
+    I_BLENDER_0/U6294/Y                                              S        P9
+    I_BLENDER_0/U6295/Y                                              S        P9
+    I_BLENDER_0/U7220/Y                                              S        P9
+    I_BLENDER_0/U1578/Y                                            A S        P9
+    I_BLENDER_0/U1207/Y                                              S        P9
+  E:I_BLENDER_0/R_704/D                                                   -0.027
+  C:I_BLENDER_1/ZINV_194_inst_25333/Y                                           
+    I_BLENDER_1/ctmTdsLR_1_24495/Y                                   S        P9
+    I_BLENDER_1/U3971/Y                                              S        P8
+    I_BLENDER_1/U6454/Y                                              S        P8
+    I_BLENDER_1/U6457/Y                                              S        P8
+  E:I_BLENDER_1/s4_op2_reg_19_/D                                          -0.026
+  C:I_BLENDER_0/U5783/Y                                                         
+    I_BLENDER_0/U7352/Y                                              S        P9
+    I_BLENDER_0/U6303/Y                                              S        P9
+  E:I_BLENDER_0/s4_op2_reg_24_/D                                          -0.026
+  C:I_BLENDER_0/U2196/Y                                                         
+    I_BLENDER_0/U4804/Y                                            A S        P4
+    I_BLENDER_0/U4805/Y                                              S        P9
+    I_BLENDER_0/U4806/Y                                              S        P9
+    I_BLENDER_0/U5447/Y                                              S        P8
+    I_BLENDER_0/U5760/Y                                              S        P8
+    I_BLENDER_0/U8614/Y                                              S        P8
+    I_BLENDER_0/U2212/Y                                              S        P8
+    I_BLENDER_0/U2216/Y                                              S        P8
+    I_BLENDER_0/U8662/Y                                              S        P8
+    I_BLENDER_0/U5585/Y                                              S        P8
+  E:I_BLENDER_0/s4_op1_reg_24_/D                                          -0.025
+  C:I_BLENDER_0/U5897/Y                                                         
+    I_BLENDER_0/ctmTdsLR_1_24231/Y                                   A        P8
+  E:I_BLENDER_0/R_578/D                                                   -0.025
+  C:I_BLENDER_0/U268/Y                                                          
+    I_BLENDER_0/U2096/Y                                              S        P4
+    I_BLENDER_0/U2091/Y                                              S        P4
+    I_BLENDER_0/U2416/Y                                            A S        P4
+    I_BLENDER_0/U1505/Y                                              S        P9
+  E:I_BLENDER_0/s4_op1_reg_30_/D                                          -0.024
+  S:I_PARSER/out_bus_reg_8_/Q                                                   
+    HFSINV_25380_1834/Y                                          A S W        P9
+    HFSINV_24351_1833/Y                                          A S W        P9
+    I_PARSER/U779/Y                                              A S W        P9
+    I_CONTEXT_MEM/HFSINV_1970_1749/Y                             A S W        P9
+    I_CONTEXT_MEM/HFSINV_680_1748/Y                                A W        P9
+    I_CONTEXT_MEM/U319/Y                                         A S W        P5
+    I_CONTEXT_MEM/U200/Y                                         A S W        P2
+    I_CONTEXT_MEM/ZBUF_2_inst_54047/Y                            A S W        P2
+    I_CONTEXT_MEM/U199/Y                                         A S W        P3
+    I_RISC_CORE/Instrn_16__UPF_LS/Y                                  U        P3
+  E:I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_16_/D                      -0.024
+  C:I_CONTEXT_MEM/U319/Y                                                        
+    I_CONTEXT_MEM/U72/Y                                          A S W        P6
+    I_CONTEXT_MEM/ZINV_27_inst_2169/Y                            A S W        P6
+    I_CONTEXT_MEM/ZINV_4_inst_2168/Y                             A S W        P6
+    I_CONTEXT_MEM/U76/Y                                          A S W        P9
+    ZBUF_20_inst_54626/Y                                           A W        P9
+    I_RISC_CORE/Instrn_11__UPF_LS/Y                                  U        P9
+  E:I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_11_/D                      -0.019
+  C:I_BLENDER_1/ZINV_724_inst_54058/Y                                           
+    I_BLENDER_1/U2439/Y                                            A S        P3
+    I_BLENDER_1/ctmTdsLR_2_54276/Y                                 A S        P3
+    I_BLENDER_1/ctmTdsLR_1_54275/Y                                 A S        P3
+    I_BLENDER_1/U44/Y                                              A S        P3
+    I_BLENDER_1/ctmTdsLR_1_54203/Y                                 A S        P3
+    I_BLENDER_1/U4865/Y                                            A S        P4
+    I_BLENDER_1/U4861/Y                                            A S        P4
+    I_BLENDER_1/ctmTdsLR_1_25140/Y                                 A S        P4
+    I_BLENDER_1/ctmTdsLR_1_54224/Y                                   A        P9
+  E:I_BLENDER_1/R_410/D                                                   -0.019
+  C:I_PARSER/U777/Y                                                             
+    I_CONTEXT_MEM/HFSBUF_802_1769/Y                              A S W        P9
+    I_CONTEXT_MEM/U31/Y                                            S W        P9
+    I_CONTEXT_MEM/U32/Y                                            S W        P9
+    I_CONTEXT_MEM/U173/Y                                         A S W        P2
+    I_CONTEXT_MEM/ZBUF_2_inst_23684/Y                            A S W        P2
+    I_CONTEXT_MEM/U174/Y                                         A S W        P2
+    I_RISC_CORE/Instrn_18__UPF_LS/Y                                  U        P2
+  E:I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_18_/D                      -0.019
+  C:I_BLENDER_0/U1858/Y                                                         
+    I_BLENDER_0/U1859/Y                                              S        P9
+    I_BLENDER_0/U1863/Y                                              S        P9
+    I_BLENDER_0/ctmTdsLR_1_24481/Y                                   S        P8
+  E:I_BLENDER_0/R_525/D                                                   -0.018
+  C:I_BLENDER_1/U4425/Y                                                         
+    I_BLENDER_1/ctmTdsLR_2_24767/Y                                   S        P1
+    I_BLENDER_1/ctmTdsLR_1_24766/Y                                 A S        P1
+    I_BLENDER_1/U3499/Y                                            A S        P1
+    I_BLENDER_1/ctmTdsLR_2_24338/Y                                   S        P5
+    I_BLENDER_1/ctmTdsLR_1_24337/Y                                   S        P9
+  E:I_BLENDER_1/s4_op1_reg_21_/D                                          -0.018
+  C:I_CONTEXT_MEM/U319/Y                                                        
+    I_CONTEXT_MEM/U159/Y                                         A S W        P6
+    I_CONTEXT_MEM/ZBUF_21_inst_23577/Y                           A S W        P6
+    I_CONTEXT_MEM/U162/Y                                           A W        P9
+    I_RISC_CORE/Instrn_12__UPF_LS/Y                                  U        P9
+  E:I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_12_/D                      -0.018
+  S:I_BLENDER_0/R_131/Q                                                         
+    I_BLENDER_0/U1873/Y                                              S        P9
+    I_BLENDER_0/U1511/Y                                            A S        P9
+    I_BLENDER_0/ctmTdsLR_1_24374/Y                                 A S        P2
+    I_BLENDER_0/ctmTdsLR_2_24859/Y                                 A S        P2
+    I_BLENDER_0/ctmTdsLR_1_24858/Y                                 A S        P2
+    I_BLENDER_0/U8853/Y                                            A S        P0
+    I_BLENDER_0/ctmTdsLR_1_24462/Y                                 A S        P0
+    I_BLENDER_0/ctmTdsLR_2_24134/Y                                 A S        P0
+    I_BLENDER_0/ctmTdsLR_1_24133/Y                                 A S        P0
+    I_BLENDER_0/U6881/Y                                            A S        P0
+    I_BLENDER_0/U4795/Y                                            A S        P0
+    I_BLENDER_0/U19/Y                                              A S        P0
+    I_BLENDER_0/U2365/Y                                          A B S        P0
+    I_BLENDER_0/U2364/Y                                            A S        P0
+    I_BLENDER_0/U2366/Y                                            A S        P0
+    I_BLENDER_0/U2083/Y                                          A B S        P0
+    I_BLENDER_0/U2093/Y                                          A B S        P0
+    I_BLENDER_0/U2095/Y                                            A S        P0
+    I_BLENDER_0/ctmTdsLR_2_24284/Y                                 A S        P0
+    I_BLENDER_0/ctmTdsLR_1_24283/Y                                 A S        P0
+    I_BLENDER_0/U2306/Y                                            A S        P0
+    I_BLENDER_0/ctmTdsLR_2_25190/Y                                 A S        P0
+    I_BLENDER_0/ctmTdsLR_1_25189/Y                                 A S        P0
+    I_BLENDER_0/ctmTdsLR_1_25216/Y                                 A S        P0
+    I_BLENDER_0/U4998/Y                                            A S        P0
+    I_BLENDER_0/U4892/Y                                            A S        P0
+    I_BLENDER_0/U4873/Y                                            A S        P0
+    I_BLENDER_0/ctmTdsLR_1_24286/Y                                 A S        P1
+    I_BLENDER_0/ctmTdsLR_1_24360/Y                                 A S        P2
+    I_BLENDER_0/U6313/Y                                            A S        P2
+    I_BLENDER_0/U6312/Y                                            A S        P2
+    I_BLENDER_0/U7142/Y                                            A S        P2
+    I_BLENDER_0/U7138/Y                                            A S        P2
+    I_BLENDER_0/ctmTdsLR_1_25154/Y                                 A S        P2
+  E:I_BLENDER_0/R_239/D                                                   -0.017
+  S:I_BLENDER_1/s2_op1_reg_6_/Q                                                 
+    I_BLENDER_1/ZBUF_516_inst_2377/Y                               A S        P9
+    I_BLENDER_1/U3976/Y                                              S        P9
+    I_BLENDER_1/U6909/Y                                            A S        P2
+    I_BLENDER_1/U835/Y                                             A S        P2
+    I_BLENDER_1/U6911/Y                                            A S        P2
+    I_BLENDER_1/U4176/Y                                            A S        P2
+    I_BLENDER_1/U4177/Y                                            A S        P2
+    I_BLENDER_1/U1068/Y                                            A S        P2
+    I_BLENDER_1/U4215/Y                                            A S        P2
+    I_BLENDER_1/U3826/Y                                            A S        P2
+    I_BLENDER_1/U4228/Y                                          A S W        P0
+    I_BLENDER_1/U3825/Y                                          A S W        P0
+    I_BLENDER_1/U3823/Y                                          A S W        P0
+    I_BLENDER_1/U2803/Y                                          A S W        P0
+    I_BLENDER_1/ZINV_456_inst_54079/Y                            A S W        P0
+    I_BLENDER_1/U4262/Y                                            A S        P0
+    I_BLENDER_1/U4264/Y                                            A S        P0
+    I_BLENDER_1/U4265/Y                                          A S W        P0
+    I_BLENDER_1/U4288/Y                                        A B S W        P0
+    I_BLENDER_1/U2279/Y                                        A B S W        P0
+    I_BLENDER_1/U2275/Y                                          A S W        P0
+    I_BLENDER_1/U6912/Y                                        A B S W        P0
+    I_BLENDER_1/U2294/Y                                        A B S W        P0
+    I_BLENDER_1/U2285/Y                                        A B S W        P0
+    I_BLENDER_1/U2299/Y                                        A B S W        P0
+    I_BLENDER_1/U3854/Y                                        A B S W        P0
+    I_BLENDER_1/U4905/Y                                          A S W        P0
+    I_BLENDER_1/U4904/Y                                          A S W        P0
+    I_BLENDER_1/U4356/Y                                          A S W        P0
+    I_BLENDER_1/U4360/Y                                          A S W        P0
+    I_BLENDER_1/U273/Y                                           A S W        P0
+    I_BLENDER_1/U270/Y                                             A S        P0
+    I_BLENDER_1/U2274/Y                                            A S        P0
+    I_BLENDER_1/U5011/Y                                            A S        P0
+    I_BLENDER_1/U937/Y                                             A S        P0
+    I_BLENDER_1/U922/Y                                             A S        P0
+    I_BLENDER_1/U1060/Y                                            A S        P0
+    I_BLENDER_1/U730/Y                                             A S        P0
+  E:I_BLENDER_1/R_280/D                                                   -0.016
+  C:I_BLENDER_1/U4154/Y                                                         
+    I_BLENDER_1/ctmTdsLR_2_54231/Y                                   S        P6
+    I_BLENDER_1/ctmTdsLR_1_54230/Y                                   S        P9
+  E:I_BLENDER_1/R_414/D                                                   -0.016
+  C:I_CONTEXT_MEM/U319/Y                                                        
+    I_CONTEXT_MEM/U82/Y                                          A S W        P6
+    I_CONTEXT_MEM/ZINV_27_inst_2181/Y                            A S W        P6
+    I_CONTEXT_MEM/ZINV_4_inst_2180/Y                             A S W        P6
+    I_CONTEXT_MEM/U314/Y                                         A S W        P9
+    ZBUF_22_inst_54625/Y                                           A W        P9
+    I_RISC_CORE/Instrn_9__UPF_LS/Y                                   U        P9
+  E:I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_9_/D                       -0.016
+  C:I_CONTEXT_MEM/U319/Y                                                        
+    I_CONTEXT_MEM/U308/Y                                           A W        P9
+    I_CONTEXT_MEM/U304/Y                                           A W        P9
+    I_CONTEXT_MEM/U17/Y                                          A B W        P9
+    I_RISC_CORE/Instrn_15__UPF_LS/Y                                  U        P9
+  E:I_RISC_CORE/I_INSTRN_LAT_Crnt_Instrn_2_reg_15_/D                      -0.015
+  C:I_BLENDER_1/ctmTdsLR_1_24431/Y                                              
+    I_BLENDER_1/ctmTdsLR_2_24745/Y                                   S        P3
+    I_BLENDER_1/ctmTdsLR_1_24744/Y                                   S        P9
+    I_BLENDER_1/U305/Y                                               S        P9
+  E:I_BLENDER_1/R_235/D                                                   -0.015
+  C:I_BLENDER_1/U4154/Y                                                         
+    I_BLENDER_1/ctmTdsLR_1_24139/Y                                 A S        P9
+    I_BLENDER_1/U8927/Y                                              A        P9
+  E:I_BLENDER_1/R_413/D                                                   -0.015
+  C:I_BLENDER_0/U1863/Y                                                         
+    I_BLENDER_0/U1864/Y                                              S        P9
+    I_BLENDER_0/U1866/Y                                            A S        P9
+  E:I_BLENDER_0/R_744/D                                                   -0.015
+  C:I_BLENDER_0/ctmTdsLR_1_24307/Y                                              
+    I_BLENDER_0/U3540/Y                                              A        P9
+    I_BLENDER_0/U3541/Y                                              A        P8
+    I_BLENDER_0/ctmTdsLR_1_24271/Y                                   A        P8
+  E:I_BLENDER_0/R_738/D                                                   -0.014
+  C:I_BLENDER_0/U1608/Y                                                         
+    I_BLENDER_0/U8802/Y                                              A        P8
+    I_BLENDER_0/U8804/Y                                            A S        P8
+  E:I_BLENDER_0/R_580/D                                                   -0.012
+  C:I_BLENDER_1/U1060/Y                                                         
+    I_BLENDER_1/U2755/Y                                              S        P9
+  E:I_BLENDER_1/R_351/D                                                   -0.011
+  C:I_BLENDER_0/U6345/CO                                                        
+    I_BLENDER_0/U3418/Y                                              S        P9
+    I_BLENDER_0/U3600/Y                                            A S        P9
+  E:I_BLENDER_0/s4_op2_reg_31_/D                                          -0.008
+  C:I_BLENDER_1/U3971/Y                                                         
+    I_BLENDER_1/U6468/Y                                              S        P9
+    I_BLENDER_1/ctmTdsLR_1_24572/Y                                   S        P9
+  E:I_BLENDER_1/R_604/D                                                   -0.007
+
+Final ECO Summary:
+--------------------------------------------------------
+Number of size_cell commands                          55
+Total number of commands                              55
+Area increased by cell sizing                      -1.78
+Total area increased                               -1.78
+
+Fixing Summary:
+--------------------------------------------------------
+Total violating endpoints found                      172
+Total violating endpoints fixed                      108
+Total violating endpoints remaining                   64
+Total percentage of violations fixed                62.8%
+
+Information: Elapsed time [               21 seconds ]
+Information: Completed at [ Sun May 28 00:12:43 2023 ]
+
+1
+pt_shell> 
+pt_shell> #command for fixing hold timing violations
+pt_shell> fix_eco_timing -verbose -type hold {NBUFFX8_HVT NBUFFX8_RVT NBUFFX8_LVT}
+Error: extra positional option 'NBUFFX8_HVT NBUFFX8_RVT NBUFFX8_LVT' (CMD-012)
+pt_shell> 
+pt_shell> #command for fixing final leakage power
+pt_shell> fix_eco_power -verbose  -pattern_priority {HVT RVT LVT}
+Information: Starting cell swapping at [ Sun May 28 00:12:43 2023 ]...
+
+Initial setup violating endpoints:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                               0
+test_best                                              0
+test_worst                                             1
+func_slowfast                                         62
+func_fastslow                                          0
+test_slowfast                                          1
+test_fastslow                                          0
+atspeed_cap                                            0
+atspeed_shift                                          0
+stuck_at_shift                                         0
+stuck_at_cap                                           0
+--------------------------------------------------------
+Total                                                 64
+
+Initial library cell patterns:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         29068 ( 57%)
+RVT                                          9386 ( 19%)
+LVT                                         12203 ( 24%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50697 (100%)
+
+Information: Sequential and combinational cells will be swapped.
+Information: Analyzing scenarios for setup timing...
+Information: Starting iteration 1 at [ Sun May 28 00:12:45 2023 ]...
+Information: Analyzing constraints...
+Information: Finalizing ECO change list...
+Information: 1 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 00:12:46 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:12:46 2023 ]...
+Information: Starting pre-DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:12:51 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:12:51 2023 ]...
+Information: 1 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Timing tuning process completed.
+
+Setup violating endpoints after iteration 1:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                               0
+test_best                                              0
+test_worst                                             1
+func_slowfast                                         62
+func_fastslow                                          0
+test_slowfast                                          1
+test_fastslow                                          0
+atspeed_cap                                            0
+atspeed_shift                                          0
+stuck_at_shift                                         0
+stuck_at_cap                                           0
+--------------------------------------------------------
+Total                                                 64
+
+Library cell patterns after iteration 1:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         29068 ( 57%)
+RVT                                          9386 ( 19%)
+LVT                                         12203 ( 24%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50697 (100%)
+
+Information: Starting iteration 2 at [ Sun May 28 00:12:54 2023 ]...
+Information: Finalizing ECO change list...
+Information: 856 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 00:12:55 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:13:12 2023 ]...
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:13:17 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:13:29 2023 ]...
+Information: 412 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 00:13:33 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:13:40 2023 ]...
+Information: 241 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sun May 28 00:13:43 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:13:47 2023 ]...
+Information: 116 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Starting updating timing at [ Sun May 28 00:13:49 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:13:50 2023 ]...
+Information: 19 cells have been tuned.
+Information: Starting timing tuning phase 5...
+Information: Starting updating timing at [ Sun May 28 00:13:53 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:13:53 2023 ]...
+Information: 1 cells have been tuned.
+Information: Starting timing tuning phase 6...
+Information: Timing tuning process completed.
+
+Setup violating endpoints after iteration 2:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                               0
+test_best                                              0
+test_worst                                             1
+func_slowfast                                         63
+func_fastslow                                          0
+test_slowfast                                          1
+test_fastslow                                          0
+atspeed_cap                                            0
+atspeed_shift                                          0
+stuck_at_shift                                         0
+stuck_at_cap                                           0
+--------------------------------------------------------
+Total                                                 65
+
+Library cell patterns after iteration 2:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         29068 ( 57%)
+RVT                                          9453 ( 19%)
+LVT                                         12136 ( 24%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50697 (100%)
+
+Information: Starting iteration 3 at [ Sun May 28 00:13:55 2023 ]...
+Information: Finalizing ECO change list...
+Information: 1126 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 00:13:57 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:14:20 2023 ]...
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:14:26 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:14:46 2023 ]...
+Information: 813 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 00:14:50 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:14:58 2023 ]...
+Information: 231 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sun May 28 00:15:01 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:15:03 2023 ]...
+Information: 49 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Starting updating timing at [ Sun May 28 00:15:05 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:15:06 2023 ]...
+Information: 10 cells have been tuned.
+Information: Starting timing tuning phase 5...
+Information: Starting updating timing at [ Sun May 28 00:15:08 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:15:09 2023 ]...
+Information: 1 cells have been tuned.
+Information: Starting timing tuning phase 6...
+Information: Timing tuning process completed.
+
+Setup violating endpoints after iteration 3:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                               0
+test_best                                              0
+test_worst                                             1
+func_slowfast                                         64
+func_fastslow                                          0
+test_slowfast                                          1
+test_fastslow                                          0
+atspeed_cap                                            0
+atspeed_shift                                          0
+stuck_at_shift                                         0
+stuck_at_cap                                           0
+--------------------------------------------------------
+Total                                                 66
+
+Library cell patterns after iteration 3:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         29090 ( 57%)
+RVT                                          9431 ( 19%)
+LVT                                         12136 ( 24%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50697 (100%)
+
+Information: Starting final iteration at [ Sun May 28 00:15:11 2023 ]...
+Information: Starting pre-DRC tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:15:14 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:15:15 2023 ]...
+Information: 4 cells have been tuned.
+Information: Starting pre-DRC tuning phase 2...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:15:19 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:15:20 2023 ]...
+Information: 4 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Timing tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 00:15:24 2023 ]...
+Information: Finished updating timing at [ Sun May 28 00:15:25 2023 ]...
+Information: 2 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Timing tuning process completed.
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: The cell swapping process is complete.
+
+Final setup violating endpoints:
+Scenario                                           Count
+--------------------------------------------------------
+func_max                                               0
+func_min                                               0
+test_best                                              0
+test_worst                                             1
+func_slowfast                                         62
+func_fastslow                                          0
+test_slowfast                                          1
+test_fastslow                                          0
+atspeed_cap                                            0
+atspeed_shift                                          0
+stuck_at_shift                                         0
+stuck_at_cap                                           0
+--------------------------------------------------------
+Total                                                 64
+
+Final library cell patterns:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         29088 ( 57%)
+RVT                                          9425 ( 19%)
+LVT                                         12144 ( 24%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50697 (100%)
+
+Information: Elapsed time [              165 seconds ]
+Information: Completed at [ Sun May 28 00:15:28 2023 ]
+
+1
+pt_shell> 
+pt_shell> #writing eco changes
+pt_shell> remote_execute {write_changes -format icc2tcl -output fixed_eco.tcl}
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_fastslow'
+-----------------------------------
+End of Master/Slave Task Processing
+
+1
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sun May 28 00:15:34 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_slowfast'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/CLK
+               (internal path startpoint clocked by SYS_2x_CLK)
+  Endpoint: occ_int2/fast_clk_0_clkgt/u_icg
+               (falling clock gating-check end-point clocked by SYS_2x_CLK)
+  Last common pin: cts_dlydt_32422/Y
+  Path Group: **clock_gating_default**
+  Path Type: max
+  Scenario: test_slowfast
+  Min Clock Paths Derating Factor : 0.95
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SYS_2x_CLK (rise edge)                            0.00       0.00
+  clock network delay (propagated)                        1.38       1.38
+  occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/CLK (DFFARX1_LVT)
+                                                          0.00       1.38 r
+  occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/Q (DFFARX1_LVT)
+                                                          0.25 &     1.63 f
+  occ_int2/U_gf_mux_0/ctmTdsLR_1_24113/Y (AO21X1_LVT)     0.13 &     1.76 f
+  occ_int2/fast_clk_0_clkgt/u_icg/EN (CGLNPRX2_LVT)       0.00 &     1.76 f
+  data arrival time                                                  1.76
+
+  clock SYS_2x_CLK (fall edge)                            1.20       1.20
+  clock network delay (propagated)                        0.32       1.52
+  clock reconvergence pessimism                           0.02       1.54
+  clock uncertainty                                      -0.10       1.44
+  occ_int2/fast_clk_0_clkgt/u_icg/CLK (CGLNPRX2_LVT)                 1.44 f
+  clock gating setup time                                -0.19       1.26
+  data required time                                                 1.26
+  ------------------------------------------------------------------------------
+  data required time                                                 1.26
+  data arrival time                                                 -1.76
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.50
+
+
+1
+pt_shell> report_timing -delay_type  min
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sun May 28 00:15:43 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'test_best'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_CTL_U1_count_int_reg_0_
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Endpoint: I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_0
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Last common pin: I_CLOCKING/occ_int1/cts_buf_692932346/Y
+  Path Group: ate_clk
+  Path Type: min
+  Scenario: atspeed_shift
+  Min Data Paths Derating Factor  : 0.95
+  Min Clock Paths Derating Factor : 0.95
+  Max Clock Paths Derating Factor : 1.05
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.18       0.18
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_CTL_U1_count_int_reg_0_/CLK (SDFFARX1_LVT)
+                                                          0.00       0.18 r
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_CTL_U1_count_int_reg_0_/Q (SDFFARX1_LVT)
+                                                          0.05 &     0.23 f
+  I_SDRAM_TOP/HFSBUF_170_1760/Y (NBUFFX8_RVT)             0.02 &     0.25 f
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_0/A1[0] (SRAM2RW64x32)
+                                                         -0.00 &     0.25 f
+  data arrival time                                                  0.25
+
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.21       0.21
+  clock reconvergence pessimism                          -0.02       0.19
+  clock uncertainty                                       0.10       0.29
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_0/CE1 (SRAM2RW64x32)
+                                                                     0.29 r
+  library hold time                                       0.04       0.33
+  data required time                                                 0.33
+  ------------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -0.25
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.08
+
+
+1
+pt_shell> 
+Maximum memory usage for distributed processes:
+my_opts1        1   mo                 797.12 MB
+                2   mo                 794.51 MB
+                3   mo                 667.49 MB
+                4   mo                 788.73 MB
+                5   mo                 783.64 MB
+                6   mo                 785.81 MB
+                7   mo                 799.67 MB
+                8   mo                 786.93 MB
+                9   mo                 792.08 MB
+                10  mo                 782.36 MB
+                11  mo                 794.51 MB
+                12  mo                 791.14 MB
+                13  mo                 763.59 MB
+                14  mo                 763.59 MB
+CPU time usage for distributed processes:
+my_opts1        1   mo                 1899 seconds
+                2   mo                 1511 seconds
+                3   mo                 905 seconds
+                4   mo                 1948 seconds
+                5   mo                 1521 seconds
+                6   mo                 1881 seconds
+                7   mo                 1505 seconds
+                8   mo                 1457 seconds
+                9   mo                 1563 seconds
+                10  mo                 1936 seconds
+                11  mo                 1678 seconds
+                12  mo                 1813 seconds
+                13  mo                 1 seconds
+                14  mo                 1 seconds
+Elapsed time for distributed processes:
+my_opts1        1   mo                 4018 seconds
+                2   mo                 4018 seconds
+                3   mo                 4019 seconds
+                4   mo                 4018 seconds
+                5   mo                 4018 seconds
+                6   mo                 4018 seconds
+                7   mo                 4018 seconds
+                8   mo                 4018 seconds
+                9   mo                 4018 seconds
+                10  mo                 4018 seconds
+                11  mo                 4018 seconds
+                12  mo                 4018 seconds
+                13  mo                 4018 seconds
+                14  mo                 4018 seconds
+Maximum memory usage for this session: 854.24 MB
+CPU usage for this session: 9 seconds 
+Elapsed time for this session: 4033 seconds
+Shutting down worker processes ...
+ Shutdown Process 1
+ Shutdown Process 2
+ Shutdown Process 3
+ Shutdown Process 4
+ Shutdown Process 5
+ Shutdown Process 6
+ Shutdown Process 7
+ Shutdown Process 8
+ Shutdown Process 9
+ Shutdown Process 10
+ Shutdown Process 11
+ Shutdown Process 12
+ Shutdown Process 13
+ Shutdown Process 14
+Diagnostics summary: 4 errors, 108 informationals
+
+Thank you for using pt_shell!

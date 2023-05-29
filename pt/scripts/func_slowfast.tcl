@@ -16,7 +16,7 @@ set link_path {* saed32hvt_ss0p75vn40c.db saed32hvt_ulvl_ss0p75vn40c_i0p75v.db s
 set link_path_per_instance [list [list {I_RISC_CORE} {* saed32hvt_ss0p95vn40c.db saed32hvt_ulvl_ss0p95vn40c_i0p75v.db saed32lvt_ss0p95vn40c.db saed32lvt_ulvl_ss0p95vn40c_i0p75v.db saed32rvt_ss0p95vn40c.db saed32rvt_ulvl_ss0p95vn40c_i0p75v.db saed32sram_ss0p95vn40c.db}] ]
 link
 set_app_var si_enable_analysis true
-read_parasitics -keep_capacitive_coupling $topdir/apr/outputs/${top_design}.route2.Cmax.spef.gz
+read_parasitics -keep_capacitive_coupling $topdir/apr/outputs/${top_design}.route2.cmax.spef.gz
 #read_parasitics -keep_capacitive_coupling ../../apr/outputs/${top_design}.route2.$slow_metal.spef
 
 set corner_name cc_max

@@ -1,0 +1,29 @@
+setting auto_restore_mw_cel_lib_setup true
+icc2_shell> gui_start
+icc2_shell> o
+setting top_design to: 
+ORCA_TOP
+icc2_shell> o
+setting top_design to: 
+ORCA_TOP
+icc2_shell> open_block /home/ramadugu/common/Documents/backupp/sai/apr/work/ORCA_TOP_lib_bckup2:route2.design
+Information: User units loaded from library 'saed32hvt_c' (LNK-040)
+Opening block 'ORCA_TOP_lib_bckup2:route2.design' in edit mode
+icc2_shell> link_block
+Using libraries: ORCA_TOP_lib_bckup2 saed32hvt_c saed32hvt_ulvl_v saed32hvt_dlvl_v saed32rvt_c saed32rvt_ulvl_v saed32rvt_dlvl_v saed32lvt_c saed32lvt_ulvl_v saed32lvt_dlvl_v saed32sram_c
+Visiting block ORCA_TOP_lib_bckup2:route2.design
+Information: The lower_domain_boundary design attribute will be made obsolete in future. Consider using -applies_to_boundary option of set_isolation/set_level_shifter/set_repeater strategy commands. (UPF-355)
+Design 'ORCA_TOP' was successfully linked.
+1
+icc2_shell> remove_cell [get_cell xofiller*]
+179870
+icc2_shell> exit
+icc2_shell> save_block ORCA_TOP_lib_bckup2:route2
+Information: Saving block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> 
+Maximum memory usage for this session: 823.25 MB
+Maximum memory usage for this session including child processes: 823.25 MB
+CPU usage for this session:     61 seconds (  0.02 hours)
+Elapsed time for this session:    163 seconds (  0.05 hours)
+Thank you for using IC Compiler II.
+

@@ -1,11 +1,11 @@
 Information: Derived library resistance unit is 999.999939 Kohm (Time unit is 1 ns, and Capacitance unit is 0.001000 pF). (DES-028)
 
 ****************************************
-Report : read_parasitics /home/ramadugu/common/Documents/freshp/final_prj-team_10-master/apr/outputs/ORCA_TOP.route2.cmax.spef.gz
+Report : read_parasitics /home/ramadugu/common/Documents/backupp/sai/apr/outputs/ORCA_TOP.route2.cmin.spef.gz
 	-keep_capacitive_coupling
 Design : ORCA_TOP
 Version: O-2018.06
-Date   : Sat May 27 13:41:56 2023
+Date   : Sun May 28 01:50:47 2023
 ****************************************
 
         0 error(s)

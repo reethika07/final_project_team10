@@ -1,0 +1,172 @@
+#@ # 
+#@ # Running icc2_shell Version Q-2019.12-SP4 for linux64 -- May 26, 2020
+#@ # Date:   Sun May 28 00:38:11 2023
+#@ # Run by: ramadugu@mo.ece.pdx.edu
+#@ 
+
+source /home/ramadugu/common/Documents/backupp/sai/apr/work/.synopsys_icc2.setup
+o
+source -echo -verbose ../../$top_design.design_config.tcl
+set my_lib ${top_design}_lib
+open_lib $my_lib
+copy_block -from route2 -to $top_design
+pwd
+gui_start
+gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {Logical Cells}
+open_lib /home/ramadugu/common/Documents/backupp/sai/apr/work/ORCA_TOP_lib_bckup2 -edit
+open_block /home/ramadugu/common/Documents/backupp/sai/apr/work/ORCA_TOP_lib_bckup2:route2.design
+gui_set_pref_value -category {showRelativeLocationConstraints} -key {macroOffsetX} -value {0.001}
+gui_set_pref_value -category {showRelativeLocationConstraints} -key {macroOffsetY} -value {0.001}
+link_block
+open_block /home/ramadugu/common/Documents/backupp/sai/apr/work/ORCA_TOP_lib_bckup2:route2.design
+win_set_filter -visible -class cell -filter {hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -visible -class placement_blockage -filter {wiring} -layer {0-82}
+win_set_filter -expand_cell_types {soft_macro  }
+win_set_select_class -visible {cell port bound routing_blockage shaping_blockage pg_region pin_blockage block_shielding topology_node topology_edge topology_repeater core_area die_area edit_group shape via terminal fill_cell placement_blockage }
+win_set_filter -class cell -filter {cell_array hard_macro_margin hard_margin route_blockage_margin soft_margin}
+win_set_filter -class placement_blockage -filter {wiring} -layer {0-82}
+win_set_select_class {cell port bound routing_blockage shaping_blockage pg_region pin_blockage topology_node topology_edge topology_repeater edit_group shape via placement_blockage }
+remove_cell [get_cell xofiller*]
+source ../../pt/work/ms_session_1/func_max/fixed_eco.tcl
+source ../../pt/work/ms_session_1/func_min/fixed_eco.tcl
+source ../../pt/work/ms_session_1/atspeed_cap//fixed_eco.tcl
+source ../../pt/work/ms_session_1/atspeed_cap/fixed_eco.tcl
+error_info
+###############################################################################
+# Change list, formatted for IC Compiler
+#
+#
+#
+###############################################################################
+current_instance
+current_instance {I_BLENDER_1}
+size_cell {s1_op2_reg_5_} {SDFFX2_RVT}
+current_instance
+current_instance {I_SDRAM_TOP}
+size_cell {I_SDRAM_READ_FIFO_SD_FIFO_CTL_U1_this_addr_g_int_reg_3_} {SDFFARX1_RVT}
+current_instance
+current_instance {occ_int2/U_clk_control_i_1}
+size_cell {fast_clk_enable_l_reg} {DFFARX1_RVT}
+current_instance
+current_instance {I_BLENDER_1}
+size_cell {s1_op1_reg_1_} {SDFFARX1_RVT}
+current_instance
+current_instance {I_BLENDER_0}
+size_cell {s1_op2_reg_1_} {SDFFARX1_RVT}
+current_instance
+current_instance {I_SDRAM_TOP/I_SDRAM_IF}
+size_cell {U10428} {AO22X1_RVT}
+size_cell {U7382} {AO22X1_RVT}
+size_cell {U10484} {AO22X1_RVT}
+size_cell {U7383} {AO22X1_RVT}
+size_cell {U7568} {AO22X1_RVT}
+size_cell {U8612} {AO22X1_RVT}
+size_cell {U7569} {AO22X1_RVT}
+size_cell {U9709} {OR2X1_RVT}
+size_cell {U8605} {AO22X1_RVT}
+size_cell {U5551} {AO22X1_RVT}
+size_cell {U8608} {OA22X1_RVT}
+size_cell {U7654} {AO22X1_RVT}
+size_cell {U9801} {OR2X1_RVT}
+size_cell {U7736} {AO22X1_RVT}
+size_cell {U7745} {AO22X1_RVT}
+size_cell {U9858} {AO22X1_RVT}
+size_cell {U8842} {AO22X1_RVT}
+size_cell {U8813} {OA22X1_RVT}
+size_cell {U6754} {AO22X1_RVT}
+size_cell {U11913} {AO22X1_RVT}
+current_instance
+current_instance {I_BLENDER_0}
+size_cell {U889} {INVX1_RVT}
+size_cell {U8486} {NAND2X0_RVT}
+current_instance
+current_instance {I_BLENDER_1}
+size_cell {U6246} {NAND2X1_RVT}
+current_instance
+current_instance {I_BLENDER_0}
+size_cell {U3995} {NAND2X0_RVT}
+size_cell {U4539} {AND2X1_RVT}
+size_cell {U6125} {NAND2X0_RVT}
+size_cell {U5990} {OA21X1_RVT}
+size_cell {U716} {AND2X1_RVT}
+current_instance
+current_instance {I_BLENDER_1}
+size_cell {U4530} {NAND2X0_RVT}
+size_cell {U1939} {OR2X1_RVT}
+current_instance
+current_instance {I_BLENDER_0}
+size_cell {U418} {INVX1_RVT}
+size_cell {U4547} {NAND2X0_RVT}
+size_cell {U6667} {NAND2X0_RVT}
+size_cell {U4550} {NAND2X0_RVT}
+size_cell {U917} {OR2X1_RVT}
+size_cell {U4443} {INVX1_RVT}
+current_instance
+current_instance {I_SDRAM_TOP/I_SDRAM_IF}
+size_cell {U9972} {OR2X1_RVT}
+size_cell {U5748} {AO22X1_RVT}
+size_cell {U7969} {AO22X1_RVT}
+size_cell {U7950} {AO22X1_RVT}
+size_cell {U6809} {AO22X1_RVT}
+size_cell {U12039} {OR2X1_RVT}
+size_cell {U5888} {OR2X1_RVT}
+size_cell {U9014} {OA22X1_RVT}
+size_cell {U5978} {AO22X1_RVT}
+size_cell {U8095} {AO22X1_RVT}
+size_cell {U9129} {OA22X1_RVT}
+size_cell {U7142} {AO22X1_RVT}
+size_cell {U9271} {OA22X1_RVT}
+size_cell {U7144} {AO22X1_RVT}
+size_cell {U11363} {AO22X1_RVT}
+size_cell {U11364} {AO22X1_RVT}
+size_cell {U7272} {AO22X1_RVT}
+size_cell {U9366} {OA22X1_RVT}
+size_cell {U7273} {AO22X1_RVT}
+size_cell {U9438} {AO22X1_RVT}
+size_cell {U8349} {AO22X1_RVT}
+size_cell {U9468} {AO22X1_RVT}
+size_cell {U10427} {AO22X1_RVT}
+size_cell {U8464} {AND2X1_RVT}
+size_cell {U8483} {AO22X1_RVT}
+size_cell {U7414} {AO22X1_RVT}
+size_cell {U6381} {AO22X1_RVT}
+size_cell {U8533} {AO22X1_RVT}
+size_cell {U8539} {AND2X1_RVT}
+size_cell {U9602} {AO22X1_RVT}
+size_cell {U9630} {AO22X1_RVT}
+size_cell {U7561} {AO22X1_RVT}
+size_cell {U9629} {AO22X1_RVT}
+size_cell {U8613} {AO22X1_RVT}
+size_cell {U8604} {AO22X1_RVT}
+size_cell {U6512} {AO22X1_RVT}
+size_cell {U9793} {AO22X1_RVT}
+size_cell {U9805} {AO22X1_RVT}
+size_cell {U8742} {OR2X2_RVT}
+size_cell {U9866} {AO22X1_RVT}
+size_cell {U7752} {AO22X1_RVT}
+size_cell {U5669} {AO22X1_RVT}
+size_cell {U5670} {AO22X1_RVT}
+size_cell {U9855} {AO22X1_RVT}
+current_instance
+current_instance {I_BLENDER_0}
+size_cell {U784} {INVX1_RVT}
+size_cell {U936} {INVX0_RVT}
+current_instance
+current_instance {I_BLENDER_1}
+size_cell {U1659} {AND2X1_RVT}
+size_cell {U2906} {INVX1_RVT}
+size_cell {U3178} {NAND2X0_RVT}
+current_instance
+current_instance {I_BLENDER_0}
+size_cell {U1248} {NAND3X0_RVT}
+current_instance
+current_instance {I_BLENDER_1}
+size_cell {U5895} {INVX1_RVT}
+current_instance
+current_instance {I_BLENDER_0}
+size_cell {U6582} {INVX1_RVT}
+size_cell {U6005} {XOR2X1_RVT}
+size_cell {U6666} {AO22X1_RVT}
+size_cell {U8487} {AO22X1_RVT}
+current_instance
+current_instance {I_SDRAM_TOP/I_SDRAM_IF}

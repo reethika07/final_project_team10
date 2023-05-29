@@ -1,0 +1,893 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/pt_max.tcl
+# Set up the search path to the librariesi
+# One of the typical lines of the resultant search path is:
+# /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm
+# /          $lib_dir                   /lib/ $lib_type /db_nldm
+# The variables are defined in design_config.tcl
+set search_path ""
+foreach i $lib_types { lappend search_path $lib_dir/lib/$i/db_nldm }
+# Smartly find all the libraries you need
+# Will end up with sometihng like this: 
+# saed32hvt_ss0p75v125c.db saed32hvt_ss0p95v125c.db saed32rvt_ss0p75v125c.db saed32rvt_ss0p95v125c.db saed32lvt_ss0p75v125c.db saed32lvt_ss0p95v125c.db saed32sram_ss0p95v125c.db dw_foundation.sldb *
+# This contains all the VTs you want, all the corners you want, and designate any library subtypes like level shifters you might want
+# The variables are defined in the design_config.tcl
+# Example:
+#     saed32hvt_ss0p75v125c.db
+#     |sub_lib  corner    .db
+set link_library ""
+foreach i $search_path {
+  foreach k $corners {
+      foreach m $sub_lib_type {
+        foreach j [glob -nocomplain $i/$m$k.db ] {
+          lappend link_library [file tail $j ]
+        }
+      }
+  }
+}
+lappend link_library *
+saed32hvt_ss0p75vn40c.db saed32hvt_dlvl_ss0p75vn40c_i0p95v.db saed32hvt_ulvl_ss0p75vn40c_i0p75v.db saed32hvt_dlvl_ss0p75vn40c_i0p75v.db saed32hvt_ss0p95vn40c.db saed32hvt_ulvl_ss0p95vn40c_i0p75v.db saed32rvt_ss0p75vn40c.db saed32rvt_dlvl_ss0p75vn40c_i0p95v.db saed32rvt_ulvl_ss0p75vn40c_i0p75v.db saed32rvt_dlvl_ss0p75vn40c_i0p75v.db saed32rvt_ss0p95vn40c.db saed32rvt_ulvl_ss0p95vn40c_i0p75v.db saed32lvt_ss0p75vn40c.db saed32lvt_dlvl_ss0p75vn40c_i0p95v.db saed32lvt_ulvl_ss0p75vn40c_i0p75v.db saed32lvt_dlvl_ss0p75vn40c_i0p75v.db saed32lvt_ss0p95vn40c.db saed32lvt_ulvl_ss0p95vn40c_i0p75v.db saed32sram_ss0p95vn40c.db *
+# Add the local directory "." to the search path after we have used it in the above loop.  If you add . before hand, it will cause some problems.
+lappend search_path .
+/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram/db_nldm .
+Information: current_design won't return any data before link (DES-071)
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75vn40c.db'
+Loading verilog file '/home/ramadugu/common/Documents/backupp/sai/apr/outputs/ORCA_TOP.route2.vg.gz'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p75vn40c_i0p75v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_dlvl_ss0p75vn40c_i0p75v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ss0p75vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ss0p75vn40c_i0p75v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_dlvl_ss0p75vn40c_i0p75v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p75vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ss0p75vn40c_i0p75v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_dlvl_ss0p75vn40c_i0p75v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram/db_nldm/saed32sram_ss0p95vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ulvl_ss0p95vn40c_i0p75v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ss0p95vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ulvl_ss0p95vn40c_i0p75v.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95vn40c.db'
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ulvl_ss0p95vn40c_i0p75v.db'
+Linking design ORCA_TOP...
+Removed 200394 unconnected cells and blackboxes.
+Information: Removing 63 unneeded designs..... (LNK-034)
+Information: 207 (70.41%) library cells are unused in library saed32hvt_ss0p75vn40c..... (LNK-045)
+Information: 12 (100.00%) library cells are unused in library saed32hvt_ulvl_ss0p75vn40c_i0p75v..... (LNK-045)
+Information: 21 (87.50%) library cells are unused in library saed32hvt_dlvl_ss0p75vn40c_i0p75v..... (LNK-045)
+Information: 204 (69.39%) library cells are unused in library saed32lvt_ss0p75vn40c..... (LNK-045)
+Information: 12 (100.00%) library cells are unused in library saed32lvt_ulvl_ss0p75vn40c_i0p75v..... (LNK-045)
+Information: 23 (95.83%) library cells are unused in library saed32lvt_dlvl_ss0p75vn40c_i0p75v..... (LNK-045)
+Information: 220 (74.83%) library cells are unused in library saed32rvt_ss0p75vn40c..... (LNK-045)
+Information: 12 (100.00%) library cells are unused in library saed32rvt_ulvl_ss0p75vn40c_i0p75v..... (LNK-045)
+Information: 22 (91.67%) library cells are unused in library saed32rvt_dlvl_ss0p75vn40c_i0p75v..... (LNK-045)
+Information: 31 (88.57%) library cells are unused in library saed32sram_ss0p95vn40c..... (LNK-045)
+Information: 234 (79.59%) library cells are unused in library saed32hvt_ss0p95vn40c..... (LNK-045)
+Information: 10 (83.33%) library cells are unused in library saed32hvt_ulvl_ss0p95vn40c_i0p75v..... (LNK-045)
+Information: 260 (88.44%) library cells are unused in library saed32lvt_ss0p95vn40c..... (LNK-045)
+Information: 8 (66.67%) library cells are unused in library saed32lvt_ulvl_ss0p95vn40c_i0p75v..... (LNK-045)
+Information: 264 (89.80%) library cells are unused in library saed32rvt_ss0p95vn40c..... (LNK-045)
+Information: 8 (66.67%) library cells are unused in library saed32rvt_ulvl_ss0p95vn40c_i0p75v..... (LNK-045)
+Information: total 1548 library cells are unused (LNK-046)
+Design 'ORCA_TOP' was successfully linked.
+Information: There are 46217 leaf cells, ports, hiers and 52441 nets in the design (LNK-047)
+Information: Checked out license 'PrimeTime-SI' (PT-019)
+Information: Log for 'read_parasitics command' will be generated in 'parasitics_command.log'. (PARA-107)
+Information: Checked out license 'PrimePower' (PT-019)
+if { [info exists synopsys_program_name ] } {
+        switch $synopsys_program_name {
+         "icc2_shell"  {
+                # If the flow variable is set, then we should be in regular APR flow and not the macro floorplanning mode
+                # We want to use the UPF associated with the correct netlist.  APR flow uses DCT output.  Macro fp uses DC output.
+                if { [info exists flow ] } {
+                    puts " Sourcing the Physical Synthesis DCT UPF"
+                    source ../../syn/outputs/ORCA_TOP.dct.upf
+                } else {
+                    puts " Sourcing the Logical Synthesis DC UPF"
+                    source ../../syn/outputs/ORCA_TOP.dc.upf
+                }
+
+                puts " Creating ICC2 MCMM "
+                foreach mode { func test scan atspeed funcu} {
+                  create_mode $mode
+                }
+                foreach corner { {Cmax -40 ss0p75vn40c} {Cmin -40 ff0p95vn40c} } {
+                  set corner_name [lindex $corner 0 ]
+                  set corner_temp [lindex $corner 1 ]
+                  set corner_op_cond [ lindex $corner 2 ]
+                  create_corner $corner_name
+                  # Read the TLUplus file and give it a name.  
+                  read_parasitic_tech -tlup $tlu_dir/saed32nm_1p9m_${corner_name}.tluplus -layermap $tlu_dir/saed32nm_tf_itf_tluplus.map -name ${corner_name}.tlup
+                  # In our current case, we will use the same TLUplus and temperature for both launch and capture and for setup and hold for a particular corner.
+                  # set the TLUplus and temp to be used for early side of paths.  (launch on setup, capture on hold)
+                  set_parasitic_parameters -early_spec ${corner_name}.tlup -early_temperature $corner_temp
+                  # set the TLUplus and temp to be used for late side of paths.  (capture on setup, launch on hold)
+                  set_parasitic_parameters -late_spec ${corner_name}.tlup -late_temperature $corner_temp
+                  # indicate which operating condition to use for the standard cells. It needs to know the PVT.  
+                  # UPF may indicate additional information for the voltage in a multivoltage design.
+                  set_operating_condition $corner_op_cond -library saed32lvt_c
+                }
+
+                #foreach scenario { {func_worst func Cmax } {func_best func Cmin} {test_worst test Cmax} {test_best test Cmin} {atspeed_shift atspeed Cmin} {atspeed_cap atspeed Cmax} {stuck_at_shift scan Cmin} {stuck_at_cap scan Cmax}  }
+foreach scenario { {func_worst func Cmax } {func_best func Cmin} {test_worst test Cmax} {test_best test Cmin} }  {
+                  create_scenario -name [lindex $scenario 0 ] -mode [lindex $scenario 1 ] -corner [lindex $scenario 2 ]
+                  current_scenario [lindex $scenario 0]
+                  source -echo -verbose -continue_on_error ../../constraints/ORCA_TOP_[lindex $scenario 0 ].sdc 
+                  set_false_path -from SDRAM_CLK -to SD_DDR_CLK 
+                }
+
+                set_scenario_status func_worst -active true -hold false -setup true
+                set_scenario_status func_best  -active true -hold true  -setup false
+                set_scenario_status test_worst -active true -hold false -setup true
+                set_scenario_status test_best  -active true -hold true  -setup false
+
+                current_scenario "func_worst"
+
+         }
+         "dc_shell" {
+                 set upf_create_implicit_supply_sets false
+                source ../../constraints/ORCA_TOP.upf
+                set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                source ../../constraints/ORCA_TOP_func_worst.sdc
+                set_false_path -from SDRAM_CLK -to SD_DDR_CLK
+
+                # Define voltage area for DCT mode.  We define the mw_lib variable in DCT mode script.
+                # In the ICC2_flow it is defined in ORCA_TOP.design_options.tcl. Slightly different syntax.
+                if { [ info exists mw_lib ] } {
+                   create_voltage_area  -coordinate {{580 0} {1000 400}} -power_domain PD_RISC_CORE
+                }
+         }
+         "pt_shell" {
+                source $topdir/apr/outputs/ORCA_TOP.route2.upf
+                if [ regexp "max" $corner_name ] {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_func_worst.sdc
+                }
+                if [ regexp "min" $corner_name]  {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_func_best.sdc
+                }
+                 if [ regexp "min_test" $corner_name]  {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_test_best.sdc
+                }
+                if [ regexp "max_test" $corner_name]  {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_test_worst.sdc
+                }
+                 if [ regexp "cc_min" $corner_name]  {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_func_best.sdc
+                }
+                 if [ regexp "cc_max" $corner_name]  {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_func_worst.sdc
+                }
+                 if [ regexp "cc_min_test" $corner_name]  {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_test_best.sdc
+                }
+                 if [ regexp "cc_max_test" $corner_name]  {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_test_worst.sdc
+                }
+if [ regexp "max_capture" $corner_name ] {
+                    set_operating_conditions ss0p75vn40c -library saed32lvt_ss0p75vn40c
+                    source $topdir/constraints/ORCA_TOP_atspeed_cap.sdc
+                }
+if [ regexp "min_scan" $corner_name ] {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_atspeed_shift.sdc
+                }
+if [ regexp "min_capture" $corner_name ] {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_stuck_at_cap.sdc
+                }
+if [ regexp "min_shift" $corner_name ] {
+                    set_operating_conditions ff0p95vn40c -library saed32lvt_ff0p95vn40c
+                    source $topdir/constraints/ORCA_TOP_stuck_at_shift.sdc
+                }
+}
+
+}
+         
+        
+} elseif {[get_db root: .program_short_name] == "genus"} {
+   read_power_intent ../../constraints/ORCA_TOP.upf -version 2.0 -module $top_design
+   apply_power_intent
+   commit_power_intent
+#   report_power_intent 
+   set_units -time ns
+   source -echo -verbose ../../constraints/${top_design}_func_worst.sdc
+   set_false_path -from SDRAM_CLK -to SD_DDR_CLK
+   
+} elseif {[get_db root: .program_short_name] == "innovus"} {
+
+        set_units -time ns -resistance MOhm -capacitance fF -voltage V -current uA
+}
+Information: Resolving '.' to the current scope '<top design>'.
+false
+Information: Setting sdc_version outside of an SDC file has no effect (SDC-1)
+Warning: Creating virtual clock named 'v_PCI_CLK' with no sources. (UITE-121)
+Warning: Creating virtual clock named 'v_SDRAM_CLK' with no sources. (UITE-121)
+1
+Warning: Virtual clock 'v_PCI_CLK' cannot be made propagated. (UITE-316)
+Warning: Virtual clock 'v_SDRAM_CLK' cannot be made propagated. (UITE-316)
+Warning: Setting this variable to a lower value can cause a significant performance degradation during a timing update. (PTE-067)
+Information: Setting rc_cache_min_max_rise_fall_ceff to TRUE. (XTALK-015)
+Information: Using automatic max wire load selection group 'predcaps'. (ENV-003)
+Information: Using automatic min wire load selection group 'predcaps'. (ENV-003)
+Warning: Some timing arcs have been disabled for breaking timing loops or because of constant propagation. Use the 'report_disable_timing' command to get the list of these disabled timing arcs. (PTE-003)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13008/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13009/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13010/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13011/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13012/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13013/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13014/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13015/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13016/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13017/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13018/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13019/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13020/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13021/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13022/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13023/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13024/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13025/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13026/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13027/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13028/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13029/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13030/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13031/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13032/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13033/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13034/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13035/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13036/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13037/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13038/Y'. (PTE-070)
+Information: A non-unate path in clock network detected. Propagating both inverting and noninverting senses of clock 'SDRAM_CLK' from pin 'I_SDRAM_TOP/I_SDRAM_IF/U13039/Y'. (PTE-070)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13008/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13008/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13008. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13008/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13008/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13008. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13008/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13008/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13008. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13008/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13008/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13008. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13009/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13009/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13009. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13009/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13009/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13009. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13009/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13009/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13009. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13009/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13009/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13009. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13010/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13010/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13010. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13010/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13010/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13010. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13010/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13010/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13010. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13010/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13010/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13010. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13011/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13011/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13011. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13011/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13011/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13011. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13011/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13011/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13011. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13011/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13011/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13011. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13012/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13012/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13012. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13012/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13012/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13012. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13012/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13012/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13012. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13012/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13012/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13012. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13013/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13013/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13013. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13013/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13013/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13013. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13013/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13013/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13013. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13013/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13013/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13013. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13014/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13014/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13014. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13014/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13014/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13014. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13014/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13014/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13014. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13014/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13014/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13014. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13015/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13015/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13015. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13015/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13015/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13015. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13015/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13015/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13015. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13015/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13015/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13015. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13016/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13016/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13016. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13016/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13016/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13016. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13016/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13016/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13016. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13016/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13016/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13016. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13017/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13017/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13017. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13017/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13017/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13017. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13017/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13017/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13017. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13017/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13017/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13017. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13018/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13018/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13018. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13018/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13018/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13018. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13018/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13018/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13018. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13018/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13018/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13018. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13019/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13019/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13019. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13019/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13019/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13019. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13019/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13019/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13019. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13019/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13019/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13019. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13020/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13020/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13020. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13020/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13020/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13020. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13020/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13020/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13020. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13020/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13020/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13020. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13021/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13021/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13021. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13021/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13021/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13021. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13021/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13021/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13021. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13021/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13021/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13021. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13022/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13022/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13022. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13022/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13022/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13022. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13022/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13022/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13022. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13022/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13022/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13022. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13023/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13023/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13023. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13023/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13023/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13023. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13023/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13023/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13023. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13023/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13023/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13023. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13024/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13024/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13024. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13024/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13024/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13024. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13024/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13024/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13024. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13024/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13024/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13024. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13025/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13025/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13025. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13025/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13025/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13025. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13025/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13025/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13025. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13025/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13025/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13025. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13026/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13026/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13026. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13026/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13026/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13026. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13026/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13026/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13026. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13026/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13026/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13026. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13027/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13027/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13027. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13027/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13027/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13027. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13027/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13027/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13027. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13027/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13027/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13027. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13028/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13028/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13028. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13028/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13028/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13028. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13028/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13028/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13028. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13028/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13028/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13028. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13029/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13029/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13029. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13029/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13029/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13029. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13029/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13029/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13029. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13029/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13029/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13029. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13030/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13030/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13030. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13030/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13030/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13030. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13030/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13030/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13030. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13030/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13030/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13030. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13031/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13031/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13031. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13031/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13031/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13031. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13031/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13031/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13031. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13031/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13031/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13031. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13032/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13032/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13032. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13032/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13032/A1 of cell I_SDRAM_TOP/I_SDRAM_IF/U13032. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13032/A2 and I_SDRAM_TOP/I_SDRAM_IF/U13032/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13032. (PTE-060)
+Warning: No clock-gating check is inferred for clock SDRAM_CLK at pins I_SDRAM_TOP/I_SDRAM_IF/U13032/A4 and I_SDRAM_TOP/I_SDRAM_IF/U13032/A3 of cell I_SDRAM_TOP/I_SDRAM_IF/U13032. (PTE-060)
+Information: Inferring 4 clock-gating checks. (PTE-017)
+Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'cto_buf_33224/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'I_RISC_CORE/cts_buf_685132268/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'cto_buf_33224/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'I_RISC_CORE/cts_buf_685132268/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'cto_buf_33224/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'I_RISC_CORE/cts_buf_685132268/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'cto_buf_33224/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'I_RISC_CORE/cts_buf_685132268/A' in the network 'n872'. (RC-005)
+Warning: The type of RC delay calculation problems that have occurred prevents the min and max results from bounding the correct values. (RC-008)
+Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'cto_buf_33224/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'I_RISC_CORE/cts_buf_685132268/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'cto_buf_33224/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'I_RISC_CORE/cts_buf_685132268/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'cto_buf_33224/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the rising RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'I_RISC_CORE/cts_buf_685132268/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'cto_buf_33224/A' in the network 'n872'. (RC-005)
+Warning: Failed to compute the falling RC network delay from the pin 'occ_int2/cto_buf_33117/Y' to the pin 'I_RISC_CORE/cts_buf_685132268/A' in the network 'n872'. (RC-005)
+Warning: The type of RC delay calculation problems that have occurred prevents the min and max results from bounding the correct values. (RC-008)
+Information: Starting crosstalk aware timing iteration 1. (XTALK-001)
+Information: Starting crosstalk aware timing iteration 2. (XTALK-001)
+Information: Expanding clock 'SYS_2x_CLK' to base period of 4.800 (old period was 2.400, added 2 edges). (PTE-016)
+Information: Number of nets evaluated in the previous iteration: 48930. (XTALK-105)
+pt_shell> source ../scripts/eco_fixing.tcl
+Information: Setting timing_save_pin_arrival_and_required to TRUE and updating timing. (PTE-076)
+Information: It is recommended that the variable timing_save_pin_arrival_and_required be set before the initial timing update for optimal performance of this command. (PTE-077)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Starting cell swapping at [ Sun May 28 01:52:10 2023 ]...
+
+Initial library cell patterns:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         23882 ( 52%)
+RVT                                          9163 ( 20%)
+LVT                                         12827 ( 28%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45912 (100%)
+
+Information: Sequential and combinational cells will be swapped.
+Information: Starting iteration 1 at [ Sun May 28 01:52:11 2023 ]...
+Information: Analyzing constraints...
+Information: 9 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 01:52:12 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:52:13 2023 ]...
+Information: Starting pre-DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Timing tuning process completed.
+Library cell patterns after iteration 1:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         23882 ( 52%)
+RVT                                          9172 ( 20%)
+LVT                                         12818 ( 28%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45912 (100%)
+
+Information: Starting iteration 2 at [ Sun May 28 01:52:13 2023 ]...
+Information: 2954 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 01:52:15 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:52:34 2023 ]...
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 01:52:38 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:52:48 2023 ]...
+Information: 867 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 01:52:50 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:52:55 2023 ]...
+Information: 513 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sun May 28 01:52:56 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:52:58 2023 ]...
+Information: 269 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Starting updating timing at [ Sun May 28 01:52:58 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:53:00 2023 ]...
+Information: 104 cells have been tuned.
+Information: Starting timing tuning phase 5...
+Information: Starting updating timing at [ Sun May 28 01:53:00 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:53:01 2023 ]...
+Information: 20 cells have been tuned.
+Information: Starting timing tuning phase 6...
+Information: Starting updating timing at [ Sun May 28 01:53:01 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:53:01 2023 ]...
+Information: 1 cells have been tuned.
+Information: Starting timing tuning phase 7...
+Information: Timing tuning process completed.
+Library cell patterns after iteration 2:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         23882 ( 52%)
+RVT                                         10352 ( 23%)
+LVT                                         11638 ( 25%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45912 (100%)
+
+Information: Starting iteration 3 at [ Sun May 28 01:53:01 2023 ]...
+Information: 2122 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 01:53:03 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:53:16 2023 ]...
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 01:53:19 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:53:35 2023 ]...
+Information: 899 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 01:53:37 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:53:53 2023 ]...
+Information: 251 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sun May 28 01:53:54 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:53:59 2023 ]...
+Information: 77 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Starting updating timing at [ Sun May 28 01:53:59 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:54:00 2023 ]...
+Information: 17 cells have been tuned.
+Information: Starting timing tuning phase 5...
+Information: Starting updating timing at [ Sun May 28 01:54:00 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:54:01 2023 ]...
+Information: 1 cells have been tuned.
+Information: Starting timing tuning phase 6...
+Information: Timing tuning process completed.
+Library cell patterns after iteration 3:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         24759 ( 54%)
+RVT                                          9475 ( 21%)
+LVT                                         11638 ( 25%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45912 (100%)
+
+Information: Starting final iteration at [ Sun May 28 01:54:01 2023 ]...
+Information: Starting pre-DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 01:54:01 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:54:02 2023 ]...
+Information: 14 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Timing tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 01:54:03 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:54:07 2023 ]...
+Information: 34 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 01:54:07 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:54:09 2023 ]...
+Information: 9 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sun May 28 01:54:10 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:54:11 2023 ]...
+Information: 1 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Timing tuning process completed.
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: The cell swapping process is complete.
+
+Final library cell patterns:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         24743 ( 54%)
+RVT                                          9449 ( 21%)
+LVT                                         11680 ( 25%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45912 (100%)
+
+Information: Elapsed time [              131 seconds ]
+Information: Completed at [ Sun May 28 01:54:12 2023 ]
+
+Information: Starting DRC fix iteration 1 at [ Sun May 28 01:54:12 2023 ]...
+
+Available buffers:
+Lib_cell               Area
+--------------------------------------------------------
+NBUFFX8_HVT            3.81
+
+Information: Detected 42 max capacitance violations.
+Information: 1 violations are in a clock network and not fixable.
+Information: Fixing violations...
+Information: Starting updating timing at [ Sun May 28 01:54:12 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:54:15 2023 ]...
+Information: 30 cells have been resized.
+Information: 11 buffers have been inserted.
+
+Information: Starting DRC fix iteration 2 at [ Sun May 28 01:54:15 2023 ]...
+Information: Detected 7 max capacitance violations.
+Information: 1 violations are in a clock network and not fixable.
+Information: Fixing violations...
+Information: Starting updating timing at [ Sun May 28 01:54:15 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:54:15 2023 ]...
+Information: 1 cells have been resized.
+Information: 5 buffers have been inserted.
+
+Information: Starting DRC fix iteration 3 at [ Sun May 28 01:54:15 2023 ]...
+Information: Detected 1 max capacitance violations.
+Information: 1 violations are in a clock network and not fixable.
+Information: Fixing violations...
+Information: No more fixes are available.
+Information: The DRC violation fixing process is complete.
+
+
+Remaining Violations:
+Violation Type                                     Count
+--------------------------------------------------------
+Total remaining violations                             1
+Unfixable violations                                   1
+
+Inserted buffers:
+   Count Lib_cell               Area          Total_area
+--------------------------------------------------------
+      16 NBUFFX8_HVT            3.81               60.99
+--------------------------------------------------------
+      16 TOTAL                                     60.99
+
+Final ECO Summary:
+--------------------------------------------------------
+Number of size_cell commands                          31
+Number of insert_buffer commands                      16
+Total number of commands                              47
+Area increased by cell sizing                     137.75
+Area increased by buffer insertion                 60.99
+Total area increased                              198.74
+
+Information: Elapsed time [                3 seconds ]
+Information: Completed at [ Sun May 28 01:54:15 2023 ]
+
+Information: Starting DRC fix iteration 1 at [ Sun May 28 01:54:15 2023 ]...
+
+Available buffers:
+Lib_cell               Area
+--------------------------------------------------------
+NBUFFX8_HVT            3.81
+
+Information: Detected 0 max transition violations.
+Information: Fixing violations...
+Information: No more fixes are available.
+Information: The DRC violation fixing process is complete.
+
+
+Remaining Violations:
+Violation Type                                     Count
+--------------------------------------------------------
+Total remaining violations                             0
+Unfixable violations                                   0
+
+Inserted buffers:
+   Count Lib_cell               Area          Total_area
+--------------------------------------------------------
+         No buffer           
+--------------------------------------------------------
+       0 TOTAL                                      0.00
+
+Final ECO Summary:
+--------------------------------------------------------
+Total number of commands                               0
+Total area increased                                0.00
+
+Information: Elapsed time [                1 seconds ]
+Information: Completed at [ Sun May 28 01:54:16 2023 ]
+
+Information: Starting timing fix iteration 1 at [ Sun May 28 01:54:16 2023 ]...
+Information: 342 violating endpoints located... (PTECO-022)
+Information: 342 endpoints are being considered for fixing... (PTECO-027)
+Information: Fixing violations...
+Information: Starting updating timing at [ Sun May 28 01:54:17 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:54:21 2023 ]...
+Information: 235 cells have been resized.
+
+Information: Starting timing fix iteration 2 at [ Sun May 28 01:54:21 2023 ]...
+Information: 58 violating endpoints located... (PTECO-022)
+Information: 58 endpoints are being considered for fixing... (PTECO-027)
+Information: Fixing violations...
+Information: Starting updating timing at [ Sun May 28 01:54:22 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:54:26 2023 ]...
+Information: 28 cells have been resized.
+
+Information: Starting timing fix iteration 3 at [ Sun May 28 01:54:26 2023 ]...
+Information: 38 violating endpoints located... (PTECO-022)
+Information: 38 endpoints are being considered for fixing... (PTECO-027)
+Information: Fixing violations...
+Information: Starting updating timing at [ Sun May 28 01:54:26 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:54:28 2023 ]...
+Information: 2 cells have been resized.
+
+Information: Starting timing fix iteration 4 at [ Sun May 28 01:54:28 2023 ]...
+Information: 36 violating endpoints located... (PTECO-022)
+Information: 36 endpoints are being considered for fixing... (PTECO-027)
+Information: Fixing violations...
+Information: Starting updating timing at [ Sun May 28 01:54:28 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:54:29 2023 ]...
+Information: 4 cells have been resized.
+
+Information: Starting timing fix iteration 5 at [ Sun May 28 01:54:29 2023 ]...
+Information: 33 violating endpoints located... (PTECO-022)
+Information: 33 endpoints are being considered for fixing... (PTECO-027)
+Information: Fixing violations...
+Information: No more fixes are available.
+Information: The timing violation fixing process is complete.
+
+Final ECO Summary:
+--------------------------------------------------------
+Number of size_cell commands                         269
+Total number of commands                             269
+Area increased by cell sizing                      16.27
+Total area increased                               16.27
+
+Fixing Summary:
+--------------------------------------------------------
+Total violating endpoints found                      342
+Total violating endpoints fixed                      309
+Total violating endpoints remaining                   33
+Total percentage of violations fixed                90.4%
+
+Information: Elapsed time [               13 seconds ]
+Information: Completed at [ Sun May 28 01:54:29 2023 ]
+
+Information: Starting timing fix iteration 1 at [ Sun May 28 01:54:29 2023 ]...
+
+Available buffers:
+Lib_cell               Area
+--------------------------------------------------------
+NBUFFX8_HVT            3.81
+
+Information: 0 violating endpoints located... (PTECO-022)
+Information: 0 endpoints are being considered for fixing... (PTECO-027)
+Information: Fixing violations...
+Information: No more fixes are available.
+Information: The timing violation fixing process is complete.
+
+Inserted buffers:
+   Count Lib_cell               Area          Total_area
+--------------------------------------------------------
+         No buffer           
+--------------------------------------------------------
+       0 TOTAL                                      0.00
+
+Final ECO Summary:
+--------------------------------------------------------
+Total number of commands                               0
+Total area increased                                0.00
+
+Fixing Summary:
+--------------------------------------------------------
+Total violating endpoints found                        0
+Total violating endpoints fixed                        0
+Total violating endpoints remaining                    0
+Total percentage of violations fixed                 0.0%
+
+Information: Elapsed time [                0 seconds ]
+Information: Completed at [ Sun May 28 01:54:29 2023 ]
+
+Information: Starting cell swapping at [ Sun May 28 01:54:29 2023 ]...
+
+Initial library cell patterns:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         24622 ( 54%)
+RVT                                          9471 ( 21%)
+LVT                                         11795 ( 26%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45928 (100%)
+
+Information: Sequential and combinational cells will be swapped.
+Information: Starting iteration 1 at [ Sun May 28 01:54:30 2023 ]...
+Information: Analyzing constraints...
+Information: 0 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 01:54:31 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:54:31 2023 ]...
+Library cell patterns after iteration 1:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         24622 ( 54%)
+RVT                                          9471 ( 21%)
+LVT                                         11795 ( 26%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45928 (100%)
+
+Information: Starting iteration 2 at [ Sun May 28 01:54:31 2023 ]...
+Information: 1439 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 01:54:34 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:54:49 2023 ]...
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 01:54:52 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:55:01 2023 ]...
+Information: 646 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 01:55:03 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:55:07 2023 ]...
+Information: 294 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sun May 28 01:55:08 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:55:11 2023 ]...
+Information: 189 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Starting updating timing at [ Sun May 28 01:55:11 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:55:12 2023 ]...
+Information: 62 cells have been tuned.
+Information: Starting timing tuning phase 5...
+Information: Starting updating timing at [ Sun May 28 01:55:12 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:55:14 2023 ]...
+Information: 12 cells have been tuned.
+Information: Starting timing tuning phase 6...
+Information: Starting updating timing at [ Sun May 28 01:55:14 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:55:14 2023 ]...
+Information: 4 cells have been tuned.
+Information: Starting timing tuning phase 7...
+Information: Timing tuning process completed.
+Library cell patterns after iteration 2:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         24622 ( 54%)
+RVT                                          9703 ( 21%)
+LVT                                         11563 ( 25%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45928 (100%)
+
+Information: Starting iteration 3 at [ Sun May 28 01:55:14 2023 ]...
+Information: 1332 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 01:55:16 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:55:26 2023 ]...
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 01:55:28 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:55:36 2023 ]...
+Information: 906 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 01:55:37 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:55:41 2023 ]...
+Information: 187 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sun May 28 01:55:42 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:55:44 2023 ]...
+Information: 77 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Starting updating timing at [ Sun May 28 01:55:44 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:55:45 2023 ]...
+Information: 24 cells have been tuned.
+Information: Starting timing tuning phase 5...
+Information: Starting updating timing at [ Sun May 28 01:55:45 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:55:46 2023 ]...
+Information: 6 cells have been tuned.
+Information: Starting timing tuning phase 6...
+Information: Starting updating timing at [ Sun May 28 01:55:46 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:55:46 2023 ]...
+Information: 1 cells have been tuned.
+Information: Starting timing tuning phase 7...
+Information: Timing tuning process completed.
+Library cell patterns after iteration 3:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         24753 ( 54%)
+RVT                                          9572 ( 21%)
+LVT                                         11563 ( 25%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45928 (100%)
+
+Information: Starting final iteration at [ Sun May 28 01:55:46 2023 ]...
+Information: Starting pre-DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 01:55:46 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:55:46 2023 ]...
+Information: 3 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Timing tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 01:55:46 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:55:47 2023 ]...
+Information: 7 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 01:55:47 2023 ]...
+Information: Finished updating timing at [ Sun May 28 01:55:47 2023 ]...
+Information: 2 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting timing tuning phase 4...
+Information: Timing tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting timing tuning phase 2...
+Information: Starting timing tuning phase 3...
+Information: Starting timing tuning phase 4...
+Information: Timing tuning process completed.
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: The cell swapping process is complete.
+
+Final library cell patterns:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         24751 ( 54%)
+RVT                                          9564 ( 21%)
+LVT                                         11573 ( 25%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45928 (100%)
+
+Information: Elapsed time [               79 seconds ]
+Information: Completed at [ Sun May 28 01:55:48 2023 ]
+
+Error: 'remote_execute' can only be called in a distributed processing context. (CMCR-012)
+0
+0
+pt_shell> write_changes -format icc2tcl -output eco_fixed.tcl
+Information: Writing change list file '/home/ramadugu/common/Documents/backupp/sai/pt/work/eco_fixed.tcl'.
+1
+pt_shell> exit
+Suppressed Messages Summary:
+Id          Severity      Occurrences   Suppressed
+-------------------------------------------------------------------------------
+PTE-060     Warning               128           28
+NED-045     Information         13653         3653
+LNK-041     Information           161          161
+Total 3 types of messages are suppressed
+Maximum memory usage for this session: 1113.42 MB
+CPU usage for this session: 683 seconds 
+Elapsed time for this session: 672 seconds
+Diagnostics summary: 2 errors, 131 warnings, 10138 informationals
+
+Thank you for using pt_shell!
+

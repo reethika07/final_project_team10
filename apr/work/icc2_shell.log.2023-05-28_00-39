@@ -1,0 +1,1190 @@
+setting auto_restore_mw_cel_lib_setup true
+icc2_shell> o
+setting top_design to: 
+ORCA_TOP
+icc2_shell> source -echo -verbose ../../$top_design.design_config.tcl
+set lib_dir /pkgs/synopsys/2020/32_28nm/SAED32_EDK
+/pkgs/synopsys/2020/32_28nm/SAED32_EDK
+# Decoder ring for the libraries
+# You will need to follow another example or look in the library directories to understand.
+# lib_types is used for the dc/dct linking variables and ICC2 NDM lcoations.
+# /pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/db_nldm
+# /          $lib_dir                   /lib/ $lib_type /db_nldm
+# link_library, Target_library use the sub_lib_types and corner variables. 
+# For sub_lib_types and corner:
+# Example:
+#     saed32hvt_ss0p75v125c.db
+#     |sub_lib  corner    .db
+# The current flow tries to find all sub_lib and all corners in all the search paths.  Any match will be put in the library list.
+# Wild cards can be used, but be careful.  Multiple matches can occur in ways you don't want.
+# For the target library, the same method is used as the link library except only HVT and RVT lib_types are used.
+# ICC2 NDM choosing also uses the sub_lib_types so that only the required libraries and extras are not loaded.
+# ORCA
+# The RTL version does not currently have macros
+# The one pulled from a lab does have macros, but no RTL.  Similar to the version with RTL.
+# Below is an effort to get the design pulled from a lap working for ICC2
+# Original lab had sram_lp memories, but the NDMs don't seem to be build correctly for the current libraries.  Converted code to regular SRAMs.
+set top_design ORCA_TOP
+ORCA_TOP
+set FCL 1
+1
+set add_ios 0
+0
+set pad_design 0
+0
+set design_size {1000 800}
+1000 800
+set design_io_border 10
+10
+set dc_floorplanning 1
+1
+set enable_dft 1
+1
+set innovus_enable_manual_macro_placement 1
+1
+set split_constraints 0
+0
+# This is the raw RTL without SRAMS
+#set rtl_list [list [glob /pkgs/synopsys/32_28nm/SAED_EDK32.28nm_REF_v_15032018/SAED32_EDK/references/orca/dc/rtl/*.vhd ] ../rtl/MUX21X2.sv ]
+# This is hacked P&R netlist with SRAMs and test and level shifters removed.
+set rtl_list [list ../rtl/$top_design.sv ]
+../rtl/ORCA_TOP.sv
+set slow_corner "ss0p75vn40c ss0p75vn40c_i0p95v ss0p75vn40c_i0p75v ss0p95vn40c ss0p95vn40c_i0p75v"
+ss0p75vn40c ss0p75vn40c_i0p95v ss0p75vn40c_i0p75v ss0p95vn40c ss0p95vn40c_i0p75v
+#set slow_corner "ss0p95vn40c_i0p95v ss0p95vn40c "
+set fast_corner "ff0p95vn40c ff0p95vn40c_i1p16v ff0p95vn40c_i0p95v ff1p16vn40c ff1p16vn40c_i1p16v ff1p16vn40c_i0p95v"
+ff0p95vn40c ff0p95vn40c_i1p16v ff0p95vn40c_i0p95v ff1p16vn40c ff1p16vn40c_i1p16v ff1p16vn40c_i0p95v
+set slow_metal 1p9m_Cmax_-40
+1p9m_Cmax_-40
+set fast_metal 1p9m_Cmax_-40
+1p9m_Cmax_-40
+set synth_corners $slow_corner
+ss0p75vn40c ss0p75vn40c_i0p95v ss0p75vn40c_i0p75v ss0p95vn40c ss0p95vn40c_i0p75v
+set synth_corners_slow $slow_corner
+ss0p75vn40c ss0p75vn40c_i0p95v ss0p75vn40c_i0p75v ss0p95vn40c ss0p95vn40c_i0p75v
+set synth_corners_fast $fast_corner
+ff0p95vn40c ff0p95vn40c_i1p16v ff0p95vn40c_i0p95v ff1p16vn40c ff1p16vn40c_i1p16v ff1p16vn40c_i0p95v
+set lib_types "stdcell_hvt stdcell_rvt stdcell_lvt sram"
+stdcell_hvt stdcell_rvt stdcell_lvt sram
+# Get just the main standard cells, srams
+set sub_lib_type "saed32?vt_ saed32sram_ saed32?vt_ulvl_ saed32?vt_dlvl_ "
+saed32?vt_ saed32sram_ saed32?vt_ulvl_ saed32?vt_dlvl_ 
+# Full MCMM Corners
+if { 0 } {
+    set corners ""
+    #Add Worst corners
+    set corners "$corners ss0p75vn40c ss0p75vn40c_i0p95v ss0p75vn40c_i0p75v ss0p95vn40c ss0p95vn40c_i0p75v"
+    #Add Best corners
+    set corners "$corners ff0p95vn40c ff0p95vn40c_i1p16v ff0p95vn40c_i0p95v ff1p16vn40c ff1p16vn40c_i1p16v ff1p16vn40c_i0p95v"
+    #Add Leakage corners
+    set corners "$corners ff0p95v125c f0p95v125c_i1p16v ff0p95v125c_i0p95v ff1p16v125c ff1p16v125c_i1p16v ff1p16v125c ff1p16v125c_i0p95v"
+    set lib_types "stdcell_hvt stdcell_rvt stdcell_lvt sram_lp"
+    # Get the main standard cells, and also the level shifters.  Plus srams.
+    set sub_lib_type "saed32?vt_ saed32?vt_ulvl_ saed32?vt_dlvl_ saed32sram_"
+}
+#set topdir /u/$env(USER)/PSU_RTL2GDS
+set topdir [ lindex [ regexp -inline "(.*)\(syn\|pt\|apr\)" [pwd] ] 1 ]
+/home/ramadugu/common/Documents/backupp/sai/
+#declaring sub blocks
+set sub_block {SDRAM_TOP 
+                                BLENDER_0 
+                                PCI_TOP 
+                                CONTEXT_MEM 
+                                RISC_CORE 
+                                CLOCKING 
+                                BLENDER_1 
+                                PARSER 
+                                }
+SDRAM_TOP 
+                                BLENDER_0 
+                                PCI_TOP 
+                                CONTEXT_MEM 
+                                RISC_CORE 
+                                CLOCKING 
+                                BLENDER_1 
+                                PARSER 
+                                
+set sub_block_I {I_SDRAM_TOP I_BLENDER_1  I_BLENDER_0 I_RISC_CORE I_CONTEXT_MEM I_PCI_TOP I_PARSER I_CLOCKING}
+I_SDRAM_TOP I_BLENDER_1  I_BLENDER_0 I_RISC_CORE I_CONTEXT_MEM I_PCI_TOP I_PARSER I_CLOCKING
+set macro_block {I_SDRAM_TOP I_PCI_TOP I_RISC_CORE I_CONTEXT_MEM}
+I_SDRAM_TOP I_PCI_TOP I_RISC_CORE I_CONTEXT_MEM
+I_SDRAM_TOP I_PCI_TOP I_RISC_CORE I_CONTEXT_MEM
+icc2_shell> set my_lib ${top_design}_lib
+ORCA_TOP_lib
+icc2_shell> open_lib $my_lib
+Information: Loading library file '/home/ramadugu/common/Documents/backupp/sai/apr/work/ORCA_TOP_lib' (FILE-007)
+Information: Loading library file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/ndm/saed32hvt_c.ndm' (FILE-007)
+Information: Loading library file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/ndm/saed32hvt_ulvl_v.ndm' (FILE-007)
+Information: Loading library file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_hvt/ndm/saed32hvt_dlvl_v.ndm' (FILE-007)
+Information: Loading library file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/ndm/saed32rvt_c.ndm' (FILE-007)
+Information: Loading library file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/ndm/saed32rvt_ulvl_v.ndm' (FILE-007)
+Information: Loading library file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/ndm/saed32rvt_dlvl_v.ndm' (FILE-007)
+Information: Loading library file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/ndm/saed32lvt_c.ndm' (FILE-007)
+Information: Loading library file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/ndm/saed32lvt_ulvl_v.ndm' (FILE-007)
+Information: Loading library file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_lvt/ndm/saed32lvt_dlvl_v.ndm' (FILE-007)
+Information: Loading library file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/sram/ndm/saed32sram_c.ndm' (FILE-007)
+{ORCA_TOP_lib}
+icc2_shell> copy_block -from route2 -to $top_design
+Warning: Nothing implicitly matched 'route2' (SEL-003)
+Error: Nothing matched for -from_block (SEL-005)
+icc2_shell> pwd
+/home/ramadugu/common/Documents/backupp/sai/apr/work
+icc2_shell> gui_start
+icc2_shell> open_block /home/ramadugu/common/Documents/backupp/sai/apr/work/ORCA_TOP_lib_bckup2:route2.design
+Information: User units loaded from library 'saed32hvt_c' (LNK-040)
+Opening block 'ORCA_TOP_lib_bckup2:route2.design' in edit mode
+icc2_shell> link_block
+Using libraries: ORCA_TOP_lib_bckup2 saed32hvt_c saed32hvt_ulvl_v saed32hvt_dlvl_v saed32rvt_c saed32rvt_ulvl_v saed32rvt_dlvl_v saed32lvt_c saed32lvt_ulvl_v saed32lvt_dlvl_v saed32sram_c
+Visiting block ORCA_TOP_lib_bckup2:route2.design
+Information: The lower_domain_boundary design attribute will be made obsolete in future. Consider using -applies_to_boundary option of set_isolation/set_level_shifter/set_repeater strategy commands. (UPF-355)
+Design 'ORCA_TOP' was successfully linked.
+1
+icc2_shell> open_block /home/ramadugu/common/Documents/backupp/sai/apr/work/ORCA_TOP_lib_bckup2:route2.design
+Information: Incrementing open_count of block 'ORCA_TOP_lib_bckup2:route2.design' to 2. (DES-021)
+{ORCA_TOP_lib_bckup2:route2.design}
+icc2_shell> remove_cell [get_cell xofiller*]
+179870
+icc2_shell> source ../../pt/work/ms_session_1/func_max/fixed_eco.tcl
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/s1_op2_reg_5_'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U10428'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7568'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7569'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9709'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8605'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8608'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7654'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7745'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9858'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7736'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8842'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U6125'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U5990'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U716'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U917'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6809'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5888'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7950'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5978'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9129'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7142'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7144'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9271'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7272'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9366'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7273'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U11364'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9438'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8349'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U10427'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8483'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8533'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9602'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9629'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7561'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9630'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8613'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9793'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8742'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9855'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5670'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U291'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U3178'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U1324'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U6666'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U12034'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U8487'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6985'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9063'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7105'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8213'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9353'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8603'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8731'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8789'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U2247'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U6588'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7383'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U2506'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U4589'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Nothing implicitly matched 'ZBUF_2_inst_54161' (SEL-003)
+Error: Nothing matched for cells (SEL-005)
+Error: 0 cell(s) are sized.
+        Use error_info for more info. (CMD-013)
+Information: script '/home/ramadugu/common/Documents/backupp/sai/pt/work/ms_session_1/func_max/fixed_eco.tcl'
+                stopped at line 218 due to error. (CMD-081)
+Extended error info:
+0 cell(s) are sized.
+    while executing
+"size_cell {ZBUF_2_inst_54161} {NBUFFX8_RVT}"
+ -- End Extended Error Info
+icc2_shell> source ../../pt/work/ms_session_1/func_min/fixed_eco.tcl
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/s1_op2_reg_5_'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_READ_FIFO_SD_FIFO_CTL_U1_this_addr_g_int_reg_3_'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/s1_op1_reg_1_'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'occ_int2/U_clk_control_i_1/fast_clk_enable_l_reg'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/s1_op2_reg_1_'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7382'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9437'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U10484'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U10428'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7568'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8612'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7569'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9709'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8605'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8608'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5551'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9801'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7654'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7745'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9858'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7736'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8813'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8842'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U11913'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6754'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U889'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U8486'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U6246'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U3995'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6125'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U4539'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U5990'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/HFSINV_156_1896'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U716'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6030'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U4530'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U418'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U1939'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U4547'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6667'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U917'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U4550'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U4443'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9972'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6809'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5748'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5888'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U12039'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7950'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7969'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9014'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5978'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8095'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9129'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7142'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7144'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9271'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U11363'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7272'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9366'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7273'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U11364'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9438'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8349'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U10427'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9468'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8464'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7414'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8483'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6381'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8533'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8539'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U4616'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9602'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9629'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7561'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9630'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8604'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8613'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6512'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9793'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8742'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9805'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9855'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5669'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9866'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5670'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7752'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U784'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U936'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U1659'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_1/U2906'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U291'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U3178'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U1324'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U1248'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U5895'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U6582'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6005'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6666'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U12034'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U8487'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6985'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9063'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7105'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U11387'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8213'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9353'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8603'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8731'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8789'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U2247'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U779'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U464'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U1005'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_1/U3541'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U2401'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U8488'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6588'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U794'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U2245'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U3492'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7383'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/U199'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U2741'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U2506'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6708'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U5355'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_1/U1407'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U4928'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U4589'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_PCI_TOP/U4006'. (ECOUI-106)
+Warning: Not relinking cell 'I_PCI_TOP/U2683'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Nothing implicitly matched 'ZBUF_2_inst_54161' (SEL-003)
+Error: Nothing matched for cells (SEL-005)
+Error: 0 cell(s) are sized.
+        Use error_info for more info. (CMD-013)
+Information: script '/home/ramadugu/common/Documents/backupp/sai/pt/work/ms_session_1/func_min/fixed_eco.tcl'
+                stopped at line 218 due to error. (CMD-081)
+Extended error info:
+0 cell(s) are sized.
+    while executing
+"size_cell {ZBUF_2_inst_54161} {NBUFFX8_RVT}"
+ -- End Extended Error Info
+icc2_shell> source ../../pt/work/ms_session_1/atspeed_cap//fixed_eco.tcl
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/s1_op2_reg_5_'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_READ_FIFO_SD_FIFO_CTL_U1_this_addr_g_int_reg_3_'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/s1_op1_reg_1_'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'occ_int2/U_clk_control_i_1/fast_clk_enable_l_reg'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/s1_op2_reg_1_'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7382'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9437'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U10484'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U10428'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7568'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8612'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7569'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9709'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8605'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8608'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5551'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9801'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7654'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7745'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9858'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7736'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8813'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8842'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U11913'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6754'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U889'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U8486'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U6246'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U3995'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6125'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U4539'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U5990'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/HFSINV_156_1896'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U716'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6030'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U4530'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U418'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U1939'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U4547'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6667'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U917'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U4550'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U4443'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9972'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6809'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5748'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5888'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U12039'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7950'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7969'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9014'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5978'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8095'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9129'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7142'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7144'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9271'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U11363'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7272'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9366'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7273'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U11364'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9438'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8349'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U10427'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9468'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8464'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7414'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8483'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6381'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8533'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8539'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U4616'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9602'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9629'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7561'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9630'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8604'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8613'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6512'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9793'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8742'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9805'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9855'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5669'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9866'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5670'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7752'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U784'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U936'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U1659'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_1/U2906'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U291'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U3178'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U1324'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U1248'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U5895'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U6582'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6005'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6666'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U12034'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U8487'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6985'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9063'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7105'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U11387'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8213'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9353'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8603'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8731'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8789'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U2247'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U779'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U464'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U1005'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_1/U3541'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U2401'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U8488'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6588'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U794'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U2245'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U3492'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7383'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/U199'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U2741'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U2506'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6708'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U5355'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_1/U1407'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U4928'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U4589'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_PCI_TOP/U4006'. (ECOUI-106)
+Warning: Not relinking cell 'I_PCI_TOP/U2683'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Nothing implicitly matched 'ZBUF_2_inst_54161' (SEL-003)
+Error: Nothing matched for cells (SEL-005)
+Error: 0 cell(s) are sized.
+        Use error_info for more info. (CMD-013)
+Information: script '/home/ramadugu/common/Documents/backupp/sai/pt/work/ms_session_1/atspeed_cap/fixed_eco.tcl'
+                stopped at line 218 due to error. (CMD-081)
+Extended error info:
+0 cell(s) are sized.
+    while executing
+"size_cell {ZBUF_2_inst_54161} {NBUFFX8_RVT}"
+ -- End Extended Error Info
+icc2_shell> source ../../pt/work/ms_session_1/atspeed_cap/fixed_eco.tcl
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/s1_op2_reg_5_'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_READ_FIFO_SD_FIFO_CTL_U1_this_addr_g_int_reg_3_'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/s1_op1_reg_1_'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'occ_int2/U_clk_control_i_1/fast_clk_enable_l_reg'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/s1_op2_reg_1_'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7382'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9437'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U10484'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U10428'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7568'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8612'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7569'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9709'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8605'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8608'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5551'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9801'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7654'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7745'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9858'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7736'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8813'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8842'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U11913'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6754'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U889'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U8486'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U6246'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U3995'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6125'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U4539'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U5990'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/HFSINV_156_1896'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U716'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6030'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U4530'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U418'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U1939'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U4547'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6667'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U917'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U4550'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U4443'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9972'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6809'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5748'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5888'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U12039'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7950'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7969'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9014'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5978'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8095'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9129'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7142'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7144'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9271'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U11363'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7272'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9366'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7273'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U11364'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9438'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8349'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U10427'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9468'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8464'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7414'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8483'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6381'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8533'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8539'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U4616'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9602'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9629'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7561'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9630'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8604'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8613'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6512'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9793'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8742'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9805'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9855'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5669'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9866'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5670'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7752'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U784'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U936'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U1659'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_1/U2906'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U291'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U3178'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U1324'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U1248'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U5895'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U6582'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6005'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6666'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U12034'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U8487'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6985'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9063'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7105'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U11387'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8213'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9353'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8603'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8731'. (ECOUI-106)
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8789'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U2247'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U779'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U464'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U1005'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_1/U3541'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U2401'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U8488'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6588'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U794'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U2245'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U3492'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7383'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_SDRAM_TOP/U199'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U2741'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U2506'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_0/U6708'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U5355'. (ECOUI-106)
+Warning: Not relinking cell 'I_BLENDER_1/U1407'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_0/U4928'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_BLENDER_1/U4589'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Not relinking cell 'I_PCI_TOP/U4006'. (ECOUI-106)
+Warning: Not relinking cell 'I_PCI_TOP/U2683'. (ECOUI-106)
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+Warning: Nothing implicitly matched 'ZBUF_2_inst_54161' (SEL-003)
+Error: Nothing matched for cells (SEL-005)
+Error: 0 cell(s) are sized.
+        Use error_info for more info. (CMD-013)
+Information: script '/home/ramadugu/common/Documents/backupp/sai/pt/work/ms_session_1/atspeed_cap/fixed_eco.tcl'
+                stopped at line 218 due to error. (CMD-081)
+Extended error info:
+0 cell(s) are sized.
+    while executing
+"size_cell {ZBUF_2_inst_54161} {NBUFFX8_RVT}"
+ -- End Extended Error Info
+icc2_shell> error_info
+Extended error info:
+0 cell(s) are sized.
+    while executing
+"size_cell {ZBUF_2_inst_54161} {NBUFFX8_RVT}"
+    (file "/home/ramadugu/common/Documents/backupp/sai/pt/work/ms_session_1/atspeed_cap/fixed_eco.tcl" line 218)
+    invoked from within
+"source ../../pt/work/ms_session_1/atspeed_cap/fixed_eco.tcl"
+ -- End Extended Error Info
+icc2_shell> ###############################################################################
+icc2_shell> # Change list, formatted for IC Compiler
+icc2_shell> #
+icc2_shell> #
+icc2_shell> #
+icc2_shell> ###############################################################################
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_BLENDER_1}
+I_BLENDER_1
+icc2_shell> size_cell {s1_op2_reg_5_} {SDFFX2_RVT}
+Warning: Not relinking cell 'I_BLENDER_1/s1_op2_reg_5_'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_SDRAM_TOP}
+I_SDRAM_TOP
+icc2_shell> size_cell {I_SDRAM_READ_FIFO_SD_FIFO_CTL_U1_this_addr_g_int_reg_3_} {SDFFARX1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_READ_FIFO_SD_FIFO_CTL_U1_this_addr_g_int_reg_3_'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {occ_int2/U_clk_control_i_1}
+occ_int2/U_clk_control_i_1
+icc2_shell> size_cell {fast_clk_enable_l_reg} {DFFARX1_RVT}
+Warning: Not relinking cell 'occ_int2/U_clk_control_i_1/fast_clk_enable_l_reg'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_BLENDER_1}
+I_BLENDER_1
+icc2_shell> size_cell {s1_op1_reg_1_} {SDFFARX1_RVT}
+Warning: Not relinking cell 'I_BLENDER_1/s1_op1_reg_1_'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_BLENDER_0}
+I_BLENDER_0
+icc2_shell> size_cell {s1_op2_reg_1_} {SDFFARX1_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/s1_op2_reg_1_'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_SDRAM_TOP/I_SDRAM_IF}
+I_SDRAM_TOP/I_SDRAM_IF
+icc2_shell> size_cell {U10428} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U10428'. (ECOUI-106)
+0
+icc2_shell> size_cell {U7382} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7382'. (ECOUI-106)
+0
+icc2_shell> size_cell {U10484} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U10484'. (ECOUI-106)
+0
+icc2_shell> size_cell {U7383} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7383'. (ECOUI-106)
+0
+icc2_shell> size_cell {U7568} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7568'. (ECOUI-106)
+0
+icc2_shell> size_cell {U8612} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8612'. (ECOUI-106)
+0
+icc2_shell> size_cell {U7569} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7569'. (ECOUI-106)
+0
+icc2_shell> size_cell {U9709} {OR2X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9709'. (ECOUI-106)
+0
+icc2_shell> size_cell {U8605} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8605'. (ECOUI-106)
+0
+icc2_shell> size_cell {U5551} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5551'. (ECOUI-106)
+0
+icc2_shell> size_cell {U8608} {OA22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8608'. (ECOUI-106)
+0
+icc2_shell> size_cell {U7654} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7654'. (ECOUI-106)
+0
+icc2_shell> size_cell {U9801} {OR2X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9801'. (ECOUI-106)
+0
+icc2_shell> size_cell {U7736} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7736'. (ECOUI-106)
+0
+icc2_shell> size_cell {U7745} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7745'. (ECOUI-106)
+0
+icc2_shell> size_cell {U9858} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9858'. (ECOUI-106)
+0
+icc2_shell> size_cell {U8842} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8842'. (ECOUI-106)
+0
+icc2_shell> size_cell {U8813} {OA22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8813'. (ECOUI-106)
+0
+icc2_shell> size_cell {U6754} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6754'. (ECOUI-106)
+0
+icc2_shell> size_cell {U11913} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U11913'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_BLENDER_0}
+I_BLENDER_0
+icc2_shell> size_cell {U889} {INVX1_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U889'. (ECOUI-106)
+0
+icc2_shell> size_cell {U8486} {NAND2X0_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U8486'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_BLENDER_1}
+I_BLENDER_1
+icc2_shell> size_cell {U6246} {NAND2X1_RVT}
+Warning: Not relinking cell 'I_BLENDER_1/U6246'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_BLENDER_0}
+I_BLENDER_0
+icc2_shell> size_cell {U3995} {NAND2X0_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U3995'. (ECOUI-106)
+0
+icc2_shell> size_cell {U4539} {AND2X1_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U4539'. (ECOUI-106)
+0
+icc2_shell> size_cell {U6125} {NAND2X0_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U6125'. (ECOUI-106)
+0
+icc2_shell> size_cell {U5990} {OA21X1_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U5990'. (ECOUI-106)
+0
+icc2_shell> size_cell {U716} {AND2X1_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U716'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_BLENDER_1}
+I_BLENDER_1
+icc2_shell> size_cell {U4530} {NAND2X0_RVT}
+Warning: Not relinking cell 'I_BLENDER_1/U4530'. (ECOUI-106)
+0
+icc2_shell> size_cell {U1939} {OR2X1_RVT}
+Warning: Not relinking cell 'I_BLENDER_1/U1939'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_BLENDER_0}
+I_BLENDER_0
+icc2_shell> size_cell {U418} {INVX1_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U418'. (ECOUI-106)
+0
+icc2_shell> size_cell {U4547} {NAND2X0_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U4547'. (ECOUI-106)
+0
+icc2_shell> size_cell {U6667} {NAND2X0_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U6667'. (ECOUI-106)
+0
+icc2_shell> size_cell {U4550} {NAND2X0_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U4550'. (ECOUI-106)
+0
+icc2_shell> size_cell {U917} {OR2X1_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U917'. (ECOUI-106)
+0
+icc2_shell> size_cell {U4443} {INVX1_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U4443'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_SDRAM_TOP/I_SDRAM_IF}
+I_SDRAM_TOP/I_SDRAM_IF
+icc2_shell> size_cell {U9972} {OR2X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9972'. (ECOUI-106)
+0
+icc2_shell> size_cell {U5748} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5748'. (ECOUI-106)
+0
+icc2_shell> size_cell {U7969} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7969'. (ECOUI-106)
+0
+icc2_shell> size_cell {U7950} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7950'. (ECOUI-106)
+0
+icc2_shell> size_cell {U6809} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6809'. (ECOUI-106)
+0
+icc2_shell> size_cell {U12039} {OR2X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U12039'. (ECOUI-106)
+0
+icc2_shell> size_cell {U5888} {OR2X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5888'. (ECOUI-106)
+0
+icc2_shell> size_cell {U9014} {OA22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9014'. (ECOUI-106)
+0
+icc2_shell> size_cell {U5978} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5978'. (ECOUI-106)
+0
+icc2_shell> size_cell {U8095} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8095'. (ECOUI-106)
+0
+icc2_shell> size_cell {U9129} {OA22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9129'. (ECOUI-106)
+0
+icc2_shell> size_cell {U7142} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7142'. (ECOUI-106)
+0
+icc2_shell> size_cell {U9271} {OA22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9271'. (ECOUI-106)
+0
+icc2_shell> size_cell {U7144} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7144'. (ECOUI-106)
+0
+icc2_shell> size_cell {U11363} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U11363'. (ECOUI-106)
+0
+icc2_shell> size_cell {U11364} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U11364'. (ECOUI-106)
+0
+icc2_shell> size_cell {U7272} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7272'. (ECOUI-106)
+0
+icc2_shell> size_cell {U9366} {OA22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9366'. (ECOUI-106)
+0
+icc2_shell> size_cell {U7273} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7273'. (ECOUI-106)
+0
+icc2_shell> size_cell {U9438} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9438'. (ECOUI-106)
+0
+icc2_shell> size_cell {U8349} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8349'. (ECOUI-106)
+0
+icc2_shell> size_cell {U9468} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9468'. (ECOUI-106)
+0
+icc2_shell> size_cell {U10427} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U10427'. (ECOUI-106)
+0
+icc2_shell> size_cell {U8464} {AND2X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8464'. (ECOUI-106)
+0
+icc2_shell> size_cell {U8483} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8483'. (ECOUI-106)
+0
+icc2_shell> size_cell {U7414} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7414'. (ECOUI-106)
+0
+icc2_shell> size_cell {U6381} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6381'. (ECOUI-106)
+0
+icc2_shell> size_cell {U8533} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8533'. (ECOUI-106)
+0
+icc2_shell> size_cell {U8539} {AND2X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8539'. (ECOUI-106)
+0
+icc2_shell> size_cell {U9602} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9602'. (ECOUI-106)
+0
+icc2_shell> size_cell {U9630} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9630'. (ECOUI-106)
+0
+icc2_shell> size_cell {U7561} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7561'. (ECOUI-106)
+0
+icc2_shell> size_cell {U9629} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9629'. (ECOUI-106)
+0
+icc2_shell> size_cell {U8613} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8613'. (ECOUI-106)
+0
+icc2_shell> size_cell {U8604} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8604'. (ECOUI-106)
+0
+icc2_shell> size_cell {U6512} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U6512'. (ECOUI-106)
+0
+icc2_shell> size_cell {U9793} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9793'. (ECOUI-106)
+0
+icc2_shell> size_cell {U9805} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9805'. (ECOUI-106)
+0
+icc2_shell> size_cell {U8742} {OR2X2_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U8742'. (ECOUI-106)
+0
+icc2_shell> size_cell {U9866} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9866'. (ECOUI-106)
+0
+icc2_shell> size_cell {U7752} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U7752'. (ECOUI-106)
+0
+icc2_shell> size_cell {U5669} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5669'. (ECOUI-106)
+0
+icc2_shell> size_cell {U5670} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U5670'. (ECOUI-106)
+0
+icc2_shell> size_cell {U9855} {AO22X1_RVT}
+Warning: Not relinking cell 'I_SDRAM_TOP/I_SDRAM_IF/U9855'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_BLENDER_0}
+I_BLENDER_0
+icc2_shell> size_cell {U784} {INVX1_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U784'. (ECOUI-106)
+0
+icc2_shell> size_cell {U936} {INVX0_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U936'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_BLENDER_1}
+I_BLENDER_1
+icc2_shell> size_cell {U1659} {AND2X1_RVT}
+Warning: Not relinking cell 'I_BLENDER_1/U1659'. (ECOUI-106)
+0
+icc2_shell> size_cell {U2906} {INVX1_RVT}
+Warning: Not relinking cell 'I_BLENDER_1/U2906'. (ECOUI-106)
+0
+icc2_shell> size_cell {U3178} {NAND2X0_RVT}
+Warning: Not relinking cell 'I_BLENDER_1/U3178'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_BLENDER_0}
+I_BLENDER_0
+icc2_shell> size_cell {U1248} {NAND3X0_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U1248'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_BLENDER_1}
+I_BLENDER_1
+icc2_shell> size_cell {U5895} {INVX1_RVT}
+Warning: Not relinking cell 'I_BLENDER_1/U5895'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_BLENDER_0}
+I_BLENDER_0
+icc2_shell> size_cell {U6582} {INVX1_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U6582'. (ECOUI-106)
+0
+icc2_shell> size_cell {U6005} {XOR2X1_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U6005'. (ECOUI-106)
+0
+icc2_shell> size_cell {U6666} {AO22X1_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U6666'. (ECOUI-106)
+0
+icc2_shell> size_cell {U8487} {AO22X1_RVT}
+Warning: Not relinking cell 'I_BLENDER_0/U8487'. (ECOUI-106)
+0
+icc2_shell> current_instance
+Current instance is the top-level of block 'ORCA_TOP_lib_bckup2:route2.design'
+icc2_shell> current_instance {I_SDRAM_TOP/I_SDRAM_IF}
+I_SDRAM_TOP/I_SDRAM_IF
+icc2_shell> 
+Terminated.
+
+Stack trace for crashing thread
+-------------------------------

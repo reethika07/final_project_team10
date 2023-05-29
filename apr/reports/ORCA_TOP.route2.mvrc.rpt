@@ -2,7 +2,7 @@
 Report : check_mv_design
 Design : ORCA_TOP
 Version: Q-2019.12-SP4
-Date   : Sat May 27 22:39:18 2023
+Date   : Sun May 28 06:17:28 2023
 ****************************************
 
 ---------- Power domain rule ----------
@@ -60,9 +60,8 @@ No errors or warnings.
 No errors or warnings.
 
 ---------- Voltage shifting rule ----------
-Warning: Driver pin 'occ_int2/cts_buf_678932695/Y' (supply net 'VDD' [0.75V]) cannot drive load pin 'I_RISC_CORE/cts_buf_677332679/A' (supply net 'VDDH' [0.95V]) due to voltage difference. (MV-012)
-Warning: Driver pin 'occ_int2/cts_buf_678932695/Y' (supply net 'VDD' [0.75V]) cannot drive load pin 'I_RISC_CORE/cts_buf_676932675/A' (supply net 'VDDH' [0.95V]) due to voltage difference. (MV-012)
-Information: Total 2 MV-012 violations. (MV-080)
+Warning: Driver pin 'occ_int2/cto_buf_33117/Y' (supply net 'VDD' [0.75V]) cannot drive load pin 'I_RISC_CORE/cts_buf_685132268/A' (supply net 'VDDH' [0.95V]) due to voltage difference. (MV-012)
+Information: Total 1 MV-012 violations. (MV-080)
 
 ---------- Tie-off connection rule ----------
 No errors or warnings.
@@ -80,5 +79,5 @@ No errors or warnings.
 No errors or warnings.
 
 ---------- Summary ----------
-Information: Total 0 error(s) and 2 warning(s) from check_mv_design. (MV-082)
+Information: Total 0 error(s) and 1 warning(s) from check_mv_design. (MV-082)
 1

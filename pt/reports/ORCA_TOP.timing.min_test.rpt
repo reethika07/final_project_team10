@@ -13,13 +13,13 @@ Report : timing
 	-sort_by slack
 Design : ORCA_TOP
 Version: O-2018.06
-Date   : Sun May 28 00:45:03 2023
+Date   : Sun May 28 18:21:32 2023
 ****************************************
 
 
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_17_
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_27_
                (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[17]
+  Endpoint: pad_out[27]
                (output port clocked by v_PCI_CLK)
   Path Group: v_PCI_CLK
   Path Type: min
@@ -27,19 +27,18 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1709     0.1709
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_17_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1709 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_17_/Q (DFFARX1_HVT)
-                                                     0.0307   1.0000            0.0820 &   0.2529 r
-  I_PCI_TOP/n8825 (net)        2   6.4845 
-  I_PCI_TOP/U2395/A (NBUFFX32_LVT)         -0.0065   0.0307   1.0000  -0.0035  -0.0034 &   0.2494 r
-  I_PCI_TOP/U2395/Y (NBUFFX32_LVT)                   0.0206   1.0000            0.0209 &   0.2704 r
-  I_PCI_TOP/pad_out[17] (net)
-                               1  37.4649 
-  pad_out[17] (out)                         0.0000   0.0206   1.0000   0.0000   0.0050 &   0.2753 r
-  pad_out[17] (net)            1 
-  data arrival time                                                                        0.2753
+  clock network delay (propagated)                                              0.1697     0.1697
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_27_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1697 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_27_/Q (DFFARX1_HVT)
+                                                     0.0329   1.0000            0.0844 &   0.2541 r
+  I_PCI_TOP/pad_out[27] (net)
+                               2   7.2474 
+  HFSBUF_11_228/A (NBUFFX16_RVT)           -0.0083   0.0329   1.0000  -0.0070  -0.0068 &   0.2473 r
+  HFSBUF_11_228/Y (NBUFFX16_RVT)                     0.0227   1.0000            0.0234 &   0.2707 r
+  pad_out[27] (net)            1  40.0157 
+  pad_out[27] (out)                        -0.0013   0.0227   1.0000  -0.0002   0.0061 &   0.2767 r
+  data arrival time                                                                        0.2767
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
   clock network delay (ideal)                                                   0.0500     0.0500
@@ -48,9 +47,9 @@ Date   : Sun May 28 00:45:03 2023
   data required time                                                                       0.3500
   --------------------------------------------------------------------------------------------------
   data required time                                                                       0.3500
-  data arrival time                                                                       -0.2753
+  data arrival time                                                                       -0.2767
   --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0747
+  slack (VIOLATED)                                                                        -0.0733
 
 
   Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_25_
@@ -63,19 +62,18 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1710     0.1710
+  clock network delay (propagated)                                              0.1699     0.1699
   I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_25_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1710 r
+                                                     0.0230                     0.0000     0.1699 r
   I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_25_/Q (DFFARX1_HVT)
-                                                     0.0307   1.0000            0.0820 &   0.2529 r
-  I_PCI_TOP/n8854 (net)        2   6.4907 
-  I_PCI_TOP/HFSBUF_8_228/A (NBUFFX16_RVT)  -0.0070   0.0307   1.0000  -0.0050  -0.0049 &   0.2481 r
-  I_PCI_TOP/HFSBUF_8_228/Y (NBUFFX16_RVT)            0.0213   1.0000            0.0231 &   0.2712 r
+                                                     0.0312   1.0000            0.0830 &   0.2530 r
   I_PCI_TOP/pad_out[25] (net)
-                               1  37.5566 
-  pad_out[25] (out)                         0.0000   0.0213   1.0000   0.0000   0.0046 &   0.2758 r
-  pad_out[25] (net)            1 
-  data arrival time                                                                        0.2758
+                               2   6.6707 
+  HFSBUF_11_227/A (NBUFFX16_RVT)           -0.0063   0.0312   1.0000  -0.0039  -0.0037 &   0.2492 r
+  HFSBUF_11_227/Y (NBUFFX16_RVT)                     0.0212   1.0000            0.0231 &   0.2723 r
+  pad_out[25] (net)            1  36.5233 
+  pad_out[25] (out)                         0.0000   0.0212   1.0000   0.0000   0.0045 &   0.2768 r
+  data arrival time                                                                        0.2768
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
   clock network delay (ideal)                                                   0.0500     0.0500
@@ -84,47 +82,14 @@ Date   : Sun May 28 00:45:03 2023
   data required time                                                                       0.3500
   --------------------------------------------------------------------------------------------------
   data required time                                                                       0.3500
-  data arrival time                                                                       -0.2758
+  data arrival time                                                                       -0.2768
   --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0742
+  slack (VIOLATED)                                                                        -0.0732
 
 
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_1_
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_29_
                (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[1] (output port clocked by v_PCI_CLK)
-  Path Group: v_PCI_CLK
-  Path Type: min
-
-  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
-  --------------------------------------------------------------------------------------------------
-  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1708     0.1708
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_1_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1708 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_1_/Q (DFFARX1_HVT)
-                                                     0.0279   1.0000            0.0796 &   0.2504 r
-  I_PCI_TOP/pad_out[1] (net)   2   5.5068 
-  ZBUF_4_inst_54906/A (NBUFFX16_LVT)       -0.0020   0.0279   1.0000  -0.0003  -0.0002 &   0.2502 r
-  ZBUF_4_inst_54906/Y (NBUFFX16_LVT)                 0.0208   1.0000            0.0206 &   0.2708 r
-  pad_out[1] (net)             1  36.8835 
-  pad_out[1] (out)                          0.0000   0.0208   1.0000   0.0000   0.0053 &   0.2761 r
-  data arrival time                                                                        0.2761
-
-  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
-  clock network delay (ideal)                                                   0.0500     0.0500
-  clock reconvergence pessimism                                                 0.0000     0.0500
-  output external delay                                                         0.3000     0.3500
-  data required time                                                                       0.3500
-  --------------------------------------------------------------------------------------------------
-  data required time                                                                       0.3500
-  data arrival time                                                                       -0.2761
-  --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0739
-
-
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_11_
-               (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[11]
+  Endpoint: pad_out[29]
                (output port clocked by v_PCI_CLK)
   Path Group: v_PCI_CLK
   Path Type: min
@@ -132,18 +97,19 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1703     0.1703
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_11_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1703 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_11_/Q (DFFARX1_HVT)
-                                                     0.0266   1.0000            0.0785 &   0.2488 r
-  I_PCI_TOP/pad_out[11] (net)
-                               2   5.0584 
-  HFSBUF_11_240/A (NBUFFX16_RVT)           -0.0012   0.0266   1.0000  -0.0002  -0.0001 &   0.2488 r
-  HFSBUF_11_240/Y (NBUFFX16_RVT)                     0.0209   1.0000            0.0222 &   0.2710 r
-  pad_out[11] (net)            1  36.3452 
-  pad_out[11] (out)                         0.0000   0.0209   1.0000   0.0000   0.0056 &   0.2766 r
-  data arrival time                                                                        0.2766
+  clock network delay (propagated)                                              0.1697     0.1697
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_29_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1697 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_29_/Q (DFFARX1_HVT)
+                                                     0.0320   1.0000            0.0837 &   0.2534 r
+  I_PCI_TOP/n8847 (net)        2   6.9405 
+  I_PCI_TOP/U3161/A (NBUFFX32_LVT)         -0.0036   0.0320   1.0000  -0.0007  -0.0005 &   0.2528 r
+  I_PCI_TOP/U3161/Y (NBUFFX32_LVT)                   0.0196   1.0000            0.0210 &   0.2738 r
+  I_PCI_TOP/pad_out[29] (net)
+                               1  33.9446 
+  pad_out[29] (out)                         0.0000   0.0196   1.0000   0.0000   0.0030 &   0.2769 r
+  pad_out[29] (net)            1 
+  data arrival time                                                                        0.2769
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
   clock network delay (ideal)                                                   0.0500     0.0500
@@ -152,31 +118,32 @@ Date   : Sun May 28 00:45:03 2023
   data required time                                                                       0.3500
   --------------------------------------------------------------------------------------------------
   data required time                                                                       0.3500
-  data arrival time                                                                       -0.2766
+  data arrival time                                                                       -0.2769
   --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0734
+  slack (VIOLATED)                                                                        -0.0731
 
 
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_5_
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_15_
                (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[5] (output port clocked by v_PCI_CLK)
+  Endpoint: pad_out[15]
+               (output port clocked by v_PCI_CLK)
   Path Group: v_PCI_CLK
   Path Type: min
 
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1706     0.1706
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_5_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1706 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_5_/Q (DFFARX1_HVT)
-                                                     0.0290   1.0000            0.0805 &   0.2512 r
-  I_PCI_TOP/n8827 (net)        2   5.8880 
-  I_PCI_TOP/U2518/A (NBUFFX32_LVT)         -0.0028   0.0290   1.0000  -0.0005  -0.0004 &   0.2508 r
-  I_PCI_TOP/U2518/Y (NBUFFX32_LVT)                   0.0204   1.0000            0.0207 &   0.2715 r
-  I_PCI_TOP/pad_out[5] (net)   1  37.9361 
-  pad_out[5] (out)                          0.0000   0.0204   1.0000   0.0000   0.0055 &   0.2770 r
-  pad_out[5] (net)             1 
+  clock network delay (propagated)                                              0.1694     0.1694
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_15_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1694 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_15_/Q (DFFARX1_HVT)
+                                                     0.0265   1.0000            0.0791 &   0.2486 r
+  I_PCI_TOP/pad_out[15] (net)
+                               2   5.0440 
+  HFSBUF_11_252/A (NBUFFX16_RVT)           -0.0040   0.0265   1.0000  -0.0007  -0.0006 &   0.2480 r
+  HFSBUF_11_252/Y (NBUFFX16_RVT)                     0.0216   1.0000            0.0224 &   0.2703 r
+  pad_out[15] (net)            1  39.2908 
+  pad_out[15] (out)                         0.0000   0.0216   1.0000   0.0000   0.0067 &   0.2770 r
   data arrival time                                                                        0.2770
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
@@ -191,9 +158,9 @@ Date   : Sun May 28 00:45:03 2023
   slack (VIOLATED)                                                                        -0.0730
 
 
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_29_
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_23_
                (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[29]
+  Endpoint: pad_out[23]
                (output port clocked by v_PCI_CLK)
   Path Group: v_PCI_CLK
   Path Type: min
@@ -201,17 +168,17 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1710     0.1710
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_29_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1710 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_29_/Q (DFFARX1_HVT)
-                                                     0.0287   1.0000            0.0803 &   0.2513 r
-  I_PCI_TOP/pad_out[29] (net)
-                               2   5.8027 
-  HFSBUF_11_234/A (NBUFFX16_RVT)            0.0000   0.0287   1.0000   0.0000   0.0001 &   0.2514 r
-  HFSBUF_11_234/Y (NBUFFX16_RVT)                     0.0198   1.0000            0.0227 &   0.2742 r
-  pad_out[29] (net)            1  34.2667 
-  pad_out[29] (out)                         0.0000   0.0198   1.0000   0.0000   0.0031 &   0.2772 r
+  clock network delay (propagated)                                              0.1699     0.1699
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_23_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1699 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_23_/Q (DFFARX1_HVT)
+                                                     0.0283   1.0000            0.0806 &   0.2505 r
+  I_PCI_TOP/pad_out[23] (net)
+                               2   5.6468 
+  ZBUF_4_inst_54760/A (NBUFFX16_LVT)       -0.0015   0.0283   1.0000  -0.0002  -0.0001 &   0.2504 r
+  ZBUF_4_inst_54760/Y (NBUFFX16_LVT)                 0.0213   1.0000            0.0205 &   0.2709 r
+  pad_out[23] (net)            1  37.5376 
+  pad_out[23] (out)                         0.0000   0.0213   1.0000   0.0000   0.0063 &   0.2772 r
   data arrival time                                                                        0.2772
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
@@ -226,42 +193,9 @@ Date   : Sun May 28 00:45:03 2023
   slack (VIOLATED)                                                                        -0.0728
 
 
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_7_
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_21_
                (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[7] (output port clocked by v_PCI_CLK)
-  Path Group: v_PCI_CLK
-  Path Type: min
-
-  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
-  --------------------------------------------------------------------------------------------------
-  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1704     0.1704
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_7_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1704 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_7_/Q (DFFARX1_HVT)
-                                                     0.0279   1.0000            0.0797 &   0.2501 r
-  I_PCI_TOP/pad_out[7] (net)   2   5.5336 
-  HFSBUF_11_250/A (NBUFFX16_RVT)           -0.0037   0.0279   1.0000  -0.0007  -0.0006 &   0.2496 r
-  HFSBUF_11_250/Y (NBUFFX16_RVT)                     0.0213   1.0000            0.0226 &   0.2721 r
-  pad_out[7] (net)             1  37.4313 
-  pad_out[7] (out)                          0.0000   0.0213   1.0000   0.0000   0.0055 &   0.2777 r
-  data arrival time                                                                        0.2777
-
-  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
-  clock network delay (ideal)                                                   0.0500     0.0500
-  clock reconvergence pessimism                                                 0.0000     0.0500
-  output external delay                                                         0.3000     0.3500
-  data required time                                                                       0.3500
-  --------------------------------------------------------------------------------------------------
-  data required time                                                                       0.3500
-  data arrival time                                                                       -0.2777
-  --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0723
-
-
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_23_
-               (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[23]
+  Endpoint: pad_out[21]
                (output port clocked by v_PCI_CLK)
   Path Group: v_PCI_CLK
   Path Type: min
@@ -269,18 +203,17 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1710     0.1710
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_23_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1710 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_23_/Q (DFFARX1_HVT)
-                                                     0.0294   1.0000            0.0809 &   0.2519 r
-  I_PCI_TOP/dftopt4 (net)      2   6.0319 
-  I_PCI_TOP/U2871/A (NBUFFX32_LVT)         -0.0029   0.0294   1.0000  -0.0006  -0.0005 &   0.2514 r
-  I_PCI_TOP/U2871/Y (NBUFFX32_LVT)                   0.0206   1.0000            0.0208 &   0.2722 r
-  I_PCI_TOP/pad_out[23] (net)
-                               1  38.9846 
-  pad_out[23] (out)                         0.0000   0.0206   1.0000   0.0000   0.0056 &   0.2779 r
-  pad_out[23] (net)            1 
+  clock network delay (propagated)                                              0.1699     0.1699
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_21_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1699 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_21_/Q (DFFARX1_HVT)
+                                                     0.0289   1.0000            0.0811 &   0.2510 r
+  I_PCI_TOP/pad_out[21] (net)
+                               2   5.8620 
+  HFSBUF_11_244/A (NBUFFX16_RVT)           -0.0032   0.0289   1.0000  -0.0006  -0.0004 &   0.2506 r
+  HFSBUF_11_244/Y (NBUFFX16_RVT)                     0.0209   1.0000            0.0229 &   0.2734 r
+  pad_out[21] (net)            1  37.1279 
+  pad_out[21] (out)                         0.0000   0.0209   1.0000   0.0000   0.0045 &   0.2779 r
   data arrival time                                                                        0.2779
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
@@ -295,42 +228,9 @@ Date   : Sun May 28 00:45:03 2023
   slack (VIOLATED)                                                                        -0.0721
 
 
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_9_
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_11_
                (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[9] (output port clocked by v_PCI_CLK)
-  Path Group: v_PCI_CLK
-  Path Type: min
-
-  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
-  --------------------------------------------------------------------------------------------------
-  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1704     0.1704
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_9_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1704 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_9_/Q (DFFARX1_HVT)
-                                                     0.0285   1.0000            0.0801 &   0.2505 r
-  I_PCI_TOP/pad_out[9] (net)   2   5.7345 
-  HFSBUF_11_258/A (NBUFFX16_RVT)           -0.0030   0.0285   1.0000  -0.0005  -0.0004 &   0.2501 r
-  HFSBUF_11_258/Y (NBUFFX16_RVT)                     0.0213   1.0000            0.0227 &   0.2728 r
-  pad_out[9] (net)             1  37.3426 
-  pad_out[9] (out)                          0.0000   0.0213   1.0000   0.0000   0.0054 &   0.2781 r
-  data arrival time                                                                        0.2781
-
-  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
-  clock network delay (ideal)                                                   0.0500     0.0500
-  clock reconvergence pessimism                                                 0.0000     0.0500
-  output external delay                                                         0.3000     0.3500
-  data required time                                                                       0.3500
-  --------------------------------------------------------------------------------------------------
-  data required time                                                                       0.3500
-  data arrival time                                                                       -0.2781
-  --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0719
-
-
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_21_
-               (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[21]
+  Endpoint: pad_out[11]
                (output port clocked by v_PCI_CLK)
   Path Group: v_PCI_CLK
   Path Type: min
@@ -338,19 +238,18 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1710     0.1710
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_21_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1710 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_21_/Q (DFFARX1_HVT)
-                                                     0.0303   1.0000            0.0817 &   0.2527 r
-  I_PCI_TOP/n8831 (net)        2   6.3626 
-  I_PCI_TOP/U2647/A (NBUFFX32_LVT)          0.0000   0.0303   1.0000   0.0000   0.0001 &   0.2528 r
-  I_PCI_TOP/U2647/Y (NBUFFX32_LVT)                   0.0203   1.0000            0.0209 &   0.2737 r
-  I_PCI_TOP/pad_out[21] (net)
-                               1  37.5173 
-  pad_out[21] (out)                         0.0000   0.0203   1.0000   0.0000   0.0046 &   0.2783 r
-  pad_out[21] (net)            1 
-  data arrival time                                                                        0.2783
+  clock network delay (propagated)                                              0.1698     0.1698
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_11_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1698 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_11_/Q (DFFARX1_HVT)
+                                                     0.0289   1.0000            0.0811 &   0.2508 r
+  I_PCI_TOP/pad_out[11] (net)
+                               2   5.8539 
+  HFSBUF_11_235/A (NBUFFX16_RVT)           -0.0026   0.0289   1.0000  -0.0004  -0.0003 &   0.2505 r
+  HFSBUF_11_235/Y (NBUFFX16_RVT)                     0.0218   1.0000            0.0227 &   0.2732 r
+  pad_out[11] (net)            1  38.6654 
+  pad_out[11] (out)                         0.0000   0.0218   1.0000   0.0000   0.0062 &   0.2794 r
+  data arrival time                                                                        0.2794
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
   clock network delay (ideal)                                                   0.0500     0.0500
@@ -359,14 +258,14 @@ Date   : Sun May 28 00:45:03 2023
   data required time                                                                       0.3500
   --------------------------------------------------------------------------------------------------
   data required time                                                                       0.3500
-  data arrival time                                                                       -0.2783
+  data arrival time                                                                       -0.2794
   --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0717
+  slack (VIOLATED)                                                                        -0.0706
 
 
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_15_
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_17_
                (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[15]
+  Endpoint: pad_out[17]
                (output port clocked by v_PCI_CLK)
   Path Group: v_PCI_CLK
   Path Type: min
@@ -374,18 +273,18 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1709     0.1709
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_15_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1709 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_15_/Q (DFFARX1_HVT)
-                                                     0.0289   1.0000            0.0805 &   0.2513 r
-  I_PCI_TOP/pad_out[15] (net)
-                               2   5.8608 
-  HFSBUF_11_257/A (NBUFFX16_RVT)           -0.0030   0.0289   1.0000  -0.0005  -0.0004 &   0.2509 r
-  HFSBUF_11_257/Y (NBUFFX16_RVT)                     0.0213   1.0000            0.0227 &   0.2736 r
-  pad_out[15] (net)            1  36.8553 
-  pad_out[15] (out)                         0.0000   0.0213   1.0000   0.0000   0.0053 &   0.2789 r
-  data arrival time                                                                        0.2789
+  clock network delay (propagated)                                              0.1696     0.1696
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_17_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1696 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_17_/Q (DFFARX1_HVT)
+                                                     0.0299   1.0000            0.0819 &   0.2515 r
+  I_PCI_TOP/pad_out[17] (net)
+                               2   6.2132 
+  HFSBUF_11_254/A (NBUFFX16_RVT)           -0.0023   0.0299   1.0000  -0.0004  -0.0002 &   0.2513 r
+  HFSBUF_11_254/Y (NBUFFX16_RVT)                     0.0215   1.0000            0.0230 &   0.2743 r
+  pad_out[17] (net)            1  37.9087 
+  pad_out[17] (out)                         0.0000   0.0215   1.0000   0.0000   0.0052 &   0.2795 r
+  data arrival time                                                                        0.2795
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
   clock network delay (ideal)                                                   0.0500     0.0500
@@ -394,9 +293,42 @@ Date   : Sun May 28 00:45:03 2023
   data required time                                                                       0.3500
   --------------------------------------------------------------------------------------------------
   data required time                                                                       0.3500
-  data arrival time                                                                       -0.2789
+  data arrival time                                                                       -0.2795
   --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0711
+  slack (VIOLATED)                                                                        -0.0705
+
+
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_7_
+               (rising edge-triggered flip-flop clocked by PCI_CLK)
+  Endpoint: pad_out[7] (output port clocked by v_PCI_CLK)
+  Path Group: v_PCI_CLK
+  Path Type: min
+
+  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
+  clock network delay (propagated)                                              0.1695     0.1695
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_7_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1695 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_7_/Q (DFFARX1_HVT)
+                                                     0.0329   1.0000            0.0844 &   0.2539 r
+  I_PCI_TOP/pad_out[7] (net)   2   7.2369 
+  HFSBUF_11_245/A (NBUFFX16_RVT)           -0.0069   0.0329   1.0000  -0.0037  -0.0035 &   0.2504 r
+  HFSBUF_11_245/Y (NBUFFX16_RVT)                     0.0224   1.0000            0.0232 &   0.2736 r
+  pad_out[7] (net)             1  37.7682 
+  pad_out[7] (out)                          0.0000   0.0224   1.0000   0.0000   0.0059 &   0.2795 r
+  data arrival time                                                                        0.2795
+
+  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
+  clock network delay (ideal)                                                   0.0500     0.0500
+  clock reconvergence pessimism                                                 0.0000     0.0500
+  output external delay                                                         0.3000     0.3500
+  data required time                                                                       0.3500
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       0.3500
+  data arrival time                                                                       -0.2795
+  --------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                        -0.0705
 
 
   Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_3_
@@ -408,16 +340,16 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1707     0.1707
+  clock network delay (propagated)                                              0.1697     0.1697
   I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_3_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1707 r
+                                                     0.0230                     0.0000     0.1697 r
   I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_3_/Q (DFFARX1_HVT)
-                                                     0.0294   1.0000            0.0809 &   0.2516 r
-  I_PCI_TOP/pad_out[3] (net)   2   6.0549 
-  HFSBUF_11_251/A (NBUFFX16_RVT)           -0.0028   0.0294   1.0000  -0.0005  -0.0003 &   0.2512 r
-  HFSBUF_11_251/Y (NBUFFX16_RVT)                     0.0216   1.0000            0.0228 &   0.2741 r
-  pad_out[3] (net)             1  37.9617 
-  pad_out[3] (out)                          0.0000   0.0216   1.0000   0.0000   0.0056 &   0.2796 r
+                                                     0.0296   1.0000            0.0817 &   0.2514 r
+  I_PCI_TOP/pad_out[3] (net)   2   6.1252 
+  HFSBUF_11_246/A (NBUFFX16_RVT)           -0.0019   0.0296   1.0000  -0.0003  -0.0001 &   0.2513 r
+  HFSBUF_11_246/Y (NBUFFX16_RVT)                     0.0216   1.0000            0.0229 &   0.2742 r
+  pad_out[3] (net)             1  38.2802 
+  pad_out[3] (out)                          0.0000   0.0216   1.0000   0.0000   0.0055 &   0.2796 r
   data arrival time                                                                        0.2796
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
@@ -432,9 +364,9 @@ Date   : Sun May 28 00:45:03 2023
   slack (VIOLATED)                                                                        -0.0704
 
 
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_31_
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_26_
                (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[31]
+  Endpoint: pad_out[26]
                (output port clocked by v_PCI_CLK)
   Path Group: v_PCI_CLK
   Path Type: min
@@ -442,18 +374,18 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1707     0.1707
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_31_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1707 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_31_/Q (DFFARX1_HVT)
-                                                     0.0304   1.0000            0.0818 &   0.2524 r
-  I_PCI_TOP/pad_out[31] (net)
-                               2   6.4068 
-  ZBUF_4_inst_24034/A (NBUFFX16_RVT)       -0.0039   0.0305   1.0000  -0.0007  -0.0005 &   0.2519 r
-  ZBUF_4_inst_24034/Y (NBUFFX16_RVT)                 0.0214   1.0000            0.0229 &   0.2748 r
-  pad_out[31] (net)            1  36.6647 
-  pad_out[31] (out)                         0.0000   0.0214   1.0000   0.0000   0.0051 &   0.2799 r
-  data arrival time                                                                        0.2799
+  clock network delay (propagated)                                              0.1697     0.1697
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_26_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1697 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_26_/Q (DFFARX1_HVT)
+                                                     0.0312   1.0000            0.0830 &   0.2527 r
+  I_PCI_TOP/pad_out[26] (net)
+                               2   6.6448 
+  ZBUF_4_inst_54759/A (NBUFFX16_LVT)       -0.0067   0.0312   1.0000  -0.0043  -0.0042 &   0.2485 r
+  ZBUF_4_inst_54759/Y (NBUFFX16_LVT)                 0.0229   1.0000            0.0209 &   0.2694 r
+  pad_out[26] (net)            1  44.3119 
+  pad_out[26] (out)                        -0.0014   0.0229   1.0000  -0.0002   0.0106 &   0.2800 r
+  data arrival time                                                                        0.2800
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
   clock network delay (ideal)                                                   0.0500     0.0500
@@ -462,146 +394,9 @@ Date   : Sun May 28 00:45:03 2023
   data required time                                                                       0.3500
   --------------------------------------------------------------------------------------------------
   data required time                                                                       0.3500
-  data arrival time                                                                       -0.2799
+  data arrival time                                                                       -0.2800
   --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0701
-
-
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_19_
-               (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[19]
-               (output port clocked by v_PCI_CLK)
-  Path Group: v_PCI_CLK
-  Path Type: min
-
-  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
-  --------------------------------------------------------------------------------------------------
-  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1707     0.1707
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_19_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1707 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_19_/Q (DFFARX1_HVT)
-                                                     0.0325   1.0000            0.0834 &   0.2541 r
-  I_PCI_TOP/n8824 (net)        2   7.1058 
-  I_PCI_TOP/U2359/A (NBUFFX32_LVT)         -0.0039   0.0325   1.0000  -0.0007  -0.0005 &   0.2536 r
-  I_PCI_TOP/U2359/Y (NBUFFX32_LVT)                   0.0212   1.0000            0.0211 &   0.2747 r
-  I_PCI_TOP/pad_out[19] (net)
-                               1  37.7852 
-  pad_out[19] (out)                         0.0000   0.0212   1.0000   0.0000   0.0054 &   0.2801 r
-  pad_out[19] (net)            1 
-  data arrival time                                                                        0.2801
-
-  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
-  clock network delay (ideal)                                                   0.0500     0.0500
-  clock reconvergence pessimism                                                 0.0000     0.0500
-  output external delay                                                         0.3000     0.3500
-  data required time                                                                       0.3500
-  --------------------------------------------------------------------------------------------------
-  data required time                                                                       0.3500
-  data arrival time                                                                       -0.2801
-  --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0699
-
-
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_6_
-               (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[6] (output port clocked by v_PCI_CLK)
-  Path Group: v_PCI_CLK
-  Path Type: min
-
-  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
-  --------------------------------------------------------------------------------------------------
-  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1705     0.1705
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_6_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1705 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_6_/Q (DFFARX1_HVT)
-                                                     0.0280   1.0000            0.0797 &   0.2502 r
-  I_PCI_TOP/pad_out[6] (net)   2   5.5325 
-  HFSBUF_11_227/A (NBUFFX16_RVT)           -0.0068   0.0280   1.0000  -0.0040  -0.0039 &   0.2463 r
-  HFSBUF_11_227/Y (NBUFFX16_RVT)                     0.0228   1.0000            0.0225 &   0.2688 r
-  pad_out[6] (net)             1  46.6748 
-  pad_out[6] (out)                         -0.0014   0.0228   1.0000  -0.0002   0.0117 &   0.2805 r
-  data arrival time                                                                        0.2805
-
-  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
-  clock network delay (ideal)                                                   0.0500     0.0500
-  clock reconvergence pessimism                                                 0.0000     0.0500
-  output external delay                                                         0.3000     0.3500
-  data required time                                                                       0.3500
-  --------------------------------------------------------------------------------------------------
-  data required time                                                                       0.3500
-  data arrival time                                                                       -0.2805
-  --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0695
-
-
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_27_
-               (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[27]
-               (output port clocked by v_PCI_CLK)
-  Path Group: v_PCI_CLK
-  Path Type: min
-
-  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
-  --------------------------------------------------------------------------------------------------
-  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1705     0.1705
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_27_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1705 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_27_/Q (DFFARX1_HVT)
-                                                     0.0309   1.0000            0.0821 &   0.2527 r
-  I_PCI_TOP/pad_out[27] (net)
-                               2   6.5747 
-  HFSBUF_11_229/A (NBUFFX16_RVT)           -0.0029   0.0309   1.0000  -0.0005  -0.0003 &   0.2523 r
-  HFSBUF_11_229/Y (NBUFFX16_RVT)                     0.0224   1.0000            0.0232 &   0.2755 r
-  pad_out[27] (net)            1  40.5081 
-  pad_out[27] (out)                        -0.0012   0.0224   1.0000  -0.0002   0.0064 &   0.2819 r
-  data arrival time                                                                        0.2819
-
-  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
-  clock network delay (ideal)                                                   0.0500     0.0500
-  clock reconvergence pessimism                                                 0.0000     0.0500
-  output external delay                                                         0.3000     0.3500
-  data required time                                                                       0.3500
-  --------------------------------------------------------------------------------------------------
-  data required time                                                                       0.3500
-  data arrival time                                                                       -0.2819
-  --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0681
-
-
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_8_
-               (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[8] (output port clocked by v_PCI_CLK)
-  Path Group: v_PCI_CLK
-  Path Type: min
-
-  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
-  --------------------------------------------------------------------------------------------------
-  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1703     0.1703
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_8_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1703 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_8_/Q (DFFARX1_HVT)
-                                                     0.0276   1.0000            0.0793 &   0.2497 r
-  I_PCI_TOP/pad_out[8] (net)   2   5.4012 
-  ZBUF_4_inst_54903/A (NBUFFX16_LVT)       -0.0041   0.0276   1.0000  -0.0007  -0.0006 &   0.2490 r
-  ZBUF_4_inst_54903/Y (NBUFFX16_LVT)                 0.0217   1.0000            0.0202 &   0.2692 r
-  pad_out[8] (net)             1  45.0596 
-  pad_out[8] (out)                          0.0000   0.0217   1.0000   0.0000   0.0131 &   0.2822 r
-  data arrival time                                                                        0.2822
-
-  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
-  clock network delay (ideal)                                                   0.0500     0.0500
-  clock reconvergence pessimism                                                 0.0000     0.0500
-  output external delay                                                         0.3000     0.3500
-  data required time                                                                       0.3500
-  --------------------------------------------------------------------------------------------------
-  data required time                                                                       0.3500
-  data arrival time                                                                       -0.2822
-  --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0678
+  slack (VIOLATED)                                                                        -0.0700
 
 
   Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_18_
@@ -614,18 +409,18 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1707     0.1707
+  clock network delay (propagated)                                              0.1697     0.1697
   I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_18_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1707 r
+                                                     0.0230                     0.0000     0.1697 r
   I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_18_/Q (DFFARX1_HVT)
-                                                     0.0285   1.0000            0.0801 &   0.2508 r
+                                                     0.0252   1.0000            0.0780 &   0.2476 r
   I_PCI_TOP/pad_out[18] (net)
-                               2   5.7275 
-  HFSBUF_11_246/A (NBUFFX16_RVT)           -0.0023   0.0285   1.0000  -0.0004  -0.0002 &   0.2506 r
-  HFSBUF_11_246/Y (NBUFFX16_RVT)                     0.0230   1.0000            0.0227 &   0.2732 r
-  pad_out[18] (net)            1  47.6182 
-  pad_out[18] (out)                        -0.0033   0.0230   1.0000  -0.0018   0.0101 &   0.2834 r
-  data arrival time                                                                        0.2834
+                               2   4.5628 
+  HFSBUF_11_240/A (NBUFFX16_RVT)           -0.0027   0.0252   1.0000  -0.0005  -0.0004 &   0.2472 r
+  HFSBUF_11_240/Y (NBUFFX16_RVT)                     0.0220   1.0000            0.0220 &   0.2692 r
+  pad_out[18] (net)            1  45.2925 
+  pad_out[18] (out)                         0.0000   0.0220   1.0000   0.0000   0.0115 &   0.2807 r
+  data arrival time                                                                        0.2807
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
   clock network delay (ideal)                                                   0.0500     0.0500
@@ -634,33 +429,31 @@ Date   : Sun May 28 00:45:03 2023
   data required time                                                                       0.3500
   --------------------------------------------------------------------------------------------------
   data required time                                                                       0.3500
-  data arrival time                                                                       -0.2834
+  data arrival time                                                                       -0.2807
   --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0666
+  slack (VIOLATED)                                                                        -0.0693
 
 
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_24_
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_9_
                (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[24]
-               (output port clocked by v_PCI_CLK)
+  Endpoint: pad_out[9] (output port clocked by v_PCI_CLK)
   Path Group: v_PCI_CLK
   Path Type: min
 
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1710     0.1710
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_24_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1710 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_24_/Q (DFFARX1_HVT)
-                                                     0.0306   1.0000            0.0819 &   0.2530 r
-  I_PCI_TOP/pad_out[24] (net)
-                               2   6.4748 
-  HFSBUF_11_248/A (NBUFFX16_RVT)           -0.0061   0.0306   1.0000  -0.0034  -0.0032 &   0.2498 r
-  HFSBUF_11_248/Y (NBUFFX16_RVT)                     0.0235   1.0000            0.0230 &   0.2728 r
-  pad_out[24] (net)            1  47.7506 
-  pad_out[24] (out)                        -0.0027   0.0235   1.0000  -0.0011   0.0108 &   0.2836 r
-  data arrival time                                                                        0.2836
+  clock network delay (propagated)                                              0.1696     0.1696
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_9_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1696 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_9_/Q (DFFARX1_HVT)
+                                                     0.0310   1.0000            0.0829 &   0.2524 r
+  I_PCI_TOP/pad_out[9] (net)   2   6.6068 
+  HFSBUF_11_253/A (NBUFFX16_RVT)           -0.0014   0.0310   1.0000  -0.0002  -0.0000 &   0.2524 r
+  HFSBUF_11_253/Y (NBUFFX16_RVT)                     0.0217   1.0000            0.0231 &   0.2755 r
+  pad_out[9] (net)             1  37.9187 
+  pad_out[9] (out)                          0.0000   0.0217   1.0000   0.0000   0.0053 &   0.2808 r
+  data arrival time                                                                        0.2808
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
   clock network delay (ideal)                                                   0.0500     0.0500
@@ -669,31 +462,31 @@ Date   : Sun May 28 00:45:03 2023
   data required time                                                                       0.3500
   --------------------------------------------------------------------------------------------------
   data required time                                                                       0.3500
-  data arrival time                                                                       -0.2836
+  data arrival time                                                                       -0.2808
   --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0664
+  slack (VIOLATED)                                                                        -0.0692
 
 
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_0_
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_1_
                (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[0] (output port clocked by v_PCI_CLK)
+  Endpoint: pad_out[1] (output port clocked by v_PCI_CLK)
   Path Group: v_PCI_CLK
   Path Type: min
 
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1708     0.1708
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_0_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1708 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_0_/Q (DFFARX1_HVT)
-                                                     0.0280   1.0000            0.0798 &   0.2505 r
-  I_PCI_TOP/pad_out[0] (net)   2   5.5684 
-  HFSBUF_11_231/A (NBUFFX16_RVT)           -0.0026   0.0280   1.0000  -0.0004  -0.0003 &   0.2502 r
-  HFSBUF_11_231/Y (NBUFFX16_RVT)                     0.0225   1.0000            0.0222 &   0.2724 r
-  pad_out[0] (net)             1  43.3922 
-  pad_out[0] (out)                          0.0000   0.0225   1.0000   0.0000   0.0114 &   0.2838 r
-  data arrival time                                                                        0.2838
+  clock network delay (propagated)                                              0.1697     0.1697
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_1_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1697 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_1_/Q (DFFARX1_HVT)
+                                                     0.0314   1.0000            0.0832 &   0.2529 r
+  I_PCI_TOP/pad_out[1] (net)   2   6.7520 
+  HFSBUF_11_234/A (NBUFFX16_RVT)            0.0000   0.0314   1.0000   0.0000   0.0002 &   0.2531 r
+  HFSBUF_11_234/Y (NBUFFX16_RVT)                     0.0217   1.0000            0.0232 &   0.2763 r
+  pad_out[1] (net)             1  38.0273 
+  pad_out[1] (out)                         -0.0009   0.0217   1.0000  -0.0001   0.0050 &   0.2813 r
+  data arrival time                                                                        0.2813
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
   clock network delay (ideal)                                                   0.0500     0.0500
@@ -702,9 +495,9 @@ Date   : Sun May 28 00:45:03 2023
   data required time                                                                       0.3500
   --------------------------------------------------------------------------------------------------
   data required time                                                                       0.3500
-  data arrival time                                                                       -0.2838
+  data arrival time                                                                       -0.2813
   --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0662
+  slack (VIOLATED)                                                                        -0.0687
 
 
   Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_22_
@@ -717,21 +510,18 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1710     0.1710
+  clock network delay (propagated)                                              0.1699     0.1699
   I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_22_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1710 r
+                                                     0.0230                     0.0000     0.1699 r
   I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_22_/Q (DFFARX1_HVT)
-                                                     0.0217   1.0000            0.0730 &   0.2440 f
-  I_PCI_TOP/n8828 (net)        1   2.7199 
-  I_PCI_TOP/HFSINV_40_256/A (INVX2_HVT)    -0.0027   0.0217   1.0000  -0.0005  -0.0005 &   0.2436 f
-  I_PCI_TOP/HFSINV_40_256/Y (INVX2_HVT)              0.0252   1.0000            0.0209 &   0.2644 r
+                                                     0.0296   1.0000            0.0816 &   0.2515 r
   I_PCI_TOP/pad_out[22] (net)
-                               2  11.2847 
-  HFSINV_13_255/A (INVX16_HVT)             -0.0033   0.0252   1.0000  -0.0031  -0.0029 &   0.2616 r
-  HFSINV_13_255/Y (INVX16_HVT)                       0.0262   1.0000            0.0127 &   0.2742 f
-  pad_out[22] (net)            1  43.2689 
-  pad_out[22] (out)                        -0.0008   0.0262   1.0000  -0.0001   0.0098 &   0.2841 f
-  data arrival time                                                                        0.2841
+                               2   6.0959 
+  HFSBUF_11_249/A (NBUFFX16_RVT)           -0.0072   0.0296   1.0000  -0.0046  -0.0045 &   0.2470 r
+  HFSBUF_11_249/Y (NBUFFX16_RVT)                     0.0230   1.0000            0.0227 &   0.2697 r
+  pad_out[22] (net)            1  46.0186 
+  pad_out[22] (out)                         0.0000   0.0230   1.0000   0.0000   0.0119 &   0.2816 r
+  data arrival time                                                                        0.2816
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
   clock network delay (ideal)                                                   0.0500     0.0500
@@ -740,9 +530,9 @@ Date   : Sun May 28 00:45:03 2023
   data required time                                                                       0.3500
   --------------------------------------------------------------------------------------------------
   data required time                                                                       0.3500
-  data arrival time                                                                       -0.2841
+  data arrival time                                                                       -0.2816
   --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0659
+  slack (VIOLATED)                                                                        -0.0684
 
 
   Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_30_
@@ -755,18 +545,18 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1710     0.1710
+  clock network delay (propagated)                                              0.1697     0.1697
   I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_30_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1710 r
+                                                     0.0230                     0.0000     0.1697 r
   I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_30_/Q (DFFARX1_HVT)
-                                                     0.0304   1.0000            0.0817 &   0.2527 r
+                                                     0.0318   1.0000            0.0835 &   0.2532 r
   I_PCI_TOP/pad_out[30] (net)
-                               2   6.3727 
-  HFSBUF_11_235/A (NBUFFX16_RVT)           -0.0050   0.0304   1.0000  -0.0015  -0.0014 &   0.2513 r
-  HFSBUF_11_235/Y (NBUFFX16_RVT)                     0.0229   1.0000            0.0225 &   0.2738 r
-  pad_out[30] (net)            1  42.0669 
-  pad_out[30] (out)                         0.0000   0.0229   1.0000   0.0000   0.0107 &   0.2846 r
-  data arrival time                                                                        0.2846
+                               2   6.8765 
+  ZBUF_4_inst_23148/A (NBUFFX16_RVT)       -0.0059   0.0318   1.0000  -0.0023  -0.0021 &   0.2511 r
+  ZBUF_4_inst_23148/Y (NBUFFX16_RVT)                 0.0237   1.0000            0.0231 &   0.2742 r
+  pad_out[30] (net)            1  46.4723 
+  pad_out[30] (out)                        -0.0048   0.0237   1.0000  -0.0037   0.0076 &   0.2818 r
+  data arrival time                                                                        0.2818
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
   clock network delay (ideal)                                                   0.0500     0.0500
@@ -775,14 +565,47 @@ Date   : Sun May 28 00:45:03 2023
   data required time                                                                       0.3500
   --------------------------------------------------------------------------------------------------
   data required time                                                                       0.3500
-  data arrival time                                                                       -0.2846
+  data arrival time                                                                       -0.2818
   --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0654
+  slack (VIOLATED)                                                                        -0.0682
 
 
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_14_
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_5_
                (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[14]
+  Endpoint: pad_out[5] (output port clocked by v_PCI_CLK)
+  Path Group: v_PCI_CLK
+  Path Type: min
+
+  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
+  clock network delay (propagated)                                              0.1696     0.1696
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_5_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1696 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_5_/Q (DFFARX1_HVT)
+                                                     0.0332   1.0000            0.0847 &   0.2543 r
+  I_PCI_TOP/pad_out[5] (net)   2   7.3652 
+  HFSBUF_11_250/A (NBUFFX16_RVT)            0.0000   0.0332   1.0000   0.0000   0.0002 &   0.2545 r
+  HFSBUF_11_250/Y (NBUFFX16_RVT)                     0.0219   1.0000            0.0232 &   0.2777 r
+  pad_out[5] (net)             1  36.3559 
+  pad_out[5] (out)                          0.0000   0.0219   1.0000   0.0000   0.0049 &   0.2827 r
+  data arrival time                                                                        0.2827
+
+  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
+  clock network delay (ideal)                                                   0.0500     0.0500
+  clock reconvergence pessimism                                                 0.0000     0.0500
+  output external delay                                                         0.3000     0.3500
+  data required time                                                                       0.3500
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       0.3500
+  data arrival time                                                                       -0.2827
+  --------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                        -0.0673
+
+
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_28_
+               (rising edge-triggered flip-flop clocked by PCI_CLK)
+  Endpoint: pad_out[28]
                (output port clocked by v_PCI_CLK)
   Path Group: v_PCI_CLK
   Path Type: min
@@ -790,18 +613,18 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1703     0.1703
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_14_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1703 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_14_/Q (DFFARX1_HVT)
-                                                     0.0273   1.0000            0.0791 &   0.2494 r
-  I_PCI_TOP/pad_out[14] (net)
-                               2   5.2998 
-  HFSBUF_11_241/A (NBUFFX16_RVT)           -0.0027   0.0273   1.0000  -0.0005  -0.0004 &   0.2490 r
-  HFSBUF_11_241/Y (NBUFFX16_RVT)                     0.0222   1.0000            0.0221 &   0.2712 r
-  pad_out[14] (net)            1  47.6010 
-  pad_out[14] (out)                         0.0000   0.0222   1.0000   0.0000   0.0142 &   0.2853 r
-  data arrival time                                                                        0.2853
+  clock network delay (propagated)                                              0.1699     0.1699
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_28_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1699 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_28_/Q (DFFARX1_HVT)
+                                                     0.0332   1.0000            0.0846 &   0.2546 r
+  I_PCI_TOP/pad_out[28] (net)
+                               2   7.3519 
+  ZBUF_4_inst_53742/A (NBUFFX16_RVT)       -0.0078   0.0332   1.0000  -0.0054  -0.0052 &   0.2494 r
+  ZBUF_4_inst_53742/Y (NBUFFX16_RVT)                 0.0239   1.0000            0.0233 &   0.2727 r
+  pad_out[28] (net)            1  46.1802 
+  pad_out[28] (out)                        -0.0025   0.0239   1.0000  -0.0009   0.0104 &   0.2830 r
+  data arrival time                                                                        0.2830
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
   clock network delay (ideal)                                                   0.0500     0.0500
@@ -810,14 +633,114 @@ Date   : Sun May 28 00:45:03 2023
   data required time                                                                       0.3500
   --------------------------------------------------------------------------------------------------
   data required time                                                                       0.3500
-  data arrival time                                                                       -0.2853
+  data arrival time                                                                       -0.2830
   --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0647
+  slack (VIOLATED)                                                                        -0.0670
 
 
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_12_
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_0_
                (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[12]
+  Endpoint: pad_out[0] (output port clocked by v_PCI_CLK)
+  Path Group: v_PCI_CLK
+  Path Type: min
+
+  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
+  clock network delay (propagated)                                              0.1697     0.1697
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_0_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1697 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_0_/Q (DFFARX1_HVT)
+                                                     0.0310   1.0000            0.0828 &   0.2525 r
+  I_PCI_TOP/n8849 (net)        2   6.5947 
+  I_PCI_TOP/U3203/A (NBUFFX32_LVT)         -0.0044   0.0310   1.0000  -0.0008  -0.0007 &   0.2519 r
+  I_PCI_TOP/U3203/Y (NBUFFX32_LVT)                   0.0215   1.0000            0.0206 &   0.2725 r
+  I_PCI_TOP/pad_out[0] (net)   1  43.0680 
+  pad_out[0] (out)                          0.0000   0.0215   1.0000   0.0000   0.0108 &   0.2833 r
+  pad_out[0] (net)             1 
+  data arrival time                                                                        0.2833
+
+  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
+  clock network delay (ideal)                                                   0.0500     0.0500
+  clock reconvergence pessimism                                                 0.0000     0.0500
+  output external delay                                                         0.3000     0.3500
+  data required time                                                                       0.3500
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       0.3500
+  data arrival time                                                                       -0.2833
+  --------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                        -0.0667
+
+
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_6_
+               (rising edge-triggered flip-flop clocked by PCI_CLK)
+  Endpoint: pad_out[6] (output port clocked by v_PCI_CLK)
+  Path Group: v_PCI_CLK
+  Path Type: min
+
+  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
+  clock network delay (propagated)                                              0.1698     0.1698
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_6_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1698 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_6_/Q (DFFARX1_HVT)
+                                                     0.0283   1.0000            0.0806 &   0.2504 r
+  I_PCI_TOP/pad_out[6] (net)   2   5.6598 
+  ZBUF_4_inst_54758/A (NBUFFX16_LVT)        0.0000   0.0283   1.0000   0.0000   0.0001 &   0.2505 r
+  ZBUF_4_inst_54758/Y (NBUFFX16_LVT)                 0.0223   1.0000            0.0205 &   0.2711 r
+  pad_out[6] (net)             1  48.1385 
+  pad_out[6] (out)                         -0.0020   0.0223   1.0000  -0.0003   0.0128 &   0.2839 r
+  data arrival time                                                                        0.2839
+
+  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
+  clock network delay (ideal)                                                   0.0500     0.0500
+  clock reconvergence pessimism                                                 0.0000     0.0500
+  output external delay                                                         0.3000     0.3500
+  data required time                                                                       0.3500
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       0.3500
+  data arrival time                                                                       -0.2839
+  --------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                        -0.0661
+
+
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_4_
+               (rising edge-triggered flip-flop clocked by PCI_CLK)
+  Endpoint: pad_out[4] (output port clocked by v_PCI_CLK)
+  Path Group: v_PCI_CLK
+  Path Type: min
+
+  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
+  clock network delay (propagated)                                              0.1697     0.1697
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_4_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1697 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_4_/Q (DFFARX1_HVT)
+                                                     0.0287   1.0000            0.0809 &   0.2506 r
+  I_PCI_TOP/pad_out[4] (net)   2   5.7918 
+  HFSBUF_11_241/A (NBUFFX16_RVT)           -0.0010   0.0287   1.0000  -0.0002  -0.0000 &   0.2506 r
+  HFSBUF_11_241/Y (NBUFFX16_RVT)                     0.0225   1.0000            0.0222 &   0.2728 r
+  pad_out[4] (net)             1  43.4784 
+  pad_out[4] (out)                          0.0000   0.0225   1.0000   0.0000   0.0120 &   0.2848 r
+  data arrival time                                                                        0.2848
+
+  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
+  clock network delay (ideal)                                                   0.0500     0.0500
+  clock reconvergence pessimism                                                 0.0000     0.0500
+  output external delay                                                         0.3000     0.3500
+  data required time                                                                       0.3500
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       0.3500
+  data arrival time                                                                       -0.2848
+  --------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                        -0.0652
+
+
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_24_
+               (rising edge-triggered flip-flop clocked by PCI_CLK)
+  Endpoint: pad_out[24]
                (output port clocked by v_PCI_CLK)
   Path Group: v_PCI_CLK
   Path Type: min
@@ -825,18 +748,18 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1705     0.1705
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_12_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1705 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_12_/Q (DFFARX1_HVT)
-                                                     0.0297   1.0000            0.0811 &   0.2516 r
-  I_PCI_TOP/pad_out[12] (net)
-                               2   6.1431 
-  HFSBUF_11_233/A (NBUFFX16_RVT)           -0.0045   0.0297   1.0000  -0.0008  -0.0006 &   0.2510 r
-  HFSBUF_11_233/Y (NBUFFX16_RVT)                     0.0229   1.0000            0.0225 &   0.2735 r
-  pad_out[12] (net)            1  44.9722 
-  pad_out[12] (out)                         0.0000   0.0229   1.0000   0.0000   0.0122 &   0.2857 r
-  data arrival time                                                                        0.2857
+  clock network delay (propagated)                                              0.1699     0.1699
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_24_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1699 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_24_/Q (DFFARX1_HVT)
+                                                     0.0322   1.0000            0.0839 &   0.2538 r
+  I_PCI_TOP/pad_out[24] (net)
+                               2   7.0245 
+  HFSBUF_11_242/A (NBUFFX16_RVT)           -0.0066   0.0322   1.0000  -0.0044  -0.0042 &   0.2496 r
+  HFSBUF_11_242/Y (NBUFFX16_RVT)                     0.0235   1.0000            0.0229 &   0.2725 r
+  pad_out[24] (net)            1  45.7918 
+  pad_out[24] (out)                        -0.0009   0.0235   1.0000  -0.0001   0.0123 &   0.2848 r
+  data arrival time                                                                        0.2848
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
   clock network delay (ideal)                                                   0.0500     0.0500
@@ -845,47 +768,14 @@ Date   : Sun May 28 00:45:03 2023
   data required time                                                                       0.3500
   --------------------------------------------------------------------------------------------------
   data required time                                                                       0.3500
-  data arrival time                                                                       -0.2857
+  data arrival time                                                                       -0.2848
   --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0643
+  slack (VIOLATED)                                                                        -0.0652
 
 
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_2_
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_16_
                (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[2] (output port clocked by v_PCI_CLK)
-  Path Group: v_PCI_CLK
-  Path Type: min
-
-  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
-  --------------------------------------------------------------------------------------------------
-  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1706     0.1706
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_2_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1706 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_2_/Q (DFFARX1_HVT)
-                                                     0.0249   1.0000            0.0771 &   0.2477 r
-  I_PCI_TOP/pad_out[2] (net)   2   4.4586 
-  HFSBUF_11_236/A (NBUFFX16_RVT)           -0.0026   0.0249   1.0000  -0.0004  -0.0004 &   0.2473 r
-  HFSBUF_11_236/Y (NBUFFX16_RVT)                     0.0212   1.0000            0.0217 &   0.2690 r
-  pad_out[2] (net)             1  51.0973 
-  pad_out[2] (out)                          0.0000   0.0212   1.0000   0.0000   0.0170 &   0.2860 r
-  data arrival time                                                                        0.2860
-
-  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
-  clock network delay (ideal)                                                   0.0500     0.0500
-  clock reconvergence pessimism                                                 0.0000     0.0500
-  output external delay                                                         0.3000     0.3500
-  data required time                                                                       0.3500
-  --------------------------------------------------------------------------------------------------
-  data required time                                                                       0.3500
-  data arrival time                                                                       -0.2860
-  --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0640
-
-
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_10_
-               (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[10]
+  Endpoint: pad_out[16]
                (output port clocked by v_PCI_CLK)
   Path Group: v_PCI_CLK
   Path Type: min
@@ -893,17 +783,51 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1704     0.1704
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_10_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1704 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_10_/Q (DFFARX1_HVT)
-                                                     0.0274   1.0000            0.0792 &   0.2496 r
-  I_PCI_TOP/pad_out[10] (net)
-                               2   5.3466 
-  HFSBUF_11_249/A (NBUFFX16_RVT)           -0.0011   0.0274   1.0000  -0.0002  -0.0001 &   0.2495 r
-  HFSBUF_11_249/Y (NBUFFX16_RVT)                     0.0222   1.0000            0.0221 &   0.2717 r
-  pad_out[10] (net)            1  48.8020 
-  pad_out[10] (out)                         0.0000   0.0222   1.0000   0.0000   0.0151 &   0.2867 r
+  clock network delay (propagated)                                              0.1697     0.1697
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_16_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1697 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_16_/Q (DFFARX1_HVT)
+                                                     0.0313   1.0000            0.0831 &   0.2528 r
+  I_PCI_TOP/pad_out[16] (net)
+                               2   6.7136 
+  HFSBUF_11_233/A (NBUFFX16_RVT)           -0.0016   0.0313   1.0000  -0.0002  -0.0001 &   0.2527 r
+  HFSBUF_11_233/Y (NBUFFX16_RVT)                     0.0236   1.0000            0.0231 &   0.2758 r
+  pad_out[16] (net)            1  50.1653 
+  pad_out[16] (out)                        -0.0044   0.0236   1.0000  -0.0032   0.0105 &   0.2863 r
+  data arrival time                                                                        0.2863
+
+  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
+  clock network delay (ideal)                                                   0.0500     0.0500
+  clock reconvergence pessimism                                                 0.0000     0.0500
+  output external delay                                                         0.3000     0.3500
+  data required time                                                                       0.3500
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       0.3500
+  data arrival time                                                                       -0.2863
+  --------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                        -0.0637
+
+
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_8_
+               (rising edge-triggered flip-flop clocked by PCI_CLK)
+  Endpoint: pad_out[8] (output port clocked by v_PCI_CLK)
+  Path Group: v_PCI_CLK
+  Path Type: min
+
+  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
+  clock network delay (propagated)                                              0.1696     0.1696
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_8_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1696 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_8_/Q (DFFARX1_HVT)
+                                                     0.0310   1.0000            0.0829 &   0.2525 r
+  I_PCI_TOP/n8844 (net)        2   6.6016 
+  I_PCI_TOP/U3082/A (NBUFFX32_LVT)          0.0000   0.0310   1.0000   0.0000   0.0001 &   0.2526 r
+  I_PCI_TOP/U3082/Y (NBUFFX32_LVT)                   0.0210   1.0000            0.0206 &   0.2732 r
+  I_PCI_TOP/pad_out[8] (net)   1  45.9864 
+  pad_out[8] (out)                          0.0000   0.0210   1.0000   0.0000   0.0134 &   0.2867 r
+  pad_out[8] (net)             1 
   data arrival time                                                                        0.2867
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
@@ -918,42 +842,9 @@ Date   : Sun May 28 00:45:03 2023
   slack (VIOLATED)                                                                        -0.0633
 
 
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_4_
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_14_
                (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[4] (output port clocked by v_PCI_CLK)
-  Path Group: v_PCI_CLK
-  Path Type: min
-
-  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
-  --------------------------------------------------------------------------------------------------
-  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1705     0.1705
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_4_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1705 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_4_/Q (DFFARX1_HVT)
-                                                     0.0298   1.0000            0.0812 &   0.2517 r
-  I_PCI_TOP/pad_out[4] (net)   2   6.1878 
-  HFSBUF_11_247/A (NBUFFX16_RVT)           -0.0017   0.0298   1.0000  -0.0002  -0.0001 &   0.2516 r
-  HFSBUF_11_247/Y (NBUFFX16_RVT)                     0.0230   1.0000            0.0226 &   0.2742 r
-  pad_out[4] (net)             1  46.1423 
-  pad_out[4] (out)                          0.0000   0.0230   1.0000   0.0000   0.0126 &   0.2868 r
-  data arrival time                                                                        0.2868
-
-  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
-  clock network delay (ideal)                                                   0.0500     0.0500
-  clock reconvergence pessimism                                                 0.0000     0.0500
-  output external delay                                                         0.3000     0.3500
-  data required time                                                                       0.3500
-  --------------------------------------------------------------------------------------------------
-  data required time                                                                       0.3500
-  data arrival time                                                                       -0.2868
-  --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0632
-
-
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_16_
-               (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[16]
+  Endpoint: pad_out[14]
                (output port clocked by v_PCI_CLK)
   Path Group: v_PCI_CLK
   Path Type: min
@@ -961,18 +852,18 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1706     0.1706
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_16_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1706 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_16_/Q (DFFARX1_HVT)
-                                                     0.0292   1.0000            0.0807 &   0.2514 r
-  I_PCI_TOP/pad_out[16] (net)
-                               2   5.9826 
-  HFSBUF_11_237/A (NBUFFX16_RVT)           -0.0042   0.0292   1.0000  -0.0007  -0.0006 &   0.2508 r
-  HFSBUF_11_237/Y (NBUFFX16_RVT)                     0.0229   1.0000            0.0227 &   0.2735 r
-  pad_out[16] (net)            1  50.9196 
-  pad_out[16] (out)                        -0.0027   0.0229   1.0000  -0.0008   0.0140 &   0.2875 r
-  data arrival time                                                                        0.2875
+  clock network delay (propagated)                                              0.1694     0.1694
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_14_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1694 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_14_/Q (DFFARX1_HVT)
+                                                     0.0297   1.0000            0.0817 &   0.2511 r
+  I_PCI_TOP/pad_out[14] (net)
+                               2   6.1337 
+  HFSBUF_11_236/A (NBUFFX16_RVT)           -0.0012   0.0297   1.0000  -0.0002  -0.0000 &   0.2511 r
+  HFSBUF_11_236/Y (NBUFFX16_RVT)                     0.0229   1.0000            0.0225 &   0.2736 r
+  pad_out[14] (net)            1  46.6535 
+  pad_out[14] (out)                         0.0000   0.0229   1.0000   0.0000   0.0132 &   0.2869 r
+  data arrival time                                                                        0.2869
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
   clock network delay (ideal)                                                   0.0500     0.0500
@@ -981,14 +872,14 @@ Date   : Sun May 28 00:45:03 2023
   data required time                                                                       0.3500
   --------------------------------------------------------------------------------------------------
   data required time                                                                       0.3500
-  data arrival time                                                                       -0.2875
+  data arrival time                                                                       -0.2869
   --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0625
+  slack (VIOLATED)                                                                        -0.0631
 
 
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_13_
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_10_
                (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[13]
+  Endpoint: pad_out[10]
                (output port clocked by v_PCI_CLK)
   Path Group: v_PCI_CLK
   Path Type: min
@@ -996,21 +887,18 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1703     0.1703
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_13_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1703 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_13_/Q (DFFARX1_HVT)
-                                                     0.0313   1.0000            0.0824 &   0.2528 r
-  I_PCI_TOP/pad_out[13] (net)
-                               2   6.7016 
-  HFSBUF_11_253/A (NBUFFX2_HVT)            -0.0013   0.0313   1.0000  -0.0002   0.0000 &   0.2528 r
-  HFSBUF_11_253/Y (NBUFFX2_HVT)                      0.0144   1.0000            0.0223 &   0.2751 r
-  ZBUF_4_89 (net)              1   1.9985 
-  ZBUF_4_inst_54907/A (NBUFFX16_LVT)        0.0000   0.0144   1.0000   0.0000   0.0000 &   0.2751 r
-  ZBUF_4_inst_54907/Y (NBUFFX16_LVT)                 0.0177   1.0000            0.0191 &   0.2941 r
-  pad_out[13] (net)            1  37.2810 
-  pad_out[13] (out)                         0.0000   0.0177   1.0000   0.0000   0.0045 &   0.2986 r
-  data arrival time                                                                        0.2986
+  clock network delay (propagated)                                              0.1696     0.1696
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_10_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1696 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_10_/Q (DFFARX1_HVT)
+                                                     0.0325   1.0000            0.0841 &   0.2537 r
+  I_PCI_TOP/pad_out[10] (net)
+                               2   7.1124 
+  HFSBUF_11_243/A (NBUFFX16_RVT)           -0.0034   0.0325   1.0000  -0.0006  -0.0004 &   0.2533 r
+  HFSBUF_11_243/Y (NBUFFX16_RVT)                     0.0237   1.0000            0.0230 &   0.2764 r
+  pad_out[10] (net)            1  45.7409 
+  pad_out[10] (out)                        -0.0011   0.0237   1.0000  -0.0002   0.0116 &   0.2879 r
+  data arrival time                                                                        0.2879
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
   clock network delay (ideal)                                                   0.0500     0.0500
@@ -1019,88 +907,9 @@ Date   : Sun May 28 00:45:03 2023
   data required time                                                                       0.3500
   --------------------------------------------------------------------------------------------------
   data required time                                                                       0.3500
-  data arrival time                                                                       -0.2986
+  data arrival time                                                                       -0.2879
   --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0514
-
-
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_26_
-               (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[26]
-               (output port clocked by v_PCI_CLK)
-  Path Group: v_PCI_CLK
-  Path Type: min
-
-  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
-  --------------------------------------------------------------------------------------------------
-  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1710     0.1710
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_26_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1710 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_26_/Q (DFFARX1_HVT)
-                                                     0.0326   1.0000            0.0836 &   0.2546 r
-  I_PCI_TOP/pad_out[26] (net)
-                               2   7.1655 
-  HFSBUF_11_242/A (NBUFFX2_HVT)            -0.0096   0.0326   1.0000  -0.0073  -0.0070 &   0.2476 r
-  HFSBUF_11_242/Y (NBUFFX2_HVT)                      0.0151   1.0000            0.0231 &   0.2706 r
-  ZBUF_4_33 (net)              1   2.4585 
-  ZBUF_4_inst_54094/A (NBUFFX16_RVT)        0.0000   0.0151   1.0000   0.0000   0.0000 &   0.2707 r
-  ZBUF_4_inst_54094/Y (NBUFFX16_RVT)                 0.0200   1.0000            0.0205 &   0.2911 r
-  pad_out[26] (net)            1  44.1179 
-  pad_out[26] (out)                        -0.0017   0.0200   1.0000  -0.0003   0.0102 &   0.3014 r
-  data arrival time                                                                        0.3014
-
-  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
-  clock network delay (ideal)                                                   0.0500     0.0500
-  clock reconvergence pessimism                                                 0.0000     0.0500
-  output external delay                                                         0.3000     0.3500
-  data required time                                                                       0.3500
-  --------------------------------------------------------------------------------------------------
-  data required time                                                                       0.3500
-  data arrival time                                                                       -0.3014
-  --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0486
-
-
-  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_28_
-               (rising edge-triggered flip-flop clocked by PCI_CLK)
-  Endpoint: pad_out[28]
-               (output port clocked by v_PCI_CLK)
-  Path Group: v_PCI_CLK
-  Path Type: min
-
-  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
-  --------------------------------------------------------------------------------------------------
-  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1705     0.1705
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_28_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1705 r
-  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_28_/Q (DFFARX1_HVT)
-                                                     0.0213   1.0000            0.0727 &   0.2432 f
-  I_PCI_TOP/n8838 (net)        1   2.6252 
-  I_PCI_TOP/HFSINV_40_245/A (INVX0_HVT)    -0.0009   0.0213   1.0000  -0.0001  -0.0001 &   0.2432 f
-  I_PCI_TOP/HFSINV_40_245/Y (INVX0_HVT)              0.0237   1.0000            0.0205 &   0.2636 r
-  I_PCI_TOP/pad_out[28] (net)
-                               2   3.3988 
-  HFSINV_13_244/A (INVX0_HVT)              -0.0052   0.0237   1.0000  -0.0052  -0.0051 &   0.2585 r
-  HFSINV_13_244/Y (INVX0_HVT)                        0.0246   1.0000            0.0192 &   0.2777 f
-  ZBUF_4_87 (net)              1   2.2600 
-  ZBUF_4_inst_54905/A (NBUFFX16_LVT)        0.0000   0.0246   1.0000   0.0000   0.0000 &   0.2778 f
-  ZBUF_4_inst_54905/Y (NBUFFX16_LVT)                 0.0213   1.0000            0.0204 &   0.2981 f
-  pad_out[28] (net)            1  45.1239 
-  pad_out[28] (out)                        -0.0020   0.0213   1.0000  -0.0003   0.0103 &   0.3084 f
-  data arrival time                                                                        0.3084
-
-  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
-  clock network delay (ideal)                                                   0.0500     0.0500
-  clock reconvergence pessimism                                                 0.0000     0.0500
-  output external delay                                                         0.3000     0.3500
-  data required time                                                                       0.3500
-  --------------------------------------------------------------------------------------------------
-  data required time                                                                       0.3500
-  data arrival time                                                                       -0.3084
-  --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0416
+  slack (VIOLATED)                                                                        -0.0621
 
 
   Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_20_
@@ -1113,21 +922,18 @@ Date   : Sun May 28 00:45:03 2023
   Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
   --------------------------------------------------------------------------------------------------
   clock PCI_CLK (rise edge)                                                     0.0000     0.0000
-  clock network delay (propagated)                                              0.1705     0.1705
+  clock network delay (propagated)                                              0.1699     0.1699
   I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_20_/CLK (DFFARX1_HVT)
-                                                     0.0200                     0.0000     0.1705 r
+                                                     0.0230                     0.0000     0.1699 r
   I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_20_/Q (DFFARX1_HVT)
-                                                     0.0337   1.0000            0.0845 &   0.2550 r
+                                                     0.0302   1.0000            0.0822 &   0.2521 r
   I_PCI_TOP/pad_out[20] (net)
-                               2   7.5422 
-  HFSBUF_11_230/A (NBUFFX2_HVT)            -0.0051   0.0337   1.0000  -0.0012  -0.0010 &   0.2540 r
-  HFSBUF_11_230/Y (NBUFFX2_HVT)                      0.0157   1.0000            0.0237 &   0.2778 r
-  ZBUF_4_86 (net)              1   2.8883 
-  ZBUF_4_inst_54904/A (NBUFFX16_LVT)        0.0000   0.0157   1.0000   0.0000   0.0000 &   0.2778 r
-  ZBUF_4_inst_54904/Y (NBUFFX16_LVT)                 0.0191   1.0000            0.0189 &   0.2967 r
-  pad_out[20] (net)            1  47.2041 
-  pad_out[20] (out)                         0.0000   0.0191   1.0000   0.0000   0.0123 &   0.3090 r
-  data arrival time                                                                        0.3090
+                               2   6.3202 
+  ZBUF_4_inst_53739/A (NBUFFX16_RVT)       -0.0032   0.0302   1.0000  -0.0006  -0.0004 &   0.2517 r
+  ZBUF_4_inst_53739/Y (NBUFFX16_RVT)                 0.0231   1.0000            0.0226 &   0.2743 r
+  pad_out[20] (net)            1  47.7133 
+  pad_out[20] (out)                        -0.0009   0.0231   1.0000  -0.0001   0.0137 &   0.2880 r
+  data arrival time                                                                        0.2880
 
   clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
   clock network delay (ideal)                                                   0.0500     0.0500
@@ -1136,9 +942,193 @@ Date   : Sun May 28 00:45:03 2023
   data required time                                                                       0.3500
   --------------------------------------------------------------------------------------------------
   data required time                                                                       0.3500
-  data arrival time                                                                       -0.3090
+  data arrival time                                                                       -0.2880
   --------------------------------------------------------------------------------------------------
-  slack (VIOLATED)                                                                        -0.0410
+  slack (VIOLATED)                                                                        -0.0620
+
+
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_2_
+               (rising edge-triggered flip-flop clocked by PCI_CLK)
+  Endpoint: pad_out[2] (output port clocked by v_PCI_CLK)
+  Path Group: v_PCI_CLK
+  Path Type: min
+
+  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
+  clock network delay (propagated)                                              0.1697     0.1697
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_2_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1697 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_2_/Q (DFFARX1_HVT)
+                                                     0.0315   1.0000            0.0832 &   0.2529 r
+  I_PCI_TOP/pad_out[2] (net)   2   6.7604 
+  HFSBUF_11_232/A (NBUFFX16_RVT)           -0.0029   0.0315   1.0000  -0.0005  -0.0003 &   0.2526 r
+  HFSBUF_11_232/Y (NBUFFX16_RVT)                     0.0234   1.0000            0.0229 &   0.2755 r
+  pad_out[2] (net)             1  48.3982 
+  pad_out[2] (out)                         -0.0008   0.0234   1.0000  -0.0001   0.0138 &   0.2893 r
+  data arrival time                                                                        0.2893
+
+  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
+  clock network delay (ideal)                                                   0.0500     0.0500
+  clock reconvergence pessimism                                                 0.0000     0.0500
+  output external delay                                                         0.3000     0.3500
+  data required time                                                                       0.3500
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       0.3500
+  data arrival time                                                                       -0.2893
+  --------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                        -0.0607
+
+
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_13_
+               (rising edge-triggered flip-flop clocked by PCI_CLK)
+  Endpoint: pad_out[13]
+               (output port clocked by v_PCI_CLK)
+  Path Group: v_PCI_CLK
+  Path Type: min
+
+  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
+  clock network delay (propagated)                                              0.1697     0.1697
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_13_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1697 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_13_/Q (DFFARX1_HVT)
+                                                     0.0169   1.0000            0.0702 &   0.2399 r
+  I_PCI_TOP/pad_out[13] (net)
+                               2   1.6894 
+  ZBUF_22_inst_22828/A (NBUFFX2_HVT)        0.0000   0.0169   1.0000   0.0000   0.0000 &   0.2399 r
+  ZBUF_22_inst_22828/Y (NBUFFX2_HVT)                 0.0182   1.0000            0.0259 &   0.2658 r
+  ZBUF_22_28 (net)             1   6.7619 
+  HFSBUF_11_248/A (NBUFFX16_RVT)            0.0000   0.0183   1.0000   0.0000   0.0004 &   0.2661 r
+  HFSBUF_11_248/Y (NBUFFX16_RVT)                     0.0181   1.0000            0.0213 &   0.2875 r
+  pad_out[13] (net)            1  34.6082 
+  pad_out[13] (out)                         0.0000   0.0181   1.0000   0.0000   0.0033 &   0.2908 r
+  data arrival time                                                                        0.2908
+
+  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
+  clock network delay (ideal)                                                   0.0500     0.0500
+  clock reconvergence pessimism                                                 0.0000     0.0500
+  output external delay                                                         0.3000     0.3500
+  data required time                                                                       0.3500
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       0.3500
+  data arrival time                                                                       -0.2908
+  --------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                        -0.0592
+
+
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_12_
+               (rising edge-triggered flip-flop clocked by PCI_CLK)
+  Endpoint: pad_out[12]
+               (output port clocked by v_PCI_CLK)
+  Path Group: v_PCI_CLK
+  Path Type: min
+
+  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
+  clock network delay (propagated)                                              0.1696     0.1696
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_12_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1696 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_12_/Q (DFFARX1_HVT)
+                                                     0.0334   1.0000            0.0849 &   0.2544 r
+  I_PCI_TOP/pad_out[12] (net)
+                               2   7.4440 
+  ZBUF_4_inst_53741/A (NBUFFX16_RVT)       -0.0020   0.0334   1.0000  -0.0003  -0.0001 &   0.2544 r
+  ZBUF_4_inst_53741/Y (NBUFFX16_RVT)                 0.0235   1.0000            0.0230 &   0.2774 r
+  pad_out[12] (net)            1  50.1945 
+  pad_out[12] (out)                         0.0000   0.0235   1.0000   0.0000   0.0159 &   0.2933 r
+  data arrival time                                                                        0.2933
+
+  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
+  clock network delay (ideal)                                                   0.0500     0.0500
+  clock reconvergence pessimism                                                 0.0000     0.0500
+  output external delay                                                         0.3000     0.3500
+  data required time                                                                       0.3500
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       0.3500
+  data arrival time                                                                       -0.2933
+  --------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                        -0.0567
+
+
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_31_
+               (rising edge-triggered flip-flop clocked by PCI_CLK)
+  Endpoint: pad_out[31]
+               (output port clocked by v_PCI_CLK)
+  Path Group: v_PCI_CLK
+  Path Type: min
+
+  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
+  clock network delay (propagated)                                              0.1697     0.1697
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_31_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1697 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_31_/Q (DFFARX1_HVT)
+                                                     0.0223   1.0000            0.0754 &   0.2451 r
+  I_PCI_TOP/n8850 (net)        2   3.5693 
+  I_PCI_TOP/ZBUF_22_inst_23354/A (NBUFFX2_HVT)
+                                           -0.0031   0.0223   1.0000  -0.0006  -0.0006 &   0.2445 r
+  I_PCI_TOP/ZBUF_22_inst_23354/Y (NBUFFX2_HVT)       0.0178   1.0000            0.0258 &   0.2703 r
+  I_PCI_TOP/ZBUF_22_74 (net)   1   5.8692 
+  I_PCI_TOP/U3244/A (NBUFFX32_LVT)         -0.0011   0.0178   1.0000  -0.0002   0.0000 &   0.2703 r
+  I_PCI_TOP/U3244/Y (NBUFFX32_LVT)                   0.0173   1.0000            0.0193 &   0.2896 r
+  I_PCI_TOP/pad_out[31] (net)
+                               1  36.3412 
+  pad_out[31] (out)                         0.0000   0.0173   1.0000   0.0000   0.0041 &   0.2937 r
+  pad_out[31] (net)            1 
+  data arrival time                                                                        0.2937
+
+  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
+  clock network delay (ideal)                                                   0.0500     0.0500
+  clock reconvergence pessimism                                                 0.0000     0.0500
+  output external delay                                                         0.3000     0.3500
+  data required time                                                                       0.3500
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       0.3500
+  data arrival time                                                                       -0.2937
+  --------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                        -0.0563
+
+
+  Startpoint: I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_19_
+               (rising edge-triggered flip-flop clocked by PCI_CLK)
+  Endpoint: pad_out[19]
+               (output port clocked by v_PCI_CLK)
+  Path Group: v_PCI_CLK
+  Path Type: min
+
+  Point                      Fanout   Cap    DTrans   Trans    Derate   Delta     Incr       Path
+  --------------------------------------------------------------------------------------------------
+  clock PCI_CLK (rise edge)                                                     0.0000     0.0000
+  clock network delay (propagated)                                              0.1699     0.1699
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_19_/CLK (DFFARX1_HVT)
+                                                     0.0230                     0.0000     0.1699 r
+  I_PCI_TOP/I_PCI_CORE_pad_out_buf_reg_19_/Q (DFFARX1_HVT)
+                                                     0.0389   1.0000            0.0860 &   0.2559 f
+  I_PCI_TOP/n8824 (net)        2   6.7449 
+  I_PCI_TOP/HFSBUF_8_251/A (NBUFFX2_HVT)   -0.0101   0.0389   1.0000  -0.0079  -0.0077 &   0.2482 f
+  I_PCI_TOP/HFSBUF_8_251/Y (NBUFFX2_HVT)             0.0157   1.0000            0.0232 &   0.2714 f
+  I_PCI_TOP/pad_out[19] (net)
+                               1   2.2286 
+  ZBUF_4_inst_53743/A (NBUFFX16_RVT)        0.0000   0.0157   1.0000   0.0000   0.0000 &   0.2714 f
+  ZBUF_4_inst_53743/Y (NBUFFX16_RVT)                 0.0180   1.0000            0.0199 &   0.2913 f
+  pad_out[19] (net)            1  36.9928 
+  pad_out[19] (out)                         0.0000   0.0180   1.0000   0.0000   0.0050 &   0.2963 f
+  data arrival time                                                                        0.2963
+
+  clock v_PCI_CLK (rise edge)                        0.0000                     0.0000     0.0000
+  clock network delay (ideal)                                                   0.0500     0.0500
+  clock reconvergence pessimism                                                 0.0000     0.0500
+  output external delay                                                         0.3000     0.3500
+  data required time                                                                       0.3500
+  --------------------------------------------------------------------------------------------------
+  data required time                                                                       0.3500
+  data arrival time                                                                       -0.2963
+  --------------------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                                        -0.0537
 
 
 1

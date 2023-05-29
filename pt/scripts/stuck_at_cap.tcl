@@ -1,7 +1,7 @@
 #set topdir /u/$env(USER)/PSU_RTL2GDS
 set topdir [lindex [ regexp -inline "(.*)pt" [pwd] ] 1 ]
 
-#set topdir /u/$env(USER)/Desktop/final_prj-team_10-final
+#set topdir /u/$env(USER)/Desktop/final_prj-team_10
 source $topdir/$top_design.design_config.tcl
 
 set corners $fast_corner
@@ -16,7 +16,7 @@ set link_path_per_instance [list [list {I_RISC_CORE} {* saed32hvt_ff0p95vn40c.db
 link
 set_app_var si_enable_analysis true
 #read_parasitics -keep_capacitive_coupling $topdir/apr/outputs/${top_design}.route2.$fast_metal.spef.gz
-read_parasitics -keep_capacitive_coupling $topdir/apr/outputs/${top_design}.route2.Cmax.spef.gz
+read_parasitics -keep_capacitive_coupling $topdir/apr/outputs/${top_design}.route2.cmax.spef.gz
 
 set corner_name min_capture
 set power_enable_analysis "true"

@@ -1,0 +1,1460 @@
+Error: Library Compiler executable path is not set. (PT-063)
+setting auto_restore_mw_cel_lib_setup true
+pt_shell> o
+setting top_design to: 
+ORCA_TOP
+pt_shell> source ../scripts/dmsa.tcl
+Launching 14 Distributed Worker(s)
+   1] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   2] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   3] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   4] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   5] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   6] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   7] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   8] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+   9] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  10] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  11] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  12] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  13] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  14] Launched : ssh mo /pkgs/synopsys/pts_vO-2018.06/pts/O-2018.06/bin/pt_shell \
+                  -slv_type dmsa_slv -max_cores 4
+
+  ---------------------------------------------------------------------------
+  Distributed farm creation timeout   : 21600 seconds
+  Waiting for  14 (of  14) workers    : Sun May 28 13:51:50 2023
+  Waiting for   0 (of  14) workers    : Sun May 28 13:52:00 2023
+  ---------------------------------------------------------------------------
+
+****************************************
+Report : host_usage
+Version: O-2018.06
+Date   : Sun May 28 13:52:00 2023
+****************************************
+
+  Options Name          Host Name    Num Processes           Protocol
+  --------------------------------------------------------------------
+  my_opts1              mo           14                      auto
+
+  Options Name     #    Host Name    Job ID    Process ID    Status
+  --------------------------------------------------------------------
+  my_opts1         1    mo           -         23348         ONLINE
+                   2    mo           -         23350         ONLINE
+                   3    mo           -         23407         ONLINE
+                   4    mo           -         23351         ONLINE
+                   5    mo           -         23406         ONLINE
+                   6    mo           -         23349         ONLINE
+                   7    mo           -         23347         ONLINE
+                   8    mo           -         23352         ONLINE
+                   9    mo           -         23641         ONLINE
+                   10   mo           -         23645         ONLINE
+                   11   mo           -         23647         ONLINE
+                   12   mo           -         23642         ONLINE
+                   13   mo           -         23643         ONLINE
+                   14   mo           -         23644         ONLINE
+
+  Usage limits (cores)
+
+  Options Name     #                                         Effective
+  --------------------------------------------------------------------
+  (local process)  -                                         4
+  my_opts1         1                                         4
+                   2                                         4
+                   3                                         4
+                   4                                         4
+                   5                                         4
+                   6                                         4
+                   7                                         4
+                   8                                         4
+                   9                                         4
+                   10                                        4
+                   11                                        4
+                   12                                        4
+                   13                                        4
+                   14                                        4
+  --------------------------------------------------------------------
+  Total                                                      56
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'test_slowfast'
+-----------------------------------
+End of Master/Slave Task Processing
+
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sun May 28 13:53:30 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/CLK
+               (internal path startpoint clocked by SYS_2x_CLK)
+  Endpoint: occ_int2/fast_clk_0_clkgt/u_icg
+               (falling clock gating-check end-point clocked by SYS_2x_CLK)
+  Last common pin: cts_dlydt_32422/Y
+  Path Group: **clock_gating_default**
+  Path Type: max
+  Scenario: test_slowfast
+  Min Clock Paths Derating Factor : 0.95
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SYS_2x_CLK (rise edge)                            0.00       0.00
+  clock network delay (propagated)                        1.38       1.38
+  occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/CLK (DFFARX1_LVT)
+                                                          0.00       1.38 r
+  occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/Q (DFFARX1_LVT)
+                                                          0.25 &     1.63 f
+  occ_int2/U_gf_mux_0/ctmTdsLR_1_24113/Y (AO21X1_LVT)     0.13 &     1.76 f
+  occ_int2/fast_clk_0_clkgt/u_icg/EN (CGLNPRX2_LVT)       0.00 &     1.76 f
+  data arrival time                                                  1.76
+
+  clock SYS_2x_CLK (fall edge)                            1.20       1.20
+  clock network delay (propagated)                        0.32       1.52
+  clock reconvergence pessimism                           0.02       1.54
+  clock uncertainty                                      -0.10       1.44
+  occ_int2/fast_clk_0_clkgt/u_icg/CLK (CGLNPRX2_LVT)                 1.44 f
+  clock gating setup time                                -0.19       1.26
+  data required time                                                 1.26
+  ------------------------------------------------------------------------------
+  data required time                                                 1.26
+  data arrival time                                                 -1.76
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.50
+
+
+1
+pt_shell> source ../scripts/eco_fixing.tcl
+Information: Starting cell swapping at [ Sun May 28 13:54:52 2023 ]...
+
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Information: Checked out license 'PrimeTime-ADV' (PT-019)
+Initial library cell patterns:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         23882 ( 52%)
+RVT                                          9163 ( 20%)
+LVT                                         12827 ( 28%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45912 (100%)
+
+Information: Sequential and combinational cells will be swapped.
+Information: Analyzing scenarios for setup timing...
+Information: Starting iteration 1 at [ Sun May 28 13:55:02 2023 ]...
+Information: Analyzing constraints...
+Information: Finalizing ECO change list...
+Information: 7 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 13:55:03 2023 ]...
+Information: Finished updating timing at [ Sun May 28 13:55:05 2023 ]...
+Information: Starting pre-DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 13:55:25 2023 ]...
+Information: Finished updating timing at [ Sun May 28 13:55:26 2023 ]...
+Information: 2 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Timing tuning process completed.
+
+Library cell patterns after iteration 1:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         23882 ( 52%)
+RVT                                          9168 ( 20%)
+LVT                                         12822 ( 28%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45912 (100%)
+
+Information: Starting iteration 2 at [ Sun May 28 13:55:33 2023 ]...
+Information: Finalizing ECO change list...
+Information: 1348 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 13:55:35 2023 ]...
+Information: Finished updating timing at [ Sun May 28 13:56:00 2023 ]...
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 13:56:17 2023 ]...
+Information: Finished updating timing at [ Sun May 28 13:56:36 2023 ]...
+Information: 349 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 13:56:40 2023 ]...
+Information: Finished updating timing at [ Sun May 28 13:56:48 2023 ]...
+Information: 148 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sun May 28 13:56:52 2023 ]...
+Information: Finished updating timing at [ Sun May 28 13:56:55 2023 ]...
+Information: 38 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Starting updating timing at [ Sun May 28 13:56:59 2023 ]...
+Information: Finished updating timing at [ Sun May 28 13:56:59 2023 ]...
+Information: 4 cells have been tuned.
+Information: Starting timing tuning phase 5...
+Information: Timing tuning process completed.
+
+Library cell patterns after iteration 2:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         23882 ( 52%)
+RVT                                          9977 ( 22%)
+LVT                                         12013 ( 26%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45912 (100%)
+
+Information: Starting iteration 3 at [ Sun May 28 13:57:13 2023 ]...
+Information: Finalizing ECO change list...
+Information: 1542 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 13:57:14 2023 ]...
+Information: Finished updating timing at [ Sun May 28 13:57:45 2023 ]...
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 13:58:02 2023 ]...
+Information: Finished updating timing at [ Sun May 28 13:58:21 2023 ]...
+Information: 624 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 13:58:25 2023 ]...
+Information: Finished updating timing at [ Sun May 28 13:58:33 2023 ]...
+Information: 168 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sun May 28 13:58:37 2023 ]...
+Information: Finished updating timing at [ Sun May 28 13:58:39 2023 ]...
+Information: 15 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Timing tuning process completed.
+
+Library cell patterns after iteration 3:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         24617 ( 54%)
+RVT                                          9242 ( 20%)
+LVT                                         12013 ( 26%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45912 (100%)
+
+Information: Starting final iteration at [ Sun May 28 13:58:52 2023 ]...
+Information: Starting pre-DRC tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 13:58:54 2023 ]...
+Information: Finished updating timing at [ Sun May 28 13:58:58 2023 ]...
+Information: 24 cells have been tuned.
+Information: Starting pre-DRC tuning phase 2...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 13:59:09 2023 ]...
+Information: Finished updating timing at [ Sun May 28 13:59:09 2023 ]...
+Information: 8 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Timing tuning process completed.
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: The cell swapping process is complete.
+
+Final library cell patterns:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         24603 ( 54%)
+RVT                                          9234 ( 20%)
+LVT                                         12035 ( 26%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       45912 (100%)
+
+Information: Elapsed time [              277 seconds ]
+Information: Completed at [ Sun May 28 13:59:29 2023 ]
+
+Information: Starting DRC fix iteration 1 at [ Sun May 28 13:59:32 2023 ]...
+Information: Analyzing scenarios...
+
+Available buffers:
+Lib_cell               Area
+--------------------------------------------------------
+NBUFFX8_HVT            3.81
+
+Information: 233 max capacitance violations located in the func_min scenario... (PTECO-023)
+Information: 1274 max capacitance violations located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:00:05 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:00:32 2023 ]...
+Information: 139 cells have been resized.
+Information: 115 buffers have been inserted.
+
+Information: Starting DRC fix iteration 2 at [ Sun May 28 14:00:32 2023 ]...
+Information: Analyzing scenarios...
+Information: 29 max capacitance violations located in the func_min scenario... (PTECO-023)
+Information: 195 max capacitance violations located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:00:35 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:00:37 2023 ]...
+Information: 1 cells have been resized.
+Information: 18 buffers have been inserted.
+
+Information: Starting DRC fix iteration 3 at [ Sun May 28 14:00:37 2023 ]...
+Information: Analyzing scenarios...
+Information: 10 max capacitance violations located in the func_min scenario... (PTECO-023)
+Information: 46 max capacitance violations located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: No more fixes are available.
+Information: The DRC violation fixing process is complete.
+
+
+Remaining Violations:
+Scenario                               Total  Unfixable
+--------------------------------------------------------
+func_max                                   0          0
+func_min                                  10         10
+test_best                                  9          9
+test_worst                                 1          1
+func_slowfast                              2          2
+func_fastslow                              1          1
+test_slowfast                              2          2
+test_fastslow                              1          1
+atspeed_cap                                1          1
+atspeed_shift                              9          9
+stuck_at_shift                             1          1
+stuck_at_cap                               9          9
+--------------------------------------------------------
+Total                                     46         46
+
+Inserted buffers:
+   Count Lib_cell               Area          Total_area
+--------------------------------------------------------
+     133 NBUFFX8_HVT            3.81              507.02
+--------------------------------------------------------
+     133 TOTAL                                    507.02
+
+Final ECO Summary:
+--------------------------------------------------------
+Number of size_cell commands                         140
+Number of insert_buffer commands                     133
+Total number of commands                             273
+Area increased by cell sizing                     247.79
+Area increased by buffer insertion                507.02
+Total area increased                              754.81
+
+Information: Elapsed time [               70 seconds ]
+Information: Completed at [ Sun May 28 14:00:42 2023 ]
+
+Information: Starting DRC fix iteration 1 at [ Sun May 28 14:00:51 2023 ]...
+Information: Analyzing scenarios...
+
+Available buffers:
+Lib_cell               Area
+--------------------------------------------------------
+NBUFFX8_HVT            3.81
+
+Information: 1 max transition violations located in the func_min scenario... (PTECO-023)
+Information: 6 max transition violations located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:01:29 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:01:30 2023 ]...
+Information: 1 buffers have been inserted.
+
+Information: Starting DRC fix iteration 2 at [ Sun May 28 14:01:30 2023 ]...
+Information: Analyzing scenarios...
+Information: 0 max transition violations located in all scenarios... (PTECO-024)
+Information: No more fixes are available.
+Information: The DRC violation fixing process is complete.
+
+
+Remaining Violations:
+Scenario                               Total  Unfixable
+--------------------------------------------------------
+func_max                                   0          0
+func_min                                   0          0
+test_best                                  0          0
+test_worst                                 0          0
+func_slowfast                              0          0
+func_fastslow                              0          0
+test_slowfast                              0          0
+test_fastslow                              0          0
+atspeed_cap                                0          0
+atspeed_shift                              0          0
+stuck_at_shift                             0          0
+stuck_at_cap                               0          0
+--------------------------------------------------------
+Total                                      0          0
+
+Inserted buffers:
+   Count Lib_cell               Area          Total_area
+--------------------------------------------------------
+       1 NBUFFX8_HVT            3.81                3.81
+--------------------------------------------------------
+       1 TOTAL                                      3.81
+
+Final ECO Summary:
+--------------------------------------------------------
+Number of insert_buffer commands                       1
+Total number of commands                               1
+Area increased by buffer insertion                  3.81
+Total area increased                                3.81
+
+Information: Elapsed time [               42 seconds ]
+Information: Completed at [ Sun May 28 14:01:33 2023 ]
+
+Information: Starting timing fix iteration 1 at [ Sun May 28 14:01:38 2023 ]...
+Information: Analyzing scenarios...
+Information: 872 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 880 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:01:46 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:02:14 2023 ]...
+Information: 1112 cells have been resized.
+
+Information: Starting timing fix iteration 2 at [ Sun May 28 14:02:14 2023 ]...
+Information: Analyzing scenarios...
+Information: 173 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 175 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:02:19 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:02:29 2023 ]...
+Information: 400 cells have been resized.
+
+Information: Starting timing fix iteration 3 at [ Sun May 28 14:02:29 2023 ]...
+Information: Analyzing scenarios...
+Information: 91 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 93 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:02:33 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:02:38 2023 ]...
+Information: 148 cells have been resized.
+
+Information: Starting timing fix iteration 4 at [ Sun May 28 14:02:38 2023 ]...
+Information: Analyzing scenarios...
+Information: 74 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 76 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:02:41 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:02:46 2023 ]...
+Information: 87 cells have been resized.
+
+Information: Starting timing fix iteration 5 at [ Sun May 28 14:02:46 2023 ]...
+Information: Analyzing scenarios...
+Information: 68 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 70 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:02:49 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:02:52 2023 ]...
+Information: 32 cells have been resized.
+
+Information: Starting timing fix iteration 6 at [ Sun May 28 14:02:52 2023 ]...
+Information: Analyzing scenarios...
+Information: 63 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 65 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:02:55 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:02:56 2023 ]...
+Information: 9 cells have been resized.
+
+Information: Starting timing fix iteration 7 at [ Sun May 28 14:02:56 2023 ]...
+Information: Analyzing scenarios...
+Information: 63 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 65 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:02:59 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:03:00 2023 ]...
+Information: 14 cells have been resized.
+
+Information: Starting timing fix iteration 8 at [ Sun May 28 14:03:00 2023 ]...
+Information: Analyzing scenarios...
+Information: 62 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 64 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:03:04 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:03:04 2023 ]...
+Information: 2 cells have been resized.
+
+Information: Starting timing fix iteration 9 at [ Sun May 28 14:03:04 2023 ]...
+Information: Analyzing scenarios...
+Information: 62 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 64 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:03:07 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:03:08 2023 ]...
+Information: 1 cells have been resized.
+
+Information: Starting timing fix iteration 10 at [ Sun May 28 14:03:08 2023 ]...
+Information: Analyzing scenarios...
+Information: 62 violating endpoints located in the func_slowfast scenario... (PTECO-023)
+Information: 64 violating endpoints located in all scenarios... (PTECO-024)
+Information: Quality of results may not improve in following iterations...
+Information: No more fixes are available.
+Information: The timing violation fixing process is complete.
+
+Final ECO Summary:
+--------------------------------------------------------
+Number of size_cell commands                        1805
+Total number of commands                            1805
+Area increased by cell sizing                     214.50
+Total area increased                              214.50
+
+Fixing Summary:
+--------------------------------------------------------
+Total violating endpoints found                      880
+Total violating endpoints fixed                      816
+Total violating endpoints remaining                   64
+Total percentage of violations fixed                92.7%
+
+Information: Elapsed time [               90 seconds ]
+Information: Completed at [ Sun May 28 14:03:08 2023 ]
+
+Information: Starting timing fix iteration 1 at [ Sun May 28 14:03:14 2023 ]...
+Information: Analyzing scenarios...
+
+Available buffers:
+Lib_cell               Area
+--------------------------------------------------------
+NBUFFX8_HVT            3.81
+
+Information: 5235 violating endpoints located in the atspeed_shift scenario... (PTECO-023)
+Information: 5235 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:03:24 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:04:28 2023 ]...
+Information: Analyzing timing improvement...
+Information: Tuning changes...
+Information: Starting updating timing at [ Sun May 28 14:04:33 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:05:08 2023 ]...
+Information: 26 cells have been resized.
+Information: 4225 buffers have been inserted.
+
+Information: Starting timing fix iteration 2 at [ Sun May 28 14:05:08 2023 ]...
+Information: Analyzing scenarios...
+Information: 1591 violating endpoints located in the atspeed_shift scenario... (PTECO-023)
+Information: 1591 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:05:24 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:05:59 2023 ]...
+Information: Analyzing timing improvement...
+Information: Tuning changes...
+Information: Starting updating timing at [ Sun May 28 14:06:01 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:06:19 2023 ]...
+Information: 660 cells have been resized.
+Information: 235 buffers have been inserted.
+
+Information: Starting timing fix iteration 3 at [ Sun May 28 14:06:19 2023 ]...
+Information: Analyzing scenarios...
+Information: 743 violating endpoints located in the atspeed_shift scenario... (PTECO-023)
+Information: 743 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:06:27 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:06:45 2023 ]...
+Information: Analyzing timing improvement...
+Information: Tuning changes...
+Information: Starting updating timing at [ Sun May 28 14:06:46 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:06:52 2023 ]...
+Information: 33 cells have been resized.
+Information: 65 buffers have been inserted.
+
+Information: Starting timing fix iteration 4 at [ Sun May 28 14:06:52 2023 ]...
+Information: Analyzing scenarios...
+Information: 678 violating endpoints located in the atspeed_shift scenario... (PTECO-023)
+Information: 678 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:07:01 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:07:13 2023 ]...
+Information: Analyzing timing improvement...
+Information: Tuning changes...
+Information: Starting updating timing at [ Sun May 28 14:07:14 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:07:20 2023 ]...
+Information: 2 cells have been resized.
+Information: 52 buffers have been inserted.
+
+Information: Starting timing fix iteration 5 at [ Sun May 28 14:07:20 2023 ]...
+Information: Analyzing scenarios...
+Information: 642 violating endpoints located in the atspeed_shift scenario... (PTECO-023)
+Information: 642 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:07:30 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:07:34 2023 ]...
+Information: Analyzing timing improvement...
+Information: Tuning changes...
+Information: Starting updating timing at [ Sun May 28 14:07:35 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:07:38 2023 ]...
+Information: 34 buffers have been inserted.
+
+Information: Starting timing fix iteration 6 at [ Sun May 28 14:07:38 2023 ]...
+Information: Analyzing scenarios...
+Information: 621 violating endpoints located in the atspeed_shift scenario... (PTECO-023)
+Information: 621 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:07:46 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:07:52 2023 ]...
+Information: Analyzing timing improvement...
+Information: Tuning changes...
+Information: Starting updating timing at [ Sun May 28 14:07:53 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:07:58 2023 ]...
+Information: 20 buffers have been inserted.
+
+Information: Starting timing fix iteration 7 at [ Sun May 28 14:07:58 2023 ]...
+Information: Analyzing scenarios...
+Information: 609 violating endpoints located in the atspeed_shift scenario... (PTECO-023)
+Information: 609 violating endpoints located in all scenarios... (PTECO-024)
+Information: Creating data base for fixing...
+Information: Fixing violations...
+Information: Finalizing ECO change list...
+Information: Starting updating timing at [ Sun May 28 14:08:05 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:08:08 2023 ]...
+Information: Analyzing timing improvement...
+Information: Tuning changes...
+Information: Starting updating timing at [ Sun May 28 14:08:09 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:08:10 2023 ]...
+Information: 19 buffers have been inserted.
+
+Information: Starting timing fix iteration 8 at [ Sun May 28 14:08:10 2023 ]...
+Information: Analyzing scenarios...
+Information: 598 violating endpoints located in the atspeed_shift scenario... (PTECO-023)
+Information: 598 violating endpoints located in all scenarios... (PTECO-024)
+Information: Quality of results may not improve in following iterations...
+Information: No more fixes are available.
+Information: The timing violation fixing process is complete.
+
+Inserted buffers:
+   Count Lib_cell               Area          Total_area
+--------------------------------------------------------
+    4650 NBUFFX8_HVT            3.81            17726.54
+--------------------------------------------------------
+    4650 TOTAL                                  17726.54
+
+Final ECO Summary:
+--------------------------------------------------------
+Number of size_cell commands                         721
+Number of insert_buffer commands                    4650
+Total number of commands                            5371
+Area increased by cell sizing                    1173.64
+Area increased by buffer insertion              17727.13
+Total area increased                            18900.77
+
+Fixing Summary:
+--------------------------------------------------------
+Total violating endpoints found                     5235
+Total violating endpoints fixed                     4637
+Total violating endpoints remaining                  598
+Total percentage of violations fixed                88.6%
+
+Information: Elapsed time [              297 seconds ]
+Information: Completed at [ Sun May 28 14:08:11 2023 ]
+
+Information: Starting cell swapping at [ Sun May 28 14:08:22 2023 ]...
+
+Initial library cell patterns:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         28297 ( 56%)
+RVT                                          9192 ( 18%)
+LVT                                         13167 ( 26%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50696 (100%)
+
+Information: Sequential and combinational cells will be swapped.
+Information: Analyzing scenarios for setup timing...
+Information: Starting iteration 1 at [ Sun May 28 14:08:29 2023 ]...
+Information: Analyzing constraints...
+Information: Finalizing ECO change list...
+Information: 1 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 14:08:31 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:08:32 2023 ]...
+Information: Starting pre-DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 14:08:51 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:08:52 2023 ]...
+Information: 1 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Timing tuning process completed.
+
+Library cell patterns after iteration 1:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         28297 ( 56%)
+RVT                                          9192 ( 18%)
+LVT                                         13167 ( 26%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50696 (100%)
+
+Information: Starting iteration 2 at [ Sun May 28 14:08:59 2023 ]...
+Information: Finalizing ECO change list...
+Information: 2158 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 14:09:07 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:10:39 2023 ]...
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 14:11:17 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:12:30 2023 ]...
+Information: 635 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 14:12:42 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:13:03 2023 ]...
+Information: 379 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sun May 28 14:13:07 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:13:13 2023 ]...
+Information: 168 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Starting updating timing at [ Sun May 28 14:13:16 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:13:20 2023 ]...
+Information: 65 cells have been tuned.
+Information: Starting timing tuning phase 5...
+Information: Starting updating timing at [ Sun May 28 14:13:23 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:13:27 2023 ]...
+Information: 8 cells have been tuned.
+Information: Starting timing tuning phase 6...
+Information: Starting updating timing at [ Sun May 28 14:13:31 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:13:31 2023 ]...
+Information: 1 cells have been tuned.
+Information: Starting timing tuning phase 7...
+Information: Timing tuning process completed.
+
+Library cell patterns after iteration 2:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         28297 ( 56%)
+RVT                                         10094 ( 20%)
+LVT                                         12265 ( 24%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50696 (100%)
+
+Information: Starting iteration 3 at [ Sun May 28 14:13:43 2023 ]...
+Information: Finalizing ECO change list...
+Information: 1959 cells have been swapped.
+Information: Starting updating timing at [ Sun May 28 14:13:44 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:14:33 2023 ]...
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 14:14:56 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:15:52 2023 ]...
+Information: 884 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 14:15:56 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:16:08 2023 ]...
+Information: 239 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting updating timing at [ Sun May 28 14:16:11 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:16:15 2023 ]...
+Information: 51 cells have been tuned.
+Information: Starting timing tuning phase 4...
+Information: Starting updating timing at [ Sun May 28 14:16:18 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:16:19 2023 ]...
+Information: 13 cells have been tuned.
+Information: Starting timing tuning phase 5...
+Information: Timing tuning process completed.
+
+Library cell patterns after iteration 3:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         29069 ( 57%)
+RVT                                          9322 ( 18%)
+LVT                                         12265 ( 24%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50696 (100%)
+
+Information: Starting final iteration at [ Sun May 28 14:16:27 2023 ]...
+Information: Starting pre-DRC tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 14:16:35 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:16:41 2023 ]...
+Information: 7 cells have been tuned.
+Information: Starting pre-DRC tuning phase 2...
+Information: DRC tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 14:16:57 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:16:58 2023 ]...
+Information: 9 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Timing tuning process completed.
+Information: Starting timing tuning phase 1...
+Information: Starting updating timing at [ Sun May 28 14:17:12 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:17:15 2023 ]...
+Information: 12 cells have been tuned.
+Information: Starting timing tuning phase 2...
+Information: Starting updating timing at [ Sun May 28 14:17:19 2023 ]...
+Information: Finished updating timing at [ Sun May 28 14:17:19 2023 ]...
+Information: 3 cells have been tuned.
+Information: Starting timing tuning phase 3...
+Information: Starting timing tuning phase 4...
+Information: Timing tuning process completed.
+Information: Starting DRC tuning phase 1...
+Information: DRC tuning process completed.
+Information: The cell swapping process is complete.
+
+Final library cell patterns:
+Pattern                                            Count
+--------------------------------------------------------
+HVT                                         29058 ( 57%)
+RVT                                          9312 ( 18%)
+LVT                                         12286 ( 24%)
+Others                                         40 (  0%)
+--------------------------------------------------------
+Total                                       50696 (100%)
+
+Information: Elapsed time [              554 seconds ]
+Information: Completed at [ Sun May 28 14:17:36 2023 ]
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+-----------------------------------
+End of Master/Slave Task Processing
+
+1
+1
+pt_shell> report_timing
+****************************************
+Report : timing
+        -path_type full
+        -delay_type max
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sun May 28 16:38:42 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_worst'
+Started    : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'test_best'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_slowfast'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/CLK
+               (internal path startpoint clocked by SYS_2x_CLK)
+  Endpoint: occ_int2/fast_clk_0_clkgt/u_icg
+               (falling clock gating-check end-point clocked by SYS_2x_CLK)
+  Last common pin: cts_dlydt_32422/Y
+  Path Group: **clock_gating_default**
+  Path Type: max
+  Scenario: test_slowfast
+  Min Clock Paths Derating Factor : 0.95
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock SYS_2x_CLK (rise edge)                            0.00       0.00
+  clock network delay (propagated)                        1.38       1.38
+  occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/CLK (DFFARX1_LVT)
+                                                          0.00       1.38 r
+  occ_int2/U_clk_control_i_0/fast_clk_enable_l_reg/Q (DFFARX1_LVT)
+                                                          0.25 &     1.63 f
+  occ_int2/U_gf_mux_0/ctmTdsLR_1_24113/Y (AO21X1_LVT)     0.13 &     1.76 f
+  occ_int2/fast_clk_0_clkgt/u_icg/EN (CGLNPRX2_LVT)       0.00 &     1.76 f
+  data arrival time                                                  1.76
+
+  clock SYS_2x_CLK (fall edge)                            1.20       1.20
+  clock network delay (propagated)                        0.32       1.52
+  clock reconvergence pessimism                           0.02       1.54
+  clock uncertainty                                      -0.10       1.44
+  occ_int2/fast_clk_0_clkgt/u_icg/CLK (CGLNPRX2_LVT)                 1.44 f
+  clock gating setup time                                -0.19       1.26
+  data required time                                                 1.26
+  ------------------------------------------------------------------------------
+  data required time                                                 1.26
+  data arrival time                                                 -1.76
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.50
+
+
+1
+pt_shell> report_timing -delay_type min
+****************************************
+Report : timing
+        -path_type full
+        -delay_type min
+        -max_paths 1
+        -sort_by slack
+Design : multi-scenario design
+Version: O-2018.06
+Date   : Sun May 28 16:40:21 2023
+****************************************
+
+
+Start of Master/Slave Task Processing
+-------------------------------------
+Started    : Command execution in scenario 'stuck_at_shift'
+Started    : Command execution in scenario 'test_fastslow'
+Started    : Command execution in scenario 'test_best'
+Started    : Command execution in scenario 'func_fastslow'
+Started    : Command execution in scenario 'func_min'
+Started    : Command execution in scenario 'stuck_at_cap'
+Started    : Command execution in scenario 'atspeed_cap'
+Started    : Command execution in scenario 'test_slowfast'
+Started    : Command execution in scenario 'func_slowfast'
+Started    : Command execution in scenario 'func_max'
+Started    : Command execution in scenario 'atspeed_shift'
+Started    : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_slowfast'
+Succeeded  : Command execution in scenario 'func_max'
+Succeeded  : Command execution in scenario 'test_slowfast'
+Succeeded  : Command execution in scenario 'test_worst'
+Succeeded  : Command execution in scenario 'func_fastslow'
+Succeeded  : Command execution in scenario 'stuck_at_cap'
+Succeeded  : Command execution in scenario 'func_min'
+Succeeded  : Command execution in scenario 'stuck_at_shift'
+Succeeded  : Command execution in scenario 'atspeed_shift'
+Succeeded  : Command execution in scenario 'test_fastslow'
+Succeeded  : Command execution in scenario 'atspeed_cap'
+Succeeded  : Command execution in scenario 'test_best'
+-----------------------------------
+End of Master/Slave Task Processing
+
+
+  Startpoint: I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_CTL_U1_count_int_reg_0_
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Endpoint: I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_0
+               (rising edge-triggered flip-flop clocked by ate_clk)
+  Last common pin: I_CLOCKING/occ_int1/cts_buf_692932346/Y
+  Path Group: ate_clk
+  Path Type: min
+  Scenario: atspeed_shift
+  Min Data Paths Derating Factor  : 0.95
+  Min Clock Paths Derating Factor : 0.95
+  Max Clock Paths Derating Factor : 1.05
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.18       0.18
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_CTL_U1_count_int_reg_0_/CLK (SDFFARX1_LVT)
+                                                          0.00       0.18 r
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_CTL_U1_count_int_reg_0_/Q (SDFFARX1_LVT)
+                                                          0.05 &     0.23 f
+  I_SDRAM_TOP/HFSBUF_170_1760/Y (NBUFFX8_RVT)             0.02 &     0.25 f
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_0/A1[0] (SRAM2RW64x32)
+                                                         -0.00 &     0.25 f
+  data arrival time                                                  0.25
+
+  clock ate_clk (rise edge)                               0.00       0.00
+  clock network delay (propagated)                        0.21       0.21
+  clock reconvergence pessimism                          -0.02       0.19
+  clock uncertainty                                       0.10       0.29
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_0/CE1 (SRAM2RW64x32)
+                                                                     0.29 r
+  library hold time                                       0.04       0.33
+  data required time                                                 0.33
+  ------------------------------------------------------------------------------
+  data required time                                                 0.33
+  data arrival time                                                 -0.25
+  ------------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.08
+
+
+1
+pt_shell> history
+     1  o
+     2  source ../scripts/dmsa.tcl
+     3  report_timing
+     4  source ../scripts/eco_fixing.tcl
+     5  report_timing
+     6  report_timing -delay_type min
+     7  history
+pt_shell> man size_cell
+2.  Synopsys Commands                                        Command Reference
+                                   size_cell
+
+NAME
+       size_cell
+              Relinks leaf cells to a new library cells that have the required
+              drive strength or other properties.
+
+SYNTAX
+       int size_cell
+              [-current_library]
+              [-libraries lib_spec]
+              cell_list
+              lib_cell
+
+   Data Types
+       lib_spec                list
+       cell_list               list
+       lib_cell                string
+
+ARGUMENTS
+       -current_library
+              If this option is  specified,  PrimeTime  searches  for  library
+              cells  only  in the cells' current libraries. You cannot specify
+              this option with the -libraries option. You cannot specify  this
+              option if a full library cell name has been specified.
+
+       -libraries lib_spec
+              If  this  option  is specified, PrimeTime resolves library cells
+              from the libraries contained only in the lib_spec. Libraries are
+              searched  in  the  order  in which they appear in lib_spec.  The
+              lib_spec value can be a list of library names, or collections of
+              libraries  loaded  into  PrimeTime;  the  latter can be obtained
+              using the get_libs command. You cannot specify this option  with
+              the -current_library option. You cannot specify this option if a
+              full library cell name has been specified.
+
+       cell_list
+              Specifies a list of leaf cells to be relinked.  Each  cell  must
+              be in scope at or below the current instance.
+
+       lib_cell
+              Specifies  the  name  of the library cell to which the specified
+              cells are to be linked. The lib_cell option  can  be  a  library
+              cell  object,  or  the name of a library cell. The former can be
+              obtained using the get_lib_cells command. The latter can  either
+              be     the    full    library    cell    name,    for    example
+              'lib_name/lcell_name', or the just the base name of the  library
+              cell,  for  example  'lcell_name'. You cannot specify either the
+              -current_library or -libraries option and explicitly specify the
+              full  library  cell  name.  If  you  invoke  PrimeTime  with the
+              -multi_scenario option, you must use only the library cell  base
+              name.  For more information, see the section entitled "RESOLVING
+              LIBRARY CELLS".
+
+DESCRIPTION
+       This command changes the drive strength or other properties of  a  leaf
+       cell  by relinking it to a new library cell that has the required prop-
+       erties. Like all other netlist editing commands, for the size_cell com-
+       mand  to  succeed,  all of its arguments must succeed. If any arguments
+       fail, the netlist remains unchanged. The size_cell command returns a  1
+       if successful and a 0 if unsuccessful.  Each cell in the cell_list must
+       be in scope; that is, at or below the current instance.
+
+       You can get a list of library cells that are compatible  with  a  given
+       cell  using  the  get_alternative_lib_cells  command,  or report on the
+       effects  of  compatible  library  cells   using   the   report_alterna-
+       tive_lib_cells command.
+
+       The  size_cell  command  is only for leaf cells. To swap a hierarchical
+       block for a different design, you must use the swap_cell command.
+
+       Executing size_cell typically triggers an  incremental  timing  update.
+       However, a full timing update is required if the resized cell is in the
+       clock tree or connected to the clock tree.
+
+EQUIVALENT LIBRARY CELLS
+       Two library cells are compatible for sizing if  all  of  the  following
+       restrictions  are satisfied. The exact same set of restrictions applies
+       to  the  size_cell,   get_alternative_lib_cells   and   report_alterna-
+       tive_lib_cells commands.
+
+       o  The  library  cells must be functionally equivalent. At least one of
+         the following must be true, and none can be false:
+
+         o If defined, the function_id attribute must match. This attribute is
+           created by Library Compiler and is available on lib_cell objects.
+
+         o If defined, the mog_func_id attribute must match. This attribute is
+           created by Library Compiler for multiple output  gate  (MOG)  cells
+           and is available on lib_cell objects.
+
+         o If defined, the user_function_class attribute must match. This is a
+           user-defined functional equivalency attribute for  cells  that  are
+           too  complex for Library Compiler to compute functional information
+           for. This attribute is available on lib_cell objects.
+
+       o The number of pins, ordering of pins, pin  directions,  and  internal
+         pin names must match.
+
+       o  The  number  of  enabled library cell arcs, arc types and sense must
+         match, including any conditional or "when" expressions.
+
+   RESOLVING LIBRARY CELLS
+       If the lib_cell option has been specified in  base  name  only  format,
+       that  is,  without  a  library from which to resolve it from, PrimeTime
+       resolves the library cell according to the following methodology.
+
+       If the -current_library option is  specified,  PrimeTime  searches  for
+       library  cells  only in the cells' current libraries. If the -libraries
+       option is specified, PrimeTime searches for library cells only  in  the
+       libraries contained within the lib_spec.
+
+       Alternatively, if neither of the above options are specified, PrimeTime
+       searches for the library cell in the following sources in this order:
+
+        1) The cell's current library.
+
+        2) The link_path_per_instance variable.
+
+        3) The link_path variable, if no link_path_per_instance  specification
+         pertains to the cell.
+
+       The first library cell that is found is used.
+
+Managing Changes
+       The changes caused by netlist editing commands are recorded in a change
+       list, which is annotated on the design. The contents of the change list
+       can  be  displayed  or  exported  using the write_changes command.  The
+       script output formats for PrimeTime and Design Compiler  are  the  most
+       useful. For details, see the write_changes man page.
+
+       Edits to lower levels of the hierarchy can be undone by swapping in the
+       original version of the design with swap_cell. However,  edits  to  the
+       top  level  of  a  design cannot be undone without removing the design,
+       rereading the original design, and re linking it.
+
+Uniquification
+       Uniquification is the process of making each hierarchical block  unique
+       in  a set of multiple instances of a design.  For example, if the block
+       is an instance of BLOCK, PrimeTime searches for a design name (BLOCK_0,
+       BLOCK_1,  and  so  on), until an unused name is found. That becomes the
+       name of the unique design.  Uniquification  in  PrimeTime  is  somewhat
+       different  from  uniquification in other Synopsys applications, in that
+       new designs are not created at the time that uniquification  occurs.  A
+       placeholder  for the design is created, similar to the placeholder that
+       exists  when  a  design  is  removed   from   memory   by   link_design
+       -remove_sub_designs.   Uniquified   designs   can   be   listed   using
+       list_designs -all. They become real designs only when that becomes nec-
+       essary; for example, when the design is relinked.
+
+       The  tool  automatically  uniquifies the necessary blocks -- the edited
+       block and its parent blocks up to the top of the  hierarchy.   A  block
+       that  is an instance of a design with multiple instances becomes unique
+       when you edit it.  The tool informs you when uniquification occurs.
+
+       The following example shows the size_cell command being used on a  cell
+       and causing uniquification, which is reported by the messages.
+
+         pt_shell> size_cell n1 class/NR4P
+         Uniquifying 'i1/low' (low) as 'low_0'.
+         Uniquifying 'i1' (inter) as 'inter_0'.
+         Sized 'i1/low/n1' with 'class/NR4P'
+         1
+
+       In  addition  to performing automatic uniquification, the tool marks an
+       edited  block  and  its  parent  blocks  with  the  is_edited   Boolean
+       attribute,  available on a design and hierarchical cells. The following
+       example shows that the value of the is_edited attribute  on  i1/low  is
+       true after the size_cell command was used in the previous example.
+
+         pt_shell> get_attribute [get_cells i1/low] is_edited
+         true
+
+EXAMPLES
+       In  the  following example, an attempt to size a cell fails because the
+       target is not functionally  equivalent.   After  finding  a  compatible
+       library cell, the second attempt succeeds.
+
+       pt_shell> size_cell o_reg1 class/NR4P
+       Error: Could not size 'o_reg1' ('class/FD2') with 'class/NR4P':
+              Cells not functionally equivalent. (NED-005)
+       Error: No changes made. (NED-040)
+       0
+
+       pt_shell> get_alternative_lib_cells o_reg1
+       {"class/FD2P"}
+
+       pt_shell> size_cell o_reg1 class/FD2P
+       Information: Sized 'o_reg1' with 'class/FD2P'. (NED-045)
+       1
+
+     In  the  following  example, cells are sized to alternative library cells
+     using only the cells' current libraries and the library cell base name.
+
+     pt_shell> get_lib_cells -of_objects n1
+     {"class/ND2"}
+
+     pt_shell> get_alternative_lib_cells -current_library  n1
+     {"class/ND2P"}
+
+     pt_shell> get_lib_cells -of_objects n2
+     {"libA/ND2"}
+
+     pt_shell> get_alternative_lib_cells -current_library  n2
+     {"libA/ND2P"}
+
+     pt_shell> size_cell -current_library {n1 n2} ND2P
+     Information: Sized 'n1' with 'class/ND2P'. (NED-045)
+     Information: Sized 'n2' with 'libA/ND2P'. (NED-045)
+     1
+
+   In the following example, cells are  sized  to  alternative  library  cells
+   using only user-specified libraries and the library cell base name.  Assume
+   that there are no 'ND2P' library cells in 'lib1'. The list first  and  then
+   'lib2' is searched.
+
+     pt_shell> size_cell -libraries {lib1 lib2} {n1 n2} ND2P
+     Information: Sized 'n1' with 'lib2/ND2P'. (NED-045)
+     Information: Sized 'n2' with 'lib2/ND2P'. (NED-045)
+     1
+
+SEE ALSO
+       get_alternative_lib_cells(2)
+       report_alternative_lib_cells(2)
+       swap_cell(2)
+       write_changes(2)
+       link_path_per_instance(3)
+       link_path(3)
+
+                            Version O-2018.06
+            Copyright (c) 2018 Synopsys, Inc. All rights reserved.
+pt_shell> man change_cell
+Error: No manual entry for 'change_cell' (CMD-025)
+pt_shell> man eco_change_cell
+Error: No manual entry for 'eco_change_cell' (CMD-025)
+pt_shell> man ecochange_cell
+Error: No manual entry for 'ecochange_cell' (CMD-025)
+pt_shell> pwd
+/home/reethika/common/Desktop/final_prj-team_10/pt/work
+pt_shell> source ms_session_1/func_max/fixed_eco.tcl
+Error: Command 'current_instance' is disabled. (CMD-080)
+Information: script 'ms_session_1/func_max/fixed_eco.tcl'
+        stopped at line 7 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"current_instance"
+ -- End Extended Error Info
+pt_shell> exit
+Maximum memory usage for distributed processes:
+my_opts1        1   mo                 787.09 MB
+                2   mo                 786.99 MB
+                3   mo                 798.21 MB
+                4   mo                 797.40 MB
+                5   mo                 778.93 MB
+                6   mo                 664.64 MB
+                7   mo                 776.81 MB
+                8   mo                 792.72 MB
+                9   mo                 807.25 MB
+                10  mo                 777.71 MB
+                11  mo                 781.80 MB
+                12  mo                 763.51 MB
+                13  mo                 763.52 MB
+                14  mo                 790.69 MB
+CPU time usage for distributed processes:
+my_opts1        1   mo                 1567 seconds
+                2   mo                 1195 seconds
+                3   mo                 1249 seconds
+                4   mo                 1208 seconds
+                5   mo                 1554 seconds
+                6   mo                 733 seconds
+                7   mo                 1563 seconds
+                8   mo                 1231 seconds
+                9   mo                 1291 seconds
+                10  mo                 1578 seconds
+                11  mo                 1368 seconds
+                12  mo                 1 seconds
+                13  mo                 2 seconds
+                14  mo                 1449 seconds
+Elapsed time for distributed processes:
+my_opts1        1   mo                 16019 seconds
+                2   mo                 16019 seconds
+                3   mo                 16019 seconds
+                4   mo                 16019 seconds
+                5   mo                 16019 seconds
+                6   mo                 16019 seconds
+                7   mo                 16019 seconds
+                8   mo                 16019 seconds
+                9   mo                 16018 seconds
+                10  mo                 16018 seconds
+                11  mo                 16018 seconds
+                12  mo                 16018 seconds
+                13  mo                 16018 seconds
+                14  mo                 16018 seconds
+Maximum memory usage for this session: 854.57 MB
+CPU usage for this session: 15 seconds 
+Elapsed time for this session: 16033 seconds
+Shutting down worker processes ...
+ Shutdown Process 1
+ Shutdown Process 2
+ Shutdown Process 3
+ Shutdown Process 4
+ Shutdown Process 5
+ Shutdown Process 6
+ Shutdown Process 7
+ Shutdown Process 8
+ Shutdown Process 9
+ Shutdown Process 10
+ Shutdown Process 11
+ Shutdown Process 12
+ Shutdown Process 13
+ Shutdown Process 14
+Diagnostics summary: 5 errors, 94 informationals
+
+Thank you for using pt_shell!
+

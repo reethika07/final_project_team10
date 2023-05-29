@@ -5,7 +5,7 @@ Report : clock timing
         -setup
 Design : ORCA_TOP
 Version: Q-2019.12-SP4
-Date   : Sat May 27 22:39:19 2023
+Date   : Sun May 28 06:17:30 2023
 ****************************************
 Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
 
@@ -14,10 +14,10 @@ Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
 
   Clock Pin                                 Latency      CRP      Skew             Corner
 ---------------------------------------------------------------------------------------------------
-  I_PCI_TOP/I_PCI_CORE_mega_shift_reg_3__27_/CLK
-                                               0.97                       rp-+       Cmax
-  I_PCI_TOP/I_PCI_CORE_mega_shift_reg_2__17_/CLK
-                                               0.86     0.06      0.05    rp-+       Cmax
+  I_PCI_TOP/I_PCI_CORE_mega_shift_reg_5__26_/CLK
+                                               0.96                       rp-+       Cmax
+  I_PCI_TOP/I_PCI_CORE_mega_shift_reg_4__14_/CLK
+                                               0.86     0.07      0.03    rp-+       Cmax
 
 ---------------------------------------------------------------------------------------------------
 
@@ -26,9 +26,9 @@ Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
 
   Clock Pin                                 Latency      CRP      Skew             Corner
 ---------------------------------------------------------------------------------------------------
-  I_CLOCKING/sys_2x_rst_n_buf_reg/CLK          1.24                       rp-+       Cmax
-  I_RISC_CORE/I_STACK_TOP_I_STACK_FSM_STACK_FULL_reg/CLK
-                                               1.10     0.07      0.07    rp-+       Cmax
+  I_CLOCKING/sys_2x_rst_n_buf_reg/CLK          1.27                       rp-+       Cmax
+  I_RISC_CORE/I_PRGRM_CNT_TOP_I_PRGRM_CNT_PCint_reg_2_/CLK
+                                               1.10     0.07      0.09    rp-+       Cmax
 
 ---------------------------------------------------------------------------------------------------
 
@@ -37,9 +37,9 @@ Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
 
   Clock Pin                                 Latency      CRP      Skew             Corner
 ---------------------------------------------------------------------------------------------------
-  I_BLENDER_0/result_reg_7_/CLK                1.35                       rp-+       Cmax
-  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_RAM_1/CE1
-                                               1.17     0.06      0.13    rp-+       Cmax
+  I_SDRAM_TOP/I_SDRAM_WRITE_FIFO_SD_FIFO_CTL_U1_full_int_reg/CLK
+                                               1.38                       rp-+       Cmax
+  I_PARSER/pci_w_mux_select_reg_1_/CLK         1.22     0.06      0.09    rp-+       Cmax
 
 ---------------------------------------------------------------------------------------------------
 
@@ -48,10 +48,9 @@ Information: Timer using 'SI, Timing Window Analysis, CRPR'. (TIM-050)
 
   Clock Pin                                 Latency      CRP      Skew             Corner
 ---------------------------------------------------------------------------------------------------
-  I_SDRAM_TOP/I_SDRAM_IF/DQ_in_0_reg_27_/CLK
-                                               1.18                       rp-+       Cmax
-  I_SDRAM_TOP/I_SDRAM_READ_FIFO_SD_FIFO_RAM_0/CE1
-                                               0.95     0.07      0.16    rp-+       Cmax
+  I_CLOCKING/sdram_rst_n_buf_reg/CLK           1.09                       rp-+       Cmax
+  I_SDRAM_TOP/I_SDRAM_IF/mega_shift_0_reg_33__9_/CLK
+                                               0.95     0.03      0.12    rp-+       Cmax
 
 ---------------------------------------------------------------------------------------------------
 

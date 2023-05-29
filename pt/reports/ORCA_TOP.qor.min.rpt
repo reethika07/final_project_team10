@@ -2,23 +2,23 @@
 Report : qor
 Design : ORCA_TOP
 Version: O-2018.06
-Date   : Sun May 28 00:44:54 2023
+Date   : Sun May 28 18:23:30 2023
 ****************************************
 
   Timing Path Group '**async_default**' (min_delay/hold)
   ---------------------------------------------
   Levels of Logic:                            4
-  Critical Path Length:                   0.429
-  Critical Path Slack:                    0.027
+  Critical Path Length:                   0.426
+  Critical Path Slack:                    0.037
   Total Negative Slack:                   0.000
   No. of Violating Paths:                     0
   ---------------------------------------------
 
   Timing Path Group '**clock_gating_default**' (min_delay/hold)
   ---------------------------------------------
-  Levels of Logic:                            4
-  Critical Path Length:                   0.344
-  Critical Path Slack:                    0.177
+  Levels of Logic:                            2
+  Critical Path Length:                   0.403
+  Critical Path Slack:                    0.191
   Total Negative Slack:                   0.000
   No. of Violating Paths:                     0
   ---------------------------------------------
@@ -26,35 +26,35 @@ Date   : Sun May 28 00:44:54 2023
   Timing Path Group 'PCI_CLK' (min_delay/hold)
   ---------------------------------------------
   Levels of Logic:                            1
-  Critical Path Length:                   0.221
-  Critical Path Slack:                    0.049
+  Critical Path Length:                   0.222
+  Critical Path Slack:                    0.051
   Total Negative Slack:                   0.000
   No. of Violating Paths:                     0
   ---------------------------------------------
 
   Timing Path Group 'SDRAM_CLK' (min_delay/hold)
   ---------------------------------------------
-  Levels of Logic:                            4
-  Critical Path Length:                   0.170
-  Critical Path Slack:                   -0.026
-  Total Negative Slack:                  -0.027
-  No. of Violating Paths:                     2
+  Levels of Logic:                            5
+  Critical Path Length:                   0.185
+  Critical Path Slack:                   -0.003
+  Total Negative Slack:                  -0.007
+  No. of Violating Paths:                     4
   ---------------------------------------------
 
   Timing Path Group 'SD_DDR_CLK' (min_delay/hold)
   ---------------------------------------------
   Levels of Logic:                            5
-  Critical Path Length:                   0.125
-  Critical Path Slack:                    0.070
+  Critical Path Length:                   0.132
+  Critical Path Slack:                    0.078
   Total Negative Slack:                   0.000
   No. of Violating Paths:                     0
   ---------------------------------------------
 
   Timing Path Group 'SYS_2x_CLK' (min_delay/hold)
   ---------------------------------------------
-  Levels of Logic:                            2
-  Critical Path Length:                   0.341
-  Critical Path Slack:                    0.036
+  Levels of Logic:                            1
+  Critical Path Length:                   0.035
+  Critical Path Slack:                    0.044
   Total Negative Slack:                   0.000
   No. of Violating Paths:                     0
   ---------------------------------------------
@@ -62,8 +62,8 @@ Date   : Sun May 28 00:44:54 2023
   Timing Path Group 'SYS_CLK' (min_delay/hold)
   ---------------------------------------------
   Levels of Logic:                            2
-  Critical Path Length:                   0.318
-  Critical Path Slack:                    0.024
+  Critical Path Length:                   0.314
+  Critical Path Slack:                    0.025
   Total Negative Slack:                   0.000
   No. of Violating Paths:                     0
   ---------------------------------------------
@@ -71,38 +71,38 @@ Date   : Sun May 28 00:44:54 2023
   Timing Path Group 'v_PCI_CLK' (min_delay/hold)
   ---------------------------------------------
   Levels of Logic:                            2
-  Critical Path Length:                   0.276
-  Critical Path Slack:                   -0.074
-  Total Negative Slack:                  -2.101
+  Critical Path Length:                   0.277
+  Critical Path Slack:                   -0.073
+  Total Negative Slack:                  -2.109
   No. of Violating Paths:                    32
   ---------------------------------------------
 
   Cell Count
   ---------------------------------------------
   Hierarchical Cell Count:                   63
-  Hierarchical Port Count:                 3308
-  Leaf Cell Count:                        46041
+  Hierarchical Port Count:                 3355
+  Leaf Cell Count:                        45912
   ---------------------------------------------
 
 
   Area
   ---------------------------------------------
-  Net Interconnect area:              67111.375
-  Total cell area:                   383668.062
-  Design Area:                       450779.438
+  Net Interconnect area:              67857.641
+  Total cell area:                   383476.438
+  Design Area:                       451334.062
   ---------------------------------------------
 
 
   Design Rule Violations
   ---------------------------------------------
-  Total No. of Pins in Design:           185759
-  max_capacitance Count:                    213
+  Total No. of Pins in Design:           185479
+  max_capacitance Count:                    233
   min_capacitance Count:                     16
-  max_transition Count:                       1
-  max_capacitance Cost:                -215.852
+  max_transition Count:                       4
+  max_capacitance Cost:                -418.219
   min_capacitance Cost:                  -1.424
-  max_transition Cost:                   -0.001
-  Total DRC Cost:                      -217.277
+  max_transition Cost:                   -0.020
+  Total DRC Cost:                      -419.663
   ---------------------------------------------
 
 1

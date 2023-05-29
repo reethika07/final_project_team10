@@ -1,6 +1,6 @@
 #set topdir /u/$env(USER)/PSU_RTL2GDS
 set topdir [lindex [ regexp -inline "(.*)pt" [pwd] ] 1 ]
-#set topdir /u/$env(USER)/Desktop/final_prj-team_10-final
+#set topdir /u/$env(USER)/Documents/freshp/final_prj-team_10-master
 source $topdir/$top_design.design_config.tcl
 
 
@@ -15,7 +15,7 @@ set link_path {* saed32hvt_ff1p16vn40c.db saed32hvt_ulvl_ff1p16vn40c_i1p16v.db s
 set link_path_per_instance [list [list {I_RISC_CORE} {* saed32hvt_ff0p95vn40c.db saed32hvt_dlvl_ff0p95vn40c_i0p95v.db saed32hvt_ulvl_ff0p95vn40c_i0p95v.db saed32lvt_ff0p95vn40c.db saed32lvt_dlvl_ff0p95vn40c_i0p95v.db saed32lvt_ulvl_ff0p95vn40c_i0p95v.db saed32rvt_ff0p95vn40c.db saed32rvt_dlvl_ff0p95vn40c_i0p95v.db saed32rvt_ulvl_ff0p95vn40c_i0p95v.db saed32sram_ff1p16vn40c.db}] ]
 link
 set_app_var si_enable_analysis true
-read_parasitics -keep_capacitive_coupling $topdir/apr/outputs/${top_design}.route2.Cmax.spef.gz
+read_parasitics -keep_capacitive_coupling $topdir/apr/outputs/${top_design}.route2.cmax.spef.gz
 #read_parasitics -keep_capacitive_coupling ../../apr/outputs/${top_design}.route2.$slow_metal.spef
 
 set corner_name min
